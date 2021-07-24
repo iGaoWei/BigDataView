@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>物流大数据平台</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <style>
+        .t_title{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 2.5em;
+            line-height: 80px;
+            color: #fff;
+        }
+        #chart_map{
+            cursor: pointer;
+        }
+        .t_show{
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 2px;
+            background: #2C58A6;
+            padding: 2px 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!--header-->
+<div class="header">
+    <div class="bg_header">
+        <div class="header_nav fl t_title">
+            物流大数据服务平台
+        </div> 
+    </div>
+</div>
+
+<!--main-->
+<div class="data_content">
+    <div class="data_time">
+        温馨提示: 点击模块后跳转至详情页面。        
+    </div>
+
+    <div class="data_main">
+        <div class="main_left fl">
+            <div class="left_1 t_btn6" style="cursor: pointer;">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title">
+                    <img src="img/t_1.png" alt="">
+                  湖南省货运收入
+                </div>
+                <div id="chart_1" class="chart" style="width:100%;height: 280px;"></div>
+            </div>
+            <div class="left_2" style="cursor: pointer;">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title">
+                    <img src="img/t_2.png" alt="">
+                    湖南省地图
+                </div>
+                <div id="chart_2" class="chart t_btn9" style="width:100%;height: 280px;"></div>
+            </div>
+        </div>
+        <div class="main_center fl">
+            <div class="center_text">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                 <!--右下边框-->
+                 <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title">
+                    <img src="img/t_3.png" alt="">
+                    中国地图
+                </div>
+                <div id="chart_map" style="width:100%;height:610px;"></div>
+            </div>
+        </div>
+        <div class="main_right fr">
+            <div class="right_1">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title">
+                    <img src="img/t_4.png" alt="">
+                    湖南省货物周转量
+                </div>
+                <div id="chart_3" class="echart t_btn7" style="width:100%;height: 280px;"></div>
+            </div>
+            <div class="right_2">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title">
+                    <img src="img/t_5.png" alt="">
+                    湖南省高速公路
+                </div>
+                <div id="chart_4" class="echart fl t_btn4" style="width:100%;height: 280px;cursor: pointer;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="data_bottom">
+        <div class="bottom_1 fl t_btn5" style="cursor: pointer;">
+            <!--左上边框-->
+            <div class="t_line_box">
+                <i class="t_l_line"></i> 
+                <i class="l_t_line"></i> 
+            </div> 
+            <!--右上边框-->
+            <div class="t_line_box">
+                <i class="t_r_line"></i> 
+                <i class="r_t_line"></i> 
+            </div> 
+            <!--左下边框-->
+            <div class="t_line_box">
+                <i class="l_b_line"></i> 
+                <i class="b_l_line"></i> 
+            </div> 
+                <!--右下边框-->
+                <div class="t_line_box">
+                <i class="r_b_line"></i> 
+                <i class="b_r_line"></i> 
+            </div>
+            <div class="main_title">
+                <img src="img/t_6.png" alt="">
+                湖南省飞机场
+            </div>
+            <div id="chart_5" class="echart fl" style="width:100%;height: 250px;margin-top: 15px;"></div>
+        </div>
+        <div class="bottom_center fl">
+            <div class="bottom_2 fl">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div>
+                <div class="main_title">
+                    <img src="img/t_7.png" alt="">
+                    湖南省交通
+                </div>
+                <div class="main_table t_btn8">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>运营数(辆)</th>
+                            <th>线路总长度(公里)</th>
+                            <th>客运总量(万人次)</th> 
+                            <th>日期</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>21059</td>
+                            <td>26497</td>
+                            <td>184448</td>
+                            <td>2018年</td>
+                        </tr>
+                        <tr>
+                            <td>18777</td>
+                            <td>21140</td>
+                            <td>188808</td>
+                            <td>2017年</td>
+                        </tr>
+                        <tr>
+                            <td>15757</td>
+                            <td>20225</td>
+                            <td>201143</td>
+                            <td>2016年</td>
+                        </tr>
+                        <tr>
+                            <td>17458</td>
+                            <td>19567</td>
+                            <td>202446</td>
+                            <td>2015年</td>
+                        </tr>
+                        <tr>
+                            <td>11323</td>
+                            <td>14562</td>
+                            <td>279854</td>
+                            <td>2014年</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="bottom_3 fl">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div>
+                <div class="main_title">
+                    <img src="img/t_7.png" alt="">
+                   湖南省业务量
+                </div>
+                <div class="main_table t_btn2">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>省内(万件)</th>
+                            <th>省外(万件)</th>
+                            <th>国际(万件)</th>
+                            <th>总业务量(万件)</th>
+                            <th>日期</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>21352.36</td>
+                            <td>68575.6</td>
+                            <td>464.43</td>
+                            <td>90392.39</td>
+                            <td>2018年</td>
+                        </tr>
+                        <tr>
+                            <td>17522.41</td>
+                            <td>37111.03</td>
+                            <td>278.5</td>
+                            <td>54911.94</td>
+                            <td>2017年</td>
+                        </tr>
+                        <tr>
+                            <td>7014.14</td>
+                            <td>26841.29</td>
+                            <td>163.72</td>
+                            <td>34019.15</td>
+                            <td>2016年</td>
+                        </tr>
+                        <tr>
+                            <td>2553.55</td>
+                            <td>18072.54</td>
+                            <td>129.65</td>
+                            <td>20755.74</td>
+                            <td>2015年</td>
+                        </tr>
+                        <tr>
+                            <td>1427.04</td>
+                            <td>10859.54</td>
+                            <td>182.54</td>
+                            <td>12469.11</td>
+                            <td>2014年</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_4 fr">
+            <!--左上边框-->
+            <div class="t_line_box">
+                <i class="t_l_line"></i> 
+                <i class="l_t_line"></i> 
+            </div> 
+            <!--右上边框-->
+            <div class="t_line_box">
+                <i class="t_r_line"></i> 
+                <i class="r_t_line"></i> 
+            </div> 
+            <!--左下边框-->
+            <div class="t_line_box">
+                <i class="l_b_line"></i> 
+                <i class="b_l_line"></i> 
+            </div> 
+                <!--右下边框-->
+                <div class="t_line_box">
+                <i class="r_b_line"></i> 
+                <i class="b_r_line"></i> 
+            </div>
+            <div class="main_title">
+                <img src="img/t_7.png" alt="">
+               湖南省汽车
+            </div>
+            <div class="main_table t_btn3">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>载客汽车(万辆)</th>
+                        <th>载货汽车(万辆)</th>
+                        <th>汽车拥有量(万辆)</th>
+                        <th>日期</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>2.53</td>
+                        <td>142.65</td>
+                        <td>145.18</td>
+                        <td>2018年</td>
+                    </tr>
+                    <tr>
+                        <td>2.52</td>
+                        <td>139.95</td>
+                        <td>142.47</td>
+                        <td>2017年</td>
+                    </tr>
+                    <tr>
+                        <td>2.65</td>
+                        <td>137.96</td>
+                        <td>140.61</td>
+                        <td>2016年</td>
+                    </tr>
+                    <tr>
+                        <td>2.97</td>
+                        <td>131.48</td>
+                        <td>134.45</td>
+                        <td>2015年</td>
+                    </tr>
+                    <tr>
+                        <td>3.23</td>
+                        <td>99.99</td>
+                        <td>103.22</td>
+                        <td>2014年</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="js/jquery-2.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/dataTool.js"></script>
+<script src="js/index.js"></script>
+<script src="js/china.js"></script>
+<script src="js/hunan.js"></script>
+</html>

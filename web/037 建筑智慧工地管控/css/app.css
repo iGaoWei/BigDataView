@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+/********** Global **********/
+html, body {
+   width:100%;
+	height:100%;
+	min-height:635px;
+	background-color:#0f1c30;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:100% 100%;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+body {margin:0 auto;min-width:375px;max-width:1920px;}
+
+body.bg01 {background-image:url("../img/bg01.png");}
+body.bg02 {background-image:url("../img/bg02.png");}
+body.bg03 {background-image:url("../img/bg03.png");}
+body.bg04 {background-image:url("../img/bg04.png");}
+
+.header {margin:0 auto;position:relative;width:100%;
+	height:65px;max-width:1920px;
+	background:url("../img/header.png") center no-repeat;box-sizing:border-box;}
+.header-title {
+	margin:0;
+	padding:0;
+	line-height:50px;
+	text-align:center;
+	font-size:22px;
+	color:#5dc2fe;
+}
+
+.wrapper {position:absolute;top:68px;bottom:0;left:0;right:0;min-height:555px;}
+/* PC */
+@media (max-width:1919px) {
+	.header {height:65px;}
+	.header-title {line-height:50px;font-size:22px;}
+	.wrapper {top:68px;}
+}
+/* Mobile */
+@media (max-width:1279px) {
+	.header-title {max-width:96%;}
+	.wrapper {background:none;}
+}
+
+/********** Content **********/
+.content {
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	height:100%;
+	width:100%;
+	min-height:100%;
+	box-sizing:border-box;
+}
+.col {margin:0px 5px 0px;;height:100%;min-width:320px;}
+.col-l {-webkit-flex:1.5;-ms-flex:1.5;flex:1.5;}
+.col-c {-webkit-flex:4;-ms-flex:4;flex:4;}
+.col-r {-webkit-flex:1.5;-ms-flex:1.5;flex:1.5;}
+/* PC */
+@media (max-width:1919px) {
+	.content {padding:10px 0;}
+}
+/* Mobile */
+@media (max-width:1279px) {
+    .content {padding:10px 0;}
+	.content {
+		-webkit-flex-direction:column;
+		-ms-flex-direction:column;
+		flex-direction:column;
+	}
+	.col-l, 
+	.col-c, 
+	.col-r {-webkit-flex:none;-ms-flex:none;flex:none;}
+}
+.xpanel-wrapper {padding-bottom:5px;box-sizing:border-box;}
+.xpanel-wrapper {height:100%;width:100%}
+.xpanel-wrapper-25 {height:27.5%;}
+.xpanel-wrapper-30 {height:30%;}
+.xpanel-wrapper-40 {height:40%;}
+.xpanel-wrapper-45 {height:45%;}
+.xpanel-wrapper-60 {height:60%;}
+.xpanel-wrapper-75 {height:60%;}
+.xpanel-wrapper-55 {height:55%;}
+.xpanel {
+	height:100%;
+	min-height:100px;
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	box-sizing:border-box;
+}
+.xpanel-m-c {background-image:url("../img/panel.png");}
+.xpanel-l-t {background-image:url("../img/panel.png");}
+.xpanel-l-b {background-image:url("../img/panel.png");}
+.xpanel-c-b {background-image:url("../img/panel.png");}
+.xpanel-r-t {background-image:url("../img/panel.png");}
+.xpanel-r-m {background-image:url("../img/panel.png");}
+.xpanel-r-b {background-image:url("../img/panel.png");}
+.xpanel .title {
+	font-weight:normal;
+	color:#fff;
+	background-image:url("../img/title-bg.png");
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+}
+
+
+.xpanel .bcontent {
+	line-height:1;
+	font-size:15px;
+	text-align:left;
+	height:95%;
+	width:98%;
+	color:#5dc2fe;
+}
+
+.xpanel .tcontent {
+	line-height:1;
+	font-size:15px;
+	text-align:left;
+	height:90%;
+	width:98%;
+	color:#5dc2fe;
+}
+
+.xpanel .no-bg {
+	margin:15px;
+}
+.xpanel .bcontent ul,li{list-style:none;padding:0; margin:1px;}
+
+.xpanel .bcontent ul {
+  margin-top:10px;
+  clear: both;
+  overflow: hidden;
+  height:98%;
+}
+
+.xpanel .bcontent ul li {
+  height: 20px;
+  margin-bottom: 5px;
+  float: left;
+  font-size:12px;
+}
+.xpanel .bcontent ul li:nth-child(even) {
+  margin-left: 4%;
+}
+
+.leftrt{
+   width: 32%;
+   text-align:right;
+   color: #f1ebe5;
+   font-weight: bold;
+  
+}
+.rightrt{
+   width: 63%;
+    font-weight: bold;
+	 color: #f1ebe5;
+   
+}
+
+.xpanel .title-long { padding-left:24px;background-image:url("../img/title-bg-long.png");}
+/* PC */
+@media (max-width:1919px) {
+	.xpanel .title {padding-left:20px;height:36px;line-height:36px;font-size:16px;}
+	.xpanel .bcontent{padding:5px 10px;}
+}
+/* tool */
+.fill-h {height:100% !important;min-height:100% !important;}
+.no-margin {margin:0 !important;}
+.no-padding {padding:0 !important;}
+.no-bg {background:none !important;}
+.no-border {border:0 !important;}
+
+/* scrollbar */
+::-webkit-scrollbar {width:0;height:0;}
+::-webkit-scrollbar-track {background-color:transparent;}
+::-webkit-scrollbar-thumb {border-radius:5px;background-color:rgba(0, 0, 0, 0.3);}

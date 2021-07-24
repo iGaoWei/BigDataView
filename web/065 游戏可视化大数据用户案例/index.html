@@ -1,0 +1,693 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<link rel="stylesheet" href="css/comon0.css">
+</head>
+<body>
+<div class="loading">
+  <div class="loadbox"> <img src="images/loading.gif"> 页面加载中... </div>
+</div>
+<div class="mainbox">
+  <ul class="clearfix">
+    <li>
+      <div class="logo1"><img src="images/logo1.png"><span>可视化大数据用户案例</span></div>
+      <div class="boxall" style="height: 2.2rem">
+        <div class="alltitle">今日实时充值总额<span>real-time</span></div>
+        <div class="boxnav">
+          <p> <span>1</span> <span>2</span> <span>3</span> <span>4</span> <span>5</span> <span>6</span> <span>7</span> <span>8</span> <span>9</span> <span>0</span> <i> 元</i> </p>
+        </div>
+        <div class="boxfoot"></div>
+      </div>
+      <div class="boxall" style="height: 3.3rem">
+        <div class="alltitle">当日收入<span>income</span></div>
+        <div id="echarts1" class="chartbox"></div>
+        <div class="boxfoot"></div>
+      </div>
+      <div class="boxall" style="height: 3.4rem">
+        <p class="pth"> <span>序号</span> <span>地区</span> <span>充值金额</span> <span>时间</span> </p>
+        <div class="wrap">
+          <ul>
+            <li>
+              <p> <span><i>1</i></span> <span>多伦多</span> <span>199.8</span> <span>2017-08-01 15:23:12</span> </p>
+            </li>
+            <li>
+              <p> <span><i>2</i></span> <span>多伦多</span> <span>199.8</span> <span>2017-08-01 15:23:12</span> </p>
+            </li>
+            <li>
+              <p> <span><i>3</i></span> <span>多伦多</span> <span>199.8</span> <span>2017-08-01 15:23:12</span> </p>
+            </li>
+            <li>
+              <p> <span><i>4</i></span> <span>多伦多</span> <span>199.8</span> <span>2017-08-01 15:23:12</span> </p>
+            </li>
+            <li>
+              <p> <span><i>5</i></span> <span>多伦多</span> <span>199.8</span> <span>2017-08-01 15:23:12</span> </p>
+            </li>
+            <li>
+              <p> <span><i>6</i></span> <span>多伦多</span> <span>199.8</span> <span>2017-08-01 15:23:12</span> </p>
+            </li>
+            <li>
+              <p> <span><i>7</i></span> <span>多伦多</span> <span>199.8</span> <span>2017-08-01 15:23:12</span> </p>
+            </li>
+            <li>
+              <p> <span><i>8</i></span> <span>多伦多</span> <span>199.8</span> <span>2017-08-01 15:23:12</span> </p>
+            </li>
+            <li>
+              <p> <span><i>9</i></span> <span>多伦多</span> <span>199.8</span> <span>2017-08-01 15:23:12</span> </p>
+            </li>
+            <li>
+              <p> <span><i>10</i></span> <span>多伦多</span> <span>199.8</span> <span>2017-08-01 15:23:12</span> </p>
+            </li>
+          </ul>
+        </div>
+        <div class="boxfoot"></div>
+      </div>
+    </li>
+    <li>
+      <div class="logo2"><img src="images/logo.png" style="opacity: "></div>
+      <!-- <div class="map" id="map_1"> </div> -->
+    </li>
+    <li>
+      <div class="logo3">
+        <div class="time  pulll_left"><img src="images/clock.png"><span>2018-07-28 02:40:03</span></div>
+      </div>
+      <div class="boxall" style="height:2.2rem">
+        <div class="alltitle">转化率<span>real-time</span></div>
+        <div class="boxfoot"></div>
+        <div class="zhl clearfix">
+          <div class="zhlbg" style="width: 65%"></div>
+          <div class="zhltip">65%</div>
+        </div>
+      </div>
+      <div class="boxall" style="height:3.3rem">
+        <div class="alltitle">实时在线<span>real-time</span></div>
+        <div class="boxfoot"></div>
+        <div class="chartbox" id="echarts3"></div>
+      </div>
+      <div class="boxall" style="height:3.4rem">
+        <div class="alltitle">新增用户<span>new user</span></div>
+        <div class="boxfoot"></div>
+        <div class="chartbox" id="echarts2"></div>
+      </div>
+    </li>
+  </ul>
+  <div class="copyright">版权所有：xxxx网络科技有限公司 粤ICP备15039551-4</div>
+</div>
+<div class="back"></div>
+<script language="JavaScript" src="js/js.js"></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<script type="text/javascript" src="js/china.js"></script>
+<script src="js/jquery.liMarquee.js"></script>
+
+<script>
+$(function(){
+	$('.wrap').liMarquee({
+		direction: 'up',//身上滚动
+		runshort: false,//内容不足时不滚动
+		scrollamount: 20//速度
+	});
+});
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+		myChart1.resize();
+	　 myChart2.resize();
+		myChart3.resize();
+		myChart.resize();
+
+})
+window.addEventListener("resize", function () {
+    	myChart1.resize();
+	　 myChart2.resize();
+		myChart3.resize();
+		myChart.resize();
+
+});
+	</script>
+<script type="text/javascript">
+var myChart1 = echarts.init(document.getElementById('echarts1'));
+option1 = {
+  //  backgroundColor: '#00265f',
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    legend: {
+        data: ['昨日', '今日'],
+        align: 'right',
+        right: '40%',
+		bottom:'3%',
+        textStyle: {
+            color: "#fff"
+        },
+        itemWidth: 10,
+        itemHeight: 10,
+        itemGap: 35
+    },
+    grid: {
+        left: '0%',
+		top: '0%',
+        right: '0%',
+        bottom: '15%',
+       containLabel: true
+    },
+    xAxis: [{
+        type: 'category',
+        data: ['00',
+            '01',
+            '02',
+            '03',
+            '04',
+            '05',
+            '06',
+            '07',
+            '08',
+            '09',
+            '10',
+            '11',
+            '12',
+            '13',
+            '14',
+            '15',
+            '16',
+            '17',
+            '18',
+            '19',
+            '20',
+            '21',
+            '22',
+            '23'
+        ],
+        axisLine: {
+            show: true,
+         lineStyle: {
+                color: "rgba(255,255,255,.1)",
+                width: 1,
+                type: "solid"
+            },
+        },
+        axisTick: {
+            show: false,
+        },
+		axisLabel:  {
+                interval: 0,
+               // rotate:50,
+                show: true,
+                splitNumber: 15,
+                textStyle: {
+                  fontFamily: "微软雅黑",
+ 					color: "rgba(255,255,255,.6)",
+                    fontSize: '120%',
+                },
+            },
+    }],
+    yAxis: [{
+        type: 'value',
+        axisLabel: {
+           //formatter: '{value} %'
+			show:false,
+        },
+        axisTick: {
+            show: false,
+        },
+        axisLine: {
+            show: true,
+            lineStyle: {
+                color: "rgba(255,255,255,.1	)",
+                width: 1,
+                type: "solid"
+            },
+        },
+        splitLine: {
+            lineStyle: {
+               color: "rgba(255,255,255,.1)",
+            }
+        }
+    }],
+    series: [{
+        name: '昨日',
+        type: 'bar',
+        data: [20, 22, 25, 36, 35, 21, 19, 26, 27, 26, 28, 30, 38, 44, 48, 59, 64, 69, 68, 72, 80, 70, 49, 32],
+        barWidth:'25%', //柱子宽度
+       // barGap: 1, //柱子之间间距
+
+        itemStyle: {
+            normal: {
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                    offset: 0,
+                    color: '#3ca1ff'
+                }, {
+                    offset: 1,
+                    color: '#0a73d5'
+                }]),
+                opacity: 1,
+				barBorderRadius: 50,
+            }
+        }
+    }, {
+        name: '今日',
+        type: 'bar',
+        data: [23, 26, 21, 32, 31, 26, 29, 20, 22, 29, 30, 34, 40, 48, 42, 53, 61, 62, 64, 71, 72, 73, 41, 30],        barWidth:'25%',
+       // barGap: 1,
+        itemStyle: {
+            normal: {
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                     offset: 0,
+                    color: '#f8b135'
+                }, {
+                    offset: 1,
+                    color: '#e59100'
+                }]),
+                opacity: 1,
+				barBorderRadius: 50,
+            }
+        }
+    },
+	]
+};
+
+	var myChart2 = echarts.init(document.getElementById('echarts2'));
+option2 = {
+  //  backgroundColor: '#00265f',
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    legend: {
+        data: ['昨日', '今日'],
+        align: 'right',
+        right: '40%',
+		bottom:'3%',
+        textStyle: {
+            color: "#fff"
+        },
+        itemWidth: 10,
+        itemHeight: 10,
+        itemGap: 15
+    },
+    grid: {
+        left: '0%',
+		top: '0%',
+        right: '0%',
+        bottom: '15%',
+        containLabel: true
+    },
+    xAxis: [{
+        type: 'category',
+        data: ['00',
+            '01',
+            '02',
+            '03',
+            '04',
+            '05',
+            '06',
+            '07',
+            '08',
+            '09',
+            '10',
+            '11',
+            '12',
+            '13',
+            '14',
+            '15',
+            '16',
+            '17',
+            '18',
+            '19',
+            '20',
+            '21',
+            '22',
+            '23'
+        ],
+        axisLine: {
+            show: true,
+         lineStyle: {
+                color: "rgba(255,255,255,.1)",
+                width: 1,
+                type: "solid"
+            },
+        },
+        axisTick: {
+            show: false,
+        },
+		axisLabel:  {
+                interval: 0,
+               // rotate:50,
+                show: true,
+                splitNumber: 15,
+                textStyle: {
+                  fontFamily: "微软雅黑",
+ 					color: "rgba(255,255,255,.6)",
+                    fontSize: '120%',
+                },
+            },
+    }],
+    yAxis: [{
+        type: 'value',
+        axisLabel: {
+           //formatter: '{value} %'
+			show:false,
+        },
+        axisTick: {
+            show: false,
+        },
+        axisLine: {
+            show: true,
+            lineStyle: {
+                color: "rgba(255,255,255,.1)",
+                width: 1,
+                type: "solid"
+            },
+        },
+        splitLine: {
+            lineStyle: {
+               color: "rgba(255,255,255,.1)",
+            }
+        }
+    }],
+    series: [{
+        name: '昨日',
+        type: 'bar',
+        data: [20, 50, 80, 58, 80, 42, 66, 83, 20, 50, 80, 58, 83, 68, 57, 80, 42, 66, 68, 57, 80, 42, 66, 12],
+        barWidth:'25%', //柱子宽度
+       // barGap: 1, //柱子之间间距
+
+        itemStyle: {
+            normal: {
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                    offset: 0,
+                    color: '#3ca1ff'
+                }, {
+                    offset: 1,
+                    color: '#0a73d5'
+                }]),
+                opacity: 1,
+				barBorderRadius: 50,
+            }
+        }
+    }, {
+        name: '今日',
+        type: 'bar',
+        data: [29, 58, 84, 51, 85, 49, 60, 81, 30, 52, 85, 51, 81, 65, 51, 74, 49, 61, 64, 51, 72, 40, 61, 18],
+        barWidth:'25%',
+       // barGap: 1,
+        itemStyle: {
+            normal: {
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                     offset: 0,
+                    color: '#f8b135'
+                }, {
+                    offset: 1,
+                    color: '#e59100'
+                }]),
+                opacity: 1,
+				barBorderRadius: 50,
+            }
+        }
+    },
+	]
+};
+	var myChart3 = echarts.init(document.getElementById('echarts3'));
+	option3 = {
+	tooltip: {
+		trigger: 'axis',
+		axisPointer: {
+			lineStyle: {
+				color: '#57617B'
+			}
+		}
+	},
+	legend: {
+
+		icon: 'rect',
+			data: ['昨日', '今日'],
+        align: 'right',
+        right: '35%',
+		bottom:'5%',
+        textStyle: {
+            color: "#fff"
+        },
+        itemWidth: 10,
+        itemHeight: 4,
+        itemGap: 15
+	},
+	grid: {
+		left: '0',
+		right: '0',
+		top:'-12%',
+		bottom: '20%',
+		containLabel: true
+	},
+	xAxis: [{
+		type: 'category',
+		boundaryGap: false,
+		axisLine: {
+			lineStyle: {
+				color: '#57617B'
+			}
+		},
+		data: ['13:00', '13:05', '13:10', '13:15', '13:20', '13:25', '13:30', '13:35', '13:40', '13:45', '13:50', '13:55']
+	}, {
+
+		axisLine: {
+			lineStyle: {
+				color: '#57617B'
+			}
+		},
+
+
+	}],
+	yAxis: [{
+		axisLabel: {
+			show: false
+		},
+		splitLine: {
+			lineStyle: {
+				color: 'rgba(255,255,255,.1)'
+			}
+		}
+	}],
+	series: [{
+		name: '今日',
+		type: 'line',
+		smooth: true,
+		symbol: 'circle',
+		symbolSize: 5,
+		showSymbol: false,
+		lineStyle: {
+			normal: {
+				width: 2
+			}
+		},
+		areaStyle: {
+			normal: {
+				color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+					offset: 0,
+					color: 'rgba(24, 163, 64, 0.3)'
+				}, {
+					offset: 0.8,
+					color: 'rgba(24, 163, 64, 0)'
+				}], false),
+				shadowColor: 'rgba(0, 0, 0, 0.1)',
+				shadowBlur: 10
+			}
+		},
+		itemStyle: {
+			normal: {
+				color: '#f4a240',
+				borderColor: 'rgba(137,189,2,0.27)',
+				borderWidth: 12
+			}
+		},
+		data: [220, 182, 191, 134, 150, 120, 110, 125, 145, 122, 165, 122]
+	}, {
+		name: '昨日',
+		type: 'line',
+		smooth: true,
+		symbol: 'circle',
+		symbolSize: 5,
+		showSymbol: false,
+		lineStyle: {
+			normal: {
+				width: 2
+			}
+		},
+		areaStyle: {
+			normal: {
+				color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+					offset: 0,
+					color: 'rgba(39, 122,206, 0.3)'
+				}, {
+					offset: 0.8,
+					color: 'rgba(39, 122,206, 0)'
+				}], false),
+				shadowColor: 'rgba(0, 0, 0, 0.1)',
+				shadowBlur: 10
+			}
+		},
+		itemStyle: {
+			normal: {
+				color: '#277ace',
+				borderColor: 'rgba(0,136,212,0.2)',
+				borderWidth: 12
+			}
+		},
+		data: [120, 110, 125, 145, 122, 165, 122, 220, 182, 191, 134, 150]
+	}]
+};
+setTimeout(function(){
+myChart1.setOption(option1);
+myChart2.setOption(option2);
+myChart3.setOption(option3);
+myChart.setOption(option);
+}, 500);
+
+</script>
+<script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('map_1'));
+
+     var uploadedDataURL = "js/data.json";
+myChart.showLoading();
+
+$.getJSON(uploadedDataURL, function (weiboData) {
+    myChart.hideLoading();
+
+    weiboData = weiboData.map(function (serieData, idx) {
+        var px = serieData[0] / 1000;
+        var py = serieData[1] / 1000;
+        var res = [[px, py]];
+        for (var i = 2; i < serieData.length; i += 2) {
+            var dx = serieData[i] / 1000;
+            var dy = serieData[i + 1] / 1000;
+            var x = px + dx;
+            var y = py + dy;
+            res.push([x, y, 1]);
+            px = x;
+            py = y;
+        }
+        return res;
+    });
+    myChart.setOption(option = {
+     //backgroundColor: '#404a59',
+        title : {
+            text: '支付地图区域',
+            //subtext: 'china map',
+          //  sublink: 'http://www.dddd.com',
+            left: 'center',
+            top: '15%',
+            textStyle: {
+                color: '#ffb43e'
+            }
+        },
+        legend: {
+            left: 'center',
+			top: '22%',
+            data: ['高', '中', '低'],
+            textStyle: {
+                color: '#ccc'
+            }
+        },
+        geo: {
+            name: '高',
+            type: 'scatter',
+            map: 'china',
+            label: {
+                emphasis: {
+                    show: false
+                }
+            },
+            itemStyle: {
+                normal: {
+                    areaColor: '#323c48',
+                    borderColor: '#ffb000'
+                },
+                emphasis: {
+                    areaColor: '#2a333d'
+                }
+            }
+        },
+        series: [{
+            name: '低',
+            type: 'scatter',
+            coordinateSystem: 'geo',
+            symbolSize: 1,
+            large: true,
+            itemStyle: {
+                normal: {
+                    shadowBlur: 2,
+                    shadowColor: 'rgba(37, 140, 249, 0.8)',
+                    color: 'rgba(37, 140, 249, 0.8)'
+                }
+            },
+            data: weiboData[0]
+        }, {
+            name: '中',
+            type: 'scatter',
+            coordinateSystem: 'geo',
+            symbolSize: 1,
+            large: true,
+            itemStyle: {
+                normal: {
+                    shadowBlur: 2,
+                    shadowColor: 'rgba(14, 241, 242, 0.8)',
+                    color: 'rgba(14, 241, 242, 0.8)'
+                }
+            },
+            data: weiboData[1]
+        }, {
+            name: '高',
+            type: 'scatter',
+            coordinateSystem: 'geo',
+            symbolSize: 1,
+            large: true,
+            itemStyle: {
+                normal: {
+                    shadowBlur: 2,
+                    shadowColor: 'rgba(255, 255, 255, 0.8)',
+                    color: 'rgba(255, 255, 255, 0.8)'
+                }
+            },
+            data: weiboData[2]
+        }]
+    });
+});
+ myChart.setOption(option);
+	$(document).ready(function(){
+	　　myChart.resize();
+
+})
+window.addEventListener("resize", function () {
+　　myChart.resize();
+});
+</script>
+<script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="js/jquery.countup.min.js"></script>
+<script type="text/javascript">
+		$('.counter').countUp();
+	</script>
+
+
+
+
+	<style>
+.btnbox{position: fixed; bottom: 20px; width: 100%; text-align: center; z-index: 1000;}
+.btnbox a{ margin:0 3px;border-radius: 30px; color: #fff; font-size: 18px; padding:8px 25px; text-shadow: -1px -1px 0px rgba(0,0,0,0.2); transition:all 0.5s;}
+.btnbox .btn1{background: linear-gradient(60deg,#26c6da,#00acc1);box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(0,188,212,.4);}
+
+.btnbox .btn2{background: linear-gradient(60deg,#66bb6a,#43a047);box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(76,175,80,.4);
+}
+.btnbox a:hover{background: #47c8ff}
+	</style>
+	<!----->
+
+
+</body>
+</html>

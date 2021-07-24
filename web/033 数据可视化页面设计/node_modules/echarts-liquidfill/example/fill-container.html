@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Lobster+Two:700i" rel="stylesheet">
+
+        <script src='../dist/echarts.js'></script>
+        <script src='../dist/echarts-liquidfill.js'></script>
+    </head>
+    <body>
+        <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                background: #F1F7FF;
+            }
+
+            #main {
+                padding: 20px;
+            }
+
+            h1 {
+                margin: 20px;
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+                color: #D94854;
+            }
+
+            .chart {
+                width: 80%;
+                margin: 20px auto;
+                height: 300px;
+                border: 1px solid #D94854;
+            }
+
+            p {
+                text-align: center;
+            }
+        </style>
+        <h1>ECharts LiquidFill Example</h1>
+        <p>This is an example showing liquidFill chart that fills the container.</p>
+        <div id='main'>
+            <div class="chart"></div>
+            <div class="chart"></div>
+        </div>
+        <script>
+            var bgColor = '#E3F7FF';
+            var containers = document.getElementsByClassName('chart');
+            var options = [{
+                series: [{
+                    type: 'liquidFill',
+                    data: [0.6, 0.5, 0.4, 0.3],
+                    outline: {
+                        show: false
+                    },
+                    shape: 'container'
+                }]
+            }, {
+                series: [{
+                    type: 'liquidFill',
+                    data: [0.6, 0.5, 0.4, 0.3],
+                    amplitude: '10%',
+                    waveLength: '200%',
+                    shape: 'container'
+                }]
+            }];
+
+            var charts = [];
+            for (var i = 0; i < options.length; ++i) {
+                var chart = echarts.init(containers[i]);
+                chart.setOption(options[i]);
+                charts.push(chart);
+            }
+
+            window.onresize = function () {
+                for (var i = 0; i < charts.length; ++i) {
+                    charts[i].resize();
+                }
+            };
+        </script>
+
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+            var hm = document.createElement('script');
+            hm.src = '//hm.baidu.com/hm.js?4bad1df23f079e0d12bdbef5e65b072f';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+    </body>
+</html>

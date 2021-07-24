@@ -1,0 +1,690 @@
+/* 左侧第一个盒子start--- */
+
+/**/
+/* */
+/**/
+
+.firstBox {
+  width: 90%;
+  margin-left: 6%;
+  height: 90%;
+}
+.firstBox .pic {
+    width: 100%;
+    height: 25%;
+}
+.pic img {
+    display: inline-block;
+    width: 40%;
+    height: 80%;
+    margin-top: 1vw;
+
+}
+.first_top1 {
+    margin-left: 1vw;
+}
+.first_top2 {
+    margin-left: 1vw;
+}
+.picText {
+    color: #0EFCFF;
+    margin-left: 1vw;
+}
+.picText .text_second {
+    margin-left: 6vw;
+}
+
+/* 声波动画start--- */
+.voice_animation {
+    width: 100%;
+    height: 20%;
+    margin-top: 1vw;
+    background-image: url(../img/voice_pic.png);
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* 声波动画over--- */
+
+
+/* 进度条start--- */
+.progress {
+    width: 93%;
+    height: 10%;
+    margin-top: 1vw;
+    margin-left: .6vw;
+    background-image: url(../img/progress_pic.png);
+    background-size: 100% 100%;
+}
+/* 进度条over--- */
+
+
+.about_illness {
+    width: 100%;
+    height: 25%;
+    margin-top: 1.5vw;
+    margin-left: .6vw;
+    color: #fff;
+    font-size: .6vw;
+}
+.about_illness > div {
+    display: inline-block;
+    width: 45%;
+    height: 100%;
+    background-image: url(../img/illness_pic.png);
+    background-size: 100% 100%;
+}
+.prevent {
+    margin-left: .5vw;
+    text-indent: .2vw;
+}
+.symptom {
+    /* text-indent: .2vw; */
+    /* font-size: .5vw; */
+}
+.symptom_content, .prevent_content {
+    color: #0EFCFF;
+    margin-top: .5vw;
+    margin: .6vw .2vw .2vw .5vw;
+}
+.symptom_title .prevent_title {
+    font-size: .1vw;
+    color: red;
+}
+/* 左侧第一个盒子over--- */
+
+
+/* center部分start--- */
+.maps {
+    position: relative;
+    width: 100%;
+    height: 95%;
+    margin-top: 2%;
+    /* background: pink; */
+    /* background-image: url(../img/landLevel.png); */
+    /* background-size: 95% 100%; */
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+}
+.maps .land_level {
+    width: 95%;
+    height: 100%;
+    margin-left: 2.5%;
+}
+.maps .wifi_gif {
+    position: absolute;
+    right: 27%;
+    top: -3.5%;
+    width: 5%;
+    height: 10%;
+}
+.maps .sun_pic {
+    position: absolute;
+    top: -5%;
+    left: 18%;
+    width: 10%;
+    height: 15%;
+
+    animation:mymove 3s infinite;
+    -webkit-animation:mymove 3s infinite; /*Safari and Chrome*/
+    animation-direction:alternate;/*轮流反向播放动画。*/
+    animation-timing-function: ease-in-out; /*动画的速度曲线*/
+    /* Safari 和 Chrome */
+    -webkit-animation:mymove 3s infinite;
+    -webkit-animation-direction:alternate;/*轮流反向播放动画。*/
+    -webkit-animation-timing-function: ease-in-out;
+}
+@keyframes mymove
+{
+    0%{
+    transform: scale(1);  /*开始为原始大小*/
+    }
+    25%{
+        transform: scale(1.1); /*放大1.1倍*/
+    }
+    50%{
+        transform: scale(1.05);
+    }
+    75%{
+        transform: scale(1);
+    }
+
+}
+
+@-webkit-keyframes mymove /*Safari and Chrome*/
+{
+    0%{
+    transform: scale(1);  /*开始为原始大小*/
+    }
+    25%{
+        transform: scale(1.1); /*放大1.1倍*/
+    }
+    50%{
+        transform: scale(1.05);
+    }
+    75%{
+        transform: scale(1);
+    }
+}
+
+.maps .wrj_pic {
+    position: absolute;
+    width: 8%;
+    height: 8%;
+    left: 30%;
+    animation: myfirst 5s infinite;
+    -moz-animation: myfirst 5s infinite;
+    /* Firefox */
+    -webkit-animation: myfirst 5s infinite;
+    /* Safari 和 Chrome */
+    -o-animation: myfirst 5s infinite;
+    /* Opera */
+    /* animation: btn-load-loop 1s linear infinite; */
+}
+
+
+    @keyframes myfirst
+    {
+    0%   { left:250px; top:0px;}
+    25%  {left:300px; top:0px;}
+    50%  {left:150px; top:300px;}
+    75%  { left:250px; top:200px;}
+    100% {left:250px; top:0px;}
+    }
+
+    @-moz-keyframes myfirst
+    /* Firefox */
+    {
+        0%   { left:250px; top:0px;}
+        25%  {left:300px; top:0px;}
+        50%  {left:500px; top:200px;}
+        75%  { left:250px; top:200px;}
+        100% {left:250px; top:0px;}
+    }
+
+    @-webkit-keyframes myfirst
+    /* Safari 和 Chrome */
+    {
+        0%   { left:250px; top:0px;}
+        25%  {left:300px; top:0px;}
+        50%  {left:500px; top:200px;}
+        75%  { left:250px; top:200px;}
+        100% {left:250px; top:0px;}
+    }
+
+    @-o-keyframes myfirst
+    /* Opera */
+    {
+        0%   { left:250px; top:0px;}
+        25%  {left:300px; top:0px;}
+        50%  {left:500px; top:200px;}
+        75%  { left:250px; top:200px;}
+        100% {left:250px; top:0px;}
+    }
+
+.wind_gif {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    width: 10%;
+    height: 19%;
+}
+
+.plant_pic {
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    width: 8%;
+    height: 10%;
+}
+
+.windows, .window_two, .window_three, .window_four, .window_five, .window_six{
+    padding: 1.5%;
+    color: #0EFCFF;
+    background: rgba(40, 229, 233, .2);
+}
+.windows {
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+}
+.windows li:nth-of-type(1) {
+    font-size: .9vw;
+}
+.windows li {
+    margin-bottom: .2vw;
+}
+.window_two {
+    position: absolute;
+    right: 5%;
+    /* right: 1%; */
+    top: 5%;
+}
+.window_two li:nth-of-type(1) {
+    font-size: .9vw;
+}
+.window_three {
+    position: absolute;
+    bottom: 5%;
+    left: 60%;
+}
+.window_four {
+    position: absolute;
+    top: 7%;
+    left: 10%;
+}
+.window_five {
+    position: absolute;
+    bottom: 15%;
+    left: 20%;
+}
+.window_six{
+    position: absolute;
+    /* border: 1px solid red; */
+    right: 40%;
+    top: 0%;
+}
+.peasant {
+    position: absolute;
+    right: 17%;
+    top: 27%;
+    width: 5.5%;
+    height:9%;
+    cursor: pointer;
+    /* background-color: #fff; */
+}
+
+.display_box {
+    display: none;
+}
+
+.land_box1 {
+    position: absolute;
+    left: 13%;
+    top: 32%;
+    width: 13%;
+    height: 30%;
+    cursor: pointer;
+}
+.land_box2 {
+    position: absolute;
+    left: 45%;
+    top: 65%;
+    width: 20%;
+    height: 15%;
+    transform:rotate(150deg);
+    cursor: pointer;
+}
+.land_box3 {
+    position: absolute;
+    right: 5%;
+    top: 40%;
+    width: 20%;
+    height: 15%;
+    transform:rotate(150deg);
+    cursor: pointer;
+}
+.land_box4 {
+    position: absolute;
+    right: 41%;
+    top: 0%;
+    width: 10%;
+    height: 25%;
+    transform:rotate(140deg);
+    cursor: pointer;
+}
+.plant {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    width: 25%;
+    height: 30%;
+    cursor: pointer;
+    /* border: 1px solid red; */
+}
+.soil_data {
+    position: absolute;
+    bottom:23%;
+    left: 45%;
+    width: 55%;
+    height: 10%;
+    transform:rotate(150deg);
+}
+.weather_info {
+    position: absolute;
+    top: -5%;
+    left: 18%;
+    width: 10%;
+    height: 15%;
+}
+
+/* center部分over--- */
+
+
+/* left bottom start--- */
+.leftBottom {
+    display: inline-block;
+    position: relative;
+    width: 32%;
+    height: 80%;
+    font-size: .6vw;
+    color: #0EFCFF;
+}
+.leftBottom .land_data p {
+    position: absolute;
+    left: 52%;
+    top: 14%;
+}
+.land_data p:nth-child(2) {
+    top: 24%;
+    left: 57%;
+}
+.land_data p:nth-child(3) {
+    top: 32%;
+    left: 67%;
+}
+.right_box {
+    float: right;
+    width: 65%;
+    height: 70%;
+    /* margin: 2%; */
+    margin-top: 1%;
+    margin-right: 1%;
+    /* background-color: red; */
+}
+.grow_data {
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 45%;
+    height: 100%;
+    /* background-color: pink; */
+}
+.grow_data img {
+    display: inline-block;
+    width: 20%;
+    height: 80%;
+    margin-top: .8vw;
+}
+.grow_data p {
+    color: #0EFCFF;
+    position: absolute;
+}
+.grow_data p:nth-of-type(1) {
+    top: 3%;
+    left: 5%;
+}
+.grow_data p:nth-of-type(2) {
+    top: 47%;
+    left: 22%;
+}
+.grow_data p:nth-of-type(3) {
+    top: 80%;
+    left: 5%;
+}
+.grow_data span {
+    position: absolute;
+    top: 18%;
+    left: 13%;
+    padding: .15vw .6vw;
+    border-radius: 1vw;
+    display: inline-block;
+    color: #0EFCFF;
+    background: rgba(40, 229, 233, .2);
+}
+.specialistSuggest {
+    position: absolute;
+    left: 50%;
+    top: -15%;
+    display: inline-block;
+    width: 30%;
+    padding: 1vw;
+    color: #0EFCFF;
+    font-size: .6vw;
+}
+
+.specialistSuggest div:nth-of-type(1) {
+    font-size: .7vw;
+}
+
+.fertilizationSuggest {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    display: inline-block;
+    width: 35%;
+    padding: 1vw;
+    color: #0EFCFF;
+    font-size: .6vw;
+}
+.fertilizationSuggest div:nth-of-type(1) {
+    font-size: .7vw;
+}
+
+.weather_data {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    margin-left: 3%;
+    margin-top: .5%;
+    font-size: .6vw;
+    /* background-color: yellow; */
+    background-image: url(../img//bottom_icons.png);
+    background-size: 90% 80%;
+    background-repeat: no-repeat;
+}
+.weather_text {
+    color: #0EFCFF;
+}
+.weather_text span {
+    position: absolute;
+    top: 35%;
+}
+.weather_text span:nth-of-type(1) {
+    left: -5%;
+}
+.weather_text span:nth-of-type(2) {
+    left: 24%;
+}
+.weather_text span:nth-of-type(3) {
+    left: 50%;
+}
+.weather_text span:nth-of-type(4) {
+    left: 75%;
+}
+.text_two span {
+    top: 85%;
+}
+.text_two span:nth-of-type(1) {
+    left: 0%;
+}
+.text_two span:nth-of-type(2) {
+    left: 30%;
+}
+.text_two span:nth-of-type(3) {
+    left: 65%;
+}
+/* .text_one {
+    margin-top: 14%;
+
+}
+.text_two {
+    margin-top: 18%;
+} */
+
+
+/* left bottom over--- */
+
+
+/* 右侧三个内容框start--- */
+
+    /* 硬件设备展示start--- */
+.boxLis {
+    width: 68%;
+    z-index: 9999;
+    height: 1.5vw;
+    margin-left: 3.5vw;
+    margin-top: 1vw;
+    font-size: .6vw;
+    /* background-color: pink; */
+    border-bottom: .02vw solid rgb(40, 229, 233);
+}
+
+.boxLis>li {
+    /* width: 21.1%; */
+    /* height: 1.4vw; */
+    z-index: 9999;
+    padding: .1vw;
+    display: block;
+    background: rgba(40, 229, 233, .5);
+    margin-right: 2.5%;
+    line-height: 1.4vw;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    /* border-bottom: .02vw solid rgb(40, 229, 233); */
+}
+.boxLis li:nth-child(4) {
+    margin-right: 0;
+}
+
+.boxLis > .active {
+    /* border-bottom: none; */
+    /* color: #0EFCFF; */
+    border-top: .02vw solid rgb(40, 229, 233);
+    border-right: .02vw solid rgb(40, 229, 233);
+    border-left: .02vw solid rgb(40, 229, 233);
+}
+.equipment_pic {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #031426;
+}
+.equipment_pic img {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+    height: 80%;
+}
+.equipment_pic img:nth-child(2) {
+    display: none;
+    width: 45%;
+    height: 50%;
+}
+.equipment_pic img:nth-child(3) {
+    width: 40%;
+    height: 65%;
+    display: none;
+}
+.equipment_pic img:nth-child(4) {
+    width: 50%;
+    height: 70%;
+    display: none;
+}
+
+.liSpan {
+    width: 100%;
+    margin-top: -1%;
+    text-align: center;
+    color: rgb(40, 229, 233);
+}
+
+.liP {
+    width: 66%;
+    margin: .3vw auto 0;
+    text-align: left;
+    font-size: .6vw;
+    color: rgb(40, 229, 233);
+}
+/* 硬件设备展示over--- */
+
+
+/* 灌溉数据start--- */
+.irrigate_data {
+    width: 100%;
+    height: 100%;
+    /* background-color: yellow; */
+}
+.centerList {
+    /* float: left; */
+    display: inline-block;
+    width: 37%;
+    height: 80%;
+    padding-top: 3%;
+    text-align: center;
+    margin-left: 2vw;
+}
+
+.centerListFont {
+    font-size: .8vw;
+    color: #0EFCFF;
+}
+
+.centerListNum {
+    font-size: 1.5vw;
+    color: white;
+    margin-top: .2vw;
+}
+.irrigate_bottom {
+    width: 100%;
+    height: 40%;
+    margin-top: .2vw;
+}
+.irrigate_bottom .every_line {
+    width: 90%;
+    height: 25%;
+    margin-left: 5%;
+    margin-bottom: 3%;
+    background-color: rgba(14,252,255,.2);
+}
+.every_line span {
+    color: #0EFCFF;
+    margin-left: .7vw;
+    font-size: .7vw;
+}
+.every_line i {
+    color: #fff;
+    float: right;
+    margin-right: .8vw;
+    font-size: 1vw;
+}
+/* 灌溉数据over--- */
+
+/* 数据日志start--- */
+.data_day {
+    width: 100%;
+    height: 100%;
+    font-size: .55vw;
+    color: #fff;
+}
+.data_day table {
+    height: 10%;
+    width: 100%;
+    overflow:hidden;
+    text-align: center;
+    margin: auto;
+    margin-left: 5%;
+}
+.data_day .head {
+    color: #0EFCFF;
+}
+.data_day ul {
+    display: inline-block;
+}
+
+/* 数据日志over--- */
+
+
+
+/* 右侧三个内容框over--- */
+
+
+
+
+

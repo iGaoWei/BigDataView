@@ -1,0 +1,192 @@
+@import url('http://fonts.googleapis.com/css?family=Bitter:400,700,400italic');
+/* ui slider pips */
+.ui-slider-horizontal.ui-slider-pips {
+  margin-bottom: 2.8em;
+}
+.ui-slider-pips .ui-slider-number,
+.ui-slider-pips .ui-slider-pip-hide {
+  display: none;
+}
+.ui-slider-pips .ui-slider-pip-number .ui-slider-number {
+  display: block;
+}
+.ui-slider-pips .ui-slider-pip {
+  width: 2em;
+  height: 1em;
+  line-height: 1em;
+  position: absolute;
+  font-size: 0.8em;
+  color: #999;
+  overflow: visible;
+  text-align: center;
+  top: 20px;
+  left: 20px;
+  margin-left: -1em;
+  cursor: pointer;
+}
+.ui-slider-pips .ui-slider-line {
+  background: #999;
+  width: 1px;
+  height: 3px;
+  position: absolute;
+  left: 50%;
+}
+.ui-slider-pips .ui-slider-number {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  margin-left: -1em;
+  width: 2em;
+}
+.ui-slider-pip:hover .ui-slider-number {
+  color: white;
+  font-weight: bold;
+}
+.ui-slider-vertical.ui-slider-pips {
+  margin-bottom: 0;
+  margin-right: 2em;
+}
+.ui-slider-vertical.ui-slider-pips .ui-slider-pip {
+  text-align: left;
+  top: 20px;
+  left: 20px;
+  margin-left: 0;
+  margin-top: -0.5em;
+}
+.ui-slider-vertical.ui-slider-pips .ui-slider-line {
+  width: 3px;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.ui-slider-vertical.ui-slider-pips .ui-slider-number {
+  top: 50%;
+  left: 0.5em;
+  margin-left: 0;
+  margin-top: -0.5em;
+  width: 2em;
+}
+.ui-slider-vertical.ui-slider-pip:hover .ui-slider-number {
+  color: white;
+  font-weight: bold;
+}
+.ui-slider-float .ui-slider-tip,
+.ui-slider-float .ui-slider-tip-number {
+  position: absolute;
+  visibility: hidden;
+  top: -40px;
+  display: block;
+  width: 34px;
+  margin-left: -17px;
+  left: 50%;
+  height: 20px;
+  line-height: 20px;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-size: 12px;
+  opacity: -1;
+  transition: all 0.4s ease;
+  color: #333;
+}
+.ui-slider-float .ui-slider-handle:hover .ui-slider-tip,
+.ui-slider-float .ui-slider-handle:focus .ui-slider-tip,
+.ui-slider-float .ui-slider-pip:hover .ui-slider-tip-number {
+  opacity: 0.9;
+  top: -30px;
+  color: #333;
+  visibility: visible;
+}
+.ui-slider-float .ui-slider-pip .ui-slider-tip-number {
+  top: 15px;
+}
+.ui-slider-float .ui-slider-pip:hover .ui-slider-tip-number {
+  top: 5px;
+  font-weight: normal;
+}
+.ui-slider-float .ui-slider-tip:after,
+.ui-slider-float .ui-slider-pip .ui-slider-tip-number:after {
+  content: " ";
+  width: 0;
+  height: 0;
+  border: 5px solid rgba(255, 255, 255, 0);
+  border-top-color: #ffffff;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  margin-left: -5px;
+}
+.ui-slider-float .ui-slider-pip .ui-slider-tip-number:after {
+  border: 5px solid rgba(255, 255, 255, 0);
+  border-bottom-color: #ffffff;
+  top: -10px;
+}
+/* ------------------------- */
+body {
+  font-family: 'bitter';
+  padding: 20px 50px;
+  text-align: center;
+  background: url('http://wallpaperswa.com/thumbnails/detail/20120313/abstract%20blue%20lights%20orange%20bokeh%20gaussian%20blur%201920x1200%20wallpaper_www.wallpaperhi.com_43.jpg');
+  background-size: cover;
+  color: white;
+}
+h1,
+h3 {
+  margin: 0 0 10px ;
+}
+h3 {
+  font-weight: 200;
+  margin-bottom: 10px;
+}
+h4 {
+  font-weight: 300;
+  font-style: italic;
+  color: black;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  border-radius: 4px;
+}
+a {
+  color: #2cafe3;
+}
+.wrapper {
+  padding: 40px 40px 0;
+  border: 1px dotted rgba(200, 200, 255, 0.6);
+  background: rgba(0, 10, 20, 0.7);
+  border-radius: 10px;
+}
+.ui-slider {
+  box-shadow: inset 0 2px 1px #aaa;
+  border-color: #000;
+}
+.ui-slider-horizontal {
+  height: 10px;
+  background: #ddd;
+}
+.ui-slider-horizontal .ui-slider-handle {
+  height: 18px;
+  width: 14px;
+  background: #2cafe3;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  margin-left: -8px;
+  cursor: pointer;
+}
+.ui-slider-horizontal.green .ui-slider-handle {
+  background: #afe32c;
+}
+@media (max-width: 700px) {
+  .ui-slider-pip:nth-child(odd) .ui-slider-number {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .ui-slider-pip:nth-child(2n+1) .ui-slider-number {
+    display: none;
+  }
+  .ui-slider-pip:nth-child(4n) .ui-slider-number {
+    display: none;
+  }
+}

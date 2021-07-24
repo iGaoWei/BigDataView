@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box}
+*,body{padding:0px;	margin:0px;font-family: "微软雅黑";}
+body{color:#fff;font-size: 16px; background: #033c76 url(../images/bg.png) no-repeat; background-size: 100% 100%;
+}
+@font-face{font-family:electronicFont;src:url(../font/DS-DIGIT.TTF)}
+html,body{min-height: 100%;}
+li{ list-style-type:none;}
+table{}
+i{ margin:0px; padding:0px; text-indent:0px;}
+img{ border:none; max-width: 100%;}
+a{ text-decoration:none; color:#fff;}
+a.active,a:focus{ outline:none!important; text-decoration:none;}
+ol,ul,p,h1,h2,h3,h4,h5,h6{ padding:0; margin:0}
+a:hover{ color:#06c; text-decoration: none!important}
+.clearfix:after, .clearfix:before {display: table;content: " "}
+ .clearfix:after {clear: both}
+.pulll_left{float:left;}
+.pulll_right{float:right;}
+i{font-style: normal;}
+.text-w{color: #ffe400}
+.text-d{color: #ff6316}
+.text-s{color: #14e144}
+.text-b{color: #07e5ff}
+
+.head{position: relative; height: 90px; margin: 0 15px; padding-right: 60px;}
+.head h1{  font-size: 30px; letter-spacing: -2px; text-align: center; line-height: 90px; padding-right: 55px; color: #daf9ff;}
+.head .menu{}
+.head .menu ul{ font-size: 0;}
+
+.head .menu li{ display: inline-block; position: relative;margin: 30px 15px;;}
+.head .menu li a{ display: block; font-size: 18px; color: #fff; line-height: 30px; padding: 0 10px; }
+.head .time{position: absolute; right: 0; line-height: 90px; top: 0;}
+
+.menu li:before,
+.menu li:after{ position:absolute; width:10px; height:5px;opacity: .4; content: "";  border-top: 2px solid #02a6b5; top: -1px;border-radius: 2px;}
+.menu li:before,.menu li a:before{border-left: 2px solid #02a6b5;left: -1px;}
+.menu li:after,.menu li a:after{border-right: 2px solid #02a6b5; right: -1px;}
+.menu li a{ position:relative;}
+.menu li a:before,
+.menu li a:after{ position:absolute; width:10px; height:5px; opacity: .4;  content: "";border-bottom: 2px solid #02a6b5; bottom:-1px;border-radius: 2px;}
+
+.head .menu li a:hover{ color: #f4e925;}
+.menu li a:hover:before,
+.menu li a:hover:after,
+.menu li:hover:before,
+.menu li:hover:after{border-color:  #f4e925; opacity: 1;}
+
+.mainbox{padding: 0px 10px;}
+.nav1{margin-left: -6px; margin-right:-6px;}
+.nav1>li{padding:0 6px; float: left;}
+
+.box{ border:1px solid rgba(7,118,181,.5); box-shadow:inset 0 0 10px rgba(7,118,181,.4); margin-bottom: 12px; position: relative;}
+.tit{ padding: 10px 10px 10px 25px;border-bottom:1px solid rgba(7,118,181,.7);font-size: 16px; font-weight: 500; position: relative;}
+.tit:before,.tit01:before{position: absolute; content: ""; width: 6px; height: 6px; background: rgba(22,214,255,.9);box-shadow: 0 0 5px rgba(22,214,255,.9); border-radius: 10px; left: 10px; top: 18px;}
+
+.tit:after,.box:before{ width: 100%; height: 1px; content: ""; position: absolute; left: 0; bottom:-1px; background:linear-gradient(to right,#076ead,#4ba6e0,#076ead); box-shadow: 0 0 5px rgba(131,189,227,1); opacity: .6}
+.box:before{top: -1px;}
+
+.boxnav{padding: 10px;}
+.tit01{font-size: 16px; font-weight: 500; position: relative; padding-left: 15px;}
+.tit01:before{ left: 3px; top: 8px;}
+
+.mapc{background: url(../images/bg3.png) no-repeat center center; background-size: 100% 100%}
+.map{position: relative; height: 100%;}
+.map img{}
+.mapnav{position: absolute;z-index: 10;}
+
+
+.yqlist li{float: left; width: 50%; padding:10px 0; text-align: center;}
+.yq{width:100px; height: 100px; margin: 0 auto  5px auto;  position: relative; display: flex; justify-content: center;align-items: center; font-size: 30px;font-family:electronicFont;color: #fff32b;}
+.yqlist li span{opacity: .6; font-size: 14px;}
+
+.yq:before{position: absolute; width: 100%; height: 100%; content: ""; background: url(../images/img1.png) center center; border-radius: 100px; background-size: 100% 100%; opacity:.3;
+	left:0; top: 0; animation: myfirst2 15s infinite linear;}
+
+.yq:after{position: absolute; width: 86%; background: url(../images/img2.png) center center; border-radius: 100px; background-size: 100% 100%;  opacity:.3;
+	height: 86%; content: "";   left:7%; top: 7%; animation: myfirst 15s infinite linear;}
+
+
+@keyframes myfirst
+{
+to { transform: rotate(-360deg)}
+}
+@keyframes myfirst2
+{
+to { transform: rotate(360deg)}
+}
+
+
+

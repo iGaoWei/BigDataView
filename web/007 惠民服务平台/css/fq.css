@@ -1,0 +1,397 @@
+
+body, html {
+	height: 100%;
+	overflow: hidden;
+}
+.background-img {
+	width: 1920px;
+	background: url(../img/bac.png) center 0;
+	background-repeat: no-repeat;
+}
+.todayTimeBox {
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	color: #73abe9;
+	font-size: 20px;
+}
+.todayTimeBox .todayTime {
+	float: right;
+	margin-right: 60px;
+}
+.mainbody {
+	width: 98%;
+	margin: 0 auto;
+	display: flex;
+	padding-top: 36px;
+	padding-bottom: 37px;
+}
+.mainbody .leftContent, .mainbody .rightContent {width: 600px;}
+.mainbody .centerContent {
+	width: 652px;
+}
+.leftContent .serviceItem {
+	width: 100%;
+	height: 340px;
+	background-image: url(../images/k_2all.png);
+	margin-top: 20px;
+	background-size: 100%;
+	background-repeat:  no-repeat;
+}
+.serviceForm {
+	margin-top: 30px;
+	width: 100%;
+	background: url(../img/k_3.png) center 0;
+	background-repeat:  no-repeat;
+	min-height: 546px;
+	background-size: 100%;
+}
+.seHeader {
+	padding-top: 18px;
+	overflow: hidden;
+}
+.seHeader span:first-child {
+	float: left;
+	margin-left: 29px;
+	margin-top: 8px;
+}
+.seHeader span:first-child .p-1 {
+	font-size: 20px;
+	color: #fff;
+}
+.seHeader span:first-child .p-2 {
+	font-size: 14px;
+	color: #66dffb;
+}
+.seHeader span:last-child {
+ 	float: right;
+ 	font-size: 46px;
+ 	color: #7bb9ff;
+ 	margin-right: 28px;
+ }
+
+ .statusList {
+ 	width: 90%;
+ 	margin: 0 auto;
+ 	margin-top: 5px;
+ }
+
+.statusList .seTable {
+	width: 100%;
+	padding-bottom: 0px;
+	overflow:  hidden;
+	display:  flex;
+}
+.statusList .seTable li {
+	float: left;
+	width: 20%;
+	font-size: 18px;
+	color: #66dffb;
+	background: #093e79;
+	padding: 10px 0;
+	margin-right: 6px;
+	text-align:  center;
+}
+.statusList .seTable .outlineBorder {
+	font-size: 14px;
+}
+.statusList .outlineBorder ul {
+	height: 40px;
+}
+.statusList .outlineBorder ul:nth-child(odd) {
+	color: #3e90f7;
+}
+.statusList .outlineBorder ul:nth-child(even) {
+	color: #8ec0ff;
+}
+.statusList .outlineBorder ul li {
+	float: left;
+	width: 20%;
+	height: 20px;
+	line-height: 30px;
+	padding: 10px 0;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;";;
+}
+.statusList .outlineBorder ul li:first-child {
+	font-size: 12px!important;
+}
+
+
+/* 无缝滚动  */
+@-webkit-keyframes scrollText1 {
+	0%{
+		-webkit-transform: translateY(0px);
+	}
+	20%{
+		-webkit-transform: translateY(-40px);
+	}
+	40%{
+		-webkit-transform: translateY(-80px);
+	}
+	60%{
+		-webkit-transform: translateY(-120px);
+	}
+	80%{
+		-webkit-transform: translateY(-160px);
+	}
+	100%{
+		-webkit-transform: translateY(-200px);
+	}
+}
+
+@keyframes scrollText1 {
+	0%{
+		transform: translateY(0px);
+	}
+	20%{
+		transform: translateY(-40px);
+	}
+	40%{
+		transform: translateY(-80px);
+	}
+	60%{
+		transform: translateY(-120px);
+	}
+	80%{
+		transform: translateY(-160px);
+	}
+	100%{
+		transform: translateY(-200px);
+	}
+}
+.outlineBorder {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	height: 400px;
+}
+.rolling {
+	top: 0px;
+	-webkit-animation:scrollText1 10s infinite  cubic-bezier(1, 0, 0.5, 0);
+	animation:scrollText1 10s infinite  cubic-bezier(1, 0, 0.5, 0);
+}
+.outlineBorder:hover  .rolling {
+	animation-play-state:paused;
+	-webkit-animation-play-state:paused;
+}
+
+/* 地图 */
+.implantation {
+	width: 100%;
+	height: 100%;
+	position:  relative;
+	z-index: 500;
+}
+
+/* 呼吸服务 */
+.breathe {
+	width: 100%;
+	height: 242px;
+	background: url(../img/k_2.png);
+	margin-top: 20px;
+}
+.serData {
+	margin-top: 7px;
+	overflow: hidden;
+	color: #66dffb;
+}
+.serData > div {
+	float: left;
+	font-size: 18px;
+	text-align:  center;
+}
+.serData > .serDataLeft {
+	margin-left: 15%;
+	padding: 0 12px;
+}
+.serDataLeft .serNum {
+	font-size: 60px;
+	color: #f0bd54;
+}
+.phoneCall {
+	width: 100%;
+	height: 650px;
+	background-image: url(../img/k_4.png);
+	background-size:  100%;
+	background-repeat: no-repeat;
+	margin-top: 34px;
+}
+.phoneNum {
+	width: 90%;
+	height: 250px;
+	margin: 0 auto;
+}
+/* 折线图  */
+.brokenLine {
+	width: 100%;
+	height: 300px;
+}
+#mainbody {
+	transform-origin: 0 0;
+}
+.centerContent {
+	position: relative;
+}
+.centerContent  .sumDot {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.centerContent .sumDot > span {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	z-index: 600;
+}
+.redClass {
+	background: red;
+}
+.greenClass {
+	/*background: green;*/
+}
+/* 水波扩散效果 */
+@keyframes warn {
+	0% {
+		transform: scale(0);
+		opacity: 0.0;
+	}
+	25% {
+		transform: scale(0);
+		opacity: 0.1;
+	}
+	50% {
+		transform: scale(0.1);
+		opacity: 0.3;
+	}
+	75% {
+		transform: scale(0.5);
+		opacity: 0.5;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 0.0;
+	}
+}
+@-webkit-keyframes "warn" {
+	0% {
+		-webkit-transform: scale(0);
+		opacity: 0.0;
+	}
+	25% {
+		-webkit-transform: scale(0);
+		opacity: 0.1;
+	}
+	50% {
+		-webkit-transform: scale(0.1);
+		opacity: 0.3;
+	}
+	75% {
+		-webkit-transform: scale(0.5);
+		opacity: 0.5;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 0.0;
+	}
+}
+.sumDot span .container {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 10px;
+	height: 10px;
+}
+.dot {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	top: -2px;
+	left: -2px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	/*border: 2px solid red;*/
+	border-radius: 20px;
+	z-index: 2;
+}
+/* 产生动画（向外扩散变大）的圆圈  */
+.pulse {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: -50px;
+	top: -50px;
+	/*border: 30px solid red;*/
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 50%;
+	z-index: 1;
+	opacity: 0;
+	-webkit-animation: warn 2s ease-out;
+	-moz-animation: warn 2s ease-out;
+	animation: warn 2s ease-out;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+/* sos弹窗 */
+.sosInfor {
+	position: absolute;
+	top: 20px;
+	left: 30px;
+	width: 230px;
+	height: 188px;
+	background: rgba(0,0,0,0.5);
+	z-index: 999;
+	box-shadow: 0 0 10px #fff;
+	border-radius: 5px;
+}
+.sosInfor .sosTitle {
+	font-size: 16px;
+	color: #ece14f;
+	padding: 6px 10px;
+}
+.sosInfor > ul {
+	font-size: 14px;
+	color: #fff;
+	margin-top: 9px;
+	padding: 0px 11px;
+}
+.sosInfor > ul li {
+	margin-bottom: 5px;
+}
+.borColor-1 {
+	border: 2px solid red;
+}
+.borColor-2 {
+	border: 2px solid green;
+}
+.borColor-3 {
+	border: 30px solid red;
+}
+.borColor-4 {
+	border: 30px solid green;
+}
+.close {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	cursor: pointer;
+	width: 20px;
+}
+.tips {
+	position: absolute;
+	min-width: 138px;
+	background: #000;
+	color: #ece14f;
+	top: -40px;
+	left: -70px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	display: none;
+}

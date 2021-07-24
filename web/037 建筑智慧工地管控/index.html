@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+		<title>建筑智慧工地管控</title>
+		<link rel="stylesheet" href="css/app.css" />
+		 <script type="text/javascript" src="js/echarts.min.js"></script>
+		    <script type="text/javascript" src="js/jdjh.js"></script>
+<script type="text/javascript">
+		  function getCurDate() {
+		var d = new Date();
+		var week;
+		switch (d.getDay()) {
+		case 1:
+			week = "星期一";
+			break;
+		case 2:
+			week = "星期二";
+			break;
+		case 3:
+			week = "星期三";
+			break;
+		case 4:
+			week = "星期四";
+			break;
+		case 5:
+			week = "星期五";
+			break;
+		case 6:
+			week = "星期六";
+			break;
+		default:
+			week = "星期天";
+		}
+		var years = d.getFullYear();
+		var month = add_zero(d.getMonth() + 1);
+		var days = add_zero(d.getDate());
+		var hours = add_zero(d.getHours());
+		var minutes = add_zero(d.getMinutes());
+		var seconds = add_zero(d.getSeconds());
+		var ndate = years + "年" + month + "月" + days + "日 " + hours + ":"
+				+ minutes + ":" + seconds + " " + week;
+		var divT = document.getElementById("logInfo");
+		divT.innerHTML = ndate;
+	}
+	function add_zero(temp) {
+		if (temp < 10)
+			return "0" + temp;
+		else
+			return temp;
+	}
+	setInterval("getCurDate()", 100);
+	</script>
+	</head>
+	
+	<body class="bg01">
+		<div class="header">
+			<h1 class="header-title">建筑智慧工地管控</h1>
+			<div id="logInfo" style="text-align: left;color: #fff;position: relative;left: 10px;"><script type="text/JavaScript" language="JavaScript">
+			getCurDate();
+		</script></div>
+		</div>
+		<div class="wrapper">
+			<div class="content">
+				<div class="col col-l">
+					<div class="xpanel-wrapper xpanel-wrapper-55">
+						<div class="xpanel xpanel-l-t">
+							<div class="title">项目概况</div>
+							<div class="bcontent">
+								  <ul>
+										<li class="leftrt">工程名称：</li>
+										<li class="rightrt">新建工程</li>
+										<li class="leftrt">工程类型：</li>
+										<li class="rightrt">水电</li>
+										<li class="leftrt">工程状态：</li>
+										<li class="rightrt">正在施工</li>
+										<li class="leftrt">业主单位：</li>
+										<li class="rightrt">项目管理中心</li>
+										<li class="leftrt">施工单位：</li>
+										<li class="rightrt">输变电分公司</li>
+										<li class="leftrt">建管单位：</li>
+										<li class="rightrt">建设部</li>
+										<li class="leftrt">监理单位：</li>
+										<li class="rightrt">**监理有限公司</li>
+										<li class="leftrt">计划开始时间：</li>
+										<li class="rightrt">2019-10-21</li>
+										<li class="leftrt">计划完成时间：</li>
+										<li class="rightrt">2019-10-21</li>
+										<li class="leftrt">实际开始时间：</li>
+										<li class="rightrt">2019-10-21</li>
+										<li class="leftrt">实际完成时间：</li>
+										<li class="rightrt">2019-10-21</li>
+									</ul>
+							</div>
+						</div>
+					</div>
+					<div class="xpanel-wrapper xpanel-wrapper-45">
+						<div class="xpanel xpanel-l-b">
+							<div class="title">项目人员出勤率</div>
+							<div id ="ryCharts" class="bcontent">
+							 
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col col-c">
+					<div class="xpanel-wrapper xpanel-wrapper-55">
+						<div  class="xpanel xpanel-c-b">
+							<div class="title title-long" style="padding-left:25px">项目进度甘特图</div>
+							 <div id="gCharts" class="bcontent" style="height:92%;">
+							  
+							</div>
+						</div>
+					</div>
+					<div class="xpanel-wrapper xpanel-wrapper-45">
+						<div  class="xpanel xpanel-c-b">
+							<div class="title title-long" style="padding-left:25px">双代号时标网络图</div>
+							 <div id="container" class="bcontent" style="height:85%;">
+							  
+							</div>
+						</div>
+				
+					</div>
+				</div>
+				<div class="col col-r">
+					<div class="xpanel-wrapper xpanel-wrapper-25" >
+						<div class="xpanel xpanel-r-t">
+							<div class="title">机具管控出勤率</div>
+						    <div id="jqCharts" class="bcontent">
+							  
+							</div>
+						</div>
+					</div>
+					<div class="xpanel-wrapper xpanel-wrapper-25" >
+						<div class="xpanel xpanel-r-m">
+							<div class="title">违章情况分析率</div>
+							  <div id="wzCharts" class="bcontent">
+							   
+							</div>
+						</div>
+					</div>
+					<div class="xpanel-wrapper xpanel-wrapper-45" >
+						<div class="xpanel xpanel-r-b">
+							<div class="title">物料验收</div>
+							  <div id="wlCharts" class="bcontent">
+							  
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	 <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = {
+    title: {
+        text: '双代号时标网络图',
+		 show: false
+    },
+    tooltip: {},
+    animationDurationUpdate: 1500,
+    animationEasingUpdate: 'quinticInOut',
+    color:['#ca8622', '#bda29a','#8B0000'],
+    series : [
+        {
+            type: 'graph',
+            layout: 'none',
+            symbolSize: 45,
+            roam: false, //放大缩小
+            label: {
+                normal: {
+                    show: true,
+					textStyle: {
+                            color: "#fff",
+                            fontSize: 12,
+                        }
+                }
+            },
+            edgeSymbol: ['circle', 'arrow'],
+            edgeSymbolSize: [4, 10],
+            edgeLabel: {
+                
+                normal: {
+                    show: true,
+                    textStyle: {
+                        fontSize: 12
+                    },
+                    formatter: "{c}"
+                }
+            },
+            data: [{
+                name: '节点1',
+                x: 50,
+                y: 300
+            }, {
+                name: '节点2',
+                x: 100,
+                y: 400
+            }, {
+                name: '节点3',
+                x: 100,
+                y: 200
+            }, {
+                name: '节点4',
+                x: 200,
+                y: 300
+            }, {
+                name: '节点5',
+                x: 300,
+                y: 400
+            }, {
+                name: '节点6',
+                x: 300,
+                y: 300
+            }, {
+                name: '节点7',
+                x: 300,
+                y: 200
+            }, {
+                name: '节点8',
+                x: 400,
+                y: 400
+            }, {
+                name: '节点9',
+                x: 450,
+                y: 200
+            }, {
+                name: '节点10',
+                x: 450,
+                y: 300
+            }, {
+                name: '节点11',
+                x: 550,
+                y: 400
+            }, {
+                name: '节点12',
+                x: 550,
+                y: 300
+            }, {
+                name: '节点13',
+                x: 650,
+                y: 200
+            },{
+                name: '节点14',
+                x: 650,
+                y: 300
+            }],
+            // links: [],
+            links: [{
+                source: 0,
+                target: 1,
+                value: 'C',
+				 label: {
+                    normal: {
+                        show: true
+                    }
+                }
+            }, {
+                source: 0,
+                target: 2,
+                value: 'A'
+            }, {
+                source: 0,
+                target: 3,
+                value: 'B',
+                lineStyle: {
+                    normal: {
+                        width: 4,
+                        curveness: 0,
+						color: "#ff4747"
+                    }
+                }
+            }, {
+                source: 1,
+                target: 4,
+                value: 'M'
+               
+            },{
+                source: 2,
+                target: 6,
+                value: 'E'
+            },{
+                source: 3,
+                target: 5,
+                value: 'D',
+				  lineStyle: {
+                    normal: {
+                        width: 4,
+                        curveness: 0,
+						color: "#ff4747"
+                    }
+                }
+            },{
+                source: 3,
+                target: 4,
+                value: '',
+				  lineStyle: {
+                    normal: {
+						type:'dotted',
+                        width: 2,
+                        curveness: 0.2,
+						color: "#ff4747"
+                    }
+                }
+            },{
+                source: 5,
+                target: 6,
+                value: '',
+				  lineStyle: {
+                    normal: {
+                        width: 2,
+                        curveness: 0,
+						color: "#ff4747",
+						type:"dotted"
+                    }
+                }
+            },{
+                source: 4,
+                target: 7,
+                value: 'N'
+            },{
+                source: 5,
+                target: 9,
+                value: 'I'
+            },{
+                source: 6,
+                target: 8,
+                value: 'F',
+				lineStyle: {
+                    normal: {
+                        width: 4,
+                        curveness: 0,
+						color: "#ff4747"
+                    }
+                }
+            },{
+                source: 7,
+                target: 10,
+                value: 'P'
+            },{
+                source: 8,
+                target: 12,
+                value: 'G',
+				lineStyle: {
+                    normal: {
+                        width: 4,
+                        curveness: 0,
+						color: "#ff4747"
+                    }
+                }
+            },{
+                source: 8,
+                target: 9,
+                value: '',
+				lineStyle: {
+                    normal: {
+                        width: 2,
+                        curveness: 0,
+						type:"dotted"
+                    }
+                }
+            },{
+                source: 9,
+                target: 11,
+                value: 'J'
+            },{
+                source: 10,
+                target: 11,
+                value: '',
+				lineStyle: {
+                    normal: {
+                        width: 2,
+                        curveness: 0,
+						type:"dotted"
+                    }
+                }
+            },{
+                source: 11,
+                target: 13,
+                value: 'K'
+            },{
+                source: 12,
+                target: 13,
+                value: 'H',
+				lineStyle: {
+                    normal: {
+                        width: 4,
+                        curveness: 0,
+						color: "#ff4747"
+                    }
+                }
+            }],
+            lineStyle: {
+                normal: {
+                    opacity: 0.9,
+                    width: 2,
+                    curveness: 0,
+					color:"#5dc2fe"
+                }
+            }
+        }
+    ]
+};
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+
+//甘特图
+var gdom = document.getElementById("gCharts");
+var gCharts = echarts.init(gdom);
+if (ptoption && typeof ptoption === "object") {
+    gCharts.setOption(ptoption, true);
+}
+
+//人员出勤率
+var rydom = document.getElementById("ryCharts");
+var ryCharts = echarts.init(rydom);
+ryoption = {
+    title: {
+            text: '项目出勤率',
+            subtext: '模拟数据',
+            // x 设置水平安放位置，默认左对齐，可选值：'center' ¦ 'left' ¦ 'right' ¦ {number}（x坐标，单位px）
+            x: 'center',
+            // y 设置垂直安放位置，默认全图顶端，可选值：'top' ¦ 'bottom' ¦ 'center' ¦ {number}（y坐标，单位px）
+            y: 'top',
+            // itemGap设置主副标题纵向间隔，单位px，默认为10，
+            itemGap: 30,
+            backgroundColor: '#EEE',
+            // 主标题文本样式设置
+            textStyle: {
+              fontSize: 26,
+              fontWeight: 'bolder',
+              color: '#000080'
+            },
+            // 副标题文本样式设置
+            subtextStyle: {
+              fontSize: 18,
+              color: '#8B2323'
+            }
+			,show:false
+          },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)",
+    },
+    legend: {
+       // orient 设置布局方式，默认水平布局，可选值：'horizontal'（水平） ¦ 'vertical'（垂直）
+            orient: 'vertical',
+            // x 设置水平安放位置，默认全图居中，可选值：'center' ¦ 'left' ¦ 'right' ¦ {number}（x坐标，单位px）
+            x: 'left',
+            // y 设置垂直安放位置，默认全图顶端，可选值：'top' ¦ 'bottom' ¦ 'center' ¦ {number}（y坐标，单位px）
+            y: 'top',
+            itemWidth: 24,   // 设置图例图形的宽
+            itemHeight: 18,  // 设置图例图形的高
+            textStyle: {
+              color: '#666'  // 图例文字颜色
+            },
+            // itemGap设置各个item之间的间隔，单位px，默认为10，横向布局时为水平间隔，纵向布局时为纵向间隔
+            itemGap: 15, 
+           data:['实到','未到','迟到']
+    },
+    calculable : true,
+	color:['#3CB371', '#bda29a','#8B0000'],
+    series : [
+        {
+            name:'每日出勤率',
+            type:'pie',
+            radius: ['30%', '60%'],  // 设置环形饼状图， 第一个百分数设置内圈大小，第二个百分数设置外圈大小
+            center: ['60%', '35%'],  // 设置饼状图位置，第一个百分数调水平位置，第二个百分数调垂直位置
+            data:[
+                {value:150, name:'实到'},
+                {value:50, name:'未到'},
+                {value:5, name:'迟到'}
+            ],
+			// itemStyle 设置饼状图扇形区域样式
+              itemStyle: {
+                // emphasis：英文意思是 强调;着重;（轮廓、图形等的）鲜明;突出，重读
+                // emphasis：设置鼠标放到哪一块扇形上面的时候，扇形样式、阴影
+                emphasis: {
+                  shadowBlur: 10,
+                  shadowOffsetX: 0,
+                  shadowColor: 'rgba(30, 144, 255，0.5)'
+                }
+			},
+		 // 设置值域的那指向线
+              labelLine: {
+                normal: {
+                  show: false   // show设置线是否显示，默认为true，可选值：true ¦ false
+                }
+              },
+			   // 设置值域的标签
+              label: {
+                normal: {
+                  position: 'inner',  // 设置标签位置，默认在饼状图外 可选值：'outer' ¦ 'inner（饼状图上）'
+                  // formatter: '{a} {b} : {c}个 ({d}%)'   设置标签显示内容 ，默认显示{b}
+                  // {a}指series.name  {b}指series.data的name
+                  // {c}指series.data的value  {d}%指这一部分占总数的百分比
+                  formatter: '{c}'
+                }
+              }
+		 }
+
+    ]
+
+};
+if (ryoption && typeof ryoption === "object") {
+    ryCharts.setOption(ryoption, true);
+}
+
+//人员出勤率
+var rydom = document.getElementById("ryCharts");
+var ryCharts = echarts.init(rydom);
+ryoption = {
+    title: {
+            text: '项目出勤率',
+            subtext: '模拟数据',
+            // x 设置水平安放位置，默认左对齐，可选值：'center' ¦ 'left' ¦ 'right' ¦ {number}（x坐标，单位px）
+            x: 'center',
+            // y 设置垂直安放位置，默认全图顶端，可选值：'top' ¦ 'bottom' ¦ 'center' ¦ {number}（y坐标，单位px）
+            y: 'top',
+            // itemGap设置主副标题纵向间隔，单位px，默认为10，
+            itemGap: 30,
+            backgroundColor: '#EEE',
+            // 主标题文本样式设置
+            textStyle: {
+              fontSize: 26,
+              fontWeight: 'bolder',
+              color: '#000080'
+            },
+            // 副标题文本样式设置
+            subtextStyle: {
+              fontSize: 18,
+              color: '#8B2323'
+            }
+			,show:false
+          },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)",
+    },
+    legend: {
+       // orient 设置布局方式，默认水平布局，可选值：'horizontal'（水平） ¦ 'vertical'（垂直）
+            orient: 'vertical',
+            // x 设置水平安放位置，默认全图居中，可选值：'center' ¦ 'left' ¦ 'right' ¦ {number}（x坐标，单位px）
+            x: 'left',
+            // y 设置垂直安放位置，默认全图顶端，可选值：'top' ¦ 'bottom' ¦ 'center' ¦ {number}（y坐标，单位px）
+            y: 'top',
+            itemWidth: 24,   // 设置图例图形的宽
+            itemHeight: 18,  // 设置图例图形的高
+            textStyle: {
+              color: '#5dc2fe'  // 图例文字颜色
+            },
+            // itemGap设置各个item之间的间隔，单位px，默认为10，横向布局时为水平间隔，纵向布局时为纵向间隔
+            itemGap: 15, 
+           data:['实到','未到','迟到']
+    },
+    calculable : true,
+	color:['#3CB371', '#bda29a','#8B0000'],
+    series : [
+        {
+            name:'每日出勤率',
+            type:'pie',
+            radius: ['30%', '60%'],  // 设置环形饼状图， 第一个百分数设置内圈大小，第二个百分数设置外圈大小
+            center: ['60%', '35%'],  // 设置饼状图位置，第一个百分数调水平位置，第二个百分数调垂直位置
+            data:[
+                {value:150, name:'实到'},
+                {value:50, name:'未到'},
+                {value:5, name:'迟到'}
+            ],
+			// itemStyle 设置饼状图扇形区域样式
+              itemStyle: {
+                // emphasis：英文意思是 强调;着重;（轮廓、图形等的）鲜明;突出，重读
+                // emphasis：设置鼠标放到哪一块扇形上面的时候，扇形样式、阴影
+                emphasis: {
+                  shadowBlur: 10,
+                  shadowOffsetX: 0,
+                  shadowColor: 'rgba(30, 144, 255，0.5)'
+                }
+			},
+
+		 // 设置值域的那指向线
+              labelLine: {
+                normal: {
+                  show: false   // show设置线是否显示，默认为true，可选值：true ¦ false
+                }
+              },
+			   // 设置值域的标签
+              label: {
+                normal: {
+                  position: 'inner',  // 设置标签位置，默认在饼状图外 可选值：'outer' ¦ 'inner（饼状图上）'
+                  // formatter: '{a} {b} : {c}个 ({d}%)'   设置标签显示内容 ，默认显示{b}
+                  // {a}指series.name  {b}指series.data的name
+                  // {c}指series.data的value  {d}%指这一部分占总数的百分比
+                  formatter: '{c}'
+                }
+              }
+		 }
+
+    ]
+
+};
+if (ryoption && typeof ryoption === "object") {
+    ryCharts.setOption(ryoption, true);
+}
+//机器出勤率
+var jqdom = document.getElementById("jqCharts");
+var jqCharts = echarts.init(jqdom);
+jqoption = {
+    title: {
+            text: '机具状态分析',
+             show:false
+          },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)",
+    },
+    legend: {
+       // orient 设置布局方式，默认水平布局，可选值：'horizontal'（水平） ¦ 'vertical'（垂直）
+            orient: 'vertical',
+            // x 设置水平安放位置，默认全图居中，可选值：'center' ¦ 'left' ¦ 'right' ¦ {number}（x坐标，单位px）
+            x: 'left',
+            // y 设置垂直安放位置，默认全图顶端，可选值：'top' ¦ 'bottom' ¦ 'center' ¦ {number}（y坐标，单位px）
+            y: 'top',
+            itemWidth: 24,   // 设置图例图形的宽
+            itemHeight: 18,  // 设置图例图形的高
+            textStyle: {
+              color: '#5dc2fe'  // 图例文字颜色
+            },
+            // itemGap设置各个item之间的间隔，单位px，默认为10，横向布局时为水平间隔，纵向布局时为纵向间隔
+            itemGap: 15, 
+           data:['正常运行','日常检修','故障停止']
+    },
+    calculable : true,
+	color:['#3CB371', '#FF9F7F', '#8B0000'],
+    series : [
+        {
+            name:'机具状态分析',
+            type:'pie',
+            radius: ['30%', '60%'],  // 设置环形饼状图， 第一个百分数设置内圈大小，第二个百分数设置外圈大小
+            center: ['60%', '35%'],  // 设置饼状图位置，第一个百分数调水平位置，第二个百分数调垂直位置
+            data:[
+                {value:10, name:'正常运行'},
+                {value:5, name:'日常检修'},
+                {value:2, name:'故障停止'}
+            ],
+			// itemStyle 设置饼状图扇形区域样式
+              itemStyle: {
+                // emphasis：英文意思是 强调;着重;（轮廓、图形等的）鲜明;突出，重读
+                // emphasis：设置鼠标放到哪一块扇形上面的时候，扇形样式、阴影
+                emphasis: {
+                  shadowBlur: 10,
+                  shadowOffsetX: 0,
+                  shadowColor: 'rgba(30, 144, 255，0.5)'
+                }
+			},
+		 // 设置值域的那指向线
+              labelLine: {
+                normal: {
+                  show: false   // show设置线是否显示，默认为true，可选值：true ¦ false
+                }
+              },
+			   // 设置值域的标签
+              label: {
+                normal: {
+                  position: 'inner',  // 设置标签位置，默认在饼状图外 可选值：'outer' ¦ 'inner（饼状图上）'
+                  // formatter: '{a} {b} : {c}个 ({d}%)'   设置标签显示内容 ，默认显示{b}
+                  // {a}指series.name  {b}指series.data的name
+                  // {c}指series.data的value  {d}%指这一部分占总数的百分比
+                  formatter: '{c}'
+                }
+              }
+		 }
+
+    ]
+
+};
+if (jqoption && typeof jqoption === "object") {
+    jqCharts.setOption(jqoption, true);
+}
+
+
+//违章错误率
+var wzdom = document.getElementById("wzCharts");
+var wzCharts = echarts.init(wzdom);
+wzoption = {
+    title: {
+            text: '违章错误率',
+            show:false
+          },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)",
+    },
+    legend: {
+       // orient 设置布局方式，默认水平布局，可选值：'horizontal'（水平） ¦ 'vertical'（垂直）
+            orient: 'vertical',
+            // x 设置水平安放位置，默认全图居中，可选值：'center' ¦ 'left' ¦ 'right' ¦ {number}（x坐标，单位px）
+            x: 'left',
+            // y 设置垂直安放位置，默认全图顶端，可选值：'top' ¦ 'bottom' ¦ 'center' ¦ {number}（y坐标，单位px）
+            y: 'top',
+            itemWidth: 24,   // 设置图例图形的宽
+            itemHeight: 18,  // 设置图例图形的高
+            textStyle: {
+              color: '#5dc2fe'  // 图例文字颜色
+            },
+            // itemGap设置各个item之间的间隔，单位px，默认为10，横向布局时为水平间隔，纵向布局时为纵向间隔
+            itemGap: 15, 
+           data:['警告','一般违章','重大违章']
+    },
+    calculable : true,
+	color:['#00CCFF', '#CC6600','#8B0000'],
+    series : [
+        {
+            name:'机具状态分析',
+            type:'pie',
+            radius: ['30%', '60%'],  // 设置环形饼状图， 第一个百分数设置内圈大小，第二个百分数设置外圈大小
+            center: ['60%', '35%'],  // 设置饼状图位置，第一个百分数调水平位置，第二个百分数调垂直位置
+            data:[
+                {value:20, name:'警告'},
+                {value:10, name:'一般违章'},
+                {value:2, name:'重大违章'}
+            ],
+			// itemStyle 设置饼状图扇形区域样式
+              itemStyle: {
+                // emphasis：英文意思是 强调;着重;（轮廓、图形等的）鲜明;突出，重读
+                // emphasis：设置鼠标放到哪一块扇形上面的时候，扇形样式、阴影
+                emphasis: {
+                  shadowBlur: 10,
+                  shadowOffsetX: 0,
+                  shadowColor: 'rgba(30, 144, 255，0.5)'
+                }
+			},
+		 // 设置值域的那指向线
+              labelLine: {
+                normal: {
+                  show: false   // show设置线是否显示，默认为true，可选值：true ¦ false
+                }
+              },
+			   // 设置值域的标签
+              label: {
+                normal: {
+                  position: 'inner',  // 设置标签位置，默认在饼状图外 可选值：'outer' ¦ 'inner（饼状图上）'
+                  // formatter: '{a} {b} : {c}个 ({d}%)'   设置标签显示内容 ，默认显示{b}
+                  // {a}指series.name  {b}指series.data的name
+                  // {c}指series.data的value  {d}%指这一部分占总数的百分比
+                  formatter: '{c}'
+                }
+              }
+		 }
+
+    ]
+
+};
+if (wzoption && typeof wzoption === "object") {
+    wzCharts.setOption(wzoption, true);
+}
+
+//违章错误率
+var wldom = document.getElementById("wlCharts");
+var wlCharts = echarts.init(wldom);
+wloption = {
+    title : {
+        text: '物料到货情况分析',
+        subtext: '纯属虚构',
+		show:false
+    },
+		color:['#00CCFF', '#CC6600','#8B0000'],
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+	    orient: 'horizontal',      // 布局方式，默认为水平布局，可选为：
+        data:['计划采购量','实际到货量'],
+		x: 'center',               // 水平安放位置，默认为全图居中，可选为：
+		y: 'top',                  // 垂直安放位置，默认为全图顶端，可选为：
+		textStyle: {
+              color: '#5dc2fe'  // 图例文字颜色
+            }
+    },
+    calculable : true,
+    xAxis : [
+        {
+            type : 'category',
+            data : ['采购计划壹','采购计划贰','采购计划叁'],
+			 //设置坐标轴字体颜色和宽度
+            axisLine: {
+                lineStyle: {
+                    color: "#5dc2fe",
+                }
+            },
+			splitLine: {show: false}
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value',
+			 //设置坐标轴字体颜色和宽度
+            axisLine: {
+                lineStyle: {
+                    color: "#5dc2fe",
+                }
+            },
+			splitLine: {show: false}
+        }
+    ],
+    series : [
+        {
+            name:'计划采购量',
+            type:'bar',
+            data:[10, 15, 20]
+        },
+        {
+            name:'实际到货量',
+            type:'bar',
+            data:[5,8,12]
+        }
+    ]
+};
+if (wloption && typeof wloption === "object") {
+    wlCharts.setOption(wloption, true);
+}
+	//根据窗口的大小变动图表 --- 重点
+	window.onresize = function(){
+	    myChart.resize();
+		gCharts.resize();
+	    ryCharts.resize();
+	    jqCharts.resize();
+		wzCharts.resize();
+		wlCharts.resize();
+	}
+
+       </script>
+</html>

@@ -1,0 +1,396 @@
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+input,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+textarea,
+article,
+aside,
+audio,
+canvas,
+figure,
+footer,
+header,
+mark,
+menu,
+nav,
+section,
+time,
+video {
+    margin : 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size  : 100%;
+    font-weight: normal
+}
+
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+blockquote {
+    display: block;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    border        : 0 none;
+    vertical-align: top;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing : 0;
+}
+
+strong,
+em,
+i {
+    font-style : normal;
+    font-weight: normal;
+}
+
+ins {
+    text-decoration: underline;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+mark {
+    background: none;
+}
+
+input::-ms-clear {
+    display: none !important;
+}
+
+body {
+    font      : 12px/1.5 \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, "Hiragino Sans GB", STHeiti, "WenQuanYi Micro Hei", "Droid Sans Fallback", SimSun, sans-serif;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color          : #333;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body,
+html,
+.main {
+    width : 100%;
+    height: 100%;
+    font-size: 12px;
+}
+
+.main {
+    position       : relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #1D2B56;
+}
+
+.nav {
+    position       : relative;
+    top            : .5vw;
+    width          : 100%;
+    height         : 5vw;
+    background     : url(../img/top.png) no-repeat;
+    background-size: 100%;
+    text-align     : center;
+    line-height    : 4vw;
+    color          : #0efcff;
+    font-size      : 1.4vw;
+    letter-spacing : .4vw;
+}
+
+.nav_btn {
+    position: absolute;
+    top     : 1.5vw;
+    width   : 100%;
+    height  : 2vw;
+}
+
+.btn_left {
+    float      : left;
+    width      : 25%;
+    margin-left: 5%;
+    height     : 100%;
+}
+
+.btn_right {
+    float       : right;
+    width       : 25%;
+    margin-right: 5%;
+    height      : 100%;
+}
+
+.btn_list {
+    position      : relative;
+    float         : left;
+    width         : 5.5vw;
+    height        : 1.6vw;
+    text-align    : center;
+    line-height   : 1.6vw;
+    font-size     : .9vw;
+    color         : #0efcff;
+    letter-spacing: .1vw;
+    cursor        : pointer;
+}
+
+.btn_left a,
+.btn_right a {
+    display: inline-block;
+}
+
+.btn_left a:nth-child(2) {
+    margin: 0 .6vw;
+}
+
+.btn_left a:nth-child(4) {
+    margin-left: .6vw;
+}
+
+.btn_right a:nth-child(2) {
+    margin: 0 .6vw;
+}
+
+.btn_right a:nth-child(4) {
+    margin-left: .6vw;
+}
+
+.btn_list:before {
+    content  : '';
+    position : absolute;
+    top      : 0;
+    right    : 0;
+    bottom   : 0;
+    left     : 0;
+    border   : 1px solid #6176AF;
+    transform: skewX(-38deg);
+}
+
+.btn_list:hover::before {
+    border-color: #0efcff;
+    box-shadow  : 1px 1px 3px 1px #0efcff inset;
+}
+
+.listActive:before {
+    border-color: #0efcff;
+    box-shadow  : 1px 1px 3px 1px #0efcff inset;
+}
+
+.content {
+    position     : relative;
+    width        : 97%;
+    height       : 87%;
+    margin       : auto;
+    /* background: white; */
+}
+
+.baseBox {
+    position     : relative;
+    float        : left;
+    width        : 48.8%;
+    height       : 32.3%;
+    border       : 1px solid #6176AF;
+    background   : rgba(11, 21, 44, 0.60);
+    border-radius: 5px;
+}
+
+.baseHeightBox {
+    height: 100%;
+}
+
+.baseCenterBox {
+    margin: 1.5% 0;
+}
+
+.leftBox {
+    float        : left;
+    height       : 100%;
+    width        : 34.5%;
+    /* background: yellow; */
+}
+
+.rightBox {
+    float : left;
+    height: 100%;
+    width : 34.5%;
+}
+
+.centerBox {
+    position     : relative;
+    float        : left;
+    width        : 30%;
+    height       : 100%;
+    margin       : 0 .5%;
+    /* background: red; */
+}
+
+.marginLeft {
+    margin-left: 1.5%;
+}
+
+/* 边框描边 */
+.leftTopLine1 {
+    position  : absolute;
+    top       : 0;
+    left      : -1px;
+    height    : 1vw;
+    width     : 2px;
+    background: #0efcff;
+}
+
+.leftTopLine2 {
+    position  : absolute;
+    top       : -1px;
+    left      : 0;
+    height    : 2px;
+    width     : 1vw;
+    background: #0efcff;
+}
+
+.rightTopLine1 {
+    position  : absolute;
+    top       : 0;
+    right     : -1px;
+    height    : 1vw;
+    width     : 2px;
+    background: #0efcff;
+}
+
+.rightTopLine2 {
+    position  : absolute;
+    top       : -1px;
+    right     : 0;
+    height    : 2px;
+    width     : 1vw;
+    background: #0efcff;
+}
+
+.leftBottomLine1 {
+    position  : absolute;
+    bottom    : 0;
+    left      : -1px;
+    height    : 1vw;
+    width     : 2px;
+    background: #0efcff;
+}
+
+.leftBottomLine2 {
+    position  : absolute;
+    bottom    : -1px;
+    left      : 0;
+    height    : 2px;
+    width     : 1vw;
+    background: #0efcff;
+}
+
+.rightBottomLine1 {
+    position  : absolute;
+    bottom    : 0;
+    right     : -1px;
+    height    : 1vw;
+    width     : 2px;
+    background: #0efcff;
+}
+
+.rightBottomLine2 {
+    position  : absolute;
+    bottom    : -1px;
+    right     : 0;
+    height    : 2px;
+    width     : 1vw;
+    background: #0efcff;
+}
+
+.boxTitle {
+    font-size  : 1vw;
+    color      : #0efcff;
+    width      : 80%;
+    margin-left: .8vw;
+    margin-top : .5vw;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    font: right;
+}
+/*// */
+/*// */
+/*// */
+
+/* 视频新加 */
+.video-js .vjs-control {
+    width: 1vw !important;
+}
+.vjs-volume-panel {
+    display: none !important;
+}
+.vjs-live-display {
+    display: none !important;
+}
+.vjs-audio-button{
+    display: none !important;
+}

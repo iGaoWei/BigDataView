@@ -1,0 +1,327 @@
+﻿@charset "utf-8";
+
+/* CSS Document */
+html{ height: 100%; width: 100%;}
+* {
+	margin: 0;
+	padding: 0;
+}
+
+input.input-error:focus{background-color: transparent;}
+
+.popupDom {
+	position: fixed;
+	top: -40px;
+	width: 100%;
+	text-align: center;
+}
+
+.popup {
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #2a799f;
+	border-radius: 0px 0px 4px 4px;
+	text-align: center;
+	margin: 0 auto;
+	border: 1px solid #598fab;
+	border-top: none;
+	color: #FFFFFF;
+}
+
+.main {
+	min-height: 700px;
+	min-width: 1140px;
+	position: relative;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* 登录 */
+
+.login-bg {
+	background: url(../img/login-bg.png)0 0 repeat-x;
+	width: 100%;
+	height: 100%;
+}
+.login-dom{ position:absolute; width:100%;}
+.login {
+	width:590px;
+	margin: 0 auto;
+}
+
+
+/* logo */
+
+.logo {
+	padding-top: 100px;
+	margin: 0 auto 20px;
+}
+.logo1{margin: 0 auto 20px;}
+
+.logo-color {
+	color: #c0cad6;
+}
+
+
+/* 输入框 */
+
+.login-box {
+	width: 320px;
+	height: 82px;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	margin: 20px auto;
+	background-color: #dde6ea;
+	border: 2px solid #fff;
+	cursor: pointer;
+}
+
+.login-shadow {
+	box-shadow: 0px 0px 15px #000;
+	-moz-box-shadow: 0px 0px 15px #000;
+	-o-box-shadow: 0px 0px 15px #000;
+	-webkit-box-shadow: 0px 0px 15px #000;
+}
+
+
+/* 登录名 */
+
+.name {
+	width: 100%;
+	height: 40px;
+	border-radius: 8px;
+}
+
+.name input {
+	width: 90%;
+	height: 40px;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	margin-left: 5%;
+}
+
+input.input-error{
+	background-color: transparent;
+}
+/* 密码 */
+
+.pwd {
+	width: 100%;
+	height: 40px;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+}
+
+.pwd input {
+	width: 90%;
+	height: 40px;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	margin-left: 5%;
+}
+
+
+/* 登录按钮 */
+
+.btn {
+	display: block;
+	width: 320px;
+	height: 40px;
+	color: #c1c8d1;
+	background-color: #2a799f;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	margin: 30px auto;
+	line-height: 40px;
+	cursor: pointer;
+	border: 1px solid #598fab;
+}
+
+.btn:hover {
+	color: #fff;
+}
+
+.login-btn {
+	margin-top: 50px;
+}
+
+
+/* 忘记密码 */
+
+.login-bg .forget {
+	width: 560px;
+	height: 60px;
+	overflow: hidden;
+}
+
+.forget {
+	background-image: url(../img/forget.png);
+	margin: 40px auto;
+}
+
+.forget-pwd {
+	color: #c1c8d1;
+	margin-left: 53px;
+	padding-top: 20px;
+	cursor: pointer;
+}
+
+.forget-pwd:hover {
+	text-decoration: underline;
+	color: #fff;
+}
+
+.forget-new:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.forget-new {
+	color: #c1c8d1;
+	padding-top: 20px;
+	margin-right: 53px;
+	cursor: pointer;
+}
+
+
+/* 底部 */
+
+.footer {
+	width: 100%;
+	position: absolute;
+	bottom: 20px;
+	color: #c1c8d1;
+}
+.footer a{color: #c1c8d1;}
+.footer a:hover{color: #fff;text-decoration: underline;}
+/* 注册 */
+
+.register {
+	width: 100%;
+	margin: 0 auto;
+	display: none;
+}
+
+.num-box,
+.code-box {
+	width: 320px;
+	height: 40px;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	margin: 20px auto;
+	background-color: #dde6ea;
+	cursor: pointer;
+}
+
+
+/* 手机号(注册) */
+
+.area {
+	width: 85px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #555;
+}
+
+.num-box input {
+	width: 73%;
+	height: 40px;
+	outline: none;
+	border: none;
+	background-color: #dde6ea;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+}
+
+.slider-box {
+	width: 320px;
+	height: 40px;
+	margin: 30px auto;
+}
+
+
+/* 注册第二步 */
+
+.code-box input {
+	width: 64%;
+	height: 40px;
+	outline: none;
+	border: none;
+	background-color: #dde6ea;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+}
+
+
+/* 验证码 */
+
+.code {
+	width: 114px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	color: #265f83;
+	border-left: 2px solid #ced9dd;
+}
+
+.message {
+	width: 320px;
+	height: 30px;
+	color: #c0cad6;
+	margin: 0 auto;
+}
+
+
+/* 注册第三步 */
+
+.three-box {
+	width: 320px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	margin: 20px auto;
+	background-color: #dde6ea;
+	border: 2px solid #fff;
+	cursor: pointer;
+}
+
+
+
+
+/* 注册第四步 */
+
+.four-top {
+	position:relative;
+	top:50%;
+}
+
+.successDom {
+	position: absolute;
+	top: -50%;
+	margin-top:-180px;
+	z-index: 10;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	display: none;
+}
+
+/*注册*/
+.reg-wrap{margin: 20px auto; width: 320px;height: 82px;border-radius: 4px; background-color: #dde6ea;}
+.reg-btn{margin: 40px auto; width: 320px;height: 40px;line-height: 40px;border: 1px solid #598fab; background-color: #2a799f;border-radius: 8px; cursor: pointer;}
+.reg-btn:hover{color: #fff;}
+.reg-wrap .reg-number{height: 40px;line-height: 40px;}
+.reg-area{padding: 0 20px;}
+.reg-wrap input{background-color:transparent ;}
+.reg-phone{width: 80%; }
+.reg-code{width: 57%; border-right: 1px solid #ced9dd;}
+.reg-wrap .reg-send{padding: 0 37px; color: #265f83;cursor: pointer;}

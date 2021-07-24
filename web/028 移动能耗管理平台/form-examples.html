@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="UTF-8">
+
+        <meta name="description" content="Violate Responsive Admin Template">
+        <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
+
+        <title>Super Admin Responsive Template</title>
+            
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="js/bootstrap-3.3.4.css">
+        <link href="css/animate.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="js/font-awesome.4.6.0.css">
+        <link href="css/form.css" rel="stylesheet">
+        <link href="css/calendar.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/icons.css" rel="stylesheet">
+        <link href="css/generics.css" rel="stylesheet"> 
+    </head>
+    <body id="skin-blur-violate">
+        <header id="header" class="media">
+            <a href="" id="menu-toggle"></a> 
+            <a class="logo pull-left" href="index.html">SUPER ADMIN 1.0</a>
+            
+            <div class="media-body">
+                <div class="media" id="top-menu">
+                    <div class="pull-left tm-icon">
+                        <a data-drawer="messages" class="drawer-toggle" href="">
+                            <i class="sa-top-message"></i>
+                            <i class="n-count animated">5</i>
+                            <span>Messages</span>
+                        </a>
+                    </div>
+                    <div class="pull-left tm-icon">
+                        <a data-drawer="notifications" class="drawer-toggle" href="">
+                            <i class="sa-top-updates"></i>
+                            <i class="n-count animated">9</i>
+                            <span>Updates</span>
+                        </a>
+                    </div>
+                    
+                    
+
+                    <div id="time" class="pull-right">
+                        <span id="hours"></span>
+                        :
+                        <span id="min"></span>
+                        :
+                        <span id="sec"></span>
+                    </div>
+
+                    <div class="media-body">
+                        <input type="text" class="main-search">
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="clearfix"></div>
+        
+        <section id="main" class="p-relative" role="main">
+            
+            <!-- Sidebar -->
+            <aside id="sidebar">
+                
+                <!-- Sidbar Widgets -->
+                <div class="side-widgets overflow">
+                    <!-- Profile Menu -->
+                    <div class="text-center s-widget m-b-25 dropdown" id="profile-menu">
+                        <a href="" data-toggle="dropdown">
+                            <img class="profile-pic animated" src="img/profile-pic.jpg" alt="">
+                        </a>
+                        <ul class="dropdown-menu profile-menu">
+                            <li><a href="">My Profile</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                            <li><a href="">Messages</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                            <li><a href="">Settings</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                            <li><a href="">Sign Out</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                        </ul>
+                        <h4 class="m-0">Malinda Hollaway</h4>
+                        @malinda-h
+                    </div>
+                    
+                    <!-- Calendar -->
+                    <div class="s-widget m-b-25">
+                        <div id="sidebar-calendar"></div>
+                    </div>
+                    
+                    <!-- Feeds -->
+                    <div class="s-widget m-b-25">
+                        <h2 class="tile-title">
+                           News Feeds
+                        </h2>
+                        
+                        <div class="s-widget-body">
+                            <div id="news-feed"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projects -->
+                    <div class="s-widget m-b-25">
+                        <h2 class="tile-title">
+                            Projects on going
+                        </h2>
+                        
+                        <div class="s-widget-body">
+                            <div class="side-border">
+                                <small>Joomla Website</small>
+                                <div class="progress progress-small">
+                                     <a href="#" data-toggle="tooltip" title="" class="progress-bar tooltips progress-bar-danger" style="width: 60%;" data-original-title="60%">
+                                          <span class="sr-only">60% Complete</span>
+                                     </a>
+                                </div>
+                            </div>
+                            <div class="side-border">
+                                <small>Opencart E-Commerce Website</small>
+                                <div class="progress progress-small">
+                                     <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-info" style="width: 43%;" data-original-title="43%">
+                                          <span class="sr-only">43% Complete</span>
+                                     </a>
+                                </div>
+                            </div>
+                            <div class="side-border">
+                                <small>Social Media API</small>
+                                <div class="progress progress-small">
+                                     <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-warning" style="width: 81%;" data-original-title="81%">
+                                          <span class="sr-only">81% Complete</span>
+                                     </a>
+                                </div>
+                            </div>
+                            <div class="side-border">
+                                <small>VB.Net Software Package</small>
+                                <div class="progress progress-small">
+                                     <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-success" style="width: 10%;" data-original-title="10%">
+                                          <span class="sr-only">10% Complete</span>
+                                     </a>
+                                </div>
+                            </div>
+                            <div class="side-border">
+                                <small>Chrome Extension</small>
+                                <div class="progress progress-small">
+                                     <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-success" style="width: 95%;" data-original-title="95%">
+                                          <span class="sr-only">95% Complete</span>
+                                     </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Side Menu -->
+                <ul class="list-unstyled side-menu">
+                    <li>
+                        <a class="sa-side-home" href="index.html">
+                            <span class="menu-item">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sa-side-typography" href="typography.html">
+                            <span class="menu-item">Typography</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sa-side-widget" href="content-widgets.html">
+                            <span class="menu-item">Widgets</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sa-side-table" href="tables.html">
+                            <span class="menu-item">Tables</span>
+                        </a>
+                    </li>
+                    <li class="dropdown active">
+                        <a class="sa-side-form" href="">
+                            <span class="menu-item">Form</span>
+                        </a>
+                        <ul class="list-unstyled menu-item">
+                            <li><a href="form-elements.html">Basic Form Elements</a></li>
+                            <li><a href="form-components.html">Form Components</a></li>
+                            <li><a class="active" href="form-examples.html">Form Examples</a></li>
+                            <li><a href="form-validation.html">Form Validation</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="sa-side-ui" href="">
+                            <span class="menu-item">User Interface</span>
+                        </a>
+                        <ul class="list-unstyled menu-item">
+                            <li><a href="buttons.html">Buttons</a></li>
+                            <li><a href="labels.html">Labels</a></li>
+                            <li><a href="images-icons.html">Images &amp; Icons</a></li>
+                            <li><a href="alerts.html">Alerts</a></li>
+                            <li><a href="media.html">Media</a></li>
+                            <li><a href="components.html">Components</a></li>
+                            <li><a href="other-components.html">Others</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="sa-side-chart" href="charts.html">
+                            <span class="menu-item">Charts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sa-side-folder" href="file-manager.html">
+                            <span class="menu-item">File Manager</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sa-side-calendar" href="calendar.html">
+                            <span class="menu-item">Calendar</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="sa-side-page" href="">
+                            <span class="menu-item">Pages</span>
+                        </a>
+                        <ul class="list-unstyled menu-item">
+                            <li><a href="list-view.html">List View</a></li>
+                            <li><a href="profile-page.html">Profile Page</a></li>
+                            <li><a href="messages.html">Messages</a></li>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="404.html">404 Error</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </aside>
+        
+            <!-- Content -->
+            <section id="content" class="container">
+            
+                <!-- Messages Drawer -->
+                <div id="messages" class="tile drawer animated">
+                    <div class="listview narrow">
+                        <div class="media">
+                            <a href="">Send a New Message</a>
+                            <span class="drawer-close">&times;</span>
+                            
+                        </div>
+                        <div class="overflow" style="height: 254px">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/1.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">Nadin Jackson - 2 Hours ago</small><br>
+                                    <a class="t-overflow" href="">Mauris consectetur urna nec tempor adipiscing. Proin sit amet nisi ligula. Sed eu adipiscing lectus</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/2.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">David Villa - 5 Hours ago</small><br>
+                                    <a class="t-overflow" href="">Suspendisse in purus ut nibh placerat Cras pulvinar euismod nunc quis gravida. Suspendisse pharetra</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/3.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">Harris worgon - On 15/12/2013</small><br>
+                                    <a class="t-overflow" href="">Maecenas venenatis enim condimentum ultrices fringilla. Nulla eget libero rhoncus, bibendum diam eleifend, vulputate mi. Fusce non nibh pulvinar, ornare turpis id</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/4.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">Mitch Bradberry - On 14/12/2013</small><br>
+                                    <a class="t-overflow" href="">Phasellus interdum felis enim, eu bibendum ipsum tristique vitae. Phasellus feugiat massa orci, sed viverra felis aliquet quis. Curabitur vel blandit odio. Vestibulum sagittis quis sem sit amet tristique.</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/1.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">Nadin Jackson - On 15/12/2013</small><br>
+                                    <a class="t-overflow" href="">Ipsum wintoo consectetur urna nec tempor adipiscing. Proin sit amet nisi ligula. Sed eu adipiscing lectus</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/2.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">David Villa - On 16/12/2013</small><br>
+                                    <a class="t-overflow" href="">Suspendisse in purus ut nibh placerat Cras pulvinar euismod nunc quis gravida. Suspendisse pharetra</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/3.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">Harris worgon - On 17/12/2013</small><br>
+                                    <a class="t-overflow" href="">Maecenas venenatis enim condimentum ultrices fringilla. Nulla eget libero rhoncus, bibendum diam eleifend, vulputate mi. Fusce non nibh pulvinar, ornare turpis id</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/4.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">Mitch Bradberry - On 18/12/2013</small><br>
+                                    <a class="t-overflow" href="">Phasellus interdum felis enim, eu bibendum ipsum tristique vitae. Phasellus feugiat massa orci, sed viverra felis aliquet quis. Curabitur vel blandit odio. Vestibulum sagittis quis sem sit amet tristique.</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/5.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">Wendy Mitchell - On 19/12/2013</small><br>
+                                    <a class="t-overflow" href="">Integer a eros dapibus, vehicula quam accumsan, tincidunt purus</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media text-center whiter l-100">
+                            <a href=""><small>VIEW ALL</small></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Notification Drawer -->
+                <div id="notifications" class="tile drawer animated">
+                    <div class="listview narrow">
+                        <div class="media">
+                            <a href="">Notification Settings</a>
+                            <span class="drawer-close">&times;</span>
+                        </div>
+                        <div class="overflow" style="height: 254px">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/1.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">Nadin Jackson - 2 Hours ago</small><br>
+                                    <a class="t-overflow" href="">Mauris consectetur urna nec tempor adipiscing. Proin sit amet nisi ligula. Sed eu adipiscing lectus</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/2.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">David Villa - 5 Hours ago</small><br>
+                                    <a class="t-overflow" href="">Suspendisse in purus ut nibh placerat Cras pulvinar euismod nunc quis gravida. Suspendisse pharetra</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/3.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">Harris worgon - On 15/12/2013</small><br>
+                                    <a class="t-overflow" href="">Maecenas venenatis enim condimentum ultrices fringilla. Nulla eget libero rhoncus, bibendum diam eleifend, vulputate mi. Fusce non nibh pulvinar, ornare turpis id</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/4.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">Mitch Bradberry - On 14/12/2013</small><br>
+                                    <a class="t-overflow" href="">Phasellus interdum felis enim, eu bibendum ipsum tristique vitae. Phasellus feugiat massa orci, sed viverra felis aliquet quis. Curabitur vel blandit odio. Vestibulum sagittis quis sem sit amet tristique.</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/1.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">Nadin Jackson - On 15/12/2013</small><br>
+                                    <a class="t-overflow" href="">Ipsum wintoo consectetur urna nec tempor adipiscing. Proin sit amet nisi ligula. Sed eu adipiscing lectus</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/2.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">David Villa - On 16/12/2013</small><br>
+                                    <a class="t-overflow" href="">Suspendisse in purus ut nibh placerat Cras pulvinar euismod nunc quis gravida. Suspendisse pharetra</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media text-center whiter l-100">
+                            <a href=""><small>VIEW ALL</small></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Breadcrumb -->
+                <ol class="breadcrumb hidden-xs">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Library</a></li>
+                    <li class="active">Data</li>
+                </ol>
+                
+                <h4 class="page-title">FORM EXAMPLES</h4>
+                            
+                <!-- Basic -->
+                <div class="block-area" id="basic">
+                    <h3 class="block-title">Basic Example</h3>
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control input-sm" id="exampleInputEmail1" placeholder="Enter email">
+                        </div>
+                        
+                        <div class="form-group">
+                             <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control input-sm" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        
+                        <p>Some Help level texts here...</p>
+                        <div class="fileupload fileupload-new" data-provides="fileupload">
+                            <span class="btn btn-file btn-sm btn-alt">
+                                <span class="fileupload-new">Select file</span>
+                                <span class="fileupload-exists">Change</span>
+                                <input type="file" />
+                            </span>
+                            <span class="fileupload-preview"></span>
+                            <a href="#" class="close close-pic fileupload-exists" data-dismiss="fileupload">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-sm m-t-10">Login</button>
+                        <button type="submit" class="btn btn-sm m-t-10">Cancel</button>
+                    </form>
+                </div>
+                
+                <hr class="whiter m-t-20" />
+                
+                <!-- Basic with panel-->
+                <div class="block-area" id="basic">
+                    <h3 class="block-title">Basic Example with Panel</h3>
+                    <div class="tile p-15">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control input-sm" id="exampleInputEmail1" placeholder="Enter email">
+                            </div>
+                            
+                            <div class="form-group">
+                                 <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control input-sm" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            
+                            <p>Some Help level texts here...</p>
+                            <div class="fileupload fileupload-new" data-provides="fileupload">
+                                <span class="btn btn-file btn-sm btn-alt">
+                                    <span class="fileupload-new">Select file</span>
+                                    <span class="fileupload-exists">Change</span>
+                                    <input type="file" />
+                                </span>
+                                <span class="fileupload-preview"></span>
+                                <a href="#" class="close close-pic fileupload-exists" data-dismiss="fileupload">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-sm m-t-10">Login</button>
+                            <button type="submit" class="btn btn-sm m-t-10">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <hr class="whiter m-t-20" />
+                
+                <!-- Inline -->
+                <div class="block-area" id="inline">
+                    <h3 class="block-title">Inline Form</h3>
+                    <form class="form-inline" role="form">
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                            <input type="email" class="form-control input-sm" id="exampleInputEmail2" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputPassword2">Password</label>
+                            <input type="password" class="form-control input-sm" id="exampleInputPassword2" placeholder="Password">
+                        </div>
+                        <div class="checkbox m-l-5 m-r-10">
+                            <label>
+                                <span class="checkableBox"><input type="checkbox"></span>
+                                <span>Remember me</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-sm">Sign in</button>
+                    </form>
+                </div>
+                
+                <hr class="whiter m-t-20" />
+                
+                <!-- Horizontal -->
+                <div class="block-area" id="horizontal">
+                    <h3 class="block-title">Horizontal Form</h3>
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="inputName1" class="col-md-2 control-label">Name</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control input-sm" id="inputName1" placeholder="...">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail1" class="col-md-2 control-label">Email Address</label>
+                            <div class="col-md-10">
+                                <input type="email" class="form-control input-sm" id="inputEmail1" placeholder="...">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputMessage" class="col-md-2 control-label">Message</label>
+                            <div class="col-md-10">
+                                <textarea class="form-control auto-size input-sm" id="inputMessage" placeholder="..."></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <button type="submit" class="btn btn-info btn-sm m-t-10">SUBMIT FORM</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <hr class="whiter m-t-20" />
+                
+                <!-- Static Control -->
+                <div class="block-area" id="static-control">
+                    <h3 class="block-title">Static Control</h3>
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Name</label>
+                            <div class="col-md-10">
+                                <p class="form-control-static">David Aleam</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Email</label>
+                            <div class="col-md-10">
+                                <p class="form-control-static">email@example.com</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword" class="col-md-2 control-label">Password</label>
+                            <div class="col-md-10">
+                                <input type="password" class="form-control input-sm" id="inputPassword" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <button type="submit" class="btn btn-warning btn-sm m-t-10">UPDATE</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <hr class="whiter m-t-20" />
+                
+                <!-- Multi Column -->
+                <div class="block-area" id="multi-column">
+                    <h3 class="block-title">Multi Column</h3>
+                    <form class="row form-columned" role="form">
+                        <div class="col-md-4">
+                            <input type="text" class="form-control input-sm m-b-10" placeholder="Name">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control input-sm m-b-10" placeholder="Username">
+                        </div>
+                        <div class="col-md-4 m-b-10">
+                            <select class="select">
+                                <option>Country</option>
+                                <option>Japan</option>
+                                <option>Korea</option>
+                                <option>China</option>
+                            </select>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-md-4">
+                            <input type="tel" class="form-control input-sm m-b-10" placeholder="Contact Number">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control input-sm m-b-10" placeholder="City">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="password" class="form-control input-sm m-b-10" placeholder="Password">
+                        </div>
+                        <div class="col-md-12">
+                            <textarea class="form-control m-b-10" placeholder="Description"></textarea>
+                        </div>
+                        <div class="col-md-10">
+                            <button type="submit" class="btn btn-sm">Save Profile</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <hr class="whiter m-t-20" />
+                
+                <!-- Custom -->
+                <div class="block-area" id="custom">
+                    <h3 class="block-title">Custom Forms</h3>
+                    <div class="dropdown">
+                        <a data-toggle="dropdown" href="#">Dropdown - Login</a>
+                        <div class="dropdown-menu dark col-md-3 animated flipInY dropdown-form" role="menu">
+                            <header class="dark-header">
+                                <h4 class="dark-title m-0">Form Header</h4>
+                            </header>
+                            <div class="dark-body">
+                                <form role="form">
+                                    <div class="form-group">
+                                        <label>Email address</label>
+                                        <input type="email" class="form-control input-sm" placeholder="Enter email">
+                                    </div>
+                                    <div class="form-group">
+                                         <label>Password</label>
+                                        <input type="password" class="form-control input-sm" placeholder="Password">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="dark-footer">
+                                <button type="submit" class="btn btn-sm btn-alt">Login to Backend</button>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <p><a data-toggle="modal" href="#form-modal">Open Modal</a></p>
+           
+                    <!-- Modal -->
+                    <div class="modal fade" id="form-modal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title">Modal title</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <label for="inputName4" class="col-md-2 control-label">Name</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control input-sm" id="inputName4" placeholder="...">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputEmail4" class="col-md-2 control-label">Email</label>
+                                            <div class="col-md-9">
+                                                <input type="email" class="form-control input-sm" id="inputEmail4" placeholder="...">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputMessage3" class="col-md-2 control-label">Message</label>
+                                            <div class="col-md-9">
+                                                <textarea class="form-control auto-size input-sm" id="inputMessage3" placeholder="..."></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-sm btn-alt">Save changes</button>
+                                    <button type="button" class="btn btn-sm btn-alt" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                </div>
+                
+            </section>
+        </section>
+        
+        <!-- Javascript Libraries -->
+        <!-- jQuery -->
+        <script src="js/jquery-1.10.2.js"></script> <!-- jQuery Library -->
+        
+        <!-- Bootstrap -->
+        <script src="js/bootstrap-3.3.4.js"></script>
+        
+        <!--  Form Related -->
+        <script src="js/select.min.js"></script> <!-- Custom Select -->
+        <script src="js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
+        <script src="js/fileupload.min.js"></script> <!-- File Upload -->
+        <script src="js/autosize.min.js"></script> <!-- Textare autosize -->
+        
+        <!-- UX -->
+        <script src="js/scroll.min.js"></script> <!-- Custom Scrollbar -->
+        
+        <!-- Other -->
+        <script src="js/calendar.min.js"></script> <!-- Calendar -->
+        <script src="js/feeds.min.js"></script> <!-- News Feeds -->
+        
+        
+        <!-- All JS functions -->
+        <script src="js/functions.js"></script>
+
+    </body>
+</html>
+

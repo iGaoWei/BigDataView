@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/scroll.css">
+    <link rel="stylesheet" href="css/histor.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/date.css">
+    <!-- <link rel="stylesheet" href="css/info.css"> -->
+    <script src="js/shipei.js"></script>
+
+    <script src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="https://developer.baidu.com/map/custom/stylelist.js"></script>
+    <script type="text/javascript"
+        src="https://api.map.baidu.com/api?v=2.0&ak=cO9TZgFofryAYu4TCTSOTuYxVBuyy11A&services=&t=20200309163354">
+    </script>
+</head>
+
+<body>
+    <div class="bg">
+        <!-- 顶部 -->
+        <div class="header">
+            <span class="header-title">观测站</span>
+            <span class="header-text">综合监控平台</span>
+        </div>
+        <!-- 内容 -->
+        <div class="wrap">
+            <!-- 左侧 -->
+            <div class="left fl">
+                <div class="left-header">
+                    <span>农气站在线情况</span>
+                    <div id="left-header-nong" style="width: 100%;height: 100%;" class="left-header-nong"></div>
+                </div>
+                <div class="left-mid">
+                    <span>按观测作物分类</span>
+                    <div id="left-mid-nong" style="width: 100%;height: 100%;" class="left-header-nong"></div>
+                </div>
+                <div class="left-bottom">
+                    <span>农业小气候站</span>
+                    <div id="left-bottom-nong" style="width: 100%;height: 100%;" class="left-header-nong"></div>
+                </div>
+            </div>
+            <!-- 中间 -->
+            <div class="center fl">
+                <!-- 地图 -->
+                <div class="center-map">
+                    <div id="allmap" style="width:100%;height:100%;"></div>
+                </div>
+                <!-- 离线清单 -->
+                <div class="center-offline">
+                    <div class="center-offline-header">
+                        <p>离线站点清单</p>
+                    </div>
+                    <div class="center-offline-mid">
+                        <div class="title">
+                            <div class="sit sit-title fl">站名</div>
+                            <div class="sit sit-title fl">站号</div>
+                            <div class="sit sit-title fl">状态</div>
+                            <div class="sit sit-title fl">电话</div>
+                        </div>
+                        <!-- 自动滚动清单列表 -->
+                        <div class="list" id="list">
+                            <div class="rowup" id="rowup">
+                                <ul class="list-item">
+                                    <li class="fl sit-item">L0044</li>
+                                    <li class="fl sit-item">无锡市黄瓜</li>
+                                    <li class="fl sit-item">离线</li>
+                                    <li class="fl sit-item">12345678984</li>
+                                </ul>
+                                <ul class="list-item">
+                                    <li class="fl sit-item">L0044</li>
+                                    <li class="fl sit-item">东阳台村种植园</li>
+                                    <li class="fl sit-item">离线</li>
+                                    <li class="fl sit-item">12345678984</li>
+                                </ul>
+                                <ul class="list-item">
+                                    <li class="fl sit-item">L0044</li>
+                                    <li class="fl sit-item">山东院内</li>
+                                    <li class="fl sit-item">离线</li>
+                                    <li class="fl sit-item">12345678984</li>
+                                </ul>
+                                <ul class="list-item">
+                                    <li class="fl sit-item">L0044</li>
+                                    <li class="fl sit-item">山东农气站</li>
+                                    <li class="fl sit-item">离线</li>
+                                    <li class="fl sit-item">12345678984</li>
+                                </ul>
+                            </div>
+                            <div class="rowupcope" id="rowupcope"></div>
+                        </div>
+                    </div>
+
+                    <div class="center-offline-bottom">
+                        <p>研制：科技有限公司&nbsp;&nbsp;&nbsp;研制：科技有限公司</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧 -->
+            <div class="right fr">
+                <span class="right-title">站点详情</span>
+                <div class="right-top">
+                    <div class="right-top-content">
+                        <span class="name">站名:</span>
+                        <span class="text">观测站</span>
+                    </div>
+                    <div class="right-top-content">
+                        <span class="name">编号:</span>
+                        <span class="text">LOO33</span>
+                    </div>
+                    <div class="right-top-content">
+                        <span class="name">地址:</span>
+                        <span class="text">观测站</span>
+                    </div>
+                    <div class="right-top-content">
+                        <span class="name">观测作物:</span>
+                        <span class="text">西红柿</span>
+                    </div>
+                </div>
+                <div class="right-mid">
+                    <div class="right-mid-header">
+                        实时数据
+                    </div>
+                    <div class="right-mid-scroll">
+                        <div class="right-mid-content">
+                            <div class="right-top-content">
+                                <span class="name">要素数:</span>
+                                <span class="text">7</span>
+                            </div>
+                            <div class="right-top-content">
+                                <span class="name">观测时间:</span>
+                                <span class="text">2020-03-16 10:40:00</span>
+                            </div>
+                            <div class="right-top-content">
+                                <span class="name">150cm气温:</span>
+                                <span class="text">33.4℃</span>
+                            </div>
+                            <div class="right-top-content">
+                                <span class="name">150cm空气相对湿度</span>
+                                <span class="text">48.7%</span>
+                            </div>
+                            <div class="right-top-content">
+                                <span class="name">5cm低温：</span>
+                                <span class="text">0.0℃</span>
+                            </div>
+                            <div class="right-top-content">
+                                <span class="name">10cm低温：</span>
+                                <span class="text">18.1℃</span>
+                            </div>
+                            <div class="right-top-content">
+                                <span class="name">20cm低温:</span>
+                                <span class="text">18.0℃</span>
+                            </div>
+                            <div class="right-top-content">
+                                <span class="name">10cm土壤相对湿度:</span>
+                                <span class="text">46.3℃</span>
+                            </div>
+                            <div class="right-top-content">
+                                <span class="name">20cm土壤相对湿度:</span>
+                                <span class="text">46.3℃</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="javascript:;" class="history" id="triggerBtn">查看历史记录</a>
+                </div>
+                <div class="right-bottom">
+                    <div class="right-mid-header">
+                        实时监控
+                    </div>
+                    <div class="right-bottom-content">
+                        <img src="./img/jiankong.png" alt="">
+                    </div>
+                    <a href="javascript:;" class="history-pic" id="triggerBtnpic">查看历史图片</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 模态框历史数据 -->
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="model-header">查看历史记录</div>
+            <div class="see">
+                <div class="from fl">
+                    <div class="line fl">
+                        <span>站名：</span>
+                        <select name="name" id="" class="line-content">
+                            <option value="">西红柿观测站</option>
+                        </select>
+                    </div>
+                    <div class="line fl">
+                        <span>要素：</span>
+                        <select name="name" id="" class="line-content">
+                            <option value="">7</option>
+                        </select>
+                    </div>
+                    <div class="line fl">
+                        <span>开始时间:</span>
+                        <input type="text" name="date" id="date" lay-verify="date" placeholder="" autocomplete="off"
+                            class="line-content" />
+                    </div>
+                    <div class="line fl">
+                        <span>结束时间:</span>
+                        <input type="text" name="date" id="date1" lay-verify="date" placeholder="" autocomplete="off"
+                            class="line-content" />
+                    </div>
+                </div>
+                <div class="see-right fr">
+                    <div class="submit fr">
+                        <input type="button" class="button" value="导出">
+                    </div>
+                    <div class="submit fr query">
+                        <input type="button" class="button" value="查询">
+                    </div>
+                </div>
+            </div>
+            <div class="date">
+                <div class="date-content" id="date-content-wrap">
+                    <div id="data-content-line" style="width: 100%;height: 98%;" class="data-content-line"></div>
+                </div>
+            </div>
+
+            <div id="closeBtn" class="close">X</div>
+        </div>
+    </div>
+    <!-- 模态框历史图片 -->
+    <div id="myModalpic" class="modalpic">
+        <div class="modal-content">
+            <div class="model-header">查看历史图片</div>
+            <div class="see">
+                <div class="from fl">
+                    <div class="line fl">
+                        <span>站名：</span>
+                        <select name="name" id="" class="line-content">
+                            <option value="">西红柿观测站</option>
+                        </select>
+                    </div>
+                    <div class="line fl">
+                        <span>要素：</span>
+                        <select name="name" id="" class="line-content">
+                            <option value="">7</option>
+                        </select>
+                    </div>
+                    <div class="line fl">
+                        <span>开始时间:</span>
+                        <input type="text" name="date" id="date2" lay-verify="date" placeholder="" autocomplete="off"
+                            class="line-content" />
+                    </div>
+                    <div class="line fl">
+                        <span>结束时间:</span>
+                        <input type="text" name="date" id="date3" lay-verify="date" placeholder="" autocomplete="off"
+                            class="line-content" />
+                    </div>
+                </div>
+                <div class="see-right fr">
+                    <div class="submit fr querypic">
+                        <input type="button" class="button" value="查询">
+                    </div>
+                </div>
+            </div>
+            <!-- 历史图片 -->
+            <div class="date">
+                <div class="data-contentpic">
+                    <div class="date-content-pic fl">
+                        <img src="./img/lishitupian.jpg" alt="">
+                    </div>
+                    <div class="date-content-pic fl">
+                        <img src="./img/lishitupian.jpg" alt="">
+                    </div>
+                    <div class="date-content-pic fl">
+                        <img src="./img/lishitupian.jpg" alt="">
+                    </div>
+                    <div class="date-content-pic fl">
+                        <img src="./img/lishitupian.jpg" alt="">
+                    </div>
+                    <div class="date-content-pic fl">
+                        <img src="./img/lishitupian.jpg" alt="">
+                    </div>
+                    <div class="date-content-pic fl">
+                        <img src="./img/lishitupian.jpg" alt="">
+                    </div>
+                    <div class="date-content-pic fl">
+                        <img src="./img/lishitupian.jpg" alt="">
+                    </div>
+                    <div class="date-content-pic fl">
+                        <img src="./img/lishitupian.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div id="closeBtnpic" class="close">X</div>
+        </div>
+    </div>
+    </div>
+</body>
+
+<script src="js/jquery.js"></script>
+<script src="js/bar.js"></script>
+<script src="js/pie.js"></script>
+<script src="js/pinhuan.js"></script>
+<script src="js/map.js"></script>
+<script type="text/javascript" src="js/InfoBox.js"></script>
+<script src="js/histroy.js"></script>
+<script src="js/histroyline.js"></script>
+<script src="layui/layui.js"></script>
+<script src="js/date.js"></script>
+<script src="js/gundong.js"></script>
+
+</html>

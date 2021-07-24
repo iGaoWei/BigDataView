@@ -1,0 +1,378 @@
+
+/**/
+/**/
+             /**/
+
+.clear{
+    clear: both;
+}
+.flexLeft{
+    float: left;
+}
+.flexRight{
+    float: right;
+}
+.boxMain {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    /* background: red; */
+}
+
+.boxRader {
+    position: relative;
+    width: 100%;
+    height: 80%;
+}
+
+.centerBox {
+    background: transparent;
+}
+
+.centerBoxTop {
+    width: 100%;
+    height: 10%;
+    border: .01vw solid #0efcff;
+}
+
+.centerBoxTop ul {
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    -webkit-justify-content: space-around;
+    -webkit-align-items: center;
+    color: #fff;
+}
+
+.centerBoxTop ul>li {
+    text-align: center;
+}
+
+.p-li {
+    color: #0efcff;
+    font-size: 1.4vw;
+}
+
+.boxBottomtxt {
+    width: 80%;
+    margin: 4% auto 0;
+    padding-left: 4%;
+    color: rgb(40, 229, 233);
+
+}
+
+.boxBottomtxt>span {
+    float: left;
+    margin-right: 5%;
+    text-align: center;
+}
+
+.boxFont {
+    font-size: 1.2vw;
+}
+
+.boxDatelis {
+    width: 100%;
+    height: 80%;
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    font-size: .6vw;
+}
+
+.boxDatelis ul {
+    width: 50%;
+    margin-left:5%;
+}
+
+.boxDatelis ul>li {
+    line-height: 1.5vw;
+    text-align: left;
+}
+/* 种植 */
+.plant{
+    width: 90%;
+    height: 4vw;
+    margin:8% auto 0;
+    display: -webkit-flex;
+    display: -moz-flex;
+    -webkit-justify-content:space-between;
+    -moz-justify-content:space-between;
+
+
+
+}
+.plant li{
+    width: 30%;
+    height: 100%;
+    background: rgba(0,235,255,.08);
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: space-between;
+    display: -moz-flex;
+    -moz-flex-direction: column;
+    -moz-justify-content: space-between;
+}
+.plant li>div>img{
+    width: .88vw;
+    height: .88vw;
+    float: right;
+}
+.plant li>p{
+    width: 80%;
+    font-size: 1.5vw;
+    color: #fff;
+    margin: auto;
+
+}
+.plant li>div{
+    width: 80%;
+    margin:5% auto 0;
+}
+.plant li>div>span{
+    font-size: .8vw;
+    color: #0efcff;
+    float: left;
+}
+
+.spans1{
+    width: 80%;
+    height: 8%;
+    background: #0efcff;
+}
+.spans2{
+    width: 80%;
+    height: 8%;
+    background: #FE0000;
+}
+.spans3{
+    width: 80%;
+    height: 8%;
+    background: #F78001;
+}
+/* 地图 */
+.map{
+    position: relative;
+    width: 100%;
+    height:38%;
+    margin-top:8%
+}
+/* 种植地数量 */
+.plantDdetails{
+    width: 85%;
+    height: 25%;
+    margin: 8% auto 0;
+}
+.plantDdetails li{
+    margin-bottom: 10%;
+}
+
+.plantNum{
+    width: 7.97vw;
+    height: 2.5vw;
+    text-align: center;
+    position: relative;
+    font-size: 1vw;
+    color: #01FEFE;
+}
+.plantNum span{
+    line-height: 2.5vw;
+}
+.plantNum img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.plantNumbers{
+    display: -webkit-flex;
+    display: -moz-flex;
+    margin-left:5%;
+}
+.plantNumbers>li{
+    width:2.2vw;
+    height: 2.2vw;
+    position: relative;
+    font-size: 1.5vw;
+    color: #01FEFE;
+    text-align: center;
+    margin-right:2%;
+}
+.plantNumbers>li>span{
+   line-height: 100%;
+}
+.plantNumbers>li img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.ptlanTxts{
+    font-size: 1.2vw;
+    color: #01FEFE;
+    margin-left:2%;
+}
+.boximgs {
+    width: 90%;
+    height: 80%;
+    margin: 1vw auto 0;
+    display: -webkit-flex;
+    display: -o-flex;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -o-flex-direction: row;
+    -o-flex-wrap: wrap;
+    -o-justify-content: space-between;
+}
+
+.boximgs img {
+    width: 47%;
+    height: 42%;
+
+}
+
+.boxVideo {
+    width: 90%;
+    height: 60%;
+    margin: 1vw auto 0;
+}
+
+.boxVideo video {
+    width: 100%;
+    height: 100%;
+
+}
+
+.colors {
+    color: rgb(40, 229, 233);
+}
+
+.colorccc {
+    color: #ccc;
+}
+
+.name {
+    color: rgb(40, 229, 233);
+}
+
+.left {
+    float: left;
+}
+
+.boxFont {
+    font-size: 1.2VW;
+}
+
+.leftBox_left {
+    float: left;
+    width: 49%;
+    height: 100%;
+}
+
+.leftBox_left:nth-child(2) {
+    margin-left: 2%;
+}
+
+.leftBox_left .baseBox {
+    width: 100%;
+}
+
+.leftBox_left .baseBox:nth-child(2) {
+    margin: 3% 0;
+}
+
+.FiveBox {
+    height: 49.1%;
+}
+
+.boxTable {
+    width: 95%;
+    color: #0efcff;
+    font-size: .6vw;
+    text-align: center;
+    margin: auto;
+    table-layout: fixed;
+    margin-top: 1vw;
+}
+
+.boxTable tr {
+    height: 2.2vw;
+}
+
+.boxTable tr:nth-child(1) {
+    font-size: .8vw;
+}
+
+/* .boxTable tr:nth-child(1) td:nth-child(1) {
+    text-align: center;
+    width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+} */
+.boxTable tr td:nth-child(1) {
+    text-align: left;
+    width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left:1vw;
+}
+
+.boxTable tr td:nth-child(2) {
+    width: 20%;
+}
+
+.boxTable tr td:nth-child(3) {
+    width: 20%;
+}
+
+.boxTable2 tr td:nth-child(1) {
+    text-align: left;
+    width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.boxTable2 tr td:nth-child(3) {
+    width: 30%;
+    color: #e98732;
+}
+
+
+#all {
+    margin-top: 6%;
+    width: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+
+.amount {
+    /* float: left; */
+    position: absolute;
+    left: 40%;
+}
+/* 数字滚动 */
+#all .t_num i {
+    /* float: left; */
+    width: 2.2vw;
+    height: 2.2vw;
+    display: inline-block;
+    background: url(./img/number3.png) no-repeat;
+    /* background-size: 33px 47px; */
+    background-position: 0 0;
+}
+
+#all .unit {
+    position: relative;
+    top: 20%;
+    left: 61%;
+    /* vertical-align: baseline; */
+    color: #11F9FD;
+    font-size: 1.2vw;
+}

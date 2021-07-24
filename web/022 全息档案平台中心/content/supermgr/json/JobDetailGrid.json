@@ -1,0 +1,25 @@
+﻿{
+  "total": 1,
+  "rows": [
+    {
+      "Id": "a94384d0-ae83-4583-85a2-e5b79dda6f7b",
+      "CronDescriptor": "每 59 秒, 每分钟, 每小时, 每天",
+      "TaskName": "测试爬虫任务",
+      "CronExpressionString": "0/59 * * * * ?",
+      "AssemblyDll": "SuperMgr.Task",
+      "Class": "SuperMgr.Task.Jobs.TestJob",
+      "TaskDesc": "测试啊",
+      "TaskGroupName": "测试",
+      "BeginTime": "2016-11-09 00:00:00",
+      "TaskType": 1,
+      "JobTypeName": "复杂任务",
+      "TaskStatus": 1,
+      "TaskStatusName": "已启动",
+      "RecentRunTime": "2016-11-14 10:41:59",
+      "LastRunTime": "2016-11-14 10:41:59"
+    }
+  ],
+  "page": 1,
+  "records": 1,
+  "costtime": "182"
+}

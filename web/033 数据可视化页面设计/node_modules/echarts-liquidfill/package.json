@@ -1,0 +1,54 @@
+{
+  "_from": "echarts-liquidfill",
+  "_id": "echarts-liquidfill@2.0.5",
+  "_inBundle": false,
+  "_integrity": "sha1-DVBadcLftplQ4Y1EC98/4XlaDu0=",
+  "_location": "/echarts-liquidfill",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "echarts-liquidfill",
+    "name": "echarts-liquidfill",
+    "escapedName": "echarts-liquidfill",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://r.cnpmjs.org/echarts-liquidfill/download/echarts-liquidfill-2.0.5.tgz",
+  "_shasum": "0d505a75c2dfb69950e18d440bdf3fe1795a0eed",
+  "_spec": "echarts-liquidfill",
+  "_where": "c:\\Users\\Administrator.SC-201811121231\\Desktop\\数据可视化52",
+  "author": {
+    "name": "Ovilia",
+    "email": "me@zhangwenli.com",
+    "url": "http://zhangwenli.com"
+  },
+  "bugs": {
+    "url": "https://github.com/ecomfe/echarts-liquidfill/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "ECharts liquid fill extension",
+  "devDependencies": {
+    "webpack": "^1.15.0",
+    "webpack-link": "^0.2.0"
+  },
+  "homepage": "https://github.com/ecomfe/echarts-liquidfill#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "echarts-liquidfill",
+  "peerDependencies": {
+    "echarts": "^4.2.1",
+    "zrender": "^4.0.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecomfe/echarts-liquidfill.git"
+  },
+  "version": "2.0.5"
+}

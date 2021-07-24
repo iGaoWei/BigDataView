@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link  href="css/bootstrap.min.css" rel="stylesheet">
+    <link  href="css/base.css"  rel="stylesheet">
+    <title>大屏展示</title>
+</head>
+<body>
+<div class="container-fluid container-fluid-s">
+    <div class="row">
+        <div class="col-md-12 col-lg-6 mrbt">
+            <div class="totalbox">
+                <ul class="nav nav-pills totaltitle" role="tablist">
+                    <li class="fl"><p>当天实时发稿量</p></li>
+                </ul>
+                <div class="totaltem">
+                    <div class="col-md-12 total hbule">
+                        <span class="name">总发稿量</span>
+                        <span class="number">
+                            <a href="">3</a>
+                            <a href="">8</a>
+                            <a href="">9</a>
+                            <a href="">1</a>
+                        </span>
+                        <span class="name">条</span>
+                    </div>
+                </div>
+                <div class="row" style="padding: 0 2vw">
+                    <div class="col-md-2">
+                        <div class="column">
+                            <p>宏观经济</p>
+                            <div class="purple"><span class="bold">1292</span>条</div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="column">
+                            <p>资本市场</p>
+                            <div class="grn"><span class="bold">892</span>条</div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="column">
+                            <p>货币市场</p>
+                            <div class="bule"><span class="bold">590</span>条</div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="column">
+                            <p>外汇市场</p>
+                            <div class="yel"><span class="bold">970</span>条</div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="column">
+                            <p>债券市场</p>
+                            <div class="org"><span class="bold">1002</span>条</div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="column">
+                            <p>大宗商品</p>
+                            <div class="ybule"><span class="bold">692</span>条</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mrbt">
+            <div class="totalbox">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-pills totaltitle" role="tablist">
+                        <li class="fl"><p>个人发稿量排行</p></li>
+                        <li role="presentation" class="fr"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">月</a></li>
+                        <li role="presentation" class="active fr"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">天</a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="home">
+                            <div id="container1" style="width: 100%;height: 100%;"></div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="profile">
+                            <div id="container2" style="width: 100%;height: 400px;"></div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mrbt">
+            <div class="totalbox">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-pills totaltitle" role="tablist">
+                        <li class="fl"><p>建稿类型统计图</p></li>
+                        <li role="presentation" class="active fr"><a href="#jglx" aria-controls="jglx" role="tab" data-toggle="tab">天</a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="jglx">
+                            <div id="jglxchart" style="width: 100%;height: 100%;"></div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-lg-3 mrbt">
+            <div class="totalbox">
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills totaltitle" role="tablist">
+                    <li class="fl"><p>各栏目发稿量趋势图</p></li>
+                    <li role="presentation" class="active fr"><a href="#qst-month" aria-controls="qst-month" role="tab" data-toggle="tab">月</a></li>
+                    <li role="presentation" class=" fr"><a href="#qst-day" aria-controls="qst-day" role="tab" data-toggle="tab">天</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="qst-month">
+                        <div id="qst-monthchart" style="width: 100%;height: 100%;"></div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="qst-day">
+                        <div id="qst-daychart" style="width: 100%;height: 100%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mrbt">
+            <div class="totalbox">
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills totaltitle" role="tablist">
+                    <li class="fl"><p>人机发稿量占比</p></li>
+                    <li role="presentation" class="fr"><a href="#rj-month" aria-controls="qst-month" role="tab" data-toggle="tab">月</a></li>
+                    <li role="presentation" class="active  fr"><a href="#rj-day" aria-controls="qst-day" role="tab" data-toggle="tab">天</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane" id="rj-month">
+                        <div id="rj-monthchart" style="width: 100%;height: 100%;"></div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane active" id="rj-day">
+                        <div id="rj-daychart" style="width: 100%;height: 100%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mrbt">
+            <div class="totalbox">
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills totaltitle" role="tablist">
+                    <li class="fl"><p>各栏目发稿量分布图</p></li>
+                    <li role="presentation" class="active fr"><a href="#fbt-month" aria-controls="qst-month" role="tab" data-toggle="tab">月</a></li>
+                    <li role="presentation" class=" fr"><a href="#fbt-day" aria-controls="qst-day" role="tab" data-toggle="tab">天</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="fbt-month">
+                        <div id="fbt-monthchart" style="width: 100%;height: 100%;"></div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="fbt-day">
+                        <div id="fbt-daychart" style="width: 100%;height: 100%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mrbt">
+            <div class="totalbox">
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills totaltitle" role="tablist">
+                    <li class="fl"><p>建稿类型统计图</p></li>
+                    <li role="presentation" class="active fr"><a href="#zxlx" aria-controls="zxlx" role="tab" data-toggle="tab">天</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="zxlx">
+                        <div id="zxlxchart" style="width: 100%;height: 100%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+<script src="js/bootstrap.js/"></script>
+<!--<script src="js/highcharts.js"></script>-->
+<script src="js/oldie.js"></script>
+<script src="js/highcharts-zh_CN.js"></script>
+<script src="js/base.js"></script>
+<script type="text/javascript">
+    // var chartheigh =  $('.totalbox').height();
+    // console.log("div高度为："+chartheigh);
+
+</script>
+</body>
+</html>

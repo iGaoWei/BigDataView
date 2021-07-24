@@ -1,0 +1,746 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#demo{
+    float: right;
+    margin-left: 2%;
+
+}
+#demo span{
+
+}
+.commandAll{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("../img/bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.commanheadLeft{
+    height: 6%;
+    float: left;
+    margin-left: 2%;
+    color: #27d4ff;
+    font-size: 16px;
+  margin-top: 0.7%;
+    width: 25%;
+
+
+}
+.comanheadRight{
+    height: 6%;
+    float: right;
+    color: #27d4ff;
+    font-size: 16px;
+    margin-top: 0.7%;
+    width: 30%;
+
+}
+.rightSqpan01{
+    float: left;
+    width: 80%;
+    margin-left: 5%;
+}
+.rightSpan{
+
+    float: right;
+    width: 13%;
+    font-size: 12px !important;
+}
+.commanBox{
+    background-image: url("../img/bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+
+}
+.boxLeft{
+    width: 22%;
+    height: 98%;
+    float: left;
+    margin-left: 0.5%;
+    margin-top: 1%;
+}
+.boxLeftVideoTop{
+    width: 100%;
+    height: 4%;
+    float: left;
+    background-image: url("../img/videoTop.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.clear{
+    clear: both;
+}
+.boxLeftVideoBox{
+    width: 100%;
+    height: 60%;
+    float: left;
+    background-image: url("../img/videoBox.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top: 2%;
+}
+.boxLeftVideoBoxCon{
+    width: 100%;
+    height: 40%;
+    float: left;
+}
+.BoxConTop{
+    color: #33c2fe;
+    font-size: 13px;
+    margin-top: 3%;
+}
+.BoxconTopLeft{
+    float: left;
+    margin-left: 3%;
+
+}
+.BoxconTopRight{
+    float: right;
+    margin-right: 2%;
+
+}
+.boxLeftAram{
+    width: 100%;
+    height: 35%;
+    margin-top: 1%;
+    float: left;
+}
+.boxLeftAlamTop{
+    width: 100%;
+    height: 12%;
+    background-image: url("../img/alamTop.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    float: left;
+}
+.boxLeftAlamCon{
+    width: 100%;
+    height: 83%;
+    background-image: url("../img/alamCon.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    float: left;
+    overflow: hidden;
+}
+.alamUl{
+    list-style: none;
+    font-size: 12px;
+    color: #1f9dff;
+   padding: 0px;
+
+
+}
+.alamULspan{
+    float: right;
+
+}
+.alamUl li{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-image: url("../img/li_bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    cursor: pointer;
+
+}
+.alamUl li p{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.boxCenter{
+    width: 54%;
+    height: 95%;
+    float: left;
+    margin-left: 0.5%;
+    margin-top: 3%;
+
+}
+.boxCenterUp{
+    width: 100%;
+    height: 20%;
+}
+.boxCentterUpLeft{
+    float: left;
+    width: 15%;
+    color: #00f0ff;
+    font-size: 20px;
+    margin-left: 5%;
+    height: 100%;
+}
+.anaText{
+    text-align: center;
+    margin-top: 10% ;
+    width: 100%;
+    float: left;
+}
+.ananBg{
+    width: 86%;
+    margin-left: 7%;
+    height: 70%;
+    float: left;
+    background-image: url("../img/anaBg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-size: 21px;
+    text-align: center;
+    line-height: 400%;
+
+}
+.ana01IMg{
+   animation: anima01 8s linear infinite;
+    width: 100%;
+    height: 100%;
+
+
+}
+.anaImgText{
+    z-index: 100;
+  position: absolute;
+    left: 28.5%;
+    top:7%
+}
+.anaImgText01{
+    z-index: 100;
+    position: absolute;
+    left: 39.2%;
+    top:7%
+}
+.anaImgText02{
+    z-index: 100;
+    position: absolute;
+    left: 50%;
+    top:7%
+}
+@keyframes anima01 {
+    0%   {transform:rotate(0deg);}
+    /*25%  {transform:rotate(120deg);}*/
+    /*50%  {transform:rotate(240deg);}*/
+    100% {transform:rotate(360deg);}
+    
+}
+.ana01IMg01{
+    width: 80%;
+    margin-left: 10%;
+    height: 70%;
+    float: left;
+    background-image: url("../img/ana02.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-size: 21px;
+    text-align: center;
+    line-height: 400%;
+}
+.ana01IMg02{
+    width: 80%;
+    margin-left: 10%;
+    height: 70%;
+    float: left;
+    background-image: url("../img/ana03.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-size: 21px;
+    text-align: center;
+    line-height: 400%;
+}
+.boxCentterUpLeft label{
+    width: 120px;
+    display: inline-block;
+    text-align: right;
+}
+.boxCentterRight{
+    float: right;
+    width: 40%;
+    color: #00f0ff;
+    font-size: 20px;
+    height: 100%;
+
+
+}
+.boxCenterdown{
+    width: 100%;
+    height: 76%;
+    margin-top: 1.5%;
+    background-image: url("../img/map_bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    float: left;
+}
+.boxCenterMap{
+    width: 98%;
+    height: 98%;
+    background-image: url("../img/map.png");
+    margin-top: 1%;
+    margin-left: 1%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.mapTool01{
+    width: 19%;
+    height: 5%;
+    background-image: url("../img/mapTool01_bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    bottom: 2.4%;
+
+}
+.mapToolA01{
+    width: 13%;
+    height: 41%;
+    margin-left: 8%;
+    display: inline-block;
+    background-image: url("../img/tool04.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+
+}
+.mapToolA01Active{
+    background-image: url("../img/tool04Active.png") !important;
+
+}
+.mapToolA02{
+    width: 13%;
+    height: 41%;
+    margin-left: 8%;
+    display: inline-block;
+    background-image: url("../img/tool03.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+
+}
+.mapToolA03{
+    width: 11%;
+    height: 58%;
+    margin-left: 8%;
+    margin-top: 3%;
+    display: inline-block;
+    background-image: url("../img/tool02.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+.mapToolA04{
+    width: 11%;
+    height: 58%;
+    margin-left: 8%;
+    margin-top: 3%;
+    display: inline-block;
+    background-image: url("../img/tool01.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+.mapToolA05{
+    width: 42%;
+    height: 10.5%;
+    background-image: url("../img/tool05.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-top: 50%;
+    margin-left: 3%;
+}
+.mapToolA06{
+    width: 50%;
+    height: 10.5%;
+    background-image: url("../img/tool06.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-top: 50%;
+    margin-left: 3%;
+}
+.mapToolA07{
+    width: 42%;
+    height: 12%;
+    margin-top: 50%;
+    background-image: url("../img/tool08.png");
+    background-repeat: no-repeat;
+   background-size: 100% 100%;
+
+    margin-left: 5%;
+}
+.mapToolA08{
+    width: 42%;
+    height: 12%;
+    margin-top: 21%;
+    background-image: url("../img/tool07.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-left: 5%;
+
+}
+.mapTool02{
+    width: 2.6%;
+    height: 18%;
+    background-image: url("../img/mapTool02_bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    bottom: 10%;
+    right: 25%;
+
+}
+.mapTool02 ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    margin-left: 25%;
+}
+.mapTool02 ul li{
+    cursor: pointer;
+
+
+}
+.boxRight{
+    width: 22%;
+    height: 98%;
+    float: left;
+    margin-left: 0.5%;
+    margin-top: 1%;
+}
+.boxRightTop{
+    width: 100%;
+    height: 4%;
+    float: left;
+    background-image: url("../img/rightTop.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.boxRightCon01{
+    width: 100%;
+    height: 26.5%;
+    float: left;
+    background-image: url("../img/rightCon01.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top: 2%;
+    overflow: hidden;
+
+}
+.boxRightCon_ul{
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+}
+.boxRightCon_ul li{
+    float: left;
+    width: 28%;
+    height: 9%;
+    background-image: url("../img/li_border.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-size: 12px;
+    color: #0fc9ff;
+    margin-left: 4%;
+    margin-top: 0.95%;
+    cursor: pointer;
+}
+.boxRightCon_ul li span{
+    width: 19%;
+    height: 90%;
+    display: inline-block;
+    float: right;
+
+    /*background-image: url("../img/li01.png");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: 100% 100%;*/
+}
+.boxRightCon_ul li span img{
+    width: 100%;
+    height: 100%;
+}
+.boxRightCon02{
+    width: 100%;
+    height: 64.5%;
+    margin-top: 6%;
+    float: left;
+
+}
+.boxRightcon02Top{
+    width: 100%;
+    height: 6.5%;
+    background-image: url("../img/rightCon02Top.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    float: left;
+}
+.con02TopUL{
+    width: 80%;
+    list-style: none;
+    margin-left: 20%;
+    height: 100%;
+
+}
+.con02TopUL li{
+    float: left;
+    width: 33%;
+    text-align: center;
+    color: #1fbdff;
+    font-size: 14px;
+    cursor: pointer;
+    line-height: 200%;
+    height: 98%;
+
+}
+.con02liAcitve{
+    background-image: url("../img/rightCon02LiBg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.boxRithtChangeBox{
+    width: 100%;
+    height: 93.5%;
+    float: left;
+}
+.boxChangeCon{
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/rightcon2_bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: none;
+}
+.boxChangeConFind{
+width: 100%;
+  padding-top: 2%;
+    padding-bottom: 2%;
+    float: left;
+    border-bottom: 1px solid #32a1f7;
+}
+.boxFindLabel{
+    color: #85acd5;
+    font-size: 12px;
+    margin-left: 2%;
+    width: 20%;
+    text-align: right;
+    display: inline-block;
+
+}
+.addLi{
+    height: 10% !important;
+    padding-top: 2% !important;
+}
+.boxFindInput{
+    width: 25%;
+    background-color: transparent;
+    border: 1px solid #85acd5;
+    margin-right: 2%;
+    color: #85acd5;
+    margin-top: 2%;
+}
+.boxFindButton{
+    width: 30%;
+    height: 22px;
+    border: none;
+    background-color: #0f77cd;
+    color: #ffffff;
+    border-radius: 3px;
+    float: right;
+    margin-right: 2%;
+    font-size: 12px;
+}
+.boxFindButton:active{
+    background-color: #1db1cd;
+
+}
+.boxChangeFoot{
+    width: 22%;
+    height: 24px;
+    position: fixed;
+    bottom: 2%;
+text-align: center;
+}
+.boxChangeFoot a{
+    text-decoration: none;
+    color: #7597ba;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 5px;
+}
+.boxChangeFoot span{
+    color: #1f9dff;
+}
+.pageA{
+    width: 14px;
+    height: 100%;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    background-image: url("../img/pageA.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-size: 14px;
+}
+.pageA01{
+    width: 14px;
+    height: 100%;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    background-image: url("../img/pageA01.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: #7597ba;
+    margin-left: 3%;
+font-size: 14px;
+    line-height: 24px;
+
+}
+.pageA01Active{
+    color: #ffffff !important;
+    background-color: #0661c2 !important;
+}
+.boxChangeCon ul{
+    list-style: none;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    height: 65%;
+
+    position: relative;
+
+}
+.boxChangeCon ul li{
+    width: 98%;
+    padding: 1%;
+    border-bottom: 1px solid #32a1f7;
+    height: 30%;
+}
+.liImgLeft{
+    width: 26%;
+    height: 100%;
+    float: left;
+}
+.liImgLeft img{
+    width: 100%;
+    height: 100%;
+}
+.liConRight{
+    width: 72%;
+    height: 100%;
+    float: left;
+    margin-left: 2%;
+    color: #1f9dff;
+    font-size: 12px;
+}
+.liConRight01{
+    width: 96%;
+    height: 100%;
+    float: left;
+    margin-left: 2%;
+    color: #1f9dff;
+    font-size: 12px;
+}
+.liconRihtButSpan{
+    float: right;
+    width: 24%;
+}
+.liconRihtButSpan01{
+    float: right;
+    width: 18%;
+
+}
+.liconRihtButSpan01 button{
+    width: 96%;
+    height: 23%;
+    color: #ffffff;
+    font-size: 12px;
+    background-image: url("../img/tailBut.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border:none;
+    display: inline-block;
+    border-radius: 3px;
+}
+.liconRihtButSpan button{
+    width: 96%;
+    height: 23%;
+    color: #ffffff;
+    font-size: 12px;
+    background-image: url("../img/tailBut.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border:none;
+    display: inline-block;
+    border-radius: 3px;
+}
+.liConRight p{
+    padding-top: 2%;
+}
+ul.pagination1 li:hover,
+ul.pagination2 li:hover,
+ul.pagination3 li:hover {
+    background-color: #FF9500;
+}
+
+ul.pagination1 li,
+ul.pagination2 li,
+ul.pagination3 li {
+    padding: 10px;
+    font-family: georgia;
+    background-color: #8890FC;
+    font-size: 24px;
+    color: #fff;
+    line-height: 1;
+    width: 50px;
+    margin-bottom: 1px;
+    list-style:none;
+}
+
+ul.red {
+    outline:10px solid red;
+}
+.simplePagerNav{
+    text-align: center;
+}
+
+ul.simplePagerNav li{
+    width: 14px;
+    height: 24px;
+    text-align: center;
+    font-weight: bold;
+    background-image: url("../img/pageA01.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-left: 3%;
+    font-size: 14px;
+    line-height: 24px;
+    display: inline-block;
+    padding: 0 !important;
+}
+
+ul.simplePagerNav li a{
+    color: #7597ba;
+    text-decoration: none;
+}
+
+li.currentPage {
+    background: red;
+    background: #FF9500;
+}
+
+ul.simplePagerNav li.currentPage a {
+    color: #fff;
+}
+
+table.pageme {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+table.pageme td {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}

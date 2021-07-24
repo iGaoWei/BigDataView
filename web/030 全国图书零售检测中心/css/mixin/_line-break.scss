@@ -1,0 +1,7 @@
+/**
+ * [实现英文自动断行]
+ */
+@mixin line-break(){
+	word-break: break-all;
+	word-wrap: break-word;
+}

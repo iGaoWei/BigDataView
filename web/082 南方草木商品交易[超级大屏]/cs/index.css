@@ -1,0 +1,225 @@
+*{padding:0;margin:0;list-style: none; max-height: 99999px; }
+.content{position: relative;width:3840px;height:2160px;box-sizing:border-box;padding-bottom: 35px; background:url("../images/beijing.png") no-repeat; overflow: hidden; font-size:30px;}
+.rel{position: relative;}
+html{width:3840px;height:2160px;}
+.clear{ clear:both; }
+.clear::after{ content:""; display:block; clear:both; }
+/*背景动画-开始*/
+#animations{ position: absolute; width:3840px;height:2160px; overflow: hidden; }
+.animation{ position: absolute; }
+.animation1{left:1%; top:1%; transform:scale(1); }
+.animation2{left: 0.5%; bottom:13%; transform:scale(0.5); }
+.animation3{left: 20%; top:60%; transform:scale(1); }
+.animation4{left: 30%; top:15%; transform:scale(.9); }
+.animation5{left: 45%; top:2%; transform:scale(0.3); }
+.animation6{left: 60%; top:-2%; transform:scale(.8); }
+.animation7{left: 70%; top:40%; transform:scale(1); }
+.animation8{right: 12%; top:8%; transform:scale(1.1); }
+.animation9{left: 90%; bottom:12%; transform:scale(1); }
+.animation10{left: 50%; top:80%; transform:scale(1.5); }
+.animation10 div{ animation-direction:reverse; }
+.animation div{ position: absolute; top: 0;left: 0;width:618px; height:618px;  border-radius:50%; animation:move linear infinite;opacity: .3;filter:alpha(opacity=30);}
+.animation .animate1{ background:url("../images/1.png") no-repeat; background-size: 100%; animation-duration:30s;}
+.animation .animate2{ background:url("../images/2.png") no-repeat; background-size: 100%;  animation-duration:20s; animation-direction:reverse;}
+.animation .animate3{ background:url("../images/3.png") no-repeat; background-size: 100%;  animation-duration:15s; }
+.fanzhuan .animate1{ animation-direction:reverse; animation-duration:25s;}
+.fanzhuan .animate2{ animation-direction:normal; animation-duration:15s;}
+.fanzhuan .animate3{ animation-direction:reverse; animation-duration:10s;}
+@keyframes move{
+	0%{transform:rotate(0deg)}
+	100%{transform:rotate(360deg)}	
+} 
+/*背景动画-开始*/
+/*头部head--开始*/
+#head{ position:relative;width:3840px;height:240px;}
+#head .getDate,.weather{font:48px 黑体;color:#ADC2FF;margin-top:34px;}
+#head .getDate{float: left;margin-left:124px;}
+#head .getDate span{margin-right: 35px;}
+#head .weather{float:right;}
+#head .weather span{margin-right:45px;}
+#head .weather #state{display: inline-block;height:54px;width:120px;background: #009944;font-size: 30px;text-align: center;color:#FFF;border-radius: 8px;line-height: 54px;}
+#head h1{width:900;height:240px;font-size: 80px;line-height: 240px;margin:0 auto;font-weight:bold;background-image:-webkit-gradient(linear,0 top,0 bottom,from(#CAE0FF),to(#6EB2FF));-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-align: center;}
+/*头部head--结束*/
+
+/*主体body--开始*/
+#body{ margin-top: 20px; height:1132px; }
+#body>div{ float:left; height:100%; }
+/*主体左边区域*/
+.bodyLeft{ width:1265px; margin-left: 20px;}
+
+/*各区域挂牌数量*/
+.bodyLeftTop{ width:1265px; height:548px; position: relative;}
+.dataCenter{width:700px;height:80px;background: rgb(0,102,255,0.3);margin-top:30px;margin-left: 8px;}
+.dataCenter li{float:left;width:25%;height:80px;text-align: center;padding-top: 10px;}
+.dataCenter span{font-size:34px;color:#FFF600;font-family: "黑体";}
+.dataCenter p{font-size: 14px;color:#FFFFFF;font-family: "黑体";}
+.dataCenter i{width:46px;height:2px;background: #FFFFFF;display:block; margin:5px auto;}
+.guapai{ width:700px; height:370px; background: rgb(31,53,249,0.15); margin-left:8px;}
+.yuyue{width:540px;height:100%;position: absolute;right:0; bottom:0;text-align: center;}
+.yuyuejiankong{height:100%;margin-bottom: 28px;}
+#left-top-right { width:490px;position: absolute;left:40px;bottom:20px; font-size:14px;}
+#left-top-right-circle { width:540px;height:368px;position: absolute;left:0;top:0;}
+#left-top-right div{ width:490px;height:28px; line-height:28px;border-radius: 5px;margin-bottom:25px;position: relative;}
+#left-top-right ul{display:inline-block;height:100%;width:254px;border: 2px solid #087BB2;border-radius: 5px;}
+#left-top-right li{ width:20px;height:100%;margin-left:5px;float:left;background: #087BB2;overflow: hidden;}
+#left-top-right p{float:right;display:inline-block;height:28px;line-height:28px; margin-top:5px;margin-right:20px;font:bold 17px "simhei";color:#fff;}
+#left-top-right span{float: right;width:50px;font-size:27px;color:#F3F120;padding-left: 20px;margin-top: -6px;}
+/*当前成交总数和月成交总数*/
+.bodyLeftBottom{ width:1265px;height:550px; margin-top: 23px;}
+.bodyLeftBottomLeft,.bodyLeftBottomRight{ float:left;width:50%;height:100%;}
+#left-bottom{width: 730px;height: 520px;margin-top: 50px; margin-left:-100px;}
+.bodyLeftBottomRight .t-right{width:652px;height:552px;float:left;}
+.bodyLeftBottomRight .t-right ul{width:550px;height:310px;position: absolute;left:0;top:78px;margin-bottom: 40px; }
+.bodyLeftBottomRight .t-right li{width:550px;height:22px;margin-top:16px;}
+.bodyLeftBottomRight .t-right span{display: inline-block;width:100px;height:22px;line-height: 22px;text-align: right;padding-right:10px;margin-top:-2px;font:bold 20px "微软雅黑";color:#293CF8;float: left;box-sizing:border-box;}
+.bodyLeftBottomRight .t-right div{position:absolute;left:102px;display: inline-block;width:450px;height:22px;border:1px solid #1A6BD5;border-left: none; }
+.bodyLeftBottomRight .t-right p{overflow:hidden;position: relative;color:#2137FF; display: inline-block;height:100%;line-height: 22px;float:left;font:bold 18px "微软雅黑";text-align: right;background: linear-gradient(90deg,rgba(28,40,200,1) ,rgba(15,182,252,1));transition: 2s; padding-right: 4px;}
+.bodyLeftBottomRight .t-right .line{position: absolute;height: 459px;width: 0;border-right: 2px solid #293CF8;left:100px;top:-17px}
+.bodyLeftBottomRight .t-right .active{border-right:2px solid rgba(255,255,0,1);animation:light2 0.5s linear infinite;transition: 2s;}
+.bodyLeftBottomRight .t-right p i{animation:light1 2s ease infinite;position: absolute;left:0;display: inline-block;width:40px;height:100%;box-shadow:10px 0 30px rgba(15,182,252,1);background: #FFF;background: linear-gradient(90deg,rgba(255,255,255,0),rgba(15,182,252,1));}
+.bodyLeftBottomRight .t-right p span{position: absolute;display: inline-block;height:100%;right:0;}
+@keyframes light1{
+	0%{left:0px;}
+	100%{left:100%;}
+}
+@keyframes light2{
+	0%{border-right:2px solid rgba(255,255,0,1)}
+	100%{border-right:2px solid rgba(255,255,0,0)}
+}
+/*主体中间区域*/
+.bodyMiddle{ width:1196px;margin-left: 32px;height:1134px !important;overflow: hidden;}
+/*全国草场面积监控*/
+.bodyMiddleChild{ width:1190px;height:1130px; -position: relative;}
+.chuangkou{width:2368px;height:1769px;position:absolute;top:361px;left:2631px;text-align: center;  background:url(../images/chuangkoubg.png) no-repeat;}
+ #list{margin-top: 44px;}
+ #list li{display:inline-block;width:343px;height:49px;margin-left:30px;background-size:100% 50%;background: url(../images/list.png) no-repeat;font:bold 25px "微软雅黑";line-height: 49px;}
+ #list p{float:left;margin-left: 25px;}
+ #list span{float:right;font:25px 微软雅黑;color:#ccff00;margin-top: 10px;margin-right: 22px;}
+.mapmain{position: absolute;z-index: 2;top:48px;width:100%;height:100%;}
+.map{position: relative;top:-105px;left:10px; width:100%;height:100%;}
+.map>div:first-child{ z-index:0; }
+#map1{ left:-12px; }
+#sun{background:url(../images/a.png) no-repeat;animation:light 2s linear infinite;height:100%;background-size:100% 100%;}
+/*北海地图svg样式*/
+svg{ margin:0; padding-top:100px; width:100%; height:1000px; } 
+.str0 {stroke:#fff;stroke-width:1}
+.str{ stroke:#fff;stroke-width:1 }
+.str1 {stroke:#fff;stroke-width:1}  
+.fil3 {fill:none}
+.fil0 {fill:#ACCE22}
+.fil1 {fill:#D9E483}
+.fil2 {fill:#DED572}
+.fil4 {fill:#FFF582}
+.fnt0 {fill:#C27A0C}
+.fnt1 {fill:#000}
+.fnt2 {fill:#FF1109}
+path.hover{fill:red;stroke:red;stroke-width:2}
+text{ font-size:18px; display:inline-block;}
+@keyframes light{
+	0%{opacity: 0.5;}
+	50%{opacity: 1;}
+	100%{opacity: 0.5;}
+}
+/*主体右边区域*/
+.bodyRight{ width:1262px; margin-left: 38px;}
+/*挂牌产品类别*/
+.bodyRightTop{width:1262px; height:548px; }
+.bodyRightBottom{ width:1262px;height:550px; margin-top: 23px;}
+.liushuihao{height:866px;background:rgb(14,37,125,0.5);}
+.liushuihaoul li{ width:100%;height:50px; display:block; }
+.liushuihaoul span{display: inline-block;float:left;width:208px;line-height: 50px;font-size:18px;text-overflow: ellipsis; overflow: hidden; white-space:nowrap;vertical-align: middle;text-align: center;}
+.default{ height:58px; color:#fff;line-height: 58px;margin-top:26px;font-size:24px;}
+.default span{ display: inline-block; float:left;width:208px; text-align: center;}
+.bodyRightTopBG{ margin-left:8px;width:1248px;height:370px;background: url("../images/001.png") no-repeat; }
+.liushuihaoul{height:308px;overflow: hidden;position: relative;}
+.winwatch{float:left;width:1162px;height:804px;margin-right: 36px;}
+.pinjiawatch{height:804px;float:left;width:1375px;}
+.winwatch .title,.pinjiawatch .title{margin-top: 36px;}
+.pinjiachuangkou{height:611px;margin-top: 7px;width:1367px;}
+.winwatchul{ width:1142px;height:600px;padding-top:10px;padding-left:10px;font-size:24px;margin-top: 7px;}
+.winwatchul ul{ width:100%;}
+.winwatchul li{ width:126px;height:102px;line-height:96px;float:left;text-align:center;color:#0089FF;font-size:24px;}
+.pinjiachuangkou .childtitle{margin-top:26px;margin-left: 32px;}
+.winwatchul .active{color:#ffffff;}
+/*草牧商品价格动态*/
+#jiagezoushi{ position: relative; top:0; width:100%; height:100%;}
+/*主体body--结束*/
+
+/*底部foot--开始*/
+#foot{ margin-top: 42px; height:707px; padding-left: 16px; }
+#foot>div{ float:left; }
+.footparent0{margin-right:47px;}
+.footparent1{margin-right:37px;}
+.footparent2{margin-right:42px;}
+.footparent3{margin-right:0;}
+.footChild{ overflow: hidden; position: relative;  width:912px;height:705px;}
+/*挂牌会员实时监控*/
+.huiYuanLst{ position: relative;width:50%;height:50%;float: left;}
+.huiYuanLst:last-child{ top: -15px; }
+.huiYuanLst3{ top: -15px; }
+.huiyuan{ position: absolute;bottom:0;left:0;display:inline-block;width:100%;padding-left:30px;box-sizing: border-box; font-size: 18px;}
+.huiyuan:nth-child(1){  }
+.huiyuan ul{ float:left;}
+.huiyuan li{ float:left;width:18px;height:30px;margin-right: 10px;background: #1D2088; }
+.huiyuan li:last-child{ margin-right:0; }
+.huiyuan span{ float:right;margin-right:20px;color:#63D9FF;margin-top: 4px;}
+.huiyuan p{clear:both;padding-top: 8px;color:#62C0EB; }
+.yibiao{ position: absolute;width:458px;height:220px;top:80px;left:0;}
+.contgundong{ height:210px;position: relative;top:90px;overflow: hidden;}
+.ruzhustatus{ position: absolute;color:#fff; font-size: 30px; left:15px;top:30px;}
+/*北海市猪链网动态*/
+#jiage{ position: absolute;bottom: 0;left: 0;width:100%;height:90%;}
+/*交易大厅实时监控*/
+.chengjiaoliang{ position: absolute;bottom: 60px; font-size: 24px;}
+.chengjiaoliang>div{ display:inline-block; margin-left: 15px;}
+.chengjiaoliang p{ text-align: right; color:#63D9FF; padding-right: 5px;}
+.chengjiaoliang ul{ display:inline-block; margin-top: 20px;width:50px;}
+.chengjiaoliang li{ width:50px; height:24px; background: #1D2088; margin-bottom:15px;float:left; }
+.chengjiaoliang li:last-child{ margin-bottom:0;  }
+.chengjiaoliang span{ display:inline-block;width:28px; height:100%;  color:#62C0EB; }
+#CJpie{ position: absolute; right:0; width:478px; height:100%;}
+/*成交量实时监控*/
+#timebar{ position: relative;height:80px; width:794px; margin:80px auto 0 ;padding:15px;}
+#timebar .kedu{position: relative;margin-left:7px; width:780px;margin-top: 40px;}
+#timebar .kedu li{ position: absolute;bottom:0;float:left; transition:2s ease;width:3px; height:6px;margin-right: 10px; background: #3BFE91;}
+#timebar .kuang{ box-sizing:border-box;width:794px;height:34px;border:2px solid #3BFE91;border-radius:0 25px 25px 0/0 25px 25px 0; padding:5px;}
+#timebar .tianchong{ width:780px;height:20px; transition:2s ease;background: linear-gradient(to right,#015B71,#3BFE90); border-radius:0 20px 20px 0/0 20px 20px 0;}
+#timebar span{ position: absolute;top: 0;left:150px;transition:2s ease;display:inline-block;width:380px;text-align: center;color:#3BFE91;margin-left:-150px; font-size: 22px;}
+#cjliang{ height:500px; }
+/*底部foot--结束*/
+
+/*公共部分--开始*/
+/*边框*/
+.footChild,.bodyRightBottom,.bodyRightTop,.bodyMiddleChild,.bodyLeftBottom,.bodyLeftTop{border:4px solid rgba(8,67,137,.7);}
+/*背景色*/
+.footChild,.bodyLeftTop,.bodyLeftBottom,.bodyMiddle,.bodyRightBottom,.bodyRightTop{background: rgb(31,53,249,0.15);}
+/*小标题*/
+.childtitle{position: absolute; left:8px;top:12px;display:inline-block;background:url(../images/childtitle.png) no-repeat;background-size:100% 100%;left:8px;top:12px;padding:2px 50px 2px 15px;}
+.childtitle h2{text-align: left;font-size:42px;display: inline-block;}
+.childtitle h2,#list p,#close{font-weight:bold;background-image:-webkit-gradient(linear,0 top,0 bottom,from(#CFE3FF),to(#74B3FC));-webkit-background-clip:text;-webkit-text-fill-color:transparent;/*color:#9ECBFF;*/}
+.bodyLeftTop .childtitle{ position: relative; }
+.bodyRightTop .childtitle{ position: relative; }
+/*放大按钮*/
+.add{ position: absolute; z-index:10;height:51px; line-height: 51px; border:2px solid #1D53C0; padding:0 10px; right: 15px; top: 15px; font-size: 42px; font-weight: bold; color:#fff } 
+.cancle{height:38px; line-height: 32px;  }
+/*列表信息滚动*/
+.moveul{position: absolute;top:0;width:100%;}
+.moveul li{font-size:18px;color:#0089FF;}
+.moveul li:hover{color:#FFFFFF;}
+.huiYuanLst	.moveul span{display:inline-block;width:80%;height:100%;text-overflow: ellipsis; overflow: hidden; white-space:nowrap;}
+.huiYuanLst	.moveul li{ height:35px; line-height: 35px;}
+.huiYuanLst .moveul li i{ vertical-align: 10px; }
+.moveul li i{display: inline-block;width:15px;height:15px;border-radius: 50%;background: #FBED14;margin-right: 10px;}
+.call{ position: absolute;left:0;bottom:0; width:100%;height:78px; overflow: hidden;line-height: 78px;}
+.call .moveul li{ float:left; height:78px; width:30%;padding-left:15px;}
+.call .moveul li i{ background: #00F6FF; }
+.call .moveul span{ color: #00F6FF; }
+/*蒙版弹框*/
+.mask{ display:none;position: absolute;top:0;left:0;z-index:11;width:100%; height:100%;background: linear-gradient(to right,#12296D,#030F32)}
+.maskContent{ position: absolute; left:50%; top:50%; transform: translate(-50%,-50%); }
+/*板块切换*/
+.navbar{ position: absolute;left: 500px; top:0;padding:30px 0 0; font-size: 26px;z-index:10;}
+.navbar span{margin-right: 40px;color:#0089FF;}
+.navbar span.active{ color:#fff; }
+/*公共部分--结束*/
+</style>

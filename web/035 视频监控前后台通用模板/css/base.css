@@ -1,0 +1,177 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+a{
+    text-decoration: none;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.heared{
+    width: 100%;
+    height: 9%;
+    background-color: #242938;
+    color: #ffffff;
+
+}
+.head-logo{
+    font-size: 1.5rem;
+    margin-left: 10px;
+    line-height: 2.5;
+    float: left;
+    margin-right: 15px;
+
+}
+.head-ul{
+    list-style: none;
+
+}
+.head-ul>li{
+    float: left;
+    padding: 5px 15px;
+    line-height: 2.5;
+}
+.head-ul>li>a{
+    color: #ffffff;
+    display: inline-block;
+  padding: 3px;
+}
+.active-a{
+    color: #ffffff !important;
+    font-weight: bold;
+    text-shadow: 1px 2px 2px #ffffff;
+   border-bottom: 2px solid #ffffff;
+}
+.head-ul>li>ul{
+    background-color: #242938;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+
+}
+.head-ul>li>ul li{
+    list-style: none;
+    padding: 0 10px;
+}
+.head-ul>li>ul li a{
+    color: #ffffff;
+    font-size: 1rem;
+}
+.head-right{
+    float: right;
+    margin-right: 10px;
+    line-height:3;
+
+}
+.head-right span{
+    margin-right: 10px;
+}
+.head-right span:nth-child(1){
+    font-size: 0.85rem;
+}
+.section{
+    width: 100%;
+    height: 90%;
+
+}
+.home{
+    background-image: url("../img/bg-home.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.home-child{
+    width: 25%;
+    height: 45%;
+    display: inline-block;
+    border:2px solid #738bbd;
+    box-shadow: 2px 2px 2px #67b7e4 ;
+    border-radius: 5px;
+    margin-right: 2%;
+    margin-top: 1%;
+    background-color: #314e8085;
+
+}
+.home-child a{
+    color: #ffffff;
+}
+.home-child p{
+    padding-top: 10%;
+    font-size: 2rem;
+}
+.home-child p img{
+    width: 85px;
+    height: 85px;
+}
+.map_box{
+    width: 100%;
+    height: 100%;
+}
+.map_top{
+    position:absolute;
+    top:10%;
+    left: 0;
+    height: 35px;
+    width: 100%;
+    border-bottom: 1px solid #4b8df8;
+    background-color: rgba(255, 255, 255, 0.84);
+    z-index: 99;
+}
+.map_top>ul{
+    list-style: none;
+    font-size: 14px;
+    float: right;
+}
+.map_top>ul>li{
+    display: inline-block;
+    line-height: 35px;
+    padding: 0 10px;
+}
+.map_top>ul>li i{
+    margin-right: 5px;
+}
+.map_top>ul>li a{
+    color: #2E2D3C !important;
+}
+.map_top>ul .active,.map_top>ul>li .active{
+    color: #0D8BBD;
+}
+.map_select{
+    position: absolute;
+    top:16%;
+    right: 16px;
+    box-shadow: -10px 0px 15px #034c6a inset, /*å·¦è¾¹é˜´å½±*/
+    0px -10px 15px #034c6a inset, /*ä¸Šè¾¹é˜´å½±*/
+    10px 0px 15px #034c6a inset, /*å³è¾¹é˜´å½±*/
+    0px 10px 15px #034c6a inset;
+    border: 1px solid #034c6a;
+    width: 120px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 5px;
+    background-color: #081832e3;
+}
+
+.map_select p{
+    padding: 8px 15px;
+    color: #FFFFff;
+    font-size: 14px;
+}
+.map_select p input[type=checkbox]{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top:3px;
+    margin-right: 10px;
+}
+.icon{margin:3px 4px 0 0}
+.news_check{padding: 16px 15px 16px 15px;border: 1px #ccc solid;margin-bottom: 4px;background-color: #fff;box-shadow: 2px 2px 5px #b1afaf;}
+.check_left input{height: 28px;width: 198px;border-radius: 4px;border: 1px #ccc solid}
+.check_left button{height: 28px;border: none;margin-left: 6px;width: 65px;border-radius: 4px;background-color: #337ab7;color: #fff;padding-left: 18px;
+    background-image: url(../img/100_03.png);background-repeat: no-repeat;background-position: 11px 8px}

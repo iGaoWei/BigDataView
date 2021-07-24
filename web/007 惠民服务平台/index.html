@@ -1,0 +1,151 @@
+
+<!--
+访问地址：https://paycloud.vip
+
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>互联网+惠民服务平台</title>
+
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/fq.css" />
+	</head>
+	<body>
+		<div class="background-img" id="mainbody">
+			<div class="todayTimeBox">
+				<div class="todayTime">
+					<span>2018年6月28日</span>
+					<span>晴</span>
+					<span>12:30</span>
+				</div>
+			</div>
+			<div class="mainbody" id="">
+				<div class="leftContent">
+					<div class="serviceItem"></div>
+					<div class="serviceForm">
+						<div class="seHeader">
+							<span>
+								<p class="p-1">服务订单情况</p>
+								<p class="p-2">Service order status</p>
+							</span>
+							<span>\02</span>
+						</div>
+						<div class="statusList">
+							<ul class="seTable">
+								<li>时间</li>
+								<li>服务对象</li>
+								<li>服务类型</li>
+								<li>服务组织</li>
+								<li>状态</li>
+							</ul>
+							<div id="orderItems" class="outlineBorder">
+								<!--<ul class="rolling rolStyle">
+									<li>2018/12/11 12:01</li>
+									<li>杨久量</li>
+									<li>上门理发</li>
+									<li>义工联合会</li>
+									<li>已上线</li>
+								</ul>-->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="centerContent">
+					<div class="sumDot">
+						<span id="东三新村" style="top: 173px;left: 424px;"></span>
+						<span id="屠家坞村" style="top: 181px;left: 454px;"></span>
+						<span id="马岭村" style="top: 216px;left: 418px;"></span>
+						<span id="西联村" style="top: 223px;left: 454px;"></span>
+						<span id="大干溪村" style="top: 324px;left: 380px;"></span>
+						<span id="新东坞村" style="top: 324px;left: 420px;"></span>
+						<span id="大溪村" style="top: 314px;left: 532px;"></span>
+						<span id="梅苑村" style="top: 376px;left: 323px;"></span>
+						<span id="先进村" style="top: 367px;left: 250px;"></span>
+						<span id="乐山村" style="top: 367px;left: 450px;"></span>
+						<span id="杜黄新村" style="top: 351px;left: 178px;"></span>
+						<span id="三江村" style="top: 402px;left: 200px;"></span>
+						<span id="霞朗桥村" style="top: 428px;left: 156px;"></span>
+						<span id="陈家村" style="top: 462px;left: 226px;"></span>
+						<span id="天竺社区" style="top: 433px;left: 263px;"></span>
+						<span id="百树社区" style="top: 464px;left: 301px;"></span>
+						<span id="齐东村" style="top: 472px;left: 344px;"></span>
+						<span id="全堂村" style="top: 455px;left: 430px;"></span>
+						<span id="魏廉村" style="top: 428px;left: 95px;"></span>
+						<span id="楼家村" style="top: 461px;left: 168px;"></span>
+						<span id="枫一村" style="top: 478px;left: 207px;"></span>
+						<span id="海角村" style="top: 515px;left: 268px;"></span>
+						<span id="洄村" style="top: 544px;left: 166px;"></span>
+						<span id="西奕村" style="top: 537px;left: 86px;"></span>
+						<span id="新择湖村" style="top: 569px;left: 86px;"></span>
+						<span id="乐桥村" style="top: 566px;left: 134px;"></span>
+						<span id="永安新村" style="top: 596px;left: 251px;"></span>
+						<span id="阳春村" style="top: 660px;left: 97px;"></span>
+						<span id="永宁村" style="top: 730px;left: 121px;"></span>
+						<span id="枫源村" style="top: 649px;left: 194px;"></span>
+						<span id="钟山村" style="top: 541px;left: 303px;"></span>
+					</div>
+					<iframe class="implantation" id="implantation" src="fqMap.svg" frameborder="0"></iframe>
+				</div>
+				<div class="rightContent">
+					<div class="breathe">
+						<div class="seHeader">
+							<span>
+								<p class="p-1">呼吸及服务情况</p>
+								<p class="p-2">Service order status</p>
+							</span>
+							<span>\03</span>
+						</div>
+						<div class="serData">
+							<div class="serDataLeft">
+								<div><span class="serNum">80</span>单</div>
+								<p>惠民服务订单数</p>
+							</div>
+							<div class="serDataLeft">
+								<div><span class="serNum">3450</span>单</div>
+								<p>当前呼入总量</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="phoneCall">
+						<div class="seHeader">
+							<span>
+								<p class="p-1">电话呼入情况分析</p>
+								<p class="p-2">Telephone call analysis</p>
+							</span>
+							<span>\04</span>
+						</div>
+						<div class="phoneNum" id="phoneNum"></div>
+						<div class="brokenLine" id="brokenLine"></div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/echarts.min.js"></script>
+		<script src="js/fq.js"></script>
+		<script>
+			var lazyFun;
+		    function init(el, width, height) {
+		        var _el = document.getElementById(el);
+		        var hScale = window.innerHeight / height;
+		        var wScale = window.innerWidth / width;
+		        _el.style.transform = 'scale(' + wScale + ',' + hScale + ')'
+		    }
+		    init('mainbody', 1920, 1080);
+		    window.onresize = function() {
+		        clearTimeout(lazyFun);
+		        lazyFun = setTimeout(function() {
+		            init('mainbody', 1920, 1080)
+		        }, 600);
+		    };
+		</script>
+
+	</body>
+</html>

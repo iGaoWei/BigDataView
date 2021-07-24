@@ -1,0 +1,130 @@
+// 按钮组件样式复用
+
+
+/**
+ * [btn-bg 按钮样式复用，包含默认、移入、点击样式交互]
+ * @param  {[string]} $bgc [eg：#fff，可选参]
+ * @param  {[string]} $percent  [eg：10%，可选参]
+ */
+@mixin btn-bg($bgc: #4790d0, $percent: 10%) {
+  background-color: $bgc;
+  &:hover {
+    background-color: lighten($bgc, $percent);
+  }
+  &:active {
+    background-color: darken($bgc, $percent);
+  }
+}
+
+@mixin box-shadow($x, $y, $w, $b, $rgba) {
+  -webkit-box-shadow: $x $y $w $b $rgba;
+     -moz-box-shadow: $x $y $w $b $rgba;
+          box-shadow: $x $y $w $b $rgba;
+}
+@mixin transition($prop, $dur, $timingfun: linear) {
+  -webkit-transition: $prop $dur $timingfun;
+     -moz-transition: $prop $dur $timingfun;
+       -o-transition: $prop $dur $timingfun;
+          transition: $prop $dur $timingfun;
+}
+
+/* 边框颜色变化*/
+@mixin btn-bor($bor: #4790d0, $pre: 10%) {
+  &:hover {
+    border-color: $bor;
+    color: $bor;
+  }
+  &:active {
+    border-color: darken($bor, $pre);
+    color: darken($bor, $pre);
+  }
+}
+
+/* 字体和背景色互换*/
+@mixin btn-bg-cor($bgc: #fff, $cor: #f04134, $pre: 5%) {
+  color: $cor;
+  background-color: $bgc;
+  &:hover {
+    color: $bgc;
+    background-color: $cor;
+  }
+  &:active {
+    background-color: darken($cor, $pre);
+  }
+}
+
+/* 点击有内阴影 */
+@mixin btn-shadow($bgc: #4790d0,$pre: 5%) {
+  background-color: $bgc;
+  &:hover {
+    background-color: darken($bgc,$pre);
+  }
+  &:active {
+    -webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,.125) inset;
+       -moz-box-shadow: 0 3px 5px 0 rgba(0,0,0,.125) inset;
+            box-shadow: 0 3px 5px 0 rgba(0,0,0,.125) inset;
+  }
+}
+
+/* 鼠标抬起出现点击后阴影 start*/
+@mixin spread($bgc: #4790d0, $point: .6, $spr: 5px) {
+  position: relative;
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    content: "";
+
+    @include box-shadow(0,0,0,$spr,rgba($bgc,$point));
+    @include transition(all,.5s);
+  }
+  &:active:after {
+    opacity: 1;
+
+    @include box-shadow(0,0,0,0px,rgba($bgc,$point));
+    @include transition(all,0s);
+  }
+}
+/* 鼠标抬起出现点击后阴影 end */
+
+/* 波纹效果 start*/
+@mixin ripple($top: -10%, $left: 10%) {
+  position: relative;
+  overflow: hidden;
+  &:after {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    padding-top: 240%;
+    padding-left: 240%;
+    border-radius: 50%;
+    margin-top: -120%;
+    margin-left: -120%;
+    background: rgba(255, 255, 255, .3);
+
+    content: "";
+
+    @include transition(all,1s);
+  }
+  &:active:after {
+    opacity: 1;
+    padding-top: 0;
+    padding-left: 0;
+    margin-top: $top;
+    margin-left: $left;
+
+    @include transition(all,0s);
+  }
+}
+/* 波纹效果 end*/
+/* 不可点击 start*/
+@mixin disabled($fc: #999, $brc: #ccc, $bgc: #ddd) {
+  border: 1px solid $brc;
+  color: $fc;
+  background: $bgc;
+
+  cursor: no-drop;
+}
+/* 不可点击 end*/

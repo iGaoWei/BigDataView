@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>统计分析</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/static.css">
+
+</head>
+<body>
+<main class="main">
+    <!--头部-->
+    <header class="heared">
+        <span class="head-logo">前后台通用模板</span>
+        <ul class="head-ul"><li><a href="home.html" class="active-a">首页</a> </li>
+            <li><a href="videlctr.html">视频监控</a> </li>
+            <li><a href="map.html">地图管理</a> </li>
+            <li><a href="static.html">统计分析</a> </li>
+            <li><a href="form.html">表单信息</a> </li>
+            <li><a href="user.html">用户管理</a></li>
+            <li><a href="part.html">部门管理</a></li>
+            <li><a href="date.html">日程管理</a></li>
+
+        </ul>
+        <div class="head-right"><span id="time"></span><span>Admin</span></div>
+    </header>
+    <!--身体-->
+    <section class="section">
+
+        <div class="news_check">
+            <div class="check_left l_left">
+                <label>车辆类型：</label>
+                <select class="find_input" style="margin-right: 10px">
+                    <option>卡车</option>
+                </select>
+                <label>时间段：</label>
+                <input type="date" >
+                <input type="date" >
+                <button>查询</button>
+            </div>
+            <div class="check_right r_right">
+                <a class="btn btn-default"><span class=" glyphicon glyphicon-circle-arrow-down l_left"></span>打印</a>
+                <a class="btn btn-default"><span class=" glyphicon glyphicon-download-alt l_left"></span>导出</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div style="padding: 0 10px 0 10px ;border: 1px #ccc solid;background-color: #fff;">
+            <div class="e_chart">
+                <div class="charts l_left last_charts" style="width: 100%">
+                    <p class="charts_p" style="text-align: center">危化品运输汇总信息</p>
+                    <div >
+                        <table  class="annyTable01" border="1">
+                            <tr>
+                                <td style="font-weight: bold;text-align: right">运输车辆类型：</td>
+                                <td colspan="9">卡车、挂车、防化车、普通货车、防爆车、液化车、冷藏车等</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold;text-align: right;width: 10%">车辆总数：</td>
+                                <td  colspan="3" style="color: red;font-weight: bold">63524辆</td>
+                                <td style="font-weight: bold;text-align: right;width: 10%">最多车辆类型：</td>
+                                <td colspan="3">液化车（9654辆，占比30%；同比增加4%；环比增加5%）</td>
+                                <td style="font-weight: bold;text-align: right;width: 10%">最少车辆类型：</td>
+                                <td  colspan="3">挂车（654辆，占比10%；同比减少2%；环比减少3%）</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold;text-align: right;width: 10%">运输总数：</td>
+                                <td  colspan="3" style="color: red;font-weight: bold">65324人</td>
+                                <td style="font-weight: bold;text-align: right;width: 10%">最多年龄段：</td>
+                                <td colspan="3">青年（9654人，占比30%；同比增加4%；环比增加5%）</td>
+                                <td style="font-weight: bold;text-align: right;width: 10%">最少年龄段：</td>
+                                <td  colspan="3">老年（63人，占比6%；同比减少2%；环比减少3%）</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold;text-align: right;width: 10%">运输总量：</td>
+                                <td  colspan="3" style="color: red;font-weight: bold">965478吨</td>
+                                <td style="font-weight: bold;text-align: right;width: 10%">运输最多危险品种类：</td>
+                                <td colspan="3">烟花爆竹（65447吨，占比40%；同比增加4%；环比增加5%）</td>
+                                <td style="font-weight: bold;text-align: right;width: 10%">运输最多月份：</td>
+                                <td  colspan="3">9月（36%，占比6%；同比减少2%；环比减少3%）</td>
+                            </tr>
+
+                            <tr>
+                                <td style="font-weight: bold;text-align: right">运输里程数：</td>
+                                <td colspan="9">实际里程数多于计划里程数；同比增长8%；环比增加9.6%</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold;text-align: right">决策建议：</td>
+                                <td colspan="9" style="color: red;font-weight: bold">总体说来危化品需求量在不断的增加，需要对危化品监控、管理更加严格；避免事故发生。</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="e_chart">
+                <div class="charts l_left">
+                    <p class="charts_p">运输车辆分析<span class="r_right">更多></span></p>
+                    <div id="container" style="height:200px;width: 100%"></div>
+                    <div style="width: 100%;margin-top: 30px">
+                        <table class="annyTable" border="1">
+                            <tr>
+                                <td class="first_td">车辆类型</td>
+                                <td>卡车</td>
+                                <td>挂车</td>
+                                <td>防化车</td>
+                                <td>普通货车</td>
+                                <td>防爆车</td>
+                                <td>液化车</td>
+                                <td>冷藏车</td>
+                                <td>其它</td>
+                            </tr>
+                            <tr>
+                                <td class="first_td">车辆数量</td>
+                                <td>102</td>
+                                <td>102</td>
+                                <td>102</td>
+                                <td>102</td>
+                                <td>102</td>
+                                <td>102</td>
+                                <td>102</td>
+                                <td>102</td>
+                            </tr>
+                            <tr>
+                                <td class="first_td">占比</td>
+                                <td>5.2%</td>
+                                <td>5.2%</td>
+                                <td>5.2%</td>
+                                <td>5.2%</td>
+                                <td>5.2%</td>
+                                <td>5.2%</td>
+                                <td>5.2%</td>
+                                <td>5.2%</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+                <div class="charts l_left last_charts">
+                    <p class="charts_p">运输人员年龄分析<span class="r_right">更多></span></p>
+                    <div id="container1" style="height:200px;width: 100%"></div>
+                    <div style="width: 100%;margin-top: 30px">
+                        <table class="annyTable" border="1">
+                            <tr>
+                                <td class="first_td">年龄段</td>
+                                <td>青年</td>
+                                <td>中年</td>
+                                <td>老年</td>
+                                <td>其它</td>
+                            </tr>
+                            <tr>
+                                <td class="first_td">数量</td>
+                                <td>102</td>
+                                <td>102</td>
+                                <td>102</td>
+                                <td>102</td>
+                            </tr>
+                            <tr>
+                                <td class="first_td">占比</td>
+                                <td>5.2%</td>
+                                <td>5.2%</td>
+                                <td>5.2%</td>
+                                <td>5.2%</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="e_chart">
+                <div class="charts l_left">
+                    <p class="charts_p">各类危险品运输量分析<span class="r_right">更多></span></p>
+                    <div id="container4" style="height:250px;width: 100%;"></div>
+                    <div style="width: 100%;margin-top: 0px">
+                        <table class="annyTable" border="1">
+                            <tr>
+                                <td class="first_td">物品类型</td>
+                                <td>爆炸物品</td>
+                                <td>化学品</td>
+                                <td>射钉器材</td>
+                                <td>印章</td>
+                                <td>机修</td>
+                                <td>散装加油</td>
+                                <td>典当</td>
+                                <td>烟花爆竹</td>
+                            </tr>
+                            <tr>
+                                <td class="first_td">运输量</td>
+                                <td>102</td>
+                                <td>102</td>
+                                <td>102</td>
+                                <td>102</td>
+                                <td>102</td>
+                                <td>102</td>
+                                <td>102</td>
+                                <td>102</td>
+                            </tr>
+                            <tr>
+                                <td class="first_td">同比</td>
+                                <td>5.2%</td>
+                                <td>5.2%</td>
+                                <td>5.2%</td>
+                                <td>5.2%</td>
+                                <td>5.2%</td>
+                                <td>5.2%</td>
+                                <td>5.2%</td>
+                                <td>5.2%</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+                <div class="charts l_left last_charts">
+                    <p class="charts_p">各类危化品运输量走势图<span class="r_right">更多></span></p>
+                    <div id="container5" style="height:250px;width: 100%;"></div>
+                    <table class="annyTable" border="1">
+                        <tr>
+                            <td class="first_td">月份</td>
+                            <td>一月</td>
+                            <td>二月</td>
+                            <td>三月</td>
+                            <td>四月</td>
+                            <td>五月</td>
+                            <td>六月</td>
+                            <td>七月</td>
+                            <td>八月</td>
+                            <td>九月</td>
+                            <td>十月</td>
+                            <td>十一月</td>
+                            <td>十二月</td>
+                        </tr>
+                        <tr>
+                            <td class="first_td">运输量</td>
+                            <td>1502</td>
+                            <td>2564</td>
+                            <td>2541</td>
+                            <td>3568</td>
+                            <td>4852</td>
+                            <td>2451</td>
+                            <td>251</td>
+                            <td>1456</td>
+                            <td>4852</td>
+                            <td>2451</td>
+                            <td>251</td>
+                            <td>1456</td>
+                        </tr>
+                        <tr>
+                            <td class="first_td">同比</td>
+                            <td>85.2%</td>
+                            <td>75.2%</td>
+                            <td>65.2%</td>
+                            <td>95.2%</td>
+                            <td>55.2%</td>
+                            <td>95.2%</td>
+                            <td>75.2%</td>
+                            <td>65.2%</td>
+                            <td>55.2%</td>
+                            <td>95.2%</td>
+                            <td>75.2%</td>
+                            <td>65.2%</td>
+                        </tr>
+
+                    </table>
+
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="e_chart">
+                <div class="charts l_left last_charts" style="width: 100%">
+                    <p class="charts_p">实际运输里程数和计划运输里程数对比分析<span class="r_right">更多></span></p>
+                    <div id="container7" style="height:250px;"></div>
+                    <div style="width: 100%;margin-top: 0px">
+                        <table class="annyTable" border="1">
+                            <tr>
+                                <td class="first_td"></td>
+                                <td class="">计划运输里程（公里）</td>
+                                <td class="">实际运输里程（公里）</td>
+                            </tr>
+                            <tr>
+                                <td class="first_td">里程数</td>
+                                <td>5678</td>
+                                <td>5234</td>
+                            </tr>
+                            <tr>
+                                <td class="first_td">同比</td>
+                                <td>+5.2%</td>
+                                <td>+5.2%</td>
+
+                            </tr>
+                            <tr>
+                                <td class="first_td">环比</td>
+                                <td>-5.2%</td>
+                                <td>+5.2%</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+<script src="js/jquery.js"></script>
+<script src="js/echarts-all.js"></script>
+<script src="js/car_analysis.js"></script>
+<script>
+    $(function(){
+        $(".head-ul li a").click(function(){
+            $(this).addClass("active-a").parents("li").siblings().find("a").removeClass("active-a");
+            $(this).parents('li').find("ul").show();
+            $(this).parents("li").sibling().find("ul").hide();
+
+        })
+        getTime();
+    })
+//    格式化时间
+   function getTime(){
+       var day=new Date();
+       var year=day.getFullYear();
+       var moutth=day.getMonth()+1;
+       var date=day.getDate();
+       var hour=day.getHours();
+       var min=day.getMinutes();
+       var sec=day.getSeconds();
+       var str=year+'-'+moutth+'-'+date+' '+hour+":"+min+':'+sec;
+       $("#time").text(str);
+   }
+</script>
+</body>
+</html>

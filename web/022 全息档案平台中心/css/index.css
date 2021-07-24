@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/*!
+ * animate.css -http://daneden.me/animate
+ * Version - 3.5.2
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2017 Daniel Eden
+ */
+
+ 
+ .verline{
+ 	height: 24px;
+    overflow: hidden;
+    width: 1px;
+    margin-top: 14px;
+    border-left: 1px solid #00384d;
+    border-right: 1px solid #03589b;
+ }
+ 
+ .dropdown-menu{
+ 	background-color: #fbf9f9;
+ }
+ 
+
+.header{
+	background-color: #b1bbc2;
+    color: #fff;
+        z-index: 3;
+    height: 60px;
+    padding: 7px 10px;
+    zoom: 1;
+    font-size: 16px;
+    box-shadow: 0 1px 0 0 rgba(0,0,0,.06), 0 2px 0 0 rgba(0,0,0,.01);
+    top: 0;
+}

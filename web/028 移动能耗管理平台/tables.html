@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="UTF-8">
+
+        <meta name="description" content="Violate Responsive Admin Template">
+        <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
+
+        <title>Super Admin Responsive Template</title>
+            
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="js/bootstrap-3.3.4.css">
+        <link href="css/animate.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="js/font-awesome.4.6.0.css">
+        <link href="css/form.css" rel="stylesheet">
+        <link href="css/calendar.css" rel="stylesheet">
+        <link href="css/media-player.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/icons.css" rel="stylesheet">
+        <link href="css/generics.css" rel="stylesheet"> 
+    </head>
+    <body id="skin-blur-violate">
+        <header id="header" class="media">
+            <a href="" id="menu-toggle"></a> 
+            <a class="logo pull-left" href="index.html">SUPER ADMIN 1.0</a>
+            
+            <div class="media-body">
+                <div class="media" id="top-menu">
+                    <div class="pull-left tm-icon">
+                        <a data-drawer="messages" class="drawer-toggle" href="">
+                            <i class="sa-top-message"></i>
+                            <i class="n-count animated">5</i>
+                            <span>Messages</span>
+                        </a>
+                    </div>
+                    <div class="pull-left tm-icon">
+                        <a data-drawer="notifications" class="drawer-toggle" href="">
+                            <i class="sa-top-updates"></i>
+                            <i class="n-count animated">9</i>
+                            <span>Updates</span>
+                        </a>
+                    </div>
+                    
+                    
+
+                    <div id="time" class="pull-right">
+                        <span id="hours"></span>
+                        :
+                        <span id="min"></span>
+                        :
+                        <span id="sec"></span>
+                    </div>
+
+                    <div class="media-body">
+                        <input type="text" class="main-search">
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="clearfix"></div>
+        
+        <section id="main" class="p-relative" role="main">
+            
+            <!-- Sidebar -->
+            <aside id="sidebar">
+                
+                <!-- Sidbar Widgets -->
+                <div class="side-widgets overflow">
+                    <!-- Profile Menu -->
+                    <div class="text-center s-widget m-b-25 dropdown" id="profile-menu">
+                        <a href="" data-toggle="dropdown">
+                            <img class="profile-pic animated" src="img/profile-pic.jpg" alt="">
+                        </a>
+                        <ul class="dropdown-menu profile-menu">
+                            <li><a href="">My Profile</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                            <li><a href="">Messages</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                            <li><a href="">Settings</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                            <li><a href="">Sign Out</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                        </ul>
+                        <h4 class="m-0">Malinda Hollaway</h4>
+                        @malinda-h
+                    </div>
+                    
+                    <!-- Calendar -->
+                    <div class="s-widget m-b-25">
+                        <div id="sidebar-calendar"></div>
+                    </div>
+                    
+                    <!-- Feeds -->
+                    <div class="s-widget m-b-25">
+                        <h2 class="tile-title">
+                           News Feeds
+                        </h2>
+                        
+                        <div class="s-widget-body">
+                            <div id="news-feed"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projects -->
+                    <div class="s-widget m-b-25">
+                        <h2 class="tile-title">
+                            Projects on going
+                        </h2>
+                        
+                        <div class="s-widget-body">
+                            <div class="side-border">
+                                <small>Joomla Website</small>
+                                <div class="progress progress-small">
+                                     <a href="#" data-toggle="tooltip" title="" class="progress-bar tooltips progress-bar-danger" style="width: 60%;" data-original-title="60%">
+                                          <span class="sr-only">60% Complete</span>
+                                     </a>
+                                </div>
+                            </div>
+                            <div class="side-border">
+                                <small>Opencart E-Commerce Website</small>
+                                <div class="progress progress-small">
+                                     <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-info" style="width: 43%;" data-original-title="43%">
+                                          <span class="sr-only">43% Complete</span>
+                                     </a>
+                                </div>
+                            </div>
+                            <div class="side-border">
+                                <small>Social Media API</small>
+                                <div class="progress progress-small">
+                                     <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-warning" style="width: 81%;" data-original-title="81%">
+                                          <span class="sr-only">81% Complete</span>
+                                     </a>
+                                </div>
+                            </div>
+                            <div class="side-border">
+                                <small>VB.Net Software Package</small>
+                                <div class="progress progress-small">
+                                     <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-success" style="width: 10%;" data-original-title="10%">
+                                          <span class="sr-only">10% Complete</span>
+                                     </a>
+                                </div>
+                            </div>
+                            <div class="side-border">
+                                <small>Chrome Extension</small>
+                                <div class="progress progress-small">
+                                     <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-success" style="width: 95%;" data-original-title="95%">
+                                          <span class="sr-only">95% Complete</span>
+                                     </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Side Menu -->
+                <ul class="list-unstyled side-menu">
+                    <li>
+                        <a class="sa-side-home" href="index.html">
+                            <span class="menu-item">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sa-side-typography" href="typography.html">
+                            <span class="menu-item">Typography</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sa-side-widget" href="content-widgets.html">
+                            <span class="menu-item">Widgets</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a class="sa-side-table" href="tables.html">
+                            <span class="menu-item">Tables</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="sa-side-form" href="">
+                            <span class="menu-item">Form</span>
+                        </a>
+                        <ul class="list-unstyled menu-item">
+                            <li><a href="form-elements.html">Basic Form Elements</a></li>
+                            <li><a href="form-components.html">Form Components</a></li>
+                            <li><a href="form-examples.html">Form Examples</a></li>
+                            <li><a href="form-validation.html">Form Validation</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="sa-side-ui" href="">
+                            <span class="menu-item">User Interface</span>
+                        </a>
+                        <ul class="list-unstyled menu-item">
+                            <li><a href="buttons.html">Buttons</a></li>
+                            <li><a href="labels.html">Labels</a></li>
+                            <li><a href="images-icons.html">Images &amp; Icons</a></li>
+                            <li><a href="alerts.html">Alerts</a></li>
+                            <li><a href="media.html">Media</a></li>
+                            <li><a href="components.html">Components</a></li>
+                            <li><a href="other-components.html">Others</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="sa-side-chart" href="charts.html">
+                            <span class="menu-item">Charts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sa-side-folder" href="file-manager.html">
+                            <span class="menu-item">File Manager</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sa-side-calendar" href="calendar.html">
+                            <span class="menu-item">Calendar</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="sa-side-page" href="">
+                            <span class="menu-item">Pages</span>
+                        </a>
+                        <ul class="list-unstyled menu-item">
+                            <li><a href="list-view.html">List View</a></li>
+                            <li><a href="profile-page.html">Profile Page</a></li>
+                            <li><a href="messages.html">Messages</a></li>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="404.html">404 Error</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </aside>
+        
+            <!-- Content -->
+            <section id="content" class="container">
+            
+                
+                
+                <!-- Breadcrumb -->
+                <ol class="breadcrumb hidden-xs">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Library</a></li>
+                    <li class="active">Data</li>
+                </ol>
+                
+                <h4 class="page-title">TABLES</h4>
+                                
+                <!-- Deafult Table -->
+                <div class="block-area" id="defaultStyle">
+                    <h3 class="block-title">Default Style</h3>
+                    <table class="table tile">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Username</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Jhon </td>
+                                <td>Makinton </td>
+                                <td>@makinton</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Malinda</td>
+                                <td>Hollaway</td>
+                                <td>@hollway</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Wayn</td>
+                                <td>Parnel</td>
+                                <td>@wayne123</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Responsive Table -->
+                <div class="block-area" id="responsiveTable">
+                    <h3 class="block-title">Responsive Table</h3>
+                    <div class="table-responsive overflow">
+                        <table class="table tile">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Username</th>
+                                    <th>Password</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Jhon </td>
+                                    <td>Makinton </td>
+                                    <td>@makinton</td>
+                                    <td>123@makinton</td>
+                                    <td>mak@live.com</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Malinda</td>
+                                    <td>Hollaway</td>
+                                    <td>@hollway</td>
+                                    <td>hollaway@mal</td>
+                                    <td>holla@asianet.ch</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Wayn</td>
+                                    <td>Parnel</td>
+                                    <td>@wayne123</td>
+                                    <td>wayn@3rt</td>
+                                    <td>wayne-parn@gmail.com</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            
+                <!-- Bordered -->
+                <div class="block-area" id="tableBordered">
+                    <h3 class="block-title">Table Bordered</h3>
+                    <div class="table-responsive overflow">
+                        <table class="table table-bordered tile">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Username</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Jhon </td>
+                                    <td>Makinton </td>
+                                    <td>@makinton</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Malinda</td>
+                                    <td>Hollaway</td>
+                                    <td>@hollway</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Wayn</td>
+                                    <td>Parnel</td>
+                                    <td>@wayne123</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>    
+                </div>
+
+                <!-- Table Hover -->
+                <div class="block-area" id="tableHover">
+                    <h3 class="block-title">Table with Hover Style</h3>
+                    <div class="table-responsive overflow">
+                        <table class="table table-bordered table-hover tile">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Username</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Jhon </td>
+                                    <td>Makinton </td>
+                                    <td>@makinton</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Malinda</td>
+                                    <td>Hollaway</td>
+                                    <td>@hollway</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Wayn</td>
+                                    <td>Parnel</td>
+                                    <td>@wayne123</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Table Condensed -->
+                <div class="block-area" id="tableCondensed">
+                    <h3 class="block-title">Table Condensed</h3>
+                    <div class="table-responsive overflow">
+                        <table class="table tile table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Username</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Jhon </td>
+                                    <td>Makinton </td>
+                                    <td>@makinton</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Malinda</td>
+                                    <td>Hollaway</td>
+                                    <td>@hollway</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Wayn</td>
+                                    <td>Parnel</td>
+                                    <td>@wayne123</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            
+                <!-- Table Striped -->
+                <div class="block-area" id="tableStriped">
+                    <h3 class="block-title">Table Striped</h3>
+                    <div class="table-responsive overflow">
+                        <table class="tile table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Username</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Jhon </td>
+                                    <td>Makinton </td>
+                                    <td>@makinton</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Malinda</td>
+                                    <td>Hollaway</td>
+                                    <td>@hollway</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Wayn</td>
+                                    <td>Parnel</td>
+                                    <td>@wayne123</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>TB - Monthly</td>
+                                    <td>05/04/2012</td>
+                                    <td>Call in to confirm</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>TB - Monthly</td>
+                                    <td>06/04/2012</td>
+                                    <td>Pending</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>TB - Monthly</td>
+                                    <td>07/04/2012</td>
+                                    <td>Call in to confirm</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>TB - Monthly</td>
+                                    <td>08/04/2012</td>
+                                    <td>Call in to confirm</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>TB - Monthly</td>
+                                    <td>09/04/2012</td>
+                                    <td>Call in to confirm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <br/><br/>
+        </section>
+        
+        <!-- Javascript Libraries -->
+        <!-- jQuery -->
+        <script src="js/jquery-1.10.2.js"></script> <!-- jQuery Library -->
+        
+        <!-- Bootstrap -->
+        <script src="js/bootstrap-3.3.4.js"></script>
+        
+        <!-- UX -->
+        <script src="js/scroll.min.js"></script> <!-- Custom Scrollbar -->
+        
+        <!-- Other -->
+        <script src="js/calendar.min.js"></script> <!-- Calendar -->
+        <script src="js/feeds.min.js"></script> <!-- News Feeds -->
+        
+        
+        <!-- All JS functions -->
+        <script src="js/functions.js"></script>
+    </body>
+</html>
+

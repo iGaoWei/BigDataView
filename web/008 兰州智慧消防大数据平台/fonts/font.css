@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'PingFang-SC-Bold';
+  src: url('PingFang Bold.eot?');
+  src: url('PingFang Bold.eot?#iefix') format('embedded-opentype'),
+    url('PingFang Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PingFang-SC-Medium';
+  src: url('PingFang Light.eot');
+  src: url('PingFang Light.eot?#iefix') format('embedded-opentype'),
+    url('PingFang Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PingFang-SC-ExtraLight';
+  src: url('PingFang ExtraLight.eot');
+  src: url('PingFang ExtraLight.eot?#iefix') format('embedded-opentype'),
+    url('PingFang ExtraLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PingFang-SC-Heavy';
+  src: url('PingFang Heavy.eot');
+  src: url('PingFang Heavy.eot?#iefix') format('embedded-opentype'),
+    url('PingFang Heavy.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PingFang-SC-Light';
+  src: url('PingFang Light.eot');
+  src: url('PingFang Light.eot?#iefix') format('embedded-opentype'),
+    url('PingFang Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PingFang-SC-Regular';
+  src: url('PingFang Regular.eot');
+  src: url('PingFang Regular.eot?#iefix') format('embedded-opentype'),
+    url('PingFang Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HiraginoSansGB-W3';
+  src: url('HiraginoSansGB-W3.eot');
+  src: url('HiraginoSansGB-W3.eot?#iefix') format('embedded-opentype'),
+    url('HiraginoSansGBW3.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HiraginoSansGB-W6';
+  src: url('HiraginoSansGBW6.eot');
+  src: url('HiraginoSansGBW6.eot?#iefix') format('embedded-opentype'),
+    url('HiraginoSansGBW6.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

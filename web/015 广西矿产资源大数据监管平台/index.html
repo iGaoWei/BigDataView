@@ -1,0 +1,249 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<title>index</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+		<script>
+	$(document).ready(function(){forw()})
+	$(window).resize(function(){forw()})
+			
+		function forw(){
+		var w=$(window).width()
+		var mw=$(".mainbox2").width()
+		var iw=w/mw
+		$(".mainbox2").css("transform","scale("+iw+")");
+		var mw2=$(".mainbox2").height()*iw
+		var h=$(window).height()
+		var ih=h-mw2-20
+		$(".boxall").css({height:mw2, marginTop:ih/2});
+		}
+	</script>
+	<script>
+		alert("地图模块本地需要在iis环境下运行，先搭建iis服务否则看不到地图，\n该模版为大屏下使用，在小屏上做了内容适配，如不需要请删除js")
+		</script>
+	<style>
+		body{overflow: hidden;}
+		.mainbox2{-webkit-transform-origin:top left;  width: 4608px; height: 1344px;}
+	
+	</style>
+	<div class="boxall">
+	<div class="mainbox2">
+		
+	
+	<div class="head clearfix">
+	<h1 class="">
+广西矿产资源大数据监管平台</h1>
+	</div>
+	<div class="mainbox">
+	
+	<ul class="clearfix nav1">
+		<li>
+		<div class="box" style="height:14%">
+		<ul class="ylfw">
+				<li><div class="ylfwbox fora">
+					<p>监管市县数量</p>
+					<ol><span class="text-d">10</span><em>个</em></ol>
+					<div class="forb"></div>
+					</div></li>
+				<li><div class="ylfwbox fora">
+					<p>监管矿山数量</p>
+					<ol><span class="text-w">1234</span><em>家</em></ol>
+					<div class="forb"></div></div></li>
+				
+				<li><div class="ylfwbox fora">
+					<p>监管企业数量</p>
+					<ol><span class="text-b">2.3</span><em>家</em></ol>
+					<div class="forb"></div>
+					</div></li>
+			
+					
+				</ul>
+		</div>
+			
+		<div class="box" style="height:calc(43% - 30px); margin: 15px 0;">
+		
+			<div class="h100">
+			<ul class="nav3 h100">
+					<li class="h100 ">	
+						<div class="tit">监管分布表</div>
+				<div class="boxnav "  id="echart1"></div>
+				</li>
+					<li class="h100 ">
+						<div class="tit">监管分布表</div>
+						<div class="boxnav " id="echart2"></div>
+				</li>
+					</ul>
+			</div>
+		</div>
+			
+			<div class="box bg1" style="height:43%">
+			<div class="tit">实时数</div>
+			 <div class="listhead listhead1">
+				  <span>名称</span>
+					  <span>车牌</span>
+					  <span>矿种</span>
+					  <span>重量</span>
+					  <span>税费</span>
+					
+				 </div>
+				 <div class="listnav listnav1 scrollDiv">
+				 <ul>
+<li> <span>广西郁兴石场</span> <span>98739</span> <span>1-4渣</span> <span>-</span> <span>-</span></li>
+					 <li> <span>广西郁兴石场</span> <span>98739</span> <span>1-4渣</span> <span>-</span> <span>-</span></li>
+					 <li> <span>广西郁兴石场</span> <span>98739</span> <span>1-4渣</span> <span>-</span> <span>-</span></li>
+					 <li> <span>广西郁兴石场</span> <span>98739</span> <span>1-4渣</span> <span>-</span> <span>-</span></li>
+					 <li> <span>广西郁兴石场</span> <span>98739</span> <span>1-4渣</span> <span>-</span> <span>-</span></li>
+					 <li> <span>广西郁兴石场</span> <span>98739</span> <span>1-4渣</span> <span>-</span> <span>-</span></li>
+					 <li> <span>广西郁兴石场</span> <span>98739</span> <span>1-4渣</span> <span>-</span> <span>-</span></li>
+					 <li> <span>广西郁兴石场</span> <span>98739</span> <span>1-4渣</span> <span>-</span> <span>-</span></li>
+					 <li> <span>广西郁兴石场</span> <span>98739</span> <span>1-4渣</span> <span>-</span> <span>-</span></li>
+					 <li> <span>广西郁兴石场</span> <span>98739</span> <span>1-4渣</span> <span>-</span> <span>-</span></li>
+					 </ul>
+				 </div>
+		</div>
+	
+			
+		</li>
+		<li>
+		<div class="box h100">
+			<div class=" bar01">
+			<div class="barnav">
+				<ol>累计税收</ol>
+				<p><span class="text-d">2325345.00</span><em>元</em></p>
+				</div>
+				<div class="barnav">
+				<ol>累计车次</ol>
+				<p><span class="text-w">814617</span><em>车</em></p>
+				</div>
+				<div class="barnav">
+				<ol>累计重量</ol>
+				<p><span class="text-b">917421.00</span><em>吨</em></p>
+				</div>
+				
+			</div>
+			<div class="boxnav" id="guangxi" style="height:calc(100% - 160px)"></div>
+		</div>
+		
+		</li>
+	
+		<li>
+		<div class="h100">
+			<div class="box bar02">
+			<div class=" bar01">
+			<select><option>岑溪市</option><option>岑溪市</option></select>
+			<div class="barnav">
+				<ol>累计税收</ol>
+				<p><span class="text-d">2325345.00</span><em>元</em></p>
+				</div>
+				<div class="barnav">
+				<ol>累计车次</ol>
+				<p><span class="text-w">814617</span><em>车</em></p>
+				</div>
+				<div class="barnav">
+				<ol>累计重量</ol>
+				<p><span class="text-b">917421.00</span><em>吨</em></p>
+				</div>
+				
+			</div>
+			</div>
+			<ul class="nav2">
+			<li>
+				<div class="h100 ">
+				<div class="" style="height: 55%">
+					<ul class="nav3 h100">
+					<li class="h100 box">
+					
+						<div class="tit">税种明细</div>
+			<div class="boxnav " id="echart3"></div>
+							
+						</li>
+					<li class="h100 box">
+						<div class="tit">近六个月税收</div>
+			<div class="boxnav " id="echart4"></div>
+						</li>
+					</ul>
+						
+					</div>
+				<div class="box" style="height: calc(45% - 15px); margin-top: 15px;">
+					<div class="tit">现场视频</div>
+					<ul class="nav3 boxnav">
+					<li class="h100 ">
+					<video style=" height: 100%; width: 100%" src="https://www.17sucai.com/preview/1528155/2019-02-18/video/source/0.mp4"  poster="images/0.jpg" preload="metadata" controls>
+            </video>
+						</li>
+					<li class="h100 ">
+					<video style=" height: 100%; width: 100%"  src="https://www.17sucai.com/preview/1528155/2019-02-18/video/source/0.mp4"  poster="images/0.jpg" preload="metadata" controls>
+            </video>
+						</li>
+					</ul>
+					</div>
+				
+				</div>
+				
+			</li>
+			<li><div class="box h100" id="map"></div></li>
+			<li><div class="" style="height:100%">
+				<div class="box" style="height: 60%">
+					<div class="tit">各站点/企业明细</div>
+					 <div class="listhead listhead1">
+				  <span>名称</span>
+					  <span>车次</span>
+					  <span>重量</span>
+					  <span>税费</span>
+					
+				 </div>
+				 <div class="listnav listnav1 scrollDiv">
+				 <ul>
+					 <li><span>富祥石场</span> <span>98739</span> <span>1-4渣</span> <span>1</span> </li>
+					 <li><span>富祥石场</span> <span>98739</span> <span>1-4渣</span> <span>1</span> </li>
+					 <li><span>富祥石场</span> <span>98739</span> <span>1-4渣</span> <span>1</span> </li>
+					 <li><span>富祥石场</span> <span>98739</span> <span>1-4渣</span> <span>1</span> </li>
+					 <li><span>富祥石场</span> <span>98739</span> <span>1-4渣</span> <span>1</span> </li>
+					 <li><span>富祥石场</span> <span>98739</span> <span>1-4渣</span> <span>1</span> </li>
+					 <li><span>富祥石场</span> <span>98739</span> <span>1-4渣</span> <span>1</span> </li>
+					 <li><span>富祥石场</span> <span>98739</span> <span>1-4渣</span> <span>1</span> </li>
+					 <li><span>富祥石场</span> <span>98739</span> <span>1-4渣</span> <span>1</span> </li>
+					 <li><span>富祥石场</span> <span>98739</span> <span>1-4渣</span> <span>1</span> </li>
+					 <li><span>富祥石场</span> <span>98739</span> <span>1-4渣</span> <span>1</span> </li>
+					 <li><span>富祥石场</span> <span>98739</span> <span>1-4渣</span> <span>1</span> </li>
+					 <li><span>富祥石场</span> <span>98739</span> <span>1-4渣</span> <span>1</span> </li>
+					 </ul>
+				 </div>
+				
+				</div>
+				<div class="box" style="height:calc(40% - 15px); margin-top: 15px;">
+					<div class="tit">矿种明细</div>
+				<div class="boxnav " id="echart5"></div>
+				</div>
+				</div></li>
+			</ul>
+		</div>
+		
+		</li>
+		
+		</ul>
+	</div>	
+		
+		</div>
+		</div>	
+<script src="js/jquery.liMarquee.js"></script> 		
+<script>
+$(function(){
+    $('.scrollDiv').liMarquee({
+        direction: 'up',
+		 scrollamount: 30,
+		 runshort: false
+    });
+});
+</script> 
+<script type="text/javascript" src="js/js.js"></script>
+</body>
+</html>

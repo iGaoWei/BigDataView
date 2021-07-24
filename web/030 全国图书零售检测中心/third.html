@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/third.css">
+  <script src="js/echarts.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/macarons.js"></script>
+  <script src="js/china.js"></script>
+  <script src="js/countUp.js"></script>
+  <title>大屏</title>
+</head>
+<body>
+  <ul class="nav">
+  
+    <li class="drop-down">
+         <a href="#"></a>
+      
+        <ul class="drop-down-content">
+        
+            <li>
+              <a href="./home.html">自动切换</a>
+            </li>
+            
+            <li>
+              <a href="./index.html">第一屏</a>
+            </li>
+            
+            <li>
+              <a href="./second.html">第二屏</a>
+            </li>
+            <li>
+              <a href="./third.html">第三屏</a>
+            </li>
+            
+            <li>
+              <a href="./four.html?index=0">第四屏</a>
+            </li>
+        </ul>
+      </li>
+  </ul>
+  <div class="first-screen root-wrap">
+    <header>
+      <img src="img/third.png"/>
+      <div class="gifImg">
+        <span class="month-tip">2017年1月</span>
+      </div>
+      <div class="title_img"><img src="img/title_left_img.png" alt=""> </div>
+      
+    </header>
+    <div class="main clearfix">
+      <div class="aside-left fl">
+        <div class="top hot left-top">
+          <div class="top-in">
+            <h3>畅销榜</h3>
+            <div class="tit clearfix">
+              <span class="ranking fl"></span>
+              <span class="name fl">书名</span>
+              <!-- <span class="company fl">出版公司</span>
+                        <span class="hot fl">热销指数</span> -->
+            </div>
+            <!-- <div class="con-wrap">
+              <div class="over-wrap"> -->
+                <ul class="con">
+                
+                  </li>
+                </ul>
+              <!-- </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="top zhixiao left-bottom">
+          <h3>滞销榜</h3>
+          <div class="tit clearfix">
+            <span class="ranking fl"></span>
+            <span class="short fl">书名</span>
+            <!-- <span class="hot fl">综合热度</span> -->
+          </div>
+          <ul class="con">      
+                                   
+          </ul>          
+        </div>        
+      </div>
+      <div class="middle-map fl">
+        <div class="map-wrap">
+          <h3 class="clearfix">
+            <dl class="fl">
+              <dt>销售数据</dt>
+              <dd class="book-data unit-wan"></dd>
+            </dl>
+            <dl class="fl">
+              <dt>库存数据</dt>
+              <dd class="stock-data unit-wan"></dd>
+            </dl>                                  
+          </h3>
+          <span class="title-map">某出版社-全国销售库存地图</span>
+          <div id="map" style="width: 100%;height: 100%;"></div>
+        </div>         
+      </div>
+      <div class="aside-right fl">
+        <div class="keys right-top">
+          <!-- <h3>全国的动销品种数和新书数量</h3>  -->
+          <!-- <div class="con clearfix">
+            <dl class="fl">
+              <dt>动销品种数</dt>
+              <dd>183764</dd>
+            </dl>    
+            <dl class="fl middle">
+              <dt>新书数量</dt>
+              <dd>253865</dd>
+            </dl>           
+            <dl class="fl">
+              <dt>行业指标</dt>
+              <dd>110.72</dd>
+            </dl>          
+          </div>   -->
+          <div class="trend">
+            <h3>销售趋势</h3>
+            <div id="trendBar1" style="width: 100%;height: 70%;"></div>
+          </div>
+          
+        </div>        
+        <div class="pie clearfix">
+          <div class="pie1 fl">
+            <h3>分类占比</h3>
+            <div id="pie1" style="width: 100%;height: 70%;"></div>
+          </div>
+          <div class="pie2 fl">
+            <h3>雷达图</h3>
+            <div id="leida" style="width: 100%;height: 62%;"></div>
+            <div class="legend2">
+              <p>
+                <span>上：市场占有率</span>
+                <span>下：新品占有率</span>
+              </p>
+              <p>
+                <span>左：畅销书占有率</span>
+                <span>右：新品贡献量</span>
+              </p>
+            </div>
+          </div>
+        
+        </div>
+        <!-- <div class="area-rank">
+          <h3>选题推荐</h3>
+          <div class="recommend">
+            <ul>
+              <li>环境科学</li>
+              <li>核污染</li>
+              <li>雾霾</li>
+             
+            </ul>
+          </div>
+        </div> -->
+        <div class="publish">
+          <h3>出版词云
+            <span class="fr"></span>
+          </h3>
+         
+          <!-- <img src="./img/622.png" alt=""> -->
+          <!-- <div id="trendBar1" style="width: 100%;height: 80%;"></div> -->
+        </div>
+      </div>  
+    </div>
+    <div class="main-bottom">
+      <span class="line1"></span>
+      <span class="line2"></span>
+      <span class="line3"></span>
+    </div>
+  </div>     
+  <script src="js/third.js"></script>
+  <script src="js/mapTest.js"></script>
+</body>
+</html>

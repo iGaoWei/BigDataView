@@ -1,0 +1,656 @@
+﻿<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>index</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<link rel="stylesheet" href="css/comon0.css">
+	</head>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var html=$(".wrap ul").html()
+		$(".wrap ul").append(html)
+		var ls=$(".wrap li").length/2+1
+		i=0
+		ref = setInterval(function(){
+			i++
+			if(i==ls){
+				i=1
+				$(".wrap ul").css({marginTop:0})
+				$(".wrap ul").animate({marginTop:-'.52'*i+'rem'},1000)
+			}
+	    	$(".wrap ul").animate({marginTop:-'.52'*i+'rem'},1000)
+		
+		
+		},2400);
+		
+		
+		
+				var html2=$(".adduser ul").html()
+		$(".adduser ul").append(html2)
+		var ls2=$(".adduser li").length/2+1
+		a=0
+		ref = setInterval(function(){
+			a++
+			if(a==ls2){
+				a=1
+				$(".adduser ul").css({marginTop:0})
+				$(".adduser ul").animate({marginTop:-'.5'*a+'rem'},800)
+			}
+	    	$(".adduser ul").animate({marginTop:-'.5'*a+'rem'},800)
+		
+		
+		},4300);
+		
+		
+		
+	
+	
+		
+		
+		
+	})
+	</script>
+	<body>
+<div class="loading">
+      <div class="loadbox"> <img src="picture/loading.gif"> 页面加载中... </div>
+    </div>
+<div class="head">
+      <h1><img src="picture/logo.png">公司名称大数据可视化平台</h1>
+      <div class="weather"><img src="picture/weather.png"><span>多云转小雨</span><span>2017-12-30</span></div>
+    </div>
+<div class="mainbox">
+      <ul class="clearfix">
+    <li>
+          <div class="boxall" style="height: 2.7rem">
+        <div class="alltitle">生意参谋</div>
+			  
+			<div class="sycm">
+			  <ul class="clearfix">
+				<li><h2>1824</h2><span>今日销售额</span></li>
+				<li><h2>1920</h2><span>昨日销售额</span></li>
+				<li><h2>19%</h2><span>环比增长</span></li>
+				</ul>
+				<div style="border-bottom: 1px solid rgba(255,255,255,.1)"></div>
+				<ul class="clearfix">
+				<li><h2>1824</h2><span>今日销售额</span></li>
+				<li><h2>1920</h2><span>昨日销售额</span></li>
+				<li><h2>19%</h2><span>环比增长</span></li>
+				</ul>
+				
+				
+			  </div>  
+        <div class="boxfoot"></div>
+      </div>
+          <div class="boxall" style="height: 2.65rem">
+        <div class="alltitle">消费占比</div>
+        <div class="sy" id="echarts1"></div>
+        <div class="sy" id="echarts2"></div>
+        <div class="sy" id="echarts3"></div>
+        <div class="boxfoot"></div>
+      </div>
+          <div class="boxall" style="height: 2.95rem">
+        <div class="alltitle">行业区分比例</div>
+        <div id="echarts4" style="height: 2.2rem; width: 100%;"></div>
+        <div class="boxfoot"></div>
+      </div>
+        </li>
+    <li>
+          <div class="bar">
+        <div class="barbox">
+              <ul class="clearfix">
+            <li class="pulll_left counter">12581189</li>
+            <li class="pulll_left counter">3912410</li>
+          </ul>
+            </div>
+        <div class="barbox2">
+              <ul class="clearfix">
+            <li class="pulll_left">消费总金额</li>
+            <li class="pulll_left">消费总笔数</li>
+          </ul>
+            </div>
+      </div>
+          <div class="map">
+        <div class="map1"><img src="picture/lbx.png"></div>
+        <div class="map2"><img src="picture/jt.png"></div>
+        <div class="map3"><img src="picture/map.png"></div>
+        <div class="map4" id="map_1"></div>
+      </div>
+        </li>
+    <li>
+          <div class="boxall" style="height:5.2rem">
+        <div class="alltitle">新增会员信息</div>
+        <div class="tabs">
+              <ul class="clearfix">
+            <li><a class="active" href="#">7天</a></li>
+            <li><a href="#">15天</a></li>
+            <li><a href="#">30天</a></li>
+          </ul>
+            </div>
+        <div class="clearfix">
+              <div class="sy" id="echarts6"></div>
+              <div class="sy" id="echarts7"></div>
+              <div class="sy" id="echarts8"></div>
+            </div>
+        <div class="addnew">
+              <div class="tit02"><span>今日新增会员列表</span></div>
+              <div class="adduser">
+            <ul class="clearfix">
+                  <li class="clearfix"> <span class="pulll_left"><img src="picture/head.jpg">1今日新增会员列表</span> <span class="pulll_right">24岁 - 女 - 广州 </span> </li>
+                  <li class="clearfix"> <span class="pulll_left"><img src="picture/head.jpg">2今日新增会员列表</span> <span class="pulll_right">24岁 - 女 - 广州 </span> </li>
+                  <li class="clearfix"> <span class="pulll_left"><img src="picture/head.jpg">3今日新增会员列表</span> <span class="pulll_right">24岁 - 女 - 广州 </span> </li>
+                  <li class="clearfix"> <span class="pulll_left"><img src="picture/head.jpg">4今日新增会员列表</span> <span class="pulll_right">24岁 - 女 - 广州 </span> </li>
+                </ul>
+          </div>
+            </div>
+        <div class="boxfoot"></div>
+      </div>
+          <div class="boxall" style="height: 3.4rem">
+        <div class="alltitle">实时消费记录</div>
+        <div class="wrap">
+              <ul>
+            <li>
+                  <p>1李东梁-支付宝支付-120元-XXX门店</p>
+                </li>
+            <li>
+                  <p>2李东梁-支付宝支付-120元-XXX门店</p>
+                </li>
+            <li>
+                  <p>3李东梁-支付宝支付-120元-XXX门店</p>
+                </li>
+            <li>
+                  <p>4李东梁-支付宝支付-120元-XXX门店</p>
+                </li>
+            <li>
+                  <p>5李东梁-支付宝支付-120元-XXX门店</p>
+                </li>
+            <li>
+                  <p>6李东梁-支付宝支付-120元-XXX门店</p>
+                </li>
+          </ul>
+            </div>
+        <div class="boxfoot"></div>
+      </div>
+        </li>
+  </ul>
+    </div>
+<div class="back"></div>
+<script language="JavaScript" src="js/js.js"></script> 
+<script type="text/javascript" src="js/echarts.min.js"></script> 
+<script type="text/javascript" src="js/china.js"></script> 
+<script type="text/javascript" src="js/area_echarts.js"></script> 
+<script type="text/javascript">	
+  $(document).ready(function(){
+		myChart1.resize();
+	　 myChart2.resize();
+		myChart3.resize();  
+		myChart6.resize();
+	 　myChart7.resize();
+		myChart8.resize(); 
+})
+window.addEventListener("resize", function () {
+    	myChart1.resize();
+	　 myChart2.resize();
+		myChart3.resize();  
+		myChart6.resize();
+	 　myChart7.resize();
+		myChart8.resize();   
+});	
+	</script> 
+<script type="text/javascript">
+		var v0=1000//总
+		var v1=353//
+		var v2=178//
+		var v3=68//新增
+					
+		
+
+        var myChart6 = echarts.init(document.getElementById('echarts6'));
+      option6 = {
+ series: [{	
+        type: 'pie',
+        radius: ['70%', '80%'],
+        color:'#0088cc',
+        label: {
+            normal: {
+            position: 'center'
+            }
+        },
+        data: [{
+            value: v1,
+            name: '新增会员',
+            label: {
+                normal: {
+                    formatter: v1 +'',
+                    textStyle: {
+                        fontSize:20,
+						color:'#fff',
+                    }
+                }
+            }
+        }, 
+			   {
+            value: v0,
+            name: '老会员',
+            label: {
+                normal: {
+                 formatter : function (params){
+                return '占比'+Math.round( v1/v0*100)+ '%'
+            },
+                    textStyle: {
+                        color: '#aaa',
+                        fontSize: 12
+                    }
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: 'rgba(255,255,255,.2)'
+                },
+                emphasis: {
+                    color: '#fff'
+                }
+            },
+        }]
+    }]
+  
+};
+
+	var myChart7 = echarts.init(document.getElementById('echarts7'));
+      option7 = {
+    series: [{	
+        type: 'pie',
+        radius: ['70%', '80%'],
+        color:'#fccb00',
+        label: {
+            normal: {
+                position: 'center'
+            }
+        },
+        data: [{
+            value: v2,
+            name: '新增领卡会员',
+            label: {
+                normal: {
+                    formatter: v2 +'',
+                    textStyle: {
+                        fontSize: 20,
+						color:'#fff',
+                    }
+                }
+            }
+        }, 
+			   {
+            value: v0,
+            name: '总领卡会员',
+            label: {
+                normal: {
+                 formatter : function (params){
+                return '占比'+Math.round( v2/v0*100)+ '%'
+            },
+                    textStyle: {
+                        color: '#aaa',
+                        fontSize: 12
+                    }
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: 'rgba(255,255,255,.2)'
+                },
+                emphasis: {
+                    color: '#fff'
+                }
+            },
+        }]
+    }]
+};
+		
+
+ var myChart8 = echarts.init(document.getElementById('echarts8'));
+      option8 = {
+	
+		
+    series: [{
+		
+        type: 'pie',
+        radius: ['70%', '80%'],
+        color:'#62b62f',
+        label: {
+            normal: {
+                position: 'center'
+            }
+        },
+        data: [{
+            value: v3,
+            name: '女消费',
+            label: {
+                normal: {
+                    formatter: v3 +'',
+                    textStyle: {
+                        fontSize: 20,
+						color:'#fff',
+                    }
+                }
+            }
+        }, {
+            value: v0,
+            name: '男消费',
+            label: {
+                normal: {
+                 formatter : function (params){
+                return '占比'+Math.round( v2/v0*100)+ '%'
+            },
+                    textStyle: {
+                        color: '#aaa',
+                        fontSize: 12
+                    }
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: 'rgba(255,255,255,.2)'
+                },
+                emphasis: {
+                    color: '#fff'
+                }
+            },
+        }]
+    }]
+};
+setTimeout(function(){ 
+myChart6.setOption(option6);
+myChart7.setOption(option7);
+myChart8.setOption(option8);	
+}, 500);
+		
+</script> 
+<script type="text/javascript">
+        var myChart1 = echarts.init(document.getElementById('echarts1'));
+		var v1=298//男消费
+		var v2=523//女消费
+		var v3=v1+v2//总消费 
+      option1 = {
+	
+//animation: false,
+    series: [{	
+        type: 'pie',
+        radius: ['70%', '80%'],
+        color:'#0088cc',
+        label: {
+            normal: {
+                position: 'center'
+            }
+        },
+        data: [{
+            value: v1,
+            name: '平均单客价',
+            label: {
+                normal: {
+                    formatter: v3 +'',
+                    textStyle: {
+                        fontSize: 20,
+						color:'#fff',
+                    }
+                }
+            }
+        }, 
+		]
+    }]
+};
+		
+		
+		 var myChart3 = echarts.init(document.getElementById('echarts3'));
+		var v1=298//男消费
+		var v2=523//女消费
+		var v3=v1+v2//总消费 
+      option2 = {
+	
+//animation: false,
+    series: [{	
+        type: 'pie',
+        radius: ['70%', '80%'],
+        color:'#fccb00',
+        label: {
+            normal: {
+                position: 'center'
+            }
+        },
+        data: [{
+            value: v1,
+            name: '男消费',
+            label: {
+                normal: {
+                    formatter: v1 +'',
+                    textStyle: {
+                        fontSize: 20,
+						color:'#fff',
+                    }
+                }
+            }
+        }, {
+            value: v2,
+            name: '女消费',
+            label: {
+                normal: {
+                 formatter : function (params){
+                return '占比'+Math.round( v1/v3*100)+ '%'
+            },
+                    textStyle: {
+                        color: '#aaa',
+                        fontSize: 12
+                    }
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: 'rgba(255,255,255,.2)'
+                },
+                emphasis: {
+                    color: '#fff'
+                }
+            },
+        }]
+    }]
+};
+		
+
+ var myChart2 = echarts.init(document.getElementById('echarts2'));
+      option3 = {
+	
+		
+    series: [{
+		
+        type: 'pie',
+        radius: ['70%', '80%'],
+        color:'#62b62f',
+        label: {
+            normal: {
+                position: 'center'
+            }
+        },
+        data: [{
+            value: v2,
+            name: '女消费',
+            label: {
+                normal: {
+                    formatter: v2 +'',
+                    textStyle: {
+                        fontSize: 20,
+						color:'#fff',
+                    }
+                }
+            }
+        }, {
+            value: v1,
+            name: '男消费',
+            label: {
+                normal: {
+                 formatter : function (params){
+                return '占比'+Math.round( v2/v3*100)+ '%'
+            },
+                    textStyle: {
+                        color: '#aaa',
+                        fontSize: 12
+                    }
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: 'rgba(255,255,255,.2)'
+                },
+                emphasis: {
+                    color: '#fff'
+                }
+            },
+        }]
+    }]
+};
+setTimeout(function(){ 
+myChart1.setOption(option1);
+ myChart2.setOption(option2);
+myChart3.setOption(option3);	
+}, 500);
+		
+</script> 
+<script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('echarts4'));
+       var plantCap = [{
+    name: '工业',
+    value: '222'
+}, {
+    name: '农业',
+    value: '115'
+}, {
+    name: '互联网',
+    value: '113'
+}, {
+    name: '医疗',
+    value: '95'
+}, {
+    name: '文学',
+    value: '92'
+},{
+    name: '服装',
+    value: '87'
+}];
+var datalist = [{
+    offset: [56, 48],
+    symbolSize: 110,
+   // opacity: .95,
+    color: 'rgba(73,188,247,.14)',
+	
+}, {
+
+    offset: [30, 70],
+    symbolSize: 70,
+     color: 'rgba(73,188,247,.14)'
+}, {
+    offset: [0, 43],
+    symbolSize: 60,
+    color: 'rgba(73,188,247,.14)'
+
+}, {
+    offset: [93, 30],
+    symbolSize: 70,
+     color: 'rgba(73,188,247,.14)'
+}, {
+    offset: [26, 19],
+    symbolSize: 65,
+    color: 'rgba(73,188,247,.14)'
+}, {
+    offset: [75, 75],
+    symbolSize: 60,
+     color: 'rgba(73,188,247,.14)'
+
+}];
+
+var datas = [];
+for (var i = 0; i < plantCap.length; i++) {
+    var item = plantCap[i];
+    var itemToStyle = datalist[i];
+    datas.push({
+        name: item.value + '\n' + item.name,
+        value: itemToStyle.offset,
+        symbolSize: itemToStyle.symbolSize,
+        label: {
+            normal: {
+                textStyle: {
+                    fontSize: 14
+                }
+            }
+        },
+
+        itemStyle: {
+            normal: {
+               color: itemToStyle.color,
+                opacity: itemToStyle.opacity
+           }
+        },
+    })
+}
+option = {
+    grid: {
+        show: false,
+        top: 10,
+        bottom: 10
+    },
+
+    xAxis: [{
+        gridIndex: 0,
+        type: 'value',
+        show: false,
+        min: 0,
+        max: 100,
+        nameLocation: 'middle',
+        nameGap: 5
+    }],
+
+    yAxis: [{
+        gridIndex: 0,
+        min: 0,
+        show: false,
+        max: 100,
+        nameLocation: 'middle',
+        nameGap: 30
+    }],
+    series: [{
+        type: 'scatter',
+        symbol: 'circle',
+        symbolSize: 120,
+        label: {
+            normal: {
+                show: true,
+                formatter: '{b}',
+                color: '#FFF',
+                textStyle: {
+                    fontSize: '30'
+                }
+            },
+        },
+        itemStyle: {
+            normal: {
+                color: '#F30'
+            }
+        },
+        data: datas
+    }]
+
+};
+ myChart.setOption(option);
+	$(document).ready(function(){
+	　　myChart.resize();  
+	
+})
+window.addEventListener("resize", function () {
+　　myChart.resize();  
+});
+</script>
+<!--大屏-->
+<script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="js/jquery.countup.min.js"></script>
+	<script type="text/javascript">
+		$('.counter').countUp();
+	</script>
+</body>
+</html>

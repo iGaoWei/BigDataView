@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<title>IIS 7.0 详细错误 - 404.3 - Not Found</title> 
+<style type="text/css"> 
+<!-- 
+body{margin:0;font-size:.7em;font-family:Verdana,Arial,Helvetica,sans-serif;background:#CBE1EF;} 
+code{margin:0;color:#006600;font-size:1.1em;font-weight:bold;} 
+.config_source code{font-size:.8em;color:#000000;} 
+pre{margin:0;font-size:1.4em;word-wrap:break-word;} 
+ul,ol{margin:10px 0 10px 40px;} 
+ul.first,ol.first{margin-top:5px;} 
+fieldset{padding:0 15px 10px 15px;} 
+.summary-container fieldset{padding-bottom:5px;margin-top:4px;} 
+legend.no-expand-all{padding:2px 15px 4px 10px;margin:0 0 0 -12px;} 
+legend{color:#333333;padding:4px 15px 4px 10px;margin:4px 0 8px -12px;_margin-top:0px; 
+ border-top:1px solid #EDEDED;border-left:1px solid #EDEDED;border-right:1px solid #969696; 
+ border-bottom:1px solid #969696;background:#E7ECF0;font-weight:bold;font-size:1em;} 
+a:link,a:visited{color:#007EFF;font-weight:bold;} 
+a:hover{text-decoration:none;} 
+h1{font-size:2.4em;margin:0;color:#FFF;} 
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.4em;margin:10px 0 0 0;color:#CC0000;} 
+h4{font-size:1.2em;margin:10px 0 5px 0; 
+}#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS",Verdana,sans-serif; 
+ color:#FFF;background-color:#5C87B2; 
+}#content{margin:0 0 0 2%;position:relative;} 
+.summary-container,.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;} 
+.config_source{background:#fff5c4;} 
+.content-container p{margin:0 0 10px 0; 
+}#details-left{width:35%;float:left;margin-right:2%; 
+}#details-right{width:63%;float:left; 
+}#server_version{width:96%;_height:1px;min-height:1px;margin:0 0 5px 0;padding:11px 2% 8px 2%;color:#FFFFFF; 
+ background-color:#5A7FA5;border-bottom:1px solid #C1CFDD;border-top:1px solid #4A6C8E;font-weight:normal; 
+ font-size:1em;color:#FFF;text-align:right; 
+}#server_version p{margin:5px 0;} 
+table{margin:4px 0 4px 0;width:100%;border:none;} 
+td,th{vertical-align:top;padding:3px 0;text-align:left;font-weight:bold;border:none;} 
+th{width:30%;text-align:right;padding-right:2%;font-weight:normal;} 
+thead th{background-color:#ebebeb;width:25%; 
+}#details-right th{width:20%;} 
+table tr.alt td,table tr.alt th{background-color:#ebebeb;} 
+.highlight-code{color:#CC0000;font-weight:bold;font-style:italic;} 
+.clear{clear:both;} 
+.preferred{padding:0 5px 2px 5px;font-weight:normal;background:#006633;color:#FFF;font-size:.8em;} 
+--> 
+</style> 
+ 
+</head> 
+<body> 
+<div id="header"><h1>应用程序“QKHTML.COM”中的服务器错误</h1></div> 
+<div id="server_version"><p>Internet 信息服务 7.0</p></div> 
+<div id="content"> 
+<div class="content-container"> 
+ <fieldset><legend>错误摘要</legend> 
+  <h2>HTTP 错误 404.3 - Not Found</h2> 
+  <h3>由于扩展配置问题而无法提供您请求的页面。如果该页面是脚本，请添加处理程序。如果应下载文件，请添加 MIME 映射。</h3> 
+ </fieldset> 
+</div> 
+<div class="content-container"> 
+ <fieldset><legend>详细错误信息</legend> 
+  <div id="details-left"> 
+   <table border="0" cellpadding="0" cellspacing="0"> 
+    <tr class="alt"><th>模块</th><td>StaticFileModule</td></tr> 
+    <tr><th>通知</th><td>ExecuteRequestHandler</td></tr> 
+    <tr class="alt"><th>处理程序</th><td>StaticFile</td></tr> 
+    <tr><th>错误代码</th><td>0x80070032</td></tr> 
+     
+   </table> 
+  </div> 
+  <div id="details-right"> 
+   <table border="0" cellpadding="0" cellspacing="0"> 
+    <tr class="alt"><th>请求的 URL</th><td>http://www.qkhtml.com:80/Case/wlkb/fonts/tapeworm.woff2</td></tr> 
+    <tr><th>物理路径</th><td>D:\website2018\qkhtml\Case\wlkb\fonts\tapeworm.woff2</td></tr> 
+    <tr class="alt"><th>登录方法</th><td>匿名</td></tr> 
+    <tr><th>登录用户</th><td>匿名</td></tr> 
+     
+   </table> 
+   <div class="clear"></div> 
+  </div> 
+ </fieldset> 
+</div> 
+<div class="content-container"> 
+ <fieldset><legend>最可能的原因:</legend> 
+  <ul> 	<li>可能是缺少处理程序映射。默认情况下，静态文件处理程序将处理所有内容。</li> 	<li>您要使用的功能可能尚未安装。</li> 	<li>没有为网站或应用程序启用相应的 MIME 映射。(警告: 请不要为用户不应下载的 .ASPX 页或 .config 文件等内容创建 MIME 映射。)</li> 	<li>如果未安装 ASP.NET。</li> </ul> 
+ </fieldset> 
+</div> 
+<div class="content-container"> 
+ <fieldset><legend>可尝试的操作:</legend> 
+  <ul> 	<li>在 system.webServer/handlers 中:           <ul> 			<li>确保映射了当前页所需的处理程序。</li> 			<li>请特别注意前提(例如，runtimeVersion、pipelineMode、bitness)并将这些前提与应用程序池的设置进行比较。</li> 			<li>请特别注意所需处理程序行中的书写错误。</li> 		</ul> 	</li> 	<li>请确认要使用的功能已经安装。</li> 	<li>           确认启用了 MIME 映射，或使用命令行工具 appcmd.exe 为网站添加 MIME 映射。           <ol> 			<li>要设置 MIME 类型，请使用以下语法: %SystemRoot%\windows\system32\inetsrv\appcmd set config /section:staticContent /+[fileExtension='string',mimeType='string']</li> 			<li>变量 fileExtension 字符串是文件扩展名，变量 mimeType 字符串是文件类型说明。</li> 			<li>例如，要为扩展名为“.xyz”的文件添加 MIME 映射: appcmd set config /section:staticContent /+[fileExtension='.xyz',mimeType='text/plain']</li> 		</ol>           警告: 请在确认您的 Web 服务器需要此 MIME 映射之后再将其添加到列表中。配置文件(如 .CONFIG)或动态脚本页(如 .ASP 或 .ASPX)不应直接下载，应始终通过处理程序来处理。有时会使用其他文件(如数据库文件或 .XML 或 .MDF 等用于存储配置的文件)来存储配置信息。请先确认客户端能否下载这些类型的文件，然后再启用这些文件。         </li> 	<li>安装 ASP.NET。</li> 	<li>创建跟踪规则以跟踪此 HTTP 状态代码的失败的请求。有关为失败的请求创建跟踪规则的详细信息，请单击<a href="http://go.microsoft.com/fwlink/?LinkID=66439">此处</a>。 </li> </ul> 
+ </fieldset> 
+</div> 
+ 
+ 
+<div class="content-container"> 
+ <fieldset><legend>链接和更多信息</legend> 
+  当所请求 URL 的文件扩展名是针对未在服务器上配置的 MIME 类型时，便会发生此错误。您可以为动态脚本页、数据库或配置文件以外的文件的文件扩展名添加 MIME 类型。这些文件类型使用一个处理程序来处理。您不应允许直接下载动态脚本页、数据库或配置文件。 
+  <p><a href="http://go.microsoft.com/fwlink/?LinkID=62293&amp;IIS70Error=404,3,0x80070032,6002">查看更多信息 &raquo;</a></p> 
+   
+ </fieldset> 
+</div> 
+</div> 
+</body> 
+</html> 

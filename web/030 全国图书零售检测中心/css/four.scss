@@ -1,0 +1,385 @@
+@import "baseFour.scss";
+@import "mixin/_animation.scss";
+@import "drop_down.scss";
+.main {
+    width: 100%;
+    height: 84%;
+    .aside-left {
+        position: relative;
+        width: 22%;
+        height: 100%;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: -10.4%;
+            width: 100%;
+            height: 100%;
+            background: url(../img/invalid.png) no-repeat;
+            background-size: 100% 100%;
+        }
+        ul {
+            position: relative;
+            z-index: 99;
+            display: block;
+            height: 91%;
+            overflow: hidden;
+        }
+        li {
+            position: relative;
+            z-index: 100;
+            width: 86%;
+            height: 19%;
+            padding: 5% 8% 5% 4%;
+            margin: 1.5% auto;
+            background: rgba(8, 29, 93, .36);
+            cursor: pointer;
+            img {
+                display: block;
+                width: 23%;
+                height: 100%;
+            }
+            dl {
+                width: 77%;
+                padding-left: 5%;
+                dt {
+                    text-align: left;
+                    font-size: px2em(28, 64);
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: normal;
+                    color: #fff;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    letter-spacing: normal;
+                    text-overflow: ellipsis;
+                }
+                dd {
+                    text-align: left;
+                    font-family: MicrosoftYaHei;
+                    font-size: px2em(22, 64);
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.43;
+                    color: rgba(0, 187, 236, .5);
+                    letter-spacing: normal;
+                    p {
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+    }
+    .aside-right {
+        position: relative;
+        width: 22%;
+        height: 100%; // 公共样式
+        .con_top {
+            position: relative;
+            width: 100%;
+            height: 103.5%;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: -10.4%;
+                width: 100%;
+                height: 100%;
+                background: url(../img/aside_top.png) no-repeat;
+                background-size: 100% 100%;
+            }
+            h3 {
+                padding: 10% 8% 2% 8%;
+            }
+            .aside_con {
+                height: 86%;
+                padding: 0 3%;
+                overflow: hidden;
+                dl {
+                    padding: 2% 5%;
+                    margin: 1% 0;
+                    background: rgba(8, 29, 93, .43);
+                }
+                dd {
+                    font-size: px2em(22, 64);
+                }
+                .user {
+                    text-align: left;
+                    font-size: px2em(24, 64);
+                    color: #00bbec;
+                }
+                .time {
+                    color: rgba(0, 187, 236, .52);
+                }
+                .comment {
+                    text-align: left;
+                    color: #00bbec;
+                    span {
+                        position: relative;
+                        display: inline-block;
+                        font-size: px2em(18, 64);
+                    }
+                }
+                dd {
+                    text-align: left;
+                    font-size: px2em(24, 64);
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.33;
+                    color: #fff;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 6;
+                    overflow: hidden;
+                    letter-spacing: normal;
+                }
+            }
+        }
+    }
+    .middle_con {
+        position: relative;
+        width: 55%;
+        height: 100%;
+        margin: 0 .5%;
+        background-color: rgba(18, 22, 64, .44);
+        .middle_top {
+            width: 100%;
+            height: 80%;
+        }
+        .middle_button {
+            width: 100%;
+            height: 20%;
+            overflow: hidden;
+            .button_left,
+            .button_right {
+                position: relative;
+                float: left;
+                width: 50%;
+                height: 100%;
+                font-size: px2em(28, 64);
+                .button_con {
+                    position: absolute;
+                    width: 100%;
+                    height: 82%;
+                    overflow: hidden;
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: -10.4%;
+                    width: 100%;
+                    height: 100%;
+                    background: url(../img/invalid-button.png) no-repeat;
+                    background-size: 100% 100%;
+                }
+                h3 {
+                    padding: 4% 0 2% 3%;
+                }
+                dl {
+                    display: inline-block;
+                    width: 90%;
+                    line-height: 2.3;
+                    margin-left: 3%;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+                .number {
+                    color: #2edbff;
+                }
+                .title {
+                    text-align: left;
+                    color: #fff;
+                }
+                dt {
+                    display: inline-block;
+                }
+                dd {
+                    display: inline-block;
+                    text-align: left;
+                    padding-left: 2%;
+                    color: rgba(0, 187, 236, .5);
+                }
+            }
+        }
+        .con_left,
+        .con_right {
+            width: 50%;
+            height: 37%;
+            padding-top: 1%;
+        }
+        .con_left {
+            padding: 2% 5%;
+            border-right: 1px solid #00bbec;
+            img {
+                display: block;
+                width: 30%;
+                height: 88%;
+            }
+            dl {
+                width: 70%;
+                height: 100%;
+                padding-left: 5%;
+                color: #fff;
+                dt {
+                    text-align: left;
+                    font-size: px2em(38, 64);
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1;
+                    padding-bottom: 4%;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    letter-spacing: normal;
+                    text-overflow: ellipsis;
+                }
+                dd {
+                    text-align: left;
+                    font-size: px2em(28, 64);
+                    font-weight: normal;
+                    line-height: 1.43;
+                    letter-spacing: normal;
+                    p {
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        font-style: normal;
+                    }
+                }
+            }
+        }
+        .con_right {
+            padding-left: 2%;
+            dl {
+                width: 100%;
+                height: 50%;
+                float: left;
+                margin: 1% 0;
+                overflow: hidden;
+                dt {
+                    text-align: left;
+                    font-size: px2em(28, 64);
+                    line-height: 1.11;
+                    color: #fff;
+                    letter-spacing: normal;
+                }
+                ul {
+                    margin: 4% 0 0 7%;
+                    li {
+                        float: left;
+                        text-align: right;
+                        font-size: px2em(24, 64);
+                        padding: 1% 5%;
+                        padding: 1% 5%;
+                        margin: 1%;
+                        color: #fff;
+                        background: rgba(0, 187, 236, .28);
+                    }
+                }
+            }
+        }
+        .con_link {
+            position: relative;
+            float: left;
+            width: 100%;
+            height: 22.33%;
+            li {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: -10.4%;
+                width: 20%;
+                height: 15%;
+                background: url(../img/title_con.png) no-repeat;
+                background-size: 100% 100%;
+            }
+            h3 {
+                padding-left: 11%;
+                margin-top: -0.5%;
+                font-size: px2em(32, 64);
+            }
+            .link_title,
+            .link_ul {
+                width: 81%;
+                text-align: left;
+                font-size: px2em(24, 64);
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.43;
+                margin: 2% auto;
+                color: #fff;
+                overflow: hidden;
+                letter-spacing: normal;
+            }
+            .link_title {
+                height: 80%;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+                padding-top: 1%;
+            }
+            .link_ul {
+                height: 80%;
+                li {
+                    float: left;
+                    width: 25%;
+                    padding:0.2% 1%;
+                }
+            }
+        }
+    }
+}
+
+.title_img {
+    text-align: left;
+}
+
+.main-bottom {
+    width: 100%;
+    height: 5px;
+    span {
+        display: inline-block;
+        height: 100%;
+        background: #02336b;
+    }
+    .line1 {
+        width: 15%;
+        margin-right: 6px;
+    }
+    .line2 {
+        width: 55%;
+        margin-right: 6px;
+    }
+    .line3 {
+        width: 26%;
+    }
+}
+
+// 出版社排行 旋转效果
+// .pressRotate {
+//   -webkit-animation: mymove .5s ease-in;
+//      -moz-animation: mymove .5s ease-in;
+//        -o-animation: mymove .5s ease-in;
+//           animation: mymove .5s ease-in;
+// }
+@include myMove(".pressRotate");
+@keyframes rotate {
+    0% {}
+    100% {
+        transform: rotate(360deg);
+    }
+}

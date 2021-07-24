@@ -1,0 +1,59 @@
+﻿@charset "utf-8";
+html{ font-size:1em;}
+body{ font-size:0.75em;}
+code{ display:block;}
+
+a:link, a:visited{ text-decoration:none; color:#333;}
+a:hover, a:focus, a:active{ text-decoration:;}
+
+a, abbr, acronym, address, applet, article, aside, audio,
+b, blockquote, big, body,
+center, canvas, caption, cite, code, command,
+datalist, dd, del, details, dfn, dl, div, dt, 
+em, embed,
+fieldset, figcaption, figure, font, footer, form, 
+h1, h2, h3, h4, h5, h6, header, hgroup, html,
+i, iframe, img, ins,
+kbd, 
+keygen,
+label, legend, li, 
+meter,
+nav, menu,
+object, ol, output,
+p, pre, progress,
+q, 
+s, samp, section, small, span, source, strike, strong, sub, sup,
+table, tbody, tfoot, thead, th, tr, tdvideo, tt,
+u, ul, var{ margin:0; padding:0;}
+
+h1, h2, h3, h4, h5, h6, th, td, table, input, button, select, textarea{ font-size:1em;}
+body, input, button, select, textarea{}
+em, cite, address, optgroup{ font-style:normal;}
+kbd, samp, code{ font-family:monospace;}
+
+img, input, button, select, textarea{ vertical-align:middle;}
+ul, ol{ list-style:none;}
+img, fieldset{ border:0;}
+abbr, acronym{ border-bottom:1px dotted black; cursor:help;}
+table{ width:100%;  border-collapse:collapse; border-spacing:0;}
+
+legend, hr{ overflow:hidden; position:absolute; left:0; top:0;}
+legend, hr, caption{ visibility:hidden; width:0; height:0; font-size:0; line-height:0;}
+
+/*清除浮动*/
+.group:after{ content:"."; display:block; visibility:hidden; clear:both; height:0;}
+.group{ display:inline-block;}
+.group{ display:block;}
+
+.clear{ clear:both; height:0; width:0; line-height:0; font-size:0;}
+/* 显示隐藏 */
+.hidden { visibility:hidden; margin:0; padding:0; width:0; height:0; background:none; font-size:0; line-height:0;}
+.show{ visibility:visible;}
+
+/* 可访问性导航 */
+a.accessibility01{ position:absolute; left:0; top:-10000px; display:block; width:100%; text-align:center; font-size:1.3em; z-index:10000;}
+a.accessibility01:hover, a.accessibility01:focus, a.accessibility01:active{ position:absolute; top:0; padding:15px 0; background:#1d60a7; color:#fff; font-weight:bold; z-index:10000;}
+
+/* html5 标签规范 */
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video{ display: block;}
+mark, rp, rt, ruby, summary, time{ display: inline;}

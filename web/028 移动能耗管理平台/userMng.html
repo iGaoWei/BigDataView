@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="UTF-8">
+
+        <meta name="description" content="Violate Responsive Admin Template">
+        <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
+
+        <title>移动能效管理平台</title>
+            
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="js/bootstrap-3.3.4.css">
+        <link href="css/animate.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="js/font-awesome.4.6.0.css">
+        <link href="css/form.css" rel="stylesheet">
+        <link href="css/calendar.css" rel="stylesheet">
+        <link href="css/media-player.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/icons.css" rel="stylesheet">
+        <link href="css/generics.css" rel="stylesheet"> 
+        <link href="css/menu.css" rel="stylesheet">
+    </head>
+    <body id="skin-blur-blue">
+        <header id="header" class="media">
+            <a href="" id="menu-toggle"></a> 
+            <a class="logo pull-left" href="index.html">移动能效管理平台</a>
+            
+            <div class="media-body">
+                <div class="media" id="top-menu">
+                    <div class="pull-left tm-icon">
+                        <a data-drawer="messages" class="drawer-toggle" href="">
+                            <i class="sa-top-message"></i>
+                            <i class="n-count animated">5</i>
+                            <span>实时消息</span>
+                        </a>
+                    </div>
+                    <div class="pull-left tm-icon">
+                        <a data-drawer="notifications" class="drawer-toggle" href="">
+                            <i class="sa-top-updates"></i>
+                            <i class="n-count animated">9</i>
+                            <span>告警信息</span>
+                        </a>
+                    </div>
+                    
+                    
+
+                    <div id="time" class="pull-right">
+                        <span id="hours"></span>
+                        :
+                        <span id="min"></span>
+                        :
+                        <span id="sec"></span>
+                    </div>
+
+                    <div class="media-body">
+                        <input type="text" class="main-search">
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="clearfix"></div>
+        
+        <section id="main" class="p-relative" role="main">
+
+            <!-- Sidebar -->
+            <aside id="sidebar">
+
+                <ul class="list-unstyled side-menu" style="width: 100%!important;padding-top: 20px;">
+                    <li>
+                        <a href="index.html" id='menuurl'>
+                            <i class="fa fa-calendar-o"></i><span> 运行监测</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a  href="keyInfo.html"  id='menuurl'>
+                            <i class="fa fa-bar-chart-o"></i><span>    KPI  </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mstp_map.html" id='menuurl'>
+                            <i class="fa fa-bar-chart-o"></i><span> 全息图概览</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="efficiencyAnalysis.html"  id='menuurl'>
+                            <i class="fa fa-sort-amount-asc"></i><span> 能耗统计</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dianfei.html"  id='menuurl'>
+                            <i class="fa  fa-money"></i><span> 电费管理</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="deviceManager.html"  id='menuurl'>
+                            <i class="fa fa-briefcase"></i><span> 设备管理</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="energy_consumption.html"  id='menuurl'>
+                            <i class="fa fa-building-o"></i><span> 报表管理</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="userMng.html" id='menuurl'>
+                            <i class="fa fa-users"></i><span> 用户管理</span>
+                        </a>
+                    </li>
+                    <li class="dropdown"  >
+                        <a href="" id='menuurl'>
+                            <i class="fa fa-cogs"></i><span > 系统设置</span>
+                        </a>
+                    </li>
+                </ul>
+                
+
+            </aside>
+        
+            <!-- Content -->
+            <section id="content" class="container">
+                <!-- Messages Drawer -->
+                <div id="messages" class="tile drawer animated">
+                    <div class="listview narrow">
+                        <div class="media">
+                            <a href="">新消息</a>
+                            <span class="drawer-close">&times;</span>
+
+                        </div>
+                        <div class="overflow" style="height: 254px">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/1.png" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">调度班长 - 2分钟前</small><br>
+                                    <a class="t-overflow" href="">空调系统数据采集异常，请工作人员检查。</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/2.png" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">值班专员 - 15分钟前</small><br>
+                                    <a class="t-overflow" href="">办公室供暖系统出现异常，无法提供正常供暖，请排除故障!</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/3.png" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">自动化班长 - 3小时前</small><br>
+                                    <a class="t-overflow" href="">能源费用分布图以及报表数据有误差，请核对</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/4.png" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">值班人员 - 3小时前</small><br>
+                                    <a class="t-overflow" href="">锅炉房水温过高，告警系统启动，请及时查看.</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/1.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">办公室 - 4小时前</small><br>
+                                    <a class="t-overflow" href="">请各部门提供上周能耗统计数据，本周将针对关键能耗点进行技术优化</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/2.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">值班专员 - 5小时前</small><br>
+                                    <a class="t-overflow" href="">自动化班提供1#机房总耗电量远远超过预测值，请再次核对数据并及时告知！</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/3.png" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">办公室 - 6小时前</small><br>
+                                    <a class="t-overflow" href="">请提供“人均空调系统能耗”和“制冷系统能效比”两组数据</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/4.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">办公室专责 - 6小时前</small><br>
+                                    <a class="t-overflow" href="">请调度班提供2#机房和3#基站的能耗统计数据.</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/5.png" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">网管中心 - 7小时前</small><br>
+                                    <a class="t-overflow" href="">今天凌晨将进行断网检修，请各部门及时下载相关材料</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media text-center whiter l-100">
+                            <a href=""><small>查看所有</small></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notification Drawer -->
+                <div id="notifications" class="tile drawer animated">
+                    <div class="listview narrow">
+                        <div class="media">
+                            <a href="">实时告警</a>
+                            <span class="drawer-close">&times;</span>
+                        </div>
+                        <div class="overflow" style="height: 254px">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/1.png" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">值班人员 - 35秒前</small><br>
+                                    <a class="t-overflow" href="">供暖系统能耗数据采集异常</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/3.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">调度值班室 - 1分钟前</small><br>
+                                    <a class="t-overflow" href="">办公照明系统出现故障，请立即检修！</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/3.png" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">办公室 - 2分钟前</small><br>
+                                    <a class="t-overflow" href="">办公区空调1#机组无法正常工作，异响</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/4.png" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">值班专责 - 3分钟前</small><br>
+                                    <a class="t-overflow" href="">1#制冷站中级故障告警，请立即前往查看</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/4.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">值班人员 - 4分钟前</small><br>
+                                    <a class="t-overflow" href="">冷机用电量突变，请查看是否故障</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/2.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">办公室专责 - 5分钟前</small><br>
+                                    <a class="t-overflow" href="">新风系统告警，无法正常工作</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media text-center whiter l-100">
+                            <a href=""><small>查看所有</small></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Breadcrumb -->
+                <ol class="breadcrumb hidden-xs">
+                    <li><a href="#">主页</a></li>
+                    <li><a href="#">管理</a></li>
+                    <li class="active">用户管理</li>
+                </ol>
+                
+                <h4 class="page-title">用户管理</h4>
+                                
+                <!-- Deafult Table -->
+                <div class="block-area" id="defaultStyle">
+                    <div class="row"> 
+                    <div class="col-md-6">
+                     <div class="tile">
+                       <h2 class="tile-title">所有用户</h2>
+                    <table class="table tile">
+                        <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>用户名</th>
+                                <th>姓名</th>
+                                <th>所属公司</th>                               
+                                <th>角色</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Jhon </td>
+                                <td>张三 </td>
+                                <td>青海移动</td>
+                                <td>班长</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Admin </td>
+                                <td>李四 </td>
+                                <td>青海移动</td>
+                                <td>系统管理员</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>super </td>
+                                <td>王丽丽</td>
+                                <td>青海移动</td>
+                                <td>超级用户</td>
+                            </tr>
+                             <tr>
+                                <td>4</td>
+                                <td>duoduo </td>
+                                <td>钱多多</td>
+                                <td>山东移动</td>
+                                <td>普通用户</td>
+                            </tr>
+                             <tr>
+                                <td>5</td>
+                                <td>super </td>
+                                <td>小红</td>
+                                <td>山东移动</td>
+                                <td>普通用户</td>
+                            </tr>
+                             <tr>
+                                <td>6</td>
+                                <td>super </td>
+                                <td>小明</td>
+                                <td>山东移动</td>
+                                <td>普通用户</td>
+                            </tr>
+                             <tr>
+                                <td>7</td>
+                                <td>super </td>
+                                <td>张大千</td>
+                                <td>青海移动</td>
+                                <td>普通用户</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-alt">新增</button>
+                        <button type="button" class="btn btn-sm btn-alt">修改</button>
+                        <button type="button" class="btn btn-sm btn-alt">删除</button>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                     <div class="tile">
+                       <h2 class="tile-title">用户信息</h2>
+                    <table class="table tile">
+                        <thead>
+                            <tr>
+                                <th>属性名</th>
+                                <th>属性值</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>用户名</td>
+                                <td>Jhon </td>
+                                
+                            </tr>
+                            <tr>
+                                <td>姓名</td>
+                                <td>张三</td>
+                               
+                            </tr>
+                            <tr>
+                                <td>所属公司</td>
+                                <td>青海移动</td>
+                               
+                            </tr>
+                            <tr>
+                                <td>角色</td>
+                                <td>值班班长</td>
+                               
+                            </tr>
+                            <tr>
+                                <td>邮箱</td>
+                                <td>zhangsan@163.com</td>
+                               
+                            </tr>
+                            <tr>
+                                <td>移动电话</td>
+                                <td>15689567895</td>
+                            </tr>
+                            <tr>
+                                <td>办公电话</td>
+                                <td>564896</td>
+                            </tr>
+                            <tr>
+                                <td>家庭电话</td>
+                                <td>7899466</td>
+                            </tr>
+                            <tr>
+                                <td>职务</td>
+                                <td>班长</td>
+                            </tr>
+                            <tr>
+                                <td>级别</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                
+   
+            </section>
+            <br/><br/>
+        </section>
+        
+        <!-- Javascript Libraries -->
+        <!-- jQuery -->
+        <script src="js/jquery-1.10.2.js"></script> <!-- jQuery Library -->
+        
+        <!-- Bootstrap -->
+        <script src="js/bootstrap-3.3.4.js"></script>
+        <!--Media Player-->
+        <script src="js/media-player.min.js"></script> <!-- USA Map for jVectorMap -->
+        <!-- UX -->
+        <script src="js/scroll.min.js"></script> <!-- Custom Scrollbar -->
+        
+        <!-- Other -->
+        <script src="js/calendar.min.js"></script> <!-- Calendar -->
+        <script src="js/feeds.min.js"></script> <!-- News Feeds -->
+        
+        
+        <!-- All JS functions -->
+        <script src="js/functions.js"></script>
+    </body>
+</html>
+

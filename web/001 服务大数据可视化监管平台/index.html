@@ -1,0 +1,1440 @@
+<!--
+访问地址：https://paycloud.vip
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>可视化-数据中心</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+<div id="particles-js" class="main">
+    <div class="main_con">
+        <div class="main_top">
+            <div class="main_top_left">
+                <div class="main_top_left_top">
+                    <img src="./images/main_top_left.png"/>
+                    <div class="main_top_left_top_title">公开数据展示</div>
+                    <div class="main_top_left_top_con">
+                        <div class="main_top_left_top_con_list">
+                            <span class="main_top_left_c_l_n main_top_left_c_l_n1">0</span>
+                            <p>党务公开</p>
+                        </div>
+                        <div class="main_top_left_top_con_list">
+                            <span class="main_top_left_c_l_n main_top_left_c_l_n2">0</span>
+                            <p>政务公开</p>
+                        </div>
+                        <div class="main_top_left_top_con_list">
+                            <span class="main_top_left_c_l_n main_top_left_c_l_n3">0</span>
+                            <p>财务公开</p>
+                        </div>
+                        <div class="main_top_left_top_con_left">
+                            <div class="main_top_left_t_c_l_left">
+                                <span class="main_top_left_c_l_n main_top_left_c_l_n4">0</span>
+                                <p>村务公开</p>
+                            </div>
+                            <div class="main_top_left_t_c_l_right">
+                                <span class="main_top_left_c_l_n main_top_left_c_l_n5">0</span>
+                                <p>居务公开</p>
+                            </div>
+                        </div>
+                        <div class="main_top_left_top_con_right main_top_left_top_con_right2">
+                            <div class="main_top_left_t_c_r_left">
+                                <span class="main_top_left_c_l_n">0</span>
+                                <p>占位公开</p>
+                            </div>
+                            <div class="main_top_left_t_c_r_right">
+                                <span class="main_top_left_c_l_n">0</span>
+                                <p>占位公开</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_top_left_top main_top_left_bottom">
+                    <img src="./images/main_top_left.png"/>
+                    <div class="main_top_left_top_title">XX信息员添加数据展示</div>
+                    <div id="baseId" class="main_top_left_top_con"></div>
+                </div>
+            </div>
+            <div class="main_top_middle">
+                <div class="main_top_middle_top_title">
+                    <img class="title_bg" src="./images/title_bg.png">
+                    服务大数据可视化监管平台
+                    <a class="title_web" href="" target="blank">管理系统</a>
+                    <a class="title_admin" href="" target="blank">web网页</a>
+                </div>
+                <div class="main_top_middle_num_title">XX公开数量</div>
+                <div class="main_top_middle_num">
+                    <!-- <div class="main_top_middle_num_list">
+                        <img src="./images/center_num.png">
+                        <p class="main_top_middle_num_list6">0</p>
+                    </div> -->
+                    <div class="main_top_middle_num_list">
+                        <img src="./images/center_num.png">
+                        <p class="main_top_middle_num_list5">0</p>
+                    </div>
+                    <div class="main_top_middle_num_list">
+                        <img src="./images/center_num.png">
+                        <p class="main_top_middle_num_list4">0</p>
+                    </div>
+                    <div class="main_top_middle_num_list">
+                        <img src="./images/center_num.png">
+                        <p class="main_top_middle_num_list3">0</p>
+                    </div>
+                    <div class="main_top_middle_num_list">
+                        <img src="./images/center_num.png">
+                        <p class="main_top_middle_num_list2">0</p>
+                    </div>
+                    <div class="main_top_middle_num_list">
+                        <img src="./images/center_num.png">
+                        <p class="main_top_middle_num_list1">0</p>
+                    </div>
+                </div>
+                <div class="main_top_middle_bottom">
+                    <div class="main_top_middle_bottom_echarts">
+                        <img src="./images/main_top_bottom.png">
+                        <div class="main_top_echarts_con">
+                            <div class="main_top_echarts_con_title">XX公开数量占比</div>
+                            <div id="threeTasksId" class="main_top_echarts_pie"></div>
+                        </div>
+                    </div>
+                    <div class="main_top_middle_bottom_echarts main_top_middle_bottom_echarts_right">
+                        <img src="./images/main_top_bottom.png">
+                        <div class="main_top_echarts_con">
+                            <div class="main_top_echarts_con_title">XX公开数量占比</div>
+                            <div id="publicityId" class="main_top_echarts_pie"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_top_left main_top_right">
+                <div class="main_top_left_top">
+                    <img src="./images/main_top_left.png"/>
+                    <div class="main_top_left_top_title">XX数据展示</div>
+                    <div class="main_top_left_top_con">
+                        <div class="main_top_left_top_con_left">
+                            <span class="daysData">0</span>
+                            <p>今日公开</p>
+                        </div>
+                        <div class="main_top_left_top_con_right">
+                            <span class="weekData">0</span>
+                            <p>本周公开</p>
+                        </div>
+                        <div class="main_top_left_top_con_list">
+                            <span class="monthData">0</span>
+                            <p>本月公开</p>
+                        </div>
+                        <div class="main_top_left_top_con_list">
+                            <span class="someThing">0</span>
+                            <p>办事指南</p>
+                        </div>
+                        <div class="main_top_left_top_con_list">
+                            <span class="policyData">0</span>
+                            <p>政策解读</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_top_left_top main_top_left_bottom">
+                    <img src="./images/main_top_left.png"/>
+                    <div class="main_top_left_top_title">XXXX数量类型占比</div>
+                    <div id="questionId" class="main_top_left_top_con">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main_middle">
+            <div class="main_middle_list">
+                <img src="./images/main_middle.png">
+                <div class="main_list_title main_list_title1">XXX镇</div>
+                <span class="main_list_title_num main_list_title_num1">0</span>
+            </div>
+            <div class="main_middle_list">
+                <img src="./images/main_middle.png">
+                <div class="main_list_title main_list_title2">XX镇</div>
+                <span class="main_list_title_num main_list_title_num2">0</span>
+            </div>
+            <div class="main_middle_list">
+                <img src="./images/main_middle.png">
+                <div class="main_list_title main_list_title3">XXXX</div>
+                <span class="main_list_title_num main_list_title_num3">0</span>
+            </div>
+            <div class="main_middle_list">
+                <img src="./images/main_middle.png">
+                <div class="main_list_title main_list_title4">XXXX</div>
+                <span class="main_list_title_num main_list_title_num4">0</span>
+            </div>
+            <div class="main_middle_list">
+                <img src="./images/main_middle.png">
+                <div class="main_list_title main_list_title5">XXXX</div>
+                <span class="main_list_title_num main_list_title_num5">0</span>
+            </div>
+        </div>
+        <div class="main_bottom">
+            <div class="main_bottom_top">
+                <div class="main_bottom_top_list">
+                    <img src="./images/main_bottopm_top1.png">
+                    <div class="main_bottom_t_l_title">XX指南</div>
+                    <div class="main_bottom_t_l_con">
+                        <div class="main_bottom_t_l_main">
+                            <ul>
+                                <li>
+                                    <div class="main_bottom_t_l_main_list">
+                                        <div class="main_bottom_t_list_title main_bottom_t_list_title1">精品可视化模板店里更多哦</div>
+                                        <div class="main_bottom_t_list_time main_bottom_t_list_time1">2020/05/20</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="main_bottom_t_l_main_list">
+                                        <div class="main_bottom_t_list_title main_bottom_t_list_title2">精品可视化模板店里更多哦</div>
+                                        <div class="main_bottom_t_list_time main_bottom_t_list_time2">2020/05/20</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="main_bottom_t_l_main_list">
+                                        <div class="main_bottom_t_list_title main_bottom_t_list_title3">精品可视化模板店里更多哦</div>
+                                        <div class="main_bottom_t_list_time main_bottom_t_list_time3">2020/05/20</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="main_bottom_t_l_main_list">
+                                        <div class="main_bottom_t_list_title main_bottom_t_list_title4">精品可视化模板店里更多哦</div>
+                                        <div class="main_bottom_t_list_time main_bottom_t_list_time4">2020/05/20</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_bottom_top_list">
+                    <img src="./images/main_bottopm_top2.png">
+                    <div class="main_bottom_t_l_title">XXXX公开占比</div>
+                    <div id="departmentId" class="main_bottom_t_l_chart"></div>
+                </div>
+                <div class="main_bottom_top_list">
+                    <img src="./images/main_bottopm_top1.png">
+                    <div class="main_bottom_t_l_title">政策XX</div>
+                    <div class="main_bottom_t_l_con">
+                        <div class="main_bottom_t_l_main2">
+                            <ul>
+                                <li>
+                                    <div class="main_bottom_t_l_main_list">
+                                        <div class="main_bottom_t_list_title main_bottom_polity_title1">精品可视化模板店里更多哦</div>
+                                        <div class="main_bottom_t_list_time main_bottom_polity_time1">2020/05/20</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="main_bottom_t_l_main_list">
+                                        <div class="main_bottom_t_list_title main_bottom_polity_title2">精品可视化模板店里更多哦</div>
+                                        <div class="main_bottom_t_list_time main_bottom_polity_time1">2020/05/20</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="main_bottom_t_l_main_list">
+                                        <div class="main_bottom_t_list_title main_bottom_polity_title3">精品可视化模板店里更多哦</div>
+                                        <div class="main_bottom_t_list_time main_bottom_polity_time1">2020/05/20</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="main_bottom_t_l_main_list">
+                                        <div class="main_bottom_t_list_title main_bottom_polity_title4">精品可视化模板店里更多哦</div>
+                                        <div class="main_bottom_t_list_time main_bottom_polity_time1">2020/05/20</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_bottom_bottom">
+                <div class="main_bottom_b_left">
+                    <img src="./images/main_bottom_bottom.png">
+                    <div class="main_bottom_b_title">主要关注XXXX占比</div>
+                    <div id="coverageId" class="main_bottom_b_con"></div>
+                </div>
+                <div class="main_bottom_b_middle1">
+                    <img src="./images/main_bootm_middle.png">
+                    <div class="main_bottom_b_title">关注XXXX占比</div>
+                    <div id="contentId" class="main_bottom_b_con main_bottom_b_con2"></div>
+                </div>
+                <div class="main_bottom_b_middle2">
+                    <img src="./images/main_bootm_middle.png">
+                    <div class="main_bottom_b_title">XXXX发布量</div>
+                    <div id="publicNumId" class="main_bottom_b_con main_bottom_b_con2"></div>
+                </div>
+                <div class="main_bottom_b_right">
+                    <img src="./images/main_bottom_bottom.png">
+                    <div class="main_bottom_b_title">XXX公开数量</div>
+                    <div id="yearsNumId" class="main_bottom_b_con"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
+<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="https://www.jq22.com/jquery/echarts-4.2.1.min.js"></script>
+<script type="text/javascript" src="js/dataScoll.js"></script>
+<script type="text/javascript" src="js/digitalScroll.js"></script>
+<script type="text/javascript" src="js/jcarousellite.js"></script>
+<script type="text/javascript" src="js/particles.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
+<script>
+    $(function() {
+        function apiFn() {
+            this.hostname = ""
+        }
+        apiFn.prototype = {
+            Init:function() {
+                this.findCount()
+                this.otherDataFn()
+                this.baseInfo()
+                this.questionFn()
+                this.publicityFn()
+                this.threeTasksFn()
+                this.departmentFn()
+                this.guideFn()
+                this.policyFn()
+                this.coverageFn()
+                this.yearsNumFn()
+                this.contentFn()
+                this.publicNumFn()
+                setInterval(function() {
+                    numInit()
+                },6000)
+            },
+            findCount:function() {
+
+            },
+            // 其他数据展示
+            otherDataFn:function() {
+                $(".daysData").addClass("counter-value").text("304")
+                $(".weekData").addClass("counter-value").text("2044")
+                $(".monthData").addClass("counter-value").text("909")
+                $(".someThing").addClass("counter-value").text("980")
+                $(".policyData").addClass("counter-value").text("200")
+            },
+            // 基础信息
+            baseInfo:function() {
+
+
+                var baseChart = echarts.init(document.getElementById('baseId'));
+                var charts = [
+                    {name: "测试1", num: 200},
+                    {name: "测试2", num: 300},
+                    {name: "测试3", num: 400},
+                    {name: "测试4", num: 500},
+                    {name: "测试5", num: 300},
+                ]
+                var color = ['rgba(100,255,249', 'rgba(100,255,249', 'rgba(100,255,249', 'rgba(100,255,249', 'rgba(100,255,249']
+
+                let lineY = []
+                for (var i = 0; i < charts.length; i++) {
+                var x = i
+                if (x > color.length - 1) {
+                    x = color.length - 1
+                }
+                var data = {
+                    name: charts[i].name,
+                    color: color[x] + ')',
+                    value: charts[i].num,
+                    itemStyle: {
+                    normal: {
+                        show: true,
+                        color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
+                        offset: 0,
+                        color: color[x] + ', 0.3)'
+                        }, {
+                        offset: 1,
+                        color: color[x] + ', 1)'
+                        }], false),
+                        barBorderRadius: 10
+                    },
+                    emphasis: {
+                        shadowBlur: 15,
+                        shadowColor: 'rgba(0, 0, 0, 0.1)'
+                    }
+                    }
+                }
+                lineY.push(data)
+                }
+                var option= {
+                title: {
+                    show: false
+                },
+                grid: {
+                    // borderWidth: 1,
+                    top: '10%',
+                    left: '30%',
+                    right: '20%',
+                    bottom: '3%'
+                },
+                color: color,
+                yAxis: [{
+                    type: 'category',
+                    inverse: true,
+                    axisTick: {
+                    show: false
+                    },
+                    axisLine: {
+                    show: false
+                    },
+                    axisLabel: {
+                    show: false,
+                    inside: false
+                    },
+                    data: charts.name
+                }, {
+                    type: 'category',
+                    inverse: true,
+                    axisLine: {
+                    show: false
+                    },
+                    axisTick: {
+                    show: false
+                    },
+                    axisLabel: {
+                    show: true,
+                    inside: false,
+                    textStyle: {
+                        color: '#38E1E1',
+                        fontSize: '8',
+                    },
+                    formatter: function (val,index) {
+                        return `${charts[index].num}`
+                    }
+                    },
+                    splitArea: {
+                    show: false
+                    },
+                    splitLine: {
+                    show: false
+                    },
+                    data: charts
+                }],
+                xAxis: {
+                    // type: 'value',
+                    axisTick: {
+                    show: false
+                    },
+                    axisLine: {
+                    show: false
+                    },
+                    splitLine: {
+                    show: false
+                    },
+                    axisLabel: {
+                    show: false
+                    }
+                },
+                series: [{
+                    name: '',
+                    type: 'bar',
+                    zlevel: 2,
+                    barWidth: '5px',
+                    data: lineY,
+                    animationDuration: 1500,
+                    label: {
+                    normal: {
+                        color: 'white',
+                        show: true,
+                        position: [-65, -2],
+                        textStyle: {
+                        fontSize: 8
+                        },
+                        formatter: function (a, b) {
+                            return a.name
+                        }
+                    }
+                    }
+                }],
+                animationEasing: 'cubicOut'
+                }
+                baseChart.setOption(option)
+                setInterval(function() {
+                    baseChart.clear()
+                    baseChart.setOption(option)
+                },40000)
+            },
+            // 问题反馈类型占比
+            questionFn:function() {
+                var numArr = [
+                    {name: '测试11', value: 300},
+                    {name: '测试22', value: 500},
+                    {name: '测试33', value: 400},
+                    {name: '测试44', value: 350},
+                    {name: '测试55', value: 363},
+                    {name: '测试66', value: 800},
+                ]
+                // for(var i = 0; i < data.list.length; i++) {
+                //     numArr.push({name: data.list[i].name,value: data.list[i].num})
+                // }
+                var datas = numArr
+                var questionChart = echarts.init(document.getElementById('questionId'));
+                var option = {
+                    title: {
+                        left: 'center'
+                    },
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: '{a} <br/>{b} : {c} ({d}%)'
+                    },
+                    color:['#2E8CFF', '#FD9133','#37D2D4','#19CA88','#858FF8'],
+                    legend: {
+                        itemWidth: 11,// 标志图形的长度
+                        itemHeight: 11,// 标志图形的宽度
+                        orient: 'vertical',
+                        // left: 'right',
+                        top: '15%',
+                        x: '50%',
+                        data: datas,
+                        textStyle: { //图例文字的样式
+                            color: '#fff',
+                            fontSize: 8
+                        },
+                    },
+                    series: [
+                        {
+                            name: '问题反馈',
+                            type: 'pie',
+                            radius: '75%',
+                            center: ['20%', '50%'],
+                            animationDuration: 2500,
+                            data: datas,
+                            label: {
+                                normal: {
+                                    position: 'inner',
+                                    show : false
+                                }
+                            }
+                        }
+                    ]
+                };
+                questionChart.setOption(option)
+                setInterval(function() {
+                    questionChart.clear()
+                    questionChart.setOption(option)
+                },8000)
+            },
+            // 党务公开
+            publicityFn:function() {
+                var dataArr = [
+                    {name: '测试11', value: 300},
+                    {name: '测试22', value: 500},
+                    {name: '测试33', value: 400},
+                    {name: '测试44', value: 350},
+                    {name: '测试55', value: 363},
+                    {name: '测试66', value: 800},
+                ]
+                // for(var i = 0; i < res.list.length; i++) {
+                //     dataArr.push({name: res.list[i].name, value: res.list[i].num})
+                // }
+
+                var publicitChart = echarts.init(document.getElementById('publicityId'));
+                var data = dataArr
+                var option = {
+                    color: ['#38EB70', '#F7E16C', '#0EFCFF', '#FD9133', '#4D92F2'],
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: '{a} <br/>{b} : {c} ({d}%)'
+                    },
+                    legend: {
+                        itemWidth: 12,// 标志图形的长度
+                        itemHeight: 12,// 标志图形的宽度
+                        orient: 'vertical',
+                        // left: 'right',
+                        top: '5%',
+                        bottom: '50%',
+                        x: '45%',
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 8,
+
+                        },
+                        data: data,
+                    },
+                    series: [
+                        // 主要展示层的
+                        {
+                            radius: ['70%', '90%'],
+                            center: ['25%', '50%'],
+                            type: 'pie',
+                            label: {
+                                normal: {
+                                    position: 'inner',
+                                    show : false
+                                }
+                            },
+                            name: "XX公开数量",
+                            data: data,
+                        },
+                        // 边框的设置
+                        {
+                            radius: ['50%', '55%'],
+                            center: ['25%', '50%'],
+                            type: 'pie',
+                            label: {
+                                normal: {
+                                    show: false
+                                },
+                                emphasis: {
+                                    show: false
+                                }
+                            },
+                            labelLine: {
+                                normal: {
+                                    show: false
+                                },
+                                emphasis: {
+                                    show: false
+                                }
+                            },
+                            animation: false,
+                            tooltip: {
+                                show: false
+                            },
+                            data: [{
+                                value: 1,
+                                itemStyle: {
+                                    color: "rgba(250,250,250,0.3)",
+                                },
+                            }],
+                        }
+                    ]
+                };
+                publicitChart.setOption(option)
+                setInterval(function() {
+                    publicitChart.clear()
+                    publicitChart.setOption(option)
+                },6000)
+            },
+            // 三务公开数量
+            threeTasksFn:function() {
+                let names = "666666";
+                if(6 - names.length > 0) {
+                    for(g = 0; g < 6 - names.length; g++) {
+                        $(".main_top_middle_num_list"+(6 - g)).text('0')
+                    }
+                }
+                for(var j = 0; j < names.length; j++) {
+                    $(".main_top_middle_num_list"+(names.length - j)).text(names.substr(j,1))
+                }
+                var dataArr = [
+                    {name: '测试11', value: 300},
+                    {name: '测试22', value: 500},
+                    {name: '测试33', value: 400},
+                    {name: '测试44', value: 350},
+                    {name: '测试55', value: 363},
+                    {name: '测试66', value: 800},
+                ]
+                for(var i = 1; i < dataArr.length; i++) {
+                    $(".main_top_left_c_l_n"+i).addClass("counter-value").text(dataArr[i].value)
+                }
+                var threeTasksChart = echarts.init(document.getElementById('threeTasksId'));
+                var data = dataArr
+                var option = {
+                    color: ['#38EB70', '#2E8CFF', '#0EFCFF', '#858FF8', '#FD9133','#F7E270'],
+                    tooltip : {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                    },
+                    legend: {
+                        itemWidth: 15,// 标志图形的长度
+                        itemHeight: 15,// 标志图形的宽度
+                        orient: 'vertical',
+                        // left: 'right',
+                        top: '10%',
+                        bottom: '50%',
+                        x: '50%',
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 8,
+
+                        },
+                        data: data
+                    },
+                    series :
+                        {
+                            name:'三务公开数量',
+                            type:'pie',
+                            animationDuration: 1500,
+                            radius: ['70%', '90%'],
+                            center: ['25%', '50%'],
+                            roseType : 'radius',
+                            label: {
+                                normal: {
+                                    position: 'inner',
+                                    show : false
+                                }
+                            },
+                            data:data
+                        }
+                };
+                threeTasksChart.setOption(option)
+                setInterval(function() {
+                    threeTasksChart.clear()
+                    threeTasksChart.setOption(option)
+                },4000)
+            },
+            // 各部门苏木镇嘎查村公开占比
+            departmentFn:function() {
+                var dataArr = [
+                    {name: '测试11', value: 300},
+                    {name: '测试22', value: 500},
+                    {name: '测试33', value: 400},
+                    {name: '测试44', value: 350},
+                    {name: '测试55', value: 363},
+                ]
+                    // 中间滚动数据展示
+                    for(var j = 0; j < dataArr.length; j++) {
+                        $(".main_list_title_num"+(j+1)).addClass("counter-value").text(dataArr[j].value)
+                        $(".main_list_title"+(j+1)).text(dataArr[j].name)
+                    }
+                var departmentChart = echarts.init(document.getElementById('departmentId'));
+                var data = dataArr
+                var option = {
+                    color: ['#FD9133', '#47F6A2', '#37D2D4', '#3493FF'],
+                    tooltip : {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                    },
+                    legend: {
+                        itemWidth: 15,// 标志图形的长度
+                        itemHeight: 15,// 标志图形的宽度
+                        orient: 'vertical',
+                        // left: 'right',
+                        top: '30%',
+                        bottom: '50%',
+                        x: '5%',
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 8,
+
+                        },
+                        data: data,
+                    },
+                    series: [
+                        {
+                            name: 'XXXX公开占比',
+                            type: 'pie',
+                            radius: ['50%', '70%'],
+                            center: ['78%', '52%'],
+                            labelLine: {
+                                normal: {
+                                    length: 12,
+                                    lineStyle: {
+                                        type: 'solid',
+                                        color: '#0EFCFF'
+                                    }
+                                }
+
+                            },
+                            label: {
+                                normal: {
+                                    formatter: (params)=>{
+                                        return params.name
+                                    },
+                                    borderWidth: 0,
+                                    borderRadius: 4,
+                                    padding: [0,0],
+                                    height: 20,
+                                    fontSize: 8,
+                                    align: 'center',
+                                    color: '#0EFCFF',
+                                }
+                            },
+                            data: data
+                        },
+                        {
+                            color: '#0EFCFF',
+                            type: 'pie',
+                            radius: ['55', '56'],
+                            center: ['78%', '52%'],
+                            data: [100],
+                            label: {
+                                show: false
+                            }
+                        },
+                        {
+                            type: 'pie',
+                            radius: ['25', '26'],
+                            center: ['78%', '52%'],
+                            data: [100],
+                            label: {
+                                show: false
+                            }
+                        }
+                    ]
+                };
+                departmentChart.setOption(option)
+                setInterval(function() {
+                    departmentChart.clear()
+                    departmentChart.setOption(option)
+                },12000)
+            },
+            // 办事指南
+            guideFn:function() {
+                $(".main_bottom_t_l_main").jCarouselLite({
+                    vertical: true,
+                    hoverPause:true,
+                    visible: 4,
+                    auto: 1000,
+                    speed: 500
+                });
+            },
+            // 政策解读
+            policyFn:function() {
+                $(".main_bottom_t_l_main2").jCarouselLite({
+                    vertical: true,
+                    hoverPause:true,
+                    visible: 4,
+                    auto: 1000,
+                    speed: 500
+                });
+            },
+            // 主要关注内容区域占比
+            coverageFn:function() {
+                var resArr = [
+                    {name: '测试11', value: 300},
+                    {name: '测试22', value: 500},
+                    {name: '测试33', value: 400},
+                    {name: '测试44', value: 350},
+                    {name: '测试55', value: 363},
+                    {name: '测试66', value: 800},
+                ]
+                var indicatorArr = []
+                var numArr = []
+                for(var i = 0; i < resArr.length; i++) {
+                    indicatorArr.push({name: resArr[i].name,max: 900})
+                    numArr.push(resArr[i].value)
+                }
+                var data = [
+                    {
+                        value: numArr,
+                    }
+                ]
+                var coverageChart = echarts.init(document.getElementById('coverageId'));
+                var option = {
+                    legend: {
+                        show: true,
+                        icon: "circle",
+                        bottom: 30,
+                        center: 0,
+                        itemWidth: 14,
+                        itemHeight: 14,
+                        itemGap: 21,
+                        orient: "horizontal",
+                        data: ['a', 'b'],
+                        textStyle: {
+                            fontSize: '70%',
+                            color: '#0EFCFF'
+                        },
+                    },
+
+                    radar: {
+                        // shape: 'circle',
+                        radius: '70%',
+                        triggerEvent: true,
+                        // type: 'default',
+                        name: {
+                            textStyle: {
+                                color: '#39DCF4',
+                                fontSize: '10',
+                                // borderRadius: 3,
+                                padding: [10, 10]
+                            }
+                        },
+                        nameGap: '2',
+                        indicator: indicatorArr,
+                        splitArea: {
+                            areaStyle: {
+                                color: 'rgba(255,255,255,0)'
+                            }
+                        },
+                        axisLine: { //指向外圈文本的分隔线样式
+                            lineStyle: {
+                                color: 'rgba(255,255,255,.2)'
+                            }
+                        },
+                        splitLine: {
+                            lineStyle: {
+                                width: 1,
+                                color: 'rgba(255,255,255,.2)'
+                            }
+                        },
+
+                    },
+                    series: [{
+                        name: 'XXX区域占比',
+                        type: 'radar',
+                        animationDuration: 2000,
+                        areaStyle: {
+                            normal: {
+                                color: {
+                                    type: 'linear',
+                                    opacity: 1,
+                                    x: 0,
+                                    y: 0,
+                                    x2: 0,
+                                    y2: 1,
+                                    color: '#2EEFAD'
+                                }
+                            }
+                        },
+                        symbolSize: 0,
+                        lineStyle: {
+                            normal: {
+                                // color: 'rgba(252,211,3, 1)',
+                                width: 0
+                            }
+                        },
+                        data: data
+                    }]
+                };
+                coverageChart.setOption(option)
+                setInterval(function() {
+                    coverageChart.clear()
+                    coverageChart.setOption(option)
+                },10000)
+            },
+            // 本年公开数量
+            yearsNumFn:function() {
+                var resArr = [
+                    {name: '测试11', value: 30},
+                    {name: '测试22', value: 50},
+                    {name: '测试33', value: 40},
+                    {name: '测试44', value: 35},
+                    {name: '测试55', value: 36},
+                    {name: '测试66', value: 80},
+                ]
+                var nameArr = []
+                var caiArr = []
+                var cunArr = []
+                var danArr = []
+                var junArr = []
+                var zhenArr = []
+                for(var i = 0; i < resArr.length; i++) {
+                    nameArr.push(resArr[i].name)
+                    caiArr.push(resArr[i].value)
+                    cunArr.push(resArr[i].value)
+                    danArr.push(resArr[i].value)
+                    junArr.push(resArr[i].value)
+                    zhenArr.push(resArr[i].value)
+                }
+                var yearsNumChart = echarts.init(document.getElementById('yearsNumId'));
+                var spNum = 5,_max=100;
+                var y_data = nameArr.reverse();
+                var _datamax = [100,100,100,100,100,100,100,100,100,100,100,100],
+                    _data1 = caiArr.reverse(),
+                    _data2 = cunArr.reverse(),
+                    _data3 = danArr.reverse();
+                    _data4 = junArr.reverse();
+                    _data5 = zhenArr.reverse();
+                var fomatter_fn = function(v) {
+                    return (v.value / _max * 100).toFixed(0)
+                }
+                var _label = {
+                    normal: {
+                        show: true,
+                        position: 'inside',
+                        formatter: fomatter_fn,
+                        textStyle: {
+                            color: '#fff',
+                            fontSize: 8
+                        }
+                    }
+                };
+                var option = {
+                    grid: {
+                        containLabel: true,
+                        left: 0,
+                        top: 0,
+                        right: 0,
+                        bottom: 0
+                    },
+                    tooltip: {
+                        show: true,
+                        backgroundColor: '#fff',
+                        borderColor: '#ddd',
+                        borderWidth: 1,
+                        textStyle: {
+                            color: '#3c3c3c',
+                            fontSize: 16
+                        },
+                        extraCssText: 'box-shadow: 0 0 5px rgba(0, 0, 0, 0.1)'
+                    },
+                    xAxis: {
+                        splitNumber: spNum,
+                        interval: _max / spNum,
+                        max: _max,
+                        axisLabel: {
+                            show: false,
+                            formatter: function(v) {
+                                var _v = (v / _max * 100).toFixed(0);
+                                return _v == 0 ? _v : _v + '%';
+                            }
+                        },
+                        axisLine: {
+                            show: false
+                        },
+                        axisTick: {
+                            show: false
+                        },
+                        splitLine: {
+                            show: false
+                        }
+
+                    },
+                    yAxis: [{
+                        data: y_data,
+                        axisLabel: {
+                            fontSize: 8,
+                            color: 'rgba(255,255,255,.7)'
+
+                        },
+                        axisLine: {
+                            show: false
+                        },
+                        axisTick: {
+                            show: false
+                        },
+                        splitLine: {
+                            show: false
+                        }
+                    }, {
+                        show: false,
+                        data: y_data,
+                        axisLine: {
+                            show: false
+                        }
+                    }],
+                    series: [{
+                        type: 'bar',
+                        name: '财务',
+                        stack: '2',
+                        label: _label,
+                        legendHoverLink: false,
+                        barWidth: 7,
+                        itemStyle: {
+                            normal: {
+                                color: '#FD9133'
+                            },
+                            emphasis: {
+                                color: '#FD9133'
+                            }
+                        },
+                        data: _data1
+                    }, {
+                        type: 'bar',
+                        name: '村务',
+                        stack: '2',
+                        legendHoverLink: false,
+                        barWidth: 20,
+                        label: _label,
+                        itemStyle: {
+                            normal: {
+                                color: '#2E8CFF'
+                            },
+                            emphasis: {
+                                color: '#2E8CFF'
+                            }
+                        },
+                        data: _data2
+                    }, {
+                        type: 'bar',
+                        stack: '2',
+                        name: '党务',
+                        legendHoverLink: false,
+                        barWidth: 20,
+                        label: _label,
+                        itemStyle: {
+                            normal: {
+                                color: '#37D2D4'
+                            },
+                            emphasis: {
+                                color: '#37D2D4'
+                            }
+                        },
+                        data: _data3
+                    }, {
+                        type: 'bar',
+                        stack: '2',
+                        name: '居务',
+                        legendHoverLink: false,
+                        barWidth: 20,
+                        label: _label,
+                        itemStyle: {
+                            normal: {
+                                color: '#19CA88'
+                            },
+                            emphasis: {
+                                color: '#19CA88'
+                            }
+                        },
+                        data: _data4
+                    }, {
+                        type: 'bar',
+                        stack: '2',
+                        name: '政务',
+                        legendHoverLink: false,
+                        barWidth: 20,
+                        label: _label,
+                        itemStyle: {
+                            normal: {
+                                color: '#0EFCFF'
+                            },
+                            emphasis: {
+                                color: '#0EFCFF'
+                            }
+                        },
+                        data: _data5
+                    }]
+                };
+                yearsNumChart.setOption(option)
+                setInterval(function() {
+                    yearsNumChart.clear()
+                    yearsNumChart.setOption(option)
+                },120000)
+            },
+            // 关注内容区域占比
+            contentFn:function() {
+                var resArr = [
+                    {name: '测试11', value: 30},
+                    {name: '测试22', value: 50},
+                    {name: '测试55', value: 33},
+                    {name: '测试66', value: 80},
+                ]
+                var nameArr = []
+                var caiArr = []
+                var cunArr = []
+                var danArr = []
+                var junArr = []
+                var zhenArr = []
+                for(var i = 0; i < resArr.length; i++) {
+                    nameArr.push(resArr[i].name)
+                    caiArr.push(resArr[i].value)
+                    cunArr.push(resArr[i].value)
+                    danArr.push(resArr[i].value)
+                    junArr.push(resArr[i].value)
+                    zhenArr.push(resArr[i].value)
+                }
+
+                var contentChart = echarts.init(document.getElementById('contentId'));
+                var option = {
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    legend: {
+                        x: '35%',
+                        y: '0%',
+                        data: ["财务","村务","党务","居务","政务"],
+                        textStyle: {
+                            color: "#fff",
+                            fontSize: 8
+                        },
+                        itemWidth: 10,
+                        itemHeight: 10,
+                    },
+                    calculable: true,
+                    xAxis: [
+                        {
+                            type: 'category',
+                            data: nameArr,
+                            axisLabel: {
+                                interval: 0,
+                                textStyle: {
+                                    fontSize: 8,
+                                    color: 'rgba(255,255,255,.7)',
+                                }
+                            },
+                            "axisTick": {       //y轴刻度线
+                                "show": false
+                            },
+                            "axisLine": {       //y轴
+                                "show": false,
+                            },
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            scale: true,
+                            name: '单位：%',
+                            nameTextStyle: {
+                                color: 'rgba(255,255,255,.7)',
+                                fontSize: 8
+                            },
+                            max: 100,
+                            min: 0,
+                            boundaryGap: [0.2, 0.2],
+                            "axisTick": {       //y轴刻度线
+                                "show": false
+                            },
+                            "axisLine": {       //y轴
+                                "show": false,
+                            },
+                            axisLabel: {
+                                textStyle: {
+                                    color: 'rgba(255,255,255,.8)',
+                                    fontSize: 8
+                                    // opacity: 0.1,
+                                }
+                            },
+                            splitLine: {  //决定是否显示坐标中网格
+                                show: true,
+                                lineStyle: {
+                                    color: ['#fff'],
+                                    opacity: 0.2
+                                }
+                            },
+                        },
+                        {
+                            type: 'value',
+                            scale: true,
+                            show: false,
+                            // name: "销量额(万元)",
+                            nameTextStyle: {
+                                color: 'rgba(255,255,255,.2)',
+                            },
+                            max: 1,
+                            min: 0,
+                            boundaryGap: [0.2, 0.2],
+                            "axisTick": {       //y轴刻度线
+                                "show": false
+                            },
+                            "axisLine": {       //y轴
+                                "show": false,
+                            },
+                            axisLabel: {
+                                textStyle: {
+                                    color: 'rgba(255,255,255,.2)',
+                                    // opacity: 0.1,
+                                }
+                            },
+                            splitLine: {  //决定是否显示坐标中网格
+                                show: true,
+                                lineStyle: {
+                                    color: ['#fff'],
+                                    opacity: 0.2
+                                }
+                            },
+
+                        }
+                    ],
+                    color: ['#0EFCFF', '#FD9133'],
+                    grid: {
+                        left: '5%',
+                        right: '1%',
+                        top: '25%',
+                        bottom: '15%'
+                        // containLabel: true
+                    },
+                    series: [
+                        {
+                            barWidth: '10%',
+                            name: '财务',
+                            type: 'bar',
+                            data: caiArr,
+                        },
+                        {
+                            animationDuration: 2500,
+                            barWidth: '20%',
+                            name: '村务',
+                            type: 'bar',
+                            data: cunArr,
+                        },
+                        {
+                            animationDuration: 2500,
+                            barWidth: '20%',
+                            name: '党务',
+                            type: 'bar',
+                            data: danArr,
+                        },
+                        {
+                            animationDuration: 2500,
+                            barWidth: '20%',
+                            name: '居务',
+                            type: 'bar',
+                            data: junArr,
+                        },
+                        {
+                            animationDuration: 2500,
+                            barWidth: '20%',
+                            name: '政务',
+                            type: 'bar',
+                            data: zhenArr,
+                        }
+                    ]
+                };
+                contentChart.setOption(option)
+                setInterval(function() {
+                    contentChart.clear()
+                    contentChart.setOption(option)
+                },90000)
+            },
+            // 巡察
+            publicNumFn:function() {
+                var resArr = [
+                    {name: '测试11', value: 300},
+                    {name: '测试22', value: 500},
+                    {name: '测试33', value: 400},
+                    {name: '测试44', value: 350},
+                    {name: '测试55', value: 363},
+                    {name: '测试66', value: 800},
+                ]
+                var xunArr = []
+                var jingArr = []
+                var dateArr = []
+                for(var i = 0; i < resArr.length; i++) {
+                    xunArr.push(resArr[i].value)
+                    jingArr.push(resArr[i].value)
+                    dateArr.push(resArr[i].name)
+                }
+                var publicNumChart = echarts.init(document.getElementById('publicNumId'));
+                var option = {
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    legend: {
+                        x: '35%',
+                        y: '0%',
+                        data: ['巡察', '警示'],
+                        textStyle: {
+                            color: "#fff",
+                            fontSize: 8
+                        },
+                        itemWidth: 10,
+                        itemHeight: 10,
+                    },
+                    calculable: true,
+                    xAxis: [
+                        {
+                            type: 'category',
+                            data: dateArr,
+                            axisLabel: {
+                                interval: 0,
+                                textStyle: {
+                                    fontSize: 8,
+                                    color: 'rgba(255,255,255,.7)',
+                                }
+                            },
+                            "axisTick": {       //y轴刻度线
+                                "show": false
+                            },
+                            "axisLine": {       //y轴
+                                "show": false,
+                            },
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            scale: true,
+                            name: '单位：%',
+                            nameTextStyle: {
+                                color: 'rgba(255,255,255,.7)',
+                                fontSize: 8
+                            },
+                            max: 1000,
+                            min: 0,
+                            boundaryGap: [0.2, 0.2],
+                            "axisTick": {       //y轴刻度线
+                                "show": false
+                            },
+                            "axisLine": {       //y轴
+                                "show": false,
+                            },
+                            axisLabel: {
+                                textStyle: {
+                                    color: 'rgba(255,255,255,.8)',
+                                    fontSize: 8
+                                    // opacity: 0.1,
+                                }
+                            },
+                            splitLine: {  //决定是否显示坐标中网格
+                                show: true,
+                                lineStyle: {
+                                    color: ['#fff'],
+                                    opacity: 0.2
+                                }
+                            },
+                        },
+                        {
+                            type: 'value',
+                            scale: true,
+                            show: false,
+                            // name: "销量额(万元)",
+                            nameTextStyle: {
+                                color: 'rgba(255,255,255,.2)',
+                            },
+                            max: 1,
+                            min: 0,
+                            boundaryGap: [0.2, 0.2],
+                            "axisTick": {       //y轴刻度线
+                                "show": false
+                            },
+                            "axisLine": {       //y轴
+                                "show": false,
+                            },
+                            axisLabel: {
+                                textStyle: {
+                                    color: 'rgba(255,255,255,.2)',
+                                    // opacity: 0.1,
+                                }
+                            },
+                            splitLine: {  //决定是否显示坐标中网格
+                                show: true,
+                                lineStyle: {
+                                    color: ['#fff'],
+                                    opacity: 0.2
+                                }
+                            },
+
+                        }
+                    ],
+                    color: ['#2E8CFF', '#38EB70'],
+                    grid: {
+                        left: '5%',
+                        right: '1%',
+                        top: '25%',
+                        bottom: '15%'
+                        // containLabel: true
+                    },
+                    series: [
+                        {
+                            animationDuration: 2500,
+                            barWidth: '20%',
+                            name: '巡察',
+                            type: 'bar',
+                            data: xunArr,
+                        },
+                        {
+                            barWidth: '20%',
+                            name: '警示',
+                            type: 'bar',
+                            data: jingArr,
+                        }
+                    ],
+                    animationEasing: 'cubicOut'
+                };
+                publicNumChart.setOption(option)
+                setInterval(function() {
+                    publicNumChart.clear()
+                    publicNumChart.setOption(option)
+                },60000)
+            }
+
+        }
+        var start = new apiFn()
+        start.Init()
+    })
+</script>

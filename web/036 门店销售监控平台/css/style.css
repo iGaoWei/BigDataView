@@ -1,0 +1,1305 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  background: url(../images/background.png) no-repeat center;
+  background-size: 100%;
+}
+@font-face {
+  font-family: '液晶数字字体';
+  src: url('../fonts/液晶数字字体.TTF');
+}
+.header {
+  width: 75%;
+  height: 10%;
+  margin: auto;
+}
+.header > div {
+  float: left;
+}
+.header .title {
+  height: 100%;
+  width: 40%;
+  text-align: center;
+  color: #fff;
+  font-size: 1.4rem;
+  display: table;
+  opacity: 0;
+  animation: zoomIn 0.5s linear forwards 0.8s;
+}
+.header .title span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.header .left,
+.header .right {
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+.header .left li,
+.header .right li {
+  width: 3.5rem;
+  height: 1rem;
+  background-color: #02b687;
+  opacity: 0;
+  margin: 0 2%;
+  float: left;
+  border-radius: 1rem;
+  margin-top: 10%;
+}
+.header .left li:nth-of-type(1) {
+  animation: show1 0.2s linear forwards;
+}
+.header .left li:nth-of-type(2) {
+  animation: show2 0.2s linear forwards 0.2s;
+}
+.header .left li:nth-of-type(3) {
+  animation: show3 0.2s linear forwards 0.4s;
+}
+.header .left li:nth-of-type(4) {
+  animation: show4 0.2s linear forwards 0.6s;
+}
+.header .right li {
+  float: right;
+}
+.header .right li:nth-of-type(1) {
+  animation: show1 0.2s linear forwards;
+}
+.header .right li:nth-of-type(2) {
+  animation: show2 0.2s linear forwards 0.2s;
+}
+.header .right li:nth-of-type(3) {
+  animation: show3 0.2s linear forwards 0.4s;
+}
+.header .right li:nth-of-type(4) {
+  animation: show4 0.2s linear forwards 0.6s;
+}
+.main {
+  width: 100%;
+  height: 60%;
+}
+.main > div {
+  float: left;
+}
+.main .main-left {
+  width: 22.5%;
+  height: 100%;
+}
+.main .main-left .completion {
+  width: 100%;
+  height: 30%;
+  position: relative;
+}
+.main .main-left .completion .completion-content {
+  width: 7rem;
+  height: 7rem;
+  background: url(../images/border.png) no-repeat center;
+  background-size: contain;
+  position: absolute;
+  left: -50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: animate1 1s linear forwards 7s;
+}
+.main .main-left .completion .completion-content .rate {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  left: 17%;
+  top: 51%;
+  transform: translateY(-50%);
+  background: url(../images/cricle.png) no-repeat center;
+  background-size: contain;
+  animation: rotate1 5s ease infinite;
+}
+.main .main-left .completion .completion-content .rate h5 {
+  text-align: center;
+  height: 50%;
+  width: 100%;
+  color: #fff;
+  display: table;
+}
+.main .main-left .completion .completion-content .rate h5 span {
+  display: table-cell;
+  vertical-align: bottom;
+  font-size: 0.8rem;
+}
+.main .main-left .completion .completion-content .rate p {
+  text-align: center;
+  height: 50%;
+  width: 100%;
+  color: #fff;
+  display: table;
+}
+.main .main-left .completion .completion-content .rate p span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.main .main-left .lightning {
+  width: 100%;
+  height: 40%;
+}
+.main .main-left .lightning .lightning1,
+.main .main-left .lightning .lightning2 {
+  width: 100%;
+  height: 50%;
+}
+.main .main-left .lightning .lightning1 > div {
+  float: left;
+}
+.main .main-left .lightning .lightning1 .sd1 {
+  width: 55%;
+  height: 100%;
+}
+.main .main-left .lightning .lightning1 .jd1 {
+  width: 45%;
+  height: 100%;
+}
+.main .main-left .lightning .lightning1 .jd1 > div {
+  float: left;
+}
+.main .main-left .lightning .lightning1 .jd1 ul {
+  float: left;
+  margin-top: 30%;
+}
+.main .main-left .lightning .lightning1 .jd1 ul li {
+  float: left;
+  margin-right: 0.15rem;
+  background-color: #00e4c8;
+  border-radius: 50%;
+  opacity: 0;
+}
+.main .main-left .lightning .lightning1 .jd1 ul li:nth-of-type(1) {
+  width: 0.5rem;
+  height: 0.5rem;
+  animation: show4 0.1s linear forwards 2.5s;
+}
+.main .main-left .lightning .lightning1 .jd1 ul li:nth-of-type(2) {
+  width: 0.54rem;
+  height: 0.54rem;
+  animation: show4 0.1s linear forwards 2.6s;
+}
+.main .main-left .lightning .lightning1 .jd1 ul li:nth-of-type(3) {
+  width: 0.58rem;
+  height: 0.58rem;
+  animation: show4 0.1s linear forwards 2.7s;
+}
+.main .main-left .lightning .lightning1 .jd1 ul li:nth-of-type(4) {
+  width: 0.62rem;
+  height: 0.62rem;
+  animation: show4 0.1s linear forwards 2.8s;
+}
+.main .main-left .lightning .lightning1 .jd1 ul li:nth-of-type(5) {
+  width: 0.66rem;
+  height: 0.66rem;
+  animation: show4 0.1s linear forwards 2.9s;
+}
+.main .main-left .lightning .lightning1 .jd1 ul li:nth-of-type(6) {
+  width: 0.7rem;
+  height: 0.7rem;
+  animation: show4 0.1s linear forwards 3s;
+}
+.main .main-left .lightning .lightning1 .jd1 ul li:nth-of-type(7) {
+  width: 0.74rem;
+  height: 0.74rem;
+  animation: show4 0.1s linear forwards 3.1s;
+}
+.main .main-left .lightning .lightning1 .jd1 .box1 {
+  width: 0.8rem;
+  height: 40%;
+  background-color: #00e4c8;
+  margin-left: 5%;
+  margin-top: 20%;
+  border-radius: 0.8rem;
+  opacity: 0;
+  animation: show4 0.1s linear forwards 3.2s;
+}
+.main .main-left .lightning .lightning1 .jd1 .box2 {
+  width: 0.8rem;
+  height: 60%;
+  background-color: #00e4c8;
+  margin-top: 15%;
+  margin-left: 5%;
+  border-radius: 0.8rem;
+  opacity: 0;
+  animation: show4 0.1s linear forwards 3.3s;
+}
+.main .main-left .lightning .lightning2 > div {
+  float: left;
+}
+.main .main-left .lightning .lightning2 .sd2 {
+  width: 55%;
+  height: 100%;
+}
+.main .main-left .lightning .lightning2 .jd2 {
+  width: 45%;
+  height: 100%;
+}
+.main .main-left .lightning .lightning2 .jd2 > div {
+  float: left;
+}
+.main .main-left .lightning .lightning2 .jd2 ul {
+  float: left;
+  margin-top: 30%;
+}
+.main .main-left .lightning .lightning2 .jd2 ul li {
+  float: left;
+  margin-right: 0.15rem;
+  background-color: #00e4c8;
+  border-radius: 50%;
+  opacity: 0;
+}
+.main .main-left .lightning .lightning2 .jd2 ul li:nth-of-type(1) {
+  width: 0.5rem;
+  height: 0.5rem;
+  animation: show4 0.1s linear forwards 2.5s;
+}
+.main .main-left .lightning .lightning2 .jd2 ul li:nth-of-type(2) {
+  width: 0.54rem;
+  height: 0.54rem;
+  animation: show4 0.1s linear forwards 2.6s;
+}
+.main .main-left .lightning .lightning2 .jd2 ul li:nth-of-type(3) {
+  width: 0.58rem;
+  height: 0.58rem;
+  animation: show4 0.1s linear forwards 2.7s;
+}
+.main .main-left .lightning .lightning2 .jd2 ul li:nth-of-type(4) {
+  width: 0.62rem;
+  height: 0.62rem;
+  animation: show4 0.1s linear forwards 2.8s;
+}
+.main .main-left .lightning .lightning2 .jd2 ul li:nth-of-type(5) {
+  width: 0.66rem;
+  height: 0.66rem;
+  animation: show4 0.1s linear forwards 2.9s;
+}
+.main .main-left .lightning .lightning2 .jd2 ul li:nth-of-type(6) {
+  width: 0.7rem;
+  height: 0.7rem;
+  animation: show4 0.1s linear forwards 3s;
+}
+.main .main-left .lightning .lightning2 .jd2 ul li:nth-of-type(7) {
+  width: 0.74rem;
+  height: 0.74rem;
+  animation: show4 0.1s linear forwards 3.1s;
+}
+.main .main-left .lightning .lightning2 .jd2 .box1 {
+  width: 0.8rem;
+  height: 40%;
+  background-color: #00e4c8;
+  margin-left: 5%;
+  margin-top: 20%;
+  border-radius: 0.8rem;
+  opacity: 0;
+  animation: show4 0.1s linear forwards 3.2s;
+}
+.main .main-left .lightning .lightning2 .jd2 .box2 {
+  width: 0.8rem;
+  height: 60%;
+  background-color: #00e4c8;
+  margin-top: 15%;
+  margin-left: 5%;
+  border-radius: 0.8rem;
+  opacity: 0;
+  animation: show4 0.1s linear forwards 3.3s;
+}
+.main .main-left .top3 {
+  width: 100%;
+  height: 30%;
+  position: relative;
+}
+.main .main-left .top3 ul {
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  left: -50%;
+  top: 0;
+  transform: translateX(-50%);
+  animation: animate1 1s linear forwards 7s;
+}
+.main .main-left .top3 ul li {
+  float: left;
+  width: 30%;
+  height: 100%;
+  margin: 0 1.5%;
+}
+.main .main-left .top3 ul li:nth-of-type(1) {
+  background: url(../images/1.png) no-repeat center bottom;
+  background-size: 70%;
+}
+.main .main-left .top3 ul li:nth-of-type(1) .title {
+  width: 100%;
+  text-align: center;
+  color: #ff7a9a;
+  font-size: 0.8rem;
+  margin-top: -5%;
+}
+.main .main-left .top3 ul li:nth-of-type(1) .content {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  margin-top: 10%;
+}
+.main .main-left .top3 ul li:nth-of-type(1) .content p {
+  font-size: 0.3rem;
+}
+.main .main-left .top3 ul li:nth-of-type(1) .content span {
+  font-size: 0.5rem;
+  display: block;
+}
+.main .main-left .top3 ul li:nth-of-type(2) {
+  background: url(../images/2.png) no-repeat center bottom;
+  background-size: 70%;
+}
+.main .main-left .top3 ul li:nth-of-type(2) .title {
+  width: 100%;
+  text-align: center;
+  color: #01c793;
+  font-size: 0.8rem;
+  margin-top: 20%;
+}
+.main .main-left .top3 ul li:nth-of-type(2) .content {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  margin-top: 10%;
+}
+.main .main-left .top3 ul li:nth-of-type(2) .content p {
+  font-size: 0.3rem;
+}
+.main .main-left .top3 ul li:nth-of-type(2) .content span {
+  font-size: 0.5rem;
+  display: block;
+}
+.main .main-left .top3 ul li:nth-of-type(3) {
+  background: url(../images/3.png) no-repeat center bottom;
+  background-size: 70%;
+}
+.main .main-left .top3 ul li:nth-of-type(3) .title {
+  width: 100%;
+  text-align: center;
+  color: #01c2aa;
+  font-size: 0.8rem;
+  margin-top: 43%;
+}
+.main .main-left .top3 ul li:nth-of-type(3) .content {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  margin-top: 10%;
+}
+.main .main-left .top3 ul li:nth-of-type(3) .content p {
+  font-size: 0.3rem;
+}
+.main .main-left .top3 ul li:nth-of-type(3) .content span {
+  font-size: 0.3rem;
+  display: block;
+}
+.main .main-middle {
+  width: 55%;
+  height: 100%;
+  position: relative;
+}
+.main .main-middle .external1 {
+  width: 15%;
+  height: 100%;
+  background: url(../images/border1.png) no-repeat left;
+  background-size: contain;
+  position: absolute;
+  left: 40%;
+  top: 0;
+  opacity: 0;
+  animation: come1 0.5s linear forwards 3.4s;
+}
+.main .main-middle .external2 {
+  width: 15%;
+  height: 100%;
+  background: url(../images/border2.png) no-repeat right;
+  background-size: contain;
+  position: absolute;
+  right: 40%;
+  top: 0;
+  opacity: 0;
+  animation: come2 0.5s linear forwards 3.4s;
+}
+.main .main-middle .external3 {
+  width: 60%;
+  height: 10%;
+  background: url(../images/border3.png) no-repeat center top;
+  background-size: contain;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 15%;
+  opacity: 0;
+  animation: come3 0.5s linear forwards 3.4s;
+}
+.main .main-middle .external4 {
+  width: 60%;
+  height: 10%;
+  background: url(../images/border4.png) no-repeat center bottom;
+  background-size: contain;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  bottom: 10%;
+  animation: come4 0.5s linear forwards 3.4s;
+}
+.main .main-middle .jz1,
+.main .main-middle .jz2 {
+  opacity: 0;
+  animation: show4 0.1s linear forwards 3.8s;
+}
+.main .main-middle .jz1 ul,
+.main .main-middle .jz2 ul {
+  width: 30%;
+  height: 38%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.main .main-middle .jz1 ul li,
+.main .main-middle .jz2 ul li {
+  width: 100%;
+  height: 8%;
+  margin: 40% 0;
+  background-color: #ff7a9a;
+}
+.main .main-middle .jz1 {
+  width: 4%;
+  height: 100%;
+  background-color: red;
+  background: url(../images/jz.png) no-repeat center;
+  background-size: contain;
+  position: absolute;
+  left: 5%;
+  top: 0;
+}
+.main .main-middle .jz2 {
+  width: 4%;
+  height: 100%;
+  background-color: red;
+  background: url(../images/jz.png) no-repeat center;
+  background-size: contain;
+  position: absolute;
+  right: 5%;
+  top: 0;
+}
+.main .main-middle .inner1 {
+  width: 10%;
+  height: 100%;
+  position: absolute;
+  left: 10%;
+  top: 0;
+  opacity: 0;
+  background: url(../images/leftBorder.png) no-repeat center;
+  background-size: 100%;
+  animation: inner1 0.3s linear forwards 3.9s;
+}
+.main .main-middle .inner2 {
+  width: 10%;
+  height: 100%;
+  position: absolute;
+  right: 10%;
+  top: 0;
+  opacity: 0;
+  background: url(../images/rightBorder.png) no-repeat center;
+  background-size: 100%;
+  animation: inner2 0.3s linear forwards 3.9s;
+}
+.main .main-middle .arrow-l {
+  position: absolute;
+  width: 10%;
+  height: 20%;
+  left: 15%;
+  top: 40%;
+  opacity: 0;
+  animation: arrow1 1.5s linear infinite 4s;
+}
+.main .main-middle .arrow-l ol {
+  width: 100%;
+  height: 100%;
+}
+.main .main-middle .arrow-l ol li {
+  width: 33%;
+  height: 100%;
+  float: left;
+  background: url(../images/yuan.png) no-repeat center;
+  background-size: 60%;
+}
+.main .main-middle .arrow-l ol li:nth-of-type(3) {
+  background: url(../images/arrow-l.png) no-repeat center;
+  background-size: 80%;
+}
+.main .main-middle .arrow-r {
+  position: absolute;
+  width: 10%;
+  height: 20%;
+  right: 15%;
+  top: 40%;
+  opacity: 0;
+  animation: arrow2 1.5s linear infinite 4s;
+}
+.main .main-middle .arrow-r ol {
+  width: 100%;
+  height: 100%;
+}
+.main .main-middle .arrow-r ol li {
+  width: 33%;
+  height: 100%;
+  float: right;
+  background: url(../images/yuan.png) no-repeat center;
+  background-size: 60%;
+}
+.main .main-middle .arrow-r ol li:nth-of-type(3) {
+  background: url(../images/arrow-r.png) no-repeat center;
+  background-size: 80%;
+}
+.main .main-middle .meter {
+  width: 50%;
+  height: 60%;
+  background-color: rgba(255, 255, 255, 0.2);
+  background: url(../images/huan.png) no-repeat center;
+  background-size: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  animation: meter 3s linear forwards 4.1s;
+}
+.main .main-middle .animate {
+  width: 70%;
+  height: 70%;
+  z-index: -1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: animate 1s linear forwards 6s;
+}
+.main .main-middle .animate canvas {
+  transform-origin: 0 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 40%;
+}
+.main .main-middle .sale {
+  width: 16rem;
+  height: 16rem;
+  background: url(../images/cicle.png) no-repeat center;
+  background-size: contain;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -8rem;
+  margin-top: -8rem;
+  opacity: 0;
+  animation: sale 1s linear forwards 8s;
+}
+.main .main-middle .sale p {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  color: #fff;
+  display: table;
+  font-size: 1.7rem;
+}
+.main .main-middle .sale p span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.main .main-middle .sale p:nth-of-type(1) {
+  margin-top: 30%;
+}
+.main .main-middle .sale p:nth-of-type(2) {
+  font-family: '液晶数字字体';
+  font-size: 2rem;
+}
+.main .main-right {
+  width: 22.5%;
+  height: 100%;
+}
+.main .main-right .compare {
+  width: 100%;
+  height: 30%;
+  position: relative;
+}
+.main .main-right .compare .compare-content {
+  width: 7rem;
+  height: 7rem;
+  background: url(../images/border02.png) no-repeat center;
+  background-size: contain;
+  position: absolute;
+  left: 150%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: animate2 1s linear forwards 7s;
+}
+.main .main-right .compare .compare-content .rate2 {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  left: 27%;
+  top: 51%;
+  transform: translateY(-50%);
+  background: url(../images/cricle.png) no-repeat center;
+  background-size: contain;
+  animation: rotate1 5s ease infinite;
+}
+.main .main-right .compare .compare-content .rate2 h5 {
+  text-align: center;
+  height: 50%;
+  width: 100%;
+  color: #fff;
+  display: table;
+}
+.main .main-right .compare .compare-content .rate2 h5 span {
+  display: table-cell;
+  vertical-align: bottom;
+  font-size: 0.8rem;
+}
+.main .main-right .compare .compare-content .rate2 p {
+  text-align: center;
+  height: 50%;
+  width: 100%;
+  color: #fff;
+  display: table;
+}
+.main .main-right .compare .compare-content .rate2 p span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.main .main-right .lightning {
+  width: 100%;
+  height: 40%;
+}
+.main .main-right .lightning .lightning3,
+.main .main-right .lightning .lightning4 {
+  width: 100%;
+  height: 50%;
+}
+.main .main-right .lightning .lightning3 > div {
+  float: left;
+}
+.main .main-right .lightning .lightning3 .jd3 {
+  width: 45%;
+  height: 100%;
+}
+.main .main-right .lightning .lightning3 .jd3 > div {
+  float: right;
+}
+.main .main-right .lightning .lightning3 .jd3 ul {
+  float: right;
+  margin-top: 30%;
+}
+.main .main-right .lightning .lightning3 .jd3 ul li {
+  float: right;
+  margin-left: 0.15rem;
+  background-color: #00e4c8;
+  border-radius: 50%;
+  opacity: 0;
+}
+.main .main-right .lightning .lightning3 .jd3 ul li:nth-of-type(1) {
+  width: 0.5rem;
+  height: 0.5rem;
+  animation: show4 0.1s linear forwards 2.5s;
+}
+.main .main-right .lightning .lightning3 .jd3 ul li:nth-of-type(2) {
+  width: 0.54rem;
+  height: 0.54rem;
+  animation: show4 0.1s linear forwards 2.6s;
+}
+.main .main-right .lightning .lightning3 .jd3 ul li:nth-of-type(3) {
+  width: 0.58rem;
+  height: 0.58rem;
+  animation: show4 0.1s linear forwards 2.7s;
+}
+.main .main-right .lightning .lightning3 .jd3 ul li:nth-of-type(4) {
+  width: 0.62rem;
+  height: 0.62rem;
+  animation: show4 0.1s linear forwards 2.8s;
+}
+.main .main-right .lightning .lightning3 .jd3 ul li:nth-of-type(5) {
+  width: 0.66rem;
+  height: 0.66rem;
+  animation: show4 0.1s linear forwards 2.9s;
+}
+.main .main-right .lightning .lightning3 .jd3 ul li:nth-of-type(6) {
+  width: 0.7rem;
+  height: 0.7rem;
+  animation: show4 0.1s linear forwards 3s;
+}
+.main .main-right .lightning .lightning3 .jd3 ul li:nth-of-type(7) {
+  width: 0.74rem;
+  height: 0.74rem;
+  animation: show4 0.1s linear forwards 3.1s;
+}
+.main .main-right .lightning .lightning3 .jd3 .box1 {
+  width: 0.8rem;
+  height: 40%;
+  background-color: #00e4c8;
+  margin-right: 5%;
+  margin-top: 20%;
+  border-radius: 0.8rem;
+  opacity: 0;
+  animation: show4 0.1s linear forwards 3.2s;
+}
+.main .main-right .lightning .lightning3 .jd3 .box2 {
+  width: 0.8rem;
+  height: 60%;
+  background-color: #00e4c8;
+  margin-top: 15%;
+  margin-right: 5%;
+  border-radius: 0.8rem;
+  opacity: 0;
+  animation: show4 0.1s linear forwards 3.3s;
+}
+.main .main-right .lightning .lightning3 .sd3 {
+  width: 55%;
+  height: 100%;
+}
+.main .main-right .lightning .lightning4 > div {
+  float: left;
+}
+.main .main-right .lightning .lightning4 .jd4 {
+  width: 45%;
+  height: 100%;
+}
+.main .main-right .lightning .lightning4 .jd4 > div {
+  float: right;
+}
+.main .main-right .lightning .lightning4 .jd4 ul {
+  float: right;
+  margin-top: 30%;
+}
+.main .main-right .lightning .lightning4 .jd4 ul li {
+  float: right;
+  margin-left: 0.15rem;
+  background-color: #00e4c8;
+  border-radius: 50%;
+  opacity: 0;
+}
+.main .main-right .lightning .lightning4 .jd4 ul li:nth-of-type(1) {
+  width: 0.5rem;
+  height: 0.5rem;
+  animation: show4 0.1s linear forwards 2.5s;
+}
+.main .main-right .lightning .lightning4 .jd4 ul li:nth-of-type(2) {
+  width: 0.54rem;
+  height: 0.54rem;
+  animation: show4 0.1s linear forwards 2.6s;
+}
+.main .main-right .lightning .lightning4 .jd4 ul li:nth-of-type(3) {
+  width: 0.58rem;
+  height: 0.58rem;
+  animation: show4 0.1s linear forwards 2.7s;
+}
+.main .main-right .lightning .lightning4 .jd4 ul li:nth-of-type(4) {
+  width: 0.62rem;
+  height: 0.62rem;
+  animation: show4 0.1s linear forwards 2.8s;
+}
+.main .main-right .lightning .lightning4 .jd4 ul li:nth-of-type(5) {
+  width: 0.66rem;
+  height: 0.66rem;
+  animation: show4 0.1s linear forwards 2.9s;
+}
+.main .main-right .lightning .lightning4 .jd4 ul li:nth-of-type(6) {
+  width: 0.7rem;
+  height: 0.7rem;
+  animation: show4 0.1s linear forwards 3s;
+}
+.main .main-right .lightning .lightning4 .jd4 ul li:nth-of-type(7) {
+  width: 0.74rem;
+  height: 0.74rem;
+  animation: show4 0.1s linear forwards 3.1s;
+}
+.main .main-right .lightning .lightning4 .jd4 .box1 {
+  width: 0.8rem;
+  height: 40%;
+  background-color: #00e4c8;
+  margin-right: 5%;
+  margin-top: 20%;
+  border-radius: 0.8rem;
+  opacity: 0;
+  animation: show4 0.1s linear forwards 3.2s;
+}
+.main .main-right .lightning .lightning4 .jd4 .box2 {
+  width: 0.8rem;
+  height: 60%;
+  background-color: #00e4c8;
+  margin-top: 15%;
+  margin-right: 5%;
+  border-radius: 0.8rem;
+  opacity: 0;
+  animation: show4 0.1s linear forwards 3.3s;
+}
+.main .main-right .lightning .lightning4 .sd4 {
+  width: 55%;
+  height: 100%;
+}
+.main .main-right .top6 {
+  width: 100%;
+  height: 30%;
+  position: relative;
+}
+.main .main-right .top6 ul {
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  left: 150%;
+  top: 0;
+  transform: translateX(-50%);
+  animation: animate2 1s linear forwards 7s;
+}
+.main .main-right .top6 ul li {
+  float: left;
+  width: 30%;
+  height: 100%;
+  margin: 0 1.5%;
+}
+.main .main-right .top6 ul li:nth-of-type(1) {
+  background: url(../images/4.png) no-repeat center bottom;
+  background-size: 70%;
+}
+.main .main-right .top6 ul li:nth-of-type(1) .title {
+  width: 100%;
+  text-align: center;
+  color: #cab636;
+  font-size: 0.8rem;
+  margin-top: 60%;
+}
+.main .main-right .top6 ul li:nth-of-type(1) .content {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  margin-top: 10%;
+}
+.main .main-right .top6 ul li:nth-of-type(1) .content p {
+  font-size: 0.3rem;
+}
+.main .main-right .top6 ul li:nth-of-type(1) .content span {
+  font-size: 0.5rem;
+  display: block;
+}
+.main .main-right .top6 ul li:nth-of-type(2) {
+  background: url(../images/5.png) no-repeat center bottom;
+  background-size: 70%;
+}
+.main .main-right .top6 ul li:nth-of-type(2) .title {
+  width: 100%;
+  text-align: center;
+  color: #028e4f;
+  font-size: 0.8rem;
+  margin-top: 78%;
+}
+.main .main-right .top6 ul li:nth-of-type(2) .content {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  margin-top: 10%;
+}
+.main .main-right .top6 ul li:nth-of-type(2) .content p {
+  font-size: 0.3rem;
+}
+.main .main-right .top6 ul li:nth-of-type(2) .content span {
+  font-size: 0.5rem;
+  display: block;
+}
+.main .main-right .top6 ul li:nth-of-type(3) {
+  background: url(../images/6.png) no-repeat center bottom;
+  background-size: 70%;
+}
+.main .main-right .top6 ul li:nth-of-type(3) .title {
+  width: 100%;
+  text-align: center;
+  color: #01a893;
+  font-size: 0.8rem;
+  margin-top: 95%;
+}
+.main .main-right .top6 ul li:nth-of-type(3) .content {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  margin-top: 10%;
+}
+.main .main-right .top6 ul li:nth-of-type(3) .content p {
+  font-size: 0.3rem;
+}
+.main .main-right .top6 ul li:nth-of-type(3) .content span {
+  font-size: 0.3rem;
+  display: block;
+}
+.bottom {
+  width: 100%;
+  height: 30%;
+  position: relative;
+  overflow: hidden;
+}
+.bottom .ul-box {
+  width: 200%;
+  height: 100%;
+  position: relative;
+  animation: move 10s linear infinite 12s;
+}
+.bottom .ul-box ul {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+.bottom .ul-box ul li {
+  width: 30%;
+  height: 100%;
+  margin: 0 1.5%;
+  background: url(../images/di.png) no-repeat center bottom;
+  background-size: 50%;
+  float: left;
+}
+.bottom .ul-box ul li .li-content {
+  opacity: 0;
+  position: relative;
+  width: 100%;
+  height: 60%;
+  background: url(../images/bg.png) no-repeat center;
+  background-size: contain;
+  overflow: hidden;
+  animation: show5 1s linear forwards 8.5s;
+}
+.bottom .ul-box ul li .li-content p {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  color: #fff;
+  display: table;
+}
+.bottom .ul-box ul li .li-content p span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.bottom .ul-box ul li .li-content p:nth-of-type(1) {
+  margin-top: 10%;
+}
+.bottom .ul-box ul li .li-content p:nth-of-type(2) {
+  font-family: '液晶数字字体';
+  font-size: 1.5rem;
+}
+.bottom .ul-box ul li .li-content .li-box {
+  position: absolute;
+  width: 70%;
+  height: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.bottom .ul-box ul li .li-content .li-box .box1,
+.bottom .ul-box ul li .li-content .li-box .box2,
+.bottom .ul-box ul li .li-content .li-box .box3,
+.bottom .ul-box ul li .li-content .li-box .box4 {
+  width: 23%;
+  height: 50%;
+  position: absolute;
+}
+.bottom .ul-box ul li .li-content .li-box .box1 h5,
+.bottom .ul-box ul li .li-content .li-box .box2 h5,
+.bottom .ul-box ul li .li-content .li-box .box3 h5,
+.bottom .ul-box ul li .li-content .li-box .box4 h5 {
+  height: 50%;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: normal;
+  display: table;
+}
+.bottom .ul-box ul li .li-content .li-box .box1 h5 span,
+.bottom .ul-box ul li .li-content .li-box .box2 h5 span,
+.bottom .ul-box ul li .li-content .li-box .box3 h5 span,
+.bottom .ul-box ul li .li-content .li-box .box4 h5 span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.bottom .ul-box ul li .li-content .li-box .box1 .pic,
+.bottom .ul-box ul li .li-content .li-box .box2 .pic,
+.bottom .ul-box ul li .li-content .li-box .box3 .pic,
+.bottom .ul-box ul li .li-content .li-box .box4 .pic {
+  width: 100%;
+  height: 50%;
+  color: #fff;
+  font-size: 0.7rem;
+}
+.bottom .ul-box ul li .li-content .li-box .box1 .pic img,
+.bottom .ul-box ul li .li-content .li-box .box2 .pic img,
+.bottom .ul-box ul li .li-content .li-box .box3 .pic img,
+.bottom .ul-box ul li .li-content .li-box .box4 .pic img {
+  width: 1rem;
+  vertical-align: bottom;
+  margin-right: 5%;
+}
+.bottom .ul-box ul li .li-content .li-box .box1 {
+  left: 0;
+  top: 0;
+}
+.bottom .ul-box ul li .li-content .li-box .box2 {
+  right: 0;
+  top: 0;
+}
+.bottom .ul-box ul li .li-content .li-box .box3 {
+  left: 0;
+  bottom: 0;
+}
+.bottom .ul-box ul li .li-content .li-box .box4 {
+  right: 0;
+  bottom: 0;
+}
+.bottom .ul-box ul li:nth-of-type(1) {
+  transform: translateY(100%);
+  animation: di2 1s linear forwards 7s;
+}
+.bottom .ul-box ul li:nth-of-type(2) {
+  transform: translateY(100%);
+  animation: di2 1s linear forwards 7s;
+}
+.bottom .ul-box ul li:nth-of-type(3) {
+  transform: translateY(100%);
+  animation: di2 1s linear forwards 7s;
+}
+@keyframes show1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+@keyframes show2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+@keyframes show3 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.75;
+  }
+}
+@keyframes show4 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes come1 {
+  0% {
+    opacity: 0;
+    left: 40%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+@keyframes come2 {
+  0% {
+    opacity: 0;
+    right: 40%;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
+@keyframes come3 {
+  0% {
+    opacity: 0;
+    top: 40%;
+  }
+  100% {
+    opacity: 1;
+    top: 15%;
+  }
+}
+@keyframes come4 {
+  0% {
+    opacity: 0;
+    bottom: 40%;
+  }
+  100% {
+    opacity: 1;
+    bottom: 10%;
+  }
+}
+@keyframes rotate1 {
+  0% {
+    transform: translateY(-50%) rotateY(0);
+  }
+  100% {
+    transform: translateY(-50%) rotateY(360deg);
+  }
+}
+@keyframes inner1 {
+  0% {
+    left: 40%;
+    opacity: 0;
+  }
+  100% {
+    left: 10%;
+    opacity: 1;
+  }
+}
+@keyframes inner2 {
+  0% {
+    right: 40%;
+    opacity: 0;
+  }
+  100% {
+    right: 10%;
+    opacity: 1;
+  }
+}
+@keyframes arrow1 {
+  0% {
+    opacity: 0.2;
+    left: 10%;
+  }
+  100% {
+    opacity: 1;
+    left: 15%;
+  }
+}
+@keyframes arrow2 {
+  0% {
+    opacity: 0.2;
+    right: 10%;
+  }
+  100% {
+    opacity: 1;
+    right: 15%;
+  }
+}
+@keyframes meter {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0) rotate(0);
+  }
+  40% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.8) rotate(360deg);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.8) rotate(540deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotate(540deg);
+  }
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: .7;
+  }
+}
+@keyframes sale {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1) translate3d(0, 60px, 0);
+    transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+@keyframes animate1 {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+@keyframes animate2 {
+  0% {
+    left: 150%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+@keyframes di2 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes show5 {
+  0% {
+    opacity: 0;
+    transform: translateY(100%) scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+
+    <script type="text/javascript" src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hp_style.css" />
+    <title>突发预警平台数据实时监控</title>
+<style type="text/css">
+/*resize*/
+.breathe-zct{ position:relative; width:20px; height:20px; top:2px;float:left;  border:1px solid #008000; border-radius:20px; color:#fff; font-size:10px; cursor:pointer; box-shadow:0 1px 2px rgba(0,0,0,.3); overflow:hidden; 
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#00FF00), to(#00FF00));
+		background-image: -moz-linear-gradient(#00FF00,#00FF00);
+}
+
+.breathe-yct{ position:relative; width:20px; height:20px; top:2px;float:left;   border:1px solid #008000; border-radius:20px; color:#fff; font-size:20px;  cursor:pointer; box-shadow:0 1px 2px rgba(0,0,0,.3); overflow:hidden; 
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#FF0000), to(#FF0000));
+		background-image: -moz-linear-gradient(#FF0000,#FF0000);
+}
+
+.breathe-zc{ position:relative; width:20px; height:20px; margin:10px auto; line-height:40px; border:1px solid #008000; border-radius:10px; color:#fff; font-size:20px; text-align:center; cursor:pointer; box-shadow:0 1px 2px rgba(0,0,0,.3); overflow:hidden; 
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#00FF00), to(#00FF00));
+		background-image: -moz-linear-gradient(#00FF00,#00FF00);
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-name: breathe;
+    -webkit-animation-duration: 500ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+		animation:ease-in-out breathe 500ms infinite alternate; 
+}
+@keyframes breathe{
+	0% { opacity: .2; box-shadow:0 1px 2px rgba(255,255,255,0.1);}
+    100% { opacity: 1; border:1px solid rgba(59,235,235,1); box-shadow:0 1px 30px rgba(59,255,255,1);}
+}
+@-webkit-keyframes breathe {
+    0% { opacity: .2; box-shadow:0 1px 2px rgba(255,255,255,0.1);}
+    100% { opacity: 1; border:1px solid rgba(59,235,235,1); box-shadow:0 1px 30px rgba(59,255,255,1);}
+}
+
+.breathe-yc{ position:relative; width:20px; height:20px; margin:10px auto; line-height:40px; border:1px solid #008000; border-radius:10px; color:#fff; font-size:20px; text-align:center; cursor:pointer; box-shadow:0 1px 2px rgba(0,0,0,.3); overflow:hidden; 
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#FF0000), to(#FF0000));
+		background-image: -moz-linear-gradient(#FF0000,#FF0000);
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-name: breathe;
+    -webkit-animation-duration: 1000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+		animation:ease-in-out breathe 100ms infinite alternate; 
+}
+@keyframes breathe{
+	0% { opacity: .2; box-shadow:0 1px 2px rgba(255,255,255,0.1);}
+    100% { opacity: 1; border:1px solid rgba(59,235,235,1); box-shadow:0 1px 30px rgba(59,255,255,1);}
+}
+@-webkit-keyframes breathe {
+    0% { opacity: .2; box-shadow:0 1px 2px rgba(255,255,255,0.1);}
+    100% { opacity: 1; border:1px solid rgba(59,235,235,1); box-shadow:0 1px 30px rgba(59,255,255,1);}
+}
+</style>
+<!--
+
+    访问地址：https://paycloud.vip
+
+-->
+</head>
+
+<body style="visibility: hidden;">
+		<!--head-->
+		<div class="hp_topdiv">
+			市突发预警平台实时监控
+		</div>
+		<div class="hp_topfg">
+			
+		</div>
+		<!--head end-->
+		<!--con-->
+		<div class="hp_con">
+			<!--left-->
+			<div class="hp_con_left">
+				<!--left_a-->
+				<div class="left_a">
+					<div class="left_at">
+						<div class="left_att"><p class="time" id="time">00:00:00</p></div>
+						<div class="left_atd"><p id="date"></p></div>
+					</div>
+					<div class="left_ab">
+						<div class="left_abt">当前有效预警</div>
+						<div class="left_abn">22<span class="left_abndw">（条）</span></div>
+					</div>
+					<div class="left_aq">
+						<div class="left_aqt">市局发布的预警：3289（条）</div>
+						<div class="left_aqt">区县发布的预警：5690（条）</div>
+						<div class="left_aqt">其它委办局(含通知)：456（条）</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<!--left_u end-->
+				<!--left_c-->
+				<div class="left_c">
+					<!--1t-->
+					<div class="left_c_1t">
+						<div class="left_c_1tl"><img src="images/6.jpg" /></div>
+						<div class="left_c_1tc">气象台2019年05月08日15时08分发布大风蓝色预警信号</div>
+						<!--国突和微博只显示成功或者失败；一共最多显示这几个渠道发布结果，如果用户选择了对应的发布渠道，就显示发布结果，否则不显示-->
+						<div  class="left_c_1tr">
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">国突：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">短信：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">大喇叭显示屏：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">微博：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="clear"></div>
+								</div>
+								
+
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">邮箱：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">传真：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								
+						</div>
+						<div class="clear"></div>
+					</div>
+					<!--1t end-->
+					
+					<!--1t-->
+					<div class="left_c_1t">
+						<div class="left_c_1tl"><img src="images/5.jpg" /></div>
+						<div class="left_c_1tc">店市气象台2019年05月08日15时08分发布大风蓝色预警信号</div>
+						
+						<div  class="left_c_1tr">
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">国突：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">短信：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">大喇叭显示屏：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">微博：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="clear"></div>
+								</div>
+								
+
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">邮箱：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">传真：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								
+						</div>
+						<div class="clear"></div>
+					</div>
+					<!--1t end-->
+					
+					<!--1t-->
+					<div class="left_c_1t">
+						<div class="left_c_1tl"><img src="images/4.jpg" /></div>
+						<div class="left_c_1tc">房店市市气象台2019年05月08日15时08分发布大风蓝色预警信号</div>
+						
+						<div  class="left_c_1tr">
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">国突：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">短信：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">大喇叭显示屏：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">微博：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="clear"></div>
+								</div>
+								
+
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">邮箱：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">传真：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								
+						</div>
+						<div class="clear"></div>
+					</div>
+					<!--1t end-->
+					
+					<!--1t-->
+					<div class="left_c_1t">
+						<div class="left_c_1tl"><img src="images/11B063.png" /></div>
+						<div class="left_c_1tc">河市气象台2019年05月08日15时08分发布大风蓝色预警信号</div>
+						
+						<div  class="left_c_1tr">
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">国突：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">短信：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">大喇叭显示屏：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">微博：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="clear"></div>
+								</div>
+
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">邮箱：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">传真：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								
+						</div>
+						<div class="clear"></div>
+					</div>
+					<!--1t end-->
+					
+					<!--1t-->
+					<div class="left_c_1t">
+						<div class="left_c_1tl"><img src="images/4.jpg" /></div>
+						<div class="left_c_1tc">顺口区气象台2019年05月08日15时08分发布大风蓝色预警信号</div>
+						
+						<div  class="left_c_1tr">
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">国突：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">短信：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">大喇叭显示屏：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">微博：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="clear"></div>
+								</div>
+
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">邮箱：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">传真：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								
+						</div>
+						<div class="clear"></div>
+					</div>
+					<!--1t end-->
+
+					<!--1t-->
+					<div class="left_c_1t">
+						<div class="left_c_1tl"><img src="images/3.jpg" /></div>
+						<div class="left_c_1tc">海县气象台2019年05月08日15时08分发布大风蓝色预警信号</div>
+						
+						<div  class="left_c_1tr">
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">国突：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">短信：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">大喇叭显示屏：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">微博：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="clear"></div>
+								</div>
+
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">邮箱：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">传真：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								
+						</div>
+						<div class="clear"></div>
+					</div>
+					<!--1t end-->
+
+					<!--1t-->
+					<div class="left_c_1t">
+						<div class="left_c_1tl"><img src="images/2.jpg" /></div>
+						<div class="left_c_1tc">气象台2019年05月08日15时08分发布大风蓝色预警信号</div>
+						
+						<div  class="left_c_1tr">
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">国突：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">短信：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">大喇叭显示屏：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">微博：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="clear"></div>
+								</div>
+
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">邮箱：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">传真：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								
+						</div>
+						<div class="clear"></div>
+					</div>
+					<!--1t end-->
+
+					<!--1t-->
+					<div class="left_c_1t">
+						<div class="left_c_1tl"><img src="images/1.jpg" /></div>
+						<div class="left_c_1tc">气象台2019年05月08日15时08分发布大风蓝色预警信号</div>
+						
+						<div  class="left_c_1tr">
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">国突：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">短信：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">大喇叭显示屏：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">微博：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="clear"></div>
+								</div>
+
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">邮箱：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								<div class="left_c_1trdg">
+									<div class="left_c_1trdg_div">传真：</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fscg.png" /></div>
+									<div class="left_c_1trdg_div">22</div>
+									<div class="left_c_1trdg_div"><img src="images/icon_fssb.png" /></div>
+									<div class="left_c_1trdg_div">33</div>
+									<div class="clear"></div>
+								</div>
+								
+						</div>
+						<div class="clear"></div>
+					</div>
+					<!--1t end-->
+				</div>
+				<!--left_c end-->
+				
+				<!--left_b-->
+				<div class="left_b_top"></div>
+				<div class="left_b">
+					<div class="left_bl">
+						<!--统计当年的，2019随着年份变-->
+						<div class="left_bl_tit">按级别发布预警统计（2019年）</div>
+							<div id="jbtj" style="width:100%; height:230px"></div>
+							<div id="qdtj" style="display: none;"></div>
+						<div class="clear"></div>
+					</div>
+					<div class="left_br">
+						<!--统计当年的月份，2019随着年份变，月也是-->
+						<div class="left_bl_tit">本月发布预警你统计(2019年4月)</div>
+						<div>
+							<div id="areatj" style="width:100%; height:230px"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<!--left_b end-->
+			</div>
+			<!--left end-->
+			<!--right-->
+			<div class="hp_con_right">
+				<div class="hp_con_right_u">
+					 <table class="table3" style="border:0px; width:96%">
+						<thead>
+							<tr>
+								<th ><h6 style="font-size:0.2rem;color: #cdddf7;">渠道状态</h6></th>
+								<th  style="text-align:left;"><div  class="breathe-zct"></div>&nbsp;&nbsp;正常</th>
+								<th style="text-align:left"><div  class="breathe-yct"></div>&nbsp;&nbsp;异常</th>
+								<th >&nbsp;</th>
+							</tr>
+						</thead>
+						<tbody style="border:0px;">
+	<!--<tr><td colspan="4"><p style="width:9.6rem;">暂无数据</p></td></tr>-->
+					 
+					   <tr style="border:0px;">
+						   <td style="border:0px;"><div id="dx" class="breathe-zc"></div></td>
+						   <td style="border:0px;"><div id="dlbxsp" class="breathe-yc"></div></td>
+						   <td style="border:0px;"><div id="gt" class="breathe-yc"></div></td>
+						    <td style="border:0px;"><div id="cz" class="breathe-zc"></div></td>
+					   </tr>
+					   <tr style="border:0px;">
+						   <td style="border:0px;">短信渠道</td>
+						   <td style="border:0px;">大喇叭显示屏</td>
+						   <td style="border:0px;">国突</td>
+						    <td style="border:0px;">传真</td>
+					   </tr>
+					  
+						</tbody>
+					</table>
+				</div>
+				
+				<div>
+					<div class="map_wk">
+						<!--每个区域最多放5个图标（对应5条时效内预警，一般情况时效内1个），根局里沟通，时效内最多5个，如果超过5条预警了，就取时间到续，时效内的5条
+							庄河-->
+						<div class="center_map_zhs0" title="气象台2019年05月08日15时08分发布大风蓝色预警"><img src="images/11B063.png" /></div>
+						<div class="center_map_zhs1" title="气象台2019年05月08日15时08分发布大风蓝色预警"><img src="images/11B063.png" /></div>
+						<div class="center_map_zhs2" title="气象台2019年05月08日15时08分发布大风蓝色预警"><img src="images/11B063.png" /></div>
+						<div class="center_map_zhs3" title="气象台2019年05月08日15时08分发布大风蓝色预警"><img src="images/11B063.png" /></div>
+						<div class="center_map_zhs4" title="气象台2019年05月08日15时08分发布大风蓝色预警"><img src="images/11B063.png" /></div>
+						<!-普兰店---->
+						<div class="center_map_pld0" title="气象台2019年05月08日15时08分发布暴雨黄色预警"><img src="images/6.jpg" /></div>
+						<div class="center_map_pld1" title="气象台2019年05月08日15时08分发布暴雨黄色预警"><img src="images/6.jpg" /></div>
+						<div class="center_map_pld2" title="气象台2019年05月08日15时08分发布暴雨黄色预警"><img src="images/6.jpg" /></div>
+						<div class="center_map_pld3" title="气象台2019年05月08日15时08分发布暴雨黄色预警"><img src="images/6.jpg" /></div>
+						<div class="center_map_pld4" title="气象台2019年05月08日15时08分发布暴雨黄色预警"><img src="images/6.jpg" /></div>
+						<!-瓦房店---->
+						<div class="center_map_wfd0" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/1.jpg" /></div>
+						<div class="center_map_wfd1" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/1.jpg" /></div>
+						<div class="center_map_wfd2" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/1.jpg" /></div>
+						<div class="center_map_wfd3" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/1.jpg" /></div>
+						<div class="center_map_wfd4" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/1.jpg" /></div>
+						<!-长兴岛---->
+						<div class="center_map_cxd0" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/5.jpg" /></div>
+						<div class="center_map_cxd1" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/5.jpg" /></div>
+						<div class="center_map_cxd2" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/5.jpg" /></div>
+						<div class="center_map_cxd3" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/5.jpg" /></div>
+						<div class="center_map_cxd4" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/5.jpg" /></div>
+						
+						<!-金州---->
+						<div class="center_map_jzq0" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/5.jpg" /></div>
+						<div class="center_map_jzq1" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/5.jpg" /></div>
+						<div class="center_map_jzq2" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/5.jpg" /></div>
+						<div class="center_map_jzq3" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/5.jpg" /></div>
+						<div class="center_map_jzq4" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/5.jpg" /></div>
+
+						<!-区---->
+						<div class="center_map_dls0" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/4.jpg" /></div>
+						<div class="center_map_dls1" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/4.jpg" /></div>
+						<div class="center_map_dls2" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/4.jpg" /></div>
+						<div class="center_map_dls3" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/4.jpg" /></div>
+						<div class="center_map_dls4" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/4.jpg" /></div>
+
+						<!-旅顺口区---->
+						<div class="center_map_lsk0" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/3.jpg" /></div>
+						<div class="center_map_lsk1" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/3.jpg" /></div>
+						<div class="center_map_lsk2" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/3.jpg" /></div>
+						<div class="center_map_lsk3" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/3.jpg" /></div>
+						<div class="center_map_lsk4" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/3.jpg" /></div>
+
+						<!-长海县---->
+						<div class="center_map_chx0" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/2.jpg" /></div>
+						<div class="center_map_chx1" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/2.jpg" /></div>
+						<div class="center_map_chx2" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/2.jpg" /></div>
+						<div class="center_map_chx3" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/2.jpg" /></div>
+						<div class="center_map_chx4" title="气象台2019年05月08日15时08分发布暴雨蓝色预警"><img src="images/2.jpg" /></div>
+
+						<div class="clear"></div>
+					</div>
+				</div>
+				
+				<div class="right_d">
+					<!--只显示最新的委办局发布的5条通知-->
+					<div class="left_bl_tit">委办局通知</div>
+					<div class="right_d_li">
+						<ul>
+							<li><a href="#">委办局通知:发布大风蓝色预警信号</a><span class="li_time">2019-05-03</span></li>
+							<li><a href="#">委办局通知:发布大风蓝色预警信号</a><span class="li_time">2019-05-03</span></li>
+							<li><a href="#">委办局通知:发布大风蓝色预警信号</a><span class="li_time">2019-05-03</span></li>
+							<li><a href="#">委办局通知:发布大风蓝色预警信号</a><span class="li_time">2019-05-03</span></li>
+							<li><a href="#">委办局通知:发布大风蓝色预警信号</a><span class="li_time">2019-05-03</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--right end-->
+			<div class="clear"></div>
+		</div>
+		<!--con end-->
+
+	</body>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/layer/layer.min.js"></script>
+	<script type="text/javascript" src="js/layer/laydate/laydate.js"></script>
+	<script type="text/javascript" src="js/echarts.min.js"></script>
+	<script type="text/javascript" src="js/base.js"></script>
+	<script type="text/javascript" src="js/china.js"></script>
+	<script type="text/javascript" src="js/infographic.js"></script>
+	<script type="text/javascript" src="js/macarons.js"></script>
+	<script type="text/javascript" src="js/shine.js"></script>
+
+
+	<script type="text/javascript">
+	    $('document').ready(function () {
+	        $("body").css('visibility', 'visible');
+	        var localData = [$('#teacher').val(), $('#start').val() + '/' + $('#end').val(), $('#leader').val()]
+	        localStorage.setItem("data", localData);
+	        
+			//设置渠道状态
+			qdzt();
+	    })
+		
+		//设置渠道状态
+		function qdzt(){
+			//breathe-zc 绿灯；breathe-yc 红灯
+			$("#dx").removeClass("breathe-yc");
+			$("#dx").addClass("breathe-zc");
+	
+			$("#cz").removeClass("breathe-zc");
+			$("#cz").addClass("breathe-yc");
+	
+			$("#gt").removeClass("breathe-yc");
+			$("#gt").addClass("breathe-zc");
+
+			$("#dlbxsp").removeClass("breathe-yc");
+			$("#dlbxsp").addClass("breathe-zc");
+		}
+	</script>
+</html>

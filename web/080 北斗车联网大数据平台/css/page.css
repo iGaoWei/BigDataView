@@ -1,0 +1,184 @@
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+fieldset, img, input, button {
+    border: none; /*去掉边框*/
+    padding: 0;
+    margin: 0;
+    outline-style: none; /*去掉环绕边框*/
+}
+ul, ol {
+    list-style: none; /*去掉原样式中的小黑点*/
+    /*ctrl+alt+l*/
+}
+img {
+    border: none;
+    outline:0;
+    vertical-align: middle; /*  去掉图片底部默认的3像素空白缝隙*/
+}
+a{
+    text-decoration: none;
+}
+
+
+html,body,#page{
+    width: 100%;
+    height: 100%;
+}
+#page{
+    position: relative;
+}
+
+#page_4,
+#page_1,
+#page_6,
+#page_8,
+#page_9,
+#page_10,
+#page_16{
+    height:calc(100% - 30px);
+    min-height: 400px;
+}
+
+#page_4>ul,
+#page_1>ul,
+#page_6>ul,
+#page_8>ul,
+#page_9>ul,
+#page_10>ul,
+#page_16>ul{
+    height: 100%;
+}
+
+#page_4>ul>li,
+#page_1>ul>li,
+#page_6>ul>li,
+#page_8>ul>li,
+#page_9>ul>li,
+#page_10>ul>li,
+#page_16>ul>li{
+    float: left;
+    border: 1px solid #4b8df8;
+    box-sizing: border-box;
+}
+
+#page_4>ul>li>a,
+#page_1>ul>li>a,
+#page_6>ul>li>a,
+#page_8>ul>li>a,
+#page_9>ul>Li>a,
+#page_10>ul>Li>a,
+#page_16>ul>Li>a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color:#333;
+}
+
+#page_1,
+#page_6,
+#page_8,
+#page_9,
+#page_10,
+#page_16{
+    display: none;
+}
+
+#page_4>ul>li{
+    width: 50%;
+    height: 50%;
+}
+#page_1>ul>li{
+    width: 100%;
+    height: 100%;
+}
+#page_6>ul>li{
+    width: 33.333%;
+    height: 50%;
+}
+#page_8>ul>li{
+    width: 25%;
+    height: 25%;
+}
+#page_8>ul>li:nth-child(1){
+    width: 75%;
+    height: 75%;
+}
+#page_10>ul>li{
+    width: 25%;
+    height: 25%;
+}
+#page_10>ul>li:nth-child(1),
+#page_10>ul>li:nth-child(2){
+    width: 50%;
+    height: 50%;
+}
+#page_9>ul>li{
+    width: 33.333%;
+    height: 33.333%;
+}
+#page_16>ul>li{
+    width: 25%;
+    height: 25%;
+}
+
+
+
+
+
+
+
+/*num 开始*/
+.num{
+    width: 100%;
+    height: 30px;
+    background-color: #4b8df8;
+
+}
+.num>ul>li{
+    float: left;
+}
+.num>ul>li>a{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    width: 30px;
+    text-align: center;
+    color:#fff;
+}
+/*num 结束*/
+
+
+/*list 开始*/
+.list{
+    width: 200px;
+    height: 315px;
+    background-color: #f1f1f1;
+    border: 1px solid #cdcdcd;
+    box-sizing: border-box;
+    position: absolute;
+    padding:4px;
+    display: none;
+}
+.list>ul>li>a{
+    display: block;
+    font-size: 13px;
+    color:#333;
+    margin-left: 30px;
+    padding-left: 4px;
+    height: 25px;
+    line-height: 25px;
+    font-family: Microsoft YaHei, Arial,"\5b8b\4f53"  ;
+}
+.list>ul>li:nth-child(3)>a{
+    border-bottom: 1px solid #d7d7d7;
+    border-top: 1px solid #d7d7d7;
+    height: 30px;
+    line-height: 30px;
+    box-sizing: border-box;
+}
+.list>ul>li:hover{
+    background-color: #91c9f7;
+}
+/*list 结束*/

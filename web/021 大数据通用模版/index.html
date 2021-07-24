@@ -1,0 +1,264 @@
+﻿<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>index</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<link rel="stylesheet" href="css/comon0.css">
+</head>
+
+<body>
+	<div class="loading">
+		<div class="loadbox"> <img src="images/loading.gif"> 页面加载中... </div>
+	  </div>
+	<div class="head">
+		<h1>大数据可视化系统数据分析通用模版</h1>
+		<div class="time" id="showTime">2019年12月05日16时16分54秒</div>
+		<script>
+			var t = null;
+			t = setTimeout(time, 1000);//開始运行
+			function time() {
+				clearTimeout(t);//清除定时器
+				dt = new Date();
+				var y = dt.getFullYear();
+				var mt = dt.getMonth() + 1;
+				var day = dt.getDate();
+				var h = dt.getHours();//获取时
+				var m = dt.getMinutes();//获取分
+				var s = dt.getSeconds();//获取秒
+				var t = null;
+				document.getElementById("showTime").innerHTML = y + "年" + Appendzero(mt) + "月" + Appendzero(day) + "日" + Appendzero(h) + "时" + Appendzero(m) + "分" + Appendzero(s) + "秒";
+				function Appendzero(obj) {
+					if (obj < 10) return "0" + "" + obj;
+					else return obj;
+				}
+				t = setTimeout(time, 1000); //设定定时器，循环运行     
+			}
+		</script>
+	</div>
+	<div class="mainbox">
+		<ul class="clearfix">
+			<li>
+				<div class="boxall" style="height: calc(15% - .15rem)">
+					<ul class="row h100 row1">
+						<li class="col-4">
+							<div class="bar1"><img src="images/icon1.png">
+								<h3><span>字段名称</span>200个</h3>
+							</div>
+						</li>
+						<li class="col-4">
+							<div class="bar1"><img src="images/icon4.png">
+								<h3><span>字段名称</span>1200个</h3>
+							</div>
+						</li>
+						<li class="col-4">
+							<div class="bar1"><img src="images/icon5.png">
+								<h3><span>字段名称
+									</span>150家</h3>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="boxall" style="height: calc(43% - .15rem)">
+				
+					<ul class="sec h100">
+<li>
+	<div>
+		<p><img src="images/icon4.png">字段名称</p>
+		<div class="barnav"><div class="bar2"><span style="width:50%;"></span></div> <span>24356件</span></div>
+
+		
+	</div>
+
+	<div>
+<div class="zaf">
+	<p>同比</p>
+	<p><span>34<i>%</i></span><img src="images/up.png"></p>
+</div>
+	</div>
+</li>
+
+<li>
+	<div>
+		<p><img src="images/icon5.png">字段名称</p>
+		
+		<div class="barnav"><div class="bar2"><span style="width:50%;"></span></div> <span>243567封</span></div>
+	</div>
+
+	<div>
+<div class="zaf">
+	<p>同比</p>
+	<p><span>34<i>%</i></span><img src="images/up.png"></p>
+</div>
+	</div>
+</li>
+
+<li>	
+	<div>
+		<p><img src="images/icon6.png">字段名称</p>
+		<div class="barnav"><div class="bar2"><span style="width:50%;"></span></div> <span>24356笔</span></div>
+	</div>
+	
+	<div>
+<div class="zaf">
+	<p>同比</p>
+	<p><span>50<i>%</i></span><img src="images/down.png"></p>
+</div>
+	</div>
+</li>
+
+					</ul>
+				
+				</div>
+				<div class="boxall" style="height: calc(42% - .15rem)">
+					<div class="alltitle">模块标题</div>
+					<div class="boxnav" id="echarts3"></div>
+				</div>
+			</li>
+			<li>
+				<div class="boxall" style="height: calc(20% - .15rem)">
+					<ul class="row h100 clearfix">
+						<li class="col-6">
+							<div class="sqzs h100">
+								<p>业绩总览</p>
+								<h1>1938272</h1>
+							</div>
+						</li>
+						<li class="col-6">
+							<ul class="row h100 clearfix">
+								<li class="col-4">
+									<div class="tit01">字段名称</div>
+									<div class="piebox" id="pe01"></div>
+								</li>
+								<li class="col-4">
+									<div class="tit01">“字段名称</div>
+									<div class="piebox" id="pe02"></div>
+								</li>
+								<li class="col-4">
+									<div class="tit01">字段名称</div>
+									<div class="piebox" id="pe03"></div>
+								</li>
+							</ul>
+
+						</li>
+					</ul>
+				</div>
+				<div class="boxall" style="height: calc(38% - .15rem)">
+					<div class="boxnav h100" id="echarts1"></div>
+				</div>
+				<div class="boxall" style="height: calc(42% - .15rem)">
+					<div class="alltitle">模块标题 </div>
+					<div class="boxnav" id="echarts2"></div>
+				</div>
+
+			</li>
+			<li>
+
+				<div class="boxall" style="height: calc(15% - .15rem)">
+
+					<ul class="row h100 row1">
+						<li class="col-4">
+							<div class="bar1 bar2"><img src="images/icon7.png">
+								<h3><span>字段名称
+									</span>251项</h3>
+							</div>
+						</li>
+						<li class="col-4">
+							<div class="bar1 bar2"><img src="images/icon8.png">
+								<h3><span>字段名称
+									</span>34家</h3>
+							</div>
+						</li>
+						<li class="col-4">
+							<div class="bar1 bar2"><img src="images/icon9.png">
+								<h3><span>字段名称
+									</span>150项</h3>
+							</div>
+						</li>
+					</ul>
+
+
+				</div>
+				<div class="boxall" style="height: calc(43% - .15rem)">
+					<div class="alltitle">模块标题</div>
+					<div class=" boxnav" id="lastecharts">
+					</div>
+
+				</div>
+				<div class="boxall" style="height: calc(42% - .15rem)">
+					<div class="alltitle">排行榜</div>
+					<div class=" boxnav paim">
+						<ul class="h100">
+							<li>
+								<span>1</span>
+								<div class="pmnav">
+									<p>标题名称标题名称标题名称标题名称</p>
+									<div class="pmbar"><span style="width:100%"></span><i>500</i></div>
+								</div>
+							</li>
+							<li>
+								<span>2</span>
+								<div class="pmnav">
+									<p>标题名称</p>
+									<div class="pmbar"><span style="width:92%"></span><i>400</i></div>
+								</div>
+							</li>
+							<li>
+								<span>3</span>
+								<div class="pmnav">
+									<p>标题名称</p>
+									<div class="pmbar"><span style="width:90%"></span><i>180</i></div>
+								</div>
+							</li>
+							<li>
+								<span>4</span>
+								<div class="pmnav">
+									<p>标题名称</p>
+									<div class="pmbar"><span style="width:88%"></span><i>160</i></div>
+								</div>
+							</li>
+							<li>
+								<span>5</span>
+								<div class="pmnav">
+									<p>标题名称</p>
+									<div class="pmbar"><span style="width:86%"></span><i>140</i></div>
+								</div>
+							</li>
+						</ul>
+
+					</div>
+
+				</div>
+			
+			</li>
+		</ul>
+	</div>
+
+	<script>
+		$(document).ready(function () {
+			var arr = [];
+			var max;
+			$(".paim li i").each(function () {
+				arr.push($(this).text());
+			})
+			//alert(arr)
+			max = Math.max.apply(null, arr);
+
+			$(".paim .pmbar span").each(function () {
+				var i = $(this).parents("li").index()
+				w = arr[i] / max * 100;
+				sw = w.toFixed(0) + '%'
+
+				$(this).css({ width: sw })
+			})
+
+		})
+	</script>
+
+
+	<script type="text/javascript" src="js/echarts.min.js"></script>
+	<script language="JavaScript" src="js/js.js"></script>
+
+</body>
+</html>

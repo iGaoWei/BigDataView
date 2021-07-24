@@ -1,0 +1,71 @@
+/*大屏*/
+/*css reset*/
+	/*清除内外边距*/
+	body, h1, h2, h3, h4, h5, h6, p, hr, /*结构元素*/
+	ul, ol, li, dl, dt, dd, /*列表元素*/
+	form, fieldset, legend, input, button, select, textarea, /*表单元素*/
+	th, td, /*表格元素*/
+	pre {
+		padding: 0;
+		margin: 0;
+	}
+
+	/*重置默认样式*/
+	body, button, input, select, textarea {
+		/*font: 12px/1 微软雅黑, Tahoma, Helvetica, Arial, 宋体, sans-serif;*/
+		color: #333;
+		font: 12px/1 "Microsoft YaHei", Tahoma, Helvetica, Arial, SimSun, sans-serif;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-size: 100%;
+		font-weight: normal;
+	}
+	em, i {
+		font-style: normal;
+	}
+
+	a {
+		text-decoration: none;
+	}
+	li {
+		list-style-type: none;
+		vertical-align: top;
+	}
+	img {
+		border: none;
+		/*display: block;*/
+		vertical-align: top;
+	}
+	textarea {
+		overflow: auto;
+		resize: none;
+	}
+	table {
+		border-spacing: 0;
+		border-collapse: collapse;
+	}
+
+/*常用公共样式*/
+	.fl {
+		float: left;
+		display: inline;
+	}
+	.fr {
+		float: right;
+		display: inline;
+	}
+	.cf:before,
+	.cf:after {
+		content: " ";
+		display: table;
+		
+	}
+	.cf:after {
+		clear: both;
+	}
+	.cf {
+		*zoom: 1;
+	}
+	html{
+		overflow-x: hidden;
+	}

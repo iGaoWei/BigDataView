@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/second.css">
+  <script src="js/echarts.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/macarons.js"></script>
+  <script src="js/china.js"></script>
+  <title>大屏</title>
+</head>
+
+<body>
+    <ul class="nav">
+    
+      <li class="drop-down">
+        <a href="#"></a>
+    
+        <ul class="drop-down-content">
+    
+          <li>
+            <a href="./home.html">自动切换</a>
+          </li>
+    
+          <li>
+            <a href="./index.html">第一屏</a>
+          </li>
+    
+          <li>
+            <a href="./second.html">第二屏</a>
+          </li>
+          <li>
+            <a href="./third.html">第三屏</a>
+          </li>
+    
+          <li>
+            <a href="./four.html?index=0">第四屏</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  <div class="second-screen root-wrap">
+    <header>
+      <img src="img/title2.png">
+      <div class="gifImg">
+      </div>
+      <div class="title_img">
+        <img src="img/title_left_img.png" alt=""> </div>
+    </header>
+    <div class="main clearfix">
+      <div class="aside-left fl">
+        <div class="top left-top">
+          <h3>总交易量趋势监控</h3>
+          <div id="bar" style="width: 100%; height: 100%;"></div>
+        </div>
+        <div class="bottom left-bottom">
+          <h3>交易量排行</h3>
+          <div class="con">
+            <ul>
+              <li class="clearfix">
+                <span class="num fl">1</span>
+                <div class="city-name fl">
+                  <span class="name-in">化学工业出版社</span>
+                  <span class="bar">
+                    <b class="bar-in"></b>
+                  </span>
+                </div>
+                <span class="rank-value fl">6502批次</span>
+              </li>
+              <li class="clearfix">
+                <span class="num fl">2</span>
+                <div class="city-name fl">
+                  <span class="name-in">江苏凤凰出版传媒股份有限公司</span>
+                  <span class="bar">
+                    <b class="bar-in"></b>
+                  </span>
+                </div>
+                <span class="rank-value fl">1250批次</span>
+              </li>
+              <li class="clearfix">
+                <span class="num fl">3</span>
+                <div class="city-name fl">
+                  <span class="name-in">上海新华传媒连锁有限公司</span>
+                  <span class="bar">
+                    <b class="bar-in"></b>
+                  </span>
+                </div>
+                <span class="rank-value fl">375批次</span>
+              </li>
+              <li class="clearfix">
+                <span class="num fl">4</span>
+                <div class="city-name fl">
+                  <span class="name-in">中国科技出版传媒股份有限公司</span>
+                  <span class="bar">
+                    <b class="bar-in"></b>
+                  </span>
+                </div>
+                <span class="rank-value fl">200批次</span>
+              </li>
+              <li class="clearfix">
+                <span class="num fl">5</span>
+                <div class="city-name fl">
+                  <span class="name-in">云南新华书店集团有限公司</span>
+                  <span class="bar">
+                    <b class="bar-in"></b>
+                  </span>
+                </div>
+                <span class="rank-value fl">165批次</span>
+              </li>
+              <li class="clearfix">
+                <span class="num fl">6</span>
+                <div class="city-name fl">
+                  <span class="name-in">新华文轩出版传媒股份有限公司</span>
+                  <span class="bar">
+                    <b class="bar-in"></b>
+                  </span>
+                </div>
+                <span class="rank-value fl">83批次</span>
+              </li>
+              <li class="clearfix">
+                <span class="num fl">7</span>
+                <div class="city-name fl">
+                  <span class="name-in">人民交通出版社股份有限公司</span>
+                  <span class="bar">
+                    <b class="bar-in"></b>
+                  </span>
+                </div>
+                <span class="rank-value fl">2批次</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="middle-map fl">
+        <div class="map-wrap">
+          <h3 class="clearfix">
+            <dl class="fl">
+              <dt>新书书目</dt>
+              <dd id="valueX" class="unit-pc">553</dd>
+            </dl>
+            <dl class="fl">
+              <dt>采购单</dt>
+              <dd id="valueC" class="unit-pc">1,707</dd>
+            </dl>
+            <dl class="fl">
+              <dt>发货单</dt>
+              <dd id="valueF" class="unit-pc">3,998</dd>
+            </dl>
+            <dl class="fl">
+              <dt>收货单</dt>
+              <dd id="valueS" class="unit-pc">166</dd>
+            </dl>
+            <dl class="fl">
+              <dt>书目变更单</dt>
+              <dd id="valueT" class="unit-pc">203</dd>
+            </dl>
+            <dl class="fl">
+              <dt>可用库存</dt>
+              <dd id="valueK" class="unit-pc">81</dd>
+            </dl>
+          </h3>
+          <span class="title-map">电子单证数据地图</span>
+          <div id="map" style="width: 100%;height: 100%;"></div>
+        </div>
+      </div>
+      <div class="aside-right fl">
+        <div class="public-opinion right-top">
+          <h3>网络舆情</h3>
+          <div class="con clearfix">
+            <ul>
+              <li class="active">
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">读书好青年</b>
+                    <b class="time-show">2017-07-08 18:10</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">430</b>
+                    <b class="icon comments fr">121</b>
+                  </span>
+                </div>
+                <p>
+                  但愿你的旅途漫长，但愿你拥抱的人正泪流不止。但愿你付出的爱，有着某种恰到好处的形状，恰能完好地镶嵌在她的灵魂空缺处，毫厘不差。但愿你心底的关怀，杯满四溢，又正在被另一个孤独的灵魂渴望着。 ', '但愿你记得，在你痛哭失声的时刻，曾有人以肩窝盛满你的泪。
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">爱情说说</b>
+                    <b class="time-show">2017-07-09 18:20</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">290</b>
+                    <b class="icon comments fr">135</b>
+                  </span>
+                </div>
+                <p>
+                  好多事就像雨天打着的伞，你冲进房间就狼狈仓促地把它收起来扔在了一角，那褶皱里仍夹着这夜的雨水。过来了很久再撑开，一股发潮的气息扑鼻而来，即使是个晴天，也会令你想起那场遥远的雨
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">可爱的妞</b>
+                    <b class="time-show">2016-02-08 10:01</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">304</b>
+                    <b class="icon comments fr">81</b>
+                  </span>
+                </div>
+                <p>
+                  《灯下尘》这个好好玩,看不见的邻居......
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">上海图书馆信使</b>
+                    <b class="time-show">2016-05-08 10:10</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">365</b>
+                    <b class="icon comments fr">109</b>
+                  </span>
+                </div>
+                <p>
+                  《我还是想你，妈妈》；著者阿列克谢耶维奇；他们是战争最公正，也是最不幸的见证者。卫国战争期间（1941—1945），数百万苏联儿童死亡，本书是幸存者的口述实录。战争发生时，他们只是2—12岁的孩子。本书就是孩子们眼中战争的真实再现。
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">殷行街道图书馆</b>
+                    <b class="time-show">2016-01-11 08:30</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">330</b>
+                    <b class="icon comments fr">141</b>
+                  </span>
+                </div>
+                <p>
+                  《我是女兵，也是女人》,书里所有的故事都是真实发生过的，大量内容曾被苏联官方严禁出版。这些女兵眼里的战争， 与男人们的描述截然不同。这些女兵的回忆，会让你感受到二战中最直观的冲击和从未有过的强烈震撼。
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">毓夏Bella</b>
+                    <b class="time-show">2017-07-03 09:28</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">506</b>
+                    <b class="icon comments fr">221</b>
+                  </span>
+                </div>
+                <p>
+                  太久没很安静认真的看完一本闲书了，这次看的书和我以前看的完全不一样当然看后的感觉和以往也迥然不同。这本-《重口味心理学》翻开第一章就彻底吸引了我里面 ...
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">秦皇岛女逗比</b>
+                    <b class="time-show">2017-06-29 21:37</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">630</b>
+                    <b class="icon comments fr">201</b>
+                  </span>
+                </div>
+                <p>
+                  上大学的时候喜欢看余华的书，因为在他的书里面能看到一些赤裸裸貌似是真实的东西。包括文化大革命的时候，虐待知识分子或者一些人的事以及手段。看到这些的时候会被震惊，同时也是这些黑暗吸引着我喜欢他的书，想要继续看。
+                </p>
+              </li>
+            </ul>
+            <ul>
+              <li class="active">
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">无昵称用户</b>
+                    <b class="time-show">2017-12-10 08:08:45</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">3</b>
+                    <b class="icon comments fr">3</b>
+                  </span>
+                </div>
+                <p>
+                  蟋蟀柴斯特用它绝妙的音乐天赋回报了朋友们的真诚友情，帮助玛利欧一家摆脱了困境，自己还成为了震惊整个纽约的演奏家！然而功成名就后的柴斯特却满心失落，思念起乡下自由自在的安静生活来
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">叫我胡三岁</b>
+                    <b class="time-show">2017-11-14 14:27:05</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">94</b>
+                    <b class="icon comments fr">17</b>
+                  </span>
+                </div>
+                <p>
+                  首先非常羡慕蟋蟀，猫和老鼠不平常的友谊；其次我明白了饲养动物不光是为了使自己能得到快乐，更重要的是要从动物的快乐和自由着想；最后我懂得了我们每个人，每个同学都应该爱惜友谊，都有一个宽容的心，学会互相关爱，互相帮助。那么人间将会充满爱，充满欢声笑语的乐园。
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">亮的娟</b>
+                    <b class="time-show">2017-08-24 22:04:08</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">117</b>
+                    <b class="icon comments fr">49</b>
+                  </span>
+                </div>
+                <p>
+                  经典的著作总会让人回味无穷，时代广场的蟋蟀就是其中一本，愿孩子阅读更多的美好和经典。
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">匿名用户</b>
+                    <b class="time-show">2017-11-14 17:24:17</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">8</b>
+                    <b class="icon comments fr">1</b>
+                  </span>
+                </div>
+                <p>
+                  孩子很喜欢这个故事，非常值得一看。一只小蟋蟀无意中离开了家乡，来到了时代广场的小报亭生活下来，发生了很多趣事，也发生了意外，故事情节趣味十足，八岁的孩子跟着故事情节心情起伏不定，每晚读一些，有时候读着不想睡。故事很不错值得购买。
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">无昵称用户</b>
+                    <b class="time-show">2017-10-30 15:17:50</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">6</b>
+                    <b class="icon comments fr">1</b>
+                  </span>
+                </div>
+                <p>
+                  乡下蟋蟀勇闯大纽约的奇妙征程，让音乐成为生命的底色，让友谊成为生命的温度，让心灵成为生命的归属,有趣的书籍,小朋友喜欢看。
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">无昵称用户</b>
+                    <b class="time-show">2017-10-19 13:07:17</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">0</b>
+                    <b class="icon comments fr">3</b>
+                  </span>
+                </div>
+                <p>
+                  这本书也是朋友推荐才买的，里面都是满满的文字，对于一年级小孩来说，要想阅读还是有难度的。不过我打算作为故事书读给他听。
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">芥末蓝</b>
+                    <b class="time-show">2017-12-11 1:08:45</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">3</b>
+                    <b class="icon comments fr">3</b>
+                  </span>
+                </div>
+                <p>
+                  第一次读大冰的书就深深的被大冰吸引了，完全控制不了自己。准备把其他的所有的大冰的书都买了，大冰，我爱你！
+                </p>
+              </li>
+            </ul>
+            <ul>
+              <li class="active">
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">安如歌</b>
+                    <b class="time-show">2017-11-14 14:27:05</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">94</b>
+                    <b class="icon comments fr">17</b>
+                  </span>
+                </div>
+                <p>
+                  不给大冰你这个野生作家满分，是怕你骄傲这本书是去年姐姐送的，兜兜转转一直没机会看。终于我在这个酷暑把它看完了。我没有在火车上，我也没有在地铁上，我也没有斜倚在床头，也没有在洒满阳光的书桌前，更没有在异乡街头或者航班被延误的候机厅里看这本书。大热天的，吹着一个二十年前的退休老干部级别的电扇，我坐在闺密家铺着毛毯的沙发上缩在角落里，趁着微弱的光芒看完了这本书。我想我一辈子都会记得我第一次看书看到了长痱子。我喜欢这本书，我一定也会喜欢上另外两本书。爱上了民谣，也更爱异乡。但是每天有新想法新发现，哪里不是异乡。大冰，阿弥陀佛。
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">无昵称用户</b>
+                    <b class="time-show">2017-08-24 22:04:08</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">117</b>
+                    <b class="icon comments fr">49</b>
+                  </span>
+                </div>
+                <p>
+                  阿弥陀佛，么么哒。是我买的大冰的第一本书，里面的故事真的挺打动人心的，不论是患白血病的小男孩还是张晏明的《佳佳》都让人为之动容。书中真实的记录着他经历的故事，从朋友到民谣歌手，甚至只是来小屋的路人，所有有机会成为故事的主人。
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">匿名用户</b>
+                    <b class="time-show">2017-11-14 17:24:17</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">8</b>
+                    <b class="icon comments fr">1</b>
+                  </span>
+                </div>
+                <p>
+                  因为阅读《阿弥陀佛么么哒》想去一次你与小师姐认识的小镇，大抵是因为心中有期待，期待会遇见不同的故事。感谢《阿弥陀佛么么哒》给我一场不一样的修行，满满地正能量?期待大冰会推出新作?缘深缘浅，缘聚缘散，惜缘随缘莫攀缘?
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">无昵称用户</b>
+                    <b class="time-show">2017-10-30 15:17:50</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">6</b>
+                    <b class="icon comments fr">1</b>
+                  </span>
+                </div>
+                <p>
+                  大冰的新书，果断买来一口气看完，12个真实的故事，看的我是一会哭一会笑的，跟个神经病一样，好久没有被感动的湿润眼球了，阿弥陀佛，么么哒！那个给“希有”的卡片已经写好了，坐等大冰的微博炮弹，真实的故事总是让人动容，这本书很值得一看。,有趣的书籍,小朋友喜欢看
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">无昵称用户</b>
+                    <b class="time-show">2017-10-19 13:07:17</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">0</b>
+                    <b class="icon comments fr">3</b>
+                  </span>
+                </div>
+                <p>
+                  此书于书展相识，结缘于当当网。温情感人，纸巾拭泪。于是又结缘了大冰的其他几本书籍。我亦是信佛之人，阿弥陀佛么么哒！
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">无昵称用户</b>
+                    <b class="time-show">2017-12-11 1:08:45</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">3</b>
+                    <b class="icon comments fr">3</b>
+                  </span>
+                </div>
+                <p>
+                  讲的是迪伦和催斯坦的爱情故事，这是一条明线。这里面夹杂着对生命的某个方面的思考，比如说，人情的冷暖，比如说，理智与情感矛盾时，怎样选择，这是一个问题。小说以一种变化的笔调大概描绘了大部分人都可能会做的梦吧。至少我看的时候，那些场景似乎经历过，感受过。
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">无昵称用户</b>
+                    <b class="time-show">2017-11-14 14:27:05</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">94</b>
+                    <b class="icon comments fr">17</b>
+                  </span>
+                </div>
+                <p>
+                  这本一直稳居畅销排行榜的书，犹豫了很久才买，因为实在受够了“心灵治愈”、“灵魂震颤”、“人性救赎”之类的营销套路。我把它归纳为一个“西方玄幻爱情故事”，读后挺暖心，但想靠它治愈、救赎的就歇了吧。
+                </p>
+              </li>
+            </ul>
+            <ul>
+              <li class="active">
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">无昵称用户</b>
+                    <b class="time-show">2017-08-24 22:04:08</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">117</b>
+                    <b class="icon comments fr">49</b>
+                  </span>
+                </div>
+                <p>
+                  很久没有看小说了，这本小说真的很不错，必须说崔斯坦是迪伦的摆渡人，不如说迪伦是崔斯坦的摆渡人，以及接受自己死亡信息的那种淡定，从容都让我觉得很吃惊。爱就是相互摆渡相互慰藉，在任何困难的日子里。我也愿意成为别人的摆渡人。
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">匿名用户</b>
+                    <b class="time-show">2017-11-14 17:24:17</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">8</b>
+                    <b class="icon comments fr">1</b>
+                  </span>
+                </div>
+                <p>
+                  没有想到的，毫无预期的死亡，再到启程前往荒野。迪伦遭遇到了人生中最大的变故，可这次的摆渡，也让她受到了最真挚的感情。我喜欢迪伦的天真浪漫，也羡慕她毅然逆行荒野的勇敢，迪伦身上折射出了太多的我们，用心感受，也许你能找到那个最初的自己。
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">无昵称用户</b>
+                    <b class="time-show">2017-10-30 15:17:50</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">6</b>
+                    <b class="icon comments fr">1</b>
+                  </span>
+                </div>
+                <p>
+                  在整个作品中，看起来崔斯坦是迪伦的摆渡人。而其实真正的摆渡人是迪伦自己。这是治愈心灵的小说，那最后结果当然是穿越成功。崔斯坦在迪伦的摆渡下，成功到了迪伦的“人”世界。
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">无昵称用户</b>
+                    <b class="time-show">2017-10-19 13:07:17</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">0</b>
+                    <b class="icon comments fr">3</b>
+                  </span>
+                </div>
+                <p>
+                  迪伦和崔斯坦的爱，可谓轰轰烈烈，跨越了生死，赋予了崔斯坦生命以及迪伦自己的新生。很多时候，我都在怀疑自己的付出与爱的收获是否值得。但是看了摆渡人，内心无比感恩目前所收获的一切。
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">无昵称用户</b>
+                    <b class="time-show">2017-12-11 1:08:45</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">3</b>
+                    <b class="icon comments fr">3</b>
+                  </span>
+                </div>
+                <p>
+                  决定授予唐七“最佳造梦师”的称号。作者有些才华，把三生三世十几万年的爱恋纠缠写得滴水不漏，鲜有逻辑硬伤。可是啊哈哈，四海八荒第一美女出生便是帝姬的上神白浅，天上地下第一俊的天族太子天才夜华，怎么就相互爱得那么死心塌地呢。这夜华，不仅武功超群，还会下厨，为白浅赴汤蹈火在所不辞，还对天上地下的一众仙女美女目不斜视，眼里只有一个她……这真是令观者各自着迷意淫的一对儿璧人！如此惊天地泣鬼神如此完美的爱情故事，我怎么就一点都不感动呢！或许是完美得太虚假了吧。
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">无昵称用户</b>
+                    <b class="time-show">2017-11-14 14:27:05</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">94</b>
+                    <b class="icon comments fr">17</b>
+                  </span>
+                </div>
+                <p>
+                  十里桃花我有初版，有新版，这个纪念版当然也要买。七的书中我最爱的不十里桃花，但十里是三生系列的起点，纪念版里有七写的序，很是值得收藏。
+                </p>
+              </li>
+              <li>
+                <div class="tit clearfix">
+                  <span class="fl">
+                    <b class="user-name">无昵称用户</b>
+                    <b class="time-show">2017-08-24 22:04:08</b>
+                  </span>
+                  <span class="fr">
+                    <b class="icon give-like fr">117</b>
+                    <b class="icon comments fr">49</b>
+                  </span>
+                </div>
+                <p>
+                  早就跟朋友借来此书 却一直看不进去 放在家中落灰 起初不喜欢杨幂 后来剧荒 试着看一下电视剧 演技还真是大突破 电视剧上瘾了 小说翻出来看 看完后归还原主 我又来买本收藏 。
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="logistics clearfix">
+          <h3>物流信息</h3>
+          <div class="con">
+            <div class="con-in active">
+              <ul class="states clearfix">
+                <li class="fl">
+                  <span class="icon-circle circle1 finished">
+                    <b>入库</b>
+                  </span>
+                </li>
+                <li class="fl clearfix">
+                  <span class="line fl"></span>
+                  <span class="icon-circle circle2 finished fl">
+                    <b>捡货</b>
+                  </span>
+                </li>
+                <li class="fl clearfix">
+                  <span class="line fl"></span>
+                  <span class="icon-circle circle3 finished fl">
+                    <b>出库</b>
+                  </span>
+                </li>
+                <li class="fl clearfix">
+                  <span class="line fl"></span>
+                  <span class="icon-circle circle4 fl">
+                    <b>运输</b>
+                  </span>
+                </li>
+                <li class="fl clearfix">
+                  <span class="line fl"></span>
+                  <span class="icon-circle circle5 fl">
+                    <b>签收</b>
+                  </span>
+                </li>
+              </ul>
+              <ul class="progress">
+                <li class="clearfix new-height">
+                  <span class="pro-time fl">02-17 09:19</span>
+                  <span class="pro-con fl">
+                    江苏凤凰出版社出库发货
+                  </span>
+                </li>
+                <li class="clearfix">
+                  <span class="pro-time fl">02-16 16:32</span>
+                  <span class="pro-con fl">
+                    江苏凤凰出版社入库捡货
+                  </span>
+                </li>
+                <li class="clearfix">
+                  <span class="pro-time fl">02-15 10:30</span>
+                  <span class="pro-con fl">
+                    江苏凤凰出版社确认订单
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div class="con-in">
+              <ul class="states clearfix">
+                <li class="fl">
+                  <span class="icon-circle circle1 finished">
+                    <b>入库</b>
+                  </span>
+                </li>
+                <li class="fl clearfix">
+                  <span class="line fl"></span>
+                  <span class="icon-circle circle2 finished fl">
+                    <b>捡货</b>
+                  </span>
+                </li>
+                <li class="fl clearfix">
+                  <span class="line fl"></span>
+                  <span class="icon-circle circle3 finished fl">
+                    <b>出库</b>
+                  </span>
+                </li>
+                <li class="fl clearfix">
+                  <span class="line fl"></span>
+                  <span class="icon-circle circle4 finished fl">
+                    <b>运输</b>
+                  </span>
+                </li>
+                <li class="fl clearfix">
+                  <span class="line fl"></span>
+                  <span class="icon-circle circle5 finished fl">
+                    <b>签收</b>
+                  </span>
+                </li>
+              </ul>
+              <ul class="progress">
+                <li class="clearfix new-height">
+                  <span class="pro-time fl">02-19 11:10</span>
+                  <span class="pro-con fl">
+                    化学工业出版社确认签收
+                  </span>
+                </li>
+                <li class="clearfix">
+                  <span class="pro-time fl">02-18 13:42</span>
+                  <span class="pro-con fl">
+                    运往化学工业出版社
+                  </span>
+                </li>
+                <li class="clearfix">
+                  <span class="pro-time fl">02-17 09:19</span>
+                  <span class="pro-con fl">
+                    上海新华出版社出库发货
+                  </span>
+                </li>
+                <li class="clearfix">
+                  <span class="pro-time fl">02-16 16:32</span>
+                  <span class="pro-con fl">
+                    上海新华出版社入库捡货
+                  </span>
+                </li>
+                <li class="clearfix">
+                  <span class="pro-time fl">02-15 10:30</span>
+                  <span class="pro-con fl">
+                    上海新华出版社确认订单
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div class="con-in">
+              <ul class="states clearfix">
+                <li class="fl">
+                  <span class="icon-circle circle1 finished">
+                    <b>入库</b>
+                  </span>
+                </li>
+                <li class="fl clearfix">
+                  <span class="line fl"></span>
+                  <span class="icon-circle circle2 finished fl">
+                    <b>捡货</b>
+                  </span>
+                </li>
+                <li class="fl clearfix">
+                  <span class="line fl"></span>
+                  <span class="icon-circle circle3 finished fl">
+                    <b>出库</b>
+                  </span>
+                </li>
+                <li class="fl clearfix">
+                  <span class="line fl"></span>
+                  <span class="icon-circle circle4 finished fl">
+                    <b>运输</b>
+                  </span>
+                </li>
+                <li class="fl clearfix">
+                  <span class="line fl"></span>
+                  <span class="icon-circle circle5 fl">
+                    <b>签收</b>
+                  </span>
+                </li>
+              </ul>
+              <ul class="progress">
+                <li class="clearfix new-height">
+                  <span class="pro-time fl">02-18 13:42</span>
+                  <span class="pro-con fl">
+                    运往化学工业出版社
+                  </span>
+                </li>
+                <li class="clearfix">
+                  <span class="pro-time fl">02-17 09:19</span>
+                  <span class="pro-con fl">
+                    人民交通出版社出库发货
+                  </span>
+                </li>
+                <li class="clearfix">
+                  <span class="pro-time fl">02-16 16:32</span>
+                  <span class="pro-con fl">
+                    人民交通出版社入库捡货
+                  </span>
+                </li>
+                <li class="clearfix">
+                  <span class="pro-time fl">02-15 10:30</span>
+                  <span class="pro-con fl">
+                    人民交通出版社确认订单
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div class="con-in">
+              <ul class="states clearfix">
+                <li class="fl">
+                  <span class="icon-circle circle1 finished">
+                    <b>入库</b>
+                  </span>
+                </li>
+                <li class="fl clearfix">
+                  <span class="line fl"></span>
+                  <span class="icon-circle circle2 finished fl">
+                    <b>捡货</b>
+                  </span>
+                </li>
+                <li class="fl clearfix">
+                  <span class="line fl"></span>
+                  <span class="icon-circle circle3 finished fl">
+                    <b>出库</b>
+                  </span>
+                </li>
+                <li class="fl clearfix">
+                  <span class="line fl"></span>
+                  <span class="icon-circle circle4 finished fl">
+                    <b>运输</b>
+                  </span>
+                </li>
+                <li class="fl clearfix">
+                  <span class="line fl"></span>
+                  <span class="icon-circle circle5 finished fl">
+                    <b>签收</b>
+                  </span>
+                </li>
+              </ul>
+              <ul class="progress">
+                <li class="clearfix new-height">
+                  <span class="pro-time fl">02-19 11:10</span>
+                  <span class="pro-con fl">
+                    中国建筑工业出版社确认签收
+                  </span>
+                </li>
+                <li class="clearfix">
+                  <span class="pro-time fl">02-18 13:42</span>
+                  <span class="pro-con fl">
+                    运往中国建筑工业出版社
+                  </span>
+                </li>
+                <li class="clearfix">
+                  <span class="pro-time fl">02-17 09:19</span>
+                  <span class="pro-con fl">
+                    上海新华出版社出库发货
+                  </span>
+                </li>
+                <li class="clearfix">
+                  <span class="pro-time fl">02-16 16:32</span>
+                  <span class="pro-con fl">
+                    上海新华出版社入库捡货
+                  </span>
+                </li>
+                <li class="clearfix">
+                  <span class="pro-time fl">02-15 10:30</span>
+                  <span class="pro-con fl">
+                    上海新华出版社确认订单
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div class="con-in">
+              <ul class="states clearfix">
+                <li class="fl">
+                  <span class="icon-circle circle1 finished">
+                    <b>入库</b>
+                  </span>
+                </li>
+                <li class="fl clearfix">
+                  <span class="line fl"></span>
+                  <span class="icon-circle circle2 finished fl">
+                    <b>捡货</b>
+                  </span>
+                </li>
+                <li class="fl clearfix">
+                  <span class="line fl"></span>
+                  <span class="icon-circle circle3 finished fl">
+                    <b>出库</b>
+                  </span>
+                </li>
+                <li class="fl clearfix">
+                  <span class="line fl"></span>
+                  <span class="icon-circle circle4 finished fl">
+                    <b>运输</b>
+                  </span>
+                </li>
+                <li class="fl clearfix">
+                  <span class="line fl"></span>
+                  <span class="icon-circle circle5 fl">
+                    <b>签收</b>
+                  </span>
+                </li>
+              </ul>
+              <ul class="progress">
+                <li class="clearfix new-height">
+                  <span class="pro-time fl">02-18 13:42</span>
+                  <span class="pro-con fl">
+                    运往化学工业出版社
+                  </span>
+                </li>
+                <li class="clearfix">
+                  <span class="pro-time fl">02-17 09:19</span>
+                  <span class="pro-con fl">
+                    新华文轩出版社出库发货
+                  </span>
+                </li>
+                <li class="clearfix">
+                  <span class="pro-time fl">02-16 16:32</span>
+                  <span class="pro-con fl">
+                    新华文轩出版社入库捡货
+                  </span>
+                </li>
+                <li class="clearfix">
+                  <span class="pro-time fl">02-15 10:30</span>
+                  <span class="pro-con fl">
+                    新华文轩出版社确认订单
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-bottom">
+      <span class="line1"></span>
+      <span class="line2"></span>
+      <span class="line3"></span>
+    </div>
+  </div>
+  <script src="js/second.js"></script>
+  <script src="js/mapSecond.js"></script>
+</body>
+
+</html>

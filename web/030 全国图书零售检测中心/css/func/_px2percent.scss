@@ -1,0 +1,9 @@
+/**
+ * [px转百分比]
+ * @param  {[number]} $size  [自身宽度的大小]
+ * @param  {[number]} $scale [包裹盒子的大小]
+ * @return {[number]}        [返回百分比数值]
+ */
+@function px2percent($size, $scale){
+	@return ($size / $scale * 100) * 1%;
+}

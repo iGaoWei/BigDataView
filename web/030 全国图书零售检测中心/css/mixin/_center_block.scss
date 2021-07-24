@@ -1,0 +1,7 @@
+// 块儿元素居中
+
+@mixin center-block() {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}

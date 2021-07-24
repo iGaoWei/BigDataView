@@ -1,0 +1,46 @@
+{
+  "ret": true,
+  "msg": null,
+  "data": {
+    "data": [
+      {
+        "longitude": "104.061195",
+        "latitude": "30.592618"
+      },
+      {
+        "longitude": "104.061195",
+        "latitude": "30.592618"
+      },
+      {
+        "longitude": "104.061208",
+        "latitude": "30.592618"
+      },
+      {
+        "longitude": "104.061208",
+        "latitude": "30.592618"
+      },
+      {
+        "longitude": "104.061188",
+        "latitude": "30.592635"
+      },
+      {
+        "longitude": "104.061188",
+        "latitude": "30.592635"
+      },
+      {
+        "longitude": "456",
+        "latitude": "123"
+      },
+      null,
+      {
+        "longitude": "104.061189",
+        "latitude": "30.592634"
+      },
+      {
+        "longitude": "104.061189",
+        "latitude": "30.592634"
+      }
+    ],
+    "total": 175
+  }
+}

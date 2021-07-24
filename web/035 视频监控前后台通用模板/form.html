@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/registe.css">
+    <style type="text/css">
+        .table_p{line-height: 28px;margin:0 4.5% 10px 20px;border-bottom: 1px #d0e6ec solid;position: relative}
+        .table_p span{border-bottom: 3px #42cdec solid;display: inline-block;position: absolute;bottom: -1px;font-weight: bold;font-size: 14px}
+        .but_p button{width: 80px}
+    </style>
+</head>
+<body style="background-color: #e6ecf5;min-width: 1100px">
+<main class="main">
+    <!--头部-->
+    <header class="heared">
+        <span class="head-logo">前后台通用模板</span>
+        <ul class="head-ul"><li><a href="home.html" class="active-a">首页</a> </li>
+            <li><a href="videlctr.html">视频监控</a> </li>
+            <li><a href="map.html">地图管理</a> </li>
+            <li><a href="static.html">统计分析</a> </li>
+            <li><a href="form.html">表单信息</a> </li>
+            <li><a href="user.html">用户管理</a></li>
+            <li><a href="part.html">部门管理</a></li>
+            <li><a href="date.html">日程管理</a></li>
+
+        </ul>
+        <div class="head-right"><span id="time"></span><span>Admin</span></div>
+    </header>
+    <!--身体-->
+    <section class="section" >
+
+        <div class="book_con01">
+            <h1 class="book_h01">工单登记</h1>
+            <form>
+                <div class="top">
+                    <div>
+                        <div class="top_out">
+                            <table class="table">
+                                <tbody>
+                                <p class="table_p"><span>来电信息</span></p>
+                                <tr>
+                                    <td>来电号码<span></span></td>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                    <td>坐席工号<span></span></td>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                    <td>坐席电话<span></span></td>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>来电姓名<span></span></td>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                    <td>客户性别<span></span></td>
+                                    <td>
+                                        <select >
+                                            <option>男</option>
+                                            <option>女</option>
+                                        </select>
+                                    </td>
+                                    <td>客户年龄<span></span></td>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <table class="table">
+                                <tbody>
+                                <p class="table_p"><span>案件信息</span></p>
+                                <tr>
+                                    <td>案卷编号<span></span></td>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                    <td>案件来源<span></span></td>
+                                    <td>
+                                        <select>
+                                            <option>--请选择--</option>
+                                        </select>
+                                    </td>
+                                    <td>来电类型<span></span></td>
+                                    <td>
+                                        <select>
+                                            <option>--请选择--</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>问题大类<span></span></td>
+                                    <td>
+                                        <select>
+                                            <option>--请选择--</option>
+                                        </select>
+                                    </td>
+                                    <td>问题小类<span></span></td>
+                                    <td>
+                                        <select>
+                                            <option>--请选择--</option>
+                                        </select>
+                                    </td>
+                                    <td>处理时限<span></span></td>
+                                    <td>
+                                        <select>
+                                            <option>--请选择--</option>
+                                        </select>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>所属区域<span></span></td>
+                                    <td>
+                                        <select>
+                                            <option>--请选择--</option>
+                                        </select>
+                                    </td>
+                                    <td>所属街道<span></span></td>
+                                    <td>
+                                        <select>
+                                            <option>--请选择--</option>
+                                        </select>
+                                    </td>
+                                    <td>所属社区<span></span></td>
+                                    <td>
+                                        <select>
+                                            <option>--请选择--</option>
+                                        </select>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>案件描述<span></span></td>
+                                    <td colspan = "8" style="text-align: left">
+                                        <textarea   class="form_area" style="height: 80px"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>短信回复<span></span></td>
+                                    <td colspan = "8" style="text-align: left">
+                                        <textarea   class="form_area" style="height: 80px"></textarea>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class=" but_p"><button class="but_save">保存案件</button><button class="but_close">发送短信</button><button class="but_close">打开知识库</button></div>
+                <div style="clear: both;padding-bottom: 40px"></div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+<script src="js/jquery.js"></script>
+
+<script>
+    $(function(){
+        $(".head-ul li a").click(function(){
+            $(this).addClass("active-a").parents("li").siblings().find("a").removeClass("active-a");
+            $(this).parents('li').find("ul").show();
+            $(this).parents("li").sibling().find("ul").hide();
+
+        })
+        getTime();
+    })
+//    格式化时间
+   function getTime(){
+       var day=new Date();
+       var year=day.getFullYear();
+       var moutth=day.getMonth()+1;
+       var date=day.getDate();
+       var hour=day.getHours();
+       var min=day.getMinutes();
+       var sec=day.getSeconds();
+       var str=year+'-'+moutth+'-'+date+' '+hour+":"+min+':'+sec;
+       $("#time").text(str);
+   }
+</script>
+</body>
+</html>

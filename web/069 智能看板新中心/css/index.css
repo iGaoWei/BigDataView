@@ -1,0 +1,596 @@
+body{
+    line-height: 1.15;
+    font-size: 0.5rem;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: 0 0 / cover;
+    background-color: #101129;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.viewport {
+    /* 限定大小 */
+    min-width: 1024px;
+    max-width: 1920px;
+    min-height: 780px;
+    margin: 0 auto;
+    background: url(../images/logo.png) no-repeat 0 0 / contain;
+    display: flex;
+    padding: 3.667rem 0.833rem 0;
+}
+.column{
+    flex: 3;
+    position: relative;
+}
+.column:nth-child(2){
+    flex: 4;
+    margin: 1.333rem 0.833rem 0;
+}
+.panel {
+    /* 边框 */
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-image: url(../images/border.png) 51 38 21 132;
+    border-width: 2.125rem 1.583rem 0.875rem 5.5rem;
+    position: relative;
+    margin-bottom: 0.833rem;
+}
+.panel .inner {
+    /* 装内容 */
+    /* height: 60px; */
+    position: absolute;
+    top: -2.125rem;
+    right: -1.583rem;
+    bottom: -0.875rem;
+    left: -5.5rem;
+    padding: 1rem 1.5rem;
+}
+.panel h3{
+    font-size: 0.833rem;
+    color: #fff;
+}
+/* 概览区域 */
+.overview{
+    height: 4.583rem;
+  }
+  .overview .inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  .overview h4{
+    font-size: 1.167rem;
+    padding-left: 0.2rem;
+    color: #fff;
+    margin-bottom: 0.333rem
+  }
+  .overview span{
+    font-size: 0.667rem;
+    color: #4c9bfd;
+}
+/* 监控 */
+.monitor{
+	height: 20rem;
+  }
+  .monitor .inner{
+	padding: 1rem 0;
+	display: flex;
+	flex-direction: column;
+  }
+  .monitor .tabs{
+	padding: 0 1.5rem;
+	margin-bottom: 0.75rem;
+  }
+  .monitor .tabs a{
+	color: #1950c4;
+	font-size: 0.75rem;
+	padding: 0 1.125rem;
+  }
+  
+  .monitor .tabs a:first-child{
+	border-right: 0.083rem solid #00f2f1;
+	padding-left: 0;
+  }
+  
+  .monitor .tabs a.active{
+	color: #fff;
+  }
+  .monitor .content{
+	flex: 1;
+	display: none;
+	position: relative;
+  }
+  .monitor .head{
+	background: rgba(255, 255, 255, 0.1);
+	font-size: 0.583rem;
+	padding: 0.5rem 1.5rem;
+	color: #68d8fe;
+	display: flex;
+	justify-content: space-between;
+	line-height: 1.05;
+  }
+  .monitor .col:nth-child(1) {
+	width: 3.2rem;
+  }
+  .monitor .col:nth-child(2) {
+	width: 8.4rem;
+	/* 不换行  一行省略*/
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+  }
+  .monitor .col:nth-child(3) {
+	width: 3.2rem;
+  }
+  .monitor .marquee-view{
+  position: absolute;
+  top: 1.6rem;
+  bottom: 0; 
+  width: 100%; 
+  overflow: hidden;
+}
+
+.monitor .row{
+  line-height: 1.05;
+  padding: 0.5rem 1.5rem;
+  color: #61a8ff;
+  font-size: 0.5rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.monitor .row:hover{
+  color:#68d8ff;
+  background: rgba(255, 255, 255, 0.1);
+}
+.monitor .row:hover .icon-dot{
+  opacity: 1;
+}
+
+.monitor .icon-dot{
+  position: absolute;
+  left: 0.64rem;
+  opacity: 0;
+}
+.monitor .marquee-view{
+	position: absolute;
+	top: 1.6rem;
+	bottom: 0; 
+	width: 100%; 
+	overflow: hidden;
+  }
+  
+  .monitor .row{
+	line-height: 1.05;
+	padding: 0.5rem 1.5rem;
+	color: #61a8ff;
+	font-size: 0.5rem;
+	position: relative; 
+	display: flex;
+	justify-content: space-between;
+  }
+  .monitor .row:hover{
+	color:#68d8ff;
+	background: rgba(255, 255, 255, 0.1);
+  }
+  .monitor .row:hover .icon-dot{
+	opacity: 1;
+  }
+  
+  .monitor .icon-dot{
+	position: absolute;
+	left: 0.64rem;
+	opacity: 0;
+}
+/* ------------------------------------------------------------动画 */
+@keyframes row{
+  0%{}
+  100%{
+    transform: translateY(-50%);
+  }
+}
+/* 调用动画 */
+.monitor .marquee {
+  /* //infinite永久调用动画 */
+  animation: row  10s linear infinite;
+}
+/*鼠标划入 停止动画  */
+.monitor .marquee:hover {
+  animation-play-state: paused;
+}
+/* 点位 */
+.point {
+  height: 14.167rem;
+}
+.point .chart {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+.point .pie {
+  width: 13rem;
+  height: 10rem;
+  margin-left: -0.4rem;
+}
+.point .data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 7rem;
+  padding: 1.5rem 1.25rem;
+  box-sizing: border-box;
+  background-image: url(../images/rect.png);
+  background-size: cover;
+}
+.point h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.167rem;
+  color: #fff;
+}
+.point span {
+  display: block;
+  color: #4c9bfd;
+  font-size: 0.667rem;
+}
+/* 地图  */
+.map {
+  height: 24.1rem;
+  margin-bottom: 0.833rem;
+  display: flex;
+  flex-direction: column;
+}
+.map h3 {
+  line-height: 1;
+  padding: 0.667rem 0;
+  margin: 0;
+  font-size: 0.833rem;
+  color: #fff;
+}
+.map .icon-cube {
+  color: #68d8fe;
+}
+.map .chart {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.map .geo {
+  width: 100%;
+  height: 100%;
+}
+/* 用户模块 */
+.users {
+  height: 14.167rem;
+  display: flex;
+}
+.users .chart {
+  display: flex;
+  margin-top: 1rem;
+}
+.users .bar {
+  width: 24.5rem;
+  height: 10rem;
+}
+.users .data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 7rem;
+  padding: 1.5rem 1.25rem;
+  box-sizing: border-box;
+  background-image: url(../images/rect.png);
+  background-size: cover;
+}
+.users h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.167rem;
+  color: #fff;
+}
+.users span {
+  display: block;
+  color: #4c9bfd;
+  font-size: 0.667rem;
+}
+/* 订单 */
+.order {
+  height: 6.167rem;
+}
+.order .filter {
+  display: flex;
+}
+.order .filter a {
+  display: block;
+  height: 0.75rem;
+  line-height: 1;
+  padding: 0 0.75rem;
+  color: #1950c4;
+  font-size: 0.75rem;
+  border-right: 0.083rem solid #00f2f1;
+}
+.order .filter a:first-child {
+  padding-left: 0;
+}
+.order .filter a:last-child {
+  border-right: none;
+}
+.order .filter a.active {
+  color: #fff;
+  font-size: 0.833rem;
+}
+.order .data {
+  display: flex;
+  margin-top: 0.833rem;
+}
+.order .item {
+  width: 50%;
+}
+.order h4 {
+  font-size: 1.167rem;
+  color: #fff;
+  margin-bottom: 0.417rem;
+}
+.order span {
+  display: block;
+  color: #4c9bfd;
+  font-size: 0.667rem;
+}
+/* 销售区域 */
+.sales {
+  height: 10.333rem;
+}
+.sales .caption {
+  display: flex;
+  line-height: 1;
+}
+.sales h3 {
+  height: 0.75rem;
+  padding-right: 0.75rem;
+  border-right: 0.083rem solid #00f2f1;
+}
+.sales a {
+  padding: 0.167rem;
+  font-size: 0.667rem;
+  margin: -0.125rem 0 0 0.875rem;
+  border-radius: 0.125rem;
+  color: #0bace6;
+}
+.sales a.active {
+  background-color: #4c9bfd;
+  color: #fff;
+}
+.sales .inner {
+  display: flex;
+  flex-direction: column;
+}
+.sales .chart {
+  flex: 1;
+  padding-top: 0.6rem;
+  position: relative;
+}
+.sales .label {
+  position: absolute;
+  left: 1.75rem;
+  top: 0.75rem;
+  color: #4996f5;
+  font-size: 0.583rem;
+}
+.sales .line {
+  width: 100%;
+  height: 100%;
+}
+/* 渠道区块 */
+.wrap {
+  display: flex;
+}
+.channel,
+.quarter {
+  flex: 1;
+  height: 9.667rem;
+}
+.channel {
+  margin-right: 0.833rem;
+}
+.channel .data {
+  overflow: hidden;
+}
+.channel .item {
+  margin-top: 0.85rem;
+}
+.channel .item:first-child {
+  float: left;
+}
+.channel .item:last-child {
+  float: right;
+}
+.channel h4 {
+  color: #fff;
+  font-size: 1.333rem;
+  margin-bottom: 0.2rem;
+}
+.channel small {
+  font-size: 50%;
+}
+.channel span {
+  display: block;
+  color: #4c9bfd;
+  font-size: 0.583rem;
+}
+/* 季度区块 */
+.quarter .inner {
+  display: flex;
+  flex-direction: column;
+  margin: 0 -0.25rem;
+}
+.quarter .chart {
+  flex: 1;
+  padding-top: 0.75rem;
+}
+.quarter .box {
+  position: relative;
+}
+.quarter .label {
+  transform: translate(-50%, -30%);
+  color: #fff;
+  font-size: 1.25rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.quarter .label small {
+  font-size: 50%;
+}
+.quarter .gauge {
+  height: 3.5rem;
+}
+.quarter .data {
+  display: flex;
+  justify-content: space-between;
+}
+.quarter .item {
+  width: 50%;
+}
+.quarter h4 {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+.quarter span {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #4c9bfd;
+  font-size: 0.583rem;
+}
+/* 排行榜 */
+.top {
+  height: 11.8rem;
+}
+.top .inner {
+  display: flex;
+}
+.top .all {
+  display: flex;
+  flex-direction: column;
+  width: 7rem;
+  color: #4c9bfd;
+  font-size: 0.6rem;
+  vertical-align: middle;
+}
+.top .all ul {
+  padding-left: 0.5rem;
+  margin-top: 0.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.top .all li {
+  overflow: hidden;
+}
+.top .all [class^="icon-"] {
+  font-size: 1.5rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+.top .province {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+.top .province i {
+  padding: 0 0.5rem;
+  margin-top: 0.208rem;
+  float: right;
+  font-style: normal;
+  font-size: 0.583rem;
+  color: #0bace6;
+}
+.top .province s {
+  display: inline-block;
+  transform: scale(0.8);
+  text-decoration: none;
+}
+.top .province .icon-up {
+  color: #dc3c33;
+}
+.top .province .icon-down {
+  color: #36be90;
+}
+.top .province .data {
+  flex: 1;
+  display: flex;
+  margin-top: 0.6rem;
+}
+.top .province ul {
+  flex: 1;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.top .province ul li {
+  display: flex;
+  justify-content: space-between;
+}
+.top .province ul span {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.top .province ul.sup {
+  font-size: 0.583rem;
+}
+.top .province ul.sup li {
+  color: #4995f4;
+  padding: 0.5rem;
+}
+.top .province ul.sup li.active {
+  color: #a3c6f2;
+  background-color: rgba(10, 67, 188, 0.2);
+}
+.top .province ul.sub {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 0.5rem;
+  background-color: rgba(10, 67, 188, 0.2);
+}
+.top .province ul.sub li {
+  color: #52ffff;
+  padding: 0.417rem 0.6rem;
+}
+.clock {
+  position: absolute;
+  top: -1.5rem;
+  right: 1.667rem;
+  font-size: 0.833rem;
+  color: #0bace6;
+}
+.clock i {
+  margin-right: 5px;
+  font-size: 0.833rem;
+}
+@media screen and (max-width: 1600px) {
+  .top span {
+    transform: scale(0.9);
+  }
+  .top .province ul.sup li {
+    padding: 0.4rem 0.5rem;
+  }
+  .top .province ul.sub li {
+    padding: 0.23rem 0.5rem;
+  }
+  .quarter span {
+    transform: scale(0.9);
+  }
+}

@@ -1,0 +1,161 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>大数据可视化系统数据分析通用模版</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<link rel="stylesheet" href="css/comon0.css">
+</head>
+<body>
+<div class="loading">
+  <div class="loadbox"> <img src="images/loading.gif"> 页面加载中... </div>
+</div>
+<div class="head">
+  <h1>大数据可视化系统数据分析通用模版</h1>
+  <div class="time" id="showTime">2019/12/05 16:16:54</div>
+		<script>
+var t = null;
+    t = setTimeout(time,1000);//開始运行
+    function time()
+    {
+       clearTimeout(t);//清除定时器
+       dt = new Date();
+		var y=dt.getFullYear();
+		var mt=dt.getMonth()+1;
+		var day=dt.getDate();
+       var h=dt.getHours();//获取时
+       var m=dt.getMinutes();//获取分
+       var s=dt.getSeconds();//获取秒
+		var t = null;
+       document.getElementById("showTime").innerHTML = y+"/"+Appendzero(mt)+"/"+Appendzero(day)+" "+Appendzero(h)+":"+Appendzero(m)+":"+Appendzero(s)+"";
+        function Appendzero(obj){
+			if(obj<10) return "0" +""+ obj;
+			else return obj;
+		 }
+		t = setTimeout(time,1000); //设定定时器，循环运行     
+    } 
+
+</script>
+	
+</div>
+<div class="mainbox">
+  <ul class="clearfix">
+    <li>
+  
+	  <div class="boxall" style="height: calc(58% - .15rem)">
+		<div class="alltitle">标题名称</div>
+		 <div class=" boxnav " id="echarts4">
+        </div>
+      </div>
+      <div class="boxall" style="height: calc(42% - .15rem)">
+          <div class="alltitle">标题名称</div>
+          <div class="boxnav" id="echarts3"></div>
+        </div>
+    </li>
+    <li>
+        <div class="boxall" style="height: calc(20% - .15rem)">
+           <ul class="row h100 clearfix">
+            <li class="col-6">
+			   <div class="sqzs h100">
+				<p>业绩总览</p>
+				   <h1><span>30500</span>万</h1>
+				</div>
+			   </li>
+            <li class="col-6">
+                <ul class="row h100 clearfix">
+                    <li class="col-4">
+                      <div class="tit01">标题名称</div>
+                      <div class="piebox" id="pe01"></div>
+                    </li>
+                    <li class="col-4">
+                      <div class="tit01">标题名称</div>
+                      <div class="piebox" id="pe02"></div>
+                    </li>
+                    <li class="col-4">
+                      <div class="tit01">标题名称</div>
+                      <div class="piebox" id="pe03"></div>
+                    </li>
+                   </ul>
+
+            </li>
+           </ul>
+          </div>
+          <div class="boxall" style="height: calc(38% - .15rem)">
+            <div class="alltitle">标题名称</div>
+              <div class="boxnav" id="echarts1"></div>
+            </div>
+            <div class="boxall" style="height: calc(42% - .15rem)">
+              <div class="alltitle">标题名称</div>
+                <div class="boxnav" id="echarts2"></div>
+              </div>
+
+    </li>
+    <li>
+      
+		<div class="boxall" style="height: calc(33.333% - .15rem)">
+
+			<div class="alltitle">标题名称</div>
+			<div class="boxnav" id="echarts5"></div>
+        
+      </div>
+      <div class="boxall" style="height: calc(33.333% - .15rem)">
+        <div class="alltitle">标题名称</div>
+		<div class="boxnav" id="">
+<table border="0" cellspacing="0">
+  <tr>
+    <th></th>
+    <th>字段</th>
+    <th>字段</th>
+    <th>字段</th>
+    <th>字段</th>
+
+  </tr>
+  <tr>
+    <th>字段</th>
+    <td>8098</td>
+    <td>19.80%</td>
+    <td>22</td>
+    <td>368</td>
+  </tr>
+  <tr>
+    <th>字段</th>
+    <td>7506</td>
+    <td>6.70%</td>
+    <td>22</td>
+    <td>339</td>
+  </tr>
+  <tr>				
+    <th>字段</th>
+    <td>3261</td>
+    <td>32.30%</td>
+    <td>10</td>
+    <td>325.7</td>
+  </tr>
+  <tr>
+    <th>字段</th>
+    <td>1993</td>
+    <td>	201%</td>
+    <td>10</td>
+    <td>	199</td>
+  </tr>
+</table>
+				
+				
+
+		
+
+    </div>
+        
+	  </div>
+	  <div class="boxall" style="height: calc(33.333% - .15rem)">
+        <div class="alltitle">标题名称</div>
+		<div class="boxnav" id="echarts6" style="height:calc(100% - .3rem);"></div>
+      </div>
+    </li>
+  </ul>
+</div>
+	
+<script type="text/javascript" src="js/echarts.min.js"></script> 
+<script language="JavaScript" src="js/js.js"></script> 
+</body>
+</html>

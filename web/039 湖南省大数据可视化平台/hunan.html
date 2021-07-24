@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>湖南省</title>
+</head>
+<style>
+  .highcharts-credits {
+    display: none;
+  }
+  .highcharts-legend {
+    display: none;
+  }
+</style>
+<body><div id="map" style="width:800px;height: 500px;"></div>
+<script src="https://img.hcharts.cn/highmaps/highmaps.js"></script>
+<script src="https://data.jianshukeji.com/geochina/hunan.js"></script>
+<script>
+// 随机数据
+var data = [{"name":"长沙","value":42},{"name":"株洲","value":81},{"name":"湘潭","value":94},{"name":"衡阳","value":8},{"name":"邵阳","value":67},{"name":"岳阳","value":38},{"name":"常德","value":7},{"name":"张家界","value":9},{"name":"益阳","value":77},{"name":"郴州","value":78},{"name":"永州","value":17},{"name":"怀化","value":83},{"name":"娄底","value":23},{"name":"湘西","value":75}];
+// 初始化图表
+var map = new Highcharts.Map('map', {
+  title: {
+    text: '湖南省'
+  },
+  colorAxis: {
+    min: 0,
+    minColor: 'rgb(255,255,255)',
+    maxColor: '#006cee'
+  },
+  series: [{
+    data: data,
+    name: '随机数据',
+    mapData: Highcharts.maps['cn/hunan'],
+    joinBy: 'name', // 根据 name 属性进行关联
+    states: {
+			hover: {
+				color: '#000'
+			}
+		},
+    dataLabels: {
+			enabled: true,
+			format: '{point.name}'
+		}
+  }]
+});
+</script></body></html>

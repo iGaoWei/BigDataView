@@ -1,0 +1,17 @@
+/**
+ * [tableLayout 模拟table布局垂直居中对齐，只传两个参数将识别为水平垂直居中]
+ * @param  {[string]} $parent [eg：'.parent']
+ * @param  {[string]} $child  [eg：'.child']
+ * @param  {[string]} $align  [eg：center，可选参数，默认为水平居中]
+ */
+
+@mixin tableLayout($parent, $child, $align: center) {
+	#{$parent} {
+		display: table;
+		#{$child} {
+			display: table-cell;
+			text-align: $align;
+			vertical-align: middle;
+		}
+	}
+}

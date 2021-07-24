@@ -1,0 +1,176 @@
+/* 综合css */
+.mainContainer .leftContent .labelContent {
+	width: 170px;
+	height: 96px;
+	margin-bottom: 3px;
+}
+
+.mainContainer .leftContent .labelContent .label-title {
+    font-family: 微软雅黑;
+    font-size: 18px;
+    color: #FFFFFF;
+    opacity: 2;
+    display: inline-block;
+    padding-top: 12px;
+    padding-left: 14px;
+}
+
+.mainContainer .leftContent .labelContent .label-body {
+    color: #FFFFFF;
+    opacity: 0.7;
+    font-family: DIN Alternate Bold, Arial;
+    font-size: 44px;
+    text-align: right;
+    display: block;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.leftContent {
+    position: relative;
+    background-image: url(../image/digitalbg.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 213px 750px;
+    top: 122px;
+    left: 17px;
+    width: 213px;
+    height: 750px;
+    z-index: 0;
+    padding: 14px 0px 0px 16px;
+}
+
+.mainContent{
+	position: absolute;
+    top: 240px;
+    left: 233px;
+    width: 1381px;
+    height: 625px;
+    overflow: hidden;
+    background-image: url(../image/circlepath.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+}
+
+.bottomContent .progress-bar-bl-content{
+    position: absolute;
+    top: 28px;
+    left: 50px;
+}
+
+.bottomContent .progress-bar-bl-content .progress-left-bar{
+    width: 15px;
+    height: 23px;
+    background: url(../image/arrRH.png) no-repeat transparent;
+    float: left;
+    opacity: 0.2;
+}
+
+.bottomContent .progress-bar-br-content{
+    position: absolute;
+    top: 28px;
+    left: 1150px;
+}
+
+.bottomContent .progress-bar-br-content .progress-right-bar{
+    width: 15px;
+    height: 23px;
+    background: url(../image/arrLH.png) no-repeat transparent;
+    float: left;
+    opacity: 0.2;
+}
+
+.bottomContent .cmdContent {
+    position: absolute;
+    top: 79px;
+    left: 106px;
+    width: 1435px;
+    height: 85px;
+    overflow: hidden;
+}
+
+.bottomContent .cmd {
+	width: 232px;
+    height: 71px;
+    text-align: center;
+    overflow: hidden;
+    background-image: url(../image/cmdbg.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 232px 71px;
+    z-index: 7;
+    float: left;
+    margin-right: 7px;
+}
+
+.bottomContent div.active {
+    background-image: url(../image/cmdbg_active.png);
+}
+
+.bottomContent .cmd:hover {
+    background-image: url(../image/cmdbg_active.png);
+}
+
+.bottomContent .cmd a.cmd-label{
+	font-family: 幼圆;
+    font-size: 26px;
+    position: relative;
+    top: 25px;
+    left: 0px;
+    width: 232px;
+    text-align: center;
+    color: #4ABAFF;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.min-panel{
+    position: absolute;
+    background-image: url(../image/minibg.png);
+    background-size: 100% 100%;
+    top: 575px;
+    left: 1450px;
+    width: 408px;
+    height: 280px;
+    overflow: hidden;
+    z-index: 7;
+    opacity: 0.9;
+}
+
+.mainContent .index-bm-zt{
+    font-family: 黑体;
+    font-size: 28px;  
+    position: absolute;
+    top: 5px;
+    left: 50px;
+}
+
+.mainContent .index-bm{
+    display: inline-block;
+    margin-right: 20px;
+    color: #3CFF5C;
+}
+
+.mainContent .index-zt{
+    display: inline-block;
+    color: #0BFCFF;
+}
+
+.mainContent .index-bm-zt .zfCount{
+    position: relative;
+    top: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

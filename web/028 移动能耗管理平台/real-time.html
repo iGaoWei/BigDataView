@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="UTF-8">
+
+        <meta name="description" content="Violate Responsive Admin Template">
+        <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
+
+        <title>移动能效管理平台</title>
+            
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="js/bootstrap-3.3.4.css">
+        <link href="css/animate.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="js/font-awesome.4.6.0.css">
+        <!-- <link href="css/form.css" rel="stylesheet">
+        <link href="css/calendar.css" rel="stylesheet"> -->
+        <link href="css/media-player.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/icons.css" rel="stylesheet">
+        <link href="css/generics.css" rel="stylesheet"> 
+        <!--my-->
+        <link rel="stylesheet" type="text/css" href="css/energy_consumption.css">
+        <link rel="stylesheet" type="text/css" href="assets/bootstrap-select/bootstrap-select.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/datepicker/css/bootstrap-datepicker.min.css">
+    </head>
+    <body id="skin-blur-blue">
+
+        <header id="header" class="media">
+            <a href="" id="menu-toggle"></a> 
+            <a class="logo pull-left" href="index.html">移动能效管理平台</a>
+            
+            <div class="media-body">
+                <div class="media" id="top-menu">
+                    <div class="pull-left tm-icon">
+                        <a data-drawer="messages" class="drawer-toggle" href="">
+                            <i class="sa-top-message"></i>
+                            <i class="n-count animated">5</i>
+                            <span>实时消息</span>
+                        </a>
+                    </div>
+                    <div class="pull-left tm-icon">
+                        <a data-drawer="notifications" class="drawer-toggle" href="">
+                            <i class="sa-top-updates"></i>
+                            <i class="n-count animated">9</i>
+                            <span>告警信息</span>
+                        </a>
+                    </div>
+
+                    
+
+                    <div id="time" class="pull-right">
+                        <span id="hours"></span>
+                        :
+                        <span id="min"></span>
+                        :
+                        <span id="sec"></span>
+                    </div>
+                    
+                    <div class="media-body">
+                        <input type="text" class="main-search">
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="clearfix"></div>
+        
+        <section id="main" class="p-relative" role="main">
+
+            <!-- Sidebar -->
+            <aside id="sidebar">
+
+                <!-- Sidbar Widgets -->
+                <div class="side-widgets overflow">
+                    <!-- Profile Menu -->
+                    <!-- Video -->
+                    <div class="tile">
+                        <h2 class="tile-title">行业动态</h2>
+                        <div class="tile-config dropdown">
+                            <a data-toggle="dropdown" href="" class="tooltips tile-menu" title="" data-original-title="Options"></a>
+                            <ul class="dropdown-menu pull-right text-right">
+                                <li><a href="">Edit</a></li>
+                                <li><a href="">Delete</a></li>
+                            </ul>
+                        </div>
+                        <video width="100%" height="100%" id="multiCodec" poster="img/media-player/media-player-poster.jpg" controls="controls" preload="none"> <!-- id could be any according to you -->
+                            <!-- MP4 source must come first for iOS -->
+                            <source type="video/mp4" src="media/Mobiledepre480.MP4" />
+                            <!-- WebM for Firefox 4 and Opera -->
+                            <source type="video/webm" src="media/echohereweare.webm" />
+                            <!-- OGG for Firefox 3 -->
+                            <source type="video/ogg" src="media/echohereweare.ogv" />
+                            <!-- Fallback flash player for no-HTML5 browsers with JavaScript turned off -->
+                            <object width="100%" height="100%" type="application/x-shockwave-flash" data="media/flashmediaelement.swf">
+                                <param name="movie" value="media/flashmediaelement.swf" />
+                                <param name="flashvars" value="controls=true&amp;poster=img/media-player/media-player-poster.jpg&amp;file=media/Mobiledepre480.MP4" />
+                                <!-- Image fall back for non-HTML5 browser with JavaScript turned off and no Flash player installed -->
+                                <img src="img/media-player/media-player-poster.jpg" width="100%" height="100%" alt="Media" title="No video playback capabilities" />
+                            </object>
+                        </video>
+                    </div>
+
+                    <!-- Calendar -->
+                    <div class="s-widget m-b-25">
+                        <div id="sidebar-calendar"></div>
+                    </div>
+
+                    <!-- Feeds -->
+                    <div class="s-widget m-b-25">
+                        <h2 class="tile-title">
+                            访客
+                        </h2>
+                        <div class="alert alert-success alert-icon">
+                            <span style="margin-left:8px;">今日访问:1893次</span>
+                            <i class="icon">&#61845;</i>
+                        </div>
+
+                        <div class="alert alert-info alert-icon">
+                            <span style="margin-left:8px;">累计访问:14562次</span>
+                            <i class="icon">&#61770;</i>
+                        </div>
+                    </div>
+                    <!--Weather forecast-->
+                    <div class="panel  weather-info">
+                        <div class="turquoise-bg white-text top-radius">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-xs-5">
+                                        <div class="text-center">
+                                            <i class="big-icon  ico-cloudy"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <div class="text-center">
+                                            <div class="degree">-4</div>
+                                            <div>多云,北风3-4级</div>
+                                            <div>实时气温-4℃，较冷</div>
+                                            <div class="d-value"><span>-9</span> / <span>14</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="weather-location dark-turquoise-bg">
+                            <form role="form" class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-lg-12">
+                                        <input type="text" placeholder="位置..." class="form-control find-loc">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="weather-forecast ">
+                                <li class="first"><a id="su" href="javascript:;" ><strong>日</strong><span><i class="ico-cloudy"></i></span><span class="d-value">31</span></a></li>
+                                <li><a id="mo" href="javascript:;" ><strong>一</strong><span><i class=" ico-rainy2"></i></span><span class="d-value">20</span></a></li>
+                                <li><a class="active" id="tu" href="javascript:;" ><strong>二</strong><span><i class=" ico-lightning3"></i></span><span class="d-value">27</span></a></li>
+                                <li><a id="we" href="javascript:;" ><strong>三</strong><span><i class=" ico-sun3"></i></span><span class="d-value">23</span></a></li>
+                                <li><a id="th" href="javascript:;" ><strong>四</strong><span><i class=" ico-snowy3"></i></span><span class="d-value">26</span></a></li>
+                                <li><a id="fr" href="javascript:;" ><strong>五</strong><span><i class=" ico-cloudy "></i></span><span class="d-value">32</span></a></li>
+                                <li class="last"><a id="sa" href="javascript:;" ><strong>六</strong><span><i class=" ico-lightning3 "></i></span><span class="d-value">24</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tile">
+                        <h2 class="tile-title">系统导航</h2>
+                        <div class="list-group list-group-flat m-t-15">
+                            <a href="#" class="list-group-item"><span class="message-tag progress-bar-warning"></span>办公自动化OA系统</a>
+                            <a href="#" class="list-group-item"><span class="message-tag progress-bar-danger"></span>财务管理系统</a>
+                            <a href="#" class="list-group-item"><span class="message-tag progress-bar-info"></span>机房管理系统</a>
+                            <a href="#" class="list-group-item"><span class="message-tag progress-bar-success"></span>空调管理系统</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Side Menu -->
+                <ul class="list-unstyled side-menu">
+                     <li class="active">
+                        <a class="sa-side-home" href="index.html">
+                            <span class="menu-item">运行监测</span>
+                        </a>
+                    </li>
+					<li class="dropdown">
+                        <a class="sa-side-page" href="real-time.html">
+                            <span class="menu-item">数据列表</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sa-side-typography" href="keyInfo.html">
+                            <span class="menu-item">关键信息</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sa-side-widget" href="mstp_map.html">
+                            <span class="menu-item">全息图概览</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sa-side-form" href="efficiencyAnalysis.html">
+                            <span class="menu-item">能耗统计</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sa-side-folder" href="energy_consumption.html">
+                            <span class="menu-item">报表管理</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sa-side-calendar" href="userMng.html">
+                            <span class="menu-item">用户管理</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="sa-side-page" href="">
+                            <span class="menu-item">系统设置</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </aside>
+        
+            <!-- Content -->
+            <section id="content" class="container">
+
+                <!-- Messages Drawer -->
+                <div id="messages" class="tile drawer animated">
+                    <div class="listview narrow">
+                        <div class="media">
+                            <a href="">新消息</a>
+                            <span class="drawer-close">&times;</span>
+
+                        </div>
+                        <div class="overflow" style="height: 254px">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/1.png" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">调度班长 - 2分钟前</small><br>
+                                    <a class="t-overflow" href="">空调系统数据采集异常，请工作人员检查。</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/2.png" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">值班专员 - 15分钟前</small><br>
+                                    <a class="t-overflow" href="">办公室供暖系统出现异常，无法提供正常供暖，请排除故障!</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/3.png" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">自动化班长 - 3小时前</small><br>
+                                    <a class="t-overflow" href="">能源费用分布图以及报表数据有误差，请核对</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/4.png" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">值班人员 - 3小时前</small><br>
+                                    <a class="t-overflow" href="">锅炉房水温过高，告警系统启动，请及时查看.</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/1.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">办公室 - 4小时前</small><br>
+                                    <a class="t-overflow" href="">请各部门提供上周能耗统计数据，本周将针对关键能耗点进行技术优化</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/2.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">值班专员 - 5小时前</small><br>
+                                    <a class="t-overflow" href="">自动化班提供1#机房总耗电量远远超过预测值，请再次核对数据并及时告知！</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/3.png" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">办公室 - 6小时前</small><br>
+                                    <a class="t-overflow" href="">请提供“人均空调系统能耗”和“制冷系统能效比”两组数据</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/4.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">办公室专责 - 6小时前</small><br>
+                                    <a class="t-overflow" href="">请调度班提供2#机房和3#基站的能耗统计数据.</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/5.png" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">网管中心 - 7小时前</small><br>
+                                    <a class="t-overflow" href="">今天凌晨将进行断网检修，请各部门及时下载相关材料</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media text-center whiter l-100">
+                            <a href=""><small>查看所有</small></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notification Drawer -->
+                <div id="notifications" class="tile drawer animated">
+                    <div class="listview narrow">
+                        <div class="media">
+                            <a href="">实时告警</a>
+                            <span class="drawer-close">&times;</span>
+                        </div>
+                        <div class="overflow" style="height: 254px">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/1.png" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">值班人员 - 35秒前</small><br>
+                                    <a class="t-overflow" href="">供暖系统能耗数据采集异常</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/3.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">调度值班室 - 1分钟前</small><br>
+                                    <a class="t-overflow" href="">办公照明系统出现故障，请立即检修！</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/3.png" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">办公室 - 2分钟前</small><br>
+                                    <a class="t-overflow" href="">办公区空调1#机组无法正常工作，异响</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/4.png" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">值班专责 - 3分钟前</small><br>
+                                    <a class="t-overflow" href="">1#制冷站中级故障告警，请立即前往查看</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/4.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">值班人员 - 4分钟前</small><br>
+                                    <a class="t-overflow" href="">冷机用电量突变，请查看是否故障</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="img/profile-pics/2.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">办公室专责 - 5分钟前</small><br>
+                                    <a class="t-overflow" href="">新风系统告警，无法正常工作</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media text-center whiter l-100">
+                            <a href=""><small>查看所有</small></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Breadcrumb -->
+                <ol class="breadcrumb hidden-xs">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">能耗统计</a></li>
+                    <li class="active">能耗报表</li>
+                </ol>
+                
+                <h4 class="page-title">实时能耗</h4>
+                <!--my start-->
+                <div id="firstRow">
+                    <div id="title">
+                        能耗报表
+                    </div>
+                    <div id="title_btn">
+                        <button id="dataViewBtn" type="button" class="btn"><i class="fa fa-table"></i><span>表格视图</span></button>
+                        <button id="graphViewBtn" type="button" class="btn"><i class="fa fa-bar-chart-o"></i>图形视图</button>
+                    </div>
+                </div>
+                <div id="bottomPart">
+                    <ul id="myTab" class="nav nav-pills">
+                        <li class="active"><a href="#home" data-toggle="tab">总能耗</a></li>
+                        <li><a href="#home" data-toggle="tab">总用电</a></li>
+                        <li><a href="#home" data-toggle="tab">空调系统用电</a></li>
+                        <li><a href="#home" data-toggle="tab">照明用电</a></li>
+                        <li><a href="#home" data-toggle="tab">碳排放量</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="home">
+                            <div class="right-region">
+                                <div class="container">
+                                    <div id="conditionRow" class="row">
+                                        <span>选择分类</span><select class="select">
+                                            <option>A1号楼</option>
+                                            <option>A2号楼</option>
+                                        </select>
+                                        <span>选择类型</span><select class="select">
+                                            <option>日报</option>
+                                            <option>其他</option>
+                                        </select>
+                                        <span>选择日期</span><input id="startDate"></input><span id="toSpan">至</span><input id="endDate"></input>
+                                        <div id="btnGroup" class="btn-group">
+                                            <button id="searchBtn" type="button" class="btn"><i class="fa fa-search"></i><i class="hideI">1</i></button>
+                                            <button id="downBtn" type="button" class="btn"><i class="fa fa-download"></i><i class="hideI">2</i></button>
+                                        </div>
+                                    </div>
+                                    <div class="row graph">
+                                        <div class="col-md-6">
+                                            <div class="graphTitle">总耗能</div>
+                                            <div id="graphOne">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="graphTitle">总耗能分项</div>
+                                            <div id="graphTwo">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row data">
+                                        <div class="col-md-6">
+                                            <table class="table table-striped table-bordered">
+                                                <caption>总耗能</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>时间</th>
+                                                        <th>当前值</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="serialTBody">
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <table class="table table-striped table-bordered">
+                                                <caption>总耗能分项</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>说明项</th>
+                                                        <th>当前值</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="pieTBody">
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="tab-pane fade" id="first">first</div>
+                        <div class="tab-pane fade" id="second">second</div>
+                        <div class="tab-pane fade" id="third">third</div>
+                        <div class="tab-pane fade" id="four">four</div> -->
+                    </div>
+                </div>
+				<!--my end-->
+            </section>
+
+            <!-- Older IE Message -->
+            <!--[if lt IE 9]>
+                <div class="ie-block">
+                    <h1 class="Ops">Ooops!</h1>
+                    <p>You are using an outdated version of Internet Explorer, upgrade to any of the following web browser in order to access the maximum functionality of this website. </p>
+                    <ul class="browsers">
+                        <li>
+                            <a href="https://www.google.com/intl/en/chrome/browser/">
+                                <img src="img/browsers/chrome.png" alt="">
+                                <div>Google Chrome</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.mozilla.org/en-US/firefox/new/">
+                                <img src="img/browsers/firefox.png" alt="">
+                                <div>Mozilla Firefox</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.opera.com/computer/windows">
+                                <img src="img/browsers/opera.png" alt="">
+                                <div>Opera</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://safari.en.softonic.com/">
+                                <img src="img/browsers/safari.png" alt="">
+                                <div>Safari</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://windows.microsoft.com/en-us/internet-explorer/downloads/ie-10/worldwide-languages">
+                                <img src="img/browsers/ie.png" alt="">
+                                <div>Internet Explorer(New)</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <p>Upgrade your browser for a Safer and Faster web experience. <br/>Thank you for your patience...</p>
+                </div>   
+            <![endif]-->
+        </section>
+        
+        <!-- Javascript Libraries -->
+        <!-- jQuery -->
+        <script src="js/jquery-1.10.2.js"></script> <!-- jQuery Library -->
+        <script src="js/jquery-ui-1.11.0.js"></script> <!-- jQuery UI -->
+        <script src="js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
+
+        <!-- Bootstrap -->
+        <script src="js/bootstrap-3.3.4.js"></script>
+
+        <!-- Charts -->
+        <script src="js/charts/jquery.flot.js"></script> <!-- Flot Main -->
+        <script src="js/charts/jquery.flot.time.js"></script> <!-- Flot sub -->
+        <script src="js/charts/jquery.flot.animator.min.js"></script> <!-- Flot sub -->
+        <script src="js/charts/jquery.flot.resize.min.js"></script> <!-- Flot sub - for repaint when resizing the screen -->
+
+        <script src="js/sparkline.min.js"></script> <!-- Sparkline - Tiny charts -->
+        <script src="js/easypiechart.js"></script> <!-- EasyPieChart - Animated Pie Charts -->
+        <script src="js/charts.js"></script> <!-- All the above chart related functions -->
+
+        <!-- Map -->
+        <script src="js/maps/jvectormap.min.js"></script> <!-- jVectorMap main library -->
+        <script src="js/maps/usa.js"></script> <!-- USA Map for jVectorMap -->
+
+        <!--  Form Related -->
+        <script src="js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
+        <!--Media Player-->
+        <script src="js/media-player.min.js"></script> <!-- USA Map for jVectorMap -->
+        <!-- UX -->
+        <script src="js/scroll.min.js"></script> <!-- Custom Scrollbar -->
+
+        <!-- Other -->
+        <script src="js/calendar.min.js"></script> <!-- Calendar -->
+        <script src="js/feeds.min.js"></script> <!-- News Feeds -->
+        
+
+        <!-- All JS functions -->
+        <script src="js/functions.js"></script>
+        <!--my-->
+        <script type="text/javascript" src="js/energy_consumption.js"></script>
+        <script type="text/javascript" src="assets/amcharts/amcharts.js"></script>
+        <script type="text/javascript" src="assets/amcharts/serial.js"></script>
+        <script type="text/javascript" src="assets/amcharts/pie.js"></script>
+        <script type="text/javascript" src="assets/bootstrap-select/bootstrap-select.min.js"></script>
+        <script type="text/javascript" src="assets/datepicker/js/bootstrap-datepicker.min.js"></script>
+        <script type="text/javascript" src="assets/datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+@import "drop_down.scss";
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400%;
+}
+
+.state-01 {
+    display: block;
+    width: 100%;
+    height: 25%;
+}

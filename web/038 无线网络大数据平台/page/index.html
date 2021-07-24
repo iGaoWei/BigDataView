@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>物流大数据平台</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .t_btn {
+            margin-top: 20px;
+        }
+
+        .t_btn li {
+            display: inline-block;
+            margin: 0 0px 20px 20px;
+        }
+
+        .t_btn button,
+        .t_a {
+            display: inline-block;
+            padding: 10px 5px;
+            width: 80px;
+            border-style: solid;
+            border-width: 0;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: bold;
+            line-height: normal;
+            margin: 0 0 0.5em 0;
+            position: relative;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            font-size: 1em;
+            background-color: #2C58A6;
+            border-color: #0263ff;
+            color: white;
+            box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.2) inset !important;
+            margin-right: 0.5em;
+            border-radius: 4px;
+        }
+
+        .t_height {
+            line-height: 80px;
+            position: absolute;
+            right: 28px;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!--header-->
+    <div class="header">
+        <div class="bg_header">
+            <div class="header_nav fl t_title">
+                物流大数据服务平台
+            </div> 
+        </div>
+        <div class="header_nav fl">
+        </div>
+        <div class="header_myself fr t_height">
+            <a class="t_a" href="../index.html">返回 &nbsp;</a>
+        </div>
+    </div>
+    <!--main-->
+    <div class="data_content">
+        <div class="data_main">
+            <div class="main_left fl">
+                <div class="left_1">
+                    <ul class="t_btn">
+                        <li>
+                            <button class="t_btn0">中国地图</button>
+                        </li>
+                        <li>
+                            <button class="t_btn3">中国铁路</button>
+                        </li>
+                        <li>
+                            <button class="t_btn14">GPS</button>
+                        </li>
+                        <li>
+                            <button class="t_btn13">湖南省</button>
+                        </li>
+                        <li>
+                            <button class="t_btn2">湖南飞机场</button>
+                        </li>
+                        <li>
+                            <button class="t_btn4">湖南铁路</button>
+                        </li>
+                        <li>
+                            <button class="t_btn1">湖南公路</button>
+                        </li>
+                        <li>
+                            <button class="t_btn6">交通就业量</button>
+                        </li>
+                        <li>
+                            <button class="t_btn7">湖南货运量</button>
+                        </li>
+                        <li>
+                            <button class="t_btn5">各市货运量</button>
+                        </li>
+                        <li>
+                            <button class="t_btn8">货物周转量</button>
+                        </li>
+                        <li>
+                            <button class="t_btn9">运输线长度</button>
+                        </li>
+                        <li>
+                            <button class="t_btn10">湖南业务量</button>
+                        </li>
+                        <li>
+                            <button class="t_btn11">营运汽车</button>
+                        </li>
+                        <li>
+                            <button class="t_btn12">公共交通</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="left_2" style="display:none">
+                    <div class="main_title">
+                         湖南省地图
+                    </div>
+                </div>
+            </div>
+            <div class="main_center fl">
+                <div class="center_text t_cos0">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i> 
+                        <i class="l_t_line"></i> 
+                    </div> 
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i> 
+                        <i class="r_t_line"></i> 
+                    </div> 
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i> 
+                        <i class="b_l_line"></i> 
+                    </div> 
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i> 
+                        <i class="b_r_line"></i> 
+                    </div> 
+                    <div class="main_title">
+                         中国地图
+                    </div>
+                    <div id="chart_map" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos1" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i> 
+                        <i class="l_t_line"></i> 
+                    </div> 
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i> 
+                        <i class="r_t_line"></i> 
+                    </div> 
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i> 
+                        <i class="b_l_line"></i> 
+                    </div> 
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i> 
+                        <i class="b_r_line"></i> 
+                    </div>
+                    <div class="main_title">
+                         湖南省高速公路
+                    </div>
+                    <div id="chart_2" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos2" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i> 
+                        <i class="l_t_line"></i> 
+                    </div> 
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i> 
+                        <i class="r_t_line"></i> 
+                    </div> 
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i> 
+                        <i class="b_l_line"></i> 
+                    </div> 
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i> 
+                        <i class="b_r_line"></i> 
+                    </div>
+                    <div class="main_title">
+                        湖南省飞机场
+                    </div>
+                    <div id="chart_0" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos3" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i> 
+                        <i class="l_t_line"></i> 
+                    </div> 
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i> 
+                        <i class="r_t_line"></i> 
+                    </div> 
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i> 
+                        <i class="b_l_line"></i> 
+                    </div> 
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i> 
+                        <i class="b_r_line"></i> 
+                    </div>
+                    <div class="main_title">
+                     中国铁路
+                    </div>
+                    <div id="chart_4" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos4" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i> 
+                        <i class="l_t_line"></i> 
+                    </div> 
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i> 
+                        <i class="r_t_line"></i> 
+                    </div> 
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i> 
+                        <i class="b_l_line"></i> 
+                    </div> 
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i> 
+                        <i class="b_r_line"></i> 
+                    </div>
+                    <div class="main_title">
+                        湖南货运量收入
+                    </div>
+                    <div id="chart_1" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos5" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i> 
+                        <i class="l_t_line"></i> 
+                    </div> 
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i> 
+                        <i class="r_t_line"></i> 
+                    </div> 
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i> 
+                        <i class="b_l_line"></i> 
+                    </div> 
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i> 
+                        <i class="b_r_line"></i> 
+                    </div>
+                    <div class="main_title">
+                        交通就业人员
+                    </div>
+                    <div id="chart_3" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos6" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i> 
+                        <i class="l_t_line"></i> 
+                    </div> 
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i> 
+                        <i class="r_t_line"></i> 
+                    </div> 
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i> 
+                        <i class="b_l_line"></i> 
+                    </div> 
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i> 
+                        <i class="b_r_line"></i> 
+                    </div>
+                    <div class="main_title">
+                        湖南省铁路
+                    </div>
+                    <div id="chart_6" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos7" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i> 
+                        <i class="l_t_line"></i> 
+                    </div> 
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i> 
+                        <i class="r_t_line"></i> 
+                    </div> 
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i> 
+                        <i class="b_l_line"></i> 
+                    </div> 
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i> 
+                        <i class="b_r_line"></i> 
+                    </div>
+                    <div class="main_title">
+                         湖南总货运量
+                    </div>
+                    <div id="chart_7" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos8" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i> 
+                        <i class="l_t_line"></i> 
+                    </div> 
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i> 
+                        <i class="r_t_line"></i> 
+                    </div> 
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i> 
+                        <i class="b_l_line"></i> 
+                    </div> 
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i> 
+                        <i class="b_r_line"></i> 
+                    </div>
+                    <div class="main_title">
+                         湖南货物周转量
+                    </div>
+                    <div id="chart_8" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos9" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i> 
+                        <i class="l_t_line"></i> 
+                    </div> 
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i> 
+                        <i class="r_t_line"></i> 
+                    </div> 
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i> 
+                        <i class="b_l_line"></i> 
+                    </div> 
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i> 
+                        <i class="b_r_line"></i> 
+                    </div>
+                    <div class="main_title">
+                         湖南运输线长度
+                    </div>
+                    <div id="chart_9" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos10" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i> 
+                        <i class="l_t_line"></i> 
+                    </div> 
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i> 
+                        <i class="r_t_line"></i> 
+                    </div> 
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i> 
+                        <i class="b_l_line"></i> 
+                    </div> 
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i> 
+                        <i class="b_r_line"></i> 
+                    </div>
+                    <div class="main_title">
+                        湖南业务量
+                    </div>
+                    <div id="chart_10" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos11" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i> 
+                        <i class="l_t_line"></i> 
+                    </div> 
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i> 
+                        <i class="r_t_line"></i> 
+                    </div> 
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i> 
+                        <i class="b_l_line"></i> 
+                    </div> 
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i> 
+                        <i class="b_r_line"></i> 
+                    </div>
+                    <div class="main_title">
+                        湖南公路营运
+                    </div>
+                    <div id="chart_11" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos12" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i> 
+                        <i class="l_t_line"></i> 
+                    </div> 
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i> 
+                        <i class="r_t_line"></i> 
+                    </div> 
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i> 
+                        <i class="b_l_line"></i> 
+                    </div> 
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i> 
+                        <i class="b_r_line"></i> 
+                    </div>
+                    <div class="main_title">
+                       湖南城市交通
+                    </div>
+                    <div id="chart_12" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos13" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i> 
+                        <i class="l_t_line"></i> 
+                    </div> 
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i> 
+                        <i class="r_t_line"></i> 
+                    </div> 
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i> 
+                        <i class="b_l_line"></i> 
+                    </div> 
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i> 
+                        <i class="b_r_line"></i> 
+                    </div>
+                    <div class="main_title">
+                        湖南省地图
+                    </div>
+                    <div id="chart_13" class="chart" style="width:100%;height:778px; cursor: pointer;"></div>
+                </div>
+                <div class="center_text t_cos14" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i> 
+                        <i class="l_t_line"></i> 
+                    </div> 
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i> 
+                        <i class="r_t_line"></i> 
+                    </div> 
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i> 
+                        <i class="b_l_line"></i> 
+                    </div> 
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i> 
+                        <i class="b_r_line"></i> 
+                    </div>
+                    <div class="main_title">
+                        GPS
+                    </div>
+                    <div id="chart_14" class="chart" style="width:100%;height:778px; cursor: pointer;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+    <script src="../js/jquery-2.2.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=dApOtvB5E3x6byHpUGHbRF1fxctCBdjw"></script>
+    <script src="../js/echarts.min.js"></script>
+    <script src="../js/dataTool.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/china.js"></script>
+    <script src="../js/hunan.js"></script>
+    <script src="../js/bmap.js"></script>
+    <script src="../js/echarts-all.js"></script>
+</html>

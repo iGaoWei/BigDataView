@@ -1,0 +1,512 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>index</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="http://test.279.jingan8.cn/test3/js/echarts.min.js"></script>
+<link rel="stylesheet" href="css/comon0.css">
+</head>
+<body>
+<div class="loading">
+  <div class="loadbox"> <img src="images/loading.gif"> 页面加载中... </div>
+</div>
+	<div class="canvas" >
+	<canvas width="100%" height="100%"></canvas>
+	</div>
+	
+<div class="head">
+  <h1>大数据可视化系统数据分析通用模版</h1>
+</div>
+<div class="mainbox">
+	<div class="topnav">
+	<ul  class="clearfix">
+		<li>	<div class="boxall">
+        <div class="tit01">模块标题</div>
+		 <div class="boxnav nav01" style="display: flex; align-items: center;">
+				
+			 <div class="yqlist">
+            <ul class="clearfix">
+				 			   <li><div class="yq">266<span>今日开卡</span></div></li>
+                              <li><div class="yq">2634<span>广告展示</span></div></li>
+                              <li><div class="yq">567<span>广告点击</span></div></li>
+                              <li><div class="yq">56345<span>卡券发放</span></div></li>
+                              <li><div class="yq">721<span>卡券核销</span></div></li>
+                            
+                              <li><div class="yq">194<span>朋友圈广告展示</span></div></li>
+                            </ul>
+          </div>
+			 
+				 </div>
+        <div class="boxfoot"></div>
+      </div></li>
+		<li>
+		<div class="boxall" style="padding: 0;">
+      
+        <div class="boxnav" style="height: 100%; display: flex; align-items: center;">
+		  	<ul class="zjyl">
+				<li><i>129018<em>元</em></i><span>今日交易量</span></li>
+				<li><i>14197421<em>元</em></i><span>总交易量</span></li>
+				<li><i>1423412<em>笔</em></i><span>今日交易笔数</span></li>
+				<li><i>124148232<em>笔</em></i><span>总交易笔数</span></li>
+			</ul>
+			
+			
+		  </div>
+        <div class="boxfoot"></div>
+      </div>
+		</li>
+	<li>
+		<div class="boxall" style="padding: 0;">
+      <div class="tit01">模块标题</div>
+        <div class="boxnav nav03"  id="echart3">
+		
+			
+			
+		  </div>
+        <div class="boxfoot"></div>
+      </div>
+		</li>
+		</ul>
+	</div>
+
+	
+	<div class="" style="height:calc(50% - .25rem)">
+	<ul class="ulheight">
+		<li><div class="boxall" >
+        <div class="tit01">模块标题</div>
+			 <div class="boxnav nav03" id="echart1">
+				 
+				 
+				 
+				 
+			
+			</div>
+        <div class="boxfoot"></div>
+      </div>
+		</li>
+		<li><div class="boxall">
+        <div class="tit01">模块标题</div>
+			 <div class="boxnav nav03" id="echart2">
+				 
+				 
+				 
+				 
+			
+			</div>
+        <div class="boxfoot"></div>
+      </div>
+		</li>
+		<li><div class="boxall">
+        <div class="tit01">模块标题</div>
+			 <div class="boxnav nav03">
+				 
+				 	 <div class="listhead ">
+				  <span>商户名</span>
+					  <span>金额</span>
+					  <span>方式</span>
+					  <span>时间</span>
+				 </div>
+				 <div class="listnav  scrollDiv">
+				 <ul>
+					 <li> 
+						 <span>xx超市</span> 
+						 <span>34.5</span> 
+						 <span>支付宝</span> 
+						 <span>2019-11-08</span> 
+					 </li>
+					 <li> 
+						 <span>xx超市</span> 
+						 <span>34.5</span> 
+						 <span>支付宝</span> 
+						 <span>2019-11-08</span> 
+					 </li>
+					 <li> 
+						 <span>xx超市</span> 
+						 <span>34.5</span> 
+						 <span>支付宝</span> 
+						 <span>2019-11-08</span> 
+					 </li>
+					 <li> 
+						 <span>xx超市</span> 
+						 <span>34.5</span> 
+						 <span>支付宝</span> 
+						 <span>2019-11-08</span> 
+					 </li>
+					 <li> 
+						 <span>xx超市</span> 
+						 <span>34.5</span> 
+						 <span>支付宝</span> 
+						 <span>2019-11-08</span> 
+					 </li>
+					 <li> 
+						 <span>xx超市</span> 
+						 <span>34.5</span> 
+						 <span>支付宝</span> 
+						 <span>2019-11-08</span> 
+					 </li>
+					 <li> 
+						 <span>xx超市</span> 
+						 <span>34.5</span> 
+						 <span>支付宝</span> 
+						 <span>2019-11-08</span> 
+					 </li>
+					 <li> 
+						 <span>xx超市</span> 
+						 <span>34.5</span> 
+						 <span>支付宝</span> 
+						 <span>2019-11-08</span> 
+					 </li>
+					 <li> 
+						 <span>xx超市</span> 
+						 <span>34.5</span> 
+						 <span>支付宝</span> 
+						 <span>2019-11-08</span> 
+					 </li>
+					 <li> 
+						 <span>xx超市</span> 
+						 <span>34.5</span> 
+						 <span>支付宝</span> 
+						 <span>2019-11-08</span> 
+					 </li>
+					 <li> 
+						 <span>xx超市</span> 
+						 <span>34.5</span> 
+						 <span>支付宝</span> 
+						 <span>2019-11-08</span> 
+					 </li>
+					
+					 </ul>
+				 </div>
+				 
+				 
+				 
+			
+			</div>
+        <div class="boxfoot"></div>
+      </div>
+		</li>
+		</ul>
+	</div>
+	
+	
+	
+	
+  
+</div>
+
+
+
+<script language="JavaScript" src="js/js.js"></script> 
+<script type="text/javascript" src="js/jquery.countup.min.js"></script> 
+<script type="text/javascript" src="js/jquery.waypoints.min.js"></script> 
+	<script src="js/jquery.liMarquee.js"></script> 
+<script type="text/javascript">
+$('.counter').countUp();
+
+$(function(){
+	$('.scrollDiv').liMarquee({
+		direction: 'up',//身上滚动 
+		runshort: false,//内容不足时不滚动
+		scrollamount: 20//速度
+	});
+});
+
+</script> 
+
+
+<script>
+
+$(function(){
+
+  var canvas = document.querySelector('canvas'),
+
+      ctx = canvas.getContext('2d')
+
+  canvas.width = window.innerWidth;
+
+  canvas.height = window.innerHeight;
+
+  ctx.lineWidth = .3;
+
+  ctx.strokeStyle = (new Color(150)).style;
+
+
+
+  var mousePosition = {
+
+    x: 30 * canvas.width / 100,
+
+    y: 30 * canvas.height / 100
+
+  };
+
+
+
+  var dots = {
+
+    nb: 250,
+
+    distance: 50,
+
+    d_radius: 400,
+
+    array: []
+
+  };
+
+
+
+  function colorValue(min) {
+
+    return Math.floor(Math.random() * 255 + min);
+
+  }
+
+  
+
+  function createColorStyle(r,g,b) {
+
+    return 'rgba(' + r + ',' + g + ',' + b + ', 0.8)';
+
+  }
+
+  
+
+  function mixComponents(comp1, weight1, comp2, weight2) {
+
+    return (comp1 * weight1 + comp2 * weight2) / (weight1 + weight2);
+
+  }
+
+  
+
+  function averageColorStyles(dot1, dot2) {
+
+    var color1 = dot1.color,
+
+        color2 = dot2.color;
+
+    
+
+    var r = mixComponents(color1.r, dot1.radius, color2.r, dot2.radius),
+
+        g = mixComponents(color1.g, dot1.radius, color2.g, dot2.radius),
+
+        b = mixComponents(color1.b, dot1.radius, color2.b, dot2.radius);
+
+    return createColorStyle(Math.floor(r), Math.floor(g), Math.floor(b));
+
+  }
+
+  
+
+  function Color(min) {
+
+    min = min || 0;
+
+    this.r = colorValue(min);
+
+    this.g = colorValue(min);
+
+    this.b = colorValue(min);
+
+    this.style = createColorStyle(this.r, this.g, this.b);
+
+  }
+
+
+
+  function Dot(){
+
+    this.x = Math.random() * canvas.width;
+
+    this.y = Math.random() * canvas.height;
+
+
+
+    this.vx = -.5 + Math.random();
+
+    this.vy = -.5 + Math.random();
+
+
+
+    this.radius = Math.random() * 2;
+
+
+
+    this.color = new Color();
+
+    console.log(this);
+
+  }
+
+
+
+  Dot.prototype = {
+
+    draw: function(){
+
+      ctx.beginPath();
+
+      ctx.fillStyle = this.color.style;
+
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+
+      ctx.fill();
+
+    }
+
+  };
+
+
+
+  function createDots(){
+
+    for(i = 0; i < dots.nb; i++){
+
+      dots.array.push(new Dot());
+
+    }
+
+  }
+
+
+
+  function moveDots() {
+
+    for(i = 0; i < dots.nb; i++){
+
+
+
+      var dot = dots.array[i];
+
+
+
+      if(dot.y < 0 || dot.y > canvas.height){
+
+        dot.vx = dot.vx;
+
+        dot.vy = - dot.vy;
+
+      }
+
+      else if(dot.x < 0 || dot.x > canvas.width){
+
+        dot.vx = - dot.vx;
+
+        dot.vy = dot.vy;
+
+      }
+
+      dot.x += dot.vx;
+
+      dot.y += dot.vy;
+
+    }
+
+  }
+
+
+
+  function connectDots() {
+
+    for(i = 0; i < dots.nb; i++){
+
+      for(j = 0; j < dots.nb; j++){
+
+        i_dot = dots.array[i];
+
+        j_dot = dots.array[j];
+
+
+
+        if((i_dot.x - j_dot.x) < dots.distance && (i_dot.y - j_dot.y) < dots.distance && (i_dot.x - j_dot.x) > - dots.distance && (i_dot.y - j_dot.y) > - dots.distance){
+
+          if((i_dot.x - mousePosition.x) < dots.d_radius && (i_dot.y - mousePosition.y) < dots.d_radius && (i_dot.x - mousePosition.x) > - dots.d_radius && (i_dot.y - mousePosition.y) > - dots.d_radius){
+
+            ctx.beginPath();
+
+            ctx.strokeStyle = averageColorStyles(i_dot, j_dot);
+
+            ctx.moveTo(i_dot.x, i_dot.y);
+
+            ctx.lineTo(j_dot.x, j_dot.y);
+
+            ctx.stroke();
+
+            ctx.closePath();
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+
+  function drawDots() {
+
+    for(i = 0; i < dots.nb; i++){
+
+      var dot = dots.array[i];
+
+      dot.draw();
+
+    }
+
+  }
+
+
+
+  function animateDots() {
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    moveDots();
+
+    connectDots();
+
+    drawDots();
+
+
+
+    requestAnimationFrame(animateDots);	
+
+  }
+
+
+
+  $('canvas').on('mousemove', function(e){
+
+    mousePosition.x = e.pageX;
+
+    mousePosition.y = e.pageY;
+
+  });
+
+
+
+  $('canvas').on('mouseleave', function(e){
+
+    mousePosition.x = canvas.width / 2;
+
+    mousePosition.y = canvas.height / 2;
+
+  });
+
+
+
+  createDots();
+
+  requestAnimationFrame(animateDots);	
+
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!--
+访问地址：https://paycloud.vip
+
+ -->
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="UTF-8">
+		<title>index</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script src="laydate/laydate.js"></script>
+		<script src="https://www.jq22.com/jquery/echarts-4.2.1.min.js"></script>
+		<script src="js/index.js"></script>
+		<script src="js/jquery.nicescroll.min.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<div class="page_top">
+				<div class="top_left">
+					<div class="logo">
+						<img src="images/logo.jpg"/>
+					</div>
+					<h2 class="wms_name"><span>保税区A仓</span><em>单仓</em></h2>
+					<div class="depot">
+						<input type="text" placeholder="选择仓库..." readonly="readonly"/>
+						<div class="depo_down">
+							<ul>
+								<li>A仓库</li>
+								<li>B仓库</li>
+								<li>C仓库</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="top_time">
+					<input type="text" class="time_star" id="time_star" value="2018-11-11 00:00:00" readonly="readonly"/><span>至</span><input type="text" class="time_end" id="time_end" value="2018-12-11 00:00:00" readonly="readonly"/>
+				</div>
+			</div>
+			<!--顶部-->
+			<div class="order_list">
+				<div class="order">
+					<div class="order_name">总单量</div>
+					<h2 class="order_num">204398</h2>
+				</div>
+				<div class="order">
+					<div class="order_name">总出库量</div>
+					<h2 class="order_num">197672</h2>
+				</div>
+				<div class="order">
+					<div class="order_name">未出库单量</div>
+					<h2 class="order_num">1350</h2>
+				</div>
+				<div class="order">
+					<div class="order_name">今天出库量</div>
+					<h2 class="order_num">5414</h2>
+				</div>
+				<div class="order">
+					<div class="order_name">未开始单量</div>
+					<h2 class="order_num">734</h2>
+				</div>
+			</div>
+			<!--订单量-->
+			<div class="main">
+				<div class="main_left">
+					<div class="home_today" >
+						<div class="home_tit">
+							今天作业趋势图
+						</div>
+						<div class="home_list">
+							<div class="home_order">
+								<div class="home_name">
+									新增单量
+								</div>
+								<div class="home_num new_num">
+									86
+								</div>
+							</div>
+							<div class="home_order">
+								<div class="home_name">
+									拣选单量
+								</div>
+								<div class="home_num jian_num">
+									0
+								</div>
+							</div>
+							<div class="home_order">
+								<div class="home_name">
+									质检单量
+								</div>
+								<div class="home_num zhi_num">
+									2
+								</div>
+							</div>
+							<div class="home_order">
+								<div class="home_name">
+									出库单量
+								</div>
+								<div class="home_num chu_num">
+									5
+								</div>
+							</div>
+						</div>
+						<div id="home_today"></div>
+						<!--今日作业趋势图-->
+					</div>
+					<div class="ship_order" id="ship_order"></div>
+					<!--货主订单执行情况-->
+				</div>
+				<div class="main_midd">
+					<div class="imple" id="imple"></div>
+					<!--订单执行情况-->
+					<div class="order_wait" >
+						<div class="commis">
+							<div class="comm_tit">
+								订单代办事项
+							</div>
+							<div class="comm_list">
+								<div class="comm_cont">
+									<span class="com_name">收货等待</span><span class="com_num">228</span>
+								</div>
+							</div>
+							<div class="comm_list">
+								<div class="comm_cont">
+									<span class="com_name">上架等待</span><span class="com_num">9</span>
+								</div>
+							</div>
+							<div class="comm_list">
+								<div class="comm_cont">
+									<span class="com_name">分配等待</span><span class="com_num">0</span>
+								</div>
+							</div>
+							<div class="comm_list">
+								<div class="comm_cont">
+									<span class="com_name">拣货等待</span><span class="com_num">0</span>
+								</div>
+							</div>
+							<div class="comm_list">
+								<div class="comm_cont">
+									<span class="com_name">复核等待</span><span class="com_num">6</span>
+								</div>
+							</div>
+							<div class="comm_list">
+								<div class="comm_cont">
+									<span class="com_name">发货等待</span><span class="com_num">0</span>
+								</div>
+							</div>
+							<div class="comm_list">
+								<div class="comm_cont">
+									<span class="com_name">异常等待</span><span class="com_num">0</span>
+								</div>
+							</div>
+						</div>
+						<!--订单代办事项-->
+						<div class="abort">
+							<div class="abot_tit">
+								截止时间出库率
+							</div>
+							<div class="abort_box">
+								<div class="abort_list">
+								  <div class="abort_use">
+								  	<div class="abort_cont">
+									  	<div class="abort_name">
+									  		货主1
+									  	</div>
+									  	<div class="abort_num">
+									  		90%
+									  	</div>
+									  </div>
+									  <div class="abort_cont">
+									  	<div class="abort_name">
+									  		货主2
+									  	</div>
+									  	<div class="abort_num">
+									  		90%
+									  	</div>
+									  </div>
+									  <div class="abort_cont">
+									  	<div class="abort_name">
+									  		货主3
+									  	</div>
+									  	<div class="abort_num">
+									  		90%
+									  	</div>
+									  </div>
+									  <div class="abort_cont">
+									  	<div class="abort_name">
+									  		货主4
+									  	</div>
+									  	<div class="abort_num">
+									  		90%
+									  	</div>
+									  </div>
+									  <div class="abort_cont">
+									  	<div class="abort_name">
+									  		货主5
+									  	</div>
+									  	<div class="abort_num">
+									  		90%
+									  	</div>
+									  </div>
+									  <div class="abort_cont">
+									  	<div class="abort_name">
+									  		货主6
+									  	</div>
+									  	<div class="abort_num">
+									  		90%
+									  	</div>
+									  </div>
+									  <div class="abort_cont">
+									  	<div class="abort_name">
+									  		货主4
+									  	</div>
+									  	<div class="abort_num">
+									  		90%
+									  	</div>
+									  </div>
+									  <div class="abort_cont">
+									  	<div class="abort_name">
+									  		货主5
+									  	</div>
+									  	<div class="abort_num">
+									  		90%
+									  	</div>
+									  </div>
+									  <div class="abort_cont">
+									  	<div class="abort_name">
+									  		货主6
+									  	</div>
+									  	<div class="abort_num">
+									  		90%
+									  	</div>
+									  </div>
+									  <div class="abort_cont">
+									  	<div class="abort_name">
+									  		货主4
+									  	</div>
+									  	<div class="abort_num">
+									  		90%
+									  	</div>
+									  </div>
+									  <div class="abort_cont">
+									  	<div class="abort_name">
+									  		货主5
+									  	</div>
+									  	<div class="abort_num">
+									  		90%
+									  	</div>
+									  </div>
+									  <div class="abort_cont">
+									  	<div class="abort_name">
+									  		货主6
+									  	</div>
+									  	<div class="abort_num">
+									  		90%
+									  	</div>
+									  </div>
+									  <div class="abort_cont">
+									  	<div class="abort_name">
+									  		货主7
+									  	</div>
+									  	<div class="abort_num">
+									  		90%
+									  	</div>
+									  </div>
+
+								  </div>
+
+								</div>
+							</div>
+						</div>
+						<!--截止时间出库率-->
+					</div>
+
+				</div>
+				<div class="main_rig">
+					 <div class="situ_tit">
+					 	上一小时作业情况
+					 </div>
+					 <div class="situ_use">
+					    <div class="situ_list">
+
+					 	    <ul>
+					 			<li>
+					 			 <div class="situ_top">
+					 			 	<span class="situ_name">货主1</span><span class="situ_time">(8点)</span>
+					 			 </div>
+					 			 <div class="lssl">
+					 			 	<div class="lsl_name">
+					 			 		出库量
+					 			 	</div>
+					 			 	<div class="lal_num">
+					 			 		138
+					 			 	</div>
+					 			 </div>
+					 			 <div class="lal_all"></div>
+					 			 <div class="quan">
+					 			 	<div class="quan_name">
+					 			 		接单量
+					 			 	</div>
+					 			 	<div class="quan_num">
+					 			 		99
+					 			 	</div>
+					 			 </div>
+					 			 <div class="quan_all"><div class="tity"></div></div>
+					 			</li>
+					 			<li>
+					 			 <div class="situ_top">
+					 			 	<span class="situ_name">货主2</span><span class="situ_time">(8点)</span>
+					 			 </div>
+					 			 <div class="lssl">
+					 			 	<div class="lsl_name">
+					 			 		出库量
+					 			 	</div>
+					 			 	<div class="lal_num">
+					 			 		57
+					 			 	</div>
+					 			 </div>
+					 			 <div class="lal_all"></div>
+					 			 <div class="quan">
+					 			 	<div class="quan_name">
+					 			 		接单量
+					 			 	</div>
+					 			 	<div class="quan_num">
+					 			 		23
+					 			 	</div>
+					 			 </div>
+					 			 <div class="quan_all"><div class="tity"></div></div>
+					 			</li>
+					 			<li>
+					 			 <div class="situ_top">
+					 			 	<span class="situ_name">货主3</span><span class="situ_time">(8点)</span>
+					 			 </div>
+					 			 <div class="lssl">
+					 			 	<div class="lsl_name">
+					 			 		出库量
+					 			 	</div>
+					 			 	<div class="lal_num">
+					 			 		80
+					 			 	</div>
+					 			 </div>
+					 			 <div class="lal_all"></div>
+					 			 <div class="quan">
+					 			 	<div class="quan_name">
+					 			 		接单量
+					 			 	</div>
+					 			 	<div class="quan_num">
+					 			 		40
+					 			 	</div>
+					 			 </div>
+					 			 <div class="quan_all"><div class="tity"></div></div>
+					 			</li>
+					 			<li>
+					 			 <div class="situ_top">
+					 			 	<span class="situ_name">货主4</span><span class="situ_time">(8点)</span>
+					 			 </div>
+					 			 <div class="lssl">
+					 			 	<div class="lsl_name">
+					 			 		出库量
+					 			 	</div>
+					 			 	<div class="lal_num">
+					 			 		400
+					 			 	</div>
+					 			 </div>
+					 			 <div class="lal_all"></div>
+					 			 <div class="quan">
+					 			 	<div class="quan_name">
+					 			 		接单量
+					 			 	</div>
+					 			 	<div class="quan_num">
+					 			 		300
+					 			 	</div>
+					 			 </div>
+					 			 <div class="quan_all"><div class="tity"></div></div>
+					 			</li>
+					 			<li>
+					 			 <div class="situ_top">
+					 			 	<span class="situ_name">货主5</span><span class="situ_time">(8点)</span>
+					 			 </div>
+					 			 <div class="lssl">
+					 			 	<div class="lsl_name">
+					 			 		出库量
+					 			 	</div>
+					 			 	<div class="lal_num">
+					 			 		57
+					 			 	</div>
+					 			 </div>
+					 			 <div class="lal_all"></div>
+					 			 <div class="quan">
+					 			 	<div class="quan_name">
+					 			 		接单量
+					 			 	</div>
+					 			 	<div class="quan_num">
+					 			 		45
+					 			 	</div>
+					 			 </div>
+					 			 <div class="quan_all"><div class="tity"></div></div>
+					 			</li>
+					 			<li>
+					 			 <div class="situ_top">
+					 			 	<span class="situ_name">货主6</span><span class="situ_time">(8点)</span>
+					 			 </div>
+					 			 <div class="lssl">
+					 			 	<div class="lsl_name">
+					 			 		出库量
+					 			 	</div>
+					 			 	<div class="lal_num">
+					 			 		57
+					 			 	</div>
+					 			 </div>
+					 			 <div class="lal_all"></div>
+					 			 <div class="quan">
+					 			 	<div class="quan_name">
+					 			 		接单量
+					 			 	</div>
+					 			 	<div class="quan_num">
+					 			 		30
+					 			 	</div>
+					 			 </div>
+					 			 <div class="quan_all"><div class="tity"></div></div>
+					 			</li>
+					 			<li>
+					 			 <div class="situ_top">
+					 			 	<span class="situ_name">货主7</span><span class="situ_time">(8点)</span>
+					 			 </div>
+					 			 <div class="lssl">
+					 			 	<div class="lsl_name">
+					 			 		出库量
+					 			 	</div>
+					 			 	<div class="lal_num">
+					 			 		57
+					 			 	</div>
+					 			 </div>
+					 			 <div class="lal_all"></div>
+					 			 <div class="quan">
+					 			 	<div class="quan_name">
+					 			 		接单量
+					 			 	</div>
+					 			 	<div class="quan_num">
+					 			 		40
+					 			 	</div>
+					 			 </div>
+					 			 <div class="quan_all"><div class="tity"></div></div>
+					 			</li>
+					 			<li>
+					 			 <div class="situ_top">
+					 			 	<span class="situ_name">货主8</span><span class="situ_time">(8点)</span>
+					 			 </div>
+					 			 <div class="lssl">
+					 			 	<div class="lsl_name">
+					 			 		出库量
+					 			 	</div>
+					 			 	<div class="lal_num">
+					 			 		57
+					 			 	</div>
+					 			 </div>
+					 			 <div class="lal_all"></div>
+					 			 <div class="quan">
+					 			 	<div class="quan_name">
+					 			 		接单量
+					 			 	</div>
+					 			 	<div class="quan_num">
+					 			 		50
+					 			 	</div>
+					 			 </div>
+					 			 <div class="quan_all"><div class="tity"></div></div>
+					 			</li>
+					 		</ul>
+					 	</div>
+					 </div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script>
+	$(".order_num").each(function(){
+		var that=$(this);
+		var text1=that.text();
+		var text1_1=parseInt(text1);
+        var te=formatNum(text1_1+"");
+        that.text(te)
+	})
+
+
+	 function formatNum(str) {
+	    var newStr = "";
+	    var count = 0;
+	   if (str.indexOf(".") == -1) {
+	        for (var i = str.length - 1; i >= 0; i--) {
+	            if (count % 3 == 0 && count != 0) {
+	                newStr = str.charAt(i) + "," + newStr;
+	            } else {
+	                newStr = str.charAt(i) + newStr;
+	            }
+	            count++;
+	        }
+	        str = newStr;
+	        return str;
+	    }
+
+	}
+	</script>
+</html>

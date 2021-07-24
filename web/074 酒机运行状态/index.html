@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/scroll.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="js/shipei.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- 时间 -->
+        <div id="showDate" class="showDate"></div>
+        <!-- title -->
+        <div class="title">
+            酒机运行状态
+            <div class="logo"></div>
+        </div>
+        <!-- 上部 -->
+        <div class="wrap-top cf">
+            <div class="wrap-yibiaopan fl">
+                <div class="fl yibiaopan">
+                    <div id="ychart1" style="width: 100%;height:100%;"></div>
+                </div>
+                <div class="fl yibiaopan">
+                    <div id="ychart2" style="width: 100%;height:100%;"></div>
+                </div>
+                <div class="fl yibiaopan">
+                    <div id="ychart3" style="width: 100%;height:100%;"></div>
+                </div>
+                <div class="fl yibiaopan">
+                    <div id="ychart4" style="width: 100%;height:100%;"></div>
+                </div>
+            </div>
+            <div class="wrap-list fl">
+                <div class="list-item">
+                    <div class="item1 item fl">滴液压</div>
+                    <div class="item2 item fl">32</div>
+                    <div class="item3 item fl">
+                        <div id="bbchart1" style="width: 100%;height:100%;"></div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="item1 item fl">滴液压</div>
+                    <div class="item2 item fl">32</div>
+                    <div class="item3 item fl">
+                        <div id="bbchart2" style="width: 100%;height:100%;"></div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="item1 item fl">滴液压</div>
+                    <div class="item2 item fl">32</div>
+                    <div class="item3 item fl">
+                        <div id="bbchart3" style="width: 100%;height:100%;"></div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="item1 item fl">滴液压</div>
+                    <div class="item2 item fl">32</div>
+                    <div class="item3 item fl">
+                        <div id="bbchart4" style="width: 100%;height:100%;"></div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="item1 item fl">滴液压</div>
+                    <div class="item2 item fl">32</div>
+                    <div class="item3 item fl">
+                        <div id="bbchart5" style="width: 100%;height:100%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="guchang fl">
+                <div class="guzhang-title"></div>
+                <div class="guzhang-huan">
+                    <div id="hchart1" style="width: 100%;height:100%;"></div>
+                </div>
+                <div class="guzhang-daima">
+                    <div class="guzhang-daima-title">
+                        <p>故障代码</p>
+                        <img src="img/textpic.png" alt="">
+                    </div>
+                    <div id="bchart1" style="width: 100%;height:100%;"></div>
+                </div>
+            </div>
+            <div class="tingji fl">
+                <div class="guzhang-title"></div>
+                <div class="guzhang-text">
+                    <p>酒机停机趋势</p>
+                    <img src="img/textpic.png" alt="">
+                </div>
+                <div id="bchart2" style="width: 100%;height:100%;"></div>
+            </div>
+        </div>
+        <!-- 中间部分 -->
+        <div class="wrap-mid cf">
+            <div class="date-name fl">BL01 275BU</div>
+            <div class="date-con fl"></div>
+        </div>
+        <!-- 下部分 -->
+        <div class="wrap-bottom cf">
+            <div class="wrap-bottom-left fl select">
+                <div class="guzhang-title">
+                    <div class="guzhang-text">
+                        <p>当班TPO状态</p>
+                        <img src="img/textpic.png" alt="">
+                    </div>
+                </div>
+                <!-- 下拉 -->
+                <div class="from">
+                    <div class="line">
+                        <select name="" id="" class="magr">
+                            <option value="">
+                                瓶型
+                            </option>
+                        </select>
+                        <select name="" id="">
+                            <option value="">
+                                车间
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="test1" placeholder="检测日期" >
+                </div>
+                <div id="bchart3" style="width: 100%;height:100%;"></div>
+            </div>
+            <div class="wrap-bottom-mid  fl">
+                <!-- 下拉 -->
+                <div class="from">
+                    <div class="line">
+                        <select class="mr" name="" id="">
+                            <option value="">
+                                订单
+                            </option>
+                        </select>
+                        <select class="ml" name="" id="">
+                            <option value="">
+                                维护
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="guzhang-huan l">
+                    <div id="hchart2" style="width: 100%;height:100%;" class="hchart2"></div>
+                </div>
+                <div class="guzhang-huan r">
+                    <div id="hchart3" style="width: 100%;height:100%;" class="hchart3"></div>
+                </div>
+            </div>
+            <div class="wrap-bottom-right fl">
+                <div class="guzhang-title">
+                    <div class="guzhang-text">
+                        <p>酒机费用趋势</p>
+                        <img src="img/textpic.png" alt="">
+                    </div>
+                </div>
+                <div id="bchart5" style="width: 100%;height:100%;"></div>
+            </div>
+        </div>
+        <div class="wrap-bottom2 cf select">
+            <div class="wrap-bottom-left fl">
+                <div class="guzhang-title">
+                    <div class="guzhang-text">
+                        <p>当班液位状态</p>
+                        <img src="img/textpic.png" alt="">
+                    </div>
+                </div>
+                <!-- 下拉选项 -->
+                <div class="from">
+                    <div class="line">
+                        <select name="" id="">
+                            <option value="">
+                                平均值项1
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div id="bchart4" style="width: 100%;height:100%;"></div>
+            </div>
+            <div class="wrap-bottom2-right fl">
+                <div class="guzhang-title">
+                    <div class="guzhang-text">
+                        <p>工单提醒</p>
+                        <img src="img/tixingbg.png" alt="" class="pic">
+                    </div>
+                </div>
+                <div class="topbg"></div>
+                <div class="g-scroll" id="g-scroll">
+                    <div class="gongdan-wrap" id="gongdan-wrap">
+                        <ul class="gongdan-list cf">
+                            <li class="gongdan-item active fl">100</li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                        </ul>
+                        <ul class="gongdan-list cf">
+                            <li class="gongdan-item active fl">100</li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                        </ul>
+                        <ul class="gongdan-list cf">
+                            <li class="gongdan-item active fl">100</li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                        </ul>
+                        <ul class="gongdan-list cf">
+                            <li class="gongdan-item active fl">100</li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                        </ul>
+                        <ul class="gongdan-list cf">
+                            <li class="gongdan-item active fl">100</li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                        </ul>
+                        <ul class="gongdan-list cf">
+                            <li class="gongdan-item active fl">100</li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                        </ul>
+                        <ul class="gongdan-list cf">
+                            <li class="gongdan-item active fl">100</li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                        </ul>
+                        <ul class="gongdan-list cf">
+                            <li class="gongdan-item active fl">100</li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottombg"></div>
+            </div>
+            <div class="wrap-bottom2-right fl wid">
+                <div class="guzhang-title">
+                    <div class="guzhang-text">
+                        <p>单前工单</p>
+                        <img src="img/tixingbg.png" alt="" class="pic">
+                    </div>
+                </div>
+                <div class="topbg"></div>
+                <div class="g-scroll" id="g-scroll2">
+                    <div class="gongdan-wrap" id="gongdan-wrap2">
+                        <ul class="gongdan-list cf danqian">
+                            <li class="gongdan-item active fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                        </ul>
+
+
+
+                        <ul class="gongdan-list cf danqian">
+                            <li class="gongdan-item active fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                        </ul>
+
+
+
+                        <ul class="gongdan-list cf danqian">
+                            <li class="gongdan-item active fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                        </ul>
+
+
+
+                        <ul class="gongdan-list cf danqian">
+                            <li class="gongdan-item active fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                        </ul>
+
+
+
+                        <ul class="gongdan-list cf danqian">
+                            <li class="gongdan-item active fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                        </ul>
+
+
+
+                        <ul class="gongdan-list cf danqian">
+                            <li class="gongdan-item active fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                        </ul>
+
+
+
+                        <ul class="gongdan-list cf danqian">
+                            <li class="gongdan-item active fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                        </ul>
+
+
+
+                        <ul class="gongdan-list cf danqian">
+                            <li class="gongdan-item active fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                            <li class="gongdan-item fl"></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="bottombg2"></div>
+            </div>
+        </div>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/ybiao1.js"></script>
+        <script src="js/huan.js"></script>
+        <script src="js/bar.js"></script>
+        <script src="js/bar2.js"></script>
+        <script src="js/scroll.js"></script>
+        <script src="js/date.js"></script>
+        <script src="layui/layui.js"></script>
+        <script src="js/riqi.js"></script>
+
+</body>
+
+</html>

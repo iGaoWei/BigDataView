@@ -1,0 +1,198 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>index</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5ieMMexWmzB9jivTq6oCRX9j&callback"></script><script type="text/javascript" src="js/js.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+		<div class="head clearfix">
+	<h1 class="pulll_left">某公司大数据展示模版标题</h1>
+		<div class="menu menu2 pulll_left">
+		<ul>      
+			<li><a href="#">导航标题</a></li>
+			<li><a href="#">导航标题样式</a></li>
+			<li><a href="#">导航标题</a></li>
+			<li><a href="#">导航标题</a></li>
+			<li><a href="#">导航标题</a></li>
+			<li><a href="#">导航标题</a></li>
+		</ul>
+		</div>
+		<div class="time" id="showTime">2018/6/12 17:00:12</div>
+		
+	</div>
+	<div class="mainbox">
+	<ul class="clearfix nav1">
+		<li style="width: 25%">
+		<div class="box">
+			<div class="tit">模块标题</div>
+			<div class="boxnav" id="echart1">
+
+			</div>
+			</div>
+			<div class="box">
+			<div class="tit">模块标题</div>
+			<div class="boxnav">
+		<ul class="zjia">
+				
+				<li>
+			<img src="images/head.jpg">
+					<h3>习近平</h3>
+					<span>解决问题：9102</span>
+					<p>现任中国共产党中央委员会总书记，中共中央军事委员会主席，中华人民共和国主席，中华人民共和国中央军事委员会主席。</p>
+					
+			</li>
+			<li>
+			<img src="images/head.jpg">
+					<h3>习近平</h3>
+					<span>解决问题：9102</span>
+					<p>现任中国共产党中央委员会总书记，中共中央军事委员会主席，中华人民共和国主席，中华人民共和国中央军事委员会主席。</p>
+					
+			</li>
+			
+			<li>
+			<img src="images/head.jpg">
+					<h3>习近平</h3>
+					<span>解决问题：9102</span>
+					<p>现任中国共产党中央委员会总书记，中共中央军事委员会主席，中华人民共和国主席，中华人民共和国中央军事委员会主席。</p>
+					
+			</li>
+			
+			<li>
+			<img src="images/head.jpg">
+					<h3>习近平</h3>
+					<span>解决问题：9102</span>
+					<p>现任中国共产党中央委员会总书记，中共中央军事委员会主席，中华人民共和国主席，中华人民共和国中央军事委员会主席。</p>
+					
+			</li>
+			<li>
+			<img src="images/head.jpg">
+					<h3>习近平</h3>
+					<span>解决问题：9102</span>
+					<p>现任中国共产党中央委员会总书记，中共中央军事委员会主席，中华人民共和国主席，中华人民共和国中央军事委员会主席。</p>
+					
+			</li>
+			<li>
+			<img src="images/head.jpg">
+					<h3>习近平</h3>
+					<span>解决问题：9102</span>
+					<p>现任中国共产党中央委员会总书记，中共中央军事委员会主席，中华人民共和国主席，中华人民共和国中央军事委员会主席。</p>
+					
+			</li>
+			
+				</ul>
+			</div>
+			</div>
+		
+		</li>
+		<li style="width: 25%">
+		<div class="box">
+			<div class="boxnav" id="map" style="height:433px;">
+			
+			
+			</div>
+			
+			
+			</div>
+<div class="box">
+	<div class="tit">模块标题</div>
+			<div class="boxnav" id="echart5"></div>
+			</div>
+		</li>
+		<li style="width: 25%">
+		
+		<div class="box">
+			<div class="tit">模块标题</div>
+			<div class="boxnav" id="">
+			<div style="float: left; width: 50%; height: 100%; padding: 0 15px; " id="echart2"></div>
+			<div style="float: left; width: 50%; height: 100%; padding: 0 15px;" id="echart3"></div>
+			</div>
+			</div>
+			<div class="box">
+			<div class="tit">模块标题</div>
+			<div class="boxnav" id="echart6">
+			
+			
+			
+			</div>
+			</div>
+		
+		</li>
+		<li style="width: 25%">
+		
+		<div class="box">
+			<div class="tit">模块标题</div>
+			<div class="boxnav" id="echart4" >
+			
+			</div>
+			</div>
+			<div class="box">
+			<div class="tit">模块标题</div>
+			<div class="boxnav"  id="echart7">
+
+			</div>
+			</div>
+		
+		</li>
+		</ul>
+		
+		
+		
+		
+	</div>
+	
+	<script>
+$(function(){
+    var map = new BMap.Map("map");    // 创建Map实例
+    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+
+    var size1 = new BMap.Size(10, 50);
+    map.setCurrentCity("北京");         
+    map.enableScrollWheelZoom(true);     
+    //设备地图颜色
+    var mapStyle={
+        style:"midnight"
+    };
+    map.setMapStyle(mapStyle);
+
+	var pt1 = new BMap.Point(116.304, 39.915);
+	var pt2 = new BMap.Point(116.404, 39.985);
+
+	
+	var myIcon = new BMap.Icon("images/head.jpg", new BMap.Size(32,32));
+	var marker1 = new BMap.Marker(pt1,{icon:myIcon}); 
+	var marker2 = new BMap.Marker(pt2,{icon:myIcon}); 
+
+	
+	map.addOverlay(marker1);   
+	map.addOverlay(marker2);   
+
+
+
+})
+
+</script>
+	
+	<script>
+var t = null;
+    t = setTimeout(time,1000);//開始运行
+    function time()
+    {
+       clearTimeout(t);//清除定时器
+       dt = new Date();
+		var y=dt.getFullYear();
+		var mt=dt.getMonth()+1;
+		var day=dt.getDate();
+       var h=dt.getHours();//获取时
+       var m=dt.getMinutes();//获取分
+       var s=dt.getSeconds();//获取秒
+       document.getElementById("showTime").innerHTML = y+"/"+mt+"/"+day+" "+h+":"+m+":"+s+"";
+       t = setTimeout(time,1000); //设定定时器，循环运行     
+    } 
+
+</script>
+</body>
+</html>

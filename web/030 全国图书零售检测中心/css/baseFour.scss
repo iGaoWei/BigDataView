@@ -1,0 +1,269 @@
+/* 引入常用样式 */
+@import "mixin/_clearfix.scss";
+@import "func/_px2em.scss";
+@import "func/_px2percent.scss";
+@import "mixin/_media.scss";
+/* 字体引入 */
+ @font-face {
+  font-family: Rubik;
+  font-family: DigifaceWide;
+
+  src: url("../fonts/Rubik-Light.ttf");
+  src: url("../fonts/digifaw.ttf");
+}
+/* 初始化 start*/
+* {
+  box-sizing: border-box;
+}
+
+b {
+  font-weight: normal;
+}
+
+/* 声明字体变量 */
+$fs_3840: 64px;
+$fs_1920: 32px;
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  color: #fff; 
+  @include media3840 {
+    font-size: $fs_3840;
+  }
+  @include media1920 {
+    font-size: $fs_1920;
+  }
+}
+
+ul,
+li,
+dl,
+dt,
+dd {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+div {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+h3{
+  font-size: px2em(36,64);
+  color: #fff;
+}
+p{
+  margin: 0;
+  padding: 0;
+}
+/* 初始化 end */
+
+/* 公共部分样式 start*/
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: MicrosoftYaHei;
+  overflow: hidden;
+
+  &:before {
+    position: absolute;
+    top: 7.6%;
+    right: 0;
+    width: 5.2%;
+    height: 12%;
+    background: url(../img/circle.png) no-repeat;
+    background-size: 100%;
+
+    content: "";
+  }
+}
+
+/* 最外层盒子样式 */
+.root-wrap {
+  height: 100%;
+  padding: 0 1.5%;
+  background: url("../img/bg.png") no-repeat center top;
+  background-size: 100% 100%;
+}
+/* 头部样式 */
+header {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  min-height: 90px;
+  text-align: center;
+  padding-top: 1%;
+  margin-bottom: 1%;
+
+  img {
+    width: 19.5%;
+  }
+
+  h2,
+  .month-tip {
+    position: absolute;
+    top: 33%;
+    font-size: px2em(48, 64);    
+  }
+
+  h2 {
+    left: 0;
+  }
+
+  .month-tip {
+    right: 0;
+  }
+
+  &:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 18%;
+    min-height: 18px;
+    background: url("../img/header-line.png") no-repeat;
+    background-size: 100%;
+
+    content: "";
+  }
+
+  &:after {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 36.5%;
+    min-width: 700px;
+    height: 70%;
+    min-height: 70px;
+    background: url(../img/header.gif) no-repeat center center;
+    background-size: 100%;
+    transform: translate(-50%, 20%);
+
+    content: "";
+  }
+}
+/* 主体内容样式 */
+.main {
+  width: 100%;
+  height: 84%;
+
+  .aside-left {
+    position: relative;
+    width: 22%;
+    height: 100%;
+    h3{
+      padding-top: 6.5%;
+      padding-left: 7%;
+      padding-bottom: 3%;
+    }
+  }
+  .aside-right {
+    position: relative;
+    width: 22%;
+    height: 100%;
+  }
+}
+/* 左侧边框样式 start */
+.left-top {
+  position: relative;
+  opacity: .9;
+  background: rgba(#121640,.5);
+
+  &:before {
+    // position: absolute;
+    // right: 0;
+    // bottom: -10.4%;
+    // width: 5%;
+    // min-width: 20px;
+    // height: 13%;
+    // min-height: 50px;
+    // background: url("../img/bor1_1_xie.png") no-repeat;
+    // background-size: 100% 100%;
+
+    // content: "";
+  }
+
+  &:after {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // height: 106%;
+    // background: url("../img/bor1_1.png") no-repeat;
+    // background-size: 100% 100%;
+
+    // content: "";
+  }
+}
+.left-bottom {
+  position: absolute;
+  bottom: 0;
+  opacity: .9;
+  &:before{
+    content: '';
+    position: absolute;
+    top: 6%;
+    right: -2%;
+    z-index: 100;
+    width: 15%;
+    height: 7%;
+    background: url('../img/bor1_2_square.png') no-repeat;
+    background-size: 100%;
+    z-index: 10;
+  }
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 104%;
+    background: url("../img/bor1_2.png") no-repeat;
+    background-size: 100% 97%;
+
+    content: "";
+  }
+}
+/* 左侧边框样式 end*/
+
+/* 中间地图样式 start */
+
+/* 中间地图样式 end */
+
+/* 右侧边框样式 start */
+.right-top{
+  position: relative;
+  background: url("../img/bg1_1.png") no-repeat top;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/bor1_3.png") no-repeat;
+    background-size: 100% 100%;
+
+    content: "";
+  }
+  .con{
+    height: 42%;
+    margin: 0 5%;
+    font-size: px2em(28,64);
+    font-size: .4375em;
+    background: #081d5d;
+  }
+}
+/* 右侧边框样式 end */
+
+/* 公共部分样式 end*/
+

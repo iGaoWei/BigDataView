@@ -1,0 +1,2205 @@
+@font-face {
+    font-family: 'tapeworm';
+    src: url('../fonts/tapeworm.eot');
+    src: url('../fonts/tapeworm.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/tapeworm.woff2') format('woff2'),
+         url('../fonts/tapeworm.woff') format('woff'),
+         url('../fonts/tapeworm.ttf') format('truetype'),
+         url('../fonts/tapeworm.svg#tapewormregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html,body{
+	height: 100%;
+	overflow: hidden;
+}
+body{
+	background: url(../images/bg.jpg);
+	background-size: 100% 100%;
+}
+#loader{
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -40px 0 0 -40px;
+	z-index: 1000;
+}
+.scanboardWp{
+	height: 100%;
+	position: relative;
+	z-index: 11;
+}
+.color-yellow{
+	color: #ffd220 !important;
+}
+.color-green{
+	color: #32ffc7 !important;
+}
+.color-blue{
+	color: #1eb6fe !important;
+}
+.color-red{
+	color: #ff0e0d !important;
+}
+.border-yellow{
+	border-color: #ffd220 !important;
+}
+.border-green{
+	border-color: #32ffc7 !important;
+}
+.border-blue{
+	border-color: #1eb6fe !important;
+}
+.border-red{
+	border-color: #ff0e0d !important;
+}
+.bg-yellow{
+	background-color: #ffd220 !important;
+}
+.bg-green{
+	background-color: #32ffc7 !important;
+}
+.bg-blue{
+	background-color: #1eb6fe !important;
+}
+.bg-red{
+	background-color: #ff0e0d !important;
+}
+.wp{
+	width: 94%;
+	margin: 0 auto;
+	height: 100%;
+}
+.left{
+	float: left;
+	width: 20%;
+}
+.center{
+	float: left;
+	width: 56%;
+}
+.right{
+	float: right;
+	width: 24%;
+}
+
+#top{
+	height: 8%;
+	border-bottom: 1px solid #162c52;
+}
+#top .pageTit{
+	height: 100%;
+	position: relative;
+}
+#top .pageTit a{
+	display: block;
+	width: 50%;
+	height: 44px;
+	background: url(../images/titBg.png);
+	background-size: 100% 100%;
+	line-height: 44px;
+	text-align: center;
+	font-size: 18px;
+	color: #00deff;
+	position: absolute;
+	top: 50%;
+	margin-top: -22px;
+}
+#top .topLogo{
+	height: 100%;
+	text-align: center;
+}
+#top .topLogo img{
+	height: 90%;
+	width: auto;
+}
+#top .topBar{
+	height: 100%;
+}
+#top .topBar .topTime{
+	padding-top: 18px;
+	color: #fff;
+	text-align: right;
+}
+#top .topBar .company{
+	position: relative;
+}
+#top .topBar .company h3{
+	text-align: right;
+	color: #02b6d4;
+	height: 28px;
+	line-height: 28px;
+	font-size: 16px;
+	padding: 0 15px 0 28px;
+	cursor: pointer;
+	position: relative;
+}
+#top .topBar .company h3:before{
+	display: block;
+	content: "";
+	width: 20px;
+	height: 20px;
+	background: url(../images/s_ico1.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 0;
+	top: 3px;
+}
+#top .topBar .company h3:after{
+	display: block;
+	content: "";
+	width: 7px;
+	height: 4px;
+	background: url(../images/s_ico2.png) no-repeat;
+	position: absolute;
+	right: 0;
+	top: 10px;
+}
+#top .topBar .company .dropdown{
+	position: absolute;
+	top: 28px;
+	right: -10px;
+	padding: 6px 10px;
+	background: #00deff;
+	border-radius: 6px;
+	min-width: 100px;
+	display: none;
+}
+#top .topBar .company:hover .dropdown{
+	display: block;
+}
+#top .topBar .company .dropdown a{
+	display: block;
+	text-align: center;
+	line-height: 24px;
+	margin: 4px 0;
+}
+
+
+#main{
+	padding-top: 30px;
+}
+
+.item{
+	margin-bottom: 24px;
+	background-color: #222;
+	background-color: rgba(0,0,0,0.3);border-radius: 8px;
+}
+.itemTit{
+	padding: 12px 30px;
+	border-bottom: 1px solid #1e5b6b;
+}
+.itemTit span{
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	border-left: 5px solid transparent;
+	font-size: 18px;
+	color: #fff;
+	padding-left: 8px;
+}
+.itemTit span small{
+	margin-left: 4px;
+}
+.itemCon{
+	padding: 12px 30px;
+}
+.itembg{
+	background-image: url(../images/gz.png);
+	background-repeat: repeat
+}
+
+
+.waybill .progress{
+	margin-bottom: 8px;
+}
+.waybill .progress h3{
+	line-height: 36px;
+	color: #fff;
+}
+.waybill .progress h3 span{
+	float: left;
+	font-size: 16px;
+}
+.waybill .progress h3 i{
+	float: right;
+	font-style: normal;
+}
+.waybill .progressBar{
+	height: 6px;
+	background: #fff;
+	background: rgba(255,255,255,0.5);
+}
+.waybill .progressBar span{
+	display: block;
+	height: 6px;
+	width: 0;
+}
+.waybill .progress h4{
+	line-height: 24px;
+	color: #fff;
+}
+.listStyle li span{
+	float: left;
+	width: 50%;
+	color: #fff;
+	font-size: 15px;
+	height: 32px;
+	line-height: 32px;
+}
+.listStyle li span strong{
+	font-weight: normal;
+	color: #45c6c8;
+	margin-right: 4px;
+}
+
+.centerWp{
+	width: 94%;
+	margin: 0 auto;
+}
+
+#myMap{
+	height: 480px;
+}
+#myMap .amap-info-content{
+	background: #00deff;
+	border-radius: 8px;
+	box-shadow: none;
+	border: none;
+	padding: 15px 25px 15px 15px;
+}
+#myMap .amap-info-sharp{
+	display: none;
+}
+#myMap .amap-info-close{
+	/* background: url(../images/s_ico5.png); */
+	color: #fff;
+}
+
+.billChart .itemTit{
+	border: none;
+	padding-left: 5px;
+}
+#myChart1{
+	height: 220px;
+}
+.total{
+	padding: 8px 0;
+}
+.total .itemTit{
+	border: none;
+}
+.total .totalNum{
+	color: #00deff;
+	font-family: 'tapeworm';
+}
+.total .totalNum strong{
+	font-size: 48px;
+	margin-right: 12px;
+	line-height: 72px;
+	vertical-align: top;
+}
+.total .totalNum span{
+	font-size: 20px;
+	line-height: 90px;
+	vertical-align: top;
+}
+
+.infoPie ul li{
+	float: left;
+	width: 33%;
+}
+.infoPie ul li span{
+	display: block;
+	width: 68px;
+	height: 68px;
+	margin: 16px auto;
+	border: 2px solid transparent;
+	text-align: center;
+	line-height: 72px;
+	font-size: 24px;
+	border-radius: 100%;
+}
+.infoPie ul li p{
+	text-align: center;
+	font-size: 16px;
+	padding-bottom: 8px;
+}
+.billState .StateTit{
+	height: 37px;
+	border-bottom: 1px dashed #404040;
+}
+.billState .StateBox span{
+	float: left;
+	width: 33%;
+	height: 37px;
+	line-height: 37px;
+	color: #fff;
+	overflow: hidden;
+	text-overflow:ellipsis
+}
+.billState .StateBox span:nth-child(1){
+	width: 38%;
+}
+.billState .StateBox span:nth-child(2){
+	width: 28%;
+}
+.billState .StateBox span:nth-child(3){
+	width: 34%;
+}
+.billState .StateBox .fontInner{
+	border-bottom: 1px dashed #404040;
+}
+.billState .progress{
+	height: 6px;
+	position: relative;
+	padding-right: 50px;
+	margin-top: 15px;
+}
+.billState .progress .progressBar{
+	height: 6px;
+	background: rgba(255,255,255,0.5);
+}
+.billState .progress .progressBar span{
+	display: block;
+	height: 6px;
+	width: 0;
+}
+.billState .progress h3{
+	position: absolute;
+	height: 20px;
+	width: 40px;
+	line-height: 20px;
+	top: -7px;
+	right: 0;
+}
+.billState .progress h3 i{
+	font-style: normal;
+}
+#FontScroll{
+	height: 228px;
+	overflow: hidden;
+}
+
+
+.filterbg{
+	width: 100%;
+	height: 100%;
+	background: rgba(30,182,254,0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 998;
+	display: none;
+}
+.popup{
+	width: 0;
+	height: 0;
+	background: #061f3e;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 999;
+	border-radius: 8px;
+	display: none;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+.popup .popupClose{
+	display: block;
+	width: 44px;
+	height: 44px;
+	background: url(../images/s_ico3.png);
+	background-size: 100 100%;
+	position: absolute;
+	top: -22px;
+	right: -22px;
+	display: none;
+	transition: 0.3s;
+}
+.popup .popupClose:hover{
+	transform: rotate(180deg);
+}
+.summary{
+	width: 96%;
+	height: 92%;
+	margin: 2% auto;
+	display: none;
+}
+.summary .summaryTop{
+	height: 50%;
+}
+.summary .summaryBottom{
+	height: 50%;
+}
+.summaryTit{
+	height: 12%;
+	text-align: center;
+}
+.summaryTit img{
+	height: 100%;
+	max-height: 68px;
+	width: auto;
+}
+.summaryPie{
+	height: 100%;
+	float: left;
+	width: 33%;
+}
+.summaryBar{
+	height: 100%;
+	float: left;
+	width: 30%;
+	margin-right: 2%;
+}
+#summaryBar{
+	height: 80%;
+}
+
+.summaryLine{
+	float: left;
+	width: 60%;
+	height: 100%;
+}
+#summaryLine{
+	height: 80%;
+}
+
+
+@media screen and (max-width: 1919px) and (min-width: 1680px){
+	#top .pageTit a{
+		height: 40px;
+		line-height: 40px;
+		font-size: 16px;
+		margin-top: -20px;
+		width: 52%;
+	}
+	#top .topBar .topTime{
+		padding-top: 16px;
+	}
+	#top .topBar .company h3{
+		height: 26px;
+		line-height: 26px;
+		font-size: 16px;
+	}
+	#top .topBar .company .dropdown{
+		top: 26px;
+	}
+
+	#main{
+		padding-top: 28px;
+	}
+
+	.item{
+		margin-bottom: 20px;
+	}
+	.itemTit{
+		padding: 10px 30px;
+	}
+	.itemTit span{
+		height: 20px;
+		line-height: 20px;
+		border-left: 4px solid transparent;
+		font-size: 17px;
+	}
+	.itemCon{
+		padding: 10px 26px;
+	}
+	.waybill .progress{
+		margin-bottom: 8px;
+	}
+	.waybill .progress h3{
+		line-height: 34px;
+	}
+	.waybill .progress h3 span{
+		float: left;
+	}
+	.waybill .progress h4{
+		line-height: 22px;
+	}
+
+	.listStyle li span{
+		font-size: 15px;
+		height: 32px;
+		line-height: 32px;
+	}
+	#myMap{
+		height: 440px;
+	}
+	#myMap .amap-info-content{
+		background: #00deff;
+		border-radius: 8px;
+		box-shadow: none;
+		border: none;
+		padding: 15px 25px 15px 15px;
+	}
+	#myChart1{
+		height: 220px;
+	}
+	.total{
+		padding: 8px 0;
+	}
+	.total .totalNum strong{
+		font-size: 44px;
+		line-height: 68px;
+	}
+	.total .totalNum span{
+		font-size: 18px;
+		line-height: 84px;
+	}
+
+	.infoPie ul li span{
+		width: 68px;
+		height: 68px;
+		margin: 12px auto;
+		border: 2px solid transparent;
+		line-height: 72px;
+		font-size: 24px;
+	}
+	.infoPie ul li p{
+		font-size: 16px;
+		padding-bottom: 8px;
+	}
+	.billState .StateTit{
+		height: 37px;
+	}
+	.billState .StateBox span{
+		height: 37px;
+		line-height: 37px;
+	}
+	.billState .StateBox span:nth-child(1){
+		width: 38%;
+	}
+	.billState .StateBox span:nth-child(2){
+		width: 28%;
+	}
+	.billState .StateBox span:nth-child(3){
+		width: 34%;
+	}
+	.billState .progress{
+		margin-top: 15px;
+	}
+	.billState .progress h3{
+		height: 20px;
+		line-height: 20px;
+		top: -7px;
+	}
+	#FontScroll{
+		height: 228px;
+	}
+
+
+	.popup .popupClose{
+		width: 40px;
+		height: 40px;
+		top: -20px;
+		right: -20px;
+		background-size: 100% 100%;
+	}
+}
+
+@media screen and (max-width: 1679px) and (min-width: 1440px){
+	#top .pageTit a{
+		height: 36px;
+		line-height: 36px;
+		font-size: 15px;
+		margin-top: -18px;
+		width: 54%;
+	}
+	#top .topBar .topTime{
+		padding-top: 10px;
+	}
+	#top .topBar .company h3{
+		height: 24px;
+		line-height: 24px;
+		font-size: 15px;
+	}
+	#top .topBar .company h3:before{
+		width: 18px;
+		height: 18px;
+		top: 2px;
+	}
+	#top .topBar .company .dropdown{
+		top: 24px;
+	}
+
+	#main{
+		padding-top: 16px;
+	}
+
+	.item{
+		margin-bottom: 14px;
+	}
+	.itemTit{
+		padding: 6px 24px;
+	}
+	.itemTit span{
+		height: 18px;
+		line-height: 18px;
+		border-left: 4px solid transparent;
+		font-size: 16px;
+	}
+	.itemCon{
+		padding: 6px 22px;
+	}
+	.waybill .progress{
+		margin-bottom: 4px;
+	}
+	.waybill .progress h3{
+		line-height: 30px;
+	}
+	.waybill .progress h3 span{
+		font-size: 14px;
+	}
+	.waybill .progress h4{
+		line-height: 20px;
+	}
+
+	.listStyle li span{
+		font-size: 15px;
+		height: 28px;
+		line-height: 28px;
+	}
+	#myMap{
+		height: 360px;
+	}
+	#myMap .amap-info-content{
+		background: #00deff;
+		border-radius: 8px;
+		box-shadow: none;
+		border: none;
+		padding: 15px 25px 15px 15px;
+	}
+	#myChart1{
+		height: 188px;
+	}
+	.total{
+		padding: 8px 0;
+	}
+	.total .totalNum strong{
+		font-size: 40px;
+		line-height: 64px;
+	}
+	.total .totalNum span{
+		font-size: 17px;
+		line-height: 80px;
+	}
+
+	.infoPie ul li span{
+		width: 60px;
+		height: 60px;
+		margin: 10px auto;
+		border: 2px solid transparent;
+		line-height: 64px;
+		font-size: 22px;
+	}
+	.infoPie ul li p{
+		font-size: 15px;
+		padding-bottom: 8px;
+	}
+	.billState .StateTit{
+		height: 37px;
+	}
+	.billState .StateBox span{
+		height: 37px;
+		line-height: 37px;
+	}
+	.billState .StateBox span:nth-child(1){
+		width: 38%;
+	}
+	.billState .StateBox span:nth-child(2){
+		width: 28%;
+	}
+	.billState .StateBox span:nth-child(3){
+		width: 34%;
+	}
+	.billState .progress{
+		margin-top: 15px;
+	}
+	.billState .progress h3{
+		height: 20px;
+		line-height: 20px;
+		top: -7px;
+	}
+	#FontScroll{
+		height: 190px;
+	}
+
+
+	.popup .popupClose{
+		width: 36px;
+		height: 36px;
+		top: -18px;
+		right: -18px;
+		background-size: 100% 100%;
+	}
+}
+
+@media screen and (max-width: 1439px) and (min-width: 1366px){
+	#top .pageTit a{
+		height: 30px;
+		line-height: 30px;
+		font-size: 14px;
+		margin-top: -15px;
+		width: 56%;
+	}
+	#top .topBar .topTime{
+		padding-top: 4px;
+		font-size: 12px;
+	}
+	#top .topBar .company h3{
+		height: 22px;
+		line-height: 22px;
+		font-size: 14px;
+	}
+	#top .topBar .company h3:before{
+		width: 18px;
+		height: 18px;
+		top: 2px;
+	}
+	#top .topBar .company .dropdown{
+		top: 22px;
+	}
+
+	#main{
+		padding-top: 14px;
+	}
+
+	.item{
+		margin-bottom: 12px;
+	}
+	.itemTit{
+		padding: 4px 22px;
+	}
+	.itemTit span{
+		height: 18px;
+		line-height: 18px;
+		border-left: 4px solid transparent;
+		font-size: 14px;
+	}
+	.itemCon{
+		padding: 4px 20px;
+	}
+	.waybill .progress{
+		margin-bottom: 2px;
+	}
+	.waybill .progress h3{
+		line-height: 28px;
+	}
+	.waybill .progress h3 span{
+		font-size: 14px;
+	}
+	.waybill .progress h4{
+		line-height: 18px;
+	}
+
+	.listStyle li span{
+		font-size: 12px;
+		height: 22px;
+		line-height: 22px;
+	}
+	#myMap{
+		height: 288px;
+	}
+	#myMap .amap-info-content{
+		background: #00deff;
+		border-radius: 8px;
+		box-shadow: none;
+		border: none;
+		padding: 15px 25px 15px 15px;
+	}
+	#myMap .amap-icon img{
+		width: 24px;
+	}
+	#myChart1{
+		height: 160px;
+	}
+	.total{
+		padding: 8px 0;
+	}
+	.total .totalNum strong{
+		font-size: 36px;
+		line-height: 60px;
+	}
+	.total .totalNum span{
+		font-size: 16px;
+		line-height: 76px;
+	}
+
+	.infoPie ul li span{
+		width: 56px;
+		height: 56px;
+		margin: 10px auto;
+		border: 2px solid transparent;
+		line-height: 60px;
+		font-size: 20px;
+	}
+	.infoPie ul li p{
+		font-size: 14px;
+		padding-bottom: 8px;
+	}
+	.billState .StateTit{
+		height: 31px;
+	}
+	.billState .StateBox span{
+		height: 31px;
+		line-height: 31px;
+		font-size: 12px;
+	}
+	.billState .StateBox span:nth-child(1){
+		width: 38%;
+	}
+	.billState .StateBox span:nth-child(2){
+		width: 28%;
+	}
+	.billState .StateBox span:nth-child(3){
+		width: 34%;
+	}
+	.billState .progress{
+		margin-top: 12px;
+	}
+	.billState .progress h3{
+		height: 20px;
+		line-height: 20px;
+		top: -7px;
+	}
+	#FontScroll{
+		height: 128px;
+	}
+
+
+	.popup .popupClose{
+		width: 32px;
+		height: 32px;
+		top: -16px;
+		right: -16px;
+		background-size: 100%
+	}
+}
+
+@media screen and (max-width: 1365px) {
+	.left{
+		width: 24%;
+	}
+	.center{
+		width: 48%;
+	}
+	.right{
+		width: 28%;
+	}
+	#top .pageTit a{
+		height: 30px;
+		line-height: 30px;
+		font-size: 12px;
+		margin-top: -15px;
+		width: 60%;
+	}
+	#top .topBar .topTime{
+		padding-top: 4px;
+		font-size: 12px;
+	}
+	#top .topBar .company h3{
+		height: 22px;
+		line-height: 22px;
+		font-size: 14px;
+	}
+	#top .topBar .company h3:before{
+		width: 18px;
+		height: 18px;
+		top: 2px;
+	}
+	#top .topBar .company .dropdown{
+		top: 22px;
+	}
+
+	#main{
+		padding-top: 14px;
+	}
+
+	.item{
+		margin-bottom: 12px;
+	}
+	.itemTit{
+		padding: 4px 22px;
+	}
+	.itemTit span{
+		height: 18px;
+		line-height: 18px;
+		border-left: 4px solid transparent;
+		font-size: 14px;
+	}
+	.itemCon{
+		padding: 4px 20px;
+	}
+	.waybill .progress{
+		margin-bottom: 2px;
+	}
+	.waybill .progress h3{
+		line-height: 28px;
+	}
+	.waybill .progress h3 span{
+		font-size: 14px;
+	}
+	.waybill .progress h4{
+		line-height: 18px;
+	}
+
+	.listStyle li span{
+		font-size: 12px;
+		height: 22px;
+		line-height: 22px;
+	}
+	#myMap{
+		height: 288px;
+	}
+	#myMap .amap-info-content{
+		background: #00deff;
+		border-radius: 8px;
+		box-shadow: none;
+		border: none;
+		padding: 15px 25px 15px 15px;
+	}
+	#myMap .amap-icon img{
+		width: 24px;
+	}
+	#myChart1{
+		height: 160px;
+	}
+	.total{
+		padding: 8px 0;
+	}
+	.total .totalNum strong{
+		font-size: 36px;
+		line-height: 60px;
+	}
+	.total .totalNum span{
+		font-size: 16px;
+		line-height: 76px;
+	}
+
+	.infoPie ul li span{
+		width: 56px;
+		height: 56px;
+		margin: 10px auto;
+		border: 2px solid transparent;
+		line-height: 60px;
+		font-size: 20px;
+	}
+	.infoPie ul li p{
+		font-size: 14px;
+		padding-bottom: 8px;
+	}
+	.billState .StateTit{
+		height: 31px;
+	}
+	.billState .StateBox span{
+		height: 31px;
+		line-height: 31px;
+		font-size: 12px;
+	}
+	.billState .StateBox span:nth-child(1){
+		width: 38%;
+	}
+	.billState .StateBox span:nth-child(2){
+		width: 28%;
+	}
+	.billState .StateBox span:nth-child(3){
+		width: 34%;
+	}
+	.billState .progress{
+		margin-top: 12px;
+	}
+	.billState .progress h3{
+		height: 20px;
+		line-height: 20px;
+		top: -7px;
+	}
+	#FontScroll{
+		height: 128px;
+	}
+
+
+	.popup .popupClose{
+		width: 32px;
+		height: 32px;
+		top: -16px;
+		right: -16px;
+		background-size: 100%
+	}
+}
+
+
+
+
+/*************************************
+	   --2018-01-23增加样式--
+*************************************/
+.signOut{
+	height: 22px;
+	padding: 0 10px;
+	border: 1px solid #02b6d4;
+	border-radius: 14px;
+	color: #02b6d4;
+	text-align: center;
+	line-height: 22px;
+	margin-left: 16px;
+	margin-top: 2px;
+}
+.signOut:hover{
+	background: #02b6d4;
+	color: #fff;
+}
+.mapContainer{
+	position: relative;
+}
+#myMap{
+	z-index: 11;
+}
+.btnLayer{
+	width: 48px;
+	height: 116px;
+	position: absolute;
+	top: 30px;
+	right: 22px;
+	z-index: 13;
+}
+.btnLayer a{
+	display: block;
+	width: 48px;
+	height: 48px;
+}
+.btnLayer .search{
+	width: 48px;
+	height: 48px;
+	position: relative;
+	margin-bottom: 20px;
+}
+.btnLayer .search .searchInner{
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	border-radius: 24px;
+	background: rgba(0,222,255,0.2);
+	top: 0;
+	right:0;
+	-webkit-transition: 0.4s ease-in-out;
+	-moz-transition: 0.4s ease-in-out;
+	-ms-transition: 0.4s ease-in-out;
+	-o-transition: 0.4s ease-in-out;
+	transition: 0.4s ease-in-out; 
+}
+.btnLayer .search .open{
+	width: 240px;
+	background: rgba(0,222,255,0.5);
+	-webkit-transition: 0.4s ease-in-out;
+	-moz-transition: 0.4s ease-in-out;
+	-ms-transition: 0.4s ease-in-out;
+	-o-transition: 0.4s ease-in-out;
+	transition: 0.4s ease-in-out;
+}
+.btnLayer .search .icoSearch{
+	display: block;
+	width: 24px;
+	height: 24px;
+	background: url(../images/s_ico8.png);
+}
+.btnLayer .search a.searchBtn .icoSearch{
+	position: relative;
+	top: 12px;
+	left: 12px;
+}
+.btnLayer .search form{
+	width: 200px;
+	height: 24px;
+	padding: 12px 20px;
+	display: none;
+}
+.btnLayer .search form button.icoSearch{
+	float: left;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.btnLayer .search form input{
+	float: left;
+	width: 166px;
+	height: 24px;
+	line-height: 24px;
+	color: #fff;
+}
+.btnLayer .search form input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #fff; opacity:1; 
+}
+
+.btnLayer .search form input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #fff;opacity:1;
+}
+
+.btnLayer .search form input:-ms-input-placeholder{
+    color: #fff;opacity:1;
+}
+
+.btnLayer .search form input::-webkit-input-placeholder{
+    color: #fff;opacity:1;
+}
+.btnLayer a.infoBtn{
+	background: rgba(0,222,255,0.2);
+	border-radius: 100%;
+}
+.btnLayer .icoCar{
+	display: block;
+	width: 30px;
+	height: 18px;
+	background: url(../images/s_ico9.png);
+	position: relative;
+	top: 15px;
+	left: 9px;
+}
+
+.carInfo{
+	width: 0;
+	height: 0;
+	background: #061f3e;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 999;
+	border-radius: 8px;
+	display: none;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+.carInfo .carClose{
+	display: block;
+	width: 44px;
+	height: 44px;
+	background: url(../images/s_ico3.png);
+	background-size: 100% 100%;
+	position: absolute;
+	top: -22px;
+	right: -22px;
+	display: none;
+	transition: 0.3s;
+}
+.carInfo .carClose:hover{
+	transform: rotate(180deg);
+}
+.infoBox{
+	height: 100%;
+	display: none;
+}
+.infoBox .infoTop{
+	height: 15.4%;
+}
+.infoBox .infoTop .infoTit{
+	height: 40%;
+	text-align: center;
+	position: relative;
+	top: 30%;
+}
+.infoBox .infoTop .infoTit img{
+	height: 100%;
+	max-height: 68px;
+	width: auto;
+}
+.infoBox .infoMain{
+	height: 76%;
+	width: 90%;
+	margin: 0 auto;
+}
+.infoBox .infoLeft{
+	width: 22.4%;
+	height: 100%;
+	box-sizing: border-box;
+	padding-top: 54px;
+	padding-right: 10px;
+	position: relative;
+	border-right: 1px solid #13284d;
+}
+.infoBox .infoLeft .topSearch{
+	width: 80%;
+	height: 36px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+	padding: 0 18px;
+	background: rgba(0,222,255,0.2);
+	border-radius: 18px;
+}
+.infoBox .infoLeft .topSearch form{
+	height: 20px;
+	padding: 8px 10px 8px 30px;
+	position: relative;
+}
+.infoBox .infoLeft .topSearch button{
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url(../images/s_ico8.png);
+	background-size: 100%;
+	position: absolute;
+	top: 8px;
+	left: 0;
+}
+.infoBox .infoLeft .topSearch input{
+	display: block;
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	color: #00ddfe;
+}
+.infoBox .infoLeft .topSearch input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #00ddfe; opacity:1; 
+}
+
+.infoBox .infoLeft .topSearch input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #00ddfe;opacity:1;
+}
+
+.infoBox .infoLeft .topSearch input:-ms-input-placeholder{
+    color: #00ddfe;opacity:1;
+}
+
+.infoBox .infoLeft .topSearch input::-webkit-input-placeholder{
+    color: #00ddfe;opacity:1;
+}
+
+.infoBox .infoLeft .carState{
+	height: 100%;
+	padding-top: 36px;
+	box-sizing: border-box;
+	position: relative;
+}
+.infoBox .infoLeft .carState h3{
+	width: 80%;
+	height: 35px;
+	line-height: 35px;
+	border-bottom: 1px dashed #404040;
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+	padding: 0 8px;
+}
+.infoBox .infoLeft .carState h3 span{
+	width: 50%;
+	height: 35px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #808080;
+}
+.infoBox .infoLeft .carState h3 span:last-child{
+	text-align: right;
+}
+.infoBox .infoLeft .carState ul{
+	height: 100%;
+	overflow: hidden;
+}
+.infoBox .infoLeft .carState ul li{
+	width: 80%;
+	height: 35px;
+	line-height: 35px;
+	border-bottom: 1px dashed #404040;
+	box-sizing: border-box;
+	padding: 0 8px;
+}
+.infoBox .infoLeft .carState ul li p,.infoBox .infoLeft .carState ul li span{
+	float: left;
+	white-space: nowrap;
+	height: 35px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #00deff;
+}
+.infoBox .infoLeft .carState ul li p{
+	width: 70%;
+}
+.infoBox .infoLeft .carState ul li span{
+	width: 30%;
+	text-align: right;
+}
+.infoBox .infoLeft .carState ul li span.work{
+	color: #32ffc7;
+}
+.infoBox .infoLeft .carState ul li span.nowork{
+	color: #ffd220;
+}
+
+.infoBox .infoRight{
+	width: 77.6%;
+	height: 100%;
+	box-sizing: border-box;
+	border-left: 1px solid #030303;
+}
+.infoBox .infoRight .rightWp{
+	width: 94%;
+	margin: 0 auto;
+	height: 100%;
+}
+.infoBox .infoRight .carIntro{
+	height: 30%;
+	box-sizing: border-box;
+	border-bottom: 1px solid #13284d; 
+}
+.infoBox .infoRight .introBox{
+	width: 72%;
+	margin-left: 5%;
+	height: 90%;
+	background: url(../images/infoBg.png);
+	background-size: 100% 100%;
+}
+.infoBox .infoRight .introBox .carImg{
+	width: 12%;
+	height: 100%;
+	margin: 0 8%;
+	position: relative;
+}
+.infoBox .infoRight .introBox .carImg img{
+	max-width: : 100%;
+	max-height: 64%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-radius: 6px;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+.infoBox .infoRight .introBox .carText{
+	width: 64%;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.infoBox .infoRight .introBox .carText p{
+	float: left;
+	width: 50%;
+	height: 28px;
+	line-height: 28px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #fff;
+	box-sizing: border-box;
+	padding: 0 10px;
+}
+.infoBox .infoRight .driver{
+	width: 18%;
+	padding-top: 10px;
+}
+.infoBox .infoRight .driver .photo{
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	border-radius: 100%;
+	overflow: hidden;
+}
+.infoBox .infoRight .driver .photo img{
+	width: 100%;
+}
+.infoBox .infoRight .driver p{
+	text-align: center;
+	color: #00deff;
+	font-size: 16px;
+	line-height: 40px;
+}
+
+.infoBox .infoRight .timetable{
+	height: 70%;
+	box-sizing: border-box;
+	padding-top:40px;
+	border-top: 1px solid #030303;
+	position: relative; 
+}
+.infoBox .infoRight .timetable .topTool{
+	height: 28px;
+	padding-top: 12px;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0; 
+}
+.infoBox .infoRight .timetable .tableExplain{
+	height: 14px;
+	padding-top: 14px;
+}
+.infoBox .infoRight .timetable .tableExplain .itemExplain{
+	height: 14px;
+	margin-right: 40px;
+}
+.infoBox .infoRight .timetable .tableExplain .itemExplain span{
+	float: left;
+	width: 14px;
+	height: 14px;
+	margin-right: 6px;
+}
+.infoBox .infoRight .timetable .tableExplain .itemExplain p{
+	float: left;
+	color: #fff;
+	line-height: 14px;
+}
+.infoBox .infoRight .timetable .topBtns a{
+	float: left;
+	height: 26px;
+	padding: 0 14px;
+	border: 1px solid #00deff;
+	border-radius: 14px;
+	margin: 0 10px;
+	line-height: 26px;
+	color: #00deff;
+	font-size: 12px;
+}
+.infoBox .infoRight .timetable .topBtns a:hover{
+	background: #00deff;
+	color: #fff;
+	transition: 0.3s;
+}
+.infoBox .timetable .tiemWp{
+	height: 100%;
+	box-sizing: border-box;
+	padding: 30px 20% 0 0;
+	position: relative;
+}
+.infoBox .timetable .timeInner{
+	height: 100%;
+	box-sizing: border-box;
+	padding-left: 48px;
+	position: relative;
+
+}
+.infoBox .timetable .weekList{
+	position: absolute;
+	width: 48px;
+	height: 100%;
+	left: 0;
+}
+.infoBox .timetable .weekList .blank{
+	height: 30px;
+}
+.infoBox .timetable .weekList .weekItem{
+	height: 14%;
+}
+.infoBox .timetable .weekList .weekItem p{
+	color: #fff;
+	line-height: 1;
+	font-size: 12px;
+}
+.infoBox .timetable .timeBox{
+	height: 100%;
+	position: relative; 
+}
+.infoBox .timetable .timeBox .dataContainer{
+	height: 100%;
+	box-sizing: border-box;
+	border-left: 1px solid #9ca6b3;
+	border-bottom: 1px solid #9ca6b3;
+	position: relative;
+	z-index: 5;
+}
+.infoBox .timetable .timeBox .timeLine{
+	width: 1px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	background: #1f3652;
+	z-index: 3;
+}
+.infoBox .timetable .timeBox .timeLine span{
+	height: 14px;
+	line-height: 14px;
+	color: #fff;
+	font-size: 12px;
+	display: block;
+	width: 40px;
+	position: absolute;
+	bottom: -20px;
+	left: 50%;
+	margin-left: -20px;
+	text-align: center;
+}
+.infoBox .timetable .timeBox .line1{
+	left: 0;
+}
+.infoBox .timetable .timeBox .line2{
+	left: 12.5%;
+}
+.infoBox .timetable .timeBox .line3{
+	left: 25%;
+}
+.infoBox .timetable .timeBox .line4{
+	left: 37.5%;
+}
+.infoBox .timetable .timeBox .line5{
+	left: 50%;
+}
+.infoBox .timetable .timeBox .line6{
+	left: 62.5%;
+}
+.infoBox .timetable .timeBox .line7{
+	left: 75%;
+}
+.infoBox .timetable .timeBox .line8{
+	left: 87.5%;
+}
+.infoBox .timetable .timeBox .line9{
+	left: 100%;
+}
+.infoBox .timetable .dataBox{
+	height: 14%;
+}
+.infoBox .timetable .space1{
+	height: 30%;
+}
+.infoBox .timetable .space2{
+	height: 15%;
+}
+.infoBox .timetable .space3{
+	height: 10%;
+}
+.infoBox .timetable .dataBox .workTime{
+	height: 26%;
+	background: #1f3652;
+	position: relative;
+}
+.infoBox .timetable .dataBox .workTime span{
+	position: absolute;
+	top: 0;
+	height: 100%;
+	background: #32ffc7;
+	cursor: pointer;
+}
+.infoBox .timetable .dataBox .standard{
+	height: 19%;
+	background: #1f3652;
+	position: relative;
+}
+.infoBox .timetable .dataBox .standard span{
+	position: absolute;
+	top: 0;
+	height: 100%;
+	background: #1dd0fd;
+	cursor: pointer;
+}
+.infoBox .timetable .totalTable{
+	box-sizing: border-box;
+	height: 100%;
+	width: 20%;
+	position: absolute;
+	top: 0;
+	right:0; 
+	padding-top: 30px;
+}
+.infoBox .timetable .totalTable .totalTit{
+	height: 20px;
+	width: 100%;
+	position: absolute;
+	top: 16px;
+	right: 0;
+}
+.infoBox .timetable .totalTable span{
+	float: left;
+	width: 50%;
+	height: 100%;
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+}
+.infoBox .timetable .totalTable .totalTit span{
+	line-height: 20px;
+}
+.infoBox .timetable .totalTable .totalData{
+	height: 100%;
+	box-sizing: border-box;
+	padding-bottom: 1px;
+}
+.infoBox .timetable .totalTable .totalItem{
+	height: 14%;
+}
+.infoBox .timetable .totalTable .tatleWp{
+	height: 41%;
+}
+.infoBox .timetable .totalTable .tatleWp span{
+	line-height: 1;
+}
+.infoBox .timetable .totalTable .totalBar{
+	height: 19%;
+	background: #1f3652;
+	position: relative;
+}
+.workTimeInfo{
+	position: fixed;
+	padding: 10px 15px;
+	background: rgba(0,0,0,0.3);
+	border-radius: 4px;
+	z-index: 9999;
+	transform: translate(20px,-20%);
+}
+.workTimeInfo p{
+	line-height: 22px;
+	color: #fff;
+}
+
+@media screen and (max-width: 1919px) and (min-width: 1680px){
+	.signOut{
+		height: 22px;
+		padding: 0 10px;
+		border: 1px solid #02b6d4;
+		border-radius: 14px;
+		line-height: 22px;
+		margin-left: 16px;
+		margin-top: 1px;
+	}
+	.carInfo .carClose{
+		width: 40px;
+		height: 40px;
+		background-size: 100% 100%;
+		top: -20px;
+		right: -20px;
+	}
+	.infoBox .infoRight .introBox .carText p{
+		height: 26px;
+		line-height: 26px;
+		padding: 0 10px;
+	}
+	.infoBox .infoRight .driver .photo{
+		width: 92px;
+		height: 92px;
+	}
+	.infoBox .infoRight .driver p{
+		font-size: 16px;
+		line-height: 36px;
+	}
+}
+
+@media screen and (max-width: 1679px) and (min-width: 1440px){
+	.signOut{
+		height: 20px;
+		padding: 0 10px;
+		border: 1px solid #02b6d4;
+		border-radius: 11px;
+		line-height: 20px;
+		margin-left: 14px;
+		margin-top: 2px;
+		font-size: 12px;
+	}
+	.infoBox .infoTop .infoTit{
+		height: 44%;
+		top: 28%;
+	}
+	.carInfo .carClose{
+		width: 36px;
+		height: 36px;
+		background-size: 100% 100%;
+		top: -18px;
+		right: -18px;
+	}
+	.infoBox .infoRight .introBox .carText p{
+		height: 24px;
+		line-height: 24px;
+		padding: 0 8px;
+	}
+	.infoBox .infoRight .driver{
+		padding-top: 6px;
+	}
+	.infoBox .infoRight .driver .photo{
+		width: 72px;
+		height: 72px;
+	}
+	.infoBox .infoRight .driver p{
+		font-size: 14px;
+		line-height: 28px;
+	}
+	.infoBox .infoLeft{
+		padding-top: 48px;
+	}
+	.infoBox .infoLeft .topSearch{
+		height: 32px;
+		padding: 0 16px;
+		border-radius: 16px;
+	}
+	.infoBox .infoLeft .topSearch form{
+		padding: 6px 10px 6px 30px;
+	}
+	.infoBox .infoLeft .topSearch button{
+		width: 20px;
+		height: 20px;
+		background-size: 100%;
+		top: 6px;
+	}
+	.infoBox .infoLeft .carState{
+		padding-top: 36px;
+	}
+	.infoBox .infoLeft .carState h3{
+		height: 35px;
+		line-height: 35px;
+		padding: 0 8px;
+	}
+	.infoBox .infoLeft .carState h3 span{
+		height: 35px;
+	}
+	.infoBox .infoLeft .carState ul li{
+		height: 35px;
+		line-height: 35px;
+		padding: 0 8px;
+	}
+	.infoBox .infoLeft .carState ul li p,.infoBox .infoLeft .carState ul li span{
+		height: 35px;
+	}
+
+	.infoBox .infoRight .timetable{
+		padding-top:32px;
+	}
+	.infoBox .infoRight .timetable .topTool{
+		height: 28px;
+		padding-top: 4px;
+	}
+	.infoBox .infoRight .timetable .tableExplain{
+		padding-top: 14px;
+	}
+	.infoBox .infoRight .timetable .tableExplain .itemExplain{
+		margin-right: 40px;
+	}
+	.infoBox .infoRight .timetable .tableExplain .itemExplain p{
+		font-size: 12px;
+	}
+	.infoBox .infoRight .timetable .topBtns{
+		height: 22px;
+		padding-top: 4px;
+	}
+	.infoBox .infoRight .timetable .topBtns a{
+		height: 22px;
+		padding: 0 14px;
+		border-radius: 14px;
+		margin: 0 10px;
+		line-height: 22px;
+	}
+	.infoBox .timetable .tiemWp{
+		padding: 30px 20% 0 0;
+	}
+	.infoBox .timetable .totalTable .totalTit{
+		height: 20px;
+		top: 16px;
+	}
+	.infoBox .timetable .totalTable .totalTit span{
+		line-height: 20px;
+	}
+	.btnLayer{
+		width: 36px;
+		height: 86px;
+		top: 24px;
+		right: 20px;
+	}
+	.btnLayer a{
+		display: block;
+		width: 36px;
+		height: 36px;
+	}
+	.btnLayer .search{
+		width: 36px;
+		height: 36px;
+		margin-bottom: 14px;
+	}
+	.btnLayer .search .searchInner{
+		width: 36px;
+		height: 36px;
+		border-radius: 18px;
+	}
+	.btnLayer .search .open{
+		width: 240px;
+	}
+	.btnLayer .search .icoSearch{
+		display: block;
+		width: 20px;
+		height: 20px;
+		background: url(../images/s_ico8.png);
+		background-size: 100% 100%;
+	}
+	.btnLayer .search a.searchBtn .icoSearch{
+		position: relative;
+		top: 8px;
+		left: 8px;
+	}
+	.btnLayer .search form{
+		width: 200px;
+		height: 24px;
+		padding: 6px 15px;
+	}
+	.btnLayer .search form button.icoSearch{
+		margin-right: 10px;
+		margin-top: 2px;
+	}
+
+	.btnLayer .search form input{
+		width: 166px;
+	}
+	.btnLayer .icoCar{
+		display: block;
+		width: 24px;
+		height: 14.4px;
+		background: url(../images/s_ico9.png);
+		background-size: 100% 100%;
+		top: 10.8px;
+		left: 6px;
+	}
+}
+
+@media screen and (max-width: 1439px) and (min-width: 1366px){
+	.signOut{
+		height: 16px;
+		padding: 0 8px;
+		border: 1px solid #02b6d4;
+		border-radius: 9px;
+		line-height: 16px;
+		margin-left: 12px;
+		margin-top: 3px;
+		font-size: 12px;
+	}
+	.infoBox .infoTop .infoTit{
+		height: 50%;
+		top: 25%;
+	}
+	.carInfo .carClose{
+		width: 32px;
+		height: 32px;
+		background-size: 100% 100%;
+		top: -16px;
+		right: -16px;
+	}
+	.infoBox .infoRight .introBox .carText p{
+		height: 18px;
+		line-height: 18px;
+		padding: 0 6px;
+	}
+	.infoBox .infoRight .driver{
+		padding-top: 2px;
+	}
+	.infoBox .infoRight .driver .photo{
+		width: 60px;
+		height: 60px;
+	}
+	.infoBox .infoRight .driver p{
+		font-size: 12px;
+		line-height: 22px;
+	}
+	.infoBox .infoLeft{
+		padding-top: 40px;
+	}
+	.infoBox .infoLeft .topSearch{
+		height: 28px;
+		padding: 0 14px;
+		border-radius: 14px;
+	}
+	.infoBox .infoLeft .topSearch form{
+		padding: 4px 10px 4px 28px;
+	}
+	.infoBox .infoLeft .topSearch button{
+		width: 18px;
+		height: 18px;
+		background-size: 100%;
+		top: 4px;
+	}
+	.infoBox .infoLeft .carState{
+		padding-top: 32px;
+	}
+	.infoBox .infoLeft .carState h3{
+		height: 31px;
+		line-height: 31px;
+		padding: 0 6px;
+	}
+	.infoBox .infoLeft .carState h3 span{
+		height: 31px;
+	}
+	.infoBox .infoLeft .carState ul li{
+		height: 31px;
+		line-height: 31px;
+		padding: 0 6px;
+	}
+	.infoBox .infoLeft .carState ul li p,.infoBox .infoLeft .carState ul li span{
+		height: 31px;
+	}
+
+	.infoBox .infoRight .timetable{
+		padding-top:28px;
+	}
+	.infoBox .infoRight .timetable .topTool{
+		height: 24px;
+		padding-top: 4px;
+	}
+	.infoBox .infoRight .timetable .tableExplain{
+		padding-top: 14px;
+	}
+	.infoBox .infoRight .timetable .tableExplain .itemExplain{
+		margin-right: 40px;
+	}
+	.infoBox .infoRight .timetable .tableExplain .itemExplain p{
+		font-size: 12px;
+	}
+	.infoBox .infoRight .timetable .topBtns{
+		height: 20px;
+		padding-top: 4px;
+	}
+	.infoBox .infoRight .timetable .topBtns a{
+		height: 20px;
+		padding: 0 12px;
+		border-radius: 10px;
+		margin: 0 10px;
+		line-height: 20px;
+	}
+	.infoBox .timetable .tiemWp{
+		padding: 22px 20% 0 0;
+	}
+	.infoBox .timetable .totalTable .totalTit{
+		height: 20px;
+		top: 6px;
+	}
+	.infoBox .timetable .totalTable .totalTit span{
+		line-height: 20px;
+	}
+	.btnLayer{
+		width: 30px;
+		height: 72px;
+		top: 20px;
+		right: 18px;
+	}
+	.btnLayer a{
+		display: block;
+		width: 30px;
+		height: 30px;
+	}
+	.btnLayer .search{
+		width: 30px;
+		height: 30px;
+		position: relative;
+		margin-bottom: 12px;
+	}
+	.btnLayer .search .searchInner{
+		width: 30px;
+		height: 30px;
+		border-radius: 15px;
+	}
+	.btnLayer .search .open{
+		width: 240px;
+	}
+	.btnLayer .search .icoSearch{
+		display: block;
+		width: 18px;
+		height: 18px;
+		background: url(../images/s_ico8.png);
+		background-size: 100% 100%;
+	}
+	.btnLayer .search a.searchBtn .icoSearch{
+		position: relative;
+		top: 6px;
+		left: 6px;
+	}
+	.btnLayer .search form{
+		width: 200px;
+		height: 24px;
+		padding: 3px 15px;
+	}
+	.btnLayer .search form button.icoSearch{
+		margin-right: 10px;
+		margin-top: 3px;
+	}
+
+	.btnLayer .search form input{
+		width: 166px;
+	}
+	.btnLayer .icoCar{
+		display: block;
+		width: 20px;
+		height: 12px;
+		background: url(../images/s_ico9.png);
+		background-size: 100% 100%;
+		top: 9px;
+		left: 5px;
+	}
+}
+
+@media screen and (max-width: 1365px){
+	.signOut{
+		height: 16px;
+		padding: 0 8px;
+		border: 1px solid #02b6d4;
+		border-radius: 9px;
+		line-height: 16px;
+		margin-left: 12px;
+		margin-top: 3px;
+		font-size: 12px;
+	}
+	.infoBox .infoTop .infoTit{
+		height: 50%;
+		top: 25%;
+	}
+	.carInfo .carClose{
+		width: 32px;
+		height: 32px;
+		background-size: 100% 100%;
+		top: -16px;
+		right: -16px;
+	}
+	.infoBox .infoRight .introBox .carText p{
+		height: 18px;
+		line-height: 18px;
+		padding: 0 6px;
+	}
+	.infoBox .infoRight .driver{
+		padding-top: 2px;
+	}
+	.infoBox .infoRight .driver .photo{
+		width: 60px;
+		height: 60px;
+	}
+	.infoBox .infoRight .driver p{
+		font-size: 12px;
+		line-height: 22px;
+	}
+	.infoBox .infoLeft{
+		padding-top: 40px;
+	}
+	.infoBox .infoLeft .topSearch{
+		height: 28px;
+		padding: 0 14px;
+		border-radius: 14px;
+	}
+	.infoBox .infoLeft .topSearch form{
+		padding: 4px 10px 4px 28px;
+	}
+	.infoBox .infoLeft .topSearch button{
+		width: 18px;
+		height: 18px;
+		background-size: 100%;
+		top: 4px;
+	}
+	.infoBox .infoLeft .carState{
+		padding-top: 32px;
+	}
+	.infoBox .infoLeft .carState h3{
+		height: 31px;
+		line-height: 31px;
+		padding: 0 6px;
+	}
+	.infoBox .infoLeft .carState h3 span{
+		height: 31px;
+	}
+	.infoBox .infoLeft .carState ul li{
+		height: 31px;
+		line-height: 31px;
+		padding: 0 6px;
+	}
+	.infoBox .infoLeft .carState ul li p,.infoBox .infoLeft .carState ul li span{
+		height: 31px;
+	}
+
+	.infoBox .infoRight .timetable{
+		padding-top:28px;
+	}
+	.infoBox .infoRight .timetable .topTool{
+		height: 24px;
+		padding-top: 4px;
+	}
+	.infoBox .infoRight .timetable .tableExplain{
+		padding-top: 14px;
+	}
+	.infoBox .infoRight .timetable .tableExplain .itemExplain{
+		margin-right: 40px;
+	}
+	.infoBox .infoRight .timetable .tableExplain .itemExplain p{
+		font-size: 12px;
+	}
+	.infoBox .infoRight .timetable .topBtns{
+		height: 20px;
+		padding-top: 4px;
+	}
+	.infoBox .infoRight .timetable .topBtns a{
+		height: 20px;
+		padding: 0 12px;
+		border-radius: 10px;
+		margin: 0 10px;
+		line-height: 20px;
+	}
+	.infoBox .timetable .tiemWp{
+		padding: 22px 20% 0 0;
+	}
+	.infoBox .timetable .totalTable .totalTit{
+		height: 20px;
+		top: 6px;
+	}
+	.infoBox .timetable .totalTable .totalTit span{
+		line-height: 20px;
+	}
+	.btnLayer{
+		width: 30px;
+		height: 72px;
+		top: 20px;
+		right: 18px;
+	}
+	.btnLayer a{
+		display: block;
+		width: 30px;
+		height: 30px;
+	}
+	.btnLayer .search{
+		width: 30px;
+		height: 30px;
+		position: relative;
+		margin-bottom: 12px;
+	}
+	.btnLayer .search .searchInner{
+		width: 30px;
+		height: 30px;
+		border-radius: 15px;
+	}
+	.btnLayer .search .open{
+		width: 240px;
+	}
+	.btnLayer .search .icoSearch{
+		display: block;
+		width: 18px;
+		height: 18px;
+		background: url(../images/s_ico8.png);
+		background-size: 100% 100%;
+	}
+	.btnLayer .search a.searchBtn .icoSearch{
+		position: relative;
+		top: 6px;
+		left: 6px;
+	}
+	.btnLayer .search form{
+		width: 200px;
+		height: 24px;
+		padding: 3px 15px;
+	}
+	.btnLayer .search form button.icoSearch{
+		margin-right: 10px;
+		margin-top: 3px;
+	}
+
+	.btnLayer .search form input{
+		width: 166px;
+	}
+	.btnLayer .icoCar{
+		display: block;
+		width: 20px;
+		height: 12px;
+		background: url(../images/s_ico9.png);
+		background-size: 100% 100%;
+		top: 9px;
+		left: 5px;
+	}
+}

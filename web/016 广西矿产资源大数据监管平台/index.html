@@ -1,0 +1,219 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>index</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script src="js/swiper.min.js"></script>
+ <link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="head clearfix">
+		<div class="home"><a href="#"><img src="images/Home.png" width="28"> <i> 首页</i></a></div>
+	<div class="menu menu1 pulll_left">
+		<ul>
+			<li><a href="#">功能菜单一 </a></li>
+			<li><a href="#">功能菜单二</a></li>
+
+		</ul>
+		</div>
+	<h1 class="pulll_left">某某科技有限公司-生产数据中心</h1>
+		<div class="menu menu2 pulll_left">
+		<ul>
+			<li><a href="#">功能菜单一 </a></li>
+			<li><a href="#">功能菜单二</a></li>
+		</ul>
+		</div>
+		
+		<div class="time" id="showTime">2018/6/12 17:00:12</div>
+		<script>
+var t = null;
+    t = setTimeout(time,1000);//開始运行
+    function time()
+    {
+       clearTimeout(t);//清除定时器
+       dt = new Date();
+		var y=dt.getFullYear();
+		var mt=dt.getMonth()+1;
+		var day=dt.getDate();
+       var h=dt.getHours();//获取时
+       var m=dt.getMinutes();//获取分
+       var s=dt.getSeconds();//获取秒
+       document.getElementById("showTime").innerHTML = y+"/"+mt+"/"+day+" "+h+":"+m+":"+s+"";
+       t = setTimeout(time,1000); //设定定时器，循环运行     
+    } 
+
+</script>
+	</div>
+	<div class="mainbox">
+	
+	<ul class="clearfix nav1">
+		<li style="width: 25%">
+		<div class="box">
+			<div class="tit">标题样式</div>
+			<div class="boxnav" id="echart1" style="height: 180px;">
+
+			</div>
+			</div>
+			<div class="box">
+			<div class="tit">标题样式</div>
+			<div class="boxnav" style="height: 180px;" id="echart21">
+			</div>
+			</div>
+			
+			<div class="box">
+			<div class="tit">标题样式</div>
+			<div class="boxnav" id="echart3" style="height: 240px;">
+				
+			</div>
+			</div>
+		</li>
+		<li style="width: 50%">
+		
+		<div class="box">
+			<div class="boxnav mapc" style="height: 500px; position: relative; padding: 0">
+				
+				
+				
+
+  <!-- Swiper -->
+
+  <div class="swiper-container gallery-top">
+	<div class="mapnav">
+				<ul>
+					<li><div><span>全部负荷</span><p>358</p></div></li>
+					<li><div><span>火电负荷</span><p>913452</p></div></li>
+					<li><div><span>风电负荷</span><p>19532</p></div></li>
+					<li><div><span>供热负荷</span><p>521711</p></div></li>
+					</ul>
+					
+				</div>
+    <div class="swiper-wrapper">
+		<div class="swiper-slide" style="background-image:url(images/1.jpg)"></div>
+		<div class="swiper-slide" style="background-image:url(images/1.jpg)"></div>
+		<div class="swiper-slide" style="background-image:url(images/1.jpg)"></div>
+		<div class="swiper-slide" style="background-image:url(images/1.jpg)"></div>
+		<div class="swiper-slide" style="background-image:url(images/1.jpg)"></div>
+		<div class="swiper-slide" style="background-image:url(images/1.jpg)"></div>
+      
+   
+		
+    </div>
+
+    <!-- Add Arrows -->
+
+    <div class="swiper-button-next swiper-button-white"></div>
+
+    <div class="swiper-button-prev swiper-button-white"></div>
+
+  </div>
+
+  <div class="swiper-container gallery-thumbs">
+
+    <div class="swiper-wrapper">
+<div class="swiper-slide" style="background-image:url(images/1.jpg)"></div>
+<div class="swiper-slide" style="background-image:url(images/1.jpg)"></div>
+<div class="swiper-slide" style="background-image:url(images/1.jpg)"></div>
+<div class="swiper-slide" style="background-image:url(images/1.jpg)"></div>
+<div class="swiper-slide" style="background-image:url(images/1.jpg)"></div>
+<div class="swiper-slide" style="background-image:url(images/1.jpg)"></div>
+
+    </div>
+
+  </div>
+ <script>
+var galleryThumbs = new Swiper('.gallery-thumbs', {
+	spaceBetween: 0,
+	slidesPerView: 5,
+	freeMode: true,
+	watchSlidesVisibility: true,
+	watchSlidesProgress: true,
+});
+var galleryTop = new Swiper('.gallery-top', {
+	spaceBetween: 10,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	thumbs: {
+		swiper: galleryThumbs
+	}
+});
+  </script>		
+			</div>
+			</div>
+		<ul class="nav1">
+			<li style="width: 50%">
+			<div class="box">
+			<div class="tit">标题样式</div>
+			<div class="boxnav" id="echart4" style="height: 200px;">
+				
+			</div>
+			</div>
+			</li>
+			<li style="width: 50%">
+			
+			<div class="box">
+			<div class="tit">标题样式</div>
+			<div class="boxnav"  id="echart5" style="height: 200px;">
+				
+			</div>
+			</div></li>
+			</ul>
+			
+		</li>
+		<li style="width: 25%">
+		<div class="box">
+			
+			<div class="boxnav"  style="height: 76px;">
+			<div class="weather">
+				<div class="">
+				<div class="wt1">
+					<div class="wt2"><img src="images/weather.png"><p>29<sup>℃</sup></p></div>
+					<span>多云转晴</span>
+					</div>
+					
+				</div>
+				<div class="wt03">
+				<p><span>气温：</span>20 ~ 32℃</p>
+				<p><span>降水量：</span>32毫米</p>
+				<p><span>风况：</span>西北风微风</p>
+				</div>
+				</div>
+			</div>
+			</div>
+		<div class="box">
+			<div class="tit">标题样式</div>
+			<div class="boxnav" id="echart6" style="height: 170px;"></div>
+			</div>
+			
+			<div class="box">
+			<div class="tit">标题样式</div>
+			<div class="boxnav" style="height: 170px;" id="echart7"></div>
+			</div>
+		<div class="box">
+			<div class="tit">标题样式</div>
+			<div class="boxnav" style="height: 170px;">
+			<ul class="gnlb">
+				<li><span>月平均小时：<em>119351</em></span></li>
+				<li><span>月平均小时：<em>119351</em></span></li>
+				<li><span>月平均小时：<em>119351</em></span></li>
+				<li><span>月平均小时：<em>119351</em></span></li>
+				<li><span>月平均小时：<em>119351</em></span></li>
+				<li><span>月平均小时：<em>119351</em></span></li>
+				</ul>
+			
+			</div>
+			</div>
+		</li>
+		</ul>
+		
+		
+		
+		
+	</div>
+</body>
+</html>

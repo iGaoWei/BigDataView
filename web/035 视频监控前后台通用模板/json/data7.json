@@ -1,0 +1,16 @@
+{"data":
+[{"Id": 1, "Name": "系统设置", "Url": null, "ParentId": null, "Level": 1, "CreateTime": null, "Status": 1, "SortOrder": 1},
+    {"Id": 2, "Name": "菜单管理", "Url": "/Systems/Menu/Index", "ParentId": 1, "Level": 2, "CreateTime": null, "Status": 1},
+    {"Id": 3, "Name": "菜单管理", "Url": "/Systems/Menu/Index", "ParentId": null, "Level": 1, "CreateTime": null, "Status": 1},
+    {"Id": 4, "Name": "菜单管理", "Url": "/Systems/Menu/Index", "ParentId": null, "Level": 1, "CreateTime": null, "Status": 1},
+    {"Id": 5, "Name": "菜单管理", "Url": "/Systems/Menu/Index", "ParentId": null, "Level": 1, "CreateTime": null, "Status": 1},
+    {"Id": 51, "Name": "菜单管理", "Url": "/Systems/Menu/Index", "ParentId": 5, "Level": 5, "CreateTime": null, "Status": 1},
+    {"Id": 52, "Name": "菜单管理", "Url": "/Systems/Menu/Index", "ParentId": 5, "Level": 5, "CreateTime": null, "Status": 1},
+    {"Id": 6, "Name": "菜单管理", "Url": "/Systems/Menu/Index", "ParentId": null, "Level": 1, "CreateTime": null, "Status": 1},
+    {"Id": 7, "Name": "菜单管理", "Url": "/Systems/Menu/Index", "ParentId": null, "Level": 1, "CreateTime": null, "Status": 1},
+    {"Id": 8, "Name": "菜单管理", "Url": "/Systems/Menu/Index", "ParentId": null, "Level": 1, "CreateTime": null, "Status": 1},
+    {"Id": 9, "Name": "菜单管理", "Url": "/Systems/Menu/Index", "ParentId": null, "Level": 1, "CreateTime": null, "Status": 1},
+    {"Id": 10, "Name": "菜单管理", "Url": "/Systems/Menu/Index", "ParentId": null, "Level": 1, "CreateTime": null, "Status": 1},
+    {"Id": 11, "Name": "菜单管理", "Url": "/Systems/Menu/Index", "ParentId": null, "Level": 1, "CreateTime": null, "Status": 1}
+
+]}

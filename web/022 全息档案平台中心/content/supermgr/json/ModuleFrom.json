@@ -1,0 +1,21 @@
+﻿{
+  "Id": "f21fa3a0-c523-4d02-99ca-fd8dd3ae3d59",
+  "ParentId": "7ae94059-9aa5-48eb-8330-4e2a6565b193",
+  "EnCode": "SystemLog",
+  "FullName": "系统日志",
+  "Icon": "fa fa-warning",
+  "UrlAddress": "/SysMgr/AppLogMgr/Index",
+  "Target": "1",
+  "IsMenu": 1,
+  "AllowExpand": 1,
+  "IsPublic": 0,
+  "SortCode": 1,
+  "EnabledMark": 1,
+  "Description": "&nbsp;",
+  "CreationTime": "2016-10-07 00:00:00",
+  "CreatorUserId": "System",
+  "LastModificationTime": "2016-11-01 20:51:33",
+  "LastModifierUserName": "tianzh",
+  "LastModifierUserId": "4f0125ce-27f3-449c-bf2e-77db7ffd7a8d",
+  "IsDeleted": false
+}

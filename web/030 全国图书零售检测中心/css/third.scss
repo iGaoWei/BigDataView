@@ -1,0 +1,572 @@
+@import "base.scss";
+@import "drop_down.scss";
+.main {
+    width: 100%;
+    height: 84%;
+    h3 {
+        font-size: px2em(36, 64);
+        color: #fff;
+    }
+    .aside-left {
+        position: relative;
+        width: 22%;
+        height: 100%;
+        .left-top {
+            overflow: auto;
+            &:before {
+                position: absolute;
+                left: 94%;
+                top: 89%;
+                width: 5%;
+                min-width: 20px;
+                height: 13%;
+                min-height: 50px;
+                background: url(../img/bor1_1_xie.png) no-repeat;
+                background-size: 100% 100%;
+                content: "";
+            }
+            &:after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 97%;
+                background: url("../img/bor1_1.png") no-repeat;
+                background-size: 100% 100%;
+                content: "";
+            }
+            .top-in {
+                width: 100%;
+                height: 95%;
+                overflow: hidden;
+            }
+        }
+        .book-rank {
+            border-bottom: 1px solid rgba(#1397ff, .1);
+            font-size: 14px;
+            span {
+                display: inline-block;
+                height: 100%;
+            }
+            .ranking {
+                color: #2edbff;
+            }
+            .hot {
+                font-size: px2em(32, 64);
+                color: #1397ff;
+            }
+        } // 公共样式
+        .ranking {
+            width: 13%;
+            padding-left: 5%;
+        }
+        .name {
+            width: 32%;
+        }
+        .company {
+            width: 34%;
+        }
+        .hot {
+            width: 20%;
+            padding-left: 2%;
+        }
+        .ranking,
+        .name,
+        .company,
+        .hot {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        h3 {
+            height: 15%;
+        }
+        .tit {
+            height: 6%;
+            margin: 00;
+            font-size: px2em(28, 64);
+            color: #2edbff;
+            span {
+                display: inline-block;
+                height: 100%;
+            }
+        }
+        .top {
+            position: relative;
+            height: 52%;
+            overflow: hidden;
+            .con-wrap {
+                width: 100%;
+                height: 75%;
+                .over-wrap {
+                    height: 100%;
+                }
+            }
+            .con {
+                height: 100%;
+                li {
+                    height: 7.5%;
+                    line-height: 2;
+                    .book-rank {
+                        height: 100%;
+                    }
+                    .book-show {
+                        display: none;
+                        position: relative;
+                        margin-top: 2%;
+                        overflow: hidden;
+                        .img-box {
+                            position: relative;
+                            width: 25%;
+                            height: 100%;
+                            margin: 0 4% 0 16%;
+                            img {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                width: 100%;
+                                max-height: 100%;
+                                overflow: hidden;
+                            }
+                        }
+                        .content {
+                            width: 55%;
+                            height: 100%;
+                            margin-top: 2%;
+                            font-size: px2em(12, 32);
+                            overflow: hidden;
+                            p {
+                                height: 20%;
+                                margin: 0;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                            }
+                        }
+                    }
+                }
+                li.active {
+                    height: auto;
+                    background: rgba(#1397ff, .1);
+                    .book-rank {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+        .bottom,
+        .top {
+            position: absolute;
+            width: 100%;
+            height: 51.5%;
+            .short {
+                width: 67%;
+            }
+            .hot {
+                width: 20%;
+            }
+            .con {
+                height: 74%;
+                li {
+                    height: 7.5%;
+                    line-height: 2;
+                    border-bottom: 1px solid rgba(19, 151, 255, .1);
+                    .book-rank {
+                        height: 100%;
+                        border-bottom: none;
+                    }
+                    .short {
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+        .top .con {
+            height: 97%;
+        }
+    }
+    .aside-right {
+        position: relative;
+        width: 22%;
+        height: 100%; // 公共样式
+        .pie,
+        .trend {
+            position: relative;
+            &:before {
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background: #0078ff;
+                content: "";
+            }
+            &:before {
+                top: 0;
+                opacity: .3;
+            }
+        }
+        .keys {
+            position: relative;
+            height: 21%;
+            margin-bottom: 2.5%;
+            h3 {
+                height: 40%;
+                padding-top: 6%;
+                margin-left: 5%;
+            }
+            .con {
+                height: 42%;
+                margin: 0 20px;
+                background: #081d5d;
+                dl {
+                    width: 33.3%;
+                    height: 100%;
+                    padding: 10px 0 0 10px;
+                    dt {
+                        height: 40%;
+                        font-size: px2em(28, 64);
+                        color: #128df0;
+                    }
+                    ;
+                    dd {
+                        height: 60%;
+                        font-family: Rubik;
+                        font-size: px2em(48, 64);
+                        font-weight: 300;
+                        color: #fff;
+                    }
+                }
+                .middle {
+                    position: relative;
+                    &:before,
+                    &:after {
+                        position: absolute;
+                        top: 20%;
+                        width: 1px;
+                        height: 60%;
+                        background: rgba(#fff, .1);
+                        content: "";
+                    }
+                    &:before {
+                        left: 0;
+                    }
+                    &:after {
+                        right: 0;
+                    }
+                }
+            }
+        }
+        .pie {
+            position: relative;
+            height: 40%;
+            margin-bottom: 2.5%;
+            background: url("../img/bg1_1.png") no-repeat;
+            background-size: cover;
+            &:after {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: url("../img/bor1_4.png") no-repeat;
+                background-size: 100% 100%;
+                content: "";
+            }
+            h3 {
+                height: 20%;
+                text-align: center;
+            }
+            .pie1 {
+                width: 47%;
+                height: 100%;
+                padding-top: 8%;
+                // margin-left: 8%;
+                position: relative;
+            }
+            .pie2 {
+                width: 47%;
+                height: 100%;
+                position: relative;
+                padding-top: 8%;
+                margin-left: 3%;
+            }
+            .legend {
+                position: absolute;
+                bottom: 6%;
+                left: 50%;
+                width: 80%;
+                min-width: 86px;
+                text-align: left;
+                margin-left: -13%;
+                font-size: 0.3125em;
+                transform: translate(-50%, 0);
+                span {
+                    position: relative;
+                    margin: 0% 3%;
+                    &:before {
+                        display: inline-block;
+                        position: relative;
+                        top: 1px;
+                        width: 1em;
+                        height: 1em;
+                        margin-right: 1%;
+                        content: "";
+                    }
+                    &:nth-of-type(1) {
+                        &:before {
+                            background: #0239a7;
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        &:before {
+                            background: #fff;
+                        }
+                    }
+                    &:nth-of-type(3) {
+                        &:before {
+                            background: #24feb4;
+                        }
+                    }
+                    &:nth-of-type(4) {
+                        &:before {
+                            background: #23539b;
+                        }
+                    }
+                    &:nth-of-type(5) {
+                        &:before {
+                            background: #3c9de4;
+                        }
+                    }
+                }
+            }
+            .legend2 {
+                position: absolute;
+                bottom: 11%;
+                left: 50%;
+                width: 100%;
+                text-align: left;
+                min-width: 225px;
+                font-size: px2em(20, 64);
+                transform: translate(-50%, 0);
+                span {
+                    position: relative;
+                    min-width: 100px;
+                    margin-right: 4%;
+                    float: left;
+                    display: block;
+                    text-align: left;
+                }
+            }
+        }
+        .area-rank {
+            position: relative;
+            height: 20%;
+            margin-bottom: 2.5%;
+            background: url("../img/bg1_4.png") no-repeat;
+            background-size: cover;
+            overflow: hidden;
+            &:after {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: url("../img/bor1_5.png") no-repeat;
+                background-size: 100% 100%;
+                content: "";
+            }
+            h3 {
+                height: 40%;
+                padding-top: 6%;
+                margin-left: 5%;
+            }
+            .recommend {
+                position: relative;
+                height: 560%;
+                margin: 0% 0 5% 5%;
+                font-size: px2em(20, 64); // color: #07bffb;
+                overflow: hidden;
+                ul {
+                    li {
+                        padding: 1% 2%;
+                        margin: 1%;
+                        display: inline-block;
+                        font-size: px2em(20, 64);
+                        background: rgba(7, 191, 251, 0.22)
+                    }
+                } // ul {
+                //     position: absolute;
+                //     top: 0;
+                //     width: 100%;
+                // }
+                // li {
+                //     padding: 1% 1%;
+                //     background: #00bbec;
+                // }
+                // span {
+                //     display: inline-block;
+                //     height: 100%;
+                // }
+                // .num {
+                //     width: 4%;
+                //     min-width: 15px;
+                // }
+                // .city-name {
+                //     width: 8%;
+                //     min-width: 40px;
+                // }
+                // .bar {
+                //     width: 68%;
+                //     height: 50%;
+                //     font-size: 0;
+                //     background: #03163b;
+                //     -webkit-text-size-adjust: none;
+                //     .bar-in {
+                //         display: inline-block;
+                //         height: 100%;
+                //         background: linear-gradient(to right, #2690cf, #00fecc);
+                //     }
+                // }
+                // .rank-value {
+                //     margin-left: 1.5%;
+                //     font-size: px2em(24, 64);
+                // }
+            }
+        }
+        .trend {
+            // position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100%; // background: url("../img/bg1_3.png") no-repeat;
+            background-size: cover;
+            &:after {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%; // background: url("../img/bor1_6.png") no-repeat;
+                background-size: 100% 100%;
+                content: "";
+            }
+            h3 {
+                height: 20%;
+                padding-top: 4%;
+                margin-left: 5%;
+            }
+            ;
+        }
+        .publish {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 38%;
+            background: url("../img/invalid-name.png");
+            background-size: 100% 100%;
+            h3 {
+                margin-top: 9%;
+                padding-left: 9%;
+                span {
+                    float: right;
+                    font-size: px2em(32, 64);
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #00bbec;
+                    padding-right: 17%;
+                }
+            }
+            img {
+                display: block;
+                margin: 1% auto;
+                width: 91%;
+            }
+        }
+    }
+}
+
+.title-map,
+.month-tip {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, 0);
+    font-size: px2em(36, 64);
+}
+
+.month-tip {
+    color: #00bbec;
+}
+
+header .gifImg .month-tip {
+    margin-top: 0%;
+}
+
+p .main-bottom {
+    width: 100%;
+    height: 5px;
+    span {
+        display: inline-block;
+        height: 100%;
+        background: #02336b;
+    }
+    .line1 {
+        width: 15%;
+        margin-right: 6px;
+    }
+    .line2 {
+        width: 55%;
+        margin-right: 6px;
+    }
+    .line3 {
+        width: 26%;
+    }
+}
+
+.title_img {
+    text-align: left;
+}
+
+// 出版社排行 旋转效果
+.pressRotate {
+    -webkit-animation: mymove .5s ease-in;
+    -moz-animation: mymove .5s ease-in;
+    -o-animation: mymove .5s ease-in;
+    animation: mymove .5s ease-in;
+}
+
+@keyframes mymove {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+
+@-moz-keyframes mymove {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+
+@-webkit-keyframes mymove {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+
+@-o-keyframes mymove {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(360deg);
+    }
+}

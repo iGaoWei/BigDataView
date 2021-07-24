@@ -1,0 +1,63 @@
+@charset "utf-8";
+/*
+Author：张浩华
+Date：2011.11.25 0:12
+Version：SimpleTree 1.0
+*/
+.st_tree {
+    /*padding: 10px;*/
+}
+
+/* 超链接 */
+.st_tree a {
+    text-decoration: none;
+    color:#333;
+}
+
+/* 鼠标经过的超链接 */
+.st_tree a:hover {
+    color: #4b8df8;
+    text-decoration: underline;
+}
+
+/* 菜单 */
+.st_tree ul {
+    padding: 0 0 0 18px;
+    margin: 0;
+}
+
+/* 菜单项 */
+.st_tree ul li {
+    font-size: 13px;
+    color: #222;
+    line-height: 18px;
+    cursor: pointer;
+    list-style: none;
+    background: url(imgs/st_node.gif);
+    background-repeat: no-repeat;
+    padding: 0 0 3px 20px;
+}
+
+/* 子菜单 */
+.st_tree ul li ul {
+}
+
+/* 子菜单项 */
+.st_tree ul li ul li {
+}
+
+/* 子菜单的父节点 */
+.st_tree .folder {
+    list-style-image: url(imgs/st_icon.png);
+    background: url(imgs/st_folder.gif);
+    background-repeat: no-repeat;
+    padding: 0 0 0 20px;
+}
+
+/* 展开的父节点 */
+.st_tree .open {
+    list-style-image: url(imgs/st_icon_open.png);
+    background: url(imgs/st_folder_open.gif);
+    background-repeat: no-repeat;
+    padding: 0 0 0 20px;
+}

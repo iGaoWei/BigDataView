@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日程管理</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/fullcalendar.css">
+
+
+</head>
+<body >
+<main class="main">
+    <!--头部-->
+    <header class="heared">
+        <span class="head-logo">前后台通用模板</span>
+        <ul class="head-ul"><li><a href="home.html" class="active-a">首页</a> </li>
+            <li><a href="videlctr.html">视频监控</a> </li>
+            <li><a href="map.html">地图管理</a> </li>
+            <li><a href="static.html">统计分析</a> </li>
+            <li><a href="form.html">表单信息</a> </li>
+            <li><a href="user.html">用户管理</a></li>
+            <li><a href="part.html">部门管理</a></li>
+            <li><a href="date.html">日程管理</a></li>
+
+        </ul>
+        <div class="head-right"><span id="time"></span><span>Admin</span></div>
+    </header>
+    <!--身体-->
+    <section class="section" >
+
+
+        <h6>日程管理</h6>
+        <div style="border-bottom: 1px #ccc solid;padding-bottom: 8px">
+            <p style="line-height: 24px;font-size: 14px;padding: 4px 0 0 36px ;color:#bb8940;background-image: url(img/ts_03.png);background-repeat: no-repeat;background-position: 10px 8px;font-weight: bold">
+                温馨提示</p>
+            <ul class="ts">
+                <li><span>*</span>该页面主要显示的是日程管理的类容。</li>
+
+            </ul>
+        </div>
+        <div id="main">
+            <div id='calendar'></div>
+        </div>
+
+    </section>
+
+</main>
+<script src="js/jquery.js"></script>
+<script src='js/fullcalendar.min.js'></script>
+
+
+<script>
+    $(function(){
+        $(".head-ul li a").click(function(){
+            $(this).addClass("active-a").parents("li").siblings().find("a").removeClass("active-a");
+            $(this).parents('li').find("ul").show();
+            $(this).parents("li").sibling().find("ul").hide();
+
+        })
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+            dayClick: function(date, allDay, jsEvent, view) {
+                var selDate =$.fullCalendar.formatDate(date,'yyyy-MM-dd');
+                layer.open({
+                    type: 2,
+                    title: '新建事件',
+                    shadeClose: true,
+                    shade: 0.5,
+                    skin: 'layui-layer-rim',
+                    closeBtn:1,
+                    area: ['700px', '474px'],
+                    content: 'cal_optTail.html?'+ selDate
+                });
+            },
+            eventClick: function(event, jsEvent, view) {
+                console.log(event);
+                layer.open({
+                    type: 2,
+                    title: '编辑事件',
+                    shadeClose: true,
+                    shade: 0.5,
+                    skin: 'layui-layer-rim',
+                    closeBtn:1,
+                    area: ['700px', '474px'],
+                    content: 'user_tail.html?'+ selDate
+                });
+            }
+        });
+
+        getTime();
+    })
+//    格式化时间
+   function getTime(){
+       var day=new Date();
+       var year=day.getFullYear();
+       var moutth=day.getMonth()+1;
+       var date=day.getDate();
+       var hour=day.getHours();
+       var min=day.getMinutes();
+       var sec=day.getSeconds();
+       var str=year+'-'+moutth+'-'+date+' '+hour+":"+min+':'+sec;
+       $("#time").text(str);
+   }
+</script>
+</body>
+</html>

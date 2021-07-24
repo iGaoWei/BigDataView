@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <meta name="renderer" content="webkit">
+
+    <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css"/>
+    <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+    
+</head>
+<body>
+<!--主体-->
+<div class="main clearfix">
+    <div class="main-left">
+        <div class="border-container containertop">
+            <h5 class="name-title tile-size-color">
+                                设备状态
+            </h5>
+            <div id="radar">
+            	<div class="radarkong">
+            		<p class="tile-size-color">设备总数 :<span class="Totalequipment"> 660个</span>统计时间 :<span> 2019.03.26 15:28</span></p>
+            	</div>
+            	<div class="pie-chart" id="pie-chart"></div>
+            	<ul class="SiteStatusList">
+            		<li><i class="Statusnormal Statussame"></i>正常：<span>556</span></li>
+            		<li><i class="Statusemergency Statussame"></i>告警：<span>40</span></li>
+            		<li><i class="StatusOffline Statussame"></i>离线：<span>30</span></li>
+            	</ul>
+            </div> 
+        </div>
+        
+        <div class="border-container containerbottom">
+            <div class="name-title tile-size-color">
+              	 设备类型分布
+            </div>
+            <div class="graduateyear">
+            	<div class="bar-chart" id="bar-chart"></div>
+            	<ul class="SiteStatusList">
+            		<li>本周数据</li>
+            		<li class="DataSwitch"><i class="ThisweekData Datasame" onClick="DataSwitch(this,1)"></i><i class="ThisweekData" onClick="DataSwitch(this,2)"></i></li>
+            		<li class="Defaultgray">本月数据</li>
+            	</ul>
+            </div>
+           
+            
+        </div>
+    </div>
+    <div class="main-middle">
+        <div class="border-container containertop">
+        	<div class="name-title tile-size-color">
+              	 故障设备区域分布情况
+            </div>
+           <div id="mapadd">
+           		<div class="mapleft">
+           			<div class="progress2-chart" id="progress2-chart">
+	           		</div>
+	           		<a href="###" class="progressMore">更多&gt;</a>
+           		</div>
+           		
+           		<div class="map-chart" id="map-chart">
+           			
+           		</div>
+           		<ul class="Devicestatus-List">
+           			<li class="Online2">65.5%
+           				<span class="DevicestatusName">在线</span>
+           			</li>
+           			<li class="Online2">10.5%
+           				<span class="DevicestatusName">离线</span>
+           			</li>
+           			<li class="Online2">10.5%
+           				<span class="DevicestatusName">维护</span>
+           			</li>
+           			<li class="Online2">9.5%
+           				<span class="DevicestatusName">故障</span>
+           			</li>
+           		</ul>
+           		
+           </div>
+        </div>
+        <div class="border-container containerbottom borderno-container">
+            <ul class="teacher-pie clearfix">
+                <li class="teacherList">
+                    <div class="name-title tile-size-color">
+                                                故障时段分布
+                    </div>
+                    <div id="courserate">
+                    	<div class="line-chart" id="line-chart"></div>
+                    	<ul class="SiteStatusList">
+		            		<li><i class="Statusnormal Statussame"></i>合计故障次数 <span>556</span></li>
+		            		
+		            	</ul>
+                    </div>
+                </li>
+                <li class="teacherList">
+                    <div class="name-title tile-size-color">
+                       	故障类型分布
+                    </div>
+                    <div class="bars-chart" id="bars-chart"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-right">
+        <div class="border-container containertop">
+            <div class="name-title tile-size-color">
+               	优秀区域排名
+            </div>
+            <div class="progress1-chart" id="progress1-chart"></div>
+        </div>
+        <div class="border-container containerbottom">
+            <div class="name-title tile-size-color">
+             	故障类型分布
+            </div>
+          	<div id="radar-chart" class="radar-chart">
+          	
+         	</div>
+           
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/echarts.js"></script>
+<script type="text/javascript" src="js/new_file.js"></script>
+<script type="text/javascript" src="js/maps.js"></script>
+
+</body>
+</html>

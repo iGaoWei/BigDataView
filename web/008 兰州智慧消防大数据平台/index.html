@@ -1,0 +1,530 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="./img/favicon.ico" />
+    <!-- <link rel="stylesheet" href="./fonts/font.css" /> -->
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/jq22.css" />
+    <title>消防大数据平台</title>
+    <style>
+      .BMap_scaleTxt{
+        color: #fff!important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main" id="appIndex">
+      <div class="header">
+        <img
+          style="width: 80px;height: 84px;margin-right: 20px;"
+          src="img/logo.png"
+          alt=""
+        />
+        <img src="img/lzxfdsjpt.png" alt="智慧消防大数据平台" />
+        <div class="dateBox">
+          <span id="time"
+            >{{ year }}-{{ month }}-{{ date }}&nbsp;&nbsp; {{ hour }}:{{
+              minute
+            }}:{{ second }}&nbsp;&nbsp; {{ strDate }}
+            <!-- <img
+              style="
+            width: 25px;
+            height: 16px;
+            margin: 0 5px 0 10px;
+        "
+              :src="weather_icon"
+              alt="天气"
+            />
+            {{ weather_curr }}</span
+          > -->
+          <!-- <span>dsggdfgf</span>
+             <span>dsggdfgf</span> -->
+        </div>
+      </div>
+      <div class="content">
+
+        <div class="leftBox col-md-2">
+          <div class="pingfen">
+            <div>
+              <div class="pfTitle">
+                <img src="img/aqpf.png" alt="" />
+                <span class="titleText">安全评分</span>
+              </div>
+              <div class="pfcontent">
+                <div class="leftBox">
+                  <img src="img/aqdj.png" alt="" />
+                  <span>安全等级</span>
+                </div>
+                <div id="echartAqpf" style="width:105px;height:105px;padding-left: 20px;margin-bottom: 32px;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="paimin">
+            <div>
+              <div class="pfTitle" style="margin-bottom: 30px;">
+                <img style="margin-right: 10px;" src="img/jzaqpf.png" alt="" />
+                <span class="titleText">建筑安全评分排名</span>
+              </div>
+              <div id="FontScroll">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <span class="leftSpan">甘肃省兰州市博物馆 </span>
+                      <span>70</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="leftSpan">西北大厦 </span>
+                      <span>75</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="leftSpan">世纪广场 </span>
+                      <span>71</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="leftSpan">中匈友好国际大厦 </span>
+                      <span>65</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="leftSpan">IBC中海国际大厦 </span>
+                      <span>60</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="top10">
+            <div>
+              <div class="pfTitle" style="margin-bottom: 30px;">
+                <img style="margin-right: 10px;" src="img/aqyh.png" alt="" />
+                <span class="titleText">安全隐患TOP10</span>
+              </div>
+              <img
+                style="display: block;margin: auto;width: 80%;height: 75%;"
+                src="img/aqyhtop100.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="middleBox col-md-8">
+          <div class="baiduMap">
+
+            <div id="container"></div>
+          </div>
+          <div class="tongjiList">
+            <div>
+              <div class="col-md-3" style="margin: 0 15px;position: relative;">
+                <div style="justify-content: center;position: relative;top: 22px;" class="pfTitle">
+                  <img style="margin-right: 10px;" src="img/xfjs.png" alt="" />
+                  <span class="titleText">消防给水系统</span>
+                </div>
+                <!-- <img src="img/xfjsxt.png" alt="" /> -->
+                <div id="echartsxfjs" style="width:100%;height:180px;"></div>
+              </div>
+              <div class="comLine"></div>
+              <div class="col-md-3" style="margin: 0 15px;position: relative;">
+                <div style="justify-content: center;position: relative; top: 22px;
+            " class="pfTitle">
+                  <img style="margin-right: 10px;" src="img/ldbj.png" alt="" />
+                  <span class="titleText">联动报警统计</span>
+                </div>
+                <span style="top:90px" class="smdate">{{ year }}/{{ month }}</span>
+                <div id="echartsldbj" style="width:100%;height:180px;margin-top: 10px;"></div>
+                <!-- <img src="img/ldbjtj.png" alt="" /> -->
+                <!-- <span class="spanfont"
+                  >11 &nbsp; 12 &nbsp; 13 &nbsp;11 &nbsp;12 &nbsp;13 &nbsp;
+                  15</span
+                > -->
+              </div>
+              <div class="comLine"></div>
+              <div class="col-md-3" style="margin: 0 15px;position: relative;">
+                <div style="justify-content: center;position: relative; top: 22px;" class="pfTitle">
+                  <img style="margin-right: 10px;" src="img/jgbj.png" alt="" />
+                  <span class="titleText">监管报警统计</span>
+                </div>
+                <span style="top:90px" class="smdate">{{ year }}/{{ month }}</span>
+                <!-- <img src="img/jgbjtj.png" alt="" /> -->
+                <div id="echartsjgbj" style="width:100%;height:180px;"></div>
+                <!-- <span class="spanfont"
+                  >11 &nbsp; 12 &nbsp; 13 &nbsp;11 &nbsp;12 &nbsp;13 &nbsp;
+                  15</span
+                > -->
+              </div>
+              <div class="comLine"></div>
+              <div class="col-md-3" style="margin: 0 15px;position: relative;">
+                <div
+                  style="justify-content: center;margin-bottom: 3px;margin-top: 30px;"
+                  class="pfTitle"
+                >
+                  <img style="margin-right: 10px;" src="img/rcxj.png" alt="" />
+                  <span class="titleText">日常巡检统计</span>
+                </div>
+                <span style="left: 120px;bottom:130px" class="smdate"
+                >{{ year }}/{{ month }}</span
+              >
+                <div id="echartsrcxj" style="width:100%;height:180px;"></div>
+                <!--
+                <span style="left: 110px;" class="smdate"
+                  >{{ year }}/{{ month }}</span
+                > -->
+                <!-- <img src="img/rcxjtj.png" alt="" /> -->
+
+                <!-- <span class="spanfont"
+                  >11 &nbsp;&nbsp;12  &nbsp;&nbsp;13  &nbsp;&nbsp;11 &nbsp;&nbsp;12 &nbsp;&nbsp;13&nbsp;&nbsp;15
+                  &nbsp;&nbsp;15
+                </span>
+                <div style="display: flex;justify-content: center;">
+                  <img src="img/zflft.png" alt="" />
+                  <span class="smtext">巡查数量</span>
+                  <img src="img/zfright.png" alt="" />
+                  <span class="smtext">巡查覆盖率</span>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rightBox col-md-2">
+          <div class="weihutj">
+            <div>
+              <div style="margin-left: 27px;" class="pfTitle">
+                <img style="margin-right: 10px;" src="img/whtj.png" alt="" />
+                <span class="titleText">维保统计</span>
+              </div>
+              <div class="pfcontent flexrow">
+                <div
+                  style="width: 120px;"
+                  class="leftBox flexcolom"
+                >
+                  <div class="sbwx">
+                    <span class="sbxanim animText">69</span>
+                    <span class="smtext sbwxtext">设备维修</span>
+                  </div>
+                  <span style="margin-top: 20px;" class="smtext">维保次数</span>
+                </div>
+
+                <div class="flexcolom" style="margin: 0 8px;">
+                 <div id="echartWbtj" style="width:100px;height:100px;"></div>
+                  <span style="margin-top: 20px;" class="smtext"
+                    >维保覆盖率</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="guzhangtj">
+            <div>
+              <div style="margin: 0 15px;position: relative;">
+                <div
+                  style="justify-content: flex-start;margin-bottom: 3px;"
+                  class="pfTitle"
+                >
+                  <img style="margin-right: 10px;" src="img/gzt.png" alt="" />
+                  <span class="titleText">故障统计</span>
+                </div>
+                <span style="left: 40%;top: 30%;" class="smdate"
+                  >{{ year }}/{{ month }}</span
+                >
+                <div id="echartsgztj" style="width:100%;height:180px;"></div>
+                <!-- <img src="img/gztjs.png" alt="" />
+                <span class="spanfont"
+                  >11 &nbsp; 12 &nbsp; 13 &nbsp;11 &nbsp;12 &nbsp;13 &nbsp;
+                  15</span
+                > -->
+                <!-- <div
+                  style="display: flex;justify-content: center;margin-top: 10px;"
+                >
+                  <img src="img/zflft.png" alt="" />
+                  <span class="smtext">故障数量</span>
+                  <img src="img/zfright.png" alt="" />
+                  <span class="smtext">故障处理及时率</span>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="huojingtj">
+            <div>
+              <div style="margin: 0 15px;position: relative;">
+                <div
+                  style="justify-content: flex-start;margin-bottom: 3px;"
+                  class="pfTitle"
+                >
+                  <img style="margin-right: 10px;" src="img/hj.png" alt="" />
+                  <span class="titleText">火警统计</span>
+                </div>
+                <span style="left: 40%;top: 30%;"  class="smdate"
+                  >{{ year }}/{{ month }}</span
+                >
+                <div id="echartshjtj" style="width:100%;height:180px;left: 10px;"></div>
+                <!-- <img src="img/hjtjs.png" alt="" />
+                <span class="spanfont"
+                  >11 &nbsp; 12 &nbsp; 13 &nbsp;11 &nbsp;12 &nbsp;13 &nbsp;
+                  15</span
+                >
+                <div
+                  style="display: flex;justify-content: center;margin-top: 10px;"
+                >
+                  <img src="img/zflft.png" alt="" />
+                  <span class="smtext">火警数量</span>
+                  <img src="img/zfright.png" alt="" />
+                  <span class="smtext">火警处理及时率</span>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="zhifatj">
+            <div class="flexcolom">
+                <div
+                  class="pfTitle"
+                >
+                  <img style="margin-right: 10px;" src="img/zfjg.png" alt="" />
+                  <span class="titleText">执法结果统计</span>
+                </div>
+                <div id="echartszfjgtj" style="width:100%;height:180px;padding: 0 12px;top:-18px"></div>
+                <!-- <img src="img/zfjgtj.png" alt="" /> -->
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/walden.js"></script>
+    <script src="js/roma.js"></script>
+    <script src="js/jquery.countUp.js"></script>
+    <script
+      type="text/javascript"
+      src="https://api.map.baidu.com/api?v=2.0&ak=2YCQxbGampc7M1pFsKWNiwpS5F7RKVRt&s=1"
+    ></script>
+    <script src="js/fontscroll.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/echart.js"></script>
+    <script type="text/javascript">
+     var markerArr = [
+
+{
+  point: "103.850585,36.069335",
+},
+
+{
+   point: "103.86812,36.063267",
+ },
+ {
+   point: "103.856047,36.042024",
+ },
+ {
+  point: "103.841674,36.067235",
+},
+
+{
+   point: "103.953207,36.031751",
+ },
+ {
+   point: "103.801573,36.073886",
+ },
+ {
+  point: "103.819108,36.068168",
+},
+
+{
+   point: "103.715954,36.099723",
+ },
+ {
+   point: "103.716573,36.101553",
+ },
+ {
+  point: "103.708129,36.100725",
+},
+
+{
+   point: "103.712378,36.10171",
+ },
+ {
+   point: "103.711467,36.103415",
+ },
+ {
+  point: "103.70226,36.102388",
+},
+
+{
+   point: "103.714764,36.100639",
+ },
+ {
+   point: "103.700535,36.110261",
+ }
+
+];
+
+var markerArr1 = [
+
+{
+  point: "103.865245,36.061166",
+},
+
+{
+   point: "103.773259,36.077037",
+ },
+ {
+   point: "103.910664,36.05323",
+ },
+ {
+  point: "103.768085,36.108768",
+},
+
+{
+   point: "103.689896,36.107835",
+ },
+ {
+   point: "103.841099,36.074236",
+ },
+ {
+  point: "103.839949,36.056965",
+},
+
+{
+   point: "103.886517,36.065368",
+ },
+ {
+   point: "103.815228,36.091504",
+ },
+ {
+  point: "103.870995,36.026147",
+},
+
+];
+
+var markerArr2 = [
+
+{
+  point: "103.784757,36.059533",
+},
+
+{
+   point: "103.754862,36.067235",
+ },
+ {
+   point: "103.779008,36.135589",
+ },
+ {
+  point: "103.839374,36.095704",
+},
+
+{
+   point: "103.693633,36.116932",
+ },
+ {
+   point: "103.946021,36.034553",
+ },
+ {
+  point: "103.967868,36.00466",
+},
+
+{
+   point: "103.679835,36.114833",
+ },
+ {
+   point: "103.977641,36.055564",
+ },
+ {
+  point: "103.856334,36.060233",
+},
+
+];
+      var map = new BMap.Map('container')
+      // 创建地图实例
+      var point = new BMap.Point(103.71878, 36.10396)
+      // 创建点坐标
+      map.centerAndZoom(point, 15)
+      // 初始化地图，设置中心点坐标和地图级别
+      map.enableScrollWheelZoom(true)
+      var ctrlSca = new window.BMap.ScaleControl({
+                                                anchor: BMAP_ANCHOR_BOTTOM_RIGHT
+                                            });
+                                           map.addControl(ctrlSca);
+      for(var i = 0; i < markerArr.length; i++) {
+                                                      var p0 = markerArr[i].point.split(",")[0];
+                                                      var p1 = markerArr[i].point.split(",")[1];
+                                                      var maker = addMarker(new window.BMap.Point(p0, p1), i);
+
+                                             }
+
+                                             for(var i = 0; i < markerArr1.length; i++) {
+                                                      var p0 = markerArr1[i].point.split(",")[0];
+                                                      var p1 = markerArr1[i].point.split(",")[1];
+                                                      var maker = addMarker1(new window.BMap.Point(p0, p1), i);
+
+                                             }
+                                             for(var i = 0; i < markerArr2.length; i++) {
+                                                      var p0 = markerArr2[i].point.split(",")[0];
+                                                      var p1 = markerArr2[i].point.split(",")[1];
+                                                      var maker = addMarker2(new window.BMap.Point(p0, p1), i);
+
+                                             }
+
+
+// 添加标注
+                                            function addMarker(point, index) {
+                                                         var myIcon = new BMap.Icon("img/green5.png",
+                                                               new BMap.Size(23, 25), {
+                                                                        // offset: new BMap.Size(10, 25),
+                                                                        //  imageOffset: new BMap.Size(0, 0 - index * 25)
+                                                                 });
+                                                                var marker = new BMap.Marker(point, {
+                                                                      icon: myIcon
+                                                                   });
+                                                                  map.addOverlay(marker);
+                                                                    return marker;
+                                                }
+
+                                            function addMarker1(point, index) {
+                                                         var myIcon = new BMap.Icon("img/red5.png",
+                                                               new BMap.Size(23, 25), {
+                                                                        // offset: new BMap.Size(10, 25),
+                                                                        //  imageOffset: new BMap.Size(0, 0 - index * 25)
+                                                                 });
+                                                                var marker = new BMap.Marker(point, {
+                                                                      icon: myIcon
+                                                                   });
+                                                                  map.addOverlay(marker);
+                                                                    return marker;
+                                                }
+
+
+                                            function addMarker2(point, index) {
+                                                         var myIcon = new BMap.Icon("img/yellow5.png",
+                                                               new BMap.Size(23, 25), {
+                                                                        // offset: new BMap.Size(10, 25),
+                                                                        //  imageOffset: new BMap.Size(0, 0 - index * 25)
+                                                                 });
+                                                                var marker = new BMap.Marker(point, {
+                                                                      icon: myIcon
+                                                                   });
+                                                                  map.addOverlay(marker);
+                                                                    return marker;
+                                                }
+
+
+
+      map.setMapStyle({ style: 'midnight' })
+      $('#container').css('background-color', 'rgba(50,72,106,0.2)')
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,272 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>消防监控</title>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/comon0.css">
+<style>
+
+
+.grid {
+margin-top:5%;
+width:80%;
+  height: 10px;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-column-gap: 14px;
+}
+
+.line {
+  position: relative;
+  width: 90%;
+  height: 7px;
+}
+.line::before, .line::after {
+  content: '';
+  position: absolute;
+  width: 4.5rem;
+  height: 100%;
+  border-radius: 7px;
+  background-color: #FF0000;
+}
+.line::before {
+  animation: first-line ease-in-out 4s var(--delay) infinite alternate;
+}
+.line::after {
+  bottom: 0;
+  background-color: #B22222;
+  width: calc(80% - 10px);
+  animation: second-line ease-in-out 4s var(--delay) infinite alternate;
+}
+.line:nth-child(1) {
+  --delay: calc(-0.1s);
+}
+
+
+@keyframes first-line {
+  70% {
+    width: calc(80% - 10px);
+  }
+  100% {
+    background-color: #FF0000;
+  }
+}
+}
+</style>
+</head>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var html=$(".wrap ul").html()
+		$(".wrap ul").append(html)
+		var ls=$(".wrap li").length/2+1
+		i=0
+		ref = setInterval(function(){
+			i++
+			if(i==ls){
+				i=1
+				$(".wrap ul").css({marginTop:0})
+				$(".wrap ul").animate({marginTop:-'.52'*i+'rem'},1000)
+			}
+	    	$(".wrap ul").animate({marginTop:-'.52'*i+'rem'},1000)
+
+
+		},2400);
+
+
+
+				var html2=$(".adduser ul").html()
+		$(".adduser ul").append(html2)
+		var ls2=$(".adduser li").length/2+1
+		a=0
+		ref = setInterval(function(){
+			a++
+			if(a==ls2){
+				a=1
+				$(".adduser ul").css({marginTop:0})
+				$(".adduser ul").animate({marginTop:-'.5'*a+'rem'},800)
+			}
+	    	$(".adduser ul").animate({marginTop:-'.5'*a+'rem'},800)
+
+
+		},4300);
+
+
+
+
+
+
+
+
+	})
+</script>
+<body style='overflow:-Scroll;overflow-y:hidden'>
+    <div class="loading">
+        <div class="loadbox"> <img src="images/loading.gif"> 页面加载中... </div>
+    </div>
+    <div class="head">
+        <h1>翼兴消防监控</h1>
+        <div class="weather"><span id="showTime"></span></div>
+		<script>
+            var t = null;
+            t = setTimeout(time, 1000); 
+            function time() {
+                clearTimeout(t); 
+                dt = new Date();
+                var y = dt.getFullYear();
+                var mt = dt.getMonth() + 1;
+                var day = dt.getDate();
+                var h = dt.getHours(); 
+                var m = dt.getMinutes(); 
+                var s = dt.getSeconds(); 
+                document.getElementById("showTime").innerHTML = y + "年" + mt + "月" + day + "-" + h + "时" + m + "分" + s + "秒";
+                t = setTimeout(time, 1000);  
+            }
+
+        </script>
+    </div>
+    <div class="mainbox">
+        <ul class="clearfix">
+            <li>
+                <div class="boxall" style="height: 5.2rem">
+                    <div class="alltitle">消防主机报警</div>
+
+                    <div class="sycm">
+                        <ul class="clearfix">
+                            <li><h2>1824</h2><span>本月报警数量</span></li>
+                            <li><h2>1920</h2><span>上月报警数量</span></li>
+                            <li><h2>5%</h2><span>环比增长</span></li>
+                        </ul>
+                        <div style="border-bottom: 1px solid rgba(255,255,255,.1)"></div>
+                        <ul class="clearfix">
+                            <li><h2>824</h2><span>主机(20001)</span></li>
+                            <li><h2>710</h2><span>主机(20003)</span></li>
+                            <li><h2>200</h2><span>主机(20002)</span></li>
+                        </ul>
+
+
+                    </div>
+					 <div class="addnew" >
+                        <div class="tit02"><span>误报种类</span></div>
+                        <div class="allnav" style="height: 2.2rem" id="wbzl"></div>
+                    </div>
+                    <div class="boxfoot"></div>
+                </div>
+                <div class="boxall" style="height: 4.9rem">
+                    <div class="alltitle">无线烟感报警</div>
+                   <div class="allnav" style="height: 1.5rem" id="wxyg"></div>
+				   <div class="addnew" >
+                        <div class="tit02"><span>误报种类</span></div>
+                        <div class="allnav" style="height: 2.0rem" id="wwbzl"></div>
+                    </div>
+                    <div class="boxfoot"></div>
+                </div>
+            </li>
+            <li>
+                <div class="bar">
+                    <div class="barbox ">
+                        <ul class="clearfix">
+                            <li  class="pulll_left counter">
+								6069
+							</li>
+                            <li class="pulll_left counter">410</li>
+                        </ul>
+                    </div>
+                    <div class="barbox2">
+                        <ul class="clearfix">
+                            <li class="pulll_left">联网单位数量</li>
+                            <li class="pulll_left">联网消防主机数量</li>
+                        </ul>
+                    </div>
+                </div>
+				<div class="bar">
+                    <div class="barbox">
+                        <ul class="clearfix">
+                            <li class="pulll_left counter">81189</li>
+                            <li class="pulll_left counter">39410</li>
+                        </ul>
+                    </div>
+                    <div class="barbox2">
+                        <ul class="clearfix">
+                            <li class="pulll_left">总点位数量</li>
+                            <li class="pulll_left">总报警数量</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="map">
+                    <div class="map1"><img src="images/lbx.png"></div>
+                    <div class="map2"><img src="images/jt.png"></div>
+                    <div class="map3"><img src="images/map.png"></div>
+                    <div class="map4" id="map_1"></div>
+                </div>
+				 <div class="boxall" style="height: 3.4rem">
+                    <div class="alltitle">电报警</div>
+                    <div  class="allnav" id="dbj" style="width:7.2rem;height:3rem;margin-top: 0.3rem"></div>
+                    <div class="boxfoot"></div>
+                </div>
+            </li>
+            <li>
+                <div class="boxall" style="height:5.2rem">
+                    <div class="alltitle">燃气报警</div>
+                    
+                    <div class="clearfix">
+                        <div class="sy" style="width:300px;" id="yqbj"></div>
+                    </div>
+                    <div class="addnew" >
+                        <div class="tit02"><span>最新报警</span></div>
+                        <div class="adduser"  style="height: 2.0rem">
+                            <ul >
+                                <li class="clearfix"> <span class="pulll_left">大连市XX医院</span> <span class="pulll_right">一楼 - 吸烟 - 2019-10-11  09:58:58 </span> </li>
+                                <li class="clearfix"> <span class="pulll_left">大连市XX集团</span> <span class="pulll_right">二楼 - 误报 - 2019-10-11  09:58:58 </span> </li>
+                                <li class="clearfix"> <span class="pulll_left">开发区医院</span> <span class="pulll_right">三楼 - 粉尘 - 2019-10-11  09:58:58 </span> </li>
+                                <li class="clearfix"> <span class="pulll_left">时代广场</span> <span class="pulll_right">四楼 - 误报 - 2019-10-11  09:58:58 </span> </li>
+								<li class="clearfix"> <span class="pulll_left">海昌物业</span> <span class="pulll_right">四楼 - 误报 - 2019-10-11  09:58:58 </span> </li>
+								<li class="clearfix"> <span class="pulll_left">海昌物业</span> <span class="pulll_right">四楼 - 误报 - 2019-10-11  09:58:58 </span> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="boxfoot"></div>
+                </div>
+                <div class="boxall" style="height: 1.4rem">
+                    <div class="alltitle">红外报警</div>
+						<div class="grid">
+							<span class="line"></span>
+						</div>
+						 <div >
+                            <span style="color: #fff;opacity:.5">本月报警数量 ：</span><span style="color: #DC143C;font-size:.1rem;    font-weight: bold;">809</span>
+							 <span style="margin-left:15%;color: #fff;opacity:.5">上月报警数量 ：</span><span style="color: #ffeb7b;font-size:.1rem;    font-weight: old;">109</span>
+
+						</div>
+                    <div class="boxfoot"></div>
+                </div>
+				<div class="boxall" style="height: 3.4rem">
+                    <div class="alltitle">水报警</div>
+					<div class="allnav" style="height: 3.0rem" id="sbj"></div>
+                   
+                    <div class="boxfoot"></div>
+                </div>
+            </li>
+        </ul>
+ 
+    </div>
+    <div class="back"></div>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+	 <script type="text/javascript" src="js/echarts-gl.min.js"></script>
+	    <script language="JavaScript" src="js/echarts-tool.js"></script>
+<script type="text/javascript" src="js/timelineOption.js"></script>
+
+  
+   
+    <script type="text/javascript">
+
+    </script>
+
+    <script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="js/jquery.countup.min.js"></script>
+    <script type="text/javascript">
+        $('.counter').countUp();
+    </script>
+
+</body>
+</html>

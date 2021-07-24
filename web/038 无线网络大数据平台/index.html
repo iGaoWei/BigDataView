@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>无线网络大数据平台</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+
+
+    <style>
+        .t_title{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 2.5em;
+            line-height: 80px;
+            color: #fff;
+        }
+        #chart_map{
+            cursor: pointer;
+        }
+        .t_show{
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 2px;
+            background: #2C58A6;
+            padding: 2px 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!--header-->
+<div class="header">
+    <div class="bg_header">
+        <div class="header_nav fl t_title">
+            无线网络大数据平台
+        </div> 
+    </div>
+</div>
+
+<!--main-->
+<div class="data_content">
+  <!--   <div class="data_time">
+        温馨提示: 点击模块后跳转至详情页面。        
+    </div> -->
+
+    <div class="data_main">
+        <div class="main_left fl">
+            <div class="left_1 t_btn6" style="cursor: pointer;">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title">
+                    <img src="img/t_1.png" alt="">
+                  网络规划
+                </div>
+                <div id="chart_1" class="chart" style="width:100%;height: 230px;"></div>
+            </div>
+            <div class="left_2" style="cursor: pointer;width: 100%;height: 100%;box-sizing: border-box;border: 1px solid #2C58A6;position: relative;box-shadow: 0 0 10px #2C58A6;">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title">
+                    <img src="img/t_1.png" alt="">
+                    网络设计
+                </div>
+                <div class="">
+                    <div id="chart_2" class="left-y chart t_btn9" style="width:49%;height: 220px;display: inline;float: left;"></div>
+                    <div id="chart_22" class="right-y chart t_btn9" style="width:49%;height: 220px;display: inline;float: left;"></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="wlsj-down">
+                    <div id="chart_3" class="echart t_btn7" style="width:100%;height: 230px;z-index: 9999;"></div>
+                </div>
+                <div class="wlsj-down2">
+                    <div id="chart_33" class="echart t_btn7" style="width:100%;height: 197px;z-index: 9999;margin-bottom: 10px;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="main_center fl">
+            <div class="center_text">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                 <!--右下边框-->
+                 <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title">
+                    <img src="img/t_3.png" alt="">
+                    无线网络大数据采集终端/模块--监控点
+                </div>
+                <!-- <div id="chart_map" style="width:100%;height:610px;"></div> -->
+                <div class="bottom_center fl">
+                    <div class="main_table t_btn8" style="width: 100%;margin-top: 20px;border-bottom: 1px solid #3d5569;">
+                        <table class="centertable">
+                            <thead >
+                            <tr >
+                                <th class="centerdata-th" colspan="2">GSM</th>
+                                <th class="centerdata-th" colspan="2">WCDMA</th>
+                                <th class="centerdata-th" colspan="2">FDD-LTE</th> 
+                                <th class="centerdata-th" colspan="2">TDD-LTE</th> 
+                               <!--  <th class="centerdata-th" colspan="2">WLAN</th>
+                                <th class="centerdata-th" colspan="2">NB-LOT</th>
+                                <th class="centerdata-th" colspan="2">LORA</th> -->
+                                <!-- <th class="centerdata-th" colspan="2">三维通信物联网</th> -->
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="centertable-td" style="background-color: #072951;box-shadow:-10px 0px 15px #2C58A6 inset,/*左边阴影*/10px 0px 15px #2C58A6 inset;  /*右边阴影*/">
+                                <td>基站</td>
+                                <td name="id" id="id">88888</td>
+                                <td>基站</td>
+                                <td name="id" id="id">111111</td>
+                                <td>AP</td>
+                                <td name="id" id="id">333333</td>
+                                <td>基站</td>
+                                <td name="id" id="id">999999</td>
+                              <!--   <td>基站</td>
+                                <td>8888</td>
+                                <td>基站</td>
+                                <td>1111</td>
+                                <td>基站</td>
+                                <td>999</td> -->
+                                <!-- <td>智慧天线</td>
+                                <td>7735</td>
+                                <td>智慧井盖</td>
+                                <td>832</td> -->
+                            </tr>
+                            <tr class="centertable-td">
+                                <td>DAS</td>
+                                <td name="id" id="id">18888</td>
+                                <td>DAS</td>
+                                <td name="id" id="id">18888</td>
+                                <td>AC</td>
+                                <td name="id" id="id">18888</td>
+                                <td>DAS</td>
+                                <td name="id" id="id">18888</td>
+                                <!-- <td>DAS</td>
+                                <td>1888</td>
+                                <td>基站</td>
+                                <td>188</td>
+                                <td>基站</td>
+                                <td>188</td> -->
+                                <!-- <td>智慧灯杆</td>
+                                <td>938</td>
+                                <td>智慧眼镜</td>
+                                <td>139</td> -->
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="main_table t_btn8" style="width: 100%;margin-top: 10px;border-bottom: 1px solid #3d5569;">
+                        <table class="centertable">
+                            <thead >
+                            <tr >
+                                <!-- <th class="centerdata-th" colspan="2">GSM</th>
+                                <th class="centerdata-th" colspan="2">WCDMA</th>
+                                <th class="centerdata-th" colspan="2">FDD-LTE</th> 
+                                <th class="centerdata-th" colspan="2">TDD-LTE</th> --> 
+                                <th class="centerdata-th" colspan="2">WLAN</th>
+                                <th class="centerdata-th" colspan="2">NB-LOT</th>
+                                <th class="centerdata-th" colspan="2">LORA</th>
+                                <th class="centerdata-th" colspan="4">三维通信物联网</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="centertable-td2" style="background-color: #072951;box-shadow:-10px 0px 15px #2C58A6 inset,/*左边阴影*/10px 0px 15px #2C58A6 inset;  /*右边阴影*/">
+                                <!-- <td>基站</td>
+                                <td>88888</td>
+                                <td>基站</td>
+                                <td>111111</td>
+                                <td>AP</td>
+                                <td>333333</td>
+                                <td>基站</td>
+                                <td>999999</td> -->
+                                <td>基站</td>
+                                <td name="id" id="id">8888</td>
+                                <td>基站</td>
+                                <td name="id" id="id">1111</td>
+                                <td>基站</td>
+                                <td name="id" id="id">999</td>
+                                <td>智慧天线</td>
+                                <td name="id" id="id">7735</td>
+                                <td>智慧井盖</td>
+                                <td name="id" id="id">832</td>
+                            </tr>
+                            <tr class="centertable-td2">
+                                <!-- <td>DAS</td>
+                                <td>18888</td>
+                                <td>DAS</td>
+                                <td>18888</td>
+                                <td>AC</td>
+                                <td>18888</td>
+                                <td>DAS</td>
+                                <td>18888</td> -->
+                                <td>DAS</td>
+                                <td name="id" id="id">1888</td>
+                                <td>基站</td>
+                                <td name="id" id="id">188</td>
+                                <td>基站</td>
+                                <td name="id" id="id">188</td>
+                                <td>智慧灯杆</td>
+                                <td name="id" id="id">938</td>
+                                <td>智慧眼镜</td>
+                                <td name="id" id="id">139</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="" style="position: relative;overflow: hidden;width: 730px;height: 560px;padding: 0px;margin: 0px;">
+                    <div id="chart_7" class="chart t_btn9" style="width:100%;height: 560px;"></div>
+                </div>
+                <div class="">
+                    <div id="chart_24" class="left-y chart t_btn9" style="width:35%;height: 160px;display: inline;float: left;margin-bottom: 2px;"></div>
+                    <div id="chart_15" class="right-y chart t_btn9" style="width:65%;height: 160px;display: inline;float: left;margin-bottom: 2px;"></div>
+                    <div class="clear"></div>
+                </div> 
+                <!-- <div id="chart_91" class="left-y chart t_btn9" style="width:50%;height: 160px;display: inline;float: left;margin-bottom: 2px;"></div> 
+                <div id="chart_92" class="left-y chart t_btn9" style="width:50%;height: 160px;display: inline;float: left;margin-bottom: 2px;"></div>    -->
+                
+
+            </div>
+        </div>
+        <div class="main_right fr">
+            
+            <div class="right_2" style="margin-bottom: 30px;">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title">
+                    <img src="img/t_5.png" alt="">
+                    网络维护
+                </div>
+                <div>
+                    <div id="chart_5" class="echart fl t_btn4" style="width:25%;height: 100px;cursor: pointer;"></div>
+                    <div id="chart_52" class="echart fl t_btn4" style="width:25%;height: 100px;cursor: pointer;"></div>
+                    <div id="chart_53" class="echart fl t_btn4" style="width:25%;height: 100px;cursor: pointer;"></div>
+                    <div id="chart_54" class="echart fl t_btn4" style="width:25%;height: 100px;cursor: pointer;"></div>
+                </div>
+                <div>
+                    <div id="chart_55" class="echart fl t_btn4" style="width:25%;height: 100px;cursor: pointer;"></div>
+                    <div id="chart_56" class="echart fl t_btn4" style="width:25%;height: 100px;cursor: pointer;"></div>
+                    <div id="chart_57" class="echart fl t_btn4" style="width:25%;height: 100px;cursor: pointer;"></div>
+                    <div id="chart_58" class="echart fl t_btn4" style="width:25%;height: 100px;cursor: pointer;"></div>
+                </div>
+                <div>
+                    <div id="chart_6" class="echart fl t_btn4" style="width:100%;height: 100px;cursor: pointer;"></div>
+                </div>
+            </div>
+
+            <div class="right_2" style="height:630px;">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title">
+                    <img src="img/t_5.png" alt="">
+                    网络优化
+                </div>
+                <div id="produce">
+                    <table width="100%" cellpadding="6" cellspacing="0">
+                        <tr class="row1">
+                            
+                            <td class="row1td" colspan="5" style="padding:2px 0px;">2G质量</td>
+                            <!-- <td colspan="2">WCDMA质量</td>
+                            <td colspan="2">LTE质量</td>
+                            <td colspan="2">NB-LOT性能指标</td> -->
+                        </tr>
+                        <tr class="row2">
+                            <td>GSM接通率</td>
+                            <td>GSM数据利用率</td>
+                            <td>GSM语音利用率</td>
+                            <td>GSM掉话率</td>
+                            <td>GSM语音最差小区比例</td>
+                        </tr>
+                        <tr class="row2">
+                            <td>99.75%</td>
+                            <td>55.92%</td>
+                            <td>21.1%</td>
+                            <td>0.24%</td>
+                            <td>0.09%</td>
+                        </tr>
+                        <tr class="row1">
+                            <td class="row1td" colspan="5" style="padding:2px 0px;">WCDMA质量</td>
+                        </tr>
+                        <tr class="row2">
+                            <td>RRC建立成功率</td>
+                            <td>RAB建立成功率</td>
+                            <td>无线接通率</td>
+                            <td>软切换成功率</td>
+                            <td>掉话率</td>
+                        </tr>
+                        <tr class="row2">
+                            <td id="change">99.83</td>
+                            <td>99.94%</td>
+                            <td>99.77%</td>
+                            <td>99.64%</td>
+                            <td>0.04%</td>
+                        </tr>
+                        
+                        <tr class="row1">
+                            <td class="row1td" colspan="5" style="padding:2px 0px;">NB-LOT性能指标</td>
+                        </tr>
+                        <tr class="row2">
+                            <td>RRC连接建立成功率</td>
+                            <td>RRC连接建立成功率</td>
+                            <td>无线掉线率</td>
+                            <td>MAC层上行误快率</td>
+                            <td>MAC层下行误快率</td>
+                        </tr>
+                        <tr class="row2">
+                            <td>98.69%</td>
+                            <td>98.84%</td>
+                            <td>0.01%</td>
+                            <td>1.14%</td>
+                            <td>0.51%</td>
+                        </tr>
+                        <tr class="row1">
+                            <td class="row1td" colspan="5" style="padding:2px 0px;">WLAN性能指标</td>
+                        </tr>
+                        <tr class="row2">
+                            <td>IP地址分配成功率</td>
+                            <td>RRC连接建立成功率</td>
+                            <td>超闲AP占比</td>
+                            <td>AP退服率</td>
+                            <td>关联拥塞率</td>
+                        </tr>
+                        <tr class="row2">
+                            <td>98.01%</td>
+                            <td>98.84%</td>
+                            <td>17.5%</td>
+                            <td>0.01%</td>
+                            <td>0.04%</td>
+                        </tr>
+                        <tr class="row1">
+                            <td class="row1td" colspan="5" style="padding:2px 0px;">LORA性能指标</td>
+                        </tr>
+                        <tr class="row2">
+                            <td>无线接通率</td>
+                            <td>切换成功率</td>
+                            <td>上行成功率</td>
+                            <td>无线掉线率</td>
+                            <td>平均信号强度</td>
+                        </tr>
+                        <tr class="row2">
+                            <td>99.77%</td>
+                            <td>99.64%</td>
+                            <td>100%</td>
+                            <td>0.04%</td>
+                            <td>-78dbm</td>
+                        </tr>
+                        <tr class="row1">
+                            <td class="row1td" colspan="5" style="padding:2px 0px;">视频感知指标</td>
+                        </tr>
+                        <tr class="row2">
+                            <td>平均初始缓冲ms</td>
+                            <td>下载速率平均值KBps</td>
+                            <td>平均E2E_RTT(ms)</td>
+                            <td>平均卡顿顿次(次/小时)</td>
+                            <td>平均RSRP(dBm)</td>
+                        </tr>
+                        <tr class="row2">
+                            <td>2482.7</td>
+                            <td>3750.7</td>
+                            <td>61.05</td>
+                            <td>0.99</td>
+                            <td>-91.85</td>
+                        </tr>
+                        <tr class="row1">
+                            <td class="row1td" colspan="5" style="padding:2px 0px;">语音感知指标</td>
+                        </tr>
+                        <tr class="row2">
+                            <td>平均通话时长(s)</td>
+                            <td>平均TA</td>
+                            <td>小区切换率</td>
+                            <td>平均话音质量</td>
+                            <td>平均呼叫电平dBm</td>
+                        </tr>
+                        <tr class="row2">
+                            <td>46.88</td>
+                            <td>1.13</td>
+                            <td>0.07%</td>
+                            <td>0</td>
+                            <td>-47.02</td>
+                        </tr>
+                        <tr class="row1">
+                            <td class="row1td" colspan="5" style="padding:2px 0px;">LTE质量</td>
+                        </tr>
+                        <tr class="row2">
+                            <td>无线接通率</td>
+                            <td>切换成功率</td>
+                            <td>RRC连接建立成功率</td>
+                            <td>下行双流流量占比</td>
+                            <td>上行PRB利用率</td>
+                        </tr>
+                        <tr class="row2">
+                            <td>99.92%</td>
+                            <td>99.69%</td>
+                            <td>99.93%</td>
+                            <td>62.03%</td>
+                            <td>10.06%</td>
+                        </tr>
+                        <tr class="row2">
+                            <td>下行PRB利用率</td>
+                            <td>4G上行干扰小区比例</td>
+                            <td>无线掉线率</td>
+                            <td>高负荷小区占比</td>
+                            <td>高误块率小区比例</td>
+                        </tr>
+                        <tr class="row2">
+                            <td>11.48%</td>
+                            <td>0.37%</td>
+                            <td>0.04%</td>
+                            <td>0.35%</td>
+                            <td>0.22%</td>
+                        </tr>
+                        
+                    </table>
+                </div>
+                <!-- <div id="chart_8" class="left-y chart t_btn9" style="width:60%;margin-top: -140px;height: 160px;display: inline;float: right;margin-bottom: 2px;"></div>
+ -->
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+</body>
+<script src="js/jquery-2.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/dataTool.js"></script>
+<script src="js/index.js"></script>
+<script src="js/china.js"></script>
+<script src="js/zhejiang.js"></script>
+</html>

@@ -1,0 +1,635 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>广西电子商务公共服务平台大数据中心</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <style>
+        .t_title{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 2.5em;
+            line-height: 80px;
+            color: #fff;
+        }
+        #chart_map{
+            cursor: pointer;
+        }
+        .t_show{
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 2px;
+            background: #2C58A6;
+            padding: 2px 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!--header-->
+<div class="header">
+    <div class="bg_header">
+        <div class="header_nav fl t_title">
+            广西电子商务公共服务平台大数据中心
+        </div> 
+    </div>
+</div>
+
+<!--main-->
+<div class="data_content">
+    <!-- <div class="data_time">
+        温馨提示: 点击模块后跳转至详情页面。        
+    </div> -->
+
+    <div class="data_main">
+        <div class="main_left fl">
+            <div class="left_1 t_btn6" style="cursor: pointer;">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title">
+                    <img src="picture/t_1.png" alt="">
+                  全区快递企业月寄递量
+                </div>
+                <div id="chart_1" class="chart" style="width:100%;height: 280px;"></div>
+            </div>
+            <div class="left_2" style="cursor: pointer;">
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title">
+                    <img src="picture/t_2.png" alt="">
+                    电子商务销售额、订单数
+                </div>
+                <div id="chart_2" class="chart t_btn9" style="width:100%;height: 280px;"></div>
+            </div>
+        </div>
+        <div class="main_center fl">
+            <div class="center_text" style="position: relative;">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                 <!--右下边框-->
+                 <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title" style="width: 230px;">
+                    <img src="picture/t_3.png" alt="">
+                    广西电子商务进农村
+                </div>
+                <div id="chart_map" style="width:100%;height:610px;">
+                </div>
+                <div class="linshi_zdy">
+                    <ul>
+                        <li><span></span>2015批(8个)</li>
+                        <li><span></span>2016批(15个)</li>
+                        <li><span></span>2017批(13个)</li>
+                        <li><span></span>2018批(11个)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+<style type="text/css">
+.linshi_zdy{
+    position: absolute;
+    right: 0px;
+    top: 450px;
+}
+.linshi_zdy li{
+    width: 150px;
+    font-size: 16px;
+    padding: 3px 8px;
+    cursor: pointer;
+}
+.linshi_zdy span{
+    display: block;
+    width: 14px;
+    height: 14px;
+    float: left;
+    border-radius: 50%;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+.linshi_zdy li:first-child{
+    color: #ff0000;
+}
+.linshi_zdy li:first-child span{
+    background: #ff0000;
+}
+.linshi_zdy li:nth-child(2){
+    color: #9cff00;
+}
+.linshi_zdy li:nth-child(2) span{
+    background: #9cff00;
+}
+.linshi_zdy li:nth-child(3){
+    color: #fff;
+}
+.linshi_zdy li:nth-child(3) span{
+    background: #fff;
+}
+.linshi_zdy li:nth-child(4){
+    color: #f4a100;
+}
+.linshi_zdy li:nth-child(4) span{
+    background: #f4a100;
+}
+</style>
+        <div class="main_right fr">
+            <div class="right_1">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title" style="width:220px;">
+                    <img src="picture/t_4.png" alt="">
+                    全区快递月寄递数量
+                </div>
+                <div id="chart_3" class="echart t_btn7" style="width:100%;height: 280px;"></div>
+            </div>
+            <div class="right_2">
+                <!--左上边框-->
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <!--右上边框-->
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <!--左下边框-->
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div> 
+                <div class="main_title" style="width:200px;">
+                    <img src="picture/t_5.png" alt="">
+                    电商企业入驻情况
+                </div>
+                <div id="chart_4" class="echart fl t_btn4" style="width:100%;height: 280px;cursor: pointer;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="data_bottom">
+        <div class="bottom_1 fl t_btn5" style="cursor: pointer;">
+            <div class="t_line_box">
+                <i class="t_l_line"></i> 
+                <i class="l_t_line"></i> 
+            </div> 
+            <div class="t_line_box">
+                <i class="t_r_line"></i> 
+                <i class="r_t_line"></i> 
+            </div> 
+            <div class="t_line_box">
+                <i class="l_b_line"></i> 
+                <i class="b_l_line"></i> 
+            </div> 
+                <div class="t_line_box">
+                <i class="r_b_line"></i> 
+                <i class="b_r_line"></i> 
+            </div>
+            <div class="main_title">
+                <img src="picture/t_7.png" alt="">
+                农村电商交易概况
+            </div>
+            <div class="main_table t_btn8">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>概况名称</th>
+                            <th>详情</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>累计交易总金额</td>
+                            <td>4058.56 万元</td>
+                        </tr>
+                        <tr>
+                            <td>累计交易订单数量</td>
+                            <td>437753 件</td>
+                        </tr>
+                        <tr>
+                            <td>累计产品SKU数量</td>
+                            <td>360 个</td>
+                        </tr>
+                        <tr>
+                            <td>本月交易总额</td>
+                            <td>242.42 万元</td>
+                        </tr>
+                        <tr>
+                            <td>本月交易订单数量</td>
+                            <td>5283 件</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+        <div class="bottom_center fl">
+            <div class="bottom_2 fl">
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div>
+                <div class="main_title" style="width:300px;left:40%;">
+                    <img src="picture/t_7.png" alt="">
+                    广西电子商务热销产品排行榜
+                </div>
+                <div class="main_table t_btn8">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>产品名称</th>
+                            <th>品种</th>
+                            <th>产地</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>荔浦百香果</td>
+                            <td>百香果</td>
+                            <td>荔浦</td>
+                        </tr>
+                        <tr>
+                            <td>荔浦砂糖桔</td>
+                            <td>砂糖桔</td>
+                            <td>荔浦</td>
+                        </tr>
+                        <tr>
+                            <td>90g将军峰小方盒绿茶</td>
+                            <td>中小叶种</td>
+                            <td>广西贺州</td>
+                        </tr>
+                        <tr>
+                            <td>珍珠糯玉米</td>
+                            <td>粮食</td>
+                            <td>忻城县</td>
+                        </tr>
+                        <tr>
+                            <td>桂花红糖</td>
+                            <td>桂花红糖</td>
+                            <td>大新县</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="bottom_3 fl">
+                <div class="t_line_box">
+                    <i class="t_l_line"></i> 
+                    <i class="l_t_line"></i> 
+                </div> 
+                <div class="t_line_box">
+                    <i class="t_r_line"></i> 
+                    <i class="r_t_line"></i> 
+                </div> 
+                <div class="t_line_box">
+                    <i class="l_b_line"></i> 
+                    <i class="b_l_line"></i> 
+                </div> 
+                    <div class="t_line_box">
+                    <i class="r_b_line"></i> 
+                    <i class="b_r_line"></i> 
+                </div>
+                <div class="main_title" style="width:260px;left:45%;">
+                    <img src="picture/t_7.png" alt="">
+                   电子商务热销店铺排行榜
+                </div>
+                <div class="main_table t_btn2">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>店铺名称</th>
+                            <th>产品</th>
+                            <th>销售额(月销)</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>鲜迪食品专营店</td>
+                            <td>海鸭蛋</td>
+                            <td>2.8万</td>
+                        </tr>
+                        <tr>
+                            <td>中鼎水果专营店</td>
+                            <td>红心芭乐番石榴</td>
+                            <td>2.5万</td>
+                        </tr>
+                        <tr>
+                            <td>中闽飘香旗舰店</td>
+                            <td>广西桂林罗汉果</td>
+                            <td>2.4万</td>
+                        </tr>
+                        <tr>
+                            <td>芋小妹旗舰店</td>
+                            <td>广西荔浦大芋头</td>
+                            <td>1.3万</td>
+                        </tr>
+                        <tr>
+                            <td>桂甄堂旗舰店</td>
+                            <td>柳州螺狮粉</td>
+                            <td>1.1万</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_4 fr">
+            <div class="t_line_box">
+                <i class="t_l_line"></i> 
+                <i class="l_t_line"></i> 
+            </div> 
+            <div class="t_line_box">
+                <i class="t_r_line"></i> 
+                <i class="r_t_line"></i> 
+            </div> 
+            <div class="t_line_box">
+                <i class="l_b_line"></i> 
+                <i class="b_l_line"></i> 
+            </div> 
+                <div class="t_line_box">
+                <i class="r_b_line"></i> 
+                <i class="b_r_line"></i> 
+            </div>
+            <div class="main_title">
+                <img src="picture/t_7.png" alt="">
+                平台活动案例
+            </div>
+            <div class="main_table t_btn3 table_zdy">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>活动主题</th>
+                        <th>活动举办地</th>
+                        <th>日期</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a target="blank" href="http://www.gxitps.org/zhanhui/detail/id/20.html">2018广西特产行销全国</a></td>
+                        <td>南宁</td>
+                        <td>2018年</td>
+                    </tr>
+                    <tr>
+                        <td><a target="blank" href="http://www.gxitps.org/zhanhui/detail/id/16.html">2018壮族三月三电商节</a></td>
+                        <td>南宁</td>
+                        <td>2018年</td>
+                    </tr>
+                    <tr>
+                        <td><a target="blank" href="http://www.gxitps.org/zhanhui/detail/id/17.html">2018灵山荔枝节</a></td>
+                        <td>灵山县</td>
+                        <td>2018年</td>
+                    </tr>
+                    <tr>
+                        <td>2018年货节</td>
+                        <td>广西</td>
+                        <td>2018年</td>
+                    </tr>
+                    <tr>
+                        <td>2017好讲师大赛</td>
+                        <td>南宁</td>
+                        <td>2017年</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="scripts/jquery-2.2.1.min.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/common.js"></script>
+<script src="scripts/echarts.min.js"></script>
+<script src="scripts/datatool.js"></script>
+<script src="scripts/index.js"></script>
+<!-- <script src="scripts/china.js"></script> -->
+<script src="scripts/guangxi.js"></script>
+<script type="text/javascript">
+    var dianshang = [];
+    function get_shuju(){
+        $.ajax({
+            type : "post",
+            async:false,
+            url:"/record/dianshang",
+            data:{},
+            dataType:"json",
+            success:function(res){
+                // console.log(res);
+                // if (res) {
+                    // for (var i = 0; i < res.length; i++) {
+                        dianshang.push(res);
+                    // };
+                // };
+            }
+        })
+        return dianshang;
+    }
+
+    //电商企业入驻情况
+    dianshang = get_shuju();
+    
+    var changedetail = echarts.init(document.getElementById('chart_4'));
+    option = {
+        tooltip: {
+            trigger: 'axis',
+            // formatter: '{b}</br>{a}: {c}</br>{a1}: {c1}'
+        },
+        toolbox: {
+            show:false,
+            feature: {
+                dataView: {show: true, readOnly: false},
+                magicType: {show: true, type: ['line', 'bar']},
+                restore: {show: true},
+                saveAsImage: {show: true}
+            }
+        },
+        legend: {
+            data:['',''],
+            show:false
+        },
+        grid:{
+            top:'18%',
+            right:'5%',
+            bottom:'8%',
+            left:'5%',
+            containLabel: true
+        },
+        xAxis: [
+            {
+                type: 'category',
+                data: ['名优企业','技术服务','技术开发','电子商务','网络推广','涉互联网企业'],
+                splitLine:{
+                    show:false,
+                    lineStyle:{
+                        color: '#3c4452'
+                    }
+                },
+                axisTick: {
+                    show: false
+                },
+                axisLabel:{
+                    textStyle:{
+                        color:"#fff"
+                    },
+                    lineStyle:{
+                        color: '#519cff'
+                    },
+                    alignWithLabel: true,
+                    interval:0
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                name: '入驻数据',
+                nameTextStyle:{
+                    color:'#fff'
+                },
+                interval: 100000,
+                min: 0,
+                splitLine:{
+                    show:true,
+                    lineStyle:{
+                        color: '#23303f'
+                    }
+                },
+                axisLine: {
+                    show:false,
+                    lineStyle: {
+                        color: '#115372'
+                    }
+                },
+                axisTick: {
+                    show: false
+                },
+                axisLabel:{
+                    textStyle:{
+                        color:"#fff"
+                    },
+                    alignWithLabel: true,
+                    interval:0
+
+                }
+            }
+        ],
+        color:"yellow",
+        series: [
+            {
+                name:'电商企业入驻',
+                type:'bar',
+                data: [dianshang[0][0],dianshang[0][1],dianshang[0][2],dianshang[0][3],dianshang[0][4],dianshang[0][5]],
+                boundaryGap: '45%',
+                barWidth:'40%',
+
+                itemStyle: {
+                    normal: {
+                        color: function(params) {
+                            var colorList = [
+                                '#6bc0fb','#7fec9d','#fedd8b','#ffa597','#84e4dd','#6bc0fb'
+                            ];
+                            return colorList[params.dataIndex]
+                        },label: {
+                            show: true,
+                            position: 'top',
+                            formatter: '{c}'
+                        }
+                    }
+                }
+            }
+        ]
+    };
+    changedetail.setOption(option);
+</script>
+
+</html>

@@ -1,0 +1,65 @@
+.absolute-area{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:100;
+}
+.absolute-area div{
+	position:absolute;
+	width:80px;
+	height:80px;
+	border-radius: 40px !important;
+	background-color: #f9e558;
+	cursor:pointer;
+	filter:alpha(opacity=50);
+  -moz-opacity:0.5;  
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+}
+.absolute-area div:hover{
+	background-color:#63ec8d;
+}
+.absolute-area div.active{
+	background-color:#63ec8d;
+}
+#ab-xining{
+	left:775px;
+	top:150px;
+}
+#ab-haidong{
+	left:835px;
+	top:200px;
+}
+#ab-huangnan{
+	left:785px;
+	top:290px;
+}
+#ab-haibei{
+	left:665px;
+	top:90px;
+}
+#ab-haixi{
+	background-color: #f00 !important;
+	left:415px;
+	top:150px;
+}
+#ab-hainan{
+	left:665px;
+	top:220px;
+}
+#ab-yushu{
+	left:445px;
+	top:380px;
+}
+#ab-guoluo{
+	background-color: #ff7500 !important;
+	left:665px;
+	top:330px;
+}
+#ab-geermu{
+	background-color: #ff7500 !important;
+	left:230px;
+	top:340px;
+}

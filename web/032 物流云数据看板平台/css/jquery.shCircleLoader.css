@@ -1,0 +1,100 @@
+/*!
+ * SunHater Circle Loader v0.2 (2013-12-28)
+ * jQuery plugin
+ * Copyright (c) 2014 Pavel Tzonkov <sunhater@sunhater.com>
+ * Dual licensed under the MIT and GPL licenses.
+ * http://opensource.org/licenses/MIT
+ * http://www.gnu.org/licenses/gpl.html
+ *
+ * External css example, when using externalCss:true option
+ */
+
+
+/* Loader container */
+.shcl {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+
+/* Progress status */
+.shcl > span {
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    font-size: 14px;
+    color: black;
+}
+
+
+/* Loader dots */
+.shcl > div {
+    position: absolute;
+    visibility: hidden;
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    box-shadow: 0 0 10px black;
+
+    -webkit-border-radius: 5px;
+    -webkit-animation-name: shcl_bounce;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: linear;
+
+    -moz-border-radius: 5px;
+    -moz-animation-name: shcl_bounce;
+    -moz-animation-duration: 1s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: linear;
+
+    -o-border-radius: 5px;
+    -o-animation-name: shcl_bounce;
+    -o-animation-duration: 1s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-direction: linear;
+
+    -ms-border-radius: 5px;
+    -ms-animation-name: shcl_bounce;
+    -ms-animation-duration: 1s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-direction: linear;
+
+    border-radius: 5px;
+    animation-name: shcl_bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: linear;
+}
+
+/* Animation keyframes */
+
+@-webkit-keyframes shcl_bounce {
+    0% {-webkit-transform: scale(1);}
+    80% {-webkit-transform: scale(.3);}
+    100% {-webkit-transform: scale(1);}
+}
+
+@-moz-keyframes shcl_bounce {
+    0% {-moz-transform: scale(1);}
+    80% {-moz-transform: scale(.3);}
+    100% {-moz-transform: scale(1);}
+}
+
+@-o-keyframes shcl_bounce {
+    0% {-o-transform: scale(1);}
+    80% {-o-transform: scale(.3);}
+    100% {-o-transform: scale(1);}
+}
+
+@-ms-keyframes shcl_bounce {
+    0% {-ms-transform: scale(1);}
+    80% {-ms-transform: scale(.3);}
+    100% {-ms-transform: scale(1);}
+}
+
+@keyframes shcl_bounce {
+    0% {transform: scale(1);}
+    80% {transform: scale(.3);}
+    100% {transform: scale(1);}
+}

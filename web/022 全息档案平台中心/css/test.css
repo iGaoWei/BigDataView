@@ -1,0 +1,71 @@
+/*开关的大小*/
+.switch-container {
+    height: 25px;
+    width: 60px;
+    margin-left: 150px;
+    margin-top: -23px;
+}
+
+/*设置checkbox不显示*/
+.switch {
+    display: none;
+}
+
+/*设置label标签为椭圆状*/
+label {
+    display: block;
+    background-color: #EEEEEE;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+/*在label标签内容之前添加如下样式，形成一个未选中状态*/
+label:before {
+    content: '';
+    display: block;
+    border-radius: 25px;
+    height: 100%;
+    width: 24px;
+    background-color: white;
+    opacity: 1;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
+    -webkit-transition: all 0.2s ease;
+}
+
+/*在label标签内容之后添加如下样式，形成一个选中状态*/
+label:after {
+    position: relative;
+    top: -25px;
+    left: 36px;
+    content: '';
+    display: block;
+    border-radius: 25px;
+    height: 100%;
+    width: 24px;
+    background-color: white;
+    opacity: 0;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
+    -webkit-transition: all 0.2s ease;
+}
+
+
+/* ~ 兄弟选择符。
+   p~ul ：位于 p 元素之后的所有 ul 元素
+*/
+
+/*选中后，选中样式显示*/
+#switch:checked~label:after {
+    opacity: 1;
+}
+
+/*选中后，未选中样式消失*/
+#switch:checked~label:before {
+    opacity: 0;
+}
+
+/*选中后label的背景色改变*/
+#switch:checked~label {
+    background-color: green;
+}

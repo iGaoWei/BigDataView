@@ -1,0 +1,216 @@
+.piro_html {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    width: 500px;
+    height: 500px;
+    margin: 0;
+    display: block;
+    padding: 0;
+    z-index: 150001;
+    padding: 0;
+    background: rgba(0,0,0,0.8);
+}
+
+.piro_html .resize {
+    cursor: move;
+}
+
+.piro_html table,.piro_html tbody,.piro_html tr,.piro_html th,.piro_html td, .piro_html img, .piro_html .h_c_c {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.piro_html .h_t_l, .piro_html .h_t_r, .piro_html .h_b_r, .piro_html .h_b_l {
+    width: 10px;
+    height: 10px;
+}
+
+.piro_html .h_c_c .div_reg {
+    width: 480px;
+    overflow: hidden;
+    height: 480px;
+    margin: 0;
+    padding: 0;
+}
+
+.piro_html .h_c_r, .piro_html .h_c_l {
+    width: 10px;
+}
+
+.piro_html .h_b_c, .piro_html .h_t_c {
+    height: 10px;
+}
+
+.piro_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 150000;
+    background: #fff;
+    display: none;
+    cursor: pointer;
+}
+
+.piro_loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -59px 0 0 -59px;
+    width: 118px;
+    height: 118px;
+    display: block;
+    z-index: 150005;
+    cursor: pointer;
+}
+
+.piro_loader span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -36px;
+    margin-left: -36px;
+    width: 72px;
+    height: 72px;
+    display: block;
+    z-index: 150009;
+    background: url(../img/loadinfo.gif) center top no-repeat;
+}
+
+.piro_title {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: 6px 0 10px 0;
+    color: white;
+    z-index: 150000;
+    font-size: 18px;
+    display: none;
+}
+
+.btn_info {
+    position: absolute;
+    bottom: -7px;
+    right: -7px;
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    display: block;
+    padding: 0px;
+    color: black;
+    cursor: pointer;
+    z-index: 1500440;
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    margin: 0;
+    display: block;
+    padding: 0px;
+    color: black;
+    cursor: text;
+    z-index: 150018;
+    background: rgba(0,0,0,0.8);
+}
+
+.caption p {
+    display: block;
+    margin: 0;
+    padding: 7px 5px;
+    text-align: center;
+    font-weight: normal;
+    color: white;
+    z-index: 150019;
+    color: white;
+}
+
+.nav_container {
+    position: absolute;
+    bottom: -20px;
+    right: 50%;
+    height: 20px;
+    width: 60px;
+    z-index: 1500190000000;
+    background: rgba(0, 0, 0, 0.79);
+    margin-right: -30px;
+}
+
+.piro_close {
+    display: none;
+}
+
+a.piro_next {
+    position: absolute;
+    right: 6px;
+    outline: none;
+    display: block;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    z-index: 150023;
+    font-size: 27px;
+    line-height: 100%;
+    top: -8px;
+    text-align: center;
+}
+
+.piro_next_fake {
+    position: absolute;
+    right: 10px;
+    outline: none;
+    display: none;
+    margin: 0;
+    border: none;
+    cursor: auto;
+    z-index: 150020;
+    font-size: 27px;
+    line-height: 100%;
+    text-align: center;
+    top: -8px;
+}
+
+.piro_prev_fake {
+    position: absolute;
+    right: 37px;
+    outline: none;
+    display: none;
+    margin: 0;
+    border: none;
+    cursor: auto;
+    z-index: 150020;
+    font-size: 27px;
+    line-height: 100%;
+    text-align: center;
+    top: -8px;
+}
+
+.pirobox_gall {
+    position: relative;
+}
+
+a.piro_prev {
+    position: absolute;
+    width: 28px;
+    right: 33px;
+    height: 28px;
+    outline: none;
+    display: block;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    z-index: 150024;
+    font-size: 27px;
+    line-height: 100%;
+    text-align: center;
+    top: -8px;
+}
+

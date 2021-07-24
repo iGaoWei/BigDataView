@@ -1,0 +1,467 @@
+.main .unit {
+    position: absolute;
+    z-index: 999;
+    top: 3%;
+    left: 13%;
+    font-size: 0.8vw;
+    color: #fff;
+}
+.dataGet, .dataStorage, .gettingDate, .dataClean, .dataSave, .dataDesensitization{
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid #ccc; */
+    /* padding: 10px; */
+    background-color: #080F1F;
+
+    color: #383F4E;
+    /* margin-top: -10%; */
+}
+.gettingDate{
+    margin-top: -10%;
+}
+.textBox {
+    width: 100%;
+}
+.textBox .pieText, .pieText2 {
+    position: absolute;
+    color: #fff;
+    font-size: 0.8vw;
+    left: 18%;
+    /* margin-top: 20%; */
+}
+.textBox .pieText {
+    top: 50%;
+}
+.textBox .pieText2 {
+    top: 95%;
+}
+.textBox .pieText .text2 {
+    margin-left: 3.6vw;
+}
+.textBox .pieText2 .text2 {
+    margin-left: 3.2vw;
+}
+
+/* 我的 */
+.service{
+    overflow: hidden;
+    margin: .6vw 1vw;
+    padding: .3vw 0;
+    border-bottom: 1px solid #0efcff;
+}
+.service span{
+    font-size: .6vw;
+    color: #0efcff;
+}
+.service-data{
+    overflow: hidden;
+    margin: .6vw 1vw;
+    padding: .3vw 0;
+}
+.service-data .img-box{
+    width: 4vw;
+    height: 4vw;
+}
+.service-data .img-box img{
+    width: 100%;
+    height: 100%;
+}
+.service-data span{
+    font-size: .6vw;
+    color: #0efcff;
+    margin-top: .2vw;
+}
+.service-data .right ul li{
+    float: right;
+    color: #0efcff;
+    font-size: .6vw;
+    padding: .4vw;
+    text-align: center;
+}
+.service-data .right ul li p{
+    margin: .5vw 0;
+}
+.boxMain {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    /* background: red; */
+}
+
+.centerdiv {
+    width: 100%;
+    height: 32.46%;
+    position: relative;
+    border: 1px solid #6176AF;
+    background: rgba(11, 21, 44, 0.60);
+    border-radius: 5px;
+}
+
+.boxend {
+    position: relative;
+    width: 100%;
+    height: 32.3%;
+    border: 1px solid #6176AF;
+    background: rgba(11, 21, 44, 0.60);
+    border-radius: 5px;
+}
+
+.bottoms {
+    margin-bottom: 1.5%;
+}
+
+.boxRader {
+    position: relative;
+    width: 100%;
+    height: 80%;
+}
+
+
+
+/* 生长图片 */
+.boxImg {
+    width: 85%;
+    height: 80%;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    margin: 3% auto 0;
+}
+
+.boxImg img,.boxImg video {
+    width: 48%;
+    height: 5vw;
+}
+
+/* 加工详情 */
+.processing {
+    width: 90%;
+    margin: 1% 0 0 8.2%;
+    font-size: .8vw;
+    color: #fff;
+
+}
+
+.processing>p {
+    line-height: 1.6vw;
+}
+
+.processing>p>span:nth-child(1) {
+    color: #0efcff;
+}
+
+/* 工程流程 */
+.boxSize {
+    width: 100%;
+    height: 60%;
+}
+
+.boxContent {
+    width: 89%;
+    color: #fff;
+    display: -webkit-flex;
+    display: -moz-flex;
+    margin: 2% auto 2%;
+    font-size: .5vw;
+}
+
+.boxContent>div>p {
+    line-height: 1vw;
+
+}
+
+.boxContent>div>p>span:nth-child(1) {
+    color: #0efcff;
+}
+
+.boxSizestxt {
+    color: #fff;
+    font-size: .5vw;
+    width: 89%;
+    margin: auto;
+}
+
+.centerBoxTop {
+    width: 100%;
+    height: 10%;
+    border: .01vw solid #0efcff;
+}
+
+
+.colors {
+    color: #0efcff;
+}
+
+.colorccc {
+    color: #ccc;
+}
+
+.name {
+    color: rgb(40, 229, 233);
+}
+
+.clear {
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+.leftBox_left {
+    float: left;
+    width: 49%;
+    height: 100%;
+}
+
+.boxNums {
+    width: 90%;
+    margin: 3% auto 0;
+}
+
+.boxNums ul {
+    width: 100%;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+}
+
+.boxNumstit {
+    width: 32%;
+    height: .8vw;
+    text-align: center;
+    line-height: .8vw;
+    background: #0D8891;
+    color: #fff;
+    font-size: .5vw;
+}
+
+.boxNums ul>li {
+    width: 50%;
+    margin-bottom: 4%;
+}
+
+.type>img {
+    width: 25%;
+    height: 25%;
+    margin: 10% 10% 0 0;
+}
+
+.type {
+    width: 100%;
+    display: -webkit-flex;
+    color: #fff;
+}
+.typeSpan{
+    font-size: .57vw;
+}
+.typeSpan>p>span:nth-child(1) {
+    color: #0efcff;
+    line-height: 1.1vw;
+}
+
+/* 品种拆分 */
+.varieties {
+    width: 95%;
+    height: 90%;
+    margin: 2% auto 0;
+}
+
+.varieties ul {
+    width: 100%;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -webkit-justify-content:space-around;
+}
+
+.varietiesBotm {
+    margin-top: 2%
+}
+
+.varietiesBotm>li {
+    width: 20%;
+    color: #fff;
+    text-align: center;
+    margin-right: 2%;
+    font-size: .8vw;
+}
+
+.varietiesBotm>li>p {
+    line-height: 1.1vw;
+}
+
+.varietiesBotm>li>p:nth-child(1) {
+    color: #0DFCFC;
+}
+
+.boxLis {
+    width: 13%;
+    height: 1.8vw;
+    color: #fff;
+    text-align: center;
+    line-height: 1.8vw;
+    margin: 0 4.5% 0 2.5%;
+}
+.varietiesUl{
+    position: relative;
+    font-size: .8vw;
+}
+.boxLisimg{
+    position: absolute;
+    top:.3vw;
+    right:0vw;
+    width: 1.3vw;
+    height: 1.1vw;
+}
+.boxLis:hover{
+    background: #0B7180;
+    cursor: pointer;
+}
+.active {
+    background: #0B7180;
+    cursor: pointer;
+}
+
+.solid {
+    width: .08vw;
+    height: .8vw;
+    background: #0efcff;
+}
+
+.boxRadius {
+    width: 3.5vw;
+    height: 3.5vw;
+    text-align: center;
+    line-height: 4vw;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content:center;
+    align-items: center;
+    font-size: .9vw;
+    border: .15vw solid #F98001;
+    border-radius: 50%;
+    margin: .5vw auto 0;
+}
+.boxRadius img{
+    width: 30%;
+    height: 30%;
+    margin-bottom: .4vw;
+
+}
+.boxRadius span{
+    width: 100%;
+    height: 1vw;
+    line-height: 1vw;
+}
+
+   /* ========= 地图样式 stat========== */
+.map{
+    position: relative;
+    width: 100%;
+    height: 84%;
+    /* margin-top: -3%; */
+    /* background: white; */
+}
+.map img {
+    width: 70%;
+    margin-left: 15%;
+}
+.mapActived1 {
+    position: absolute;
+    top: 41.5%;
+    left: 44%;
+    width: 1.3vw;
+    height: 2.1vw;
+    border-radius: 90px;
+    cursor: pointer;
+}
+.mapActived2 {
+    position: absolute;
+    top: 52%;
+    right: 25%;
+    width: 3vw;
+    height: 1.5vw;
+    cursor: pointer;
+    border-radius: 90px;
+}
+.mapActived3 {
+    position: absolute;
+    top: 43%;
+    right: 18%;
+    width: 1.5vw;
+    height: 4vw;
+    cursor: pointer;
+    border-radius: 90px;
+}
+.mapContent1 {
+    position: absolute;
+    height: 6vw;
+    width: 8vw;
+    left: 48%;
+    top: -14%;
+    background: rgba(255,255,255, .2);
+}
+.mapContent2 {
+    position: absolute;
+    height: 6vw;
+    width: 8vw;
+    left: 68%;
+    top: -2%;
+    background: rgba(255,255,255, .2);
+    display: none;
+}
+.mapContent3 {
+    position: absolute;
+    height: 6vw;
+    width: 8vw;
+    right: 19%;
+    top: 0%;
+    background: rgba(255,255,255, .2);
+    display: none;
+}
+.mapContentFont {
+    width: 85%;
+    margin-left: 12%;
+    font-size: .6vw;
+    color: #0efcff;
+    letter-spacing: .05vw;
+}
+.mapContentFont:nth-child(1) {
+    margin-top: .6vw;
+}
+.mapContentFont span {
+    color: white;
+}
+/* ========= 地图样式 end========== */
+.mapAllNum {
+    position: absolute;
+    width: 50%;
+    left: 1vw;
+    top: 2.5vw;
+    color: #0efcff;
+    font-size: .8vw;
+    letter-spacing: .05vw;
+}
+.mapAllNum span {
+    color: white;
+    font-size: 1.1vw;
+}
+.mapfooterFont {
+    position: absolute;
+    right: 0vw;
+    top: 0.7vw;
+    width: 7vw;
+    height: 3vw;
+    color: #0efcff;
+    font-size: .7vw;
+}
+.mapfooterFont img {
+    width: 50%;
+    padding-top: .3vw;
+    margin: 0 .3vw;
+}
+.mapFootertitle {
+    margin-bottom: .3vw;
+}

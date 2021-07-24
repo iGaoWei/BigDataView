@@ -1,0 +1,117 @@
+/* pc端标准初始化样式 */
+* {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  box-sizing: border-box;
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+i {
+  font-style: normal;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+
+  cursor: pointer;
+
+  outline: none;
+  &:focus {
+         outline: none!important;
+
+    -moz-outline: none;
+  }
+}
+button {
+  border: none;
+  background-color: #fff;
+
+  outline: none;
+}
+img {
+  border: none;
+}
+select {
+  border: none;
+
+  outline: none;
+  /* 清除下拉列表类似按钮的样式 */
+
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  &::-ms-expand {
+    display: none;
+  }
+  &:-webkit-autofill {
+    background-color: transparent!important;
+    -webkit-box-shadow: 0 0 0 50px white inset;
+  }
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #a4b8c3;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #a4b8c3;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #a4b8c3;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #a4b8c3;
+}
+input {
+  border: none;
+  color: #666;
+
+  outline: none;
+  /* google取消默认黄色背景 */
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    background-color: transparent!important;
+    -webkit-box-shadow: 0 0 0 50px white inset;
+
+    -webkit-text-fill-color: #333;
+  }
+  /* 清除ie删除文字叉叉和显示密码小眼睛 */
+  &::-ms-clear,
+  &::-ms-reveal {
+    display: none;
+  }
+}
+textarea {
+  resize: none;
+  &:-webkit-autofill {
+    background-color: transparent!important;
+    -webkit-box-shadow: 0 0 0 50px white inset;
+  }
+}
+/* jquery.placeholder.js插件对应样式 */
+.my-placeholder {
+  color: #999;
+}
+/* table start */
+table {
+  width: 100%;
+
+  table-layout: inherit;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+thead > tr > th {
+  text-align: center;
+}
+/* 浮动 */
+.fl {
+  float: left !important;
+}
+.fr {
+  float: right !important;
+}

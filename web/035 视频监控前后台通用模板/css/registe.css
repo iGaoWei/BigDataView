@@ -1,0 +1,57 @@
+::-webkit-scrollbar-track{border-radius: 10px;-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);}/*滚动条的滑轨背景颜色*/
+::-webkit-scrollbar-thumb{background-color: rgba(0,0,0,0.05);border-radius: 10px;-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1);}/*滑块颜色*/
+::-webkit-scrollbar-thumb{background-color: rgba(0,0,0,0.2);border-radius: 10px;-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1);}
+::-webkit-scrollbar{width: 16px;height: 16px;}/* 滑块整体设置*/
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb{border-radius: 999px;border: 5px solid transparent;}
+::-webkit-scrollbar-track{box-shadow: 1px 1px 5px rgba(0,0,0,.2) inset;}
+::-webkit-scrollbar-thumb{min-height: 20px;background-clip: content-box;box-shadow: 0 0 0 5px rgba(0,0,0,.2) inset;}
+::-webkit-scrollbar-corner{background: transparent;}/* 横向滚动条和纵向滚动条相交处尖角的颜色 */
+*,h1,label,td,tr{padding: 0 ;margin: 0 }
+.l_left{float: left}
+.r_right{float: right}
+td{border: none !important;}
+.table tr td:nth-child(2n+1){text-align: right;font-size: 12px;width:84px;line-height: 28px;}
+.top_out{margin: 20px 0 20px 0}
+.top td{padding: 0 3px 16px 0 !important;}
+.top td span{color: red;margin:3px 1px 0 2px;display: inline-block ;float: right;vertical-align: middle;line-height: 28px;width: 6px;text-align: center;}
+.top select,.top input[type=text],.top input[type=password]{color: #999;text-align: left;width: 247px;height:28px;border-radius: 4px;font-size: 12px;border: 1px #ccc solid}
+.top td textarea{width: 586px;height: 70px;resize: none;border-radius: 4px;border: 1px #ccc solid}
+.notice_bot{position: fixed;bottom: 0;background-color: #ecf0f5;padding: 5px 0 5px 0;z-index:9999;border-top:1px #ccc solid;width: 100%;}
+.notice_bot>div{font-size: 12px;margin-left: 10px;color: #07141e;line-height: 28px}
+.notice_bot>div input{margin:0 2px 0 0;vertical-align: middle}
+.div_form>div{margin: 5px}
+.but_p{margin-right: 10px}
+.but_p button{padding:0 8px;height: 28px;line-height: 28px;border: none;background-color: #5cb85c;color: #fff;border-radius: 4px;cursor: pointer}
+.but_p .but_close{background-color: #d9534f;margin-left: 10px}
+.top .td_select{width: 78px;margin-right: 2px}
+
+.book_con01{
+    width: 98%;
+    border-radius: 6px;
+    margin: 2% auto;
+    background-color: #ffffff;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 14px;
+    box-shadow:-5px 0 5px #ccc, /*左边阴影*/
+    5px 0 5px #ccc, /*右边阴影*/
+    0 -5px 5px #ccc, /*顶部阴影*/
+    0 5px 5px #ccc; /*底边阴影*/
+
+
+}
+.book_h01{
+    width: 94%;
+    margin-left: 3%;
+    margin-bottom: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+.form_area{width: 95.2% !important;}
+.top select,.top input[type=text],.top input[type=password]{color: #999;text-align: left;height:32px;border-radius: 4px;font-size: 12px;border: 1px #ccc solid}
+.top tr td{margin-bottom: 20px !important;}
+.but_p{text-align: center;}

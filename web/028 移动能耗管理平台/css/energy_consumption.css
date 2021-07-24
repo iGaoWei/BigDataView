@@ -1,0 +1,164 @@
+*{
+	/*border:1px dashed black;*/
+}
+/* change to black */
+body{
+	background-color: black;
+}
+#bottomPart{
+	border-color: #8A8E9B;
+	border-style: solid solid solid solid;
+	border-width: 2px 1px 1px 1px;
+	border-radius: 3px 3px 0 0;
+}
+#title{
+	width: 75%;
+	display: inline-block;
+	height: 38px;
+	/*绉佹湁灞炴��*/
+	border-left: 5px solid #67CEF7;
+	font-size: 32px;
+	color: white;
+	padding-left: 10px;
+}
+#title_btn{
+	width: 25%;
+	display: inline-block;
+	float: right;
+}
+#graphViewBtn,
+#dataViewBtn{
+	margin-right: 5px;
+	float: right;
+	color:white;
+}
+#graphViewBtn{
+	background-color: #E64E67;
+}
+#dataViewBtn{
+	background-color: #515A7B;
+}
+#graphViewBtn>i,#dataViewBtn>i{
+	padding-right: 2px;
+}
+div.left-region{
+	width: 28%;
+	display: inline-block;
+	background-color: #FAB051;
+}
+#leftInfo{
+	margin: 40% 5% auto 10%;
+	color: white;
+}
+div.right-region{
+	width: 72%;
+	display: inline-block;
+	float:right;
+	background-color: white;
+}
+
+#graphOne,#graphTwo{
+	height: 400px;
+	width: 100%;
+}
+span{
+	margin-left: 5px;
+	margin-right: 0px;
+}
+#toSpan{
+	margin-left: 0px;
+	/*margin-right: 1px;*/
+}
+#btnGroup{
+	float: right;
+	right: 5px;
+	color:white;
+}
+button > .hideI{
+	display: none;
+}
+#searchBtn{
+	background-color: #505A7B;
+	margin-right:0px;
+}
+#downBtn{
+	background-color: #0EA7A9;
+}
+#startDate,#endDate{
+	width: 120px;
+}
+#myTab{
+	color: white;
+	background-color: #323A55;
+	text-align: center;
+}
+#myTab>li{
+	width: 19.82%; /*debug*/
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+	background-color: #323A55;
+}
+#myTab>li>a{
+	color:white;
+}
+#myTab>li.active>a{
+	border-top: 3px solid #12A4A0!important;
+}
+#conditionRow{
+	/*margin-top: 10px;*/
+	margin:10px 0px auto 0px!important;
+}
+#conditionRow>span{
+	background-color: #ADB2CE;
+	display: inline-block;
+	height: 33px;
+	line-height: 33px;
+	color:white;
+}
+#conditionRow>input{
+	line-height: 28px;
+	/*color:#ADB2CE;*/
+	color:black;
+}
+button.selectpicker{
+	border-radius: 0 0 0 0!important;
+	/*color:#ADB2CE;*/
+	color:black;
+}
+div.graphTitle{
+	margin-top: 5px;
+	font-size: 14px;
+	color:black;
+}
+table>caption{
+	color:black;
+	text-align: center;
+	font-size: 14px;
+}
+table{
+	color:black;
+}
+/* 瀛椾綋鍥炬爣 */
+i.fa{
+	font-size: 20px;
+}
+/* i.fa-table,i.fa-bar-chart-o{
+	margin-left: 8px;
+} */
+/*璋冩暣榛樿甯冨眬*/
+div.container{
+	width: 100%;
+}
+div.graphTitle{
+	text-align: center;
+}
+div.col-md-6{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+div.tab-content{
+	padding:0;
+}
+div.graph,div.data{
+	margin-left: 0px;
+}

@@ -1,0 +1,174 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+    <title></title>
+    <link href="js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+    <link href="css/zTreeStyle/zTreeStyle.css" rel="stylesheet" type="text/css" />
+    <link href="css/table.css" rel="stylesheet" type="text/css" />
+    <style>
+        .department_main{padding: 10px 10px 0 10px}
+        .department_main label{width: 80px;text-align: right;font-size: 12px}
+        .department_main input{width: 35%;margin-right: 1%;height: 32px;border: 1px #ccc solid;background-color: #fff;border-radius: 4px}
+        .department_main textarea{resize: none;border: 1px #ccc solid;width: 82.7%;height: 200px;background-color: #fff;border-radius: 4px}
+    </style>
+</head>
+<body style="background-color: #ecf0f5;font-family: 微软雅黑;color: #475059;overflow: auto">
+<div class="news_main">
+
+    <div class="l_left news_left">
+        <h6>区域目录</h6>
+        <div class="tree_left_top" style="height: 90%;overflow: auto">
+            <div class=" order_ztree l_left organize_ztree" style="width: 100%">
+                <p><ul id="treeDemo" class="ztree"  style=" overflow:auto;margin-left: 20px"></ul></p>
+            </div>
+        </div>
+    </div>
+    <div class="l_left news_right">
+        <h6>区域详情</h6>
+        <div class="department_main">
+            <label>区域名称：</label><input type="text" disabled="disabled">
+            <label>区域编号：</label><input type="text" disabled="disabled">
+
+        </div>
+        <div class="department_main">
+            <label>区域简称：</label><input type="text" disabled="disabled">
+            <label>区域性质：</label><input type="text" disabled="disabled">
+
+        </div>
+        <div class="department_main">
+            <label>邮编号：</label><input type="text" disabled="disabled">
+            <label>负责人：</label><input type="text" disabled="disabled">
+        </div>
+        <div class="department_main">
+            <label style="float: left;line-height: 200px">区域备注：</label><textarea disabled="disabled"></textarea>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/bstable/js/bootstrap.min.js"></script>
+<script src="js/bstable/js/bootstrap-table.js"></script>
+<script src="js/bstable/js/bootstrap-table-zh-CN.min.js"></script>
+<script type="text/javascript" src="js/demo/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript" src="js/ztree/jquery.ztree.excheck-3.5.js"></script>
+<script type="text/javascript" src="js/ztree/jquery.ztree.exedit-3.5.js"></script>
+<script src="js/organize.js"></script>
+
+<script>
+    $(function(){
+        table();
+        nav();
+    });
+    function add_department(){
+        layer.open({
+            type: 2,
+            title: '添加部门',
+            shadeClose: true,
+            shade: 0.5,
+            skin: 'layui-layer-rim',
+            closeBtn:1,
+            area: ['700px', '400px'],
+            content: 'department_tail.html'
+        });
+    }
+    function nav(){
+        $(".news_nav li").each(function(index){
+            $(this).click(function(){
+                $(".news_nav li").removeClass("nav_active");
+                $(this).addClass("nav_active");
+                $(".news_table>li").eq(index).show().siblings("li").stop().hide();
+            })
+
+        })
+    }
+    function table(){
+        $('#table').bootstrapTable({
+            method: "get",
+            striped: true,
+            singleSelect: false,
+            url: "json/log.json",
+            dataType: "json",
+            pagination: true, //分页
+            pageSize: 10,
+            pageNumber: 1,
+            search: false, //显示搜索框
+            contentType: "application/x-www-form-urlencoded",
+            queryParams: null,
+            columns: [
+                {
+                    checkbox: "true",
+                    field: 'check',
+                    align: 'center',
+                    valign: 'middle'
+                }
+                ,
+                {
+                    title: "编号",
+                    field: 'id',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    title: '标题',
+                    field: 'title',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    title: '操作用户',
+                    field: 'person',
+                    align: 'center',
+                    valign: 'middle'
+                },
+
+                {
+                    title: 'IP地址',
+                    field: 'type',
+                    align: 'center'
+                },
+                {
+                    title: '操作时间',
+                    field: 'date',
+                    align: 'center'
+                },
+                {
+                    title: '操作类型',
+                    field: 'oper',
+                    align: 'center'
+                },
+                {
+                    title: '执行结果',
+                    field: 'result',
+                    align: 'center',
+                    formatter: function (cellval, row) {
+                        if (cellval =='失败'){
+                            return '<div  style="color:red">'+cellval+'</div>';
+                        } else  if (cellval =='成功'){
+                            return '<div  style="color:green">'+cellval+'</div>';
+                        }else {
+                            return cellval;
+                        }}
+                }
+            ]
+        });
+    }
+    function del(id){
+        layer.open({
+            type: 2,
+            title: '清空登录日志',
+            shade: 0.5,
+            skin: 'layui-layer-rim',
+            area: ['40%', '200px'],
+            shadeClose: true,
+            closeBtn: 1,
+            content: 'log_tail.html'
+        })
+    }
+</script>
+</body>
+</html>

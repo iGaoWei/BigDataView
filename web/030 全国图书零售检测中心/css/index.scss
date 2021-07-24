@@ -1,0 +1,558 @@
+@import "base.scss";
+@import "mixin/_animation.scss";
+@import "mixin/_media.scss";
+@import "drop_down.scss";
+
+/* 单位 */
+
+.main {
+    width: 100%;
+    height: 84%;
+    .aside-left {
+        position: relative;
+        width: 22%;
+        height: 100%;
+        .book-rank {
+            border-bottom: 1px solid rgba(#1397ff, .1);
+            font-size: 12px;
+            span {
+                display: inline-block;
+                height: 100%;
+            }
+            .ranking {
+                color: #2edbff;
+            }
+            .hot {
+                font-size: 12px;
+                color: #1397ff;
+            }
+        } // 公共样式
+        .ranking {
+            width: 13%;
+            padding-left: 5%;
+        }
+        .name {
+            width: 32%;
+        }
+        .company {
+            width: 34%;
+        }
+        .hot {
+            width: 20%;
+            padding-left: 2%;
+        }
+        .ranking,
+        .name,
+        .company,
+        .hot {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        h3 {
+            height: 17%;
+        }
+        .tit {
+            height: 6%;
+            margin: 3% 0;
+            font-size: px2em(28, 64);
+            color: #2edbff;
+            span {
+                display: inline-block;
+                height: 100%;
+            }
+        }
+        .top {
+            position: relative;
+            height: 49%;
+            .con-wrap {
+                position: relative;
+                width: 100%;
+                height: 75%;
+                overflow: hidden;
+                .over-wrap {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                .go {
+                    transition: all .5s linear;
+                }
+                .top1 {
+                    top: -100%!important;
+                }
+                .top2 {
+                    top: -200%!important;
+                }
+                .top3 {
+                    top: -300%!important;
+                }
+                .top4 {
+                    top: -400%!important;
+                }
+                .top5 {
+                    top: -500%!important;
+                }
+                .top6 {
+                    top: -600%!important;
+                }
+                .top7 {
+                    top: -700%!important;
+                }
+                .top8 {
+                    top: -800%!important;
+                }
+                .top9 {
+                    top: -900%!important;
+                }
+                .top10 {
+                    top: -1000%!important;
+                }
+                .top11 {
+                    top: -1100%!important;
+                }
+                .top12 {
+                    top: -1200%!important;
+                }
+            }
+            .con {
+                height: 100%;
+                li {
+                    height: 11.5%;
+                    cursor: pointer;
+                    .book-rank {
+                        height: 100%;
+                    }
+                    .book-show {
+                        display: none;
+                        position: relative;
+                        margin-top: 2%;
+                        overflow: hidden;
+                        .img-box {
+                            position: relative;
+                            width: 25%;
+                            height: 100%;
+                            margin: 0 4% 0 16%;
+                            img {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                width: 100%;
+                                max-height: 100%;
+                                overflow: hidden;
+                            }
+                        }
+                        .content {
+                            width: 42%;
+                            height: 100%;
+                            margin-top: 2%;
+                            font-size: px2em(12, 32);
+                            overflow: hidden;
+                            p {
+                                height: 20%;
+                                margin: 0;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                            }
+                        }
+                    }
+                }
+                li.active {
+                    height: auto;
+                    background: rgba(#1397ff, .1);
+                    .book-rank {
+                        border-bottom: none;
+                    }
+                    .book-show {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .bottom {
+            position: absolute;
+            width: 100%;
+            height: 49%;
+            .bottom-in {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            } // 公共样式
+            .short {
+                width: 67%;
+            }
+            .hot {
+                width: 20%;
+            }
+            .con {
+                height: 74%;
+                li {
+                    height: 10.5%;
+                    border-bottom: 1px solid rgba(19, 151, 255, .1);
+                    .book-rank {
+                        height: 100%;
+                        border-bottom: none;
+                    }
+                    .short {
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+    }
+    .aside-right {
+        position: relative;
+        width: 22%;
+        height: 100%; // 公共样式
+        .pie,
+        .trend {
+            position: relative;
+        }
+        .keys {
+            position: relative;
+            height: 20%;
+            margin-bottom: 2.5%;
+            h3 {
+                height: 40%;
+                padding-top: 6%;
+                margin-left: 5%;
+            }
+            .con {
+                height: 42%;
+                margin: 0 20px;
+                background: #081d5d;
+                dl {
+                    width: 33.3%;
+                    height: 100%;
+                    padding: 10px 0 0 10px;
+                    dt {
+                        height: 40%;
+                        font-size: px2em(36, 64);
+                        color: #128df0;
+                    }
+                    ;
+                    dd {
+                        height: 60%;
+                        font-family: Rubik;
+                        font-size: px2em(72, 64);
+                        font-weight: 300;
+                        color: #fff;
+                    }
+                }
+                .middle {
+                    position: relative;
+                    &:before,
+                    &:after {
+                        position: absolute;
+                        top: 20%;
+                        width: 1px;
+                        height: 60%;
+                        background: rgba(#fff, .1);
+                        content: "";
+                    }
+                    &:before {
+                        left: 0;
+                    }
+                    &:after {
+                        right: 0;
+                    }
+                }
+            }
+        }
+        .pie {
+            position: relative;
+            height: 38%;
+            margin-bottom: 2.5%;
+            background: url("../img/bg1_1.png") no-repeat;
+            background-size: cover;
+            &:after {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: url("../img/bor1_4.png") no-repeat;
+                background-size: 100% 100%;
+                content: "";
+            }
+            h3 {
+                height: 16%;
+                text-align: center;
+            }
+            .pie1 {
+                width: 50%;
+                height: 100%;
+                padding-top: 8%; // margin-left: 4%;
+            }
+            .pie2 {
+                width: 50%;
+                height: 100%;
+                padding-top: 8%; // margin-left: 4%;
+            }
+            .legend {
+                position: absolute;
+                bottom: 10%;
+                left: 50%;
+                width: 80%;
+                min-width: 280px;
+                font-size: px2em(20, 64);
+                transform: translate(-50%, 0);
+                span {
+                    position: relative;
+                    margin-right: 1%;
+                    &:before {
+                        display: inline-block;
+                        position: relative;
+                        top: 1px;
+                        width: 1em;
+                        height: 1em;
+                        margin-right: 1%;
+                        content: "";
+                    }
+                    &:nth-of-type(1) {
+                        &:before {
+                            background: #0239a7;
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        &:before {
+                            background: #fff;
+                        }
+                    }
+                    &:nth-of-type(3) {
+                        &:before {
+                            background: #24feb4;
+                        }
+                    }
+                    &:nth-of-type(4) {
+                        &:before {
+                            background: #23539b;
+                        }
+                    }
+                    &:nth-of-type(5) {
+                        &:before {
+                            background: #3c9de4;
+                        }
+                    }
+                }
+            }
+        }
+        .area-rank {
+            position: relative;
+            height: 35%;
+            margin-bottom: 2.5%;
+            background: url("../img/bg1_3.png") no-repeat;
+            background-size: cover;
+            overflow: hidden;
+            &:after {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: url("../img/bor1_5.png") no-repeat;
+                background-size: 100% 100%;
+                content: "";
+            }
+            h3 {
+                height: 24%;
+                padding-top: 10%;
+                margin-left: 5%;
+            }
+            .con {
+                position: relative;
+                height: 75%;
+                margin: 0 0 5% 5%;
+                font-size: px2em(20, 64);
+                color: #07bffb;
+                overflow: hidden;
+                ul {
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+                li {
+                    height: 11.1%;
+                    &:nth-of-type(1) {
+                        .bar-in {
+                            width: 94%;
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        .bar-in {
+                            width: 88%;
+                        }
+                    }
+                    &:nth-of-type(3) {
+                        .bar-in {
+                            width: 84%;
+                        }
+                    }
+                    &:nth-of-type(4) {
+                        .bar-in {
+                            width: 79%;
+                        }
+                    }
+                    &:nth-of-type(5) {
+                        .bar-in {
+                            width: 76%;
+                        }
+                    }
+                    &:nth-of-type(6) {
+                        .bar-in {
+                            width: 74%;
+                        }
+                    }
+                    &:nth-of-type(7) {
+                        .bar-in {
+                            width: 70%;
+                        }
+                    }
+                    &:nth-of-type(8) {
+                        .bar-in {
+                            width: 68%;
+                        }
+                    }
+                    &:nth-of-type(9) {
+                        .bar-in {
+                            width: 65%;
+                        }
+                    }
+                    &:nth-of-type(10) {
+                        .bar-in {
+                            width: 62%;
+                        }
+                    }
+                    &:nth-of-type(11) {
+                        .bar-in {
+                            width: 60%;
+                        }
+                    }
+                    &:nth-of-type(12) {
+                        .bar-in {
+                            width: 58%;
+                        }
+                    }
+                    &:nth-of-type(13) {
+                        .bar-in {
+                            width: 54%;
+                        }
+                    }
+                    &:nth-of-type(14) {
+                        .bar-in {
+                            width: 51%;
+                        }
+                    }
+                    &:nth-of-type(15) {
+                        .bar-in {
+                            width: 49%;
+                        }
+                    }
+                }
+                span {
+                    display: inline-block;
+                    height: 100%;
+                }
+                .num {
+                    @include media3840 {
+                        width: 30px;
+                    }
+                    @include media1920 {
+                        width: 15px;
+                    }
+                }
+                .city-name {
+                    @include media3840 {
+                        width: 80px;
+                        margin-right: 30px;
+                    }
+                    @include media1920 {
+                        width: 40px;
+                        margin-right: 15px;
+                    }
+                }
+                .bar {
+                    position: relative;
+                    top: 10%;
+                    height: 46%;
+                    @include media3840 {
+                        width: calc(100% - 320px);
+                    }
+                    @include media1920 {
+                        width: calc(100% - 160px);
+                    }
+                    .bar-in {
+                        display: block;
+                        height: 100%;
+                        background: linear-gradient(to right, #2690cf, #00fecc);
+                    }
+                }
+                .rank-value {
+                    font-size: px2em(64, 64);
+                    @include media3840 {
+                        width: 100px;
+                        margin-left: 30px;
+                    }
+                    @include media1920 {
+                        width: 50px;
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+        .trend {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 26%;
+            background: url("../img/bg1_3.png") no-repeat;
+            background-size: cover;
+            &:after {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: url("../img/bor1_6.png") no-repeat;
+                background-size: 100% 100%;
+                content: "";
+            }
+            h3 {
+                height: 20%;
+                padding-top: 5%;
+                margin-left: 5%;
+            }
+            ;
+        }
+    }
+}
+
+.main-bottom {
+    width: 100%;
+    height: 5px;
+    span {
+        display: inline-block;
+        height: 100%;
+        background: #02336b;
+    }
+    .line1 {
+        width: 15%;
+        margin-right: 6px;
+    }
+    .line2 {
+        width: 55%;
+        margin-right: 6px;
+    }
+    .line3 {
+        width: 26%;
+    }
+}
+
+// 出版社排行 旋转效果
+// .pressRotate {
+//   -webkit-animation: mymove .5s ease-in;
+//      -moz-animation: mymove .5s ease-in;
+//        -o-animation: mymove .5s ease-in;
+//           animation: mymove .5s ease-in;
+// }
+@include myMove(".pressRotate");

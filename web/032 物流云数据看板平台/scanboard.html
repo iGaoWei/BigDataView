@@ -1,0 +1,730 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+<title>看板</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/scanboard.css" />
+<link rel="stylesheet" type="text/css" href="css/animsition.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.shCircleLoader.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.shCircleLoader-min.js"></script>
+</head>
+<body>
+	<div id="loader"></div>
+	<script type="text/javascript">
+		$('#loader').shCircleLoader({color: "#00deff"});
+	</script>
+	<!--Top Start!-->
+	<div class="scanboardWp animsition">
+		<div id="top">
+			<div class="wp clearfix">
+				<div class="left pageTit">
+					<a class="summaryBtn" href="javascript:;">物流汇总看板</a>
+				</div>
+				<div class="center topLogo">
+					<a href="https://paycloud.vip"><img src="images/logo.png"></a>
+				</div>
+				<div class="right topBar">
+					<div class="topTime">时间加载中...</div>
+					<div class="clearfix">
+						<a href="index.html" class="signOut fr">退出</a>
+						<div class="company fr">
+							<h3 style="">资源优选</h3>
+							<div class="dropdown">
+								<a href="https://paycloud.vip">资源淘宝店</a>
+								<a href="https://paycloud.vip">可视化模板精选</a>
+								<a href="https://paycloud.vip">优质资源</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Top End!-->
+		
+		<!--Main Start!-->
+		<div id="main" class="wp clearfix">
+			<div class="left">
+				<!--今日运单数量-->
+				<div class="item waybill">
+					<div class="itemTit">
+						<span class="border-yellow">今日运单数量</span>
+					</div>
+					<div class="itemCon itembg">
+						<div class="progress" progress="80%">
+							<h3 class="clearfix"><span>正常单</span><i>80单</i></h3>
+							<div class="progressBar">
+								<span></span>
+							</div>
+							<h4>0%</h4>
+						</div>
+						<div class="progress" progress="15%">
+							<h3 class="clearfix"><span>临时单</span><i>15单</i></h3>
+							<div class="progressBar">
+								<span></span>
+							</div>
+							<h4>0%</h4>
+						</div>
+						<div class="progress" progress="5%">
+							<h3 class="clearfix"><span>异常单</span><i>5单</i></h3>
+							<div class="progressBar">
+								<span></span>
+							</div>
+							<h4>0%</h4>
+						</div>
+					</div>
+				</div>
+
+				<!--各阶段平均用时统计-->
+				<div class="item">
+					<div class="itemTit">
+						<span class="border-green">各阶段平均用时统计</span>
+					</div>
+					<div class="itemCon">
+						<ul class="listStyle">
+							<li class="clearfix">
+								<span>下单…配车</span>
+								<span><strong>3.4</strong>秒</span>
+							</li>
+							<li class="clearfix">
+								<span>配车…装货</span>
+								<span><strong>24</strong>分钟</span>
+							</li>
+							<li class="clearfix">
+								<span>到厂卸货</span>
+								<span><strong>14</strong>分钟</span>
+							</li>
+							<li class="clearfix">
+								<span>装回收器具</span>
+								<span><strong>7</strong>分钟</span>
+							</li>
+							<li class="clearfix">
+								<span>卸回收器具</span>
+								<span><strong>5</strong>分钟</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!--人员信息-->
+				<div class="item">
+					<div class="itemTit">
+						<span class="border-blue">人员信息</span>
+					</div>
+					<div class="itemCon itembg">
+						<ul class="listStyle">
+							<li class="clearfix">
+								<span>领导：<strong>5</strong>人</span>
+								<span>司机：<strong>36</strong>人</span>
+								<span>门卫：<strong>6</strong>人</span>
+								<span>器具中心：<strong>15</strong>人</span>
+								<span>派单员：<strong>20</strong>人</span>
+								<span>售后卸载：<strong>29</strong>人</span>
+								<span>财务：<strong>3</strong>人</span>
+								<span>售后回收：<strong>10</strong>人</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="center">
+				<div class="centerWp">
+					<!--中间大地图-->
+					<div class="mapContainer">
+						<div class="btnLayer">
+							<div class="search">
+								<div class="searchInner">
+									<a href="javascript:;" class="searchBtn"><span class="icoSearch"></span></a>
+									<form class="searchForm">
+										<button class="icoSearch"></button>
+										<input type="text" name="" placeholder="请搜索车辆">
+									</form>
+								</div>
+							</div>
+							<a href="javascript:;" class="infoBtn"><span class="icoCar"></span></a>
+						</div>
+						<div id="myMap" class="item"></div>
+					</div>
+					
+					<!--月运单量统计图-->
+					<div class="billChart">
+						<div class="itemTit">
+							<span class="border-blue">月运单量统计图<small>(2017年12月)</small></span>
+						</div>
+						<div id="myChart1"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="right">
+				<!--总计运单数-->
+				<div class="item total itembg">
+					<div class="itemTit">
+						<span class="border-yellow">总计运单数</span>
+					</div>
+					<div class="itemCon">
+						<div class="totalNum"><strong id="totalNum" total="368082">0</strong><span>单</span></div>
+					</div>
+				</div>
+
+				<!--基本信息-->
+				<div class="item basicInfo">
+					<div class="itemTit">
+						<span class="border-green">基本信息</span>
+					</div>
+					<div class="itemCon itembg">
+						<div class="infoPie">
+							<ul class="clearfix">
+								<li class="color-yellow">
+									<span class="border-yellow" id="indicator1" total="32">0</span>
+									<p>在途车辆</p>
+								</li>
+								<li class="color-green">
+									<span class="border-green" id="indicator2" total="65">0</span>
+									<p>出车次数</p>
+								</li>
+								<li class="color-blue">
+									<span class="border-blue" id="indicator3" total="100">0</span>
+									<p>今日订单</p>
+								</li>
+							</ul>
+							<div id="indicatorContainer"></div>
+						</div>
+					</div>
+				</div>
+
+				<!--运单状态-->
+				<div class="item billState">
+					<div class="itemTit">
+						<span class="border-green">运单状态</span>
+					</div>
+					<div class="itemCon">
+						<div class="StateBox">
+							<div class="StateTit">
+								<span>订单编号</span>
+								<span>使用时间</span>
+								<span>满载率</span>
+							</div>
+							<div id="FontScroll">
+								<ul>
+									<li>
+										<div class="fontInner clearfix">
+											<span>ZC1712120023</span>
+											<span>2小时15分</span>
+											<span>
+												<div class="progress" progress="78%">
+													<div class="progressBar">
+														<span></span>
+													</div>
+													<h3><i><h4></h4></i></h3>
+												</div>
+											</span>
+										</div>
+									</li>
+									<li>
+										<div class="fontInner clearfix">
+											<span>ZC1712120023</span>
+											<span>2小时15分</span>
+											<span>
+												<div class="progress" progress="80%">
+													<div class="progressBar">
+														<span></span>
+													</div>
+													<h3><i><h4></h4></i></h3>
+												</div>
+											</span>
+										</div>
+									</li>
+									<li>
+										<div class="fontInner clearfix">
+											<span>ZC1712120023</span>
+											<span>2小时15分</span>
+											<span>
+												<div class="progress" progress="49%">
+													<div class="progressBar">
+														<span></span>
+													</div>
+													<h3><i><h4></h4></i></h3>
+												</div>
+											</span>
+										</div>
+									</li>
+									<li>
+										<div class="fontInner clearfix">
+											<span>ZC1712120023</span>
+											<span>2小时15分</span>
+											<span>
+												<div class="progress" progress="7%">
+													<div class="progressBar">
+														<span></span>
+													</div>
+													<h3><i><h4></h4></i></h3>
+												</div>
+											</span>
+										</div>
+									</li>
+									<li>
+										<div class="fontInner clearfix">
+											<span>ZC1712120023</span>
+											<span>2小时15分</span>
+											<span>
+												<div class="progress" progress="55%">
+													<div class="progressBar">
+														<span></span>
+													</div>
+													<h3><i><h4></h4></i></h3>
+												</div>
+											</span>
+										</div>
+									</li>
+									<li>
+										<div class="fontInner clearfix">
+											<span>ZC1712120023</span>
+											<span>2小时15分</span>
+											<span>
+												<div class="progress" progress="100%">
+													<div class="progressBar">
+														<span></span>
+													</div>
+													<h3><i><h4></h4></i></h3>
+												</div>
+											</span>
+										</div>
+									</li>
+									<li>
+										<div class="fontInner clearfix">
+											<span>ZC1712120023</span>
+											<span>2小时15分</span>
+											<span>
+												<div class="progress" progress="94%">
+													<div class="progressBar">
+														<span></span>
+													</div>
+													<h3><i><h4></h4></i></h3>
+												</div>
+											</span>
+										</div>
+									</li>
+									<li>
+										<div class="fontInner clearfix">
+											<span>ZC1712120023</span>
+											<span>2小时15分</span>
+											<span>
+												<div class="progress" progress="23%">
+													<div class="progressBar">
+														<span></span>
+													</div>
+													<h3><i><h4></h4></i></h3>
+												</div>
+											</span>
+										</div>
+									</li>
+									<li>
+										<div class="fontInner clearfix">
+											<span>ZC1712120023</span>
+											<span>2小时15分</span>
+											<span>
+												<div class="progress" progress="67%">
+													<div class="progressBar">
+														<span></span>
+													</div>
+													<h3><i><h4></h4></i></h3>
+												</div>
+											</span>
+										</div>
+									</li>
+									<li>
+										<div class="fontInner clearfix">
+											<span>ZC1712120023</span>
+											<span>2小时15分</span>
+											<span>
+												<div class="progress" progress="42%">
+													<div class="progressBar">
+														<span></span>
+													</div>
+													<h3><i><h4></h4></i></h3>
+												</div>
+											</span>
+										</div>
+									</li>
+									<li>
+										<div class="fontInner clearfix">
+											<span>ZC1712120023</span>
+											<span>2小时15分</span>
+											<span>
+												<div class="progress" progress="38%">
+													<div class="progressBar">
+														<span></span>
+													</div>
+													<h3><i><h4></h4></i></h3>
+												</div>
+											</span>
+										</div>
+									</li>
+									<li>
+										<div class="fontInner clearfix">
+											<span>ZC1712120023</span>
+											<span>2小时15分</span>
+											<span>
+												<div class="progress" progress="76%">
+													<div class="progressBar">
+														<span></span>
+													</div>
+													<h3><i><h4></h4></i></h3>
+												</div>
+											</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Main End!-->
+	</div>
+
+	<div class="filterbg"></div>
+	<div class="popup">
+		<a href="javascript:;" class="popupClose"></a>
+		<div class="summary">
+			<div class="summaryTop">
+				<div id="summaryPie1" class="summaryPie"></div>
+				<div id="summaryPie2" class="summaryPie"></div>
+				<div id="summaryPie3" class="summaryPie"></div>
+			</div>
+			<div class="summaryBottom">
+				<div class="summaryBar">
+					<div class="summaryTit">
+						<img src="images/tit1.png">
+					</div>
+					<div id="summaryBar"></div>
+				</div>
+				
+				<div class="summaryLine">
+					<div class="summaryTit">
+						<img src="images/tit2.png">
+					</div>
+					<div id="summaryLine"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="carInfo">
+		<a href="javascript:;" class="carClose"></a>
+		<div class="infoBox">
+			<div class="infoTop">
+				<div class="infoTit">
+					<img src="images/tit3.png">
+				</div>
+			</div>
+			<div class="infoMain">
+				<div class="infoLeft fl">
+					<div class="topSearch">
+						<form>
+							<button></button>
+							<input type="text" name="" placeholder="请输入车牌号搜索">
+						</form>
+					</div>
+					<div class="carState">
+						<h3>
+							<span class="fl">车牌号码</span>
+							<span class="fr">状态</span>
+						</h3>
+						<ul class="stateUl">
+							<li>
+								<p>粤A3456344</p>
+								<span class="work">工作</span>
+							</li>
+							<li>
+								<p>粤A3456344</p>
+								<span class="nowork">休息</span>
+							</li>
+							<li>
+								<p>粤A3456344</p>
+								<span class="work">工作</span>
+							</li>
+							<li>
+								<p>粤A3456344</p>
+								<span class="nowork">休息</span>
+							</li>
+							<li>
+								<p>粤A3456344</p>
+								<span class="work">工作</span>
+							</li>
+							<li>
+								<p>粤A3456344</p>
+								<span class="nowork">休息</span>
+							</li>
+							<li>
+								<p>粤A3456344</p>
+								<span class="work">工作</span>
+							</li>
+							<li>
+								<p>粤A3456344</p>
+								<span class="nowork">休息</span>
+							</li>
+							<li>
+								<p>粤A3456344</p>
+								<span class="work">工作</span>
+							</li>
+							<li>
+								<p>粤A3456344</p>
+								<span class="nowork">休息</span>
+							</li>
+							<li>
+								<p>粤A3456344</p>
+								<span class="work">工作</span>
+							</li>
+							<li>
+								<p>粤A3456344</p>
+								<span class="nowork">休息</span>
+							</li>
+							<li>
+								<p>粤A3456344</p>
+								<span class="work">工作</span>
+							</li>
+							<li>
+								<p>粤A3456344</p>
+								<span class="nowork">休息</span>
+							</li>
+							<li>
+								<p>粤A3456344</p>
+								<span class="work">工作</span>
+							</li>
+							<li>
+								<p>粤A3456344</p>
+								<span class="nowork">休息</span>
+							</li>
+							<li>
+								<p>粤A3456344</p>
+								<span class="work">工作</span>
+							</li>
+							<li>
+								<p>粤A3456344</p>
+								<span class="nowork">休息</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="infoRight fr">
+					<div class="rightWp">
+						<div class="carIntro">
+							<div class="introBox fl">
+								<div class="carImg fl">
+									<img src="images/car.jpg">
+								</div>
+								<div class="carText fl clearfix">
+									<p>车辆类型：大车</p>
+									<p>本周工作时长：34.45小时</p>
+									<p>车牌号码：粤A3456344</p>
+									<p>统计时段：2018-1-12至2018-2-13</p>
+									<p>可载容量：20.0方</p>
+									<p>当前状态：<span class="color-green">工作</span></p>
+								</div>
+							</div>
+							<div class="driver fr">
+								<div class="photo">
+									<img src="images/photo.jpg">
+								</div>
+								<p>司机：李思林</p>
+							</div>
+						</div>
+						<div class="timetable">
+							<div class="topTool">
+								<div class="tableExplain fl">
+									<div class="itemExplain fl">
+										<span class="bg-green"></span>
+										<p>司机工作时间</p>
+									</div>
+									<div class="itemExplain fl">
+										<span class="bg-blue"></span>
+										<p>标准白晚班时间</p>
+									</div>
+								</div>
+								<div class="topBtns fr">
+									<a href="javascript:;" class="prevWeek">上一周</a>
+									<a href="javascript:;" class="nextWeek">下一周</a>
+								</div>
+							</div>
+							<div class="tiemWp">
+								<div class="timeInner">
+									<div class="weekList">
+										<div class="weekItem">
+											<div class="space1"></div>
+											<p>星期一</p>
+										</div>
+										<div class="weekItem">
+											<div class="space1"></div>
+											<p>星期二</p>
+										</div>
+										<div class="weekItem">
+											<div class="space1"></div>
+											<p>星期三</p>
+										</div>
+										<div class="weekItem">
+											<div class="space1"></div>
+											<p>星期四</p>
+										</div>
+										<div class="weekItem">
+											<div class="space1"></div>
+											<p>星期五</p>
+										</div>
+										<div class="weekItem">
+											<div class="space1"></div>
+											<p>星期六</p>
+										</div>
+										<div class="weekItem">
+											<div class="space1"></div>
+											<p>星期天</p>
+										</div>
+									</div>
+									<div class="timeBox">
+										<div class="dataContainer">
+											<div class="dataBox">
+												<div class="space1"></div>
+												<div class="workTime"></div>
+												<div class="space2"></div>
+												<div class="standard"></div>
+												<div class="space3"></div>
+											</div>
+											<div class="dataBox">
+												<div class="space1"></div>
+												<div class="workTime"></div>
+												<div class="space2"></div>
+												<div class="standard"></div>
+												<div class="space3"></div>
+											</div>
+											<div class="dataBox">
+												<div class="space1"></div>
+												<div class="workTime"></div>
+												<div class="space2"></div>
+												<div class="standard"></div>
+												<div class="space3"></div>
+											</div>
+											<div class="dataBox">
+												<div class="space1"></div>
+												<div class="workTime"></div>
+												<div class="space2"></div>
+												<div class="standard"></div>
+												<div class="space3"></div>
+											</div>
+											<div class="dataBox">
+												<div class="space1"></div>
+												<div class="workTime"></div>
+												<div class="space2"></div>
+												<div class="standard"></div>
+												<div class="space3"></div>
+											</div>
+											<div class="dataBox">
+												<div class="space1"></div>
+												<div class="workTime"></div>
+												<div class="space2"></div>
+												<div class="standard"></div>
+												<div class="space3"></div>
+											</div>
+											<div class="dataBox">
+												<div class="space1"></div>
+												<div class="workTime"></div>
+												<div class="space2"></div>
+												<div class="standard"></div>
+												<div class="space3"></div>
+											</div>
+										</div>
+										<div class="timeLine line1"><span>0:00</span></div>
+										<div class="timeLine line2"><span>3:00</span></div>
+										<div class="timeLine line3"><span>6:00</span></div>
+										<div class="timeLine line4"><span>9:00</span></div>
+										<div class="timeLine line5"><span>12:00</span></div>
+										<div class="timeLine line6"><span>15:00</span></div>
+										<div class="timeLine line7"><span>18:00</span></div>
+										<div class="timeLine line8"><span>21:00</span></div>
+										<div class="timeLine line9"><span>24:00</span></div>
+									</div>
+								</div>
+								<div class="totalTable">
+									<div class="totalTit">
+										<span>总用时/天</span>
+										<span>总单数/天</span>
+									</div>
+									<div class="totalData">
+										<div class="totalItem">
+											<div class="space1"></div>
+											<div class="tatleWp">
+												<span>0.00</span>
+												<span>0</span>
+											</div>
+											<div class="totalBar"></div>
+										</div>
+										<div class="totalItem">
+											<div class="space1"></div>
+											<div class="tatleWp">
+												<span>0.00</span>
+												<span>0</span>
+											</div>
+											<div class="totalBar"></div>
+										</div>
+										<div class="totalItem">
+											<div class="space1"></div>
+											<div class="tatleWp">
+												<span>0.00</span>
+												<span>0</span>
+											</div>
+											<div class="totalBar"></div>
+										</div>
+										<div class="totalItem">
+											<div class="space1"></div>
+											<div class="tatleWp">
+												<span>0.00</span>
+												<span>0</span>
+											</div>
+											<div class="totalBar"></div>
+										</div>
+										<div class="totalItem">
+											<div class="space1"></div>
+											<div class="tatleWp">
+												<span>0.00</span>
+												<span>0</span>
+											</div>
+											<div class="totalBar"></div>
+										</div>
+										<div class="totalItem">
+											<div class="space1"></div>
+											<div class="tatleWp">
+												<span>0.00</span>
+												<span>0</span>
+											</div>
+											<div class="totalBar"></div>
+										</div>
+										<div class="totalItem">
+											<div class="space1"></div>
+											<div class="tatleWp">
+												<span>0.00</span>
+												<span>0</span>
+											</div>
+											<div class="totalBar"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<canvas id="canvas" style="position: absolute;top: 0;left: 0;"></canvas> 
+</body>
+<script type="text/javascript" src="js/bg.js"></script>
+<script type="text/javascript" src="js/scanboard.js"></script>
+<script type="text/javascript" src="js/fontscroll.js"></script>
+<script type="text/javascript" src="js/jquery.animsition.js"></script>
+<script type="text/javascript" src="js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.3&key=f8ffe058b8e6f5b05e8ff43ca4207393"></script>
+</html>

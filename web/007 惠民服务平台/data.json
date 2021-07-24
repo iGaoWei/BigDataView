@@ -1,0 +1,54 @@
+{
+	"callInfoRecordBigScreenSXs":[
+	
+	     {
+	        "age": 22,
+	        "callName": "王红",
+	        "callPhone": "13333333333",
+	        "categoryDictName": "60周岁以上失智老人",
+	        "isFlashing": "1",
+	        "resideAddress": "1231231",
+	        "resideCommunity": "乐山村",
+	        "resideDistrict": "诸暨市",
+	        "resideTown": "枫桥镇",
+	        "source": "1",
+	        "workOrderId": "31B2A28B5079434197DB8E99CB416FCA"
+	    },
+	    {
+	        "age": 22,
+	        "callName": "王红",
+	        "callPhone": "13333333333",
+	        "categoryDictName": "60周岁以上失智老人",
+	        "isFlashing": "2",
+	        "resideAddress": "1231231",
+	        "resideCommunity": "西联村",
+	        "resideDistrict": "诸暨市",
+	        "resideTown": "枫桥镇",
+	        "source": "2",
+	        "workOrderId": "430EEE5AA18D40E093BD869C603E93A0"
+	    },
+	    {
+	        "age": 63,
+	        "callName": "赵佳银",
+	        "callPhone": "17888888888",
+	        "categoryDictName": "",
+	        "isFlashing": "2",
+	        "resideAddress": "魏家坞",
+	        "resideCommunity": "魏廉村",
+	        "resideDistrict": "诸暨市",
+	        "resideTown": "枫桥镇",
+	        "source": "2",
+	        "workOrderId": ""
+	    }
+	],
+	"callInfoRecordNumBigScreenSXs": [
+        {
+            "name": "乐山村",
+            "num": "4"
+        },
+        {
+            "name": "魏廉村",
+            "num": "1"
+        }
+    ]
+}

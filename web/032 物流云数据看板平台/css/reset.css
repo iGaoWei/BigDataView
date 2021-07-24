@@ -1,0 +1,22 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, img{border:medium none;margin: 0;padding: 0;font-size: 100%;}
+body,button, input, select, textarea{font-size: 14px;line-height: 1.5;font-family: Arial, 'Microsoft Yahei';}
+h1, h2, h3, h4, h5, h6{font-weight: normal;}
+em{font-style:normal;}
+ul, ol{list-style: none;}
+input,button{background: none;border: none;outline: none;-webkit-appearance: none;}
+textarea{resize: none;}
+a{text-decoration: none;color:#333;}
+a:hover{text-decoration: none;
+		color:#ffd220;
+		-moz-transition: all 0.3s ease-in;
+		-webkit-transition: all 0.3s ease-in;
+		-o-transition: all 0.3s ease-in;
+		transition: all 0.3s ease-in;
+}
+img{border:0px;  outline-width:0px;  vertical-align:top;}
+.clearfix { *zoom: 1; } 
+.clearfix:before, .clearfix:after {  display: table; line-height: 0; content: ""; } 
+.clearfix:after { clear: both; } 
+.fl { float:left;}
+.fr { float:right;}
+.hide { display:none;}

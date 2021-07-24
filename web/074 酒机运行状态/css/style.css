@@ -1,0 +1,337 @@
+/*大屏*/
+.wrap {
+    margin: 0 auto;
+    width: 100%;
+    height: 5.454545rem;
+    background: url(../img/beijing.png) no-repeat;
+    background-size: cover;
+    padding-top: .10101rem;
+    box-sizing: border-box;
+}
+
+.title {
+    position: relative;
+    width: 2.10101rem;
+    height: .469697rem;
+    background: url(../img/titlebg.png) no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    text-align: center;
+    line-height: .469697rem;
+    font-size: .30303rem;
+    color: #a5dbf7;
+    letter-spacing: 2px;
+}
+
+.logo {
+    position: absolute;
+    width: .833333rem;
+    height: .434343rem;
+    background: url(../img/logo.png) no-repeat;
+    background-size: cover;
+    bottom: 0;
+    left: -1.338384rem;
+}
+
+.yibiaopan {
+    width: .621212rem;
+    height: .621212rem;
+    margin: .050505rem;
+}
+
+.wrap-yibiaopan {
+    width: 1.444444rem;
+    margin-right: .10101rem;
+}
+
+.wrap-top {
+    margin-top: .181818rem;
+    margin-left: .434343rem;
+}
+
+.wrap-list {
+    margin-top: .10101rem;
+}
+
+.list-item .item {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #1eb0dc;
+    font-size: .10101rem;
+    line-height: .222222rem;
+    height: .222222rem;
+    text-align: center;
+    margin: .005051rem;
+}
+
+.list-item .item1 {
+    width: .489899rem;
+
+}
+
+.list-item .item2 {
+    width: .166667rem;
+}
+
+.list-item .item3 {
+    width: 1.318182rem;
+}
+
+.guchang {
+    width: 2.727273rem;
+    height: 1.338384rem;
+    /* background-color: red; */
+    margin-top: .10101rem;
+    margin-left: .10101rem;
+    position: relative;
+}
+
+.guzhang-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/titlepic.png) no-repeat;
+    background-size: cover;
+    width: .247475rem;
+    height: .217172rem;
+}
+
+.guzhang-huan {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: url(../img/huanbg.png) no-repeat;
+    background-size: cover;
+    width: 1.217172rem;
+    height: 1.116162rem;
+}
+
+.guzhang-daima {
+    width: 1.550505rem;
+    height: 1.045455rem;
+    /* background-color: yellow; */
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.guzhang-daima-title {
+    font-size: .070707rem;
+    color: #1eb0dc;
+    font-weight: bold;
+    margin-bottom: .126263rem;
+}
+
+.guzhang-daima-title p {
+    padding-left: .050505rem;
+}
+
+.guzhang-daima-title img {
+    display: block;
+    width: .621212rem;
+    height: .040404rem;
+}
+
+.tingji {
+    position: relative;
+    width: 2.20202rem;
+    height: 1.287879rem;
+    margin-left: .20202rem;
+}
+
+.guzhang-text {
+    position: absolute;
+    left: .30303rem;
+    top: .050505rem;
+    font-size: .070707rem;
+    color: #1eb0dc;
+    font-weight: bold;
+}
+
+.guzhang-text p {
+    padding-left: .050505rem;
+}
+
+.wrap-mid {
+    margin-left: 1.979798rem;
+    margin-bottom: .050505rem;
+}
+
+.date-name {
+    color: #1eb0dc;
+    text-align: center;
+    line-height: .388889rem;
+    font-size: .10101rem;
+    width: .934343rem;
+    height: .388889rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #1eb0dc;
+}
+
+.date-con {
+    width: 6.242424rem;
+    height: .388889rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-left: .070707rem;
+}
+
+.wrap-bottom {
+    margin-left: .565657rem;
+}
+
+.wrap-bottom-left {
+    position: relative;
+    width: 3.232323rem;
+    height: 1.070707rem;
+    margin-right: .30303rem;
+}
+
+.wrap-bottom-mid {
+    width: 2.878788rem;
+    height: 1.090909rem;
+    position: relative;
+}
+
+.wrap-bottom-mid .l {
+    left: .126263rem;
+    position: relative;
+}
+
+.wrap-bottom-mid .r {
+    left: 1.515152rem;
+    top: .111111rem;
+}
+
+.wrap-bottom-right {
+    width: 2.111111rem;
+    height: 1.010101rem;
+    position: relative;
+}
+
+.wrap-bottom2 {
+    margin-top: .085859rem;
+    margin-left: .565657rem;
+}
+
+.wrap-bottom2 .wrap-bottom-left {
+    width: 3.242424rem;
+    height: 1.292929rem;
+}
+.hchart2{
+    position: absolute;
+    left:-0.121212rem
+}
+.hchart3{
+    left: -0.121212rem;
+}
+.wrap-bottom2-right{
+    position: relative;
+    width: 2.747475rem;
+    height: 1.388889rem;
+}
+.g-scroll{
+    position: absolute;
+    top: .272727rem;
+    height: .959596rem;
+}
+
+.gongdan-item.active{
+    background-color: rgba(25, 255, 236, .3);
+}
+.gongdan-item{
+    width: .30303rem;
+    height: .151515rem;
+    background-color: rgba(255, 255, 255, .2);
+    font-size: .090909rem;
+    color: #19ffec;
+    line-height:.151515rem ;
+    text-align: center;
+    margin-right: .010101rem;
+    margin-bottom: .010101rem;
+}
+.wid .gongdan-item{
+    width: .333333rem;
+}
+.danqian .gongdan-item:nth-child(4){
+    width: .707071rem;
+    height: .151515rem;
+}
+.danqian .gongdan-item:nth-child(5){
+    width: .707071rem;
+    height: .151515rem;
+}
+/* 时间样式 */
+
+.showDate{
+    position: absolute;
+    color:#19ffec;
+    font-size: .090909rem;
+    top: .505051rem;
+    right: .808081rem;
+    font-size: .10101rem;
+}
+/* slect样式 */
+.select .from .line {
+    padding-left: 1.212121rem;
+    padding-top: .050505rem;
+    
+}
+.layui-input-inline input,
+.mr,
+.ml,
+.select .from .line select{
+    width: .40404rem;
+    height: .090909rem;
+    border-radius: .012626rem;
+    background-color:#1eb0dc;
+    font-size: .040404rem ;
+    color: #fff; 
+    
+}
+.mr{
+    margin-right: 1.060606rem;
+}
+/* bottombg */
+.bottombg2,
+.bottombg{
+    background: url(../img/bottom.png) no-repeat;
+    background-size: cover;
+    width: 2.520202rem;
+    height: .116162rem;
+    position: absolute;
+    bottom: 0;
+}
+.bottombg2{
+    background: url(../img/bottom2.png) no-repeat;
+    background-size: cover;
+}
+.topbg{
+    width: 1.813131rem;
+    height: .116162rem;
+    position: absolute;
+    right: .10101rem;
+    top: .08152rem;
+    background: url(../img/topbg.png) no-repeat;
+    background-size: cover;
+}
+.pic{
+    width: .505051rem;
+}
+/* riqi */
+input::-webkit-input-placeholder {
+    color: #fff;
+    font-size: .050505rem;
+}
+.layui-input-inline{
+    position: absolute;
+    right: .705051rem;
+    top: .050404rem;
+}
+.magr{
+    margin-right: .0401rem;
+}
+.layui-input-inline{
+    position: absolute !important;
+}
+.layui-input-inline input{
+    border: none !important;
+}

@@ -1,0 +1,366 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Lobster+Two:700i" rel="stylesheet">
+
+        <script src='../dist/echarts.js'></script>
+        <script src='../dist/echarts-liquidfill.js'></script>
+    </head>
+    <body>
+        <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                background: #F1F7FF;
+            }
+
+            #main {
+                padding: 20px;
+            }
+
+            #main:after {
+                display: block;
+                content: ' ';
+                clear: both;
+            }
+
+            h1 {
+                margin: 20px;
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+                color: #D94854;
+            }
+
+            .chart {
+                width: 25%;
+                height: 300px;
+                float: left;
+            }
+            @media (max-width: 980px) {
+                .chart {
+                    height: 200px;
+                }
+            }
+            @media (max-width: 750px) {
+                .chart {
+                    width: 33.333333%;
+                }
+            }
+            @media (max-width: 500px) {
+                .chart {
+                    width: 50%;
+                    height: 180px;
+                }
+            }
+
+
+            .main-chart {
+                width: 100%;
+                height: 400px;
+                float: none;
+                margin: -50px 0;
+            }
+
+            .nav {
+                text-align: center;
+                margin: 10px;
+            }
+
+            a {
+                text-decoration: none;
+                background-color: #294D99;
+                transition: 0.5s;
+                color: white;
+                padding: 6px 18px;
+                border-radius: 20px;
+                margin: 0 4px;
+            }
+
+            a:hover {
+                background-color: #1598ED;
+            }
+
+            #view-more {
+                text-align: center;
+                margin: 20px 0 80px 0;
+            }
+        </style>
+        <div id='main'>
+            <div class="chart main-chart"></div>
+            <h1>Liquid Fill Chart (ECharts Extension)</h1>
+            <div class="nav">
+                <a href="https://github.com/ecomfe/echarts-liquidfill">GitHub (Doc & API)</a>
+                <a href="http://gallery.echartsjs.com/explore.html?u=bd-4013131402&type=work#tags=liquidFill">More Examples</a>
+                <a href="http://echarts.baidu.com">ECharts</a>
+            </div>
+            <div class="chart"></div>
+            <div class="chart"></div>
+            <div class="chart"></div>
+            <div class="chart"></div>
+            <div class="chart"></div>
+            <div class="chart"></div>
+            <div class="chart"></div>
+            <div class="chart"></div>
+            <div class="chart"></div>
+            <div class="chart"></div>
+            <div class="chart"></div>
+            <div class="chart"></div>
+        </div>
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+            var hm = document.createElement('script');
+            hm.src = '//hm.baidu.com/hm.js?4bad1df23f079e0d12bdbef5e65b072f';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(hm, s);
+            })();
+
+            var bgColor = '#E3F7FF';
+            var containers = document.getElementsByClassName('chart');
+            var options = [{
+                series: [{
+                    type: 'liquidFill',
+                    data: [0.6, 0.55, 0.4, 0.25],
+                    radius: '70%',
+                    outline: {
+                        show: false
+                    },
+                    backgroundStyle: {
+                        borderColor: '#156ACF',
+                        borderWidth: 1,
+                        color: bgColor,
+                        shadowColor: 'rgba(0, 0, 0, 0.4)',
+                        shadowBlur: 20
+                    },
+                    shape: 'path://M367.855,428.202c-3.674-1.385-7.452-1.966-11.146-1.794c0.659-2.922,0.844-5.85,0.58-8.719 c-0.937-10.407-7.663-19.864-18.063-23.834c-10.697-4.043-22.298-1.168-29.902,6.403c3.015,0.026,6.074,0.594,9.035,1.728 c13.626,5.151,20.465,20.379,15.32,34.004c-1.905,5.02-5.177,9.115-9.22,12.05c-6.951,4.992-16.19,6.536-24.777,3.271 c-13.625-5.137-20.471-20.371-15.32-34.004c0.673-1.768,1.523-3.423,2.526-4.992h-0.014c0,0,0,0,0,0.014 c4.386-6.853,8.145-14.279,11.146-22.187c23.294-61.505-7.689-130.278-69.215-153.579c-61.532-23.293-130.279,7.69-153.579,69.202 c-6.371,16.785-8.679,34.097-7.426,50.901c0.026,0.554,0.079,1.121,0.132,1.688c4.973,57.107,41.767,109.148,98.945,130.793 c58.162,22.008,121.303,6.529,162.839-34.465c7.103-6.893,17.826-9.444,27.679-5.719c11.858,4.491,18.565,16.6,16.719,28.643 c4.438-3.126,8.033-7.564,10.117-13.045C389.751,449.992,382.411,433.709,367.855,428.202z',
+                    label: {
+                        position: ['38%', '40%'],
+                        formatter: function () {
+                            return 'ECharts\nLiquid Fill';
+                        },
+                        fontSize: 40,
+                        fontFamily: 'Lobster Two',
+                        color: '#D94854',
+                        insideColor: bgColor
+                    }
+                }]
+            }, {
+                series: [{
+                    type: 'liquidFill',
+                    data: [0.6, 0.5, 0.4, 0.3],
+                    radius: '70%',
+                    outline: {
+                        show: false
+                    }
+                }]
+            }, {
+                series: [{
+                    type: 'liquidFill',
+                    data: [0.6, 0.5, 0.4, 0.3],
+                    radius: '70%',
+                    phase: 0,
+                    period: 5000,
+                    outline: {
+                        show: false
+                    }
+                }]
+            }, {
+                series: [{
+                    type: 'liquidFill',
+                    data: [0.6, {
+                        value: 0.5,
+                        direction: 'left'
+                    }, 0.4, {
+                        value: 0.3,
+                        direction: 'left'
+                    }],
+                    radius: '70%',
+                    outline: {
+                        show: false
+                    }
+                }]
+            }, {
+                series: [{
+                    type: 'liquidFill',
+                    data: [0.6, 0.5, {
+                        value: 0.4,
+                        amplitude: 15
+                    }, {
+                        value: 0.3,
+                        amplitude: 20,
+                        waveLength: 100
+                    }],
+                    radius: '70%',
+                    amplitude: 10,
+                    outline: {
+                        show: false
+                    }
+                }]
+            }, {
+                series: [{
+                    type: 'liquidFill',
+                    data: [0.6],
+                    radius: '70%'
+                }]
+            }, {
+                series: [{
+                    type: 'liquidFill',
+                    data: [0.6],
+                    radius: '70%',
+                    amplitude: 0,
+                    waveAnimation: false,
+                    silent: true
+                }]
+            }, {
+                series: [{
+                    type: 'liquidFill',
+                    data: [1, 0.9, 0.8, 0.7],
+                    radius: '70%',
+                    label: {
+                        formatter: 'I\'m full.',
+                        textStyle: {
+                            fontSize: 35,
+                            fontFamily: 'Lobster Two'
+                        }
+                    }
+                }]
+            }, {
+                series: [{
+                    type: 'liquidFill',
+                    data: [0, 0, 0, 0],
+                    radius: '70%',
+                    label: {
+                        formatter: 'I\'m empty.',
+                        fontSize: 25,
+                        fontFamily: 'Lobster Two',
+                        baseline: 'bottom',
+                        position: ['50%', '86%']
+                    }
+                }]
+            }, {
+                series: [{
+                    type: 'liquidFill',
+                    data: [0.6, 0.5, 0.4, 0.3],
+                    waveAnimation: false,
+                    radius: '70%',
+                    backgroundStyle: {
+                        borderWidth: 2,
+                        borderColor: '#156ACF'
+                    },
+                    outline: {
+                        show: false
+                    },
+                    shape: 'diamond'
+                }]
+            }, {
+                series: [{
+                    type: 'liquidFill',
+                    data: [0.6, 0.5, 0.4, 0.3],
+                    radius: '70%',
+                    amplitude: 0,
+                    waveAnimation: false,
+                    backgroundStyle: {
+                        borderWidth: 2,
+                        borderColor: '#156ACF'
+                    },
+                    outline: {
+                        show: false
+                    },
+                    shape: 'triangle',
+                    label: {
+                        position: ['50%', '65%']
+                    }
+                }]
+            }, {
+                series: [{
+                    type: 'liquidFill',
+                    data: [0.6, 0.5, 0.4, 0.3],
+                    radius: '90%',
+                    itemStyle: {
+                        shadowBlur: 0
+                    },
+                    backgroundStyle: {
+                        borderWidth: 2,
+                        borderColor: '#156ACF'
+                    },
+                    outline: {
+                        show: false
+                    },
+                    label: {
+                        shadowBlur: 0,
+                        position: ['50%', '45%']
+                    },
+                    shape: 'pin',
+                    center: ['50%', '40%']
+                }]
+            }, {
+                series: [{
+                    type: 'liquidFill',
+                    data: [0.6, 0.5, 0.4, 0.3],
+                    radius: '70%',
+
+                    backgroundStyle: {
+                        borderWidth: 2,
+                        borderColor: '#156ACF'
+                    },
+                    outline: {
+                        show: false
+                    },
+                    shape: 'rect'
+                }]
+            }];
+
+            var charts = [];
+            for (var i = 0; i < options.length; ++i) {
+                var chart = echarts.init(containers[i]);
+
+                if (i > 0) {
+                    options[i].series[0].silent = true;
+                }
+                chart.setOption(options[i]);
+                chart.setOption({
+                    baseOption: options[i],
+                    media: [{
+                        query: {
+                            maxWidth: 300
+                        },
+                        option: {
+                            series: [{
+                                label: {
+                                    fontSize: 26
+                                }
+                            }]
+                        }
+                    }]
+                });
+
+                charts.push(chart);
+            }
+
+            window.onresize = function () {
+                for (var i = 0; i < charts.length; ++i) {
+                    charts[i].resize();
+                }
+            };
+
+            setInterval(update, 3000);
+
+            function update() {
+                var data = [];
+                var last = 1;
+                for (var i = 0; i < 4; ++i) {
+                    last = Math.floor(last * (Math.random() * 0.5 + 0.5)
+                        * 100) / 100;
+                    data.push(last);
+                }
+                charts[1].setOption({
+                    series: [{
+                        data: data
+                    }]
+                });
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, dd, dl, dt, li, ol, ul,input,select,button,textarea,tr,td{ padding:0; margin:0; border:none;}
+input,button,select,textarea,a,img{outline:none; }/*去掉超链接或按钮点击时出现的虚线框黄色边框*/
+::-moz-focus-inner{border:0px;}/*火狐的私有属性去掉点击时边框*/
+body,html{ width:100%; font-family:"Microsoft YaHei","Arial", "SimSun";}
+ul, ul li, ol li, li {	list-style:none;}
+a, img, input, textarea {border:none;}
+a {
+    text-decoration: none;
+}
+table {	border-collapse: collapse;border-spacing:0;}
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: ".";clear: both;height: 0;}
+* html .clearfix {zoom: 1;}
+*:first-child + html .clearfix {zoom: 1;}
+.fl {	float:left;}
+.fr {	float:right;}
+.none{	display:none;}
+
+.inrow{font-size:0;[;font-size:12px;];*font-size:0;font-family:arial;[;letter-spacing:-3px;];*letter-spacing:normal;*word-spacing:-1px;}
+.inrow>li,.inrow span{display:inline-block;*display:inline;*zoom:1;font-size:14px;letter-spacing:normal;word-spacing:normal; }
+.dataNums{position: absolute; left: 34%; top:50%; display: block; width:100%; height:75px; margin-top: -37px; text-align:center;}
+.dataNums .dataOne{ float:left;width: 9px; height:75px;text-align: center;}
+.dataNums .dataBoc {position: relative; width: 100%; height: 100%; overflow: hidden;}
+.dataNums .dataBoc .tt {position: absolute; top: 0;  left: 0; width: 100%;  height: 100%;}
+.dataNums .tt span{width:100%;height:100%; font: 18px "Arial";color:#4ADEFE;}

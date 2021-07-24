@@ -1,0 +1,224 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+    <title>全局分析</title>
+
+    <link href="js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+    <link href="css/table1.css" rel="stylesheet" type="text/css">
+    <style>
+        .news_check{background-color:#171e2b ;border: none;color:#c5d0da;font-weight: normal;font-size: 14px }
+        .news_check input,.news_check select,.news_check select option{border: 1px #9ca9b6  solid !important;background-color: transparent !important;color: #9ca9b6}
+        .charts{border: 1px #3e5665  solid}
+        .charts p{background-color: #495365;border-bottom:#495365;color: #d7d9dc }
+        .btn-default {  color: #cfd8e8;  background-color: #5f6167;  border-color: #7b8188;  }
+        .btn-default:hover{ color: #f1f5fb;  background-color: #74767b;  border-color: #8e9398;}
+        .check_right span {color: #d1d5de !important;}
+    </style>
+</head>
+<body style="background-color: #171e2b;font-family: 微软雅黑;width:900px;color: #475059;overflow: auto">
+<div class="from_main" style="background-color: #171e2b">
+    <div class="news_check">
+        <div class="check_left l_left">
+
+            <label>年分：</label>
+            <input type="date" class="find_input"/>
+
+
+            <button>查询</button>
+        </div>
+        <div class="check_right r_right">
+            <a class="btn btn-default"><span class=" glyphicon glyphicon-circle-arrow-down l_left"></span>打印</a>
+            <a class="btn btn-default"><span class=" glyphicon glyphicon-download-alt l_left"></span>导出</a>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div style="padding: 0 10px 0 10px ;background-color: #171e2b ;">
+
+        <!--<div class="e_chart">-->
+            <!--<div class="charts l_left">-->
+                <!--<p class="charts_p">事故原因分析<span class="r_right">更多></span></p>-->
+                <!--<div id="container01" style="height:200px;width: 100%;"></div>-->
+
+            <!--</div>-->
+            <!--<div class="charts l_left last_charts">-->
+                <!--<p class="charts_p">事故级别分析<span class="r_right">更多></span></p>-->
+                <!--<div id="container02" style="height:200px;width: 100%;"></div>-->
+
+            <!--</div>-->
+            <!--<div class="clear"></div>-->
+        <!--</div>-->
+        <div class="e_chart">
+            <div class="charts last_charts" style="width: 100%">
+                <p class="charts_p">历史数据分析<span class="r_right">更多></span></p>
+                <div id="container03" style="height:300px;"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script src="js/echarts-all.js"></script>
+
+<script>
+    $(function () {
+
+//        chart02();
+//        chart03();
+        chart04()
+
+    });
+
+//    function chart02() {
+//        var myChart = echarts.init($("#container01")[0]);
+//        var option = {
+//
+//            tooltip : {
+//                trigger: 'item',
+//                formatter: "{a} <br/>{b} : {c} ({d}%)"
+//            },
+//            legend: {
+//                orient : 'vertical',
+//                x : 'left',
+//                data:['设备原因','违规操作','操作失误','腐蚀','维护不周',"自然因素","社会因素","其它"],
+//                textStyle:{    //图例文字的样式
+//                    color:'#c4c6ca',
+//                    fontSize:12
+//                }
+//            },
+//
+//            calculable : false,
+//            series : [
+//                {
+//                    name:'访问来源',
+//                    type:'pie',
+//                    radius : '55%',
+//                    center: ['50%', '60%'],
+//                    data:[
+//                        {value:35, name:'设备原因' },
+//                        {value:110, name:'违规操作'},
+//                        {value:34, name:'操作失误'},
+//                        {value:35, name:'腐蚀'},
+//                        {value:48, name:'维护不周'},
+//                        {value:2, name:'自然因素'},
+//                        {value:5, name:'社会因素'},
+//                        {value:15, name:'其它'}
+//                    ]
+//                }
+//            ]
+//        };
+//        myChart.setOption(option);
+//
+//    }
+//    function chart03() {
+//        var myChart = echarts.init($("#container02")[0]);
+//       var option = {
+//
+//            tooltip : {
+//                trigger: 'item',
+//                formatter: "{a} <br/>{b} : {c} ({d}%)"
+//            },
+//            legend: {
+//                orient : 'vertical',
+//                x : 'left',
+//                data:['特大','极大','重大','一般','微小'],
+//                textStyle:{    //图例文字的样式
+//                    color:'#c4c6ca',
+//                    fontSize:12
+//                }
+//            },
+//
+//            calculable : false,
+//            series : [
+//                {
+//                    name:'访问来源',
+//                    type:'pie',
+//                    radius : '55%',
+//                    center: ['50%', '60%'],
+//                    data:[
+//                        {value:3, name:'特大'},
+//                        {value:11, name:'极大'},
+//                        {value:34, name:'重大'},
+//                        {value:35, name:'一般'},
+//                        {value:48, name:'微小'}
+//
+//                    ]
+//                }
+//            ]
+//        };
+//        myChart.setOption(option);
+//
+//    }
+    function chart04() {
+        var myChart = echarts.init($("#container03")[0]);
+        var option = {
+            tooltip : {
+                trigger: 'axis'
+            },
+            legend: {
+                data:['高猛酸盐','总磷','氨氮'],
+                textStyle: {
+                    color: '#fff'
+                }
+            },
+
+            calculable : false,
+            xAxis : [
+                {
+                    type : 'category',
+                    boundaryGap : false,
+                    data : ['周一','周二','周三','周四','周五','周六','周日'],
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    }
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    }
+                }
+            ],
+            series : [
+                {
+                    name:'高猛酸盐',
+                    type:'line',
+                    stack: '总量',
+                    data:[120, 132, 101, 134, 90, 230, 210]
+                },
+                {
+                    name:'总磷',
+                    type:'line',
+                    stack: '总量',
+                    data:[220, 182, 191, 234, 290, 330, 310]
+                },
+                {
+                    name:'氨氮',
+                    type:'line',
+                    stack: '总量',
+                    data:[150, 232, 201, 154, 190, 330, 410]
+                }
+
+            ]
+        };
+        myChart.setOption(option);
+
+    }
+</script>
+</html>

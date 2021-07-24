@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- 头部模块 -->
+    <div class="header">
+        <div class="title">
+            <span>数据可视化大屏展示系统</span>
+        </div>
+        <div class="time">
+            <span></span>
+        </div>
+        <div class="company">
+            <span>LOGO</span>
+            <span>××公司</span>
+        </div>
+    </div>
+
+    <!-- 主题模块 -->
+    <div class="main">
+        <div class="animate">
+            <!-- 浮动层 -->
+            <div class="float">
+                <div class="floating1">
+                    <div id="roate1">
+                        <div class="roate-item">
+                            <p>12356</p>
+                            <span>销售额</span>
+                        </div>
+                        <div class="roate-item">
+                            <p>53%</p>
+                            <span>同比</span>
+                        </div>
+                        <div class="roate-item">
+                            <p>63%</p>
+                            <span>完成率</span>
+                        </div>
+                    </div>
+                    <p class="pm">NO.5</p>
+                </div>
+                <div class="floating2">
+                    <div id="roate2">
+                        <div class="roate-item2">
+                            <p>12356</p>
+                            <span>销售额</span>
+                        </div>
+                        <div class="roate-item2">
+                            <p>53%</p>
+                            <span>同比</span>
+                        </div>
+                        <div class="roate-item2">
+                            <p>63%</p>
+                            <span>完成率</span>
+                        </div>
+                    </div>
+                    <p class="pm2">NO.4</p>
+                </div>
+                <div class="floating3">
+                    <div id="roate3">
+                        <div class="roate-item3">
+                            <p>12356</p>
+                            <span>销售额</span>
+                        </div>
+                        <div class="roate-item3">
+                            <p>53%</p>
+                            <span>同比</span>
+                        </div>
+                        <div class="roate-item3">
+                            <p>63%</p>
+                            <span>完成率</span>
+                        </div>
+                    </div>
+                    <p class="pm3">NO.3</p>
+                </div>
+                <div class="floating4">
+                    <div id="roate4">
+                        <div class="roate-item4">
+                            <p>12356</p>
+                            <span>销售额</span>
+                        </div>
+                        <div class="roate-item4">
+                            <p>53%</p>
+                            <span>同比</span>
+                        </div>
+                        <div class="roate-item4">
+                            <p>63%</p>
+                            <span>完成率</span>
+                        </div>
+                    </div>
+                    <p class="pm4">NO.2</p>
+                </div>
+                <div class="floating5">
+                    <div id="roate5">
+                        <div class="roate-item5">
+                            <p>12356</p>
+                            <span>销售额</span>
+                        </div>
+                        <div class="roate-item5">
+                            <p>53%</p>
+                            <span>同比</span>
+                        </div>
+                        <div class="roate-item5">
+                            <p>63%</p>
+                            <span>完成率</span>
+                        </div>
+                    </div>
+                    <p class="pm5">NO.1</p>
+                </div>
+            </div>
+            <div class="sum">
+                <div class="data">
+                    <p>总销售额</p>
+                    <span>2621526</span>
+                </div>
+                <div class="cicle1"></div>
+                <canvas id="canvas1"></canvas>
+                <canvas id="canvas2"></canvas>
+                <div class="data1">
+                    <div class="qiu">
+                        <p>70%</p>
+                    </div>
+                    <span>折扣率</span>
+                </div>
+                <div class="data2">
+                    <div class="qiu">
+                        <p>70%</p>
+                    </div>
+                    <span>售罄率</span>
+                </div>
+                <div class="data3">
+                    <div class="qiu">
+                        <p>86%</p>
+                    </div>
+                    <span>完成率</span>
+                </div>
+                <div class="data4">
+                    <div class="qiu">
+                        <p>73%</p>
+                    </div>
+                    <span>同比</span>
+                </div>
+            </div>
+        </div>
+        <div class="charts">
+            <div class="charts1">
+                <div class="charts-title">
+                    <span>产品销售情况分析</span>
+                </div>
+                <div class="charts-content1 content"></div>
+            </div>
+            <div class="charts2">
+                <div class="charts-title">
+                    <span>商品销售排名</span>
+                </div>
+                <div class="charts-content2 content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>排名</td>
+                                <td>门店</td>
+                                <td>销售额</td>
+                                <td>完成情况</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td>××门店</td>
+                                <td>25947元</td>
+                                <td style="color: #dbbd73">85%<span class="chart1"></span></td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>××门店</td>
+                                <td>25947元</td>
+                                <td style="color: #4bd8ba">85%<span class="chart2"></span></td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>××门店</td>
+                                <td>25947元</td>
+                                <td style="color: #4bd8ba">85%<span class="chart3"></span></td>
+                            </tr>
+                            <tr>
+                                <td>04</td>
+                                <td>××门店</td>
+                                <td>25947元</td>
+                                <td style="color: #4bd8ba">85%<span class="chart4"></span></td>
+                            </tr>
+                            <tr>
+                                <td>05</td>
+                                <td>××门店</td>
+                                <td>25947元</td>
+                                <td style="color: #dbbd73">85%<span class="chart5"></span></td>
+                            </tr>
+                            <tr>
+                                <td>06</td>
+                                <td>××门店</td>
+                                <td>25947元</td>
+                                <td style="color: #4bd8ba">85%<span class="chart6"></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-1.11.0.min.js"></script>
+<script src="./js/echarts.min.js"></script>
+<script src="./js/main.js"></script>
+
+</html>

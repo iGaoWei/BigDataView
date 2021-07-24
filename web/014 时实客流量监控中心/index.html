@@ -1,0 +1,444 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>index</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5ieMMexWmzB9jivTq6oCRX9j&callback"></script>
+<link rel="stylesheet" href="css/ckin.css">
+	<link rel="stylesheet" href="css/style.css">
+<script>
+	 $(window).load(function(){  
+             $(".loading").fadeOut()
+            })  
+	</script>
+</head>
+<body>
+	<div class="loading">
+  <div class="loadbox"> <img src="images/loading.gif"> 页面加载中... </div>
+</div>
+	
+	<div class="mainbox">
+	<ul class="clearfix nav1">
+		<li style="width: 25%">
+		<div class="box">
+			<div class="tit"><span>实时抓拍人脸</span></div>
+			<div class="boxnav">
+				<div class="scolldiv scolldiv1">
+<ul class="face01 clearfix">
+				<li><img src="images/face1.png"><p>姓名：姜文</p></li>
+				<li><img src="images/face2.png"><p>姓名：刘德华</p></li>
+				<li><img src="images/face3.png"><p>姓名：周星驰</p></li>
+	<li><img src="images/face1.png"><p>姓名：姜文</p></li>
+				<li><img src="images/face2.png"><p>姓名：刘德华</p></li>
+				<li><img src="images/face3.png"><p>姓名：周星驰</p></li>
+	<li><img src="images/face1.png"><p>姓名：姜文</p></li>
+				<li><img src="images/face2.png"><p>姓名：刘德华</p></li>
+				<li><img src="images/face3.png"><p>姓名：周星驰</p></li>
+	<li><img src="images/face1.png"><p>姓名：姜文</p></li>
+				<li><img src="images/face2.png"><p>姓名：刘德华</p></li>
+				<li><img src="images/face3.png"><p>姓名：周星驰</p></li>
+<li><img src="images/face1.png"><p>姓名：姜文</p></li>
+				<li><img src="images/face2.png"><p>姓名：刘德华</p></li>
+				<li><img src="images/face3.png"><p>姓名：周星驰</p></li>
+	<li><img src="images/face1.png"><p>姓名：姜文</p></li>
+				<li><img src="images/face2.png"><p>姓名：刘德华</p></li>
+				<li><img src="images/face3.png"><p>姓名：周星驰</p></li>
+	<li><img src="images/face1.png"><p>姓名：姜文</p></li>
+				<li><img src="images/face2.png"><p>姓名：刘德华</p></li>
+				<li><img src="images/face3.png"><p>姓名：周星驰</p></li>
+	<li><img src="images/face1.png"><p>姓名：姜文</p></li>
+				<li><img src="images/face2.png"><p>姓名：刘德华</p></li>
+				<li><img src="images/face3.png"><p>姓名：周星驰</p></li>
+	
+				</ul>
+					</div>
+			</div>
+			</div>
+			<div class="box">
+			<div class="tit"><span>在岗工作人员</span></div>
+			<div class="boxnav" style=" height: 300px;">
+		<table class="table1" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <th>姓名</th>
+      <th>职位</th>
+      <th>当前签到次数</th>
+      <th>前一区间签到次数</th>
+     
+     
+    </tr>
+    <tr>
+      <td>张三</td>
+      <td>保安</td>
+      <td>3</td>
+      <td>5</td>
+
+    </tr>
+    
+	   <tr>
+      <td>张三</td>
+      <td>保安</td>
+      <td>3</td>
+      <td>5</td>
+    </tr> <tr>
+     <td>张三</td>
+      <td>保安</td>
+      <td>3</td>
+      <td>5</td>
+    </tr> <tr>
+     <td>张三</td>
+      <td>保安</td>
+      <td>3</td>
+      <td>5</td>
+    </tr> <tr>
+      <td>张三</td>
+      <td>保安</td>
+      <td>3</td>
+      <td>5</td>
+    </tr>
+	  <tr>
+      <td>张三</td>
+      <td>保安</td>
+      <td>3</td>
+      <td>5</td>
+    </tr>
+	  <tr>
+      <td>张三</td>
+      <td>保安</td>
+      <td>3</td>
+      <td>5</td>
+    </tr>
+	 
+	  <tr>
+      <td>张三</td>
+      <td>保安</td>
+      <td>3</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+			</div>
+			</div>
+		
+		</li>
+		<li style="width: 50%">
+			<div class="tongji" style="height: 120px;">
+			<h1>时实客流量<span>9104</span>人</h1>
+				<ul>
+				<li>对比次时昨日累计：<span>2</span>人</li>
+				<li>同比增长：<span>2%</span></li>
+				<li>安装设备：<span>94</span></li>
+				<li>在线设备：<span>62</span></li>
+				</ul>
+			</div>
+			
+		<div class="box mapbox" style="overflow: hidden; position: relative">
+			<div class="maptab">
+			<a href="#" class="active">地图</a>
+			<a href="#">视频</a>
+			</div>
+			
+			<div class="boxnav" id="map" style="height: 100%;"></div>
+			
+			<div class="map_tool_outbox">
+                            <span class="map_tool" >
+                                    <a  href="#" class="map_tool_inner" title="全图"></a>
+                            </span>
+                            <span class="map_tool" >
+                                    <a  href="#" class="map_tool_inner" title="放大" style="background-position-x:-36px"></a>
+                                </span>
+                            <span class="map_tool" >
+                                    <a href="#" class="map_tool_inner" title="缩小" style="background-position-x:-72px"></a>
+                                </span>
+                            <span class="map_tool" >
+                                    <a class="map_tool_inner" title="倒退视图" style="background-position-x:-108px"></a>
+                                </span>
+                            <span class="map_tool">
+                                    <a class="map_tool_inner" title="前进视图" style="background-position-x:-144px"></a>
+                                </span>
+                            <span class="map_tool">
+                                    <a class="map_tool_inner display_type_btn" title="专题地图" style="background-position-x:-180px"></a>
+                                </span>
+                            <span class="map_tool">
+                                    <a class="map_tool_inner city_chose_btn" title="城市定位" style="background-position-x:-432px"></a>
+                                </span>
+                            <span class="map_tool" id="btnBuffer">
+                                    <a class="map_tool_inner" title="缓冲区分析" style="background-position-x:-216px"></a>
+                                </span>
+                            <span class="map_tool">
+                                    <a class="map_tool_inner addition_check_btn check_btn" title="地址检索" style="background-position-x:-252px"></a>
+                                </span>
+                            <span class="map_tool">
+                                    <a class="map_tool_inner chemistry_check_btn check_btn"  title="危化品检索" style="background-position-x:-288px"></a>
+                                </span>
+                            <span class="map_tool">
+                                    <a class="map_tool_inner enterprise_check_btn check_btn"   title="企业检索" style="background-position-x:-324px"></a>
+                                </span>
+                            <span class="map_tool">
+                                    <a class="map_tool_inner car_check_btn check_btn"   title="车辆检索" style="background-position-x:-360px"></a>
+                                </span>
+                            <span class="map_tool">
+                                    <a class="map_tool_inner"  title="搜索" style="background-position-x:-468px"></a>
+                                </span>
+                            <span class="map_tool">
+                                    <a class="map_tool_inner"  id="fresh_tool" title="清空" style="background-position-x:-396px"></a>
+                                </span>
+                            <span class="map_tool">
+                               <input type="text" id="txtCoord" style="width:150px;visibility:hidden">
+                            </span>
+                        </div>
+			
+			<div class="videobox">
+			<ul class="clearfix">
+				<li> <video poster="images/face1.png" src="http://www.17sucai.com/preview/1424582/2018-10-31/video/ckin.mp4
+" data-ckin="default" data-overlay="1" data-title="视频标题"></video></li>
+				<li> <video poster="images/face3.png" src="http://www.17sucai.com/preview/1424582/2018-10-31/video/ckin.mp4
+" data-ckin="default" data-overlay="1" data-title="视频标题"></video></li>
+				<li> <video poster="images/face2.png" src="http://www.17sucai.com/preview/1424582/2018-10-31/video/ckin.mp4
+" data-ckin="default" data-overlay="1" data-title="视频标题"></video></li>
+				<li> <video poster="images/head.jpg" src="http://www.17sucai.com/preview/1424582/2018-10-31/video/ckin.mp4
+" data-ckin="default" data-overlay="1" data-title="视频标题"></video></li>
+				</ul>
+			</div>
+			</div>
+			
+			<script>
+			$(".maptab a").eq(0).click(function(){
+				$(this).addClass("active").siblings().removeClass("active")
+					$("video").trigger('pause');
+					$("#map,.map_tool_outbox").show()
+					$(".videobox").hide()
+				})
+				$(".maptab a").eq(1).click(function(){
+					$(this).addClass("active").siblings().removeClass("active")
+					$("#map,.map_tool_outbox").hide()
+					$(".videobox").show()
+				})
+				
+				$(".map_tool").click(function(){
+					$(".box2").hide()
+					$(".news").show()
+				})
+				
+				
+			</script>
+			
+		<div>
+			<div class="box" style="float: left; width: 49.5%;  padding: 0 15px; ">
+						<div class="tit"><span>男女比例</span></div>
+				<div id="echart1" style="height: 300px;"></div>
+						</div>
+			<div class="box" style="float: right; width: 49.5%;padding: 0 15px; ">
+						<div class="tit"><span>各年龄段比例</span></div>
+				<div id="echart2" style="height: 300px;"></div>
+						</div>
+		
+					</div>
+		</li>
+		<li style="width: 25%">
+		
+			
+		<div class="box box2">
+			<div class="tit"><span>目标人脸识别</span></div>
+			<div class="boxnav">
+			<div class="scolldiv scolldiv2">
+				<ul class="face02 clearfix">
+				<li>
+				<div class="facedb">
+					<div><img src="images/face1.png"></div>
+					<div><img src="images/face1.png"></div>
+					<span>100%</span>
+					</div>
+						<p>姜文/A区正门</p>
+				</li>
+				<li>
+				<div class="facedb">
+					<div><img src="images/face1.png"></div>
+					<div><img src="images/face1.png"></div>
+					<span>100%</span>
+					</div>
+						<p>姜文/A区正门</p>
+				</li>
+				<li>
+				<div class="facedb">
+					<div><img src="images/face2.png"></div>
+					<div><img src="images/face3.png"></div>
+					<span>0%</span>
+					</div>
+						<p>姜文/A区正门</p>
+				</li>
+				
+			
+					<li>
+				<div class="facedb">
+					<div><img src="images/face1.png"></div>
+					<div><img src="images/face2.png"></div>
+					<span>99%</span>
+					</div>
+						<p>姜文/A区正门</p>
+				</li>
+					<li>
+				<div class="facedb">
+					<div><img src="images/face2.png"></div>
+					<div><img src="images/face3.png"></div>
+					<span>99%</span>
+					</div>
+						<p>姜文/A区正门</p>
+				</li>
+				<li>
+				<div class="facedb">
+					<div><img src="images/face2.png"></div>
+					<div><img src="images/face1.png"></div>
+					<span>99%</span>
+					</div>
+						<p>姜文/A区正门</p>
+				</li>
+				<li>
+				<div class="facedb">
+					<div><img src="images/face1.png"></div>
+					<div><img src="images/face2.png"></div>
+					<span>99%</span>
+					</div>
+						<p>姜文/A区正门</p>
+				</li>
+				<li>
+				<div class="facedb">
+					<div><img src="images/face1.png"></div>
+					<div><img src="images/face2.png"></div>
+					<span>99%</span>
+					</div>
+					<p>姜文/A区正门</p>
+
+				</li>
+				
+				
+				</ul>
+				</div>
+			</div>
+			</div>
+			
+			<div class="box news">
+			<div class="tit"><span>测试模块</span></div>
+			<div class="boxnav">
+			<div class="scolldiv ">
+				<ul>
+				<li><h3>那些谴责杭州女童家属的人，可能不懂真正的底层</h3><p>2019-09-20</p></li>
+				<li><h3>强拆合法广告，城管回应为何“理直气壮”</h3><p>2019-09-20</p></li>
+				<li><h3>习近平会见2019年度驻外使节工作会议与会使节</h3><p>2019-09-20</p></li>
+				<li><h3>习近平：主题教育要实实在在 习近平勉励大学生</h3><p>2019-09-20</p></li>
+				<li><h3>纸短情长 习近平四封信寄语文艺工作者</h3><p>2019-09-20</p></li>
+				<li><h3>海外分析人士看好中国经济企稳向好 经济基本面没变</h3><p>2019-09-20</p></li>
+				<li><h3>全国党的建设研究会：筑牢守初心担使命的思想根基</h3><p>2019-09-20</p></li>
+				<li><h3>从“卖石头”到“卖风景” 安吉余村用照片讲述背后的故事</h3><p>2019-09-20</p></li>
+				<li><h3>从客运码头到“城市森林” 31万平方米公共空间还江于民</h3><p>2019-09-20</p></li>
+				<li><h3>8年车辆通行总量超8000万 胶州湾大桥打通青岛交通“命脉”</h3><p>2019-09-20</p></li>
+				
+				</ul>
+				</div>
+			</div>
+			</div>
+			
+			<div class="box">
+			<div class="tit"><span>到访次数</span></div>
+			<div class="boxnav" id="echart3"   style=" height: 300px;">
+			
+			
+			
+			</div>
+			</div>
+		
+		</li>
+		
+		</ul>
+	</div>
+<script type="text/javascript">
+
+</script>
+	
+	
+	<script>
+		
+	$(document).ready(function(){
+		i=0
+		ii=0
+		var hei=$(".face01 li").height()
+		var heia=$(".face02 li").height()
+		var hei2=hei*4
+		$(".mapbox").height(hei2-72)
+		$(".scolldiv").height(hei2);
+		
+ var html1=$(".scolldiv1 ul").html()
+ var le=$(".scolldiv1 li").length/4
+$(".scolldiv1 ul").append(html1)
+
+var html2=$(".scolldiv2 ul").html()
+ var le2=$(".scolldiv2 li").length/2
+	$(".scolldiv2 ul").append(html2)
+
+var time=setInterval(aa,3000)	
+var time2=setInterval(bb,3000)	
+function aa(){
+			i++
+			if(i==le+1){
+				$(".scolldiv1 ul").css({top:0})
+				i=1;
+				$(".scolldiv1 ul").animate({top:hei*i})
+			}
+			$(".scolldiv1 ul").animate({top:hei*i})
+			
+		}
+function bb(){
+			ii++
+			
+			$("title").text(ii)
+			if(ii<=le2){
+				$(".scolldiv2 ul").animate({top:heia*ii})
+			}else{
+				$(".scolldiv2 ul").css({top:0})
+				ii=1;
+				$(".scolldiv2 ul").animate({top:heia*ii})
+			}
+			
+			
+		}
+
+	})
+	
+		
+		$(window).resize(function(){
+		location.reload() 
+	
+	})
+		
+		
+
+
+		
+	</script>
+	
+	<script>
+$(function(){
+    var map = new BMap.Map("map");    // 创建Map实例
+    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+
+    var size1 = new BMap.Size(10, 50);
+    map.setCurrentCity("北京");         
+    map.enableScrollWheelZoom(true);     
+    //设备地图颜色
+    var mapStyle={
+        style:"midnight"
+    };
+    map.setMapStyle(mapStyle);
+
+
+
+})
+
+</script>
+	
+	<script src="js/ckin.js"></script>
+</body>
+</html>

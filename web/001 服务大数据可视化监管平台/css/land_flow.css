@@ -1,0 +1,314 @@
+.longBox {
+    /* position: relative; */
+    width: 99.5%;
+}
+.cardType {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.landCondition, .landFertility, .landIrrigate, .landDrainage, .landType {
+    width: 100%;
+    height: 87%;
+}
+.percent{
+    font-size: .8vw;
+    color: #fff;
+}
+.percent .pec1{
+    position: absolute;
+    top: 40%;
+    left: 60%;
+}
+.percent .pec2 {
+    position: absolute;
+    top: 65%;
+    left: 58%;
+}
+.percent .pec3 {
+    position: absolute;
+    top: 50%;
+    left: 32%;
+}
+.utilizeActuality {
+    width: 100%;
+    height: 87%;
+    display: flex;
+    color: #0EFCFF;
+    font-weight: 10;
+}
+.utilizeActuality table {
+    /* width: 90%; */
+    /* height: 78%; */
+    text-align: center;
+    margin: 0 auto;
+    border: 0 solid #0EFCFF;
+}
+.utilizeActuality table thead {
+    width: 100%;
+    height: 12%;
+}
+.trBox {
+    height: 18%;
+}
+
+
+.textBox {
+    margin-left: 2.5%;
+    margin-top: .2vw;
+    width: 95%;
+    height: 45%;
+    border: 1px solid #0EFCFF;
+    color: #39DCF4;
+}
+.textBox .topText {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    font-size: .65vw;
+}
+.topText .topOne {
+    margin-left: .5vw;
+}
+.topText .topTwo {
+    margin-left: 2.5vw;
+}
+.textBox .middleText {
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 2vw;
+    background-color: rgba(14,252,255,.22);
+    font-size: .8vw;
+}
+.middleText span {
+    /* margin-top: .8vw; */
+    position: relative;
+    display: inline-block;
+    width: 16.5%;
+    height: 100%;
+    line-height: 2vw;
+    text-align: center;
+    border-right: 2px solid rgba(14,252,255,.16);
+}
+ .middleText .tipBox {
+    position: absolute;
+    top: 36%;
+    background-color: red;
+    display: inline-block;
+    width: 29%;
+    height: 29%;
+    border: 1px solid rgba(14,252,255,0.48);
+    background: rgba(2,57,99,0.77);
+    color: #0EFCFF;
+    font-size: .65vw;
+}
+.middleText .tipOne {
+    left: -4%;
+    display: none;
+}
+.middleText .tipTwo {
+    left: 12%;
+    display: none;
+}
+.middleText .tipThree {
+    left: 28%;
+    display: none;
+}
+.middleText .tipFour {
+    left: 44%;
+    display: none;
+}
+.middleText .tipFive {
+    left: 59%;
+    display: none;
+}
+.middleText .tipSix {
+    left: 73%;
+    display: none;
+}
+.tipBox div {
+    margin: .25vw;
+}
+.bottomText {
+    width: 100%;
+    height: 50%;
+    font-size: .65vw;
+}
+.bottomText .soilContamination {
+    width: 100%;
+    margin-left: .5vw;
+    margin-top: .55vw;
+}
+.soilContamination .sencondBox {
+    margin-left: .8vw;
+}
+.bottomText .soilData {
+    width: 100%;
+    margin-left: .5vw;
+    margin-top: .55vw;
+}
+.soilData span {
+    margin-left: .5vw;
+}
+.videoBox {
+    margin-top: 2%;
+    margin-left: 2.5%;
+    width: 95%;
+    height: 34%;
+}
+.videoBox .vedioIn {
+    display: inline-block;
+    width: 23.5%;
+    height: 100%;
+
+}
+.mlRight {
+    margin-right: 1%;
+}
+.videoIn video {
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+}
+/* .tipBox {
+    position: absolute;
+    top: 37%;
+    left: 58%;
+    width: 29%;
+    height: 29%;
+    border: 1px solid rgba(14,252,255,0.48);
+    background: rgba(2,57,99,0.77);
+    color: #0EFCFF;
+    font-size: .65vw;
+}
+.tipBox div {
+    margin: .3vw;
+} */
+
+
+.centerBox .topData {
+    width: 100%;
+    height: 22%;
+    border: 1px solid #0EFCFF;
+}
+.topData .topContent {
+    width: 95%;
+    height: 50%;
+    margin-left: 2.5%;
+    border-bottom: 1px solid rgba(14,252,255,0.42);;
+
+}
+.topData .content, ul {
+    width: 95%;
+    height: 50%;
+    /* margin-left: 2%; */
+    /* border-bottom: 1px solid #0EFCFF; */
+    display: -webkit-flex;
+    -webkit-justify-content: space-around;
+    -webkit-align-items: center;
+    color: #fff;
+}
+.content li {
+    text-align: center;
+}
+.content ul P {
+    font-size: .7VW;
+    color: #0EFCFF;
+}
+.content ul .num {
+    color: #fff;
+    font-size: 1vw;
+}
+.content ul .unit {
+    color: #0EFCFF;
+    font-size: .6vw;
+}
+.bottomData {
+    width: 100%;
+    height: 75.5%;
+    margin-top: 3%;
+    /* background-color: green; */
+    background-image: url(../img/centerBg.jpg);
+    background-size: 100% 100%;
+}
+/* ========= 地图样式 stat========== */
+.map{
+    position: relative;
+    width: 100%;
+    height: 44%;
+    margin-top: 10%;
+    /* background: white; */
+}
+.map img {
+    width: 80%;
+    margin-left: 10%;
+}
+.mapActived1 {
+    position: absolute;
+    top: 40%;
+    left: 43.5%;
+    width: 1.5vw;
+    height: 3vw;
+    border-radius: 90px;
+    cursor: pointer;
+}
+.mapActived2 {
+    position: absolute;
+    top: 48%;
+    right: 23%;
+    width: 3vw;
+    height: 2vw;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.mapActived3 {
+    position: absolute;
+    top: 44%;
+    right: 13.5%;
+    width: 1.8vw;
+    height: 4vw;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.mapContent1 {
+    position: absolute;
+    height: 6vw;
+    width: 8vw;
+    left: 47%;
+    top: -5%;
+    background: rgba(255,255,255, .2);
+}
+.mapContent2 {
+    position: absolute;
+    height: 6vw;
+    width: 8vw;
+    left: 70%;
+    top: 5%;
+    background: rgba(255,255,255, .2);
+    display: none;
+}
+.mapContent3 {
+    position: absolute;
+    height: 6vw;
+    width: 8vw;
+    right: 15%;
+    top: 12%;
+    background: rgba(255,255,255, .2);
+    display: none;
+}
+.mapContentFont {
+    width: 85%;
+    margin-left: 12%;
+    font-size: .6vw;
+    color: #0efcff;
+    letter-spacing: .05vw;
+}
+.mapContentFont:nth-child(1) {
+    margin-top: .6vw;
+}
+.mapContentFont span {
+    color: white;
+}

@@ -1,0 +1,241 @@
+html,body{
+	height: 100%;
+	overflow: hidden;
+}
+body{
+	background: url(../images/loginBg.jpg);
+	background-size: 100% 100%;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 1000px transparent inset;
+        background-color: none;
+}
+.wp{
+	height: 100%;
+	/* background: url(../images/bgImg.png) no-repeat center 0;
+	background-size: auto 100%; */
+	position: relative;
+	z-index: 2;
+}
+#particles-js{
+	position: absolute;
+	top: 0;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0.5;
+}
+.boardLogin{
+	width: 16.8%;
+	min-width: 200px;
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.boardLogin .logo{
+	display: block;
+	margin-bottom: 40px;
+	text-align: center;
+}
+.boardLogin .logo img{
+	width: 100%;
+	max-width: 326px;
+}
+
+.boardLogin .inpGroup{
+	height: 20px;
+	padding: 14px 24px 14px 52px;
+	background: #2a658a;
+	background: rgba(255,255,255,0.1);
+	border-radius: 24px;
+	position: relative;
+}
+.boardLogin .inpGroup span{
+	display: block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 14px;
+	left: 24px;
+}
+.boardLogin .inpGroup span.loginIco1{
+	background: url(../images/s_ico6.png);
+}
+.boardLogin .inpGroup span.loginIco2{
+	background: url(../images/s_ico7.png);
+}
+.boardLogin .inpGroup input{
+	display: block;
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	color: #fff;
+}
+.boardLogin .inpGroup input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #fff; opacity:1; 
+}
+
+.boardLogin .inpGroup input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #fff;opacity:1;
+}
+
+.boardLogin .inpGroup input:-ms-input-placeholder{
+    color: #fff;opacity:1;
+}
+
+.boardLogin .inpGroup input::-webkit-input-placeholder{
+    color: #fff;opacity:1;
+}
+.boardLogin .prompt{
+	min-height: 20px;
+	padding: 5px 24px 10px 24px;
+}
+.boardLogin p{
+	line-height: 16px;
+	font-size: 12px;
+	display: none;
+	
+}
+.boardLogin p.error{
+	color: #f60;
+}
+.boardLogin p.success{
+	color: #449d44;
+}
+.boardLogin .submit{
+	width: 100%;
+	box-sizing: border-box;
+	display: block;
+	height: 40px;
+	line-height: 38px;
+	text-align: center;
+	border: 1px solid #01d1f2;
+	border-radius: 20px;
+	color: #fff;
+	cursor: pointer;
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-ms-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+}
+.boardLogin .submit:hover{
+	background: #01d1f2;
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-ms-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+}
+
+
+@media screen and (max-width: 1919px) and (min-width: 1680px){
+	.boardLogin .logo{
+		margin-bottom: 38px;
+	}
+	.boardLogin .inpGroup{
+		padding: 12px 22px 12px 50px;
+		border-radius: 22px;
+	}
+	.boardLogin .inpGroup span{
+		width: 20px;
+		height: 20px;
+		top: 12px;
+		left: 22px;
+	}
+	.boardLogin .prompt{
+		min-height: 20px;
+		padding: 5px 22px 10px 22px;
+	}
+	.boardLogin p{
+		line-height: 16px;
+		
+	}
+	.boardLogin .submit{
+		height: 38px;
+		line-height: 36px;
+		border-radius: 20px;
+	}
+}
+
+@media screen and (max-width: 1679px) and (min-width: 1440px){
+	.boardLogin .logo{
+		margin-bottom: 34px;
+	}
+	.boardLogin .inpGroup{
+		padding: 8px 18px 8px 48px;
+		border-radius: 18px;
+	}
+	.boardLogin .inpGroup span{
+		width: 18px;
+		height: 18px;
+		top: 8px;
+		left: 18px;
+	}
+	.boardLogin .inpGroup span.loginIco1{
+		background: url(../images/s_ico6.png);
+		background-size: 100% 100%;
+	}
+	.boardLogin .inpGroup span.loginIco2{
+		background: url(../images/s_ico7.png);
+		background-size: 100% 100%;
+	}
+	.boardLogin .prompt{
+		min-height: 20px;
+		padding: 5px 18px 10px 18px;
+	}
+	.boardLogin p{
+		line-height: 16px;
+		
+	}
+	.boardLogin .submit{
+		height: 36px;
+		line-height: 34px;
+		border-radius: 18px;
+	}
+}
+
+@media screen and (max-width: 1439px){
+	.boardLogin .logo{
+		margin-bottom: 30px;
+	}
+	.boardLogin .inpGroup{
+		padding: 6px 16px 6px 46px;
+		border-radius: 16px;
+	}
+	.boardLogin .inpGroup span{
+		width: 18px;
+		height: 18px;
+		top: 6px;
+		left: 16px;
+	}
+	.boardLogin .inpGroup span.loginIco1{
+		background: url(../images/s_ico6.png);
+		background-size: 100% 100%;
+	}
+	.boardLogin .inpGroup span.loginIco2{
+		background: url(../images/s_ico7.png);
+		background-size: 100% 100%;
+	}
+	.boardLogin .prompt{
+		min-height: 20px;
+		padding: 2px 16px 6px 16px;
+	}
+	.boardLogin p{
+		line-height: 16px;
+		
+	}
+	.boardLogin .submit{
+		height: 32px;
+		line-height: 30px;
+		border-radius: 16px;
+	}
+}

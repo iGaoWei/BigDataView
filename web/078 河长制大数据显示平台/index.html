@@ -1,0 +1,1332 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link href="css/BigData.css" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/index01.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.js"></script>
+    <link href="js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css" />
+    <link href="css/Security_operation.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="js/artDialog/skins/default.css" type="text/css"/>
+    <script src="js/laydate.js"></script>
+    <script src="js/Home_page.js"></script>
+    <meta charset="UTF-8">
+    <title>河长制监督系统</title>
+    <style>
+        .aui_title{background-color: #407fff !important;height: 32px;line-height: 32px;font-weight: 700;font-size: 14px}
+    </style>
+</head>
+<body >
+<div class="data_bodey">
+    <div class="index_nav" >
+        <ul style="height: 30px; margin-bottom: 0px;">
+            <!--<li class="l_left total_chose_fr" onclick="analysis()">实时监测</li>-->
+            <!--<li class="l_left total_chose_pl" onclick="department()">生产分析</li>-->
+            <!--<li class="l_left total_chose_pl">销售分析</li>-->
+            <!--<li class="r_right total_chose_pl">安全分析</li>-->
+            <!--<li class="r_right total_chose_pl">人员分析</li>-->
+            <!--<li class="r_right total_chose_pl">管理分析</li>-->
+        </ul>
+        <div class="total_chose_box" style="display: none;">
+            <div style="height: 32px;"></div>
+            <span class="chose_tltle">请选择年份：</span>
+            <select class="year_chose">
+                <option>2017</option>
+                <option>2016</option>
+                <option>2015</option>
+                <option>2014</option>
+                <option>2013</option>
+                <option>2012</option>
+            </select>
+            <span class="chose_tltle">请输入月份：</span>
+            <input class="chose_text_in">
+            <span class="chose_tltle">请选择区域：</span>
+            <select class="year_chose">
+                <option> 成都市</option>
+                <option>自贡市</option>
+                <option>攀枝花市</option>
+                <option>泸州市</option>
+                <option>德阳市</option>
+                <option>绵阳市</option>
+                <option>广元市</option>
+                <option>遂宁市</option>
+                <option>内江市</option>
+                <option>乐山市</option>
+                <option>南充市</option>
+                <option>宜宾市</option>
+                <option>广安市</option>
+                <option>达州市</option>
+                <option>巴中市</option>
+                <option>雅安市</option>
+                <option>眉山市</option>
+                <option>资阳市</option>
+                <option>阿坝州</option>
+                <option>甘孜州</option>
+                <option>凉山州</option>
+            </select>
+            <button class="chose_enter">确定</button>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="index_tabs" >
+        <!--安防运作-->
+        <div class="inner" style="height: 109%;">
+
+            <div class="left_cage">
+                <div class="dataAllBorder01 cage_cl" style="margin-top: 9% !important; height: 24%;">
+
+                    <img src="video/1.jpg" class="dataAllBorder02 video_cage">
+                </div>
+                <div class="dataAllBorder01 cage_cl" style="margin-top: 1.5% !important; height: 38%;">
+                    <div class="dataAllBorder02 video_cage">
+
+                          <img src="video/radi01.jpg" class="video_around video_around_chose" >
+                        <img src="video/radi01.jpg" class="video_around video_around_chose" >
+                        <img src="video/radi01.jpg" class="video_around video_around_chose" >
+                        <img src="video/radi01.jpg" class="video_around video_around_chose" >
+
+
+                    </div>
+                </div>
+                <div class="dataAllBorder01 cage_cl" style="margin-top: 1.5% !important; height: 32%; position: relative;">
+                    <div class="dataAllBorder02" style="padding: 1.2%; overflow: hidden">
+
+                        <div class="message_scroll_box">
+                            <div class="message_scroll">
+                            <div class="scroll_top">
+                                <span class="scroll_title">高锰酸盐超标警告</span>
+                                <span class="scroll_level scroll_level01">一级</span>
+                                <a class="localize"></a>
+                                <span class="scroll_timer">17-09-13/9:52</span>
+                            </div>
+                            <div class="msg_cage">
+                                <a class="localize_title"><span><label>编号</label>：GH32101</span><span class="right"><label>监测值</label>：1.1(mg/Ls)</span></a>
+                            </div>
+                            <div class="msg_cage">
+                                <a class="localize_msg">xx阳市沱江一段21号排污口处</a>
+                            </div>
+                        </div>
+                            <div class="message_scroll">
+                                <div class="scroll_top">
+                                    <span class="scroll_title">总磷超标警告</span>
+                                    <span class="scroll_level scroll_level03">三级</span>
+                                    <a class="localize"></a>
+                                    <span class="scroll_timer">17-09-13/9:52</span>
+                                </div>
+                                <div class="msg_cage">
+                                    <a class="localize_title"><span><label>编号</label>：GH32101</span><span class="right"><label>监测值</label>：1.1(mg/Ls)</span></a>
+                                </div>
+                                <div class="msg_cage">
+                                    <a class="localize_msg">xx阳市沱江一段21号排污口处</a>
+                                </div>
+                            </div>
+                            <div class="message_scroll">
+                                <div class="scroll_top">
+                                    <span class="scroll_title">高锰酸盐超标警告</span>
+                                    <span class="scroll_level scroll_level02">二级</span>
+                                    <a class="localize"></a>
+                                    <span class="scroll_timer">17-09-13/9:52</span>
+                                </div>
+                                <div class="msg_cage">
+                                    <a class="localize_title"><span><label>编号</label>：GH32101</span><span class="right"><label>监测值</label>：1.1(mg/Ls)</span></a>
+                                </div>
+                                <div class="msg_cage">
+                                    <a class="localize_msg">xx阳市沱江一段21号排污口处。</a>
+                                </div>
+                            </div>
+                            <div class="message_scroll">
+                                <div class="scroll_top">
+                                    <span class="scroll_title">高锰酸盐超标警告</span>
+                                    <span class="scroll_level scroll_level01">一级</span>
+                                    <a class="localize"></a>
+                                    <span class="scroll_timer">17-09-13/9:52</span>
+                                </div>
+                                <div class="msg_cage">
+                                    <a class="localize_title"><span><label>编号</label>：GH32101</span><span class="right"><label>监测值</label>：1.1(mg/Ls)</span></a>
+                                </div>
+                                <div class="msg_cage">
+                                    <a class="localize_msg">xx阳市沱江一段21号排污口处</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="scroll_tool_outbox">
+                        <div class="scroll_tool_box">
+                            <a class="scroll_tool" href="#">查看历史推送</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center_cage">
+                <div class="dataAllBorder01 cage_cl" style="margin-top: 3.5% !important; height: 62.7%; position: relative;">
+                    <div class="dataAllBorder02" style="position: relative; overflow: hidden;">
+                        <!--标题栏-->
+                        <div class="map_title_box" style="height: 6%">
+                            <div class="map_title_innerbox">
+                                <div class="map_title">XX实时监测地图</div>
+                            </div>
+                        </div>
+                        <!--//仓库-1，加油站-2，派出所-3，危化品企业-4，学校-5，医疗卫生-6，应急避难场所-7-->
+                        <div class="map" id="divMap"  ></div>
+                        <!--地图显示信息选择-->
+                        <div class="display_type_box display_box" style="display: none;overflow:auto">
+                            <div class="display_type_center_box">
+                                <ul class="display_type_inner_box" id="layerList">
+                                    <li class="display_type_msg"><input id="zt_4" type="checkbox" class="display_type_chose"/> XX监测</li>
+                                    <li class="display_type_msg"><input  id="zt_1" type="checkbox" class="display_type_chose"/>流量监测</li>
+                                    <li class="display_type_msg"><input  id="zt_5" type="checkbox" class="display_type_chose"/>水位监测</li>
+                                    <li class="display_type_msg"><input  id="zt_6" type="checkbox" class="display_type_chose"/>视频</li>
+                                    <li class="display_type_msg"><input  id="zt_2" type="checkbox" class="display_type_chose"/>车辆监测</li>
+
+                                    <!--<li class="display_type_msg">&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</li>-->
+
+                                </ul>
+                            </div>
+                            <div class="display_type_funct_box">
+                                <span class="display_type_funct display_type_funct_sure">确定</span>
+                            </div>
+                        </div>
+                        <!--城市选择-->
+                        <div class="city_chose_box display_box" style="display: none">
+                            <div class="display_type_center_box">
+                                <ul class="display_type_inner_box" id="ulCity">
+                                    <li class="display_type_msg"> 成都市</li>
+                                    <li class="display_type_msg">自贡市</li>
+                                    <li class="display_type_msg">攀枝花市</li>
+                                    <li class="display_type_msg">泸州市</li>
+                                    <li class="display_type_msg">德阳市</li>
+                                    <li class="display_type_msg">绵阳市</li>
+                                    <li class="display_type_msg">广元市</li>
+                                    <li class="display_type_msg">遂宁市</li>
+                                    <li class="display_type_msg">内江市</li>
+                                    <li class="display_type_msg">乐山市</li>
+                                    <li class="display_type_msg">南充市</li>
+                                    <li class="display_type_msg">宜宾市</li>
+                                    <li class="display_type_msg">广安市</li>
+                                    <li class="display_type_msg">达州市</li>
+                                    <li class="display_type_msg">巴中市</li>
+                                    <li class="display_type_msg">雅安市</li>
+                                    <li class="display_type_msg">眉山市</li>
+                                    <li class="display_type_msg">资阳市</li>
+                                    <li class="display_type_msg">阿坝州</li>
+                                    <li class="display_type_msg">甘孜州</li>
+                                    <li class="display_type_msg">凉山州</li>
+                                </ul>
+                            </div>
+                            <div class="display_type_funct_box">
+                                <span class="display_type_funct display_type_funct_sure">确定</span>
+                            </div>
+                        </div>
+                        <!--轨迹回放-->
+                        <div class="trajectory_box" style="display: none" id="divRouteReview">
+                            <input class="trajectory" id="start" placeholder="开始时间">
+                            <input class="trajectory" id="end"  placeholder="结束时间">
+                            <select class="ratio">
+                                <option>1倍</option>
+                                <option>2倍</option>
+                                <option>3倍</option>
+                            </select>
+                            <button class="playback" onClick="run()">回放</button>
+                            <button class="playback close_playback">关闭</button>
+                        </div>
+                        <!--缓冲区设置-->
+                        <div class="trajectory_box" style="display: none" id="divBufferSetting">
+                            <button class="playback" style="width:60px" onClick="setBufferCenter()">设置点</button>
+                            <input class="trajectory" id="txtBufferX" placeholder="坐标X">
+                            <input class="trajectory" id="txtBufferY" placeholder="坐标Y">
+                            <input value="10" class="trajectory" id="txtBufferDis" placeholder="缓冲距离">
+                            <select class="ratio">
+                                <option>米</option>
+                                <option>千米</option>
+                            </select>
+                            <button class="playback"  onclick="executeBuffer();edit()" style="width:60px">分析</button>
+                            <button class="playback close_playback">关闭</button>
+                        </div>
+                        <!--矢量地图，云图切换-->
+                        <!--<ul class="map_change_box">-->
+                            <!--<li class="map_change map_change_chose VM_map" title="矢量地图" onclick="showLayer('vector')"></li>-->
+                            <!--<li class="map_change SCI_map" title="卫星云图" onclick="showLayer('image')" style="display: none;"></li>-->
+                        <!--</ul>-->
+                        <!--地图工具栏-->
+                        <div class="map_tool_outbox">
+                            <span class="map_tool" onClick="zoomFull()">
+                                    <a class="map_tool_inner" title="全图" ></a>
+                            </span>
+                            <span class="map_tool" onClick="zoomOut()">
+                                    <a class="map_tool_inner" title="放大" style="background-position-x:-36px"></a>
+                                </span>
+                            <span class="map_tool" onClick="zoomIn()">
+                                    <a class="map_tool_inner" title="缩小" style="background-position-x:-72px"></a>
+                                </span>
+                            <span class="map_tool" onClick="showHeatMap()">
+                                    <a class="map_tool_inner" title="倒退视图" style="background-position-x:-108px"></a>
+                                </span>
+                            <span class="map_tool">
+                                    <a class="map_tool_inner" title="前进视图" style="background-position-x:-144px"></a>
+                                </span>
+                            <span class="map_tool">
+                                    <a class="map_tool_inner display_type_btn" title="专题地图" style="background-position-x:-180px"></a>
+                                </span>
+                            <span class="map_tool">
+                                    <a class="map_tool_inner city_chose_btn" title="城市定位" style="background-position-x:-432px"></a>
+                                </span>
+                            <span class="map_tool" id="btnBuffer">
+                                    <a class="map_tool_inner" title="缓冲区分析" style="background-position-x:-216px"></a>
+                                </span>
+                            <span class="map_tool">
+                                    <a class="map_tool_inner addition_check_btn check_btn" title="水质监测设备检索" style="background-position-x:-252px"></a>
+                                </span>
+                            <span class="map_tool">
+                                    <a class="map_tool_inner chemistry_check_btn check_btn" onClick="chemistryCheck()" title="流量监测设备检索" style="background-position-x:-288px"></a>
+                                </span>
+                            <span class="map_tool">
+                                    <a class="map_tool_inner enterprise_check_btn check_btn" onClick="enterpriseCheck()"  title="水位监测设备检索" style="background-position-x:-324px"></a>
+                                </span>
+                            <span class="map_tool">
+                                    <a class="map_tool_inner car_check_btn check_btn" onClick="carCheck()" title="车辆监测设备检索"  style="background-position-x:-360px"></a>
+                                </span>
+                            <span class="map_tool">
+                                    <a class="map_tool_inner" onClick="Search()" title="视频设备检索" style="background-position-x:-468px"></a>
+                                </span>
+                            <span class="map_tool">
+                                    <a class="map_tool_inner" onClick="cancel()" id="fresh_tool" title="清空" style="background-position-x:-396px"></a>
+                                </span>
+                            <span class="map_tool">
+                               <input type="text" id="txtCoord" style="width:150px;visibility:hidden" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dataAllBorder01 cage_cl" style="margin-top: 0.6% !important; height: 32.1%;">
+                    <div class="dataAllBorder02" id="map_title_innerbox">
+                        <div class="map_title_box">
+                            <div class="map_title_innerbox">
+                                <div class="map_titl">空间分析数据</div>
+                            </div>
+                            <div >
+                                <select id="selLayer" style="width:100px;">
+                                    <option value="">水质点位</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <table id="table" style="width: 100%"></table>
+                    </div>
+
+                    <div class="dataAllBorder02" id="map_title_innerbox1" style="display: none; position: relative;">
+                        <div class="map_title_box">
+                            <div class="map_title_innerbox">
+                                <div class="map_title" style="background-image: url(img/second_title.png);">警告周边污染条件扫描</div>
+                            </div>
+                        </div>
+                        <ul class="tab_msg_box">
+                           <li class="tab_msg tab_msg01 tab_msg_current">附近污染源</li>
+                            <li class="tab_msg tab_msg02">临近商户</li>
+                        </ul>
+                        <div class="table1">
+                        <table id="table1" style="width: 100%"></table>
+                        </div>
+                        <div class="table2" style=" display: none;">
+                        <table id="table2" style="width: 100%;"></table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="right_cage">
+                <!--顶部切换位置-->
+                <div class="dataAllBorder01 cage_cl" style="margin-top: 9% !important; height: 24%">
+                    <div class="dataAllBorder02" id="cage_cl" >
+                        <div class="analysis">监测设备数量：</div>
+                        <ul  class="data_show_box">
+                            <li class="data_cage">0</li>
+                            <li class="data_cage">0</li>
+                            <li class="data_cage" style="background-image: none;">,</li>
+                            <li class="data_cage funct_number">1</li>
+                            <li class="data_cage funct_number">5</li>
+                            <li class="data_cage funct_number">2</li>
+                        </ul>
+                        <div class="depart_number_box">
+                            <ul class="depart_number_cage">
+                                <li class="depart_name">水质监测类：</li>
+                                <li class="depart_number">3,238</li>
+                            </ul>
+                            <ul class="depart_number_cage">
+                                <li class="depart_name">流量监测类：</li>
+                                <li class="depart_number">1,630</li>
+                            </ul>
+                            <ul class="depart_number_cage" style="margin-bottom: 0px;">
+                                <li class="depart_name">水位测量类：</li>
+                                <li class="depart_number">4,251</li>
+                            </ul>
+                            <ul class="depart_number_cage" style="margin-bottom: 0px;">
+                                <li class="depart_name">车辆监测类：</li>
+                                <li class="depart_number">24</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dataAllBorder02 over_hide" id="cage_cl1" style="display: none" >
+                        <div class="analysis">点位基础信息：</div>
+                        <ul class="location_msg_box">
+                            <li class="location_msg01 location_single">事件级别：<a href="#" style="color: #dc0000;">一级</a></li>
+                            <li class="location_msg02 location_single">事件级别：水质高猛酸盐超标</a></li>
+                            <li class="location_msg02 location_double">监测时间：<a href="#" style="color: #cdd6db;">2017-09-10<br>11:40</a></li>
+                            <li class="location_msg01 location_double">地址：沱江xx段31号</a></li>
+                            <!--<li class="location_msg01 location_single" style="width: 100%; height: 40%">案件关联：“131”抢劫、2014-05-13火灾、2013-12-08毒气   泄漏。</a></li>li-->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="dataAllBorder01 cage_cl check_increase" style=" margin-top: 1.5% !important;">
+                    <!--切换01-->
+                    <div class="dataAllBorder02 over_hide dataAllBorder20" id="over_hide">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th style="width: 18%">点位名称</th>
+                                <th>高锰酸盐</th>
+                                <th>总磷</th>
+                                <th>氨氮</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>点位监测一</td>
+                                <td>1.1m/L</td>
+                                <td>0.3m/L</td>
+                                <td>1.3m/L</td>
+                            </tr>
+                            <tr>
+                                <td>点位监测一</td>
+                                <td>1.1m/L</td>
+                                <td>0.3m/L</td>
+                                <td>1.3m/L</td>
+                            </tr>
+                            <tr>
+                                <td>点位监测一</td>
+                                <td>1.1m/L</td>
+                                <td>0.3m/L</td>
+                                <td>1.3m/L</td>
+                            </tr>
+                            <tr>
+                                <td>点位监测一</td>
+                                <td>1.1m/L</td>
+                                <td>0.3m/L</td>
+                                <td>1.3m/L</td>
+                            </tr>
+                            <tr>
+                                <td>点位监测一</td>
+                                <td>1.1m/L</td>
+                                <td>0.3m/L</td>
+                                <td>1.3m/L</td>
+                            </tr>
+                            <tr>
+                                <td>点位监测一</td>
+                                <td>1.1m/L</td>
+                                <td>0.3m/L</td>
+                                <td>1.3m/L</td>
+                            </tr>
+                            <tr>
+                                <td>点位监测一</td>
+                                <td>1.1m/L</td>
+                                <td>0.3m/L</td>
+                                <td>1.3m/L</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th style="width: 18%">类目</th>
+                                <th>归属</th>
+                                <th>程度</th>
+                                <th>范围(r=?)</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>保安</td>
+                                <td>地点分配</td>
+                                <td>综合治理</td>
+                                <td>全城</td>
+                            </tr>
+                            <tr>
+                                <td>流动人口</td>
+                                <td>危化品...</td>
+                                <td>潜伏性威胁</td>
+                                <td>车站</td>
+                            </tr>
+                            <tr>
+                                <td>典当</td>
+                                <td>居民盗窃</td>
+                                <td>财产维护</td>
+                                <td>-</td>
+                            </tr>
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--切换02-->
+                    <div class="dataAllBorder02 over_hide dataAllBorder20" id="over_hide1"  style="display: none">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th style="width: 18%">类目</th>
+                                <th>危险级别</th>
+                                <th>储量</th>
+                                <th>范围(r=?)</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>过氧化钾</td>
+                                <td>三级</td>
+                                <td>5t</td>
+                                <td>200m-5km</td>
+                            </tr>
+                            <tr>
+                                <td>高锰酸钾</td>
+                                <td>三级...</td>
+                                <td>3t</td>
+                                <td>4km-80km</td>
+                            </tr>
+                            <tr>
+                                <td>硫化氢</td>
+                                <td>一级</td>
+                                <td>20t</td>
+                                <td>400m-2km</td>
+                            </tr>
+                            <tr>
+                                <td>浓硫酸</td>
+                                <td>一级</td>
+                                <td>10t</td>
+                                <td>1km</td>
+                            </tr>
+                            <tr>
+                                <td>王水</td>
+                                <td>一级</td>
+                                <td>4t</td>
+                                <td>2km</td>
+                            </tr>
+                            <tr>
+                                <td>石油原油</td>
+                                <td>一级</td>
+                                <td>3t</td>
+                                <td>500m-2km</td>
+                            </tr>
+                            <tr>
+                                <td>天然气</td>
+                                <td>一级</td>
+                                <td>10M2</td>
+                                <td>500m-10km</td>
+                            </tr>
+                            <tr>
+                                <td>三硝基甲苯</td>
+                                <td>一级</td>
+                                <td>5t</td>
+                                <td>200m-5km</td>
+                            </tr>
+                            <tr>
+                                <td>醛类催化品</td>
+                                <td>一级</td>
+                                <td>6t</td>
+                                <td>4km-80km</td>
+                            </tr>
+                            <tr>
+                                <td>煤炭</td>
+                                <td>一级</td>
+                                <td>11t</td>
+                                <td>400m-2km</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--水质检测设备切换03-->
+                    <div class="dataAllBorder02 addition_check_in" style="display: none;position: relative" >
+                        <div class="analysis" style="height: 34px;%">水质监测设备检索：</div>
+                        <div class="search_plate_box">
+                            <ul class="search_separate">
+                                <li class="search_title">设备类型：</li>
+                                <select class="search_input_box search_chose_box">
+                                    <option>全部</option>
+
+                                </select>
+                            </ul>
+                            <ul class="search_separate">
+                                <li class="search_title">点位名称：</li>
+                                <li class="search_input_box"><input class="search_input" type="text"></li>
+                            </ul>
+                            <button class="search_btn">开始检索</button>
+                        </div>
+                        <!--检索结果板块-->
+                        <div class="search_sesult_box">
+                            <ul  class="search_result">
+                                <li class="search_result_add danger_result">XZ-0168 68水质检测仪</li>
+                                <li class="danger_level level03">在线自动</li>
+                                <li class="search_location" title="定位"></li>
+                                <li class="search_eddit" title="生命周期" onClick="showLife()"></li>
+                                <li class="search_result_car car_personal">VDSA52336</li>
+                                <li class="search_result_car car_time">上海海恒机电仪表有限公司</li>
+                            </ul>
+                            <ul  class="search_result">
+                                <li class="search_result_add danger_result">XZ-0168 68水质检测仪</li>
+                                <li class="danger_level level03">在线自动</li>
+                                <li class="search_location" title="定位"></li>
+                                <li class="search_eddit" title="生命周期" onClick="showLife()"></li>
+                                <li class="search_result_car car_personal">VDSA52336</li>
+                                <li class="search_result_car car_time">上海海恒机电仪表有限公司</li>
+                            </ul>
+                            <ul  class="search_result">
+                                <li class="search_result_add danger_result">XZ-0168 68水质检测仪</li>
+                                <li class="danger_level level03">在线自动</li>
+                                <li class="search_location" title="定位"></li>
+                                <li class="search_eddit" title="生命周期" onClick="showLife()"></li>
+                                <li class="search_result_car car_personal">VDSA52336</li>
+                                <li class="search_result_car car_time">上海海恒机电仪表有限公司</li>
+                            </ul>
+                            <ul  class="search_result">
+                                <li class="search_result_add danger_result">XZ-0168 68水质检测仪</li>
+                                <li class="danger_level level03">在线自动</li>
+                                <li class="search_location" title="定位"></li>
+                                <li class="search_eddit" title="生命周期" onClick="showLife()"></li>
+                                <li class="search_result_car car_personal">VDSA52336</li>
+                                <li class="search_result_car car_time">上海海恒机电仪表有限公司</li>
+                            </ul>
+                            <ul  class="search_result">
+                                <li class="search_result_add danger_result">XZ-0168 68水质检测仪</li>
+                                <li class="danger_level level03">在线自动</li>
+                                <li class="search_location" title="定位"></li>
+                                <li class="search_eddit" title="生命周期" onClick="showLife()"></li>
+                                <li class="search_result_car car_personal">VDSA52336</li>
+                                <li class="search_result_car car_time">上海海恒机电仪表有限公司</li>
+                            </ul>
+                            <ul  class="search_result">
+                                <li class="search_result_add danger_result">XZ-0168 68水质检测仪</li>
+                                <li class="danger_level level03">在线自动</li>
+                                <li class="search_location" title="定位"></li>
+                                <li class="search_eddit" title="生命周期" onClick="showLife()"></li>
+                                <li class="search_result_car car_personal">VDSA52336</li>
+                                <li class="search_result_car car_time">上海海恒机电仪表有限公司</li>
+                            </ul>
+                        </div>
+                        <!--翻页模块-->
+                        <div class="tcdPageCode"></div>
+                    </div>
+                    <!--流量监测04-->
+                    <div class="dataAllBorder02 chemistry_check_in" id="chemistry_check_in" style="display: none;position: relative" >
+                        <div class="analysis" style="height: 34px;">流量监测设备检索：</div>
+                        <div class="search_plate_box">
+                            <ul class="search_separate">
+                                <li class="search_title">设备类型：</li>
+                                <select class="search_input_box search_chose_box">
+                                    <option>全部</option>
+
+                                </select>
+                            </ul>
+                            <ul class="search_separate">
+                                <li class="search_title">输入点位：</li>
+                                <li class="search_input_box"><input class="search_input" type="text"></li>
+                            </ul>
+                            <button class="search_btn">开始检索</button>
+                        </div>
+                        <!--检索结果板块-->
+                        <div class="search_sesult_box">
+                            <ul  class="search_result">
+                                <li class="search_result_add danger_result">LDG-MK卫生型电磁流量计</li>
+                                <li class="danger_level level03">电磁流量计</li>
+                                <li class="search_location" title="定位"></li>
+                                <li class="search_eddit" title="生命周期" onClick="showLife()"></li>
+                                <li class="search_result_car car_personal">VDSA52336</li>
+                                <li class="search_result_car car_time">浙江米科电子设备厂</li>
+                            </ul>
+                            <ul  class="search_result">
+                                <li class="search_result_add danger_result">LDG-MK卫生型电磁流量计</li>
+                                <li class="danger_level level03">电磁流量计</li>
+                                <li class="search_location" title="定位"></li>
+                                <li class="search_eddit" title="生命周期" onClick="showLife()"></li>
+                                <li class="search_result_car car_personal">VDSA52336</li>
+                                <li class="search_result_car car_time">浙江米科电子设备厂</li>
+                            </ul>
+                            <ul  class="search_result">
+                                <li class="search_result_add danger_result">LDG-MK卫生型电磁流量计</li>
+                                <li class="danger_level level03">电磁流量计</li>
+                                <li class="search_location" title="定位"></li>
+                                <li class="search_eddit" title="生命周期" onClick="showLife()"></li>
+                                <li class="search_result_car car_personal">VDSA52336</li>
+                                <li class="search_result_car car_time">浙江米科电子设备厂</li>
+                            </ul>
+                            <ul  class="search_result">
+                                <li class="search_result_add danger_result">LDG-MK卫生型电磁流量计</li>
+                                <li class="danger_level level03">电磁流量计</li>
+                                <li class="search_location" title="定位"></li>
+                                <li class="search_eddit" title="生命周期" onClick="showLife()"></li>
+                                <li class="search_result_car car_personal">VDSA52336</li>
+                                <li class="search_result_car car_time">浙江米科电子设备厂</li>
+                            </ul>
+                            <ul  class="search_result">
+                                <li class="search_result_add danger_result">LDG-MK卫生型电磁流量计</li>
+                                <li class="danger_level level03">电磁流量计</li>
+                                <li class="search_location" title="定位"></li>
+                                <li class="search_eddit" title="生命周期" onClick="showLife()"></li>
+                                <li class="search_result_car car_personal">VDSA52336</li>
+                                <li class="search_result_car car_time">浙江米科电子设备厂</li>
+                            </ul>
+                            <ul  class="search_result">
+                                <li class="search_result_add danger_result">LDG-MK卫生型电磁流量计</li>
+                                <li class="danger_level level03">电磁流量计</li>
+                                <li class="search_location" title="定位"></li>
+                                <li class="search_eddit" title="生命周期" onClick="showLife()"></li>
+                                <li class="search_result_car car_personal">VDSA52336</li>
+                                <li class="search_result_car car_time">浙江米科电子设备厂</li>
+                            </ul>
+                        </div>
+                        <!--翻页模块-->
+                        <div class="chemistry_tcdPageCode"></div>
+                    </div>
+                    <!--企业检索切换05-->
+                    <div class="dataAllBorder02 enterprise_check_in" id="enterprise_check_in" style="display: none;position: relative" >
+                        <div class="analysis" style="height: 34px;">水位监测设备检索：</div>
+                        <div class="search_plate_box">
+                            <ul class="search_separate">
+                                <li class="search_title">设备类型：</li>
+                                <select class="search_input_box search_chose_box">
+                                    <option>全部</option>
+
+                                </select>
+                            </ul>
+                            <ul class="search_separate">
+                                <li class="search_title">点位名称：</li>
+                                <li class="search_input_box"><input class="search_input" type="text"></li>
+                            </ul>
+
+                            <button class="search_btn">开始检索</button>
+                        </div>
+                        <!--检索结果板块-->
+                        <div class="search_sesult_box">
+                            <ul  class="search_result">
+                                <li class="search_result_add danger_result">PK150防雷水位监测</li>
+                                <li class="danger_level level03">无线</li>
+                                <li class="search_location" title="定位"></li>
+                                <li class="search_eddit" title="生命周期" onClick="showLife()"></li>
+                                <li class="search_result_car car_personal">VDSA52336</li>
+                                <li class="search_result_car car_time">优科自动设备有限公司</li>
+                            </ul>
+                            <ul  class="search_result">
+                                <li class="search_result_add danger_result">PK150防雷水位监测</li>
+                                <li class="danger_level level03">无线</li>
+                                <li class="search_location" title="定位"></li>
+                                <li class="search_eddit" title="生命周期" onClick="showLife()"></li>
+                                <li class="search_result_car car_personal">VDSA52336</li>
+                                <li class="search_result_car car_time">优科自动设备有限公司</li>
+                            </ul>
+                            <ul  class="search_result">
+                                <li class="search_result_add danger_result">PK150防雷水位监测</li>
+                                <li class="danger_level level03">无线</li>
+                                <li class="search_location" title="定位"></li>
+                                <li class="search_eddit" title="生命周期" onClick="showLife()"></li>
+                                <li class="search_result_car car_personal">VDSA52336</li>
+                                <li class="search_result_car car_time">优科自动设备有限公司</li>
+                            </ul>
+                            <ul  class="search_result">
+                                <li class="search_result_add danger_result">PK150防雷水位监测</li>
+                                <li class="danger_level level03">无线</li>
+                                <li class="search_location" title="定位"></li>
+                                <li class="search_eddit" title="生命周期" onClick="showLife()"></li>
+                                <li class="search_result_car car_personal">VDSA52336</li>
+                                <li class="search_result_car car_time">优科自动设备有限公司</li>
+                            </ul>
+                            <ul  class="search_result">
+                                <li class="search_result_add danger_result">PK150防雷水位监测</li>
+                                <li class="danger_level level03">无线</li>
+                                <li class="search_location" title="定位"></li>
+                                <li class="search_eddit" title="生命周期" onClick="showLife()"></li>
+                                <li class="search_result_car car_personal">VDSA52336</li>
+                                <li class="search_result_car car_time">优科自动设备有限公司</li>
+                            </ul>
+                            <ul  class="search_result">
+                                <li class="search_result_add danger_result">PK150防雷水位监测</li>
+                                <li class="danger_level level03">无线</li>
+                                <li class="search_location" title="定位"></li>
+                                <li class="search_eddit" title="生命周期" onClick="showLife()"></li>
+                                <li class="search_result_car car_personal">VDSA52336</li>
+                                <li class="search_result_car car_time">优科自动设备有限公司</li>
+                            </ul>
+                        </div>
+                        <!--翻页模块-->
+                        <div class="enterprise_tcdPageCode"></div>
+                    </div>
+                    <!--车辆检索切换06-->
+                    <div class="dataAllBorder02" id="car_check_in" style="display: none;position: relative" >
+                        <div class="analysis" style="height: 34px;">车辆检索：</div>
+                        <div class="search_plate_box">
+                            <ul class="search_separate">
+                                <li class="search_title">车牌号码：</li>
+                                <li class="search_input_box"><input class="search_input" type="text"></li>
+                            </ul>
+                            <ul class="search_separate">
+                                <li class="search_title">车主姓名：</li>
+                                <li class="search_input_box"><input class="search_input" type="text"></li>
+                            </ul>
+                            <button class="search_btn">检索</button>
+                        </div>
+                        <!--检索结果板块-->
+                        <div class="search_sesult_box">
+                            <ul  class="search_result">
+                                <li class="search_result_add">川A·K5H12（陈浩）</li>
+                                <li class="search_location" title="定位" ></li>
+                                <li class="search_guiji"  title="轨迹回放"></li>
+                                <li class="search_result_car car_personal">福特（福克斯两厢）</li>
+                                <li class="search_result_car car_time">乘用车（5座)</li>
+                            </ul>
+                            <ul  class="search_result">
+                                <li class="search_result_add">川A·14AG2（张正涛）</li>
+                                <li class="search_location" title="定位" ></li>
+                                <li class="search_guiji" title="轨迹回放"></li>
+                                <li class="search_result_car car_personal">福特（金牛座）</li>
+                                <li class="search_result_car car_time">乘用车（5座)</li>
+                            </ul>
+                            <ul  class="search_result">
+                                <li class="search_result_add">川B·2563K（李雪）</li>
+                                <li class="search_location" title="定位" ></li>
+                                <li class="search_guiji" title="轨迹回放"></li>
+                                <li class="search_result_car car_personal">上海大众（迈腾）</li>
+                                <li class="search_result_car car_time">乘用车（5座)</li>
+                            </ul>
+                            <ul  class="search_result">
+                                <li class="search_result_add">川A·SH273（刘红）</li>
+                                <li class="search_location" title="定位" ></li>
+                                <li class="search_guiji" title="轨迹回放"></li>
+                                <li class="search_result_car car_personal">菲亚特（菲翔）</li>
+                                <li class="search_result_car car_time">乘用车（5座)</li>
+                            </ul>
+                            <ul  class="search_result">
+                                <li class="search_result_add">川A·K5H12（陈浩）</li>
+                                <li class="search_location" title="定位" ></li>
+                                <li class="search_guiji" title="轨迹回放"></li>
+                                <li class="search_result_car car_personal">奔驰（C200）</li>
+                                <li class="search_result_car car_time">乘用车（5座)</li>
+                            </ul>
+                            <ul  class="search_result">
+                                <li class="search_result_add">川A·K5H12（张起国）</li>
+                                <li class="search_location" title="定位"></li>
+                                <li class="search_guiji" title="轨迹回放"></li>
+                                <li class="search_result_car car_personal">东风商用车（天龙）</li>
+                                <li class="search_result_car car_time">载货卡车（100t)</li>
+                            </ul>
+                        </div>
+                        <!--翻页模块-->
+                        <div class="car_tcdPageCode"></div>
+                    </div>
+                </div>
+
+                <div class="dataAllBorder01 cage_cl check_decrease" style="margin-top: 1.5% !important; height: 32%; position: relative;">
+                    <div class="dataAllBorder02 over_hide" style="padding: 1.2%;">
+                        <div class="analysis">2018年xx市水质分类占比：</div>
+                        <div class="danger_contain_box">
+                            <div id="container_huan" style="height: 90%;width: 100%"></div>
+                        </div>
+                        <div class="danger_depart_box">
+
+                            <ul class="danger_depart">
+                                <li class="danger_ico" style="background-image: url(img/images/pic_ico_01.png); background-position-x: 0px"></li>
+                                <li class="data_name">一类水质</li>
+                                <li class="data data01">652</li>
+                                <li class="data data02">↑&nbsp&nbsp1.2%</li>
+                            </ul>
+                            <ul class="danger_depart">
+                                <li class="danger_ico" style="background-image: url(img/images/pic_ico_02.png); background-position-x: 0px"></li>
+                                <li class="data_name">二类水质</li>
+                                <li class="data data01">97</li>
+                                <li class="data data02" style="color: #ff2865;">↓&nbsp&nbsp0.3%</li>
+                            </ul>
+                            <ul class="danger_depart danger_depart01">
+                                <li class="danger_ico" style="background-image: url(img/images/pic_ico_03.png); background-position-x: 0px"></li>
+                                <li class="data_name">三类水质</li>
+                                <li class="data data01">423</li>
+                                <li class="data data02">↑&nbsp&nbsp1%</li>
+                            </ul>
+                            <ul class="danger_depart danger_depart01">
+                                <li class="danger_ico" style="background-image: url(img/images/pic_ico_01.png); background-position-x: 0px"></li>
+                                <li class="data_name">四类水质</li>
+                                <li class="data data01">218</li>
+                                <li class="data data02">↑&nbsp&nbsp0.3%</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+</div>
+
+<script src="js/echarts-all.js"></script>
+<script src="js/index.js"></script>
+<script src="js/bstable/js/bootstrap.min.js"></script>
+<script src="js/bstable/js/bootstrap-table.js"></script>
+<script type="text/javascript" src="js/jquery.pagination.js"></script>
+<script src="js/bstable/js/bootstrap-table-zh-CN.min.js"></script>
+<script src="js/Home_page.js"></script>
+<script src="js/artDialog/artDialog.js"></script>
+<script src="js/artDialog/plugins/iframeTools.source.js"></script>
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=5ieMMexWmzB9jivTq6oCRX9j&callback"></script>
+<script src="js/mapNew.js"></script>
+
+<script>
+   var number;
+   $(function() {
+       if (window.screen.height <= 768) {
+           number = 4;
+       } else if (window.screen.height > 768 && window.screen.height <= 900) {
+           number = 6
+       } else if (window.screen.height > 1080) {
+           number = 8
+       }
+   });
+
+   function people(){
+       art.dialog.open('people_page.html',
+               {title: '详情信息', width: '60%', height: '60%',shade: 0.5,mask:true});
+   }
+   function Search(){
+       art.dialog.open('search_page.html',
+               {title: '查询表格页', width: '60%', height: '60%',shade: 0.5,mask:true});
+   }
+   function Search1(){
+       art.dialog.open('history_page.html',
+               {title: '历史记录', width: '60%', height: '60%',shade: 0.5,mask:true});
+   }
+   function analysis(){
+       art.dialog.open('analysis.html',
+               {title: '统计分析页', width: '900px', height: '60%',shade: 0.5,mask:true});
+   }
+
+   function department(){
+       art.dialog.open('department.html',
+               {title: '统计分析页', width: '60%', height: '60%',shade: 0.5,mask:true});
+   }
+   function showCompanyDetai() {
+       window.open('http://123.146.170.78:8888/conmpanyTail.html');
+   }
+   function showWHPDetai() {
+       window.open('http://123.146.170.78:8888/goodsTail.html');
+   }
+   function showCarDetai() {
+       window.open('http://123.146.170.78:8888/carTail.html');
+   }
+
+//    翻页模块
+   $(".tcdPageCode").createPage({
+       pageCount:5,
+       current:1,
+       backFn:function(p){}
+   });
+   $(".chemistry_tcdPageCode").createPage({
+   pageCount:4,
+   current:1,
+   backFn:function(p){}
+});
+   $(".enterprise_tcdPageCode").createPage({
+   pageCount:4,
+   current:1,
+   backFn:function(p){}
+});
+   $(".car_tcdPageCode").createPage({
+   pageCount:4,
+   current:1,
+   backFn:function(p){}
+});
+
+   $(function () {
+       $(".tit02Diva a").each(function (index) {
+           $(this).on("click",function () {
+               $(".data_map").eq(index).fadeIn().siblings(".data_map").stop().hide();
+               $(this).prev('i').removeClass('i_crlieAction');
+               $(this).siblings('a').prev('i').addClass('i_crlieAction');
+
+           })
+       });
+       BootstrapTable();
+       Echarts();
+       $("#fresh_tool").click(function(event){
+           event.stopPropagation();
+           cancel();
+       })
+
+   });
+   function EventClick(){
+       $(".check_increase").removeClass("check_increase_act");
+       $("#over_hide1").show().siblings().hide();
+       $(".check_decrease").show();
+       $("#cage_cl").hide();
+       $("#map_title_innerbox").hide();
+       $("#cage_cl1").show();
+//        $("#over_hide").show();
+       $("#map_title_innerbox1").show();
+       $(".addition_check_in").hide();
+       $("#car_check_in").hide();
+       BootstrapTable();
+   }
+   function cancel(e){
+       $(".check_increase").removeClass("check_increase_act");
+       $("#over_hide").show().siblings().hide();
+       $(".check_decrease").show();
+       $("#cage_cl").show();
+       $("#cage_cl1").hide();
+//        $("#cage_cl").show();
+//        $("#over_hide1").show();
+//        $("#map_title_innerbox").show();
+       BootstrapTable();
+   }
+
+   //    地址检索
+   $(".addition_check_btn").click(function () {
+       $(".check_increase").addClass("check_increase_act");
+       $(".check_decrease").hide()
+       $(".addition_check_in").show().siblings().hide()
+   });
+
+//    危化品检索
+   function chemistryCheck() {
+       $(".check_increase").addClass("check_increase_act");
+       $(".check_decrease").hide()
+       $("#chemistry_check_in").show().siblings().hide()
+   }
+
+   //    企业检索
+   function enterpriseCheck() {
+       $(".check_increase").addClass("check_increase_act");
+       $(".check_decrease").hide()
+       $("#enterprise_check_in").show().siblings().hide()
+   }
+
+   //    车辆检索
+   function carCheck() {
+       $(".check_increase").addClass("check_increase_act");
+       $(".check_decrease").hide()
+       $("#car_check_in").show().siblings().hide()
+   }
+
+   function BootstrapTable() {
+       $('#table').bootstrapTable({
+           method: "get",
+           striped: true,
+           singleSelect: false,
+           url: "json/DGCar.json",
+           dataType: "json",
+           pagination: true, //分页
+           pageSize: number,
+           pageNumber: 1,
+           search: false, //显示搜索框
+           contentType: "application/x-www-form-urlencoded",
+           queryParams: null,
+           columns: [
+//                {
+//                    title: "车辆编号",
+//                    field: 'id',
+//                    width:80,
+//                    align: 'center',
+//                    valign: 'middle'
+//                },
+               {
+                   title: '点位编号',
+                   field: 'carno',
+                   width:80,
+                   align: 'center',
+                   valign: 'middle'
+               },
+//                {
+//                    title: '所属区域',
+//                    field: 'company',
+//                    align: 'center',
+//                    valign: 'middle'
+//                },
+
+               {
+                   title: '位置',
+                   field: 'content',
+                   align: 'center'
+               },
+
+               {
+                   title: '实时数据',
+                   field: 'speed',
+                   width:80,
+                   align: 'center'
+               },
+
+               {
+                   title: '操作',
+                   field: 'load',
+                   align: 'center',
+                   formatter: function (value, row) {
+                       var e = '<a  href="javascript:void(0)" title="" onclick="Search1()">历史记录</a> ';
+                       var d = '<a  href="javascript:void(0)" title="" onclick="addLocal(\'' + row.id + '\')">定位</a> ';
+                       return e + d;
+                   }
+               }
+
+           ]
+       });
+       $('#table1').bootstrapTable({
+           method: "get",
+           striped: true,
+           singleSelect: false,
+           url: "json/note1.json",
+           dataType: "json",
+           pagination: true, //分页
+           pageSize: number,
+           pageNumber: 1,
+           search: false, //显示搜索框
+           contentType: "application/x-www-form-urlencoded",
+           queryParams: null,
+           columns: [
+               {
+                   title: "污染源",
+                   field: 'id',
+                   align: 'center',
+                   valign: 'middle'
+               },
+               {
+                   title: '辐射距离',
+                   field: 'title',
+                   align: 'center',
+                   valign: 'middle'
+               },
+               {
+                   title: '污染范围',
+                   field: 'type',
+                   align: 'center',
+                   valign: 'middle'
+               },
+
+               {
+                   title: '污染类型',
+                   field: 'person',
+                   align: 'center'
+               }
+
+           ]
+       });
+       $('#table2').bootstrapTable({
+           method: "get",
+           striped: true,
+           singleSelect: false,
+           url: "json/note2.json",
+           dataType: "json",
+           pagination: true, //分页
+           pageSize: number,
+           pageNumber: 1,
+           search: false, //显示搜索框
+           contentType: "application/x-www-form-urlencoded",
+           queryParams: null,
+           columns: [
+               {
+                   title: "污染源",
+                   field: 'id',
+                   align: 'center',
+                   valign: 'middle'
+               },
+               {
+                   title: '辐射距离',
+                   field: 'title',
+                   align: 'center',
+                   valign: 'middle'
+               },
+               {
+                   title: '污染范围',
+                   field: 'type',
+                   align: 'center',
+                   valign: 'middle'
+               },
+
+               {
+                   title: '污染类型',
+                   field: 'person',
+                   align: 'center'
+               }
+
+           ]
+       });
+   }
+
+   function Echarts() {
+       var myChart = echarts.init($("#container_huan")[0]);
+       var option = {
+           tooltip: {
+               trigger: 'item',
+               formatter: "{a} <br/>{b}: {c} ({d}%)"
+           },
+           legend: {
+               orient: 'vertical',
+               x: 'left',
+               data:['一类水质','二类水质','三类水质','四类水质','五类水质'],
+               textStyle:{
+                   color:"#e9ebee"
+               }
+           },
+           series: [
+               {
+                   name:'行业数据',
+                   type:'pie',
+                   center:['80%','50%'],
+                   radius: ['50%', '80%'],
+                   avoidLabelOverlap: false,
+                   label: {
+                       normal: {
+                           show: false,
+                           position: 'center'
+                       },
+                       emphasis: {
+                           show: true,
+                           textStyle: {
+                               fontSize: '30',
+                               fontWeight: 'bold'
+                           }
+                       }
+                   },
+                   itemStyle: {
+                       normal: {
+                           label: {
+                               show: false
+                           },
+                           labelLine: {
+                               show: false
+                           }
+                       }
+                   },
+                   data:[
+                       {value:335, name:'一类水质'},
+                       {value:310, name:'二类水质'},
+                       {value:234, name:'三类水质'},
+                       {value:135, name:'四类水质'},
+                       {value:1548, name:'五类水质'}
+                   ]
+               }
+           ]
+       };
+       myChart.setOption(option);
+   }
+
+
+   function TimeControl(){
+       $(".message_scroll_box").animate({marginTop:96},800,
+               function(){
+                   $(".message_scroll_box").css({marginTop:0});    //把顶部的边界清零
+                   $(".message_scroll_box .message_scroll:first").before($(".message_scroll_box .message_scroll:last"));    //在第一个新闻后面插入最后一个新闻
+
+               });
+   }
+   var T=setInterval(TimeControl,2300);    //开始定时
+   $(".message_scroll_box").mouseenter(function(){
+       clearInterval(T);    //停止定时
+   })
+           .mouseleave(function(){
+               T=setInterval(TimeControl,2500);    //再次定时
+           })
+
+</script>
+
+<!--轨迹回放时间日期选择-->
+<script>
+    !function(){
+        laydate.skin('danlan');//切换皮肤，请查看skins下面皮肤库
+        laydate({elem: '#demo'});
+        laydate({elem: '#demo1'});//绑定元素
+    }();
+    //日期范围限制
+    var start = {
+        elem: '#start',
+        format: 'YYYY-MM-DD',
+        min: laydate.now(), //设定最小日期为当前日期
+        max: '2099-06-16', //最大日期
+        istime: true,
+        istoday: false,
+        choose: function(datas){
+            end.min = datas; //开始日选好后，重置结束日的最小日期
+            end.start = datas //将结束日的初始值设定为开始日
+        }
+    };
+
+    var end = {
+        elem: '#end',
+        format: 'YYYY-MM-DD',
+        min: laydate.now(),
+        max: '2099-06-16',
+        istime: true,
+        istoday: false,
+        choose: function(datas){
+            start.max = datas; //结束日选好后，充值开始日的最大日期
+        }
+    };
+    laydate(start);
+    laydate(end);
+    function edit() {
+        layer.open({
+            type: 2,
+            title: '存储详情',
+            shade: 0.5,
+            skin: 'layui-layer-rim',
+            area: ['700px', '400px'],
+            shadeClose: true,
+            closeBtn: 1,
+            content: 'saveFindTail.html'
+        });
+    }
+
+    //生命周期
+    function listCrile(){
+        art.dialog.open('analysis.html',
+                {title: '统计分析页', width: '60%', height: '60%',shade: 0.5,mask:true});
+    }
+    $(".search_eddit").click(function(){
+        listCrile();
+    })
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+body,
+div,
+p,
+ul,
+table,
+li {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+#FontScroll {
+  height: 134px;
+  line-height: 30px;
+  overflow: Hidden;
+  padding: 5px 0;
+  margin: 0 auto;
+  /* background-color: #2a2a2a; */
+  margin-top: -12px;
+}
+#FontScroll a {
+  color: #f0f8ff;
+  text-decoration: none;
+}
+#FontScroll .line {
+  text-align: left;
+  width: 100%;
+}
+#FontScroll .fontColor a {
+  /* color: red; */
+  transition: all 1.5s ease 0s;
+}
+#FontScroll {
+  padding: 0 30px;
+}
+.navBox {
+  position: absolute;
+  height: 77px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  left: 1px;
+  top: 1px;
+  display: flex;
+  width: 99.86%;
+}
+.navBox ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navBox ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navBox ul li img{
+    margin-right: 11px;
+  }
+.navBox ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: HiraginoSansGB-W6;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 1);
+}

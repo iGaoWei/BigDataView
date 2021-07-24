@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>流程图DEMO</title>
+		<!--[if lt IE 9]>
+        <?import namespace="v" implementation="#default#VML" ?>
+        <![endif]-->
+		<link rel="stylesheet" type="text/css" href="css/GooFlow2.css" />
+		<script type="text/javascript" src="js/data.js"></script>
+		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="js/GooFunc.js"></script>
+		<script type="text/javascript" src="js/GooFlow.js"></script>
+
+	</head>
+
+	<body>
+		<div id="goolflow"></div>
+		<script type="text/javascript">
+			var property = {
+				width: 1200,
+				height: 600,
+				toolBtns: ["start round", "end round", "task round", "node", "chat", "state", "plug", "join", "fork", "recombination"],
+				haveHead: true,
+				headBtns: ["new", "open", "save", "undo", "redo", "reload"], //如果haveHead=true，则定义HEAD区的按钮
+				haveTool: true,
+				haveGroup: true,
+				useOperStack: true
+			};
+			var remark = {
+				cursor: "选择指针",
+				direct: "结点连线",
+				start: "入口结点",
+				"end": "结束结点",
+				"task": "任务结点",
+				node: "自动结点",
+				chat: "决策结点",
+				state: "状态结点",
+				plug: "附加插件",
+				fork: "分支结点",
+				"join": "联合结点",
+				recombination: "复合结点",
+				group: "组织划分框编辑开关"
+			};
+			var goolflow;
+			$(document).ready(function() {
+				goolflow = $.createGooFlow($("#goolflow"), property);
+				goolflow.setNodeRemarks(remark);
+				goolflow.loadData(jsondata);
+				goolflow.onBtnSaveClick = function() {
+					console.log(goolflow.exportData())
+				}
+			});
+		</script>
+	</body>
+
+</html>

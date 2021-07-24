@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Lobster+Two:700i" rel="stylesheet">
+
+        <script src='../dist/echarts.js'></script>
+        <script src='../dist/echarts-liquidfill.js'></script>
+    </head>
+    <body>
+        <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                background: #F1F7FF;
+            }
+
+            #main {
+                padding: 20px;
+            }
+
+            h1 {
+                margin: 20px;
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+                color: #D94854;
+            }
+
+            .chart {
+                width: 30%;
+                margin: 20px auto;
+                height: 300px;
+                border: 1px solid #D94854;
+            }
+
+            p {
+                text-align: center;
+            }
+        </style>
+        <h1>ECharts LiquidFill Example</h1>
+        <p>This is an example showing liquidFill chart that fills the container.</p>
+        <div id='main'>
+            <div class="chart" id="chart"></div>
+        </div>
+        <script>
+            var options = {
+                series: [{
+                    type: 'liquidFill',
+                    waveAnimation: false,
+                    animation: false,
+                    data: [{
+                        value: 0.7
+                    }]
+                }]
+            };
+
+            var chart = echarts.init(document.getElementById('chart'));
+            chart.setOption(options);
+
+            window.onresize = function () {
+                chart.resize();
+            };
+        </script>
+
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+            var hm = document.createElement('script');
+            hm.src = '//hm.baidu.com/hm.js?4bad1df23f079e0d12bdbef5e65b072f';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+    </body>
+</html>

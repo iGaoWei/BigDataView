@@ -1,0 +1,377 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>湖南省大数据可视化平台</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/globle.css">
+</head>
+<body>
+  <div class="main">
+    <div class="top_title">
+      <img src="./images/top_title.png"/>
+    </div>
+    <div class="datas">
+      <div class="data_left">
+        <div class="left_top">
+          <div class="left_top_title">基础数据</div>
+          <div class="left_top_main">
+            <div class="left_main_circle">
+              <p class="counter-value circle_num1">1555</p>
+              <span class="span_font">确权总面积<br/>(万亩)</span>
+            </div>
+            <div class="left_main_circle">
+                <p class="counter-value circle_num2">2137.2</p>
+                <span class="span_font">流转总面积<br/>(万亩)</span>
+            </div>
+            <div class="left_main_circle">
+                <p class="counter-value circle_num3">2545.55</p>
+                <span class="span_font">挂网总面积<br/>(万亩)</span>
+            </div>
+          </div>
+        </div>
+        <div class="left_bottom">
+          <div class="left_top_title">业务类型</div>
+          <div id="Business_type" class="left_top_main left_bottom_main"></div>
+        </div>
+      </div>
+      <div class="data_middle">
+        <div class="middle_top">
+          <div class="middle_top_list">
+            <div class="list_title">累计发布数</div>
+            <div class="list_num list_num1"><span class="counter-value">901</span>条</div>
+            <div class="today_list_font">今日最新发布<span>12</span>条</div>
+          </div>
+          <div class="middle_top_list">
+              <div class="list_title">累计交易金额</div>
+              <div class="list_num list_num2"><span class="counter-value">1149.66</span>亿</div>
+              <div class="today_list_font">今日最新交易<span>0.2</span>亿</div>
+          </div>
+          <div class="middle_top_list">
+              <div class="list_title">累计交易面积</div>
+              <div class="list_num list_num3"><span class="counter-value">2137.26</span>万亩</div>
+              <div class="today_list_font">今日交易面积<span>1.5</span>万亩</div>
+          </div>
+        </div>
+        <div id="map" class="middle_bottom"></div>
+      </div>
+      <div class="data_right">
+        <div class="right_top">
+          <div class="left_top_title">土地分析报表</div>
+          <div id="Land_analysis" class="left_top_main right_top_main"></div>
+        </div>
+        <div class="right_bottom">
+          <div class="left_top_title">信息发布报表</div>
+          <div id="Information_Delivery" class="left_top_main right_top_main"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+<script src="./js/jquery-1.8.3.min.js"></script>
+<script src="https://img.hcharts.cn/highmaps/highmaps.js"></script>
+<script src="https://data.jianshukeji.com/geochina/hunan.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.2.1/echarts-en.min.js"></script>
+<script type="text/javascript">
+  function OSnow(){
+    var agent = navigator.userAgent.toLowerCase();
+    var isMac = /macintosh|mac os x/i.test(navigator.userAgent);
+    if (agent.indexOf("win32") >= 0 || agent.indexOf("wow32") >= 0) {
+      $(".main").css("height","880px");
+    }
+    if (agent.indexOf("win64") >= 0 || agent.indexOf("wow64") >= 0) {
+      $(".main").css("height","880px");
+    }
+    if(isMac){
+        
+    }
+}
+OSnow();
+  function numInit() {
+    $('.counter-value').each(function(){
+      $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+      },{
+        duration: 2500,
+        easing: 'swing',
+        step: function (now){
+          $(this).text(now.toFixed(2));
+        }
+      });
+    });
+  }
+
+  numInit();
+  // 基于准备好的dom，初始化echarts实例
+  var i = 0;
+  var myChart1 = echarts.init(document.getElementById('Business_type'));
+
+  // 指定图表的配置项和数据
+  option1 = {
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+      x : 'center',
+      y : 'bottom',
+      data: ['土地经营权','土地流转权','房屋所有权','集体建设用地','林权'],
+      textStyle: {
+        color:'#4ADEFE',
+      }
+    },
+    series : [
+        {
+            name: '访问来源',
+            type: 'pie',
+            radius: ['30%', '55%'],
+            center: ['45%', '35%'],
+            avoidLabelOverlap: false,
+            data:[
+                {value:335, name:'土地经营权'},
+                {value:310, name:'土地流转权'},
+                {value:234, name:'房屋所有权'},
+                {value:135, name:'集体建设用地'},
+                {value:1548, name:'林权'}
+            ],
+            itemStyle: {
+              emphasis: {
+                  shadowBlur: 10,
+                  shadowOffsetX: 0,
+                  shadowColor: 'rgba(0, 0, 0, 0.5)'
+              }
+            }
+        }
+    ],
+    color : ['#F3DB5D','#009AFF','#F77474','#28DCCF','#FF5937']
+};
+  // 使用刚指定的配置项和数据显示图表。
+  myChart1.setOption(option1);
+
+  var myChart2 = echarts.init(document.getElementById('Land_analysis'));
+
+  option2 = {
+    legend: {
+      x : 'right',
+      y : 'top',
+      textStyle: {
+        color:'#4ADEFE',
+      }
+    },
+    grid:{
+      x: 30,
+      y: 50,
+      x2: 0,
+      y2: 45
+    },
+    tooltip: {},
+    dataset: {
+        source: [
+            ['product', '本地总面积', '本地已流转面积'],
+            ['岳阳市', 43.3, 85.8],
+            ['益阳市', 83.1, 73.4],
+            ['长沙市', 86.4, 65.2],
+            ['株洲市', 72.4, 53.9],
+            ['衡阳市', 72.4, 53.9],
+            ['永州市', 72.4, 53.9],
+            ['娄底市', 72.4, 53.9],
+            ['郴州市', 72.4, 53.9],
+            ['湘潭市', 72.4, 53.9],
+        ]
+    },
+    xAxis: {
+      type: 'category',
+      axisLine: {
+        show: false,
+        lineStyle: {
+          color: "#4ADEFE",
+        },
+      },
+      // data: ["岳阳市","益阳市","长沙市","株洲市","衡阳市","永州市","娄底市","郴州市","湘潭市"],
+      axisTick: {
+        alignWithLabel: true
+      }
+    },
+    yAxis: {
+      axisLine: {
+        lineStyle: {
+          color: "#4ADEFE",
+        }
+      },
+      splitLine: {
+        lineStyle: {
+          color: '#4ADEFE'
+        }
+      }
+    },
+    series: [
+      {
+        type: 'bar',
+        barMaxWidth: '10',
+        itemStyle: { 
+          normal:{    
+            color: '#4ADEFE'     
+          },
+        },
+      },
+      {
+        type: 'bar',
+        barMaxWidth: '10',
+        itemStyle: { 
+          normal:{    
+            color: '#F3DB5C',
+          },
+        },
+      }
+    ]
+};
+  myChart2.setOption(option2);
+
+  var myChart3 = echarts.init(document.getElementById('Information_Delivery'));
+
+  option3 = {
+    legend: {
+      x : 'right',
+      y : 'top',
+      textStyle: {
+        color:'#4ADEFE',
+      }
+    },
+    grid:{
+      x: 30,
+      y: 50,
+      x2: 0,
+      y2: 45
+    },
+    tooltip: {},
+    dataset: {
+        source: [
+            ['product', '土地流转信息', '找地需求信息'],
+            ['岳阳市', 43.3, 85.8],
+            ['益阳市', 83.1, 73.4],
+            ['长沙市', 86.4, 65.2],
+            ['株洲市', 72.4, 53.9],
+            ['衡阳市', 72.4, 53.9],
+            ['永州市', 72.4, 53.9],
+            ['娄底市', 10.4, 200.9],
+            ['郴州市', 72.4, 90.9],
+            ['湘潭市', 20.4, 300.9],
+        ]
+    },
+    xAxis: {
+      type: 'category',
+      axisLine: {
+        lineStyle: {
+          color: "#4ADEFE",
+        }
+      }
+    },
+    yAxis: {
+      axisLine: {
+        lineStyle: {
+          color: "#4ADEFE",
+        }
+      },
+      splitLine: {
+        show: true,
+        lineStyle:{
+          color: '#4ADEFE',
+        }
+      }
+    },
+    series: [
+      {
+        type: 'bar',
+        barMaxWidth: '10',
+        itemStyle: { 
+          normal:{    
+            color: '#4ADEFE'     
+          },
+        },
+      },
+      {
+        type: 'bar',
+        barMaxWidth: '10',
+        itemStyle: { 
+          normal:{    
+            color: '#F3DB5C',
+          },
+        },
+      }
+    ]
+};
+  myChart3.setOption(option3);
+
+
+  // 随机数据
+  var data = [{"name":"长沙","value":46},{"name":"株洲","value":81},{"name":"湘潭","value":94},{"name":"衡阳","value":40},{"name":"邵阳","value":67},{"name":"岳阳","value":38},{"name":"常德","value":50},{"name":"张家界","value":48},{"name":"益阳","value":77},{"name":"郴州","value":78},{"name":"永州","value":57},{"name":"怀化","value":83},{"name":"娄底","value":43},{"name":"湘西","value":75}];
+  option4 = {
+    title: {
+      text: ''
+    },
+    tooltip: {
+      enabled: false
+    },
+    chart: {
+      backgroundColor: 'transparent',
+    },
+    legend: {
+      enabled: true,
+		},
+    colorAxis: {
+      minColor: '#0666D5',
+      maxColor: '#062A6C'
+    },
+    series: [{
+      data: data,
+      borderColor: '#6099EC',
+      borderWidth: 0.5,
+      mapData: Highcharts.maps['cn/hunan'],
+      name: '',
+      joinBy: ['name'], // 根据 name 属性进行关联
+      states: {
+        enabled: true,
+        hover: {
+          color: '#F3DB5C'
+        }
+      },
+      dataLabels: {
+        enabled: true,
+        color: '#4ADEFE',
+        format: '{point.name}'
+      },
+      cursor: 'pointer',
+      events: {
+        click: function(e) {
+          if(e.point.name == "长沙") {
+            $(".list_num1 span").text('6666');
+            $(".list_num2 span").text('903.22');
+            $(".list_num3 span").text('1356.77');
+
+            $(".circle_num1").text('1800.35');
+            $(".circle_num2").text('892.95');
+            $(".circle_num3").text('2016.15');
+
+            option1.series[0].data = [
+                {value:100, name:'土地经营权'},
+                {value:240, name:'土地流转权'},
+                {value:130, name:'房屋所有权'},
+                {value:200, name:'集体建设用地'},
+                {value:400, name:'林权'}
+            ]
+            myChart1.setOption(option1);
+
+            data[0].color = "#F3DB5C";
+            new Highcharts.Map('map', option4);
+            numInit();
+          }
+        }
+      }
+    }]
+  }
+  // 初始化图表
+  var map = new Highcharts.Map('map', option4);
+</script>

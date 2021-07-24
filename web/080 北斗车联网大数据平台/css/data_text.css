@@ -1,0 +1,404 @@
+.data_content{
+    /*overflow-x: hidden;*/
+    min-width: 1366px;
+    background-color: #081832;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.data_content .data_time{
+    width: 130px;
+    height: 35px;
+    background-color: #04425f;
+    line-height: 35px;
+    color:#fff;
+    font-size: 12.8px;
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 25px;
+    margin-left: 20px;
+}
+.data_content .data_time img{
+    position: absolute;
+    top: 8px;
+    left: 15px;
+}
+.data_content .data_info{
+    width: calc(100% - 40px);
+    margin-bottom: 40px;
+    height: 110px;
+    margin-left: 20px;
+}
+.data_content .data_info .info_1{
+    width: 40%;
+    height: 110px;
+}
+.data_content .data_info .info_1>.text_1{
+    width: calc(100% - 25px);
+    background-color: #034c6a;
+    height: 110px;
+}
+
+.data_content .data_info .info_2{
+    width: 31%;
+    height: 110px;
+}
+.data_content .data_info .info_2>.text_2{
+    width: calc(100% - 25px);
+    background-color: #034c6a;
+    height: 110px;
+}
+
+.data_content .data_info .info_3{
+    width: 29%;
+    height: 110px;
+}
+.data_content .data_info .info_3>.text_3{
+    width:100%;
+    background-color: #034c6a;
+    height: 110px;
+
+}
+
+.data_content .data_info>div.info_1>.text_1>div{
+    width: 33.333%;
+    position: relative;
+}
+.data_content .data_info>div.info_2>div>div,
+.data_content .data_info>div.info_3>div>div{
+    width: 50%;
+    position: relative;
+}
+.data_content .data_info img{
+    position: absolute;
+    top: 35px;
+    left: 15px;
+}
+.data_content .data_info>div>div>div>div{
+    margin-left:65px;
+    margin-top: 23px;
+}
+.data_content .data_info>div.info_2>div>div>div{
+    margin-left: 70px;
+    margin-top: 23px;
+}
+.data_content .data_info p:nth-child(1){
+    color:#fff;
+    font-size: 12.8px;
+}
+.data_content .data_info p:nth-child(2){
+    font-weight: 600;
+    font-size: 28px;
+    color:#ffff43;
+}
+.data_content .data_info>div.info_2 p:nth-child(2){
+    font-weight: 600;
+    font-size: 28px;
+    color:#25f3e6;
+}
+.data_content .data_info>div.info_3 p:nth-child(2){
+    font-weight: 600;
+    font-size: 28px;
+    color:#ff4e4e;
+}
+
+.data_content .data_main{
+    width: calc(100% - 40px);
+    margin-bottom: 40px;
+    height: 615px;
+    margin-left: 20px;
+}
+.data_content .data_main .main_left{
+    width: 24%;
+}
+.data_content .data_main .main_left>div{
+    width: 100%;
+    height: 280px;
+    box-sizing: border-box;
+    border: 1px solid #034c6a;
+    /*box-shadow: 0px 0px 10px #034c6a inset;*/
+    box-shadow:-10px 0px 15px #034c6a inset,   /*左边阴影*/
+    0px -10px 15px #034c6a inset,  /*上边阴影*/
+    10px 0px 15px #034c6a inset,  /*右边阴影*/
+    0px 10px 15px #034c6a inset;
+    position: relative;
+}
+.data_content .data_main .main_left div.left_1{
+    /*background: url("../img/chart_1.png") no-repeat center;*/
+}
+
+.data_content .data_main .main_left div.left_2{
+    /*background: url("../img/chart_2.png") no-repeat center;*/
+}
+.data_content .data_main .main_left div:nth-child(1){
+    margin-bottom: 50px;
+}
+.data_content .data_main .main_left div .main_title{
+    width: 180px;
+    height: 35px;
+    line-height: 33px;
+    background-color: #034c6a;
+    border-radius: 18px;
+    position: absolute;
+    top: -17px;
+    left:50%;
+    margin-left: -90px;
+    color:#fff;
+    font-size: 18px;
+    font-weight: 600;
+    box-sizing: border-box;
+    padding-left: 45px;
+    z-index: 1000;
+}
+.data_content .data_main .main_left div .main_title img{
+    position: absolute;
+    top: 8px;
+    left: 20px;
+}
+
+
+.data_content .data_main .main_center{
+    width: 52%;
+    height: 610px;
+
+}
+.data_content .data_main .main_center .center_text{
+    width: calc(100% - 50px);
+    height: 610px;
+    margin-left: 25px;
+    margin-right: 25px;
+    box-sizing: border-box;
+    border: 1px solid #034c6a;
+    box-shadow:-10px 0px 15px #034c6a inset,   /*左边阴影*/
+    0px -10px 15px #034c6a inset,  /*上边阴影*/
+    10px 0px 15px #034c6a inset,  /*右边阴影*/
+    0px 10px 15px #034c6a inset;
+    position: relative;
+    /*background: url("../img/chart_map.png") no-repeat center ;*/
+}
+.data_content .data_main .main_center .main_title{
+    width: 180px;
+    height: 35px;
+    line-height: 33px;
+    background-color: #034c6a;
+    border-radius: 18px;
+    position: absolute;
+    top: -17px;
+    left:50%;
+    margin-left: -90px;
+    color:#fff;
+    font-size: 18px;
+    font-weight: 600;
+    box-sizing: border-box;
+    padding-left: 45px;
+    z-index: 1000;
+}
+.data_content .data_main .main_center .main_title img{
+    position: absolute;
+    top: 8px;
+    left: 20px;
+}
+
+.data_content .data_main .main_right{
+    width: 24%;
+}
+.data_content .data_main .main_right>div{
+    width: 100%;
+    height: 280px;
+    box-sizing: border-box;
+    border: 1px solid #034c6a;
+    box-shadow:-10px 0px 15px #034c6a inset,   /*左边阴影*/
+    0px -10px 15px #034c6a inset,  /*上边阴影*/
+    10px 0px 15px #034c6a inset,  /*右边阴影*/
+    0px 10px 15px #034c6a inset;
+    position: relative;
+}
+.data_content .data_main .main_right div.right_1 .choice{
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    z-index: 1000;
+}
+.data_content .data_main .main_right div.right_1 .choice label{
+    color:#fff;
+}
+
+.data_content .data_main .main_right div.right_2{
+    /*background: url("../img/chart_4.png") no-repeat center;*/
+}
+.data_content .data_main .main_right div.right_2 .chart_text {
+    width: 18%;
+    color:#fff;
+    text-align: center;
+    margin-top: 12px;
+}
+.data_content .data_main .main_right div.right_2 .chart_text p{
+    margin-top: 21px;
+}
+.data_content .data_main .main_right div.right_2 .chart_text p img{
+    margin-right: 5px;
+    margin-top: -4px;
+}
+.data_content .data_main .main_right div.right_2 .chart_text p:nth-child(1){
+    font-size: 14px;
+    font-weight: 600;
+}
+.data_content .data_main .main_right div.right_2 .text_sum{
+    text-align: center;
+    color:#ffff43;
+    font-weight: 600;
+}
+.data_content .data_main .main_right div.right_2 .text_sum div:nth-child(2){
+    font-size: 18px;
+    font-weight: 600;
+}
+.data_content .data_main .main_right div:nth-child(1){
+    margin-bottom: 50px;
+}
+.data_content .data_main .main_right div .main_title{
+    width: 180px;
+    height: 35px;
+    line-height: 33px;
+    background-color: #034c6a;
+    border-radius: 18px;
+    position: absolute;
+    top: -17px;
+    left:50%;
+    margin-left: -90px;
+    color:#fff;
+    font-size: 18px;
+    font-weight: 600;
+    box-sizing: border-box;
+    padding-left: 45px;
+}
+.data_content .data_main .main_right div .main_title img{
+    position: absolute;
+    top: 8px;
+    left: 20px;
+}
+
+
+.data_content .data_bottom{
+    width: calc(100% - 40px);
+    height: 280px;
+    margin-left: 20px;
+}
+.data_content .data_bottom div{
+
+}
+.data_content .data_bottom .bottom_1{
+    width: 24%;
+    height: 280px;
+    box-shadow:-10px 0px 15px #034c6a inset,   /*左边阴影*/
+    0px -10px 15px #034c6a inset,  /*上边阴影*/
+    10px 0px 15px #034c6a inset,  /*右边阴影*/
+    0px 10px 15px #034c6a inset;
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid #034c6a;
+    /*background: url("../img/chart_5.png") no-repeat;*/
+}
+.data_content .data_bottom .bottom_center{
+    width: 52%;
+    height: 280px;
+}
+.data_content .data_bottom .bottom_2{
+    width: calc(50% - 35px);
+    height: 280px;
+    box-shadow:-10px 0px 15px #034c6a inset,   /*左边阴影*/
+    0px -10px 15px #034c6a inset,  /*上边阴影*/
+    10px 0px 15px #034c6a inset,  /*右边阴影*/
+    0px 10px 15px #034c6a inset;
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid #034c6a;
+    margin-left: 25px;
+    /*background: url("../img/chart_6.png") no-repeat;*/
+}
+.data_content .data_bottom .bottom_3{
+    width: calc(50% - 40px);
+    height: 280px;
+    box-shadow:-10px 0px 15px #034c6a inset,   /*左边阴影*/
+    0px -10px 15px #034c6a inset,  /*上边阴影*/
+    10px 0px 15px #034c6a inset,  /*右边阴影*/
+    0px 10px 15px #034c6a inset;
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid #034c6a;
+    /*background: url("../img/chart_7.png") no-repeat;*/
+    margin-left:25px;
+}
+.data_content .data_bottom .bottom_4{
+    width: 24%;
+    height: 280px;
+    box-shadow:-10px 0px 15px #034c6a inset,   /*左边阴影*/
+    0px -10px 15px #034c6a inset,  /*上边阴影*/
+    10px 0px 15px #034c6a inset,  /*右边阴影*/
+    0px 10px 15px #034c6a inset;
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid #034c6a;
+    /*background: url("../img/chart_8.png") no-repeat;*/
+}
+.data_content .data_bottom div .main_title{
+    width: 220px;
+    height: 35px;
+    line-height: 33px;
+    background-color: #034c6a;
+    border-radius: 18px;
+    position: absolute;
+    top: -17px;
+    left:50%;
+    margin-left: -110px;
+    color:#fff;
+    font-size: 18px;
+    font-weight: 600;
+    box-sizing: border-box;
+    padding-left: 45px;
+}
+.data_content .data_bottom div .main_title img{
+    position: absolute;
+    top: 8px;
+    left: 20px;
+}
+
+.data_content .data_bottom div .main_table tr{
+    height: 42px;
+}
+.data_content .data_bottom div .main_table{
+    width: 100%;
+    margin-top: 25px;
+}
+.data_content .data_bottom div .main_table table{
+    width: 100%;
+}
+.data_content .data_bottom div .main_table thead tr{
+    height: 42px;
+}
+.data_content .data_bottom div .main_table th{
+    font-size: 14px;
+    font-weight: 600;
+    color:#61d2f7;
+    text-align: center;
+}
+.data_content .data_bottom div .main_table th:nth-child(1){
+    width: 30%;
+}
+.data_content .data_bottom div .main_table th:nth-child(2){
+    width: 35%;
+}
+.data_content .data_bottom div .main_table th:nth-child(2){
+    width: 35%;
+}
+.data_content .data_bottom div .main_table td{
+    color:#fff;
+    font-size: 12.8px;
+    text-align: center;
+}
+.data_content .data_bottom div .main_table tbody tr:nth-child(1),
+.data_content .data_bottom div .main_table tbody tr:nth-child(3),
+.data_content .data_bottom div .main_table tbody tr:nth-child(5){
+    background-color: #072951;
+    box-shadow:-10px 0px 15px #034c6a inset,   /*左边阴影*/
+    10px 0px 15px #034c6a inset;  /*右边阴影*/
+    /*0px 10px 15px #034c6a inset;*/
+}

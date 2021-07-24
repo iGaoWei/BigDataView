@@ -1,0 +1,257 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>index</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<script type="text/javascript" src="js/area_echarts.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5ieMMexWmzB9jivTq6oCRX9j&callback"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<script>
+alert("地图模块本地需要在iis环境下运行\n请先搭建iis服务否则不能看到地图")
+</script>
+<body>
+	<div class="head clearfix">
+	<h1 class="">双数智慧公卫-传染病督导平台</h1>
+		<div class="time" id="showTime">2018/6/12 17:00:12</div>
+		<div class="name">长沙双数科技有限公司</div>
+		<script>
+var t = null;
+    t = setTimeout(time,1000);//開始运行
+    function time()
+    {
+       clearTimeout(t);//清除定时器
+       dt = new Date();
+		var y=dt.getFullYear();
+		var mt=dt.getMonth()+1;
+		var day=dt.getDate();
+       var h=dt.getHours();//获取时
+       var m=dt.getMinutes();//获取分
+       var s=dt.getSeconds();//获取秒
+       document.getElementById("showTime").innerHTML = y+"/"+mt+"/"+day+" "+h+":"+m+":"+s+"";
+       t = setTimeout(time,1000); //设定定时器，循环运行     
+    } 
+
+</script>
+	</div>
+	<div class="mainbox">
+	
+	<ul class="clearfix nav1">
+		<li style="width: 26%">
+		<div class="box">
+			<div class="tit"><span>当日情况</span><p></p></div>
+			<div class="boxnav" style="height: 320px;">
+				<ul class="drqk clearfix">
+				<li>
+					<div class="icon"><img src="images/icona.png"></div>
+					<div><span>今日就诊人数</span>
+					<p><em>1358</em><i>人</i></p></div>
+					</li>
+				<li><div class="icon"><img src="images/iconb.png"></div>
+					<div><span>今日就诊人数</span>
+					<p><em>1983</em><i>人</i></p></div></li>
+				<li><div class="icon"><img src="images/iconc.png"></div>
+					<div><span>今日就诊人数</span>
+					<p><em>930</em><i>人</i></p></div></li>
+				<li><div class="icon"><img src="images/icond.png"></div>
+					<div><span>今日就诊人数</span>
+					<p><em>371</em><i>人</i></p></div></li>
+				<li><div class="icon"><img src="images/icone.png"></div>
+					<div><span>今日就诊人数</span>
+					<p><em>1683</em><i>人</i></p></div></li>
+				<li><div class="icon"><img src="images/iconf.png"></div>
+					<div><span>今日就诊人数</span>
+					<p><em>1091</em><i>人</i></p></div></li>
+				</ul>
+			</div>
+			</div>
+			<div class="box">
+			<div class="tit"><span>法定传染病监测 </span><p></p></div>
+			<div class="boxnav" style="height:140px;">
+			<table class="table1" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>                                             
+      <th>发病统计</th>
+      <th>甲类</th>
+      <th>乙类</th>
+      <th>丙类</th>
+    </tr>
+    <tr>
+      <td>发病数（万）</td>
+      <td>0.03<span class="text-b">↓0.01%</span></td>
+      <td>163.00<span class="text-d">↑4.01%</span></td>
+      <td>163.00<span class="text-d">↑4.01%</span></td>
+    </tr>
+      <tr>
+      <td>发病率（%）</td>
+      <td>0.3<span class="text-b">↓0.01%</span></td>
+      <td>100%<span class="text-d">↑4.01</span></td>
+      <td>81.92%<span class="text-d">↑4.01</span></td>
+    </tr>
+
+      
+  </tbody>
+</table>
+			</div>
+			</div>
+			
+			<div class="box">
+			<div class="tit"><span>医疗服务</span><p></p></div>
+			<div class="boxnav" style="height: 250px;">
+				<ul class="ylfw">
+				<li><div class="ylfwbox fora">
+					<p>医师日均报卡量</p>
+					<ol><span>12.5</span><em>张</em><i class="text-d">↑4.01%</i></ol>
+					<div class="forb"></div>
+					</div></li>
+				<li><div class="ylfwbox fora">
+					<p>平均报卡时间</p>
+					<ol><span>1234</span><em>秒</em><i class="text-s">↓4.01%</i></ol>
+					<div class="forb"></div></div></li>
+				
+				<li><div class="ylfwbox fora">
+					<p>医生最高报卡量</p>
+					<ol><span>2.3</span><em>小时</em><i class="text-s">↓4.01%</i></ol>
+					<div class="forb"></div>
+					</div></li>
+				<li><div class="ylfwbox fora">
+					<p>最低报卡时间</p> 
+					<ol><span>0012</span><em>秒</em><i class="text-s">↓4.01%</i></ol>
+					<div class="forb"></div></div></li>
+					<li><div class="ylfwbox fora">
+					<p>医生排除比例</p>
+					<ol><span>10.00%</span><em></em><i class="text-s">↓4.01%</i></ol>
+					<div class="forb"></div></div></li>
+				<li><div class="ylfwbox fora">
+					<p>迟报漏报卡数</p> 
+
+					<ol><span>0013</span><em>张</em><i class="text-s">↓4.01%</i></ol>
+					<div class="forb"></div></div></li>
+					
+				</ul>
+			</div>
+			</div>
+			
+		</li>
+		<li style="width:48%">
+		
+		<div class="box" style="position: relative">
+			<div class="map">
+        <div class="map1"><img src="images/lbx.png"></div>
+        <div class="map2"><img src="images/jt.png"></div>
+        <div class="map3"><img src="images/map.png"></div>
+        
+      </div>
+
+			<div class="" id="map" style="height: 557px; position: relative; z-index: 100"></div>
+
+		<!--		<script>
+    // 百度地图API功能
+    var map = new BMap.Map("map");    // 创建Map实例
+    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+    map.addControl(new BMap.MapTypeControl({
+        mapTypes:[
+            BMAP_NORMAL_MAP,
+            BMAP_HYBRID_MAP
+        ]}));
+    var mapStyle={
+        style:"midnight"
+    };
+    map.setMapStyle(mapStyle);
+    map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+    map.enableScrollWheelZoom(true);
+</script>
+				-->
+		
+			</div>
+		<div class="box">
+			<div class="tit"><span>监测机构</span><p></p></div>
+			<div class="boxnav" style="height: 250px;">
+<ul class="jcjg">
+				<li><h3>医疗机构</h3>
+	<div class="jcnav">
+					<img src="images/icon1.png">
+		<div class="jcnavp">
+		<div class="fora"><ol>私人诊所</ol><span>765</span><i class="text-d">+2.30</i><div class="forb"></div></div>
+		<div class="fora"><ol>公立医院</ol><span>765</span><i class="text-d">+2.30</i><div class="forb"></div></div>
+		<div class="fora"><ol>民营医院</ol><span>765</span><i class="text-s">-2.30</i><div class="forb"></div></div>
+		</div>
+					</div>
+	</li>
+				<li><h3>床位数</h3>
+	<div class="jcnav">
+					<img src="images/icon2.png">
+		<div class="jcnavp">
+		<div class="fora"><ol>床位总数</ol><span>765</span><i class="text-s">-2.30</i><div class="forb"></div></div>
+		<div class="fora"><ol>空闲床位</ol><span>765</span><i class="text-s">-2.30</i><div class="forb"></div></div>
+		<div class="fora"><ol>在用床位</ol><span>765</span><i class="text-d">+2.30</i><div class="forb"></div></div>
+		</div>
+		
+					</div>
+	</li>
+				<li><h3>医护人员</h3>
+	<div class="jcnav jcnav2">
+					<img src="images/icon3.png">
+		<div class="jcnavp">
+		<div class="fora"><ol>总人数</ol><span>765</span><i class="text-d">+2.30</i><div class="forb"></div></div>
+		<div class="fora"><ol>执业医生</ol><span>765</span><i class="text-d">+2.30</i><div class="forb"></div></div>
+		<div class="fora"><ol>普通医生</ol><span>765</span><i class="text-d">+2.30</i><div class="forb"></div></div>
+		<div class="fora"><ol>护士</ol><span>765</span><i class="text-d">+2.30</i><div class="forb"></div></div>
+		</div>
+					</div>
+	</li>
+				</ul>
+	
+			</div>
+			</div>
+		</li>
+		<li style="width: 26%">
+		<div class="box">
+			<div class="tit"><span>同期对比</span><p></p></div>
+			<div class="boxnav" id="" style="height: 280px;">
+			<ul class="tqdb">
+				<li ><div  id="echart1"></div><h3>就诊人数</h3></li>
+				<li ><div  id="echart2"></div><h3>触发次数</h3></li>
+				<li ><div  id="echart3"></div><h3>触发卡数</h3></li>
+				<li ><div  id="echart4"></div><h3>去重卡数</h3></li>
+				<li ><div  id="echart5"></div><h3>报卡时间</h3></li>
+				<li ><div  id="echart6"></div><h3>迟报漏报</h3></li>
+				
+				</ul>
+			</div>
+			</div>
+			<div class="box">
+			<div class="tit"><span>就医动态</span><p></p></div>
+			<div class="boxnav" style="height: 180px;"   id="echart7">
+
+	
+			</div>
+			</div>
+			
+			<div class="box">
+			<div class="tit"><span>疾病构成</span><p></p></div>
+			<div class="boxnav" style="height: 250px;">
+				<ul class="jbgc">
+				<li >
+				<div class="jztxt">
+					<div><h3>1236<i>万元</i></h3>
+					<span>私人诊所</span></div>
+					<div><h3>1236<i>万元</i></h3>
+					<span>私人诊所</span></div>
+				<div><h3>1236<i>万元</i></h3>
+					<span>私人诊所</span></div>
+					</div>
+					</li>
+				<li style="width:90%" id="echart8"></li>
+				</ul>
+			</div>
+			</div>
+		
+		</li>
+		</ul>
+	</div>
+</body>
+</html>

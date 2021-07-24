@@ -1,0 +1,53 @@
+/**
+ * [css3过渡动画]
+ * @param  {[string]} $el [eg：'.pressRotate']
+ */
+
+@mixin myMove ($el) {
+  #{$el} {
+    -webkit-animation: mymove .5s ease-in;
+       -moz-animation: mymove .5s ease-in;
+         -o-animation: mymove .5s ease-in;
+            animation: mymove .5s ease-in;
+  }
+
+  @keyframes mymove {
+    0% {
+      transform: rotateX(0deg);
+    }
+
+    100% {
+      transform: rotateX(360deg);
+    }
+  }
+
+  @-moz-keyframes mymove {
+    0% {
+      transform: rotateX(0deg);
+    }
+
+    100% {
+      transform: rotateX(360deg);
+    }
+  }
+
+  @-webkit-keyframes mymove {
+    0% {
+      transform: rotateX(0deg);
+    }
+
+    100% {
+      transform: rotateX(360deg);
+    }
+  }
+
+  @-o-keyframes mymove {
+    0% {
+      transform: rotateX(0deg);
+    }
+
+    100% {
+      transform: rotateX(360deg);
+    }
+  }
+}

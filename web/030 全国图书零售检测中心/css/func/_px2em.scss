@@ -1,0 +1,9 @@
+/**
+ * [px转百分比]
+ * @param  {[number]} $size  [变量值]
+ * @param  {[number]} $base  [基准值]
+ * @return {[number]}        [返回em]
+ */
+@function px2em($size, $base){
+  @return ($size / $base) * 1em;
+}

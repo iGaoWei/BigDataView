@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="<%=basePath%>">
+    <meta name="viewport" content="user-scalable,width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title></title>
+    <!--公用-->
+    <link rel="stylesheet" href="common/css/base.css">
+    <script src="common/js/3.7.2/echarts.min.js"></script>
+    <script src="common/js/template/art-template/template-web.js"></script>
+    <script src="common/js/jquery.js"></script>
+   <!--自定义-->
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+    <script src="js/loadEcharts.js"></script>
+    <script>
+        $(function () {
+            main.init();
+            Echarts.init();
+        });
+    </script>
+</head>
+<body>
+<div class="body">
+    <div class="head-box">
+        <div class="logout-box"></div>
+        <div class="link-box"></div>
+        南方软件视频平台大屏中心
+        <div class="time-box">2018年10月21日</div>
+    </div>
+    <div class="main">
+        <!--left-->
+        <div class="col">
+            <!--巡查视频问题-->
+            <div class="col-box1">
+               <div class="col-title">巡查视频问题</div>
+                <div class="col-main">
+                    <ul class="xcspwt-box js-xcspwt">
+                        <li>
+                            <span>张三丰</span>
+                            <span title="南京信息工程大学地铁站1号出口监控点">南京信息工程大学地铁站1号出口监控点</span>
+                            <span title="视频信号不稳定">视频信号不稳定</span>
+                        </li>
+                        <li>
+                            <span>张三丰</span>
+                            <span title="南京信息工程大学地铁站1号出口监控点">南京信息工程大学地铁站1号出口监控点</span>
+                            <span title="视频信号不稳定">视频信号不稳定</span>
+                        </li>
+                        <li>
+                            <span>张三丰</span>
+                            <span title="南京信息工程大学地铁站1号出口监控点">南京信息工程大学地铁站1号出口监控点</span>
+                            <span title="视频信号不稳定">视频信号不稳定</span>
+                        </li>
+                        <li>
+                            <span>张三丰</span>
+                            <span title="南京信息工程大学地铁站1号出口监控点">南京信息工程大学地铁站1号出口监控点</span>
+                            <span title="视频信号不稳定">视频信号不稳定</span>
+                        </li>
+                        <li>
+                            <span>张三丰</span>
+                            <span title="南京信息工程大学地铁站1号出口监控点">南京信息工程大学地铁站1号出口监控点</span>
+                            <span title="视频信号不稳定">视频信号不稳定</span>
+                        </li>
+                        <li>
+                            <span>张三丰</span>
+                            <span title="南京信息工程大学地铁站1号出口监控点">南京信息工程大学地铁站1号出口监控点</span>
+                            <span title="视频信号不稳定">视频信号不稳定</span>
+                        </li>
+                        <li>
+                            <span>张三丰</span>
+                            <span title="南京信息工程大学地铁站1号出口监控点">南京信息工程大学地铁站1号出口监控点</span>
+                            <span title="视频信号不稳定">视频信号不稳定</span>
+                        </li>
+                        <li>
+                            <span>张三丰</span>
+                            <span title="南京信息工程大学地铁站1号出口监控点">南京信息工程大学地铁站1号出口监控点</span>
+                            <span title="视频信号不稳定">视频信号不稳定</span>
+                        </li>
+                        <li>
+                            <span>张三丰</span>
+                            <span title="南京信息工程大学地铁站1号出口监控点">南京信息工程大学地铁站1号出口监控点</span>
+                            <span title="视频信号不稳定">视频信号不稳定</span>
+                        </li>
+                        <li>
+                            <span>张三丰</span>
+                            <span title="南京信息工程大学地铁站1号出口监控点">南京信息工程大学地铁站1号出口监控点</span>
+                            <span title="视频信号不稳定">视频信号不稳定</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--巡查视频问题统计-->
+            <div class="col-box1">
+                <div class="col-title">巡查视频问题统计</div>
+                <div class="col-main">
+                    <!--视频问题统计-->
+                    <ul class="spwtzgtj-box">
+                        <li>
+                            <span>问题总数</span>
+                            <span>234</span>
+                        </li>
+                        <li>
+                            <span>已整改</span>
+                            <span>34</span>
+                        </li>
+                        <li>
+                            <span>未整改</span>
+                            <span>200</span>
+                        </li>
+                    </ul>
+                    <div class="spwttj-echarts" id="spwttjEchart">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--center-->
+        <div class="col">
+            <!--预警信息推送-->
+            <div class="col-box1">
+                <ul class="zpsl-box">
+                   <li>
+                       <span>今日抓拍</span>
+                       <span>1245条</span>
+                   </li>
+                   <li>
+                       <span>抓拍总数</span>
+                       <span>3421条</span>
+                   </li>
+                </ul>
+                <div class="col-title">预警信息推送</div>
+                <div class="col-main js-tjxxtsxq" style="height: calc(100% - 190px);margin-top: 10px">
+                    <div class="yjxxts-box">
+                        <img src="img/12.png">
+                    </div>
+                    <div class="yjxxts-box">
+                        <img src="img/12.png">
+                    </div>
+                    <div class="yjxxts-box">
+                        <img src="img/12.png">
+                    </div>
+                </div>
+            </div>
+            <!--预警信息统计-->
+            <div class="col-box1">
+                <div class="col-title">预警信息统计</div>
+                <div class="col-main ">
+                    <ul class="yjxxtj-title js-tab">
+                        <li class="on">有人统计</li>
+                        <li>无人统计</li>
+                    </ul>
+                    <div class="yjxxtj-box">
+                        <ul class="wgxc-box js-wgxcBox">
+                            <li>
+                                <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:30%"></span></div>
+                                <div class="wgxcName">南京</div>
+                            </li>
+                            <li>
+                                <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:59%"></span></div>
+                                <div class="wgxcName">苏州</div>
+                            </li>
+                            <li>
+                                <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:41%"></span></div>
+                                <div class="wgxcName">盐城</div>
+                            </li>
+                            <li>
+                                <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:20%"></span></div>
+                                <div class="wgxcName">扬州</div>
+                            </li>
+                            <li>
+                                <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:86%"></span></div>
+                                <div class="wgxcName">淮安</div>
+                            </li>
+                            <li>
+                                <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:67%"></span></div>
+                                <div class="wgxcName">宿迁</div>
+                            </li>
+                            <li>
+                                <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:30%"></span></div>
+                                <div class="wgxcName">南京</div>
+                            </li>
+                            <li>
+                                <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:30%"></span></div>
+                                <div class="wgxcName">南京</div>
+                            </li>
+                            <li>
+                                <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:30%"></span></div>
+                                <div class="wgxcName">南京</div>
+                            </li>
+                            <li>
+                                <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:59%"></span></div>
+                                <div class="wgxcName">苏州</div>
+                            </li>
+                            <li>
+                                <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:41%"></span></div>
+                                <div class="wgxcName">盐城</div>
+                            </li>
+                            <li>
+                                <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:20%"></span></div>
+                                <div class="wgxcName">扬州</div>
+                            </li>
+                            <li>
+                                <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:86%"></span></div>
+                                <div class="wgxcName">淮安</div>
+                            </li>
+                            <li>
+                                <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:67%"></span></div>
+                                <div class="wgxcName">宿迁</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--right-->
+        <div class="col">
+            <!--全市监控点位统计-->
+            <div class="col-box1">
+                <div class="col-title">
+                    全市监控点位统计
+                </div>
+                <div class="col-main">
+                    <div class="qsjk-box" id="qsjkdwEcharts">
+                        <!--全市监控点位-->
+                    </div>
+                </div>
+            </div>
+            <!--系统公告&资源下载-->
+            <div class="col-box1">
+                <div class="col-title">
+                    <ul class="xtggzlxz-box js-tab js-xtggzlxz">
+                        <li class="on">资源下载</li>
+                        <li>系统公告</li>
+                    </ul>
+                </div>
+                <div class="col-main" style=" height:calc(100% - 75px);padding:20px 0;overflow: hidden">
+                    <!--资源下载-->
+                    <div class="xtggzlxz-main js-upload">
+                        <div data-url="upload/结算单.docx" title="结算单.docx" class="zjzl-card" style="background: url('img/zjzl01.png')  no-repeat center left">结算单.docx</div>
+                        <div data-url="upload/继承或承受文件的证明.docx" title="继承或承受文件的证明.docx"  class="zjzl-card" style="background: url('img/zjzl01.png')  no-repeat center left">继承或承受文件的证明.docx</div>
+                        <div data-url="upload/授权明确委托书.ppt" title="授权明确委托书.ppt"  class="zjzl-card" style="background: url('img/zjzl03.png')  no-repeat center left">授权明确委托书.ppt</div>
+                        <div  data-url="upload/起诉书.jpg"  title="起诉书.jpg"  class="zjzl-card" style="background: url('img/zjzl02.png')  no-repeat center left">起诉书.jpg</div>
+                        <div  data-url="upload/委托人接受委托.rar" title="委托人接受委托.rar"  class="zjzl-card" style="background: url('img/zjzl04.png')  no-repeat center left">委托人接受委托.rar</div>
+                        <div data-url="upload/结算单.docx" title="结算单.docx" class="zjzl-card" style="background: url('img/zjzl01.png')  no-repeat center left">结算单.docx</div>
+                        <div data-url="upload/继承或承受文件的证明.docx" title="继承或承受文件的证明.docx"  class="zjzl-card" style="background: url('img/zjzl01.png')  no-repeat center left">继承或承受文件的证明.docx</div>
+                        <div data-url="upload/授权明确委托书.ppt" title="授权明确委托书.ppt"  class="zjzl-card" style="background: url('img/zjzl03.png')  no-repeat center left">授权明确委托书.ppt</div>
+                        <div  data-url="upload/起诉书.jpg"  title="起诉书.jpg"  class="zjzl-card" style="background: url('img/zjzl02.png')  no-repeat center left">起诉书.jpg</div>
+                        <div  data-url="upload/委托人接受委托.rar" title="委托人接受委托.rar"  class="zjzl-card" style="background: url('img/zjzl04.png')  no-repeat center left">委托人接受委托.rar</div>
+                    </div>
+                    <!--系统公告-->
+                    <div class="xtggzlxz-main" style="display: none">
+                        <ul class="xcspwt-box js-xtggScroll">
+                            <li>
+                                南京信息工程大学地铁站1号出口监控点南京信息工程大学地铁站1号出口监控点
+                            </li>
+                            <li>
+                                南京信息工程大学地铁站1号出口监控点南京信息工程大学地铁站1号出口监控点
+                            </li>
+                            <li>
+                                南京信息工程大学地铁站1号出口监控点南京信息工程大学地铁站1号出口监控点
+                            </li>
+                            <li>
+                                南京信息工程大学地铁站1号出口监控点南京信息工程大学地铁站1号出口监控点
+                            </li>
+                            <li>
+                                南京信息工程大学地铁站1号出口监控点南京信息工程大学地铁站1号出口监控点
+                            </li>
+                            <li>
+                                南京信息工程大学地铁站1号出口监控点南京信息工程大学地铁站1号出口监控点
+                            </li>
+                            <li>
+                                南京信息工程大学地铁站1号出口监控点南京信息工程大学地铁站1号出口监控点
+                            </li>
+                            <li>
+                                南京信息工程大学地铁站1号出口监控点南京信息工程大学地铁站1号出口监控点
+                            </li>
+                            <li>
+                                南京信息工程大学地铁站1号出口监控点南京信息工程大学地铁站1号出口监控点
+                            </li>
+                            <li>
+                                南京信息工程大学地铁站1号出口监控点南京信息工程大学地铁站1号出口监控点
+                            </li>
+                            <li>
+                                南京信息工程大学地铁站1号出口监控点南京信息工程大学地铁站1号出口监控点
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--预警信息推送弹框-->
+        <div class="yjxxts-tkbox js-yjxxtsTkbox">
+            <img src="img/12.png">
+            <div class="yjxxts-xqbox">
+                <div class="col-title">详情</div>
+                <div class="yjxxts-xqmain">
+                    <table>
+                        <tr>
+                            <td>监控点位</td>
+                            <td>地铁站</td>
+                        </tr>
+                        <tr>
+                            <td>预警时间</td>
+                            <td>2018-10-21</td>
+                        </tr>
+                        <tr>
+                            <td>预警类型</td>
+                            <td>无人在岗</td>
+                        </tr>
+                        <tr>
+                            <td>预警状态</td>
+                            <td>已处理</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+
+/**/
+/**/
+			 /**/
+
+html, head, meta, title, link, body, div, span, a, ul, li, ol, li, p, i, img, input, select, option, table, thead, tbody, tr, th, td, dl, dd, h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+ul li, ol li {
+	list-style: none;
+}
+body {
+    font-family: "Microsoft YaHei";
+}
+input {
+    outline: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+	border: none;
+}
+.pabsolute {
+	position: absolute;
+}
+.prelative {
+	position: relative;
+}
+.pstatic {
+	position: static;
+}
+.pfixed {
+	position: fixed;
+}
+
+img {
+	border-style:none;
+}
+.clear {
+	clear: both;
+}
+.logos .mesI2 {
+	margin: 0px 0 0 15px;
+	position:  absolute;
+	top: 23px;
+	width: 76px;
+}

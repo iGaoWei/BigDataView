@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>部门管理</title>
+    <link href="plugin/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="plugin/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+    <link href="css/zTreeStyle/zTreeStyle.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/table.css">
+
+</head>
+<body style="background-color: #e6ecf5;min-width: 1100px">
+<main class="main">
+    <!--头部-->
+    <header class="heared">
+        <span class="head-logo">前后台通用模板</span>
+        <ul class="head-ul"><li><a href="home.html" class="active-a">首页</a> </li>
+            <li><a href="videlctr.html">视频监控</a> </li>
+            <li><a href="map.html">地图管理</a> </li>
+            <li><a href="static.html">统计分析</a> </li>
+            <li><a href="form.html">表单信息</a> </li>
+            <li><a href="user.html">用户管理</a></li>
+            <li><a href="part.html">部门管理</a></li>
+            <li><a href="date.html">日程管理</a></li>
+
+        </ul>
+        <div class="head-right"><span id="time"></span><span>Admin</span></div>
+    </header>
+    <!--身体-->
+    <section class="section" >
+
+
+        <div class="l_left news_left">
+            <h6>部门目录</h6>
+            <div class="tree_left_top" style="height: 90%;overflow: auto">
+                <div class=" order_ztree l_left organize_ztree" style="width: 100%">
+                    <p><ul id="treeDemo" class="ztree"  style=" overflow:auto;margin-left: 20px"></ul></p>
+                </div>
+            </div>
+        </div>
+        <div class="l_left news_right">
+            <h6>部门详情</h6>
+            <div style="border-bottom: 1px #ccc solid;padding-bottom: 8px">
+                <p style="line-height: 24px;font-size: 14px;padding: 4px 0 0 36px ;color:#bb8940;background-image: url(img/ts_03.png);background-repeat: no-repeat;background-position: 10px 8px;font-weight: bold">温馨提示</p>
+                <ul class="ts">
+                    <li><span>*</span>该页面主要显示的是XXXX部门详情类容。</li>
+                    <li><span>*</span>该页面主要显示的是XXXX部门详情类容。</li>
+                </ul>
+            </div>
+            <div class="department_main">
+                <label>部门名称：</label><input type="text" disabled="disabled">
+                <label>部门编号：</label><input type="text" disabled="disabled">
+
+            </div>
+            <div class="department_main">
+                <label>上级部门：</label><input type="text" disabled="disabled">
+                <label>负责人：</label><input type="text" disabled="disabled">
+
+            </div>
+            <div class="department_main">
+                <label>部门简称：</label><input type="text" disabled="disabled">
+                <label>部门性质：</label><input type="text" disabled="disabled">
+
+            </div>
+            <div class="department_main">
+                <label>部门电话：</label><input type="text" disabled="disabled">
+                <label>分机号：</label><input type="text" disabled="disabled">
+
+            </div>
+            <div class="department_main">
+                <label>邮箱：</label><input type="text" disabled="disabled">
+                <label>传真：</label><input type="text" disabled="disabled">
+            </div>
+            <div class="department_main">
+                <label>部门人数：</label><input type="text" disabled="disabled">
+                <label>性别比例：</label><input type="text" disabled="disabled">
+            </div>
+            <div class="department_main">
+                <label>部门奖励：</label><input type="text" disabled="disabled">
+                <label>部门惩罚：</label><input type="text" disabled="disabled">
+            </div>
+            <div class="department_main">
+                <label style="float: left;line-height: 200px">部门备注：</label><textarea disabled="disabled"></textarea>
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </section>
+
+</main>
+<script src="js/jquery.js"></script>
+
+<script type="text/javascript" src="plugin/ztree/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript" src="plugin/ztree/jquery.ztree.excheck-3.5.js"></script>
+<script type="text/javascript" src="plugin/ztree/jquery.ztree.exedit-3.5.js"></script>
+
+<script src="js/organize.js"></script>
+
+<script>
+    $(function(){
+        $(".head-ul li a").click(function(){
+            $(this).addClass("active-a").parents("li").siblings().find("a").removeClass("active-a");
+            $(this).parents('li').find("ul").show();
+            $(this).parents("li").sibling().find("ul").hide();
+
+        })
+
+        getTime();
+    })
+//    格式化时间
+   function getTime(){
+       var day=new Date();
+       var year=day.getFullYear();
+       var moutth=day.getMonth()+1;
+       var date=day.getDate();
+       var hour=day.getHours();
+       var min=day.getMinutes();
+       var sec=day.getSeconds();
+       var str=year+'-'+moutth+'-'+date+' '+hour+":"+min+':'+sec;
+       $("#time").text(str);
+   }
+</script>
+</body>
+</html>

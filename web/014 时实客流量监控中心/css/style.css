@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box}
+*,body{padding:0px;	margin:0px;font-family: "微软雅黑";}
+body{color:#fff;font-size: 16px; background: #033c76;
+    background: -webkit-radial-gradient(50% 35%, farthest-corner,#0045d1,#072e7d,#002163);
+    background: radial-gradient(50% 35%, farthest-corner,#0045d1,#072e7d,#002163);
+}
+html,body{min-height: 100%;}
+li{ list-style-type:none;}
+table{}
+@font-face{font-family:electronicFont;src:url(../font/DS-DIGIT.TTF)}
+i{ margin:0px; padding:0px; text-indent:0px;}
+img{ border:none; max-width: 100%;}
+a{ text-decoration:none; color:#fff;}
+a.active,a:focus{ outline:none!important; text-decoration:none;}
+ol,ul,p,h1,h2,h3,h4,h5,h6{ padding:0; margin:0}
+a:hover{ color:#06c; text-decoration: none!important}
+.clearfix:after, .clearfix:before {display: table;content: " "}
+ .clearfix:after {clear: both}
+.pulll_left{float:left;}
+.pulll_right{float:right;}
+i{font-style: normal;}
+.text-w{color: #ffe400}
+.text-d{color: #ff6316}
+.text-s{color: #14e144}
+.text-b{color: #07e5ff}
+
+
+.mainbox{padding:10px;}
+.nav1{margin-left: -6px; margin-right:-6px;}
+.nav1>li{padding:0 6px; float: left;}
+
+.box{ border:2px solid #005ce8; box-shadow:inset 0 0 10px rgba(7,118,181,.4); margin-bottom: 12px; position: relative; border-radius: 7px;}
+
+.box:before{position: absolute; width: calc(100% - 6px); height:calc(100% - 6px);border:2px solid #005ce8; left:1px; top:1px; content: ""; border-radius: 5px; opacity: .6; z-index: 1000; pointer-events: none;}
+
+.boxnav{padding: 10px;}
+
+.tit{ text-align: center;}
+.tit span{ display: inline-block; background: url(../images/titbg.png) repeat-x; position: relative; height: 27px; line-height: 24px;}
+.tit span:before{ content: ""; background: url(../images/titleft.png); display: inline-block; vertical-align: middle; width: 50px; height: 27px;position: absolute;  left: -50px; top: 0;}
+.tit span:after{ content: ""; background: url(../images/titright.png) no-repeat; display: inline-block; vertical-align: middle;width: 50px; height: 27px; position: absolute;  right: -50px; top: 0;}
+
+
+.mapc{background: url(../images/bg3.png) no-repeat center center; background-size: 100% 100%}
+.map{position: relative; height: 100%; padding-left: 10%;}
+.map img{}
+.mapnav{position: absolute;z-index: 10;}
+
+.anchorBL{display: none;}
+.tongji h1 {font-size: 24px; text-align: center; color: rgba(255,255,255,.6); padding-bottom: 10px; margin-bottom: 10px; border-bottom: 1px dotted  rgba(255,255,255,.1); letter-spacing: 3px;}
+.tongji h1 span{font-family:electronicFont; font-size: 48px; display: inline-block; padding: 0 10px; color: rgba(255,255,255,1)}
+.tongji ul{ display: flex; justify-content:space-between; padding: 0 20px;}
+.tongji li{color: rgba(255,255,255,.6); }
+.tongji li span{color: rgba(255,255,255,1); font-size:30px;font-family:electronicFont;}
+.face01{position: relative}
+.face01 li{float: left; width: 25%; font-size: 12px; padding: 0 5px; text-align: center; position: relative;}
+.face01 li img{ display: block;}
+
+.face01 li p{padding:0 0 8px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+.face02{margin-left: -6px; margin-right: -6px; position: relative;}
+.face02 li{float: left; width: 50%; padding:0  10px;}
+.face02 p{font-size: 12px;padding:2px 0 8px 0; text-align: center;white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.facedb{ display: flex; position: relative; justify-content: space-between;}
+img{display: block;}
+.facedb>div{ border: 2px solid rgba(255,255,255,.2); width: 48%;}
+.facedb span{ position: absolute; width: 50px; height: 50px; border-radius: 50px; background: #3566e3; color: #fff; text-align: center; line-height: 50px; left: 50%; top: 50%; margin-left: -25px; margin-top: -30px;}
+
+
+.table1 th{ border-bottom: 1px solid #407abd; font-size: 14px; text-align: center; padding: 6px 0; color: rgba(255,255,255,.8)}
+.table1 td{ border-bottom: 1px dotted#407abd;font-size: 12px; padding:6px 0;text-align: center; color: rgba(255,255,255,.6)}
+.table1 tr:last-child td{border: none;}
+.scolldiv{overflow: hidden; display: flex; align-items: flex-end}
+
+.videobox{height: 100%; width: 100%; display: none;}
+.maptab{position: absolute; right: 10px; top: 10px; z-index: 1000; font-size:0; border-radius: 5px; overflow: hidden;}
+
+.videobox ul{ height: 100%; padding: 5px;}
+.videobox li{ float: left; width: 50%; padding: 5px; height: 50%}
+.videobox li video,.ckin__player{height: 100%;    object-fit: fill;}
+.maptab a{display: inline-block; background: #ddd; color: #444; font-size: 12px; padding: 5px 10px;}
+.maptab a.active{background:#3566e3; color: #fff;}
+
+.map_tool_outbox{
+    width: 100%;
+    background:rgba(0,0,0,.2);
+    height:50px;
+    cursor: auto;
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 0px 0px 5px 5px; text-align: center;
+}
+.map_tool{
+    display:inline-block;
+    width: 40px;
+    height: 100%;
+    margin-left: 8px;
+    cursor: pointer;
+
+}
+.map_tool:hover{
+    background:rgba(0,0,0,.5);
+}
+
+.map_tool_inner{
+    display: block;
+    width: 36px; height: 100%;
+    background-image: url("../images/tool.png");
+    background-repeat: no-repeat;
+    margin-left: 2px;
+    background-position-y: 7px;
+}
+.news{display: none;}
+.news li{padding: 15px; border-bottom: 1px dotted rgba(255,255,255,.2);}
+.news li h3{ display: block;white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 14px; }
+.news li p{font-size: 12px; opacity: .5}
+
+.loading{position:fixed; left:0; top:0; font-size:16px; z-index:100000000;width:100%; height:100%; background:#002163; text-align:center;}
+.loadbox{position:absolute; width:160px;height:150px; color: rgba(255,255,255,.6); left:50%; top:50%; margin-top:-100px; margin-left:-75px;}
+.loadbox img{ margin:10px auto; display:block; width:40px;}
+ 
+
+
+
+
+
+
+
+
+
+
+

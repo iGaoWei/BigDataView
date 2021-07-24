@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>全息档案</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="../content/ui/global/bootstrap/css/bootstrap.css">
+   	<link rel="stylesheet" href="../js/public/liMarquee.css">
+   	<link rel="stylesheet" href="../css/test.css">
+    <!-- Font Awesome -->
+    <link href="../content/ui/global/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../content/adminlte/dist/css/AdminLTE.css">
+    <link rel="stylesheet" href="../content/adminlte/dist/css/skins/_all-skins.min.css">
+    <link href="../content/min/css/supershopui.common.min.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="../content/plugins/iCheck/flat/blue.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ 	<!--<link href="../../content/plugins/bootstrap-table/bootstrap-table.css" rel="stylesheet" />
+  	<link href="../../content/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />-->
+  	<!--地图  -->  
+  	<!--<link rel="stylesheet" href="../../css/public/query-ui.css">-->
+<meta charset="utf-8" />
+	
+<style>
+	html{
+		overflow-x: auto;
+	}
+	body{
+		/*background:url(../images/sy/bg.png) repeat;*/
+		color:#D4D7DC;
+		padding: 0;
+		width: 1920px;
+		margin: 0px;
+		font-size: 16px;
+		overflow-x: auto;
+	}
+	.col-md-9{
+		padding: 0;
+	}
+	.content{
+		padding: 0;
+		margin: 0;
+	}
+	.row{
+		margin: 0;
+		padding: 0;
+	}
+	.ssk{
+		float: left;
+		color:#05D6AC;
+	}
+	#table_1 li{
+		list-style: none;
+		width: 1184px;
+		height: 34px;
+		background: url('../img/qxda/blt.png') no-repeat 0 0;
+		background-size:100% 100%;
+		margin-bottom: 10px;
+		padding-top: 5px;
+	}
+	#xwsx li{
+		list-style: none;
+		height: 30px;
+		clear: both;
+	}
+	#rcxw li{
+		list-style: none;
+		height: 30px;
+		clear: both;
+	}
+	#jbsx li{
+		list-style: none;
+		height: 30px;
+		clear: both;
+	}
+	
+	#shsj li{
+		list-style: none;
+		height: 30px;
+		clear: both;
+	}
+	
+	#gjdx li{
+		list-style: none;
+		height: 30px;
+		clear: both;
+	}
+	
+	#gxry li{
+		list-style: none;
+		height: 30px;
+		clear: both;
+	}
+	.col-md-3{
+		padding: 0;
+	}
+	#pmd_1{
+		height: 1px;
+		width: 20px;
+		opacity: .3;
+		box-shadow: 0px 3px 6px white;
+		background: white;
+		/*border: 1px solid red;*/
+		top: 35px;
+    	left: 56px;
+    	animation:3s linear 0s normal infinite rotate;
+    	animation-direction: alternate;
+    	border-radius: 3px;
+	}
+#pmd_2{
+		height: 1px;
+		width: 20px;
+		opacity: .3;
+		box-shadow: 0px 3px 6px white;
+		background: white;
+		/*border: 1px solid red;*/
+		top: 78px;
+    	left: 56px;
+    	animation:3s linear 0s normal infinite rotate;
+    	animation-direction: alternate;
+    	border-radius: 3px;
+	}
+@keyframes rotate{
+	0%{
+  	left: 56px;
+  	height: 1px;
+  }
+50%{
+  	left: 176px;
+  	height: 3px;
+  }
+  100%{
+  	left: 282px;
+  	height: 1px;
+  }
+}
+/*
+ * 人头
+ */
+#rt{
+	animation:2s linear 0s normal rt;
+}
+@keyframes rt{
+	0%{
+  	transform: scale(.3);
+  }
+  100%{
+  	transform: scale(.8);
+  }
+}
+/*
+ * 小人头
+ */
+.rt_1{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	margin-left: 10px;
+	    cursor: pointer;
+}
+.rt_2{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	margin-left: 50px;
+	    cursor: pointer;
+}
+.rt_1:hover,.rt_2:hover{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	z-index:100;
+}
+/*水波纹*/
+@-webkit-keyframes opac{  
+        from {  
+            opacity: 1;  
+            width:0;  
+            height:0;  
+            top:115px;  
+            left:875px;  
+        }  
+        to {  
+            opacity : 0;  
+            width:100%;  
+            height:100%;  
+            top:0;  
+            left:0;  
+        }  
+    }  
+    .animate #q1{  
+        -webkit-animation-delay:0s;  
+    }  
+    .animate #q2{  
+        -webkit-animation-delay:1s;  
+    }  
+    .animate #q3{  
+        -webkit-animation-delay:2s;  
+    } 
+    .animate #q4{  
+        -webkit-animation-delay:3s;  
+    }   
+    .animate #q5{  
+        -webkit-animation-delay:4s;  
+    }  
+    .animate #q6{  
+        -webkit-animation-delay:5s;  
+    } 
+    /*.animate #q7{  
+        -webkit-animation-delay:7s;  
+    } */
+    .wave{  
+        width: 1750px;
+    	height: 230px;
+        position: absolute;  
+        top: 291px;  
+        left: 0px;  
+        right: 0;  
+        margin: 0 auto;  
+    }
+    .wave *{  
+        position:absolute;  
+        -webkit-animation:opac 5s infinite;  
+        opacity: 0;
+    } 
+    
+    .jbsx_bak,.shsj_bak,.rcxw_bak,.gjdx_bak,.xwsx_bak,.gxry_bak{  
+        opacity: 0;
+    }
+    
+    /*基本属性*/
+    #pmd_jbsx{
+		        height: 20px;
+				width: 3px;
+				opacity: .5;
+				box-shadow: 0px 11px 12px #7afc62;
+				background: #7afc62;
+		    /* border: 1px solid red; */
+		    top: 79px;
+		    left: 151px;
+		    animation: 3s linear 0s normal infinite rotate_jbsx;
+		    animation-direction: alternate;
+		    border-radius: 3px;
+		    z-index: 99;
+	} 
+	@keyframes rotate_jbsx{
+		0%{
+	  	top: 79px;
+	  }
+	  100%{
+	  	top: 310px;
+	  }
+	}
+	/*日常行为*/
+	 #pmd_rcxw{
+		    height: 20px;
+		    width: 3px;
+		    opacity: .5;
+    		box-shadow: 0px 11px 12px #7afc62;
+		    background: #7afc62;
+		    /* border: 1px solid red; */
+		    top: 79px;
+		    left: 152px;
+		    animation: 3s linear 0s normal infinite rotate_rcxw;
+		    animation-direction: alternate;
+		    border-radius: 3px;
+		    z-index: 99;
+	} 
+	@keyframes rotate_rcxw{
+		0%{
+	  	top: 79px;
+	  }
+	  100%{
+	  	top: 270px;
+	  }
+	}
+	/*行为属性*/
+	#pmd_xwsx{
+		    height: 20px;
+		    width: 3px;
+		    /* opacity: .5; */
+		    box-shadow: 0px 11px 12px #7afc62;
+		    background: #7afc62;
+		    /* border: 1px solid red; */
+		    top: 79px;
+		    left: 152px;
+		    animation: 3s linear 0s normal infinite rotate_xwsx;
+		    animation-direction: alternate;
+		    border-radius: 3px;
+		    z-index: 99;
+	} 
+	@keyframes rotate_xwsx{
+		0%{
+	  	top: 79px;
+	  }
+	  100%{
+	  	top: 230px;
+	  }
+	}
+	/*生活数据*/
+	#pmd_shsj{
+		    height: 20px;
+		    width: 3px;
+		    opacity: .5;
+    		box-shadow: 0px 11px 12px #7afc62;
+		    background: #7afc62;
+		    /* border: 1px solid red; */
+		    top: 79px;
+		    left: 22px;
+		     animation: 3s linear 0s normal infinite rotate_shsj;
+		    animation-direction: alternate;
+		    border-radius: 3px;
+		    z-index: 99;
+	} 
+	@keyframes rotate_shsj{
+		0%{
+	  	top: 79px;
+	  }
+	  100%{
+	  	top: 275px;
+	  }
+	}
+	/*轨迹动向*/
+	#pmd_gjdx{
+		    height: 20px;
+		    width: 3px;
+		    opacity: .5;
+    		box-shadow: 0px 11px 12px #7afc62;
+		    background: #7afc62;
+		    /* border: 1px solid red; */
+		    top: 79px;
+		    left: 22px;
+		     animation: 3s linear 0s normal infinite rotate_gjdx;
+		    animation-direction: alternate;
+		    border-radius: 3px;
+		    z-index: 99;
+	} 
+	@keyframes rotate_gjdx{
+		0%{
+	  	top: 79px;
+	  }
+	  100%{
+	  	top: 275px;
+	  }
+	}
+	/*关系人员*/
+	#pmd_gxry{
+		    height: 20px;
+		    width: 3px;
+		    opacity: .5;
+    		box-shadow: 0px 11px 12px #7afc62;
+		    background: #7afc62;
+		    /* border: 1px solid red; */
+		    top: 79px;
+		    left: 22px;
+		     animation: 3s linear 0s normal infinite rotate_gxry;
+		    animation-direction: alternate;
+		    border-radius: 3px;
+		    z-index: 99;
+	} 
+	@keyframes rotate_gxry{
+		0%{
+	  	top: 79px;
+	  }
+	  100%{
+	  	top: 230px;
+	  }
+	}
+	
+	/*文字抖动*/
+@-webkit-keyframes shake {
+     0%{
+         -webkit-transform:translate(2px, 2px);
+     }
+     25%{
+         -webkit-transform:translate(-2px, -2px);
+     }
+     50%{
+     	         -webkit-transform:translate(0px, 0px);
+     }
+     75%{
+         -webkit-transform:translate(2px, -2px);
+     }
+     100%{
+         -webkit-transform:translate(-2px, 2px);
+     }
+ }	
+ @keyframes shake {
+     0%{
+         transform:translate(2px, 2px);
+     }
+     25%{
+         transform:translate(-2px, -2px);
+     }
+     50%{
+         transform:translate(0px, 0px);
+     }
+     75%{
+         transform:translate(2px, -2px);
+     }
+     100%{
+         transform:translate(-2px, 2px);
+     }
+ }
+ .shake_qxda{
+     position: relative;
+     z-index: 99;
+     cursor: pointer;
+ }
+ /*.shake_qxda:hover{
+     -webkit-animation:shake 0.2s forwards;
+     animation:shake 0.2s forwards;
+     color: #05D6AC;
+ }*/
+</style>
+
+
+
+</head>
+<body>
+<!-- Main content -->
+<section class="content">
+ <div class="row" style="width: 1920px;height: 1080px;background: red;padding: 0px;background: url('../img/qxda/qxbj.png') no-repeat 0 0;background-size:100% 100%;">
+ 	<div class="row" style="height: 150px;width: 100%;">
+ 		<div style="width: 100%;height: 94px;background: transparent;text-align: center;">
+ 			<!--<img src="../img/qxda/qxz.png" style="margin-top: 45px;"/>-->
+ 		</div>
+		<div style="width: 833px;height: 25px;background: url('../img/qxda/ssk.png') no-repeat 0 0;background-size:100% 100%;margin: 0 auto;";>
+			<div class="ssk" style="width: 303px;padding-top: 3px;">
+				<span style="margin-left: 20px;">数据范围</span>
+				<span style="margin-left: 30px;">2017-12-01</span>
+			</div>
+			<div class="ssk" style="margin-left: 13px;height: 24px;width: 303px;text-align: center;padding-top: 3px;">
+				2017-12-07
+			</div>
+			<div class="ssk" style="margin-left: 13px;height: 24px;width: 185px;text-align: center;padding-top: 3px;"> 
+				查询
+			</div>
+		</div>
+ 	</div>
+	<div class="row wd" style="height: 551px;width: 100%;">
+		<div style="width: 90%;height: 100%;margin: 0 auto;">
+			<div style="width: 40%;float: left;">
+				<div class="col-md-3 col-md-offset-2 xwsx_bak" >
+					<div class="row" style="height: 80px;text-align: right;padding-top: 50px;">
+						行为属性
+					</div>
+					<div id="pmd_xwsx" style="position: absolute;">
+					</div>
+					<div class="row" style="height: 441px;">
+						<ul id="xwsx" style="padding-left: 0px;">
+							<li>
+								<div class="col-md-9" style="text-align: right;"></div>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+							</li>
+							<li>
+								<div class="col-md-9 shake_qxda" style="text-align: right;">话单记录</div>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+							</li>
+							<li>
+								<div class="col-md-9 shake_qxda" style="text-align: right;">邮寄物流</div>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+							</li>
+							<li>
+								<div class="col-md-9 shake_qxda" style="text-align: right;">消费记录</div>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+							</li>
+							<li>
+								<div class="col-md-9" style="text-align: right;"></div>
+								<div class="col-md-3"><img src="../img/qxda/sx_bottom.png"></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 rcxw_bak">
+					<div class="row" style="height: 80px;text-align: right;padding-top: 50px;">
+						日常行为
+					</div>
+					<div id="pmd_rcxw" style="position: absolute;">
+					</div>
+					<div class="row" style="height: 441px;">
+						<ul id="rcxw" style="padding-left: 0px;">
+							<li>
+								<div class="col-md-9" style="text-align: right;"></div>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+							</li>
+							<li>
+								<div class="col-md-9 shake_qxda" style="text-align: right;">经常活动地</div>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+							</li>
+							<li>
+								<div class="col-md-9 shake_qxda" style="text-align: right;">车辆往返地</div>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+							</li>
+							<li>
+								<div class="col-md-9 shake_qxda" style="text-align: right;">经常消费地</div>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+							</li>
+							<li>
+								<div class="col-md-9 shake_qxda" style="text-align: right;">节点上访地</div>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+							</li>
+							<li>
+								<div class="col-md-9" style="text-align: right;"></div>
+								<div class="col-md-3"><img src="../img/qxda/sx_bottom.png"></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 jbsx_bak">
+					<div class="row" style="height: 80px;text-align: right;padding-top: 50px;">
+						基本属性
+					</div>
+					<div id="pmd_jbsx" style="position: absolute;">
+					</div>
+					<div class="row" style="height: 441px;">
+						<ul id="jbsx" style="padding-left: 0px;">
+							<li>
+								<div class="col-md-9" style="text-align: right;"></div>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+							</li>
+							<li>
+								<div class="col-md-9 shake_qxda" style="text-align: right;">联系方式</div>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+							</li>
+							<li>
+								<div class="col-md-9 shake_qxda" style="text-align: right;">居住地址</div>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+							</li>
+							<li>
+								<div class="col-md-9 shake_qxda" style="text-align: right;">工作单位</div>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+							</li>
+							<li>
+								<div class="col-md-9 shake_qxda" style="text-align: right;">证件号码</div>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+							</li>
+							<li>
+								<div class="col-md-9 shake_qxda" style="text-align: right;">虚拟身份</div>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+							</li>
+							<li>
+								<div class="col-md-9" style="text-align: right;"></div>
+								<div class="col-md-3"><img src="../img/qxda/sx_bottom.png"></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div style="width: 20%;float: left;">
+				<div class="row" style="height: 80px;position: relative;">
+					<div style="text-align: center;">
+						<span style="font-size: 18px">彭西晏/男/吸毒人员/已关注</span>
+						<img class="rt_1" src="../img/qxda/person.jpg" />
+						<img class="rt_2" src="../img/qxda/person2.jpg" />
+					</div>
+					<div style="text-align: center;">
+						<img  src="../img/qxda/hx.png"/></br>
+						<span style="font-size: 16px">321234567342112</span></br>
+						<img  src="../img/qxda/hx.png"/>
+					</div>
+					<div id="pmd_1" style="position: absolute;">
+					</div>
+					<div id="pmd_2" style="position: absolute;">
+					</div>
+				</div>
+				<div class="row" style="height: 441px;text-align: center;">
+					<img id="rt" src="../img/qxda/rt.png" style="transform:scale(.8)"/>
+				</div>
+			</div>
+			<div style="width: 40%;float: left;">
+				<div class="col-md-3 col-md-offset-1 shsj_bak">
+					<div class="row" style="height: 80px;text-align: left;padding-top: 50px;">
+						生活数据
+					</div>
+					<div id="pmd_shsj" style="position: absolute;">
+					</div>
+					<div class="row" style="height: 441px;">
+						<ul id="shsj" style="padding-left: 0px;">
+							<li>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+								<div class="col-md-9" style="text-align: left;"></div>
+							</li>
+							<li>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+								<div class="col-md-9 shake_qxda" style="text-align: left;">医保卡号</div>
+							</li>
+							<li>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+								<div class="col-md-9 shake_qxda" style="text-align: left;">房屋信息</div>
+							</li>
+							<li>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+								<div class="col-md-9 shake_qxda" style="text-align: left;">车辆信息</div>
+							</li>
+							<li>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+								<div class="col-md-9 shake_qxda" style="text-align: left;">燃气缴费</div>
+							</li>
+							<li>
+								<div class="col-md-3"><img src="../img/qxda/sx_bottom.png"></div>
+								<div class="col-md-9" style="text-align: right;"></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 gjdx_bak">
+					<div class="row" style="height: 80px;text-align: left;padding-top: 50px;">
+						轨迹动向
+					</div>
+					<div id="pmd_gjdx" style="position: absolute;">
+					</div>
+					<div class="row" style="height: 441px;">
+						<ul id="gjdx" style="padding-left: 0px;">
+							<li>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+								<div class="col-md-9" style="text-align: left;"></div>
+							</li>
+							<li>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+								<div class="col-md-9 shake_qxda" style="text-align: left;">室内活动</div>
+							</li>
+							<li>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+								<div class="col-md-9 shake_qxda" style="text-align: left;">流入流出</div>
+							</li>
+							<li>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+								<div class="col-md-9 shake_qxda" style="text-align: left;">敏感时段动向</div>
+							</li>
+							<li>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+								<div class="col-md-9 shake_qxda" style="text-align: left;">重点部位</div>
+							</li>
+							<li>
+								<div class="col-md-3"><img src="../img/qxda/sx_bottom.png"></div>
+								<div class="col-md-9" style="text-align: right;"></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 gxry_bak">
+					<div class="row" style="height: 80px;text-align: left;padding-top: 50px;">
+						关系人员
+					</div>
+					<div id="pmd_gxry" style="position: absolute;">
+					</div>
+					<div class="row" style="height: 441px;">
+						<ul id="gxry" style="padding-left: 0px;">
+							<li>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+								<div class="col-md-9" style="text-align: left;"></div>
+							</li>
+							<li>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+								<div class="col-md-9 shake_qxda" style="text-align: left;">亲属关系</div>
+							</li>
+							<li>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+								<div class="col-md-9 shake_qxda" style="text-align: left;">社会关系</div>
+							</li>
+							<li>
+								<div class="col-md-3"><img src="../img/qxda/sx_center.png"></div>
+								<div class="col-md-9 shake_qxda" style="text-align: left;">同行同住</div>
+							</li>
+							<li>
+								<div class="col-md-3"><img src="../img/qxda/sx_bottom.png"></div>
+								<div class="col-md-9" style="text-align: right;"></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div style="position: absolute;" >
+				<div class="animate wave">
+					<img id="q1" src="../img/qxda/q1.png"  style="position: absolute;top: 360px;left: 395px;"/>
+					<img id="q2" src="../img/qxda/q2.png" style="position: absolute;top: 345px;left: 325px;"/>
+					<img id="q3" src="../img/qxda/q3.png" style="position: absolute;top: 333px;left: 255px;"/>
+					<img id="q4" src="../img/qxda/q4.png" style="position: absolute;top: 320px;left: 185px;"/>
+					<img id="q5" src="../img/qxda/q5.png" style="position: absolute;top: 306px;left: 90px;"/>
+					<img id="q6" src="../img/qxda/q6.png" style="position: absolute;top: 275px;left: -39px;"/>
+				</div>
+				
+				
+				<!--<div id="pmd_gq_1" style="position: absolute;">
+				</div>
+				<div id="pmd_gq_6" style="position: absolute;">
+				</div>-->
+				<!--<svg height="551" width="1920">
+					<ellipse cx="845" cy="410" rx="300" ry="50" style="fill:transparent;stroke:green;stroke-width: 5; stroke-dasharray: 5,5;"></ellipse>
+					<ellipse cx="845" cy="410" rx="350" ry="70" style="fill:transparent;stroke:green;stroke-width: 5; stroke-dasharray: 5,5;"></ellipse>
+					<ellipse cx="845" cy="410" rx="400" ry="90" style="fill:transparent;stroke:green;stroke-width: 5; stroke-dasharray: 5,5;"></ellipse>
+					<ellipse cx="845" cy="410" rx="300" ry="50" style="fill:transparent;stroke:green;stroke-width: 5; stroke-dasharray: 5,5;"></ellipse>
+					<ellipse cx="845" cy="410" rx="300" ry="50" style="fill:transparent;stroke:green;stroke-width: 5; stroke-dasharray: 5,5;"></ellipse>
+					<ellipse cx="845" cy="410" rx="300" ry="50" style="fill:transparent;stroke:green;stroke-width: 5; stroke-dasharray: 5,5;"></ellipse>
+				</svg>-->
+			</div>
+			<div style="position: absolute;">
+				<img id="q7" src="../img/qxda/gq.png" style="position: absolute;top: 227px;left: -24px;"/>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="height: 379px;width: 100%;">
+		<div style="width: 1205px;height: 323px;background: url('../img/qxda/blk.png') no-repeat 0 0;background-size:100% 100%;margin: 0 auto;">
+			<div style="width: 1184px;padding-left: 10px;height: 55px;padding-top: 20px;">
+				<div class="col-md-2">姓名</div>
+				<div class="col-md-1">性别</div>
+				<div class="col-md-4">身份证号码</div>
+				<div class="col-md-1">出发地</div>
+				<div class="col-md-1">目的地</div>
+				<div class="col-md-1">发现地点</div>
+				<div class="col-md-1">发现时间</div>
+				<div class="col-md-1">轨迹类型</div>
+			</div>
+			<ul style="padding-left: 10px;" id="table_1">
+				<!--<li>
+					<div class="col-md-1">彭西晏</div>
+					<div class="col-md-1">男</div>
+					<div class="col-md-5">321234567342112</div>
+					<div class="col-md-1">银川</div>
+					<div class="col-md-1">北京</div>
+					<div class="col-md-1">宾馆</div>
+					<div class="col-md-1">2018/5/04</div>
+					<div class="col-md-1">飞机</div>
+				</li>
+				<li>
+					<div class="col-md-1">彭西晏</div>
+					<div class="col-md-1">男</div>
+					<div class="col-md-5">321234567342112</div>
+					<div class="col-md-1">银川</div>
+					<div class="col-md-1">北京</div>
+					<div class="col-md-1">网吧</div>
+					<div class="col-md-1">2018/5/08</div>
+					<div class="col-md-1">火车</div>
+				</li>
+				<li>
+					<div class="col-md-1">彭西晏</div>
+					<div class="col-md-1">男</div>
+					<div class="col-md-5">321234567342112</div>
+					<div class="col-md-1">银川</div>
+					<div class="col-md-1">新疆</div>
+					<div class="col-md-1">卡口</div>
+					<div class="col-md-1">2018/5/22</div>
+					<div class="col-md-1">飞机</div>
+				</li>
+				<li>
+					<div class="col-md-1">彭西晏</div>
+					<div class="col-md-1">男</div>
+					<div class="col-md-5">321234567342112</div>
+					<div class="col-md-1">银川</div>
+					<div class="col-md-1">杭州</div>
+					<div class="col-md-1">网吧</div>
+					<div class="col-md-1">2018/5/23</div>
+					<div class="col-md-1">大巴</div>
+				</li>
+				<li>
+					<div class="col-md-1">彭西晏</div>
+					<div class="col-md-1">男</div>
+					<div class="col-md-5">321234567342112</div>
+					<div class="col-md-1">银川</div>
+					<div class="col-md-1">北京</div>
+					<div class="col-md-1">宾馆</div>
+					<div class="col-md-1">2018/5/24</div>
+					<div class="col-md-1">火车</div>
+				</li>
+				<li>
+					<div class="col-md-1">彭西晏</div>
+					<div class="col-md-1">男</div>
+					<div class="col-md-5">321234567342112</div>
+					<div class="col-md-1">银川</div>
+					<div class="col-md-1">北京</div>
+					<div class="col-md-1">宾馆</div>
+					<div class="col-md-1">2018/5/29</div>
+					<div class="col-md-1">飞机</div>
+				</li>
+				-->
+			</ul>
+		</div>
+		<div style="width: 1920px;height: 56px;background: url('../img/qxda/bottom_bak.png') no-repeat 0 0;background-size:100% 100%;text-align: center;">
+			<div style="padding-top: 20px;width: 253px;margin: 0 auto;">
+				<div style="float: left;margin-left: 85px;" class="titles">流入流出</div>
+			</div>
+			
+		</div>
+	</div>
+      
+      
+     
+			
+ </div>
+        
+
+</section>
+<!-- ./wrapper -->
+
+ 
+ 
+ 
+ 
+
+<script src="../content/ui/global/jQuery/jquery.min.js"></script>
+<script src="../js/echarts/echartsNew.min.js"></script>
+
+
+<script src="../js/function/pie_mode.js" charset="utf-8"></script> 
+<script src="../js/function/bar_model.js" charset="utf-8"></script> 
+<script src="../js/public/num.js" charset="utf-8"></script> 
+<!--<!--<script src="./js/public/jquery.vticker.min.js" charset="utf-8"></script>-->
+<script src="../js/jquery.liMarquee.js" charset="utf-8"></script> 
+
+
+<!--<script src="./js/public/jquery.liMarquee.js" charset="utf-8"></script>--> 
+
+
+<!--<script src="./js/function/map_1.js" charset="utf-8"></script>--> 
+
+<script type="text/javascript">
+	/*6个维度依次显示*/
+	$(".jbsx_bak").animate({opacity: 1},1000);
+	$(".rcxw_bak").animate({opacity:1},2000);
+	$(".xwsx_bak").animate({opacity:1},3000);
+	$(".shsj_bak").animate({opacity: 1},1000);
+	$(".gjdx_bak").animate({opacity:1},2000);
+	$(".gxry_bak").animate({opacity:1},3000);
+	//文字点击效果
+	$(".shake_qxda").click(function(){
+		$('.shake_qxda').css({color: 'white',animation:''});
+		$(this).css({animation:'shake 1s forwards',color: '#05D6AC'})
+		getTable_1($(this).text());
+		$(".titles").html($(this).text())
+	})
+getTable_1('');	
+function getTable_1(t){
+	var html_data='';
+	for(var i=0;i<6;i++){
+		html_data+='<li>'+
+					'<div class="col-md-2">彭西晏_'+t+'</div>'+
+					'<div class="col-md-1">男</div>'+
+					'<div class="col-md-4">321234567342112</div>'+
+					'<div class="col-md-1">银川</div>'+
+					'<div class="col-md-1">北京</div>'+
+					'<div class="col-md-1">宾馆</div>'+
+					'<div class="col-md-1">2018/5/04</div>'+
+					'<div class="col-md-1">飞机</div>'+
+				'</li>';
+	}
+	$("#table_1").html(html_data)
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+/*修改默认样式*/
+.row{
+	margin-left: 0px;
+	margin-right:0px;
+}
+/*自定义样式*/
+div.myTitle{
+	text-align: center;
+	padding-top: 12px;
+	padding-bottom: 6px;
+}
+#device_type{
+	margin-top: 15px;
+	background-color:rgba(0, 0, 0, 0);
+}
+#device_type>li{
+	list-style: none;
+	display: inline-block;
+	width: 50%;
+	height: 40px;
+	line-height: 40px;
+	/*padding-left: 15px;*/
+	text-align: center;
+	border-top:1px dotted #ccc;
+	border-bottom: 1px solid #ccc;
+	background-color: white;
+	color:black;
+}
+tr.active-nova>td{
+	background-color:#64CFA7 !important;/*原来的颜色abcdff*/
+}

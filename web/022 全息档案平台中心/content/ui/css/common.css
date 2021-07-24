@@ -1,0 +1,170 @@
+﻿
+/***
+UI Loading
+***/
+.loading-message {
+  display: inline-block;
+  min-width: 125px;
+  margin-left: -60px;
+  padding: 10px;
+  margin: 0 auto;
+  color: #000 !important;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle; }
+  .loading-message.loading-message-boxed {
+    border: 1px solid #ddd;
+    background-color: #eee;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1); }
+  .loading-message > span {
+    line-height: 20px;
+    vertical-align: middle; }
+
+.page-loading {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 125px;
+  margin-left: -60px;
+  margin-top: -30px;
+  padding: 7px;
+  text-align: center;
+  color: #333;
+  font-size: 13px;
+  border: 1px solid #ddd;
+  background-color: #eee;
+  vertical-align: middle;
+  -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1); }
+  .page-loading > span {
+    line-height: 20px;
+    vertical-align: middle; }
+
+.page-spinner-bar {
+  position: fixed;
+  z-index: 10051;
+  width: 100px;
+  top: 40%;
+  left: 50%;
+  margin-left: -55px;
+  text-align: center; }
+  .page-spinner-bar > div {
+    margin: 0 5px;
+    width: 18px;
+    height: 18px;
+    background: #eee;
+    border-radius: 100% !important;
+    display: inline-block;
+    -webkit-animation: bounceDelay 1.4s infinite ease-in-out;
+    animation: bounceDelay 1.4s infinite ease-in-out;
+    /* Prevent first frame from flickering when animation starts */
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both; }
+  .page-spinner-bar .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s; }
+  .page-spinner-bar .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s; }
+
+.block-spinner-bar {
+  display: inline-block;
+  width: 80px;
+  text-align: center; }
+  .block-spinner-bar > div {
+    margin: 0 2px;
+    width: 15px;
+    height: 15px;
+    background: #eee;
+    border-radius: 100% !important;
+    display: inline-block;
+    -webkit-animation: bounceDelay 1.4s infinite ease-in-out;
+    animation: bounceDelay 1.4s infinite ease-in-out;
+    /* Prevent first frame from flickering when animation starts */
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both; }
+  .block-spinner-bar .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s; }
+  .block-spinner-bar .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s; }
+
+
+  /****
+ CSS3 Spinner Bar
+****/
+.page-spinner-bar > div,
+.block-spinner-bar > div {
+  background: #4bccd8; }
+
+
+/***
+Bootstrap Select
+***/
+.bootstrap-select .btn {
+  border-color: #c2cad8; }
+
+.has-error .bootstrap-select .btn {
+  border-color: #fbe1e3; }
+
+.has-success .bootstrap-select .btn {
+  border-color: #abe7ed; }
+
+.has-warning .bootstrap-select .btn {
+  border-color: #f9e491; }
+
+.bootstrap-select.open .btn {
+  border-color: #93a1bb; }
+
+.bootstrap-select.open.dropup .btn {
+  border-color: #93a1bb; }
+
+.bootstrap-select .btn:focus {
+  outline: none !important;
+  outline-offset: 0; }
+
+.bootstrap-select.btn-group .dropdown-menu {
+  margin-top: 1px; }
+
+.bootstrap-select.btn-group .dropdown-menu > li > dt > .text {
+  font-weight: 600;
+  font-family: 'Open Sans';
+  font-size: 14px; }
+
+.bootstrap-select.btn-group .dropdown-menu .text-muted {
+  color: #999 !important; }
+
+.bootstrap-select .caret {
+  border: 0;
+  width: auto;
+  height: auto;
+  margin-top: -10px !important; }
+
+.bootstrap-select .caret:before {
+  content: "\f107";
+  display: inline-block;
+  border: 0;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal; }
+
+.bootstrap-select .selected i {
+  color: #aaa; }
+
+.bootstrap-select .dropdown-menu {
+  z-index: 9999 !important; }

@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>压力容器监管大屏</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .t_btn {
+            margin-top: 20px;
+        }
+
+        .t_btn li {
+            display: inline-block;
+            margin: 0 0px 20px 20px;
+        }
+
+        .t_btn button,
+        .t_a {
+            display: inline-block;
+            padding: 10px 5px;
+            /*width: 80px;*/
+            border-style: solid;
+            border-width: 0;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: bold;
+            line-height: normal;
+            margin: 0 0 0.5em 0;
+            position: relative;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            font-size: 1.5em;
+            width: 400px;
+            background-color: #2C58A6;
+            border-color: #0263ff;
+            color: white;
+            box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.2) inset !important;
+            margin-right: 0.5em;
+            border-radius: 4px;
+        }
+        .t_a2 {
+            display: inline-block;
+            padding: 10px 5px;
+            /*width: 80px;*/
+            border-style: solid;
+            border-width: 0;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: bold;
+            line-height: normal;
+            margin: 0 0 0.5em 0;
+            position: relative;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            font-size: 1.5em;
+            width: 400px;
+            background-color: #2C58A6;
+            border-color: #0263ff;
+            color: white;
+            box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.2) inset !important;
+            margin-right: 0.5em;
+            border-radius: 4px;
+        }
+        .t_height {
+            line-height: 80px;
+            position: absolute;
+            right: 28px;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!--header-->
+    <div class="header">
+        <div class="bg_header">
+            <div class="header_nav fl t_title">
+                压力容器监管大屏
+            </div>
+        </div>
+        <div class="header_nav fl">
+        </div>
+
+        <div class="header_myself fr t_height">
+            <a class="t_a" href="../index.html" style="width: 80px">返回 &nbsp;</a>
+        </div>
+
+        <div class="header_myself fr t_height" style="top:50px">
+            <a class="t_a2" onclick="changeTuBiao()" style="width: 80px;margin-top: 0px">换图 &nbsp;</a>
+        </div>
+    </div>
+    <!--main-->
+    <div class="data_content">
+        <div class="data_main">
+            <div class="main_left fl">
+                <div class="left_1">
+                    <ul class="t_btn">
+                        <li>
+                            <button class="t_btn0">使用单位地址所属城市检验报告数量分布</button>
+                        </li>
+                        <li>
+                            <button class="t_btn3">检验报告数据量前5名特检单位统计</button>
+                        </li>
+                        <!--<li>-->
+                            <!--<button class="t_btn14">GPS</button>-->
+                        <!--</li>-->
+                        <li>
+                            <button class="t_btn13">各检验单位的检验结论统计</button>
+                        </li>
+                        <!--<li>-->
+                            <!--<button class="t_btn2">湖南飞机场</button>-->
+                        <!--</li>-->
+                        <li>
+                            <button class="t_btn4">制造单位与检验结论情况分析</button>
+                        </li>
+                        <li>
+                            <button class="t_btn1">各容器种类的检验结论统计</button>
+                        </li>
+                        <li>
+                            <button class="t_btn6">总体检验结论统计</button>
+                        </li>
+                        <!--<li>-->
+                            <!--<button class="t_btn7">湖南货运量</button>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<button class="t_btn5">各市货运量</button>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<button class="t_btn8">货物周转量</button>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<button class="t_btn9">运输线长度</button>-->
+                        <!--</li>-->
+                        <li>
+                            <button class="t_btn10">检验类别的检验结论热力分布</button>
+                        </li>
+                        <li>
+                            <button class="t_btn11">设备新增、报废统计</button>
+                        </li>
+                        <li>
+                            <button class="t_btn12">制造日期、检验日期趋势分析</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="left_2" style="display:none">
+                    <div class="main_title">
+                        各检验单位的检验结论统计
+                    </div>
+                </div>
+            </div>
+            <div class="main_center fl">
+                <div class="center_text t_cos0">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div class="main_title">
+                        使用单位地址所属城市检验报告数量分布
+                    </div>
+                    <div id="chart_map" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos1" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div class="main_title">
+                        各容器种类的检验结论统计
+                    </div>
+                    <div id="chart_2" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos2" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div class="main_title">
+                        湖南省飞机场
+                    </div>
+                    <div id="chart_0" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos3" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div class="main_title">
+                        检验报告数据量前5名特检单位统计
+                    </div>
+                    <div id="chart_4" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos4" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div class="main_title">
+                        检验报告数据量前5名特检单位统计
+                    </div>
+                    <div id="chart_1" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos5" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div class="main_title">
+                        总体检验结论统计
+                    </div>
+                    <div id="chart_3" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos6" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div class="main_title">
+                        制造单位与检验结论情况分析
+                    </div>
+                    <div id="chart_6" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos7" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div class="main_title">
+                         湖南总货运量
+                    </div>
+                    <div id="chart_7" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos8" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div class="main_title">
+                         总体检验结论统计
+                    </div>
+                    <div id="chart_8" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos9" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div class="main_title">
+                         湖南运输线长度
+                    </div>
+                    <div id="chart_9" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos10" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div class="main_title">
+                        检验类别的检验结论热力分布
+                    </div>
+                    <div id="chart_10" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos11" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div class="main_title">
+                        设备新增、报废统计
+                    </div>
+                    <div id="chart_11" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos12" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div class="main_title">
+                        制造日期、检验日期趋势分析
+                    </div>
+                    <div id="chart_12" class="chart" style="width:100%;height:778px;"></div>
+                </div>
+                <div class="center_text t_cos13" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div class="main_title">
+                        各检验单位的检验结论统计
+                    </div>
+                    <div id="chart_13" class="chart" style="width:100%;height:778px; cursor: pointer;"></div>
+                </div>
+                <div class="center_text t_cos14" style="display:none">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                        <!--右下边框-->
+                        <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div class="main_title">
+                        GPS
+                    </div>
+                    <div id="chart_14" class="chart" style="width:100%;height:778px; cursor: pointer;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div style="text-align:center;">
+<!--<p>更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>-->
+</div>
+</body>
+    <script src="../js/jquery-2.2.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=dApOtvB5E3x6byHpUGHbRF1fxctCBdjw"></script>
+    <script src="../js/echarts.min.js"></script>
+    <script src="../js/dataTool.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/china.js"></script>
+    <script src="../js/hunan.js"></script>
+    <script src="../js/bmap.js"></script>
+    <script src="../js/echarts-all.js"></script>
+<script >
+    var changetuFlag = 0
+   function changeTuBiao(){
+       console.log('=============changeTuBiao')
+       //各检验单位的检验结论统计
+       function echart_13zhu(){
+           // 基于准备好的dom，初始化echarts实例
+           var myChart = echarts.init(document.getElementById('chart_13'));
+           myChart.clear();
+
+//2.	各检验单位的检验结论统计
+           var xData_104_ = function() {
+               var data = ["安徽省特检院","淮南市特检中心","芜湖市特检中心","滁州市特检中心","宣城市特检中心","铜陵市特检中心","阜阳市特检中心","安庆市特检中心","马鞍山市特检中心","淮北市特检中心","蚌埠市特检中心","黄山市特检中心","六安市特检中心","池州市特检中心","宿州市特检中心","安徽省特检院巢湖分院","安徽省特检院亳州检测部"];
+               return data;
+           }();
+           var legendData_104 = ["1 级","2 级","3 级","4 级","合格","监督运行","其他","允许使用",]
+//1级
+           var _data_104_1 =[0, 0, 90, 671, 0, 0, 0, 1307, 1328, 0, 0, 458, 0, 0, 0, 0, 174]
+//2级
+           var _data_104_2 = [2665, 3785, 2335, 1800, 923, 427, 938, 571, 1636, 753, 1538, 1447, 0, 320, 0, 808, 271]
+           var  _data_104_3 =[2577, 0, 1, 638, 725, 2, 1, 1, 0, 1, 2, 692, 1, 413, 578, 710, 651]
+           var  _data_104_4 =[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 42, 0, 0, 0, 0, 0, 0]
+           var  _data_104_5 =   [46069, 6691, 5969, 2580, 6248, 5806, 1815, 3537, 3123, 5279, 4235, 4206, 4540, 2494, 2458, 2822, 846]
+           var  _data_104_6 =  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 186, 0, 332, 0, 0]
+           var  _data_104_7 =   [6188, 3180, 4644, 8781, 5586, 3961, 6700, 4793, 2192, 1409, 1951, 1083, 1482, 3537, 990, 944, 926]
+           var  _data_104_8 =  [1189, 219, 0, 0, 347, 443, 576, 0, 1407, 878, 0, 0, 263, 354, 934, 45, 0]
+           option104 = {
+               // backgroundColor: "#344b58",
+               "title": {
+                   "text": "",
+                   "subtext": '',
+                   x: "4%",
+
+                   textStyle: {
+                       color: '#fff',
+                       fontSize: '22'
+                   },
+                   subtextStyle: {
+                       color: '#90979c',
+                       fontSize: '16',
+
+                   },
+               },
+               toolbox: {
+                   show:true,
+                   feature: {
+                       magicType: {
+                           type: ['line', 'bar', 'stack', 'tiled']
+                       },
+                       dataView:{
+                           show:true,
+                       },
+                       restore: {//配置项还原。
+                           show: true
+                       },
+                       saveAsImage: {//保存为图片。
+                           show: true
+                       }
+                   },
+
+
+               },
+               "tooltip": {
+                   "trigger": "axis",
+                   "axisPointer": {
+                       "type": "shadow",
+                       textStyle: {
+                           color: "#fff"
+                       },
+                   },
+                   formatter: function(params) {
+                       // console.log(params)
+                       var indexX =0;
+                       for(var x=0;x<xData_104_.length;x++){
+                           if(params[0].name === xData_104_[x]){
+                               indexX = x;
+                               break;
+                           }
+                       }
+                       // console.log(indexX)
+                       var sum = _data_104_1[indexX] + _data_104_2[indexX] + _data_104_3[indexX] + _data_104_4[indexX] + _data_104_5[indexX]+ _data_104_6[indexX] + _data_104_7[indexX] + _data_104_8[indexX]
+
+                       var displayString = '检验单位：' + params[0].name
+                       for(var m =0;m<params.length;m++){
+                           var itemString = '<br/>'+ params[m].marker + params[m].seriesName +':数量：' + params[m].data+ '，' + '占比：' + (params[m].data / sum * 100).toFixed(2) + '%，总数:'+sum;
+                           displayString = displayString + itemString
+                       }
+                       return displayString
+                   }
+               },
+               "grid": {
+                   "borderWidth": 0,
+                   "top": 104,
+                   "bottom": 95,
+                   textStyle: {
+                       color: "#fff"
+                   }
+               },
+               "legend": {
+                   x: '4%',
+                   top: '5%',
+                   textStyle: {
+                       color: '#fff',
+                       fontSize:16,
+                   },
+                   "data": legendData_104
+               },
+
+
+               "calculable": true,
+               "xAxis": [{
+                   "type": "category",
+                   "position": {
+                       "bottom": 200,
+                   },
+                   "axisLine": {
+                       lineStyle: {
+                           color: '#90979c'
+                       }
+                   },
+                   "nameRotate": 90,
+                   "splitLine": {
+                       "show": false
+                   },
+                   "axisTick": {
+                       "show": false
+                   },
+                   "splitArea": {
+                       "show": false
+                   },
+                   "axisLabel": {
+                       // "interval": 0,
+                       textStyle: {
+                           color: '#fff',
+                           fontSize: '16'
+                       },
+                   },
+                   "data": xData_104_,
+                   "offset": 0,
+               }],
+               "yAxis": [{
+                   "type": "value",
+                   "splitLine": {
+                       "show": false
+                   },
+                   "axisLine": {
+                       lineStyle: {
+                           color: '#90979c'
+                       }
+                   },
+                   "axisTick": {
+                       "show": false
+                   },
+                   "axisLabel": {
+                       // "interval": 0,
+                       textStyle: {
+                           color: '#fff',
+                           fontSize: '16'
+                       },
+                   },
+                   "splitArea": {
+                       "show": false
+                   },
+
+               }],
+               "dataZoom": [{
+                   "show": true,
+                   "height": 30,
+                   "xAxisIndex": [
+                       0
+                   ],
+                   bottom: 30,
+                   "start": 0,
+                   "end": 20,
+                   handleIcon: 'path://M306.1,413c0,2.2-1.8,4-4,4h-59.8c-2.2,0-4-1.8-4-4V200.8c0-2.2,1.8-4,4-4h59.8c2.2,0,4,1.8,4,4V413z',
+                   handleSize: '104%',
+                   handleStyle: {
+                       color: "#d3dee5",
+
+                   },
+                   textStyle: {
+                       color: "#fff"
+                   },
+                   borderColor: "#90979c"
+
+
+               }, {
+                   "type": "inside",
+                   "show": true,
+                   "height": 15,
+                   "start": 1,
+                   "end": 35
+               }],
+               "series": [
+                   {
+                       "name": "1 级",
+                       "type": "bar",
+                       //"stack": "总量",
+                       "itemStyle": {
+                           "normal": {
+                               "color": "rgba(58,95,205,1)",
+                               "label": {
+                                   "show": true,
+                                   "textStyle": {
+                                       "color": "#fff"
+                                   },
+                                   "position": "top",
+                                   formatter: function(p) {
+                                       return p.value > 0 ? (p.value) : '';
+                                   }
+                               }
+                           }
+                       },
+                       "data": _data_104_1
+                   },
+                   {
+                       "name": "2 级",
+                       "type": "bar",
+                       //"stack": "总量",
+                       "barMaxWidth": 35,
+                       "barGap": "10%",
+                       "itemStyle": {
+                           "normal": {
+                               "color": "rgba(0,191,183,1)",
+                               "label": {
+                                   "show": true,
+                                   "textStyle": {
+                                       "color": "#fff"
+                                   },
+                                   "position": "top",
+                                   formatter: function(p) {
+                                       return p.value > 0 ? (p.value) : '';
+                                   }
+                               }
+                           }
+                       },
+                       "data":_data_104_2
+                   },
+                   {
+                       "name": "3 级",
+                       "type": "bar",
+                       //"stack": "总量",
+                       "itemStyle": {
+                           "normal": {
+                               "color": "rgba(255,193,193,1)",
+                               "label": {
+                                   "show": true,
+                                   "textStyle": {
+                                       "color": "#fff"
+                                   },
+                                   "position": "top",
+                                   formatter: function(p) {
+                                       return p.value > 0 ? (p.value) : '';
+                                   }
+                               }
+                           }
+                       },
+                       "data": _data_104_3
+                   },
+                   {
+                       "name": "4 级",
+                       "type": "bar",
+                       //"stack": "总量",
+                       "itemStyle": {
+                           "normal": {
+                               "color": "rgba(186,85,211,1)",
+                               "label": {
+                                   "show": true,
+                                   "textStyle": {
+                                       "color": "#fff"
+                                   },
+                                   "position": "top",
+                                   formatter: function(p) {
+                                       return p.value > 0 ? (p.value) : '';
+                                   }
+                               }
+                           }
+                       },
+                       "data": _data_104_4
+                   },
+                   {
+                       "name": "合格",
+                       "type": "bar",
+                       //"stack": "总量",
+                       "barMaxWidth": 35,
+                       "barGap": "10%",
+                       "itemStyle": {
+                           "normal": {
+                               "color": "rgba(255,185,15,1)",
+                               "label": {
+                                   "show": true,
+                                   "textStyle": {
+                                       "color": "#fff"
+                                   },
+                                   "position": "top",
+                                   formatter: function(p) {
+                                       return p.value > 0 ? (p.value) : '';
+                                   }
+                               }
+                           }
+                       },
+                       "data":_data_104_5
+                   },
+                   {
+                       "name": "监督运行",
+                       "type": "bar",
+                       //"stack": "总量",
+                       // symbolSize: 10,
+                       // symbol: 'circle',
+                       "itemStyle": {
+                           "normal": {
+                               "color": "rgba(252,230,48,1)",
+                               "barBorderRadius": 0,
+                               "label": {
+                                   "show": true,
+                                   "position": "top",
+                                   formatter: function(p) {
+                                       return p.value > 0 ? (p.value) : '';
+                                   }
+                               }
+                           }
+                       },
+                       "data": _data_104_6
+                   },
+                   {
+                       "name": "其他",
+                       "type": "bar",
+                       //"stack": "总量",
+                       "barMaxWidth": 35,
+                       "barGap": "10%",
+                       "itemStyle": {
+                           "normal": {
+                               "color": "rgba(255,144,128,1)",
+                               "label": {
+                                   "show": true,
+                                   "textStyle": {
+                                       "color": "#fff"
+                                   },
+                                   "position": "top",
+                                   formatter: function(p) {
+                                       return p.value > 0 ? (p.value) : '';
+                                   }
+                               }
+                           }
+                       },
+                       "data":_data_104_7
+                   },
+
+                   {
+                       "name": "允许使用",
+                       "type": "bar",
+                       //"stack": "总量",
+                       "itemStyle": {
+                           "normal": {
+                               "color": "rgba(255,106,106,1)",
+                               "label": {
+                                   "show": true,
+                                   "textStyle": {
+                                       "color": "#fff"
+                                   },
+                                   "position": "top",
+                                   formatter: function(p) {
+                                       return p.value > 0 ? (p.value) : '';
+                                   }
+                               }
+                           }
+                       },
+                       "data":_data_104_8
+                   },
+               ]
+           }
+
+           // 使用刚指定的配置项和数据显示图表。
+           myChart.setOption(option104);
+           window.addEventListener("resize", function () {
+               myChart.resize();
+           });
+       }
+
+   //
+       //检验类别的检验结论热力分布
+       function echart_10reli(){
+           var myChart = echarts.init(document.getElementById('chart_13'));
+           myChart.clear();
+
+//热力
+           var hours_3 =  ["安徽省特检院","淮南市特检中心","芜湖市特检中心","滁州市特检中心","宣城市特检中心","铜陵市特检中心","阜阳市特检中心","安庆市特检中心","马鞍山市特检中心","淮北市特检中心","蚌埠市特检中心","黄山市特检中心","六安市特检中心","池州市特检中心","宿州市特检中心","安徽省特检院巢湖分院","安徽省特检院亳州检测部"];
+           var days_3 =  ["1 级","2 级","3 级","4 级","合格","监督运行","其他","允许使用",]
+           var data1_3 = [];
+           var datav_3 = [0, 0, 90, 671, 0, 0, 0, 1307, 1328, 0, 0, 458, 0, 0, 0, 0, 174, 2665, 3785, 2335, 1800, 923, 427, 938, 571, 1636, 753, 1538, 1447, 0, 320, 0, 808, 271, 2577, 0, 1, 638, 725, 2, 1, 1, 0, 1, 2, 692, 1, 413, 578, 710, 651, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 42, 0, 0, 0, 0, 0, 0, 46069, 6691, 5969, 2580, 6248, 5806, 1815, 3537, 3123, 5279, 4235, 4206, 4540, 2494, 2458, 2822, 846, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 186, 0, 332, 0, 0, 6188, 3180, 4644, 8781, 5586, 3961, 6700, 4793, 2192, 1409, 1951, 1083, 1482, 3537, 990, 944, 926 , 1189, 219, 0, 0, 347, 443, 576, 0, 1407, 878, 0, 0, 263, 354, 934, 45, 0];
+           for (var z = 0; z < hours_3.length; z++) {
+
+               for (var i = 0; i < days_3.length; i++) {
+                   data1_3.push([i, z, datav_3[i+z*days_3.length]]);
+               }
+           }
+           data1_3 = data1_3.map(function(item) {
+               return [item[1], item[0], item[2] || '-'];
+           });
+
+           option = {
+               // dataZoom: [
+               //
+               //     {
+               //         id: 'dataZoomY',
+               //         type: 'slider',
+               //         yAxisIndex: [0],
+               //         startValue:0,
+               //         endValue:100,
+               //         filterMode: 'empty',
+               //         // textStyle: {
+               //         //     color: '#fff',
+               //         // }
+               //     }
+               // ],
+               tooltip: {
+                   position: 'top',
+                   formatter: function(params) {
+                       var sum = 0;
+                       for(var x=0;x<datav_3.length;x++){
+                           sum = sum + datav_3[x]
+                       }
+                       // return '检验结论：' + days_3[params.value[1]] + '<br/>' + '数量：' + params.data[2];
+                       return '检验结论：' + days_3[params.value[1]] + '<br/>' + '数量：' + params.data[2]+ '<br>' + '占比：' + (params.data[2] / sum * 100).toFixed(2) + '%，总数:'+sum;;
+                   }
+               },
+               animation: false,
+               grid: {
+                   left: '3%',
+                   right: '8%',
+                   bottom: '8%',
+                   containLabel: true
+               },
+               xAxis: {
+                   type: 'category',
+                   data: hours_3,
+                   axisLine : {
+                       lineStyle : {
+                           color : '#fff'
+                       }
+                   },
+                   axisLabel: {
+                       interval:0,
+                       rotate:40,
+                       textStyle: {
+                           color: '#fff',
+                           fontSize: 16,
+                       },
+                   } ,
+                   nameTextStyle:{
+                       color: '#fff',
+                       fontSize: 16,
+                   },
+                   splitArea: {
+                       show: true
+                   },
+                   name: '检验单位'
+               },
+               yAxis: {
+                   type: 'category',
+                   data: days_3,
+                   axisLine : {
+                       lineStyle : {
+                           color : '#fff'
+                       }
+                   },
+                   nameTextStyle:{
+                       color: '#fff',
+                       fontSize: 16,
+                   },
+                   axisLabel: {
+                       interval:0,
+                       rotate:40
+                       ,
+                       textStyle: {
+                           color: '#fff',
+                           fontSize: 16,
+                       },
+                   } ,
+                   splitArea: {
+                       show: true
+                   },
+                   name: '检验结论'
+               },
+               visualMap: {
+                   min: 1,
+                   max: 5000,
+                   calculable: true,
+                   orient: 'horizontal',
+                   left: 'center',
+                   bottom: '1%',
+                   text: ['5000','1'],// 文本，默认为数值文本
+                   //color:['#20a0ff','#D2EDFF'],
+                   calculable: false,
+                   color: [
+                       '#dd413b', '#fec42c', '#80F1BE'
+                   ],
+                   textStyle: {
+                       fontSize: 16,
+                       color: '#fff',
+                   }
+               },
+               series: [{
+                   name: 'Punch Card',
+                   type: 'heatmap',
+                   data: data1_3,
+                   label: {
+                       normal: {
+                           show: true
+                       }
+                   },
+                   itemStyle: {
+                       emphasis: {
+                           shadowBlur: 10,
+                           shadowColor: 'rgba(120, 0, 0, 0.5)'
+                       }
+                   }
+               }]
+           };
+
+           myChart.setOption(option);
+       }
+
+       if(changetuFlag === 0){
+           echart_10reli();
+           changetuFlag =1;
+       }else {
+           echart_13zhu()
+           changetuFlag =0;
+       }
+
+
+   }
+
+</script>
+
+</html>

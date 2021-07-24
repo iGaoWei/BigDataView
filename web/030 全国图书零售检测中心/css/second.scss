@@ -1,0 +1,524 @@
+@import "base.scss";
+
+@import "mixin/_media.scss";
+
+@import "drop_down.scss";
+
+@import "mixin/_animation.scss";
+
+.second-screen {
+  header {
+     > img {
+      @include media1920 {
+        top: 30%;
+        width: 30%;
+      }
+    }
+  }
+
+  .left-top {
+    height: 49%;
+  }
+
+  .left-bottom {
+    height: 49%;
+  }
+}
+
+/* 左侧样式 */
+
+.aside-left {
+  .left-bottom {
+    width: 100%;
+
+    h3 {
+      height: 20%;
+    }
+
+    .con {
+      position: relative;
+      height: 75%;
+      font-size: px2em(24, 64);
+      color: #07bffb;
+      overflow: hidden;
+
+      ul {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      li {
+        height: 14%;
+        padding-left: 3%;
+
+        &:nth-of-type(1) {
+          .bar-in {
+            width: 100%;
+          }
+        }
+
+        &:nth-of-type(2) {
+          .bar-in {
+            width: 30%;
+          }
+        }
+
+        &:nth-of-type(3) {
+          .bar-in {
+            width: 10%;
+          }
+        }
+
+        &:nth-of-type(4) {
+          .bar-in {
+            width: 9%;
+          }
+        }
+
+        &:nth-of-type(5) {
+          .bar-in {
+            width: 8%;
+          }
+        }
+
+        &:nth-of-type(6) {
+          .bar-in {
+            width: 6%;
+          }
+        }
+
+        &:nth-of-type(7) {
+          .bar-in {
+            width: 3%;
+          }
+        }
+      }
+
+      span {
+        display: inline-block;
+        height: 100%;
+      }
+
+      .num {
+        @include media3840 {
+          width: 30px;
+        }
+        @include media1920 {
+          width: 15px;
+        }
+      }
+
+      .city-name {
+        display: inline-block;
+        position: relative;
+        height: 100%;
+
+        @include media3840 {
+          width: calc(100% - 200px);
+        }
+        @include media1920 {
+          width: calc(100% - 100px);
+        }
+
+        .name-in {
+          display: block;
+          width: 100%;
+          height: 1.8em;
+        }
+
+        .bar {
+          display: block;
+          position: relative;
+          width: 100%;
+          height: 13%;
+          background: #121640;
+
+          .bar-in {
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            height: 100%;
+            background: linear-gradient(to right, #2690cf, #00fecc);
+          }
+        }
+      }
+
+      .rank-value {
+        margin-left: 4%;
+        font-size: px2em(64, 64);
+
+        @include media3840 {
+          width: 90px;
+        }
+        @include media1920 {
+          width: 60px;
+        }
+      }
+    }
+  }
+}
+
+/* 地图部分样式 */
+
+.middle-map .map-wrap h3 dl {
+  width: 16.6%;
+}
+
+/* 右侧样式 */
+
+.aside-right {
+  position: relative;
+  &:after {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/bor_1_3_1.png") no-repeat;
+    background-size: 100% 100%;
+
+    content: "";
+  }
+
+  h3 {
+    padding-top: 6%;
+    margin-left: 5%;
+    font-size: px2em(36, 64);
+  }
+
+  /* 舆情 start */
+  .public-opinion {
+    width: 100%;
+    height: 67%;
+    margin-bottom: 2.5%;
+
+    h3 {
+      height: 13%;
+    }
+
+    .con {
+      height: 84%;
+      padding: 2% 5% 3%;
+
+      ul {
+        height: 19%;
+        margin-bottom: 2%;
+        margin-top: 4%;
+        overflow: hidden;
+      }
+
+      li {
+        display: none;
+        height: 100%;
+
+        .tit {
+          height: 40%;
+          margin-bottom: 3%;
+          font-size: px2em(40, 64);
+          color: #00bbec;
+
+          span.fl {
+            width: 55%;
+          }
+
+          span.fr {
+            width: 45%;
+          }
+
+          .user-name {
+            font-size: px2em(54, 64);
+          }
+
+          .time-show {
+            display: block;
+            color: rgba(0, 187, 236, .5);
+          }
+
+          .icon {
+            &:before {
+              display: inline-block;
+              position: relative;
+              top: .2em;
+              width: 1em;
+              height: 1em;
+              margin-right: .2em;
+
+              content: "";
+            }
+          }
+
+          .comments {
+            &:before {
+              background: url("../img/icon-comments.png") no-repeat;
+              background-size: 100%;
+            }
+          }
+
+          .give-like {
+            margin-left: 10%;
+
+            &:before {
+              background: url("../img/icon-hreat.png") no-repeat;
+              background-size: 100%;
+            }
+          }
+        }
+
+        p {
+          display: -webkit-box;
+          width: 100%;
+          font-size: px2em(48, 64);
+          overflow: hidden;
+
+          text-overflow: ellipsis;
+
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+      }
+
+      .active {
+        display: block;
+      }
+    }
+  }
+
+  /* 舆情 end */
+  /* 物流 start */
+  .logistics {
+    position: relative;
+    width: 100%;
+    height: 32%;
+    margin-bottom: 2.5%;
+    background: url("../img/bg1_4.png") no-repeat;
+    background-size: 100% 100%;
+
+    &:before {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../img/bor1_4.png") no-repeat;
+      background-size: 100% 100%;
+
+      content: "";
+    }
+
+    h3 {
+      height: 22%;
+    }
+
+    .con {
+      height: 70%;
+      margin: 0 5%;
+      font-size: px2em(20, 64);
+
+      .con-in {
+        display: none;
+        height: 100%;
+      }
+
+      .active.con-in {
+        display: block;
+      }
+
+      .states {
+        height: 25%;
+        color: #0a50af;
+
+        li {
+          width: 23.4%;
+          height: 100%;
+
+          &:nth-of-type(1) {
+            width: 6.4%;
+          }
+        }
+
+        .icon-circle {
+          display: inline-block;
+          position: relative;
+          width: 26.6%;
+          height: 100%;
+
+          &:before {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 60%;
+            text-align: center;
+            line-height: 1.8;
+            color: #07bffb;
+            background: url("../img/bg-circle.png") no-repeat;
+            background-size: 100%;
+          }
+
+          b {
+            position: absolute;
+            width: 200%;
+          }
+        }
+
+        .circle1 {
+          width: 100%;
+
+          &:before {
+            content: "1";
+          }
+        }
+
+        .circle2 {
+          &:before {
+            content: "2";
+          }
+        }
+
+        .circle3 {
+          &:before {
+            content: "3";
+          }
+        }
+
+        .circle4 {
+          &:before {
+            content: "4";
+          }
+        }
+
+        .circle5 {
+          &:before {
+            content: "5";
+          }
+        }
+
+        .finished {
+          &:before {
+            background: url("../img/icon-finished.png") no-repeat;
+            background-size: 100%;
+
+            content: "";
+          }
+        }
+
+        .line {
+          display: block;
+          width: 63.4%;
+          height: 50%;
+          margin: 0 5%;
+          background: url("../img/line-point.png") repeat-x center;
+          background-size: 100%;
+        }
+      }
+
+      .progress {
+        height: 70%;
+        margin-top: 5%;
+        color: rgba(7, 191, 251, .5);
+        overflow: hidden;
+
+        .new-height {
+          color: #0a50af;
+        }
+
+        li {
+          margin-bottom: 3%;
+
+          .pro-time {
+            @include media3840 {
+              width: 120px;
+              margin-right: 20px;
+            }
+            @include media1920 {
+              width: 70px;
+              margin-right: 10px;
+            }
+          }
+
+          .pro-con {
+            @include media3840 {
+              width: calc(100% - 140px);
+            }
+            @include media1920 {
+              width: calc(100% - 80px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* 物流 end */
+  /* 图书馆馆藏 start */
+  .book-collection {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 44%;
+    background: url("../img/bg1_4.png") no-repeat;
+    background-size: 100% 100%;
+
+    &:before {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../img/bor2_3.png") no-repeat;
+      background-size: 100% 100%;
+
+      content: "";
+    }
+
+    h3 {
+      height: 15%;
+      padding-top: 8%;
+      margin-left: 10%;
+    }
+
+    .ranking {
+      width: 10%;
+      height: 100%;
+      padding-left: 4%;
+    }
+
+    .name {
+      width: 48%;
+      padding-right: 2%;
+    }
+
+    .collection {
+      width: 20%;
+    }
+
+    .borrowing {
+      width: 20%;
+    }
+
+    .tit {
+      height: 6%;
+      margin: 4% 0 3% 0;
+      font-size: px2em(28, 64);
+      color: #2edbff;
+    }
+
+    .con {
+      height: 70%;
+      font-size: px2em(28, 64);
+      overflow: hidden;
+
+      li {
+        height: 12.5%;
+        border-bottom: 1px solid rgba(19, 151, 255, .1);
+      }
+    }
+  }
+  /* 图书馆馆藏 end */
+}
+
+/*  馆藏动效 */
+
+@include myMove(".briRotate");

@@ -1,0 +1,151 @@
+.office-efficiency-index{font-family:PingFangSC-Semibold,PingFang SC;background-color:#22284A;background-size:cover;}
+/*大屏*/
+/*头部样式*/
+.office-header{height:9rem;background: url("../images/office_efficiency_header_bg.png")no-repeat center center;background-size: 100% 100%;}
+.office-header .title-info{height: 2em;color:#03C2EC;text-align: center;font-size: 24px;font-family:'cuhei';font-weight: 600;line-height: 2em;vertical-align: middle;}
+.analysis-info{height:4rem;line-height:3.5rem;vertical-align:middle;font-size: 20px;font-weight: 600;background-image: linear-gradient(#D8AE22, #DC9546);-webkit-background-clip: text;-webkit-text-fill-color: transparent;-webkit-animation: hue 60s infinite linear;}
+.analysis-filter{height:4.5rem;}
+.analysis-filter .col-md-4{padding:0px;margin:0px 10px 0px 10px;}
+.analysis-filter .control-label{font-size:15px;color:#fff;}
+.analysis-filter .form-control{height:38px;}
+
+/*渠道选择*/
+.datagrid-toolbar, .datagrid-pager{background: #181C41;}
+.datagrid-header{background: #181C41;}
+.datagrid-body{background: #181C41;}
+.datagrid-htable{background: #181C41;}
+.panel-header,.panel-body{border-color:#03C2EC;}
+.datagrid-htable .datagrid-row{color:red;}
+.datagrid-cell{background: #181C41;color:#fff;height:35px!important;line-height:35px;vertical-align:middle;font-size:16px;}
+.datagrid-cell:hover{color:#14B4FE;}
+.datagrid-header, .datagrid-toolbar, .datagrid-pager, .datagrid-footer-inner{border-color:#7187AC;}
+.datagrid-header td, .datagrid-body td, .datagrid-footer td{border:0px;}
+.datagrid-header-row,.datagrid-row {height: 35px;}
+.datagrid-header .datagrid-cell span{font-size:16px;}
+.textbox{background:transparent;border:0px;color:#fff;}
+.textbox-text.validatebox-text{background:transparent;color:#fff;font-size:15px; width:75px;font-weight:600;padding-left:0px;text-align:right!important;}
+.datagrid-pager.pagination{color:#fff;}
+.pagination-page-list,.pagination-num{color:fff;background: #181C41;}
+.combo-panel.panel-body.panel-body-noheader{background:#282C55;}
+.textbox-icon{opacity:1}
+.combobox-item{color:#fff;}
+.combobox-item-selected{background:#14B4FE;color:#fff;}
+.combobox-item-hover{background:#14B4FE;color:#fff;}
+.combo-arrow {background: url('../images/select_arrow.png') no-repeat center center;background-size:15px 8px;}
+.combo-arrow:hover{background: url('../images/select_arrow.png') no-repeat center center;background-size:15px 8px;}
+.textbox-focused {-webkit-box-shadow:none;box-shadow:none;}
+.form-control.Wdate{border:0;color:#fff;-webkit-box-shadow:none;box-shadow:none;}
+.Wdate{background: url('../images/select_arrow.png') no-repeat right!important;background-size:15px 8px!important;}
+.cust-type-default{float:right;cursor:pointer;width:62px;height:32px;line-height:27px;color:#14B4FE;border:1px solid #14B4FE;text-align:center;}
+.cust-type-default.left{border-radius:6px 0px 0px 6px;}
+.cust-type-default.right{border-radius:0px 6px 6px 0px;}
+.cust-type-default.active{background: #14B4FE;color:#fff;}
+.select-group-channel-tablebar{display:none;}
+
+/* 加载旋转动画 */
+#load{width:100%;height:100%;position:absolute;background:url(../images/iframe/data08.png) no-repeat #061537;background-size:cover;top:0;left:0;z-index:999;}
+#load .load_img{position:absolute;left:calc(50% - 182px);top:calc(50% - 182px);}
+.load_img img{position:absolute;left:0;top:0;}
+.load_img .jzxz1{animation:xz1 8s infinite linear;}
+	@keyframes xz1 {
+	  from {
+	  transform:rotate(0deg);
+	  }
+	  50% {
+	    transform:rotate(180deg);
+	  }
+	  to{
+	  	transform:rotate(360deg);
+	  }
+	}	
+.load_img .jzxz2{animation:xz2 7s infinite linear;}
+	@keyframes xz2 {
+	  from {
+	     transform:rotate(0deg);
+	  }
+	  50% {
+	    transform:rotate(-180deg);
+	  }
+	  to{
+	  	transform:rotate(-360deg);
+	  }
+}	
+
+/*数据模块样式*/
+.office-efficiency-index .office-header-content{margin-bottom:10px;}
+.office-efficiency-index .office-header-content .col-sm-3.col-md-3.pd{padding:0px;margin:0px;}
+.office-efficiency-index .office-header-content .col-sm-4.col-md-4.pd{padding:0px;margin:0px;}
+.office-efficiency-index .office-header-content .col-sm-5.col-md-5.pd{padding:0px;margin:0px;}
+.office-efficiency-index .office-header-content .col-sm-6.col-md-6.pd{padding:0px;margin:0px;}
+.office-efficiency-index .col-info{height:37rem;margin:0px 10px 20px 10px;border-radius:8px; background-color:#181C41;}
+.office-efficiency-index .col-info .title{height:4rem;line-height:4rem;vertical-align:middle;padding-left:15px;font-size: 16px;font-weight: 600;color:#03C2EC;text-align: left;}
+.office-efficiency-index .col-info .content{height:33rem;line-height:4rem;vertical-align:middle;padding-left:15px;}
+/*门店基本信息*/
+.office-efficiency-index .col-info .content.base-info table{width:100%;}
+.office-efficiency-index .col-info .content.base-info table td{width:25%;height:20px;}
+.content.base-info table td .channel-name{height:4rem;max-width:360px;color:#fff;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.content.base-info .integral-echart{height:9rem;}
+.content.base-info .ding-dan-bg{margin-left:15px;height:60px;max-width:85px;background: url("../images/ding-dan.png")no-repeat center center;background-size:50px 44px;}
+.content.base-info .ke-liu-bg{margin-left:15px;height:60px;max-width:85px;background: url("../images/ke-liu.png")no-repeat center center;background-size:50px 44px;}
+.content.base-info .pai-dui-ji-bg{margin-left:14px;height:60px;max-width:85px;background: url("../images/pai-dui-ji.png")no-repeat center center;background-size:33px 44px;}
+.content.base-info .liang-shu-zhi{height:3rem;line-height:3rem;vertical-align:middle;color:#00A8FE;text-align:center;font-size:25px;font-weight:600;}
+.content.base-info .td-shu-zhi{color:#fff;text-align:center;height:20px;}
+.content.base-info .channel-star-level{font-size:15px;color:#fff;padding-left:20px;}
+.content.base-info .chanenl-star{height:30px;line-heigth:30px;padding-left:10px;}
+.content.base-info .chanenl-star img{float:left;width:21px;height:20px;margin-top:13px;margin-left:5px;}
+.content.base-info .chanenl-star div{float:left;padding-left:15px;color:#fff;}
+.content.base-info .label-name{color:#fff;white-space:nowrap;padding-left:20px;}
+.content.base-info .label-value{padding-left:15px;color:#fff;}
+.content.base-info .label-value img{float:left;width:21px;height:20px;margin-top:3px;}
+.content.base-info .label-value .score-val{float:left;padding-left:5px;height:30px;line-height:30px;color:#fff;}
+/*营业员受理详情*/
+.office-efficiency-index .col-info .content.staff-info table{width:100%;}
+.office-efficiency-index .col-info .content.staff-info table td{width:33%;height:20px;}
+.content.staff-info .td-avg-time div{float:left;color:#fff;margin-right:5px;margin-top:10px;}
+.content.staff-info .td-avg-time .index{width: 20px;height: 20px;line-height:18px;vertical-align:middle;border-radius:10px;display:block;text-align:center;color:#03C2EC;border:1px solid #03C2EC;margin-top:26px;font-size: 10px;}
+.content.staff-info .td-avg-time .index.first{color:#E60012;border:1px solid #E60012;}
+.content.staff-info .td-avg-time .index.second{color:#E8BC25;border:1px solid #E8BC25;}
+.content.staff-info .td-avg-time .staff-name{font-size:20px;font-weight:600;color:rgba(255,255,255,1);margin-right:15px;}
+.content.staff-info .td-avg-time .avg-time-label{font-size:15px;width:60px;white-space: nowrap;}
+.content.staff-info .td-avg-time .avg-time-value{color:#DC9546;white-space: nowrap;text-align:left;}
+.content.staff-info .staff-cust-time{height:6rem;line-height:3rem;margin-left:5px;margin-right:5px;vertical-align:middle;text-align:center;color:#fff;background:#22284A;border-radius:6px;}
+.content.staff-info .staff-order-count{height:6rem;line-height:3rem;margin-left:5px;margin-right:5px;vertical-align:middle;text-align:center;color:#fff;background:#22284A;border-radius:6px;}
+.content.staff-info .staff-alarm{height:6rem;line-height:3rem;margin-left:5px;margin-right:5px;vertical-align:middle;text-align:center;color:#fff;background:#22284A;border-radius:6px;}
+.content.staff-info .split-line{margin:15px;height:2px;background:linear-gradient(to left,#181C41,#7187AC,#181C41)}
+.content.staff-info .td-integral div{float:left;color:#fff;margin-right:5px;}
+.content.staff-info .td-integral .integral-label{font-size:15px;width:80px;white-space: nowrap;padding-left:5px;}
+.content.staff-info .td-integral .integral-value{color:#DC9546;width:80px;white-space: nowrap;text-align:left;padding-left:5px;}
+
+/*门店台席受理详情*/
+.office-efficiency-index .device-info-col .col-info{height:45rem;}
+.office-efficiency-index .device-info-col .content{height:41rem;background: url("../images/office_efficiency_foot_bg.png")no-repeat bottom center;}
+.office-efficiency-index .device-info-col .col-info .title{width:200px;}
+.office-efficiency-index .device-info-col .col-info .title-icon{position:absolute; top:0px;right:10px;width:280px;height:50px;padding-right:10px;}
+.office-efficiency-index .device-info-col .col-info .title-icon .device-alarm{float:right;font-size:25px;margin:5px 5px 0px 5px;}
+.office-efficiency-index .device-info-col .col-info .title-icon .device-alarm span{color:#fff;padding-left:2px;padding-top:1px;}
+.office-efficiency-index .device-info-col .col-info .content.deviceInfo table{width:100%;}
+.office-efficiency-index .device-info-col .col-info .content.deviceInfo table td{width:25%;height:25px;padding:0px;margin:0px;}
+
+.content.deviceInfo .device-img{text-align:center;}
+.content.deviceInfo .device-img img{width:50px;height:45px;}
+.content.deviceInfo .label-name{font-size:14px;width:80px;height:30px;line-height:30px;vertical-align:middle;white-space: nowrap;color:#fff;}
+.content.deviceInfo .label-name .os-name{width:80px;height:30px;line-height:30px;vertical-align:middle;overflow:hidden;text-overflow:ellipsis;}
+.content.deviceInfo .label-name.score{color:#E5BB2E;font-size:22px;font-weight:600;}
+.content.deviceInfo .kuan-dai{text-align:center;}
+.content.deviceInfo .kuan-dai .progress-label{float:left;margin-bottom:10px;text-align:left;color:#fff;font-size:16px;white-space:nowrap;width:100%;height:20px;line-height:20px;vertical-align:middle;}
+.content.deviceInfo .nei-cun-size{width:70px;height:70px;background: url("../images/nei_cun_size.png")no-repeat center center;background-size:60px 60px;}
+.content.deviceInfo .cpu-use{width:70px;height:70px;background: url("../images/cpu_use.png")no-repeat center center;background-size:60px 60px;}
+.content.deviceInfo .nei-cun-use{width:70px;height:70px;background: url("../images/nei_cun_use.png")no-repeat center center;background-size:60px 60px;}
+.content.deviceInfo .device-use span{display: block;font-size: 15px;font-weight: 500;color: #fff;line-height: 67px;text-align: center;vertical-align: middle;}
+.content.deviceInfo .split-line{margin:15px;height:2px;background:linear-gradient(to left,#181C41,#7187AC,#181C41)}
+.content.deviceInfo .labe-value{color:#fff;height:30px;line-height:30px;vertical-align:middle;}
+.content.deviceInfo .progress-bar {background-color: #009AFD;}
+/*耗时步骤分析详情*/
+.office-efficiency-index .time-step-col .col-info{height:45rem;}
+.office-efficiency-index .time-step-col .content{height:41rem;background: url("../images/office_efficiency_foot_bg.png")no-repeat bottom center;}
+/*大屏*/
+/*业务类型耗时分析详情*/
+.office-efficiency-index .business-type-time-col .col-info{height:45rem;}
+.office-efficiency-index .business-type-time-col .content{height:41rem;background: url("../images/office_efficiency_foot_bg.png")no-repeat bottom center;}
+
+

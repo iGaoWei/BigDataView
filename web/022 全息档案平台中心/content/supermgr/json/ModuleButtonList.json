@@ -1,0 +1,15 @@
+﻿[
+  {
+      "Id": "7ec98b77-462d-4d51-b90a-43a4b45851de",
+      "ModuleId": "f21fa3a0-c523-4d02-99ca-fd8dd3ae3d59",
+      "ParentId": "0",
+      "EnCode": "lr-removelog",
+      "FullName": "清空",
+      "ActionAddress": "/SysMgr/AppLogMgr/RemoveLog",
+      "SortCode": 2,
+      "CreationTime": "2016-11-01 20:51:33",
+      "CreatorUserId": "System",
+      "CreateUserName": "超级管理员",
+      "IsDeleted": false
+  }
+]

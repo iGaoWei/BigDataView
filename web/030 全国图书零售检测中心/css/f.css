@@ -1,0 +1,923 @@
+@charset "UTF-8";
+/* 引入常用样式 */
+/* 清浮动模块 */
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: ""; }
+.clearfix:after {
+  clear: both; }
+
+/**
+ * [px转百分比]
+ * @param  {[number]} $size  [变量值]
+ * @param  {[number]} $base  [基准值]
+ * @return {[number]}        [返回em]
+ */
+/**
+ * [px转百分比]
+ * @param  {[number]} $size  [自身宽度的大小]
+ * @param  {[number]} $scale [包裹盒子的大小]
+ * @return {[number]}        [返回百分比数值]
+ */
+/* 字体引入 */
+@font-face {
+  font-family: Rubik;
+  font-family: DigifaceWide;
+  src: url("../fonts/Rubik-Light.ttf");
+  src: url("../fonts/digifaw.ttf"); }
+/* 初始化 start*/
+* {
+  box-sizing: border-box; }
+
+b {
+  font-weight: normal; }
+
+/* 声明字体变量 */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  color: #fff; }
+  @media screen and (max-width: 3850px) {
+    html,
+    body {
+      font-size: 64px; } }
+  @media screen and (max-width: 1930px) {
+    html,
+    body {
+      font-size: 32px; } }
+
+ul,
+li,
+dl,
+dt,
+dd {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+h1,
+h2,
+h3,
+h4,
+div {
+  padding: 0;
+  margin: 0;
+  font-weight: normal; }
+
+h3 {
+  font-size: 0.5625em;
+  color: #fff; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+/* 初始化 end */
+/* 公共部分样式 start*/
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: MicrosoftYaHei;
+  overflow: hidden; }
+  body:before {
+    position: absolute;
+    top: 7.6%;
+    right: 0;
+    width: 5.2%;
+    height: 12%;
+    background: url(../img/circle.png) no-repeat;
+    background-size: 100%;
+    content: ""; }
+
+/* 最外层盒子样式 */
+.root-wrap {
+  height: 100%;
+  padding: 0 1.5%;
+  background: url("../img/bg.png") no-repeat center top;
+  background-size: 100% 100%; }
+
+/* 头部样式 */
+header {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  min-height: 90px;
+  text-align: center;
+  padding-top: 1%;
+  margin-bottom: 1%; }
+  header img {
+    width: 19.5%; }
+  header h2,
+  header .month-tip {
+    position: absolute;
+    top: 33%;
+    font-size: 0.75em; }
+  header h2 {
+    left: 0; }
+  header .month-tip {
+    right: 0; }
+  header:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 18%;
+    min-height: 18px;
+    background: url("../img/header-line.png") no-repeat;
+    background-size: 100%;
+    content: ""; }
+  header:after {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 36.5%;
+    min-width: 700px;
+    height: 70%;
+    min-height: 70px;
+    background: url(../img/header.gif) no-repeat center center;
+    background-size: 100%;
+    transform: translate(-50%, 20%);
+    content: ""; }
+
+/* 主体内容样式 */
+.main {
+  width: 100%;
+  height: 84%; }
+  .main .aside-left {
+    position: relative;
+    width: 22%;
+    height: 100%; }
+    .main .aside-left h3 {
+      padding-top: 6.5%;
+      padding-left: 7%;
+      padding-bottom: 3%; }
+  .main .aside-right {
+    position: relative;
+    width: 22%;
+    height: 100%; }
+
+/* 左侧边框样式 start */
+.left-top {
+  position: relative;
+  opacity: .9;
+  background: rgba(18, 22, 64, 0.5); }
+
+.left-bottom {
+  position: absolute;
+  bottom: 0;
+  opacity: .9; }
+  .left-bottom:before {
+    content: '';
+    position: absolute;
+    top: 6%;
+    right: -2%;
+    z-index: 100;
+    width: 15%;
+    height: 7%;
+    background: url("../img/bor1_2_square.png") no-repeat;
+    background-size: 100%;
+    z-index: 10; }
+  .left-bottom:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 104%;
+    background: url("../img/bor1_2.png") no-repeat;
+    background-size: 100% 97%;
+    content: ""; }
+
+/* 左侧边框样式 end*/
+/* 中间地图样式 start */
+/* 中间地图样式 end */
+/* 右侧边框样式 start */
+.right-top {
+  position: relative;
+  background: url("../img/bg1_1.png") no-repeat top; }
+  .right-top:after {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/bor1_3.png") no-repeat;
+    background-size: 100% 100%;
+    content: ""; }
+  .right-top .con {
+    height: 42%;
+    margin: 0 5%;
+    font-size: 0.4375em;
+    font-size: .4375em;
+    background: #081d5d; }
+
+/* 右侧边框样式 end */
+/* 公共部分样式 end*/
+/**
+ * [css3过渡动画]
+ * @param  {[string]} $el [eg：'.pressRotate']
+ */
+/* 引入常用样式 */
+/* 清浮动模块 */
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: ""; }
+.clearfix:after {
+  clear: both; }
+
+/**
+ * [px转百分比]
+ * @param  {[number]} $size  [变量值]
+ * @param  {[number]} $base  [基准值]
+ * @return {[number]}        [返回em]
+ */
+/**
+ * [px转百分比]
+ * @param  {[number]} $size  [自身宽度的大小]
+ * @param  {[number]} $scale [包裹盒子的大小]
+ * @return {[number]}        [返回百分比数值]
+ */
+/* 字体引入 */
+@font-face {
+  font-family: Rubik;
+  src: url("../fonts/Rubik-Light.ttf");
+  src: url("../fonts/rubik-regular-webfont.ttf");
+  src: url("../fonts/Rubik-Medium.ttf"); }
+@font-face {
+  font-family: DigifaceWide;
+  src: url("../fonts/digifaw.ttf"); }
+/* 初始化 start*/
+* {
+  box-sizing: border-box; }
+
+b {
+  font-weight: normal; }
+
+/* 声明字体变量 */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  color: #fff; }
+  @media screen and (max-width: 3850px) {
+    html,
+    body {
+      font-size: 64px; } }
+  @media screen and (max-width: 1930px) {
+    html,
+    body {
+      font-size: 32px; } }
+
+ul,
+li,
+dl,
+dt,
+dd {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+h1,
+h2,
+h3,
+h4,
+div {
+  padding: 0;
+  margin: 0;
+  font-weight: normal; }
+
+h3 {
+  font-size: 0.5625em;
+  color: #fff; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+/* 初始化 end */
+/* 公共部分样式 start*/
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: MicrosoftYaHei;
+  overflow: hidden; }
+  body:before {
+    position: absolute;
+    top: 7.6%;
+    right: 0;
+    width: 5.2%;
+    height: 12%;
+    background: url(../img/circle.png) no-repeat;
+    background-size: 100%;
+    content: ""; }
+
+/* 最外层盒子样式 */
+.root-wrap {
+  height: 100%;
+  padding: 0 1.5%;
+  background: url("../img/bg.png") no-repeat center top;
+  background-size: 100% 100%; }
+
+/* 头部样式 */
+header {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  min-height: 90px;
+  text-align: center;
+  padding-top: 1%;
+  margin-bottom: 1%; }
+  header > img {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0); }
+  header .gifImg {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 40%;
+    min-height: 50px;
+    overflow: hidden;
+    text-align: center; }
+    header .gifImg:after {
+      content: '';
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, 20%);
+      display: block;
+      position: absolute;
+      width: 36.5%;
+      min-width: 700px;
+      height: 100%;
+      background: url(../img/header.gif) no-repeat center center;
+      background-size: 100%; }
+    header .gifImg .month-tip {
+      margin-top: 3%;
+      font-size: 0.75em;
+      color: #fff; }
+  header .title_img {
+    text-align: left; }
+    header .title_img img {
+      width: 19.5%; }
+  header h2 {
+    position: absolute;
+    top: 33%;
+    font-size: 0.75em; }
+  header h2 {
+    left: 0; }
+  header:before {
+    position: absolute;
+    bottom: 18%;
+    left: 0;
+    width: 100%;
+    height: 18%;
+    min-height: 18px;
+    content: ""; }
+
+/* 主体内容样式 */
+.main {
+  width: 100%;
+  height: 84%; }
+  .main .aside-left {
+    position: relative;
+    width: 22%;
+    height: 100%; }
+    .main .aside-left h3 {
+      padding-top: 6.5%;
+      padding-left: 13%; }
+  .main .aside-right {
+    position: relative;
+    width: 22%;
+    height: 100%; }
+
+/* 左侧边框样式 start */
+.left-top {
+  position: relative;
+  opacity: .9;
+  background: rgba(18, 22, 64, 0.5); }
+  .left-top:after {
+    position: absolute;
+    right: 0;
+    bottom: -10.4%;
+    width: 5%;
+    min-width: 20px;
+    height: 13%;
+    min-height: 50px;
+    background: url("../img/bor1_1_xie.png") no-repeat;
+    background-size: 100% 100%;
+    content: ""; }
+  .left-top:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 106%;
+    background: url("../img/bor1_1.png") no-repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+    content: ""; }
+
+.left-bottom {
+  position: absolute;
+  bottom: 0;
+  opacity: .9; }
+  .left-bottom:before {
+    content: '';
+    position: absolute;
+    top: 5.6%;
+    right: -2%;
+    z-index: 100;
+    width: 15%;
+    height: 7%;
+    background: url("../img/bor1_2_square.png") no-repeat;
+    background-size: 100%;
+    z-index: 10; }
+  .left-bottom:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 104%;
+    background: url("../img/bor1_2.png") no-repeat;
+    background-size: 100% 97%;
+    z-index: -1;
+    content: ""; }
+
+/* 左侧边框样式 end*/
+/* 中间地图样式 start */
+.middle-map {
+  position: relative;
+  width: 55%;
+  height: 100%;
+  margin: 0 .5%; }
+  .middle-map h3 {
+    height: 9%; }
+  .middle-map .map-wrap {
+    position: relative;
+    opacity: .9;
+    height: 100%;
+    border-top: 4px solid #121e52;
+    border-bottom: 4px solid #10144b;
+    background: rgba(18, 22, 64, 0.5);
+    background-size: 100% 100%;
+    /*  数字展示牌 start */
+    /*  数字展示牌 end */ }
+    .middle-map .map-wrap h3 {
+      position: absolute;
+      top: 4%;
+      left: 50%;
+      width: 100%;
+      padding: 0 3%;
+      -webkit-transform: translate(-50%, 0);
+      transform: translate(-50%, 0); }
+      .middle-map .map-wrap h3 dl {
+        width: 20%;
+        padding: 0.4% 0.2% 0 0.4%;
+        border-left: 2px solid #00bbec; }
+        .middle-map .map-wrap h3 dl dt {
+          font-size: 0.78125em;
+          color: #00bbec;
+          margin-bottom: 5%; }
+        .middle-map .map-wrap h3 dl dd {
+          font-family: DigifaceWide;
+          font-size: 1.25em;
+          color: #fff; }
+    .middle-map .map-wrap .title-map {
+      position: absolute;
+      left: 50%;
+      top: 20%;
+      transform: translate(-50%, 0);
+      font-size: 0.5625em; }
+    .middle-map .map-wrap .unit-wanyuan:after,
+    .middle-map .map-wrap .unit-number:after,
+    .middle-map .map-wrap .unit-pc:after,
+    .middle-map .map-wrap .unit-type:after {
+      display: inline-block;
+      margin-left: 4%;
+      font-size: 12px;
+      color: #fff; }
+    .middle-map .map-wrap .unit-wanyuan:after {
+      content: '万元'; }
+    .middle-map .map-wrap .unit-number:after {
+      content: '条'; }
+    .middle-map .map-wrap .unit-type:after {
+      content: '种'; }
+    .middle-map .map-wrap .unit-pc:after {
+      content: '批次'; }
+    .middle-map .map-wrap #map {
+      height: 100%; }
+
+/* 中间地图样式 end */
+/* 右侧边框样式 start */
+.right-top {
+  position: relative;
+  background: url("../img/bg1_1.png") no-repeat top; }
+  .right-top:after {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/bor1_3.png") no-repeat;
+    background-size: 100% 100%;
+    content: ""; }
+  .right-top .con {
+    height: 42%;
+    margin: 0 5%;
+    font-size: 0.4375em;
+    font-size: .4375em;
+    background: #081d5d; }
+
+/* 右侧边框样式 end */
+/* 公共部分样式 end*/
+.nav {
+  position: fixed;
+  right: 0;
+  z-index: 20000;
+  width: 30%;
+  height: 10%;
+  font-size: 0.65625em; }
+  .nav ul {
+    list-style: none;
+    min-width: 500px;
+    width: 100%; }
+  .nav ul a {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 4.5;
+    color: white;
+    /* background-color: #2f3e45; */ }
+
+.drop-down {
+  width: 100%;
+  height: 100%; }
+
+.drop-down-content li {
+  display: inline-block;
+  float: left;
+  width: 20%;
+  min-width: 100px;
+  height: 100%; }
+
+.drop-down {
+  /*position: relative;*/
+  width: 100%; }
+
+.drop-down-content {
+  padding: 0;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  /*position: absolute;*/ }
+
+h3 {
+  font-size: 30px;
+  clear: both; }
+
+.drop-down-content li:hover a {
+  color: bisque; }
+
+.nav .drop-down:hover .drop-down-content {
+  display: block; }
+
+.main {
+  width: 100%;
+  height: 84%; }
+  .main .aside-left {
+    position: relative;
+    width: 22%;
+    height: 100%; }
+    .main .aside-left:before {
+      position: absolute;
+      top: 0;
+      bottom: -10.4%;
+      width: 100%;
+      height: 100%;
+      background: url(../img/invalid.png) no-repeat;
+      background-size: 100% 100%;
+      content: ""; }
+    .main .aside-left ul {
+      display: block;
+      height: 91%;
+      overflow: hidden; }
+    .main .aside-left li {
+      width: 86%;
+      height: 19%;
+      margin: 1.5% auto;
+      padding: 5% 8% 5% 4%;
+      background: rgba(8, 29, 93, 0.36); }
+      .main .aside-left li img {
+        width: 23%;
+        height: 100%;
+        display: block; }
+      .main .aside-left li dl {
+        width: 77%;
+        padding-left: 5%; }
+        .main .aside-left li dl dt {
+          font-size: 0.4375em;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          text-align: left;
+          color: #ffffff;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis; }
+        .main .aside-left li dl dd {
+          font-family: MicrosoftYaHei;
+          font-size: 0.4375em;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.43;
+          letter-spacing: normal;
+          text-align: left;
+          color: rgba(0, 187, 236, 0.5); }
+          .main .aside-left li dl dd p {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis; }
+  .main .aside-right {
+    position: relative;
+    width: 22%;
+    height: 100%; }
+    .main .aside-right .con_top {
+      width: 100%;
+      height: 103.5%;
+      position: relative; }
+      .main .aside-right .con_top:before {
+        position: absolute;
+        top: 0;
+        bottom: -10.4%;
+        width: 100%;
+        height: 100%;
+        background: url(../img/aside_top.png) no-repeat;
+        background-size: 100% 100%;
+        content: ""; }
+      .main .aside-right .con_top h3 {
+        padding: 10% 8% 2% 8%; }
+      .main .aside-right .con_top .aside_con {
+        padding: 0 3%;
+        height: 86%;
+        overflow: hidden; }
+        .main .aside-right .con_top .aside_con dl {
+          padding: 2% 5%;
+          background: rgba(8, 29, 93, 0.43);
+          margin: 1% 0; }
+        .main .aside-right .con_top .aside_con .user {
+          font-size: 0.4375em;
+          text-align: left;
+          color: #00bbec; }
+        .main .aside-right .con_top .aside_con .time {
+          color: rgba(0, 187, 236, 0.52); }
+        .main .aside-right .con_top .aside_con .comment {
+          text-align: left;
+          color: #00bbec; }
+          .main .aside-right .con_top .aside_con .comment span {
+            display: inline-block;
+            position: relative;
+            font-size: 0.3125em; }
+        .main .aside-right .con_top .aside_con dd {
+          font-size: 0.40625em;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.33;
+          letter-spacing: normal;
+          text-align: left;
+          color: #ffffff; }
+  .main .middle_con {
+    position: relative;
+    width: 55%;
+    height: 100%;
+    margin: 0 .5%;
+    background-color: rgba(18, 22, 64, 0.44); }
+    .main .middle_con .middle_top {
+      width: 100%;
+      height: 80%; }
+    .main .middle_con .middle_button {
+      overflow: hidden;
+      width: 100%;
+      height: 20%; }
+      .main .middle_con .middle_button .button_left,
+      .main .middle_con .middle_button .button_right {
+        width: 50%;
+        float: left;
+        height: 100%;
+        position: relative;
+        font-size: 0.4375em; }
+        .main .middle_con .middle_button .button_left .button_con,
+        .main .middle_con .middle_button .button_right .button_con {
+          width: 100%;
+          height: 82%;
+          position: absolute;
+          overflow: hidden; }
+        .main .middle_con .middle_button .button_left:before,
+        .main .middle_con .middle_button .button_right:before {
+          position: absolute;
+          top: 0;
+          bottom: -10.4%;
+          width: 100%;
+          height: 100%;
+          background: url(../img/invalid-button.png) no-repeat;
+          background-size: 100% 100%;
+          content: ""; }
+        .main .middle_con .middle_button .button_left h3,
+        .main .middle_con .middle_button .button_right h3 {
+          padding: 4% 0 2% 3%; }
+        .main .middle_con .middle_button .button_left dl,
+        .main .middle_con .middle_button .button_right dl {
+          width: 90%;
+          margin-left: 3%;
+          display: inline-block;
+          line-height: 2.3;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis; }
+        .main .middle_con .middle_button .button_left .number,
+        .main .middle_con .middle_button .button_right .number {
+          color: #2edbff; }
+        .main .middle_con .middle_button .button_left .title,
+        .main .middle_con .middle_button .button_right .title {
+          text-align: left;
+          color: #ffffff; }
+        .main .middle_con .middle_button .button_left dt,
+        .main .middle_con .middle_button .button_right dt {
+          display: inline-block; }
+        .main .middle_con .middle_button .button_left dd,
+        .main .middle_con .middle_button .button_right dd {
+          display: inline-block;
+          text-align: left;
+          color: rgba(0, 187, 236, 0.5);
+          padding-left: 2%; }
+    .main .middle_con .con_left,
+    .main .middle_con .con_right {
+      width: 50%;
+      height: 37%;
+      padding-top: 1%; }
+    .main .middle_con .con_left {
+      padding: 2% 5%;
+      border-right: 1px solid #00bbec; }
+      .main .middle_con .con_left img {
+        display: block;
+        width: 30%;
+        height: 88%; }
+      .main .middle_con .con_left dl {
+        width: 70%;
+        height: 100%;
+        padding-left: 5%;
+        color: #ffffff; }
+        .main .middle_con .con_left dl dt {
+          font-size: 0.75em;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1;
+          padding-bottom: 4%;
+          letter-spacing: normal;
+          text-align: left;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis; }
+        .main .middle_con .con_left dl dd {
+          font-size: 0.4375em;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.43;
+          letter-spacing: normal;
+          text-align: left; }
+    .main .middle_con .con_right {
+      padding-left: 2%; }
+      .main .middle_con .con_right dl {
+        width: 50%;
+        height: 50%; }
+        .main .middle_con .con_right dl dt {
+          font-size: 0.5625em;
+          line-height: 1.11;
+          letter-spacing: normal;
+          text-align: left;
+          color: #ffffff; }
+        .main .middle_con .con_right dl ul {
+          margin: 4% 0 0 7%; }
+          .main .middle_con .con_right dl ul li {
+            padding: 1% 5%;
+            background: rgba(0, 187, 236, 0.28);
+            font-size: 0.4375em;
+            text-align: right;
+            color: #ffffff;
+            float: left;
+            padding: 1% 5%;
+            margin: 1%; }
+    .main .middle_con .con_link {
+      width: 100%;
+      height: 22.33%;
+      overflow: hidden;
+      position: relative;
+      float: left; }
+      .main .middle_con .con_link li {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; }
+      .main .middle_con .con_link:before {
+        position: absolute;
+        top: 0;
+        bottom: -10.4%;
+        width: 20%;
+        height: 15%;
+        background: url(../img/title_con.png) no-repeat;
+        background-size: 100% 100%;
+        content: ""; }
+      .main .middle_con .con_link h3 {
+        padding-left: 11%;
+        margin-top: -0.1%; }
+      .main .middle_con .con_link .link_title,
+      .main .middle_con .con_link .link_ul {
+        font-size: 0.4375em;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.43;
+        letter-spacing: normal;
+        text-align: left;
+        color: #ffffff;
+        width: 81%;
+        height: 50%;
+        overflow: hidden;
+        margin: 2% auto; }
+      .main .middle_con .con_link .link_title {
+        height: 43%; }
+      .main .middle_con .con_link .link_ul li {
+        width: 33.33%;
+        float: left;
+        padding: 1%; }
+
+.title_img {
+  text-align: left;
+  margin-top: -1.5%; }
+
+.main-bottom {
+  width: 100%;
+  height: 5px; }
+  .main-bottom span {
+    display: inline-block;
+    height: 100%;
+    background: #02336b; }
+  .main-bottom .line1 {
+    width: 15%;
+    margin-right: 6px; }
+  .main-bottom .line2 {
+    width: 55%;
+    margin-right: 6px; }
+  .main-bottom .line3 {
+    width: 26%; }
+
+.pressRotate {
+  -webkit-animation: mymove .5s ease-in;
+  -moz-animation: mymove .5s ease-in;
+  -o-animation: mymove .5s ease-in;
+  animation: mymove .5s ease-in; }
+
+@keyframes mymove {
+  0% {
+    transform: rotateX(0deg); }
+  100% {
+    transform: rotateX(360deg); } }
+@-moz-keyframes mymove {
+  0% {
+    transform: rotateX(0deg); }
+  100% {
+    transform: rotateX(360deg); } }
+@-webkit-keyframes mymove {
+  0% {
+    transform: rotateX(0deg); }
+  100% {
+    transform: rotateX(360deg); } }
+@-o-keyframes mymove {
+  0% {
+    transform: rotateX(0deg); }
+  100% {
+    transform: rotateX(360deg); } }
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg); } }

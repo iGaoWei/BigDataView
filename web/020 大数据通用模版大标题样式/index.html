@@ -1,0 +1,205 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>index</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/area_echarts.js"></script>
+<link rel="stylesheet" href="css/comon0.css">
+</head>
+	<script>	
+		$(document).ready(function(){
+			var whei=$(window).width()
+			$("html").css({fontSize:whei/20})
+			$(window).resize(function(){
+				var whei=$(window).width()
+			 $("html").css({fontSize:whei/20})
+		});
+		});
+	</script>
+	<script type="text/javascript" src="js/echarts.min.js"></script> 
+	<script>
+		alert("地图模块本地需要在iis环境下运行 \n请先搭建iis服务否则不能看到地图")
+		</script>
+<body>
+	<div class="loading" >
+  <div class="loadbox"> <img src="images/loading.gif"> 页面加载中... </div>
+</div>
+<div class="canvas" style="opacity: .2">
+	<iframe frameborder="0" src="js/index.html" style="width: 100%; height: 100%"></iframe>
+	</div>
+<div class="head">
+
+  <h1>大数据通用模版大标题样式</h1>
+  <div class="weather"><!--<img src="images/weather.png"><span>多云转小雨</span>--><span id="showTime"></span></div>
+	<script>
+var t = null;
+    t = setTimeout(time,1000);//開始运行
+    function time()
+    {
+       clearTimeout(t);//清除定时器
+       dt = new Date();
+		var y=dt.getFullYear();
+		var mt=dt.getMonth()+1;
+		var day=dt.getDate();
+       var h=dt.getHours();//获取时
+       var m=dt.getMinutes();//获取分
+       var s=dt.getSeconds();//获取秒
+       document.getElementById("showTime").innerHTML = y+"年"+mt+"月"+day+"日"+h+"时"+m+"分"+s+"秒";
+       t = setTimeout(time,1000); //设定定时器，循环运行     
+    } 
+
+</script>
+</div>
+<div class="mainbox">
+  <ul class="clearfix">
+    <li>
+		<div class="boxall">
+		  <div class="alltitle">数据总览</div>
+			<div class="sycm">
+          <ul class="clearfix">
+            <li>
+              <h2>962.4</h2>
+              <span>采收</span></li>
+            <li>
+              <h2>338</h2>
+              <span>生产</span></li>
+            <li>
+              <h2>337</h2>
+              <span>销售</span></li>
+          </ul>
+        </div>
+        <div class="boxfoot"></div>
+      </div>
+		
+      <div class="boxall">
+        <div class="alltitle alltitle2">
+			市场环境监测
+		
+		  </div>
+ 
+			<ul class="tabnav">
+				<li style=" height: auto;">
+					<div class="gdhead">
+			<span>市场名称</span><span>品种 </span><span>今日价格</span><span>昨日价格</span>	<span>涨跌幅度 </span>	
+			  <span>时间 </span>
+			</div>
+					<div class="scrollDiv"  style=" height:1.63rem">
+				
+				  <ul class="smjl">
+			<li><span>xx市场xx市场xx市场</span><span>香芋</span><span>12</span><span>12</span><span>12%</span><span>9-12</span></li>
+			<li><span>xx市场</span><span>香芋</span><span>12</span><span>12</span><span>12%</span><span>9-12</span></li>
+			<li><span>xx市场</span><span>香芋</span><span>12</span><span>12</span><span>12%</span><span>9-12</span></li>
+			<li><span>xx市场</span><span>香芋</span><span>12</span><span>12</span><span>12%</span><span>9-12</span></li>
+			<li><span>xx市场</span><span>香芋</span><span>12</span><span>12</span><span>12%</span><span>9-12</span></li>
+			<li><span>xx市场</span><span>香芋</span><span>12</span><span>12</span><span>12%</span><span>9-12</span></li>
+			<li><span>xx市场</span><span>香芋</span><span>12</span><span>12</span><span>12%</span><span>9-12</span></li>
+			<li><span>xx市场</span><span>香芋</span><span>12</span><span>12</span><span>12%</span><span>9-12</span></li>
+		
+		
+		
+			
+			</ul>
+			</div></li>
+		  
+		  </ul>
+		  
+        <div class="boxfoot"></div>
+      </div>
+
+     <div class="boxall">
+		  <div class="alltitle">销售排行</div>
+		 <div style="height: 3.47rem" id="echart5"></div>
+        <div class="boxfoot">
+		  </div>
+      </div>
+		
+    </li>
+    <li>
+
+      <div class="map">
+        <div class="map1"><img src="images/lbx.png"></div>
+        <div class="map2"><img src="images/jt.png"></div>
+        <div class="map3"><img src="images/map.png"></div>
+        <div class="map4" id="map_1">
+	
+		  </div>
+      </div>
+		<div class="boxall">
+			<div class="alltitle">年销售量</div>
+		<div class="allnav" style="height: 1.86rem; " id="echart4">
+
+			</div>
+			<div class="boxfoot"></div>
+			
+		</div>
+    </li>
+    <li>
+        
+      
+      <div class="boxall" style="height: 6.3rem">
+		  
+		  <div class="alltitle ">模块标题 </div>
+		  
+        <div class=" alltitle2">小标题1
+			<div class="titabs">
+			<a  href="#" class="active jsy1">标签1</a><a class="jsy2" href="#">标签2</a><a class="jsy3"  href="#">标签3</a>
+			</div>
+		  </div>
+             <div class="allnav2"  id="echart21" style="height: 22%"></div>
+		  <div class=" alltitle2">小标题2
+		  <div class="titabs">
+			<a href="#" class="active tr01">标签1</a><a class="tr02" href="#">标签2 </a><a class="tr03" href="#">标签3</a>
+			</div>
+		  </div>
+             <div class="allnav2"  id="echart22" style="height: 22%"></div>
+		  
+		   <div class=" alltitle2">小标题3 </div>
+             <div class="allnav2" style="height: 22%">
+			     <div class="feng" id="feng01"></div>
+				 <div class="feng" id="feng02"></div>
+				 <div class="feng" id="feng03"></div>
+		  </div>
+		  
+        <div class="boxfoot"></div>
+      </div>
+		
+		
+      <div class="boxall" style="height: 2.6rem;">
+        <div class="alltitle">摄像头 
+			</div>
+		
+		  <div class="allnav sxt" >
+		  <ul>
+			<li class=""><a href="#">启动</a></li>
+			<li class=""><a href="#">启动</a></li>
+			</ul>
+		  </div>
+		  
+		  
+        <div class="boxfoot"></div>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="back"></div>
+	    
+
+		
+
+<script language="JavaScript" src="js/js.js"></script> 
+	<script src="js/jquery.liMarquee.js"></script> 	
+<script>
+
+
+	
+$(function(){
+    $('.scrollDiv').liMarquee({
+        direction: 'up',
+		 scrollamount: 30,
+		 runshort: false
+    });
+});
+</script> 
+</body>
+</html>

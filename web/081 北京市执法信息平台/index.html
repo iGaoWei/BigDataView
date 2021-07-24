@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="no-cache" http-equiv="Cache-Control" />
+    <meta content="no-cache" http-equiv="Pragma" />
+	<title>北京市执法信息平台</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<canvas id="canvas-bg" style="height: 100%;">
+	</canvas>
+
+	<div class="mainContainer">
+		<!-- 顶部菜单 -->
+		<div class="topContent">
+			<!-- 进度条 -->
+			<div class="progress-bar-tr-content">
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+			</div>
+			<!-- 顶部菜单 -->
+			<div class="active menu"><a href="javascript:void(0);">综合</a></div>
+            <div class="menu"><a href="javascript:void(0);">行政处罚</a></div>
+            <div class="menu"><a href="javascript:void(0);">行政许可</a></div>
+            <div class="menu"><a href="javascript:void(0);">行政强制</a></div>
+            <div class="menu"><a href="javascript:void(0);">行政征收</a></div>
+            <div class="menu"><a href="javascript:void(0);">行政给付</a></div>
+            <div class="menu"><a href="javascript:void(0);">行政检查</a></div>
+            <div class="menu"><a href="javascript:void(0);">行政确认</a></div>
+            <div class="menu"><a href="javascript:void(0);">行政奖励</a></div>
+            <div class="menu"><a href="javascript:void(0);">行政裁决</a></div>
+
+		    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            	<defs>
+	                <!--画一个渐变的圆-->
+	                <!-- <radialGradient fx="0" cx="0" fy="0.5" cy="0.5" r="0.5" id="white_cray_circle">
+	                    <stop offset="0%" stop-color="#ffffff" />
+	                    <stop offset="50%" stop-color="#0066AC" />
+	                </radialGradient>
+	                <radialGradient fx="0" cx="0" fy="0.5" cy="0.5" r="0.5" id="white_cray_circle2">
+	                    <stop offset="0%" stop-color="#ffffff" />
+	                    <stop offset="50%" stop-color="#295579" />
+	                </radialGradient>
+	                <radialGradient fx="0" cx="0" fy="0.5" cy="0.5" r="0.5" id="white_cray_circle4">
+	                    <stop offset="0%" stop-color="#ffffff" />
+	                    <stop offset="50%" stop-color="#295267" />
+	                </radialGradient>
+	                <radialGradient fy="1" fx="0.5" r="1" cy="1" cx="0.5" id="white_cray_sector">
+	                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.5" />
+	                    <stop offset="80%" stop-color="#23b2b7" stop-opacity="0.2" />
+	                    <stop offset="290%" stop-color="#222222" stop-opacity="0" />
+	                </radialGradient> -->
+	                <linearGradient id="white_cray" x1="0" y1="0%" x2="1" y2="0%">
+	                    <stop offset="0%" style="stop-color:#00516E; stop-opacity:0" />
+	                    <stop offset="50%" style="stop-color:#FFFFFF; stop-opacity:1" />
+	                    <stop offset="100%" style="stop-color:#00516E; stop-opacity:0" />
+	                </linearGradient>
+	            </defs>
+
+	            <g>
+                	<line x1="60" y1="11" x2="160" y2="12" stroke-width="2" stroke="url(#white_cray)" fill="none" id="topLine" />
+            	</g>
+            </svg>
+		</div>
+		
+		<div class="mainContainer">
+			<!-- 左侧显示区 -->
+			<div class="leftContent">
+				<div class="labelContent">
+					<span class="label-title">处理案件总数</span>
+					<span class="label-body">229378</span>
+				</div>
+				<div class="labelContent">
+					<span class="label-title">处罚总金额(万元)</span>
+					<span class="label-body">95650</span>
+				</div>
+				<div class="labelContent">
+					<span class="label-title">执法人员总数</span>
+					<span class="label-body">63014</span>
+				</div>
+				<div class="labelContent">
+					<span class="label-title">监督人员总数</span>
+					<span class="label-body">588</span>
+				</div>
+				<div class="labelContent">
+					<span class="label-title">人均执法量</span>
+					<span class="label-body">6.33</span>
+				</div>
+				<div class="labelContent">
+					<span class="label-title">履责数／职权数</span>
+					<!-- <span class="label-body">6.33</span> -->
+				</div>
+				<div class="labelContent">
+					<span class="label-title">不作为数／复议数</span>
+					<!-- <span class="label-body">6.33</span> -->
+				</div>
+
+			</div>
+			
+			<!-- 主显示部分 -->
+			<div class="mainContent">
+				<div class="index-bm-zt">
+					<span class="index-bm">执法部门: <span class="zfCount">742</span></span>
+					<span class="index-zt">执法主体: <span class="zfCount">2072</span></span>
+				</div>
+			</div>
+
+			<!-- 小面板 -->
+			<div class="min-panel"> </div>
+		</div>
+		<!-- 底部菜单 -->
+		<div class="bottomContent">
+			<div class="progress-bar-bl-content">
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+				<div class="progress-left-bar"></div>
+			</div>
+			<div class="progress-bar-br-content">
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+				<div class="progress-right-bar"></div>
+			</div>
+			<div class="cmd-left" onclick="javascript:cmdroll(1);"> </div>
+            <div class="cmd-right" onclick="javascript:cmdroll(-1);"> </div>
+            <div class="cmdContent">
+                <div class="cmd"><a href="javascript:void(0)" class="cmd-label">行政执法人员</a></div>
+                <div class="cmd"><a href="javascript:void(0)" class="cmd-label">行政复议案件</a></div>
+                <div class="cmd"><a href="javascript:void(0)" class="cmd-label">地图热点分析</a></div>
+                <div class="cmd"><a href="javascript:void(0)" class="cmd-label">法律统计分析</a></div>
+                <div class="cmd"><a href="javascript:void(0)" class="cmd-label">案件评查分析</a></div>
+                <div class="cmd"><a href="javascript:void(0)" class="cmd-label">部门考核分析</a></div>
+            </div>
+
+            <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            
+                <g>
+                    <line x1="80" y1="17" x2="180" y2="18" stroke-width="2" stroke="url(#white_cray)" id="bottomLine" />
+                </g>
+           
+        	</svg>
+		</div>
+		
+	</div>
+
+	<script type="text/javascript" src="plugins/jquery/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="plugins/d3/d3.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript">
+		App.init();
+	</script>
+</body>
+</html>

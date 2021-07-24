@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box}
+*,body{padding:0px;	margin:0px;font-family: "微软雅黑";}
+body{color:#fff;font-size: 16px; background: #033c76;
+    background: -webkit-radial-gradient(50% 35%, farthest-corner,#034f8e,#034987,#02366d,#002353);
+    background: radial-gradient(50% 35%, farthest-corner,#034f8e,#034987,#02366d,#002353);
+}
+html,body{min-height: 100%;}
+li{ list-style-type:none;}
+table{}
+i{ margin:0px; padding:0px; text-indent:0px;}
+img{ border:none; max-width: 100%;}
+a{ text-decoration:none; color:#fff;}
+a.active,a:focus{ outline:none!important; text-decoration:none;}
+ol,ul,p,h1,h2,h3,h4,h5,h6{ padding:0; margin:0}
+a:hover{ color:#06c; text-decoration: none!important}
+.clearfix:after, .clearfix:before {display: table;content: " "}
+ .clearfix:after {clear: both}
+.pulll_left{float:left;}
+.pulll_right{float:right;}
+i{font-style: normal;}
+.text-w{color: #ffe400}
+.text-d{color: #ff6316}
+.text-s{color: #14e144}
+.text-b{color: #07e5ff}
+
+.head{position: relative; height: 90px; margin: 0 15px; padding-right: 60px;}
+.head h1{  font-size: 30px; letter-spacing: -2px; text-align: center; line-height: 90px; padding-right: 55px; color: #daf9ff;}
+.head .menu{}
+.head .menu ul{ font-size: 0;}
+
+.head .menu li{ display: inline-block; position: relative;margin: 30px 15px;;}
+.head .menu li a{ display: block; font-size: 18px; color: #fff; line-height: 30px; padding: 0 10px; }
+.head .time{position: absolute; right: 0; line-height: 90px; top: 0;}
+
+.menu li:before,
+.menu li:after{ position:absolute; width:10px; height:5px;opacity: .4; content: "";  border-top: 2px solid #02a6b5; top: -1px;border-radius: 2px;}
+.menu li:before,.menu li a:before{border-left: 2px solid #02a6b5;left: -1px;}
+.menu li:after,.menu li a:after{border-right: 2px solid #02a6b5; right: -1px;}
+.menu li a{ position:relative;}
+.menu li a:before,
+.menu li a:after{ position:absolute; width:10px; height:5px; opacity: .4;  content: "";border-bottom: 2px solid #02a6b5; bottom:-1px;border-radius: 2px;}
+
+.head .menu li a:hover{ color: #f4e925;}
+.menu li a:hover:before,
+.menu li a:hover:after,
+.menu li:hover:before,
+.menu li:hover:after{border-color:  #f4e925; opacity: 1;}
+
+.mainbox{padding: 0px 10px;}
+.nav1{margin-left: -6px; margin-right:-6px;}
+.nav1>li{padding:0 6px; float: left;}
+
+.box{ border:1px solid rgba(7,118,181,.5); box-shadow:inset 0 0 10px rgba(7,118,181,.4); margin-bottom: 12px; position: relative;}
+.tit{ padding: 10px 10px 10px 25px;border-bottom:1px solid rgba(7,118,181,.7);font-size: 16px; font-weight: 500; position: relative;}
+.tit:before,.tit01:before{position: absolute; content: ""; width: 6px; height: 6px; background: rgba(22,214,255,.9);box-shadow: 0 0 5px rgba(22,214,255,.9); border-radius: 10px; left: 10px; top: 18px;}
+
+.tit:after,.box:before{ width: 100%; height: 1px; content: ""; position: absolute; left: 0; bottom:-1px; background:linear-gradient(to right,#076ead,#4ba6e0,#076ead); box-shadow: 0 0 5px rgba(131,189,227,1); opacity: .6}
+.box:before{top: -1px;}
+
+.boxnav{padding: 10px; height: 390px;}
+.tit01{font-size: 16px; font-weight: 500; position: relative; padding-left: 15px;}
+.tit01:before{ left: 3px; top: 8px;}
+
+.mapc{background: url(../images/bg3.png) no-repeat center center; background-size: 100% 100%}
+.map{position: relative; height: 100%; padding-left: 10%;}
+.map img{}
+.mapnav{position: absolute;z-index: 10;}
+
+.anchorBL{display: none;}
+.BMap_Marker img{border-radius: 30px; overflow: hidden; border:2px solid rgba(155,155,155,1)!important;}
+.zjia {margin-left: -10px; margin-right: -10px;}
+.zjia li{float: left; width: 33.33333%;padding: 15px 10px; text-align: center;}
+
+.zjia li img{width: 72px;  border-radius: 100px; margin: 0 auto; display: block; border: 2px solid rgba(255,255,255,.1); padding: 5px; }
+.zjia li h3{text-align: center; padding: 5px 0 0 0; font-size: 14px;}
+.zjia li span{ font-size: 12px;  display: inline-block; opacity: .4;}
+.zjia li p{ font-size: 14px; opacity: .6; line-height: 140%;
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	word-break: break-all;
+	white-space: normal !important;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

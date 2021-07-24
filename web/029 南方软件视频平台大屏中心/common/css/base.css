@@ -1,0 +1,19 @@
+@charset "utf-8";
+*{margin:0;padding:0;border:0;}
+body{width:100%;height:100%;font:12px "microsoft yahei",Arial,Helvetica,sans-serif;color:#666666;}
+html{width:100%;height:100%;}
+iframe{position:relative;overflow: auto;width:100%;min-height: 100%;}
+ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd{border:none;list-style: none}
+input{border:none}
+.fl{float: left}
+.fr{float:right}
+.clear{clear:both}
+.ofhidden{overflow: hidden}
+/*清除浮动代码*/
+.clearfloat{zoom:1}
+.clearfloat:after{display: block;clear:both;content:"";visibility: hidden;height:0}
+a{text-decoration:none;}
+/*去掉各Table cell 的边距并让其边重合*/
+table{border-collapse: collapse;border-spacing: 0}
+/*IE6、7焦点点状线去除*/
+a:focus,*:focus{outline:none}
