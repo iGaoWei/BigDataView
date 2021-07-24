@@ -12,8 +12,7 @@
 
 1. 直接下载，使用浏览器访问静态页面即可。
 
-2. git拉取代码 $ git clone https://gitee.com/suruibuas/eadmin.git
-
+2. git拉取代码 $ git clone https://gitee.com/iGaoWei/big-data-view.git
 
 </p>
 
