@@ -152,13 +152,13 @@ var App = function() {
 			case 0:
 				// 综合
 				for (var i = 0; i < itemMenu.length; i++) {
-					html = html + '<div class="cmd"><a href="#" class="cmd-label">' + itemMenu[i] + '</a></div>';
+					html = html + '<div class="cmd"><a href="https://gitee.com/iGaoWei/big-data-view" class="cmd-label">' + itemMenu[i] + '</a></div>';
 				}
 				break;
 			case 1:
 				// 行政处罚
 				for (var i = 0; i < itemMenu.length; i++) {
-					html = html + '<div class="cmd"><a href="#" class="cmd-label">' + itemMenu[i] + '</a></div>';
+					html = html + '<div class="cmd"><a href="https://gitee.com/iGaoWei/big-data-view" class="cmd-label">' + itemMenu[i] + '</a></div>';
 				}
 				break;
 			default:

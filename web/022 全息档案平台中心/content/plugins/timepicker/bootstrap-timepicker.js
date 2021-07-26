@@ -283,16 +283,16 @@
 
       templateContent = '<table>'+
          '<tr>'+
-           '<td><a href="#" data-action="incrementHour"><i class="' + this.upArrowStyle + '"></i></a></td>'+
+           '<td><a href="https://gitee.com/iGaoWei/big-data-view" data-action="incrementHour"><i class="' + this.upArrowStyle + '"></i></a></td>'+
            '<td class="separator">&nbsp;</td>'+
-           '<td><a href="#" data-action="incrementMinute"><i class="' + this.upArrowStyle + '"></i></a></td>'+
+           '<td><a href="https://gitee.com/iGaoWei/big-data-view" data-action="incrementMinute"><i class="' + this.upArrowStyle + '"></i></a></td>'+
            (this.showSeconds ?
              '<td class="separator">&nbsp;</td>'+
-             '<td><a href="#" data-action="incrementSecond"><i class="' + this.upArrowStyle + '"></i></a></td>'
+             '<td><a href="https://gitee.com/iGaoWei/big-data-view" data-action="incrementSecond"><i class="' + this.upArrowStyle + '"></i></a></td>'
            : '') +
            (this.showMeridian ?
              '<td class="separator">&nbsp;</td>'+
-             '<td class="meridian-column"><a href="#" data-action="toggleMeridian"><i class="' + this.upArrowStyle + '"></i></a></td>'
+             '<td class="meridian-column"><a href="https://gitee.com/iGaoWei/big-data-view" data-action="toggleMeridian"><i class="' + this.upArrowStyle + '"></i></a></td>'
            : '') +
          '</tr>'+
          '<tr>'+
@@ -309,16 +309,16 @@
            : '') +
          '</tr>'+
          '<tr>'+
-           '<td><a href="#" data-action="decrementHour"><i class="' + this.downArrowStyle + '"></i></a></td>'+
+           '<td><a href="https://gitee.com/iGaoWei/big-data-view" data-action="decrementHour"><i class="' + this.downArrowStyle + '"></i></a></td>'+
            '<td class="separator"></td>'+
-           '<td><a href="#" data-action="decrementMinute"><i class="' + this.downArrowStyle + '"></i></a></td>'+
+           '<td><a href="https://gitee.com/iGaoWei/big-data-view" data-action="decrementMinute"><i class="' + this.downArrowStyle + '"></i></a></td>'+
            (this.showSeconds ?
             '<td class="separator">&nbsp;</td>'+
-            '<td><a href="#" data-action="decrementSecond"><i class="' + this.downArrowStyle + '"></i></a></td>'
+            '<td><a href="https://gitee.com/iGaoWei/big-data-view" data-action="decrementSecond"><i class="' + this.downArrowStyle + '"></i></a></td>'
            : '') +
            (this.showMeridian ?
             '<td class="separator">&nbsp;</td>'+
-            '<td><a href="#" data-action="toggleMeridian"><i class="' + this.downArrowStyle + '"></i></a></td>'
+            '<td><a href="https://gitee.com/iGaoWei/big-data-view" data-action="toggleMeridian"><i class="' + this.downArrowStyle + '"></i></a></td>'
            : '') +
          '</tr>'+
        '</table>';
@@ -327,14 +327,14 @@
       case 'modal':
         template = '<div class="bootstrap-timepicker-widget modal hide fade in" data-backdrop="'+ (this.modalBackdrop ? 'true' : 'false') +'">'+
           '<div class="modal-header">'+
-            '<a href="#" class="close" data-dismiss="modal">×</a>'+
+            '<a href="https://gitee.com/iGaoWei/big-data-view" class="close" data-dismiss="modal">×</a>'+
             '<h3>Pick a Time</h3>'+
           '</div>'+
           '<div class="modal-content">'+
             templateContent +
           '</div>'+
           '<div class="modal-footer">'+
-            '<a href="#" class="btn btn-primary" data-dismiss="modal">OK</a>'+
+            '<a href="https://gitee.com/iGaoWei/big-data-view" class="btn btn-primary" data-dismiss="modal">OK</a>'+
           '</div>'+
         '</div>';
         break;

@@ -52,16 +52,16 @@ You can set options via data-attributes, too, via `data-delay` and `data-close-o
 
 ```html
 <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="false">
+    <a href="https://gitee.com/iGaoWei/big-data-view" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="false">
         Account <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
-        <li><a tabindex="-1" href="#">My Account</a></li>
+        <li><a tabindex="-1" href="https://gitee.com/iGaoWei/big-data-view">My Account</a></li>
         <li class="divider"></li>
-        <li><a tabindex="-1" href="#">Change Email</a></li>
-        <li><a tabindex="-1" href="#">Change Password</a></li>
+        <li><a tabindex="-1" href="https://gitee.com/iGaoWei/big-data-view">Change Email</a></li>
+        <li><a tabindex="-1" href="https://gitee.com/iGaoWei/big-data-view">Change Password</a></li>
         <li class="divider"></li>
-        <li><a tabindex="-1" href="#">Logout</a></li>
+        <li><a tabindex="-1" href="https://gitee.com/iGaoWei/big-data-view">Logout</a></li>
     </ul>
 </li>
 ```

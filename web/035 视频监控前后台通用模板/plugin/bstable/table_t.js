@@ -42,8 +42,8 @@
                         field: 'id',
                         align: 'center',
                         formatter: function (value, row) {
-                            var e = '<a href="#" mce_href="#" onclick="edit(\'' + row.id + '\')">编辑</a> ';
-//                            var d = '<a href="#" mce_href="#" onclick="del(\'' + row.id + '\')">删除</a> ';
+                            var e = '<a href="https://gitee.com/iGaoWei/big-data-view" mce_href="https://gitee.com/iGaoWei/big-data-view" onclick="edit(\'' + row.id + '\')">编辑</a> ';
+//                            var d = '<a href="https://gitee.com/iGaoWei/big-data-view" mce_href="https://gitee.com/iGaoWei/big-data-view" onclick="del(\'' + row.id + '\')">删除</a> ';
                             return e;
                         }
                     }
