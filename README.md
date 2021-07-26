@@ -28,3 +28,28 @@
 
 ##### 004 政务大数据共享交换平台
 ![输入图片说明](https://gitee.com/iGaoWei/big-data-view/raw/master/web/004%20%E6%94%BF%E5%8A%A1%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%85%B1%E4%BA%AB%E4%BA%A4%E6%8D%A2%E5%B9%B3%E5%8F%B0/%E6%94%BF%E5%8A%A1%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%85%B1%E4%BA%AB%E4%BA%A4%E6%8D%A2%E5%B9%B3%E5%8F%B0.png "屏幕截图.png") 
+
+##### 005 可视化监控管理
+![输入图片说明](https://gitee.com/iGaoWei/big-data-view/raw/master/web/005%20%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9B%91%E6%8E%A7%E7%AE%A1%E7%90%86/%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9B%91%E6%8E%A7%E7%AE%A1%E7%90%86.png "屏幕截图.png") 
+
+##### 006 全国疫情实时监控
+![输入图片说明](https://gitee.com/iGaoWei/big-data-view/blob/master/web/006%20%E5%85%A8%E5%9B%BD%E7%96%AB%E6%83%85%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7/%E5%85%A8%E5%9B%BD%E7%96%AB%E6%83%85%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7.png "屏幕截图.png") 
+
+##### 007 互联网+惠民服务平台
+![输入图片说明](https://gitee.com/iGaoWei/big-data-view/blob/master/web/007%20%E6%83%A0%E6%B0%91%E6%9C%8D%E5%8A%A1%E5%B9%B3%E5%8F%B0/%E6%83%A0%E6%B0%91%E6%9C%8D%E5%8A%A1%E5%B9%B3%E5%8F%B0.png "屏幕截图.png") 
+
+##### 008 兰州智慧消防大数据平台
+![输入图片说明](https://gitee.com/iGaoWei/big-data-view/raw/master/web/008%20%E5%85%B0%E5%B7%9E%E6%99%BA%E6%85%A7%E6%B6%88%E9%98%B2%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0/%E5%85%B0%E5%B7%9E%E6%99%BA%E6%85%A7%E6%B6%88%E9%98%B2%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0.png "屏幕截图.png") 
+
+##### 009 某公司大数据监控平台
+![输入图片说明](https://gitee.com/iGaoWei/big-data-view/raw/master/web/009%20%E6%9F%90%E5%85%AC%E5%8F%B8%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%9B%91%E6%8E%A7%E5%B9%B3%E5%8F%B0/%E6%9F%90%E5%85%AC%E5%8F%B8%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%9B%91%E6%8E%A7%E5%B9%B3%E5%8F%B0.png "屏幕截图.png") 
+
+##### 010 双数智慧公卫-传染病督导平台
+![输入图片说明](https://gitee.com/iGaoWei/big-data-view/raw/master/web/010%20%E5%8F%8C%E6%95%B0%E6%99%BA%E6%85%A7%E5%85%AC%E5%8D%AB-%E4%BC%A0%E6%9F%93%E7%97%85%E7%9D%A3%E5%AF%BC%E5%B9%B3%E5%8F%B0/%E5%8F%8C%E6%95%B0%E6%99%BA%E6%85%A7%E5%85%AC%E5%8D%AB-%E4%BC%A0%E6%9F%93%E7%97%85%E7%9D%A3%E5%AF%BC%E5%B9%B3%E5%8F%B0.png "屏幕截图.png") 
+
+
+
+
+##### 005 可视化监控管理
+![输入图片说明]( "屏幕截图.png") 
+
