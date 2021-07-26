@@ -246,7 +246,7 @@ xxim.popchat = function(param){
             +'        <i class="layim_addface fa fa-meh-o" title="发送表情"></i>'
             +'        <a href="javascript:;"><i class="layim_addimage fa fa-picture-o" title="上传图片"></i></a>'
             +'        <a href="javascript:;"><i class="layim_addfile fa fa-paperclip" title="上传附件"></i></a>'
-            +'        <a href="" target="_blank" class="layim_seechatlog"><i class="fa fa-comment-o"></i>聊天记录</a>'
+            +'        <a href="https://gitee.com/iGaoWei/big-data-view" target="_blank" class="layim_seechatlog"><i class="fa fa-comment-o"></i>聊天记录</a>'
             +'    </div>'
             +'    <textarea class="layim_write" id="layim_write"></textarea>'
             +'    <div class="layim_send">'

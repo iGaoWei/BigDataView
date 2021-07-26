@@ -3867,7 +3867,7 @@ function render(index){
     $('.publish h3 span').text('全国排名：' + myData.ClouRanking)
     
     $('.publish img').remove() 
-    $('.publish').append('<img src="./img/' + myData.ClouImg + '" alt="">')
+    $('.publish').append('<img src="./img/' + myData.ClouImg + '" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">')
 
 }
 mapChart.currentIndex = -1;

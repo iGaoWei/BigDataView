@@ -54,7 +54,7 @@
                             '            <span style="font-size: 16px; color: #52d2ff;margin-right: 6px;" >主板温度:</span>\n' +
                             '            <span style="font-size: 14px; color: #fff;">12.2℃</span>\n' +
                             '        </div>\n' +
-                            '        <img src="./img/jiantou.png" alt="" style="display: blolk;position: absolute;bottom: -13px ;right: 0;">\n' +
+                            '        <img src="./img/jiantou.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" style="display: blolk;position: absolute;bottom: -13px ;right: 0;">\n' +
                             '    </div>';
 
                         var infoBox = new BMapLib.InfoBox(map, info, {

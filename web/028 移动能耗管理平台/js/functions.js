@@ -15,47 +15,47 @@ $(document).ready(function(){
 				'</div>' +
 				'<div class="modal-body">' +
 				    '<div class="row template-skins">' +
-					'<a data-skin="skin-blur-violate" class="col-sm-2 col-xs-4" href="">' +
-					    '<img src="img/skin-violate.jpg" alt="">' +
+					'<a data-skin="skin-blur-violate" class="col-sm-2 col-xs-4" href="https://gitee.com/iGaoWei/big-data-view">' +
+					    '<img src="img/skin-violate.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">' +
 					'</a>' +
-					'<a data-skin="skin-blur-lights" class="col-sm-2 col-xs-4" href="">' +
-					    '<img src="img/skin-lights.jpg" alt="">' +
+					'<a data-skin="skin-blur-lights" class="col-sm-2 col-xs-4" href="https://gitee.com/iGaoWei/big-data-view">' +
+					    '<img src="img/skin-lights.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">' +
 					'</a>' +
-					'<a data-skin="skin-blur-city" class="col-sm-2 col-xs-4" href="">' +
-					    '<img src="img/skin-city.jpg" alt="">' +
+					'<a data-skin="skin-blur-city" class="col-sm-2 col-xs-4" href="https://gitee.com/iGaoWei/big-data-view">' +
+					    '<img src="img/skin-city.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">' +
 					'</a>' +
-					'<a data-skin="skin-blur-greenish" class="col-sm-2 col-xs-4" href="">' +
-					    '<img src="img/skin-greenish.jpg" alt="">' +
+					'<a data-skin="skin-blur-greenish" class="col-sm-2 col-xs-4" href="https://gitee.com/iGaoWei/big-data-view">' +
+					    '<img src="img/skin-greenish.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">' +
 					'</a>' +
-					'<a data-skin="skin-blur-night" class="col-sm-2 col-xs-4" href="">' +
-					    '<img src="img/skin-night.jpg" alt="">' +
+					'<a data-skin="skin-blur-night" class="col-sm-2 col-xs-4" href="https://gitee.com/iGaoWei/big-data-view">' +
+					    '<img src="img/skin-night.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">' +
 					'</a>' +
-					'<a data-skin="skin-blur-blue" class="col-sm-2 col-xs-4" href="">' +
-					    '<img src="img/skin-blue.jpg" alt="">' +
+					'<a data-skin="skin-blur-blue" class="col-sm-2 col-xs-4" href="https://gitee.com/iGaoWei/big-data-view">' +
+					    '<img src="img/skin-blue.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">' +
 					'</a>' +
-					'<a data-skin="skin-blur-sunny" class="col-sm-2 col-xs-4" href="">' +
-					    '<img src="img/skin-sunny.jpg" alt="">' +
+					'<a data-skin="skin-blur-sunny" class="col-sm-2 col-xs-4" href="https://gitee.com/iGaoWei/big-data-view">' +
+					    '<img src="img/skin-sunny.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">' +
 					'</a>' +
-					'<a data-skin="skin-cloth" class="col-sm-2 col-xs-4" href="">' +
-					    '<img src="img/skin-cloth.jpg" alt="">' +
+					'<a data-skin="skin-cloth" class="col-sm-2 col-xs-4" href="https://gitee.com/iGaoWei/big-data-view">' +
+					    '<img src="img/skin-cloth.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">' +
 					'</a>' +
-					'<a data-skin="skin-tectile" class="col-sm-2 col-xs-4" href="">' +
-					    '<img src="img/skin-tectile.jpg" alt="">' +
+					'<a data-skin="skin-tectile" class="col-sm-2 col-xs-4" href="https://gitee.com/iGaoWei/big-data-view">' +
+					    '<img src="img/skin-tectile.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">' +
 					'</a>' +
-					'<a data-skin="skin-blur-chrome" class="col-sm-2 col-xs-4" href="">' +
-					    '<img src="img/skin-chrome.jpg" alt="">' +
+					'<a data-skin="skin-blur-chrome" class="col-sm-2 col-xs-4" href="https://gitee.com/iGaoWei/big-data-view">' +
+					    '<img src="img/skin-chrome.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">' +
 					'</a>' +
-					'<a data-skin="skin-blur-ocean" class="col-sm-2 col-xs-4" href="">' +
-					    '<img src="img/skin-ocean.jpg" alt="">' +
+					'<a data-skin="skin-blur-ocean" class="col-sm-2 col-xs-4" href="https://gitee.com/iGaoWei/big-data-view">' +
+					    '<img src="img/skin-ocean.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">' +
 					'</a>' +
-					'<a data-skin="skin-blur-sunset" class="col-sm-2 col-xs-4" href="">' +
-					    '<img src="img/skin-sunset.jpg" alt="">' +
+					'<a data-skin="skin-blur-sunset" class="col-sm-2 col-xs-4" href="https://gitee.com/iGaoWei/big-data-view">' +
+					    '<img src="img/skin-sunset.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">' +
 					'</a>' +
-					'<a data-skin="skin-blur-yellow" class="col-sm-2 col-xs-4" href="">' +
-					    '<img src="img/skin-yellow.jpg" alt="">' +
+					'<a data-skin="skin-blur-yellow" class="col-sm-2 col-xs-4" href="https://gitee.com/iGaoWei/big-data-view">' +
+					    '<img src="img/skin-yellow.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">' +
 					'</a>' +
-					'<a  data-skin="skin-blur-kiwi"class="col-sm-2 col-xs-4" href="">' +
-					    '<img src="img/skin-kiwi.jpg" alt="">' +
+					'<a  data-skin="skin-blur-kiwi"class="col-sm-2 col-xs-4" href="https://gitee.com/iGaoWei/big-data-view">' +
+					    '<img src="img/skin-kiwi.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">' +
 					'</a>' +
 				    '</div>' +
 				'</div>' +

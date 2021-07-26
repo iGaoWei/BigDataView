@@ -305,7 +305,7 @@
 										'<li>类型：',key.categoryDictName,'</li>',
 										'<li>当前位置：',key.resideAddress,'</li>',
 									'</ul>',
-									'<img id="close" class="close" src="img/cloce.png" alt="" />',
+									'<img id="close" class="close" src="img/cloce.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" />',
 								'</div>'
 							)
 							resideCommunity.addClass('redClass');

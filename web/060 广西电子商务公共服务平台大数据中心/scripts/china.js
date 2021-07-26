@@ -52,10 +52,10 @@
     <div class="box-width big-centent">
       <div class="logo-box pull-left">
         <div class="logo-img pull-left">
-          <a href="/"><img src="/Public/Home/images/logo.png" alt=""></a>
+          <a href="/"><img src="/Public/Home/images/logo.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"></a>
         </div>
         <div class="location-box pull-left">
-          <p class="pull-left"><img src="/Public/Home/images/site_01.png" alt=""></p>
+          <p class="pull-left"><img src="/Public/Home/images/site_01.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"></p>
           <p class="pull-left diqu"><a href="/index/diqu.html">总站 [切换城市]</a></p>
         </div>
       </div>
@@ -70,7 +70,7 @@
           </div>
         </form>
       </div>
-      <div class="icon-box pull-right"><img src="/Public/Home/images/qi_01.png" alt="" class="img-block"></div>
+      <div class="icon-box pull-right"><img src="/Public/Home/images/qi_01.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block"></div>
     </div>
   </div>
   <!-- logo/搜索结束 -->
@@ -87,8 +87,8 @@
       <!-- <li class="nav-two-item"><a target="_blank" href="/index/jinrong.html" class="nav-two-link">创投金融</a></li>
       <li class="nav-two-item"><a target="_blank" href="/index/cross.html" class="nav-two-link">跨境电商</a></li> -->
       <!-- <li class="nav-two-item"><a target="_blank" href="/train/index.html" class="nav-two-link">电商培训</a></li> -->
-      <!-- <li class="nav-two-item"><a target="_blank" href="" class="nav-two-link">大数据</a></li>
-      <li class="nav-two-item"><a target="_blank" href="" class="nav-two-link">网上申报</a></li> -->
+      <!-- <li class="nav-two-item"><a target="_blank" href="https://gitee.com/iGaoWei/big-data-view" class="nav-two-link">大数据</a></li>
+      <li class="nav-two-item"><a target="_blank" href="https://gitee.com/iGaoWei/big-data-view" class="nav-two-link">网上申报</a></li> -->
     </ul>
   </div>
   <!-- 导航二结束--> 
@@ -125,7 +125,7 @@
                             </div>
                             <div class="con">
                                 <div class="txtArea">
-                                  <a href="" target="_blank">全市经济工作会议举行</a>
+                                  <a href="https://gitee.com/iGaoWei/big-data-view" target="_blank">全市经济工作会议举行</a>
                                 </div>
                                 <div class="bg"></div>
                             </div>
@@ -137,7 +137,7 @@
                             </div>
                             <div class="con">
                                 <div class="txtArea">
-                                  <a href="" target="_blank">百香果电商价格“美丽”</a>
+                                  <a href="https://gitee.com/iGaoWei/big-data-view" target="_blank">百香果电商价格“美丽”</a>
                                 </div>
                                 <div class="bg"></div>
                             </div>
@@ -149,7 +149,7 @@
                             </div>
                             <div class="con">
                                 <div class="txtArea">
-                                  <a href="" target="_blank">市商务局机关党委一、二支部 钦州宏进公司党支部联合开展志愿服务结对</a>
+                                  <a href="https://gitee.com/iGaoWei/big-data-view" target="_blank">市商务局机关党委一、二支部 钦州宏进公司党支部联合开展志愿服务结对</a>
                                 </div>
                                 <div class="bg"></div>
                             </div>
@@ -161,7 +161,7 @@
                             </div>
                             <div class="con">
                                 <div class="txtArea">
-                                  <a href="" target="_blank">2019：农村电商发展进入快车道</a>
+                                  <a href="https://gitee.com/iGaoWei/big-data-view" target="_blank">2019：农村电商发展进入快车道</a>
                                 </div>
                                 <div class="bg"></div>
                             </div>
@@ -173,7 +173,7 @@
                             </div>
                             <div class="con">
                                 <div class="txtArea">
-                                  <a href="" target="_blank">阿里健康发布《春节健康消费报告》 为“过年回家不能输”大家都这么买…</a>
+                                  <a href="https://gitee.com/iGaoWei/big-data-view" target="_blank">阿里健康发布《春节健康消费报告》 为“过年回家不能输”大家都这么买…</a>
                                 </div>
                                 <div class="bg"></div>
                             </div>
@@ -195,7 +195,7 @@
 			<div class="center-centent clearfix">
 				<div class="pull-left new-box">
 					<i class="pull-left">
-						<img src="/Public/Home/images/new_01.png" alt="" class="img-block">
+						<img src="/Public/Home/images/new_01.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block">
 					</i>
 					<h2 class="pull-left">&nbsp;新闻资讯</h2>
 				</div>
@@ -262,7 +262,7 @@
 			<div class="right-centent clearfix">
 				<div class="pull-left new-box">
 					<i class="pull-left">
-						<img src="/Public/Home/images/gz_01.png" alt="" class="img-block">
+						<img src="/Public/Home/images/gz_01.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block">
 					</i>
 					<h2 class="pull-left">&nbsp;通知公告</h2>
 				</div>
@@ -412,55 +412,55 @@
 	<!--轮播/ 新闻资讯/通知公告结束 -->
 	<!-- 电商服务开始 -->
 	<div class="box-width mar-top clearfix bank-box">
-		<i class="pull-left"><img src="/Public/Home/images/z_01.png" alt="" class="img-block"></i>
+		<i class="pull-left"><img src="/Public/Home/images/z_01.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block"></i>
 		<h2 class="pull-left">&nbsp;电商服务</h2>
 	</div>
 	<ul class="resource-box box-width clearfix">
 		<li>
 			<a href="/index/daifa.html">
-				<p><img src="/Public/Home/images/c_01.png" alt="" class="img-block"></p>
+				<p><img src="/Public/Home/images/c_01.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block"></p>
 				<p>电商代发</p>
 			</a>
 		</li>
 		<li>
 			<a target="_blank" href="/train/index.html">
-				<p><img src="/Public/Home/images/jr_02.png" alt="" class="img-block"></p>
+				<p><img src="/Public/Home/images/jr_02.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block"></p>
 				<p>电商学院</p>
 			</a>
 		</li>
 		<li>
 			<a target="_blank" href="/index/daiyunying.html">
-				<p><img src="/Public/Home/images/fu_3.png" alt="" class="img-block"></p>
+				<p><img src="/Public/Home/images/fu_3.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block"></p>
 				<p>电商代运营</p>
 			</a>
 		</li>
 		<li>
 			<a target="_blank" href="/index/dianshang.html">
-				<p><img src="/Public/Home/images/fu_4.png" alt="" class="img-block"></p>
+				<p><img src="/Public/Home/images/fu_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block"></p>
 				<p>电商企业管家</p>
 			</a>
 		</li>
 		<li>
 			<a target="_blank" href="/index/zhihui.html">
-				<p><img src="/Public/Home/images/fu_6.png" alt="" class="img-block"></p>
+				<p><img src="/Public/Home/images/fu_6.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block"></p>
 				<p>智慧县域</p>
 			</a>
 		</li>
 		<li>
 			<a target="_blank" href="/index/travel.html">
-				<p><img src="/Public/Home/images/lv_01.png" alt="" class="img-block"></p>
+				<p><img src="/Public/Home/images/lv_01.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block"></p>
 				<p>智慧旅游</p>
 			</a>
 		</li>
 		<li>
 			<a target="_blank" href="/index/scene.html">
-				<p><img src="/Public/Home/images/cj_01.png" alt="" class="img-block"></p>
+				<p><img src="/Public/Home/images/cj_01.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block"></p>
 				<p>智能场景</p>
 			</a>
 		</li>
 		<li>
 			<a target="_blank" href="javascript:;" onclick="layer_ing('模块升级中，敬请期待！')">
-				<p><img src="/Public/Home/images/fu_5.png" alt="" class="img-block"></p>
+				<p><img src="/Public/Home/images/fu_5.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block"></p>
 				<p>产品溯源</p>
 			</a>
 		</li>
@@ -468,7 +468,7 @@
 	<!-- 电商服务结束 -->
 	<!-- 二级平台 开始 -->
 	<div class="box-width mar-top clearfix bank-box">
-		<i class="pull-left"><img src="/Public/Home/images/pingtai.png" alt="" class="img-block"></i>
+		<i class="pull-left"><img src="/Public/Home/images/pingtai.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block"></i>
 		<h2 class="pull-left">&nbsp;二级平台</h2>
 	</div>
 	<div class="index_pingtai">
@@ -489,7 +489,7 @@
 	<div class="event-box box-width mar-top">
 		<div class="event-title">
 			<div class="event-title-content pull-left">
-				<i class="pull-left"><img src="/Public/Home/images/h_01.png" alt="" class="img-block"></i>
+				<i class="pull-left"><img src="/Public/Home/images/h_01.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block"></i>
 				<h2 class="pull-left">&nbsp;活动中心</h2>
 			</div>
 			<div class="pull-right tab-tilte clearfix">
@@ -506,7 +506,7 @@
 						<a href="/zhanhui/detail/id/20.html" target="_blank">
 							<li>
 								<p class="picture-box">
-									<img src="/Uploads/Picture/2018-11-20/5bf3ac5842f27.jpg" alt="" class="img-block">
+									<img src="/Uploads/Picture/2018-11-20/5bf3ac5842f27.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block">
 								</p>
 								<h4 class="text-h4">2018年全国农产品产销对接行（广西）暨庆祝自治区成立60周年广西特产行销全国</h4>
 								<p class=" text-content-two">1. 广西特产行销全国主题特装展区
@@ -523,7 +523,7 @@
 						</a><a href="/zhanhui/detail/id/17.html" target="_blank">
 							<li>
 								<p class="picture-box">
-									<img src="/Uploads/Picture/2018-06-15/5b23195c2fa56.jpg" alt="" class="img-block">
+									<img src="/Uploads/Picture/2018-06-15/5b23195c2fa56.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block">
 								</p>
 								<h4 class="text-h4">2018广西灵山荔枝节</h4>
 								<p class=" text-content-two">灵山荔枝节由中国荔枝之乡——灵山县始办于上世纪90年代初。每年的荔枝节系列活动丰富多彩，妙趣横生，令人难忘。主要有荔枝购销一条街、荔枝趣味竞技比赛、千年古荔拍卖、美食小吃一条街、品牌汽车及名特优新产品展销展示、龙舟赛等，每年都吸引了数万名各地游客及全国各地的众多客商齐聚灵山，共享佳节。								</p>
@@ -533,7 +533,7 @@
 						</a><a href="/zhanhui/detail/id/16.html" target="_blank">
 							<li>
 								<p class="picture-box">
-									<img src="/Uploads/Picture/2018-05-18/5afe8cbb6840a.jpg" alt="" class="img-block">
+									<img src="/Uploads/Picture/2018-05-18/5afe8cbb6840a.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block">
 								</p>
 								<h4 class="text-h4">2018广西“壮族三月三”电商节</h4>
 								<p class=" text-content-two">作为自治区“壮族三月三·八桂嘉年华”五大活动板块之一的2018广西“壮族三月三”电商节，将于4月12日在主会场桂林举行开幕活动，正式拉开本届电商节系列活动帷幕。本次主会场活动由自治区商务厅、自治区非公有制经济组织和社会组织工作委员会、桂林市人民政府联合主办，广西国际电子商务中心、桂林市商务局、桂林市非公有制经济组织和社会组织工作委员会、桂林国家高新区管委会、七星区人民政府联合承办。活动以“互联网+新时代”为主题举办高峰论坛和行业交流，围绕“广西特产网上行”开展广西物产网上大促销，为广西电商升级发展、聚力农村电商、拉动扶贫产品、重塑传统产业、传播民族文化激发新创意、聚合新资源、促成新项目。								</p>
@@ -543,7 +543,7 @@
 						</a><a href="/zhanhui/detail/id/15.html" target="_blank">
 							<li>
 								<p class="picture-box">
-									<img src="/Uploads/Picture/2018-05-18/5afe8c7a901d1.png" alt="" class="img-block">
+									<img src="/Uploads/Picture/2018-05-18/5afe8c7a901d1.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block">
 								</p>
 								<h4 class="text-h4">2017中国-东盟信息港论坛—电子商务峰会</h4>
 								<p class=" text-content-two">为促进中国-东盟经贸合作互利共赢，打造中国-东盟跨境电子商务生态体系，续写21世纪丝路新篇章，2017中国-东盟信息港论坛—电子商务峰会将于2017年9月12日-13日在广西南宁市南湖名都酒店举办。这是广西第4次在中国-东盟博览会期间同步举办电子商务峰会，彰显了跨境电商在中国与东盟国家跨境贸易、交流合作中的重要作用。
@@ -554,7 +554,7 @@
 						</a><a href="/zhanhui/detail/id/14.html" target="_blank">
 							<li>
 								<p class="picture-box">
-									<img src="/Uploads/Picture/2018-05-18/5afe8c3376f45.jpg" alt="" class="img-block">
+									<img src="/Uploads/Picture/2018-05-18/5afe8c3376f45.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block">
 								</p>
 								<h4 class="text-h4">2017广西电商好讲师大赛</h4>
 								<p class=" text-content-two">发展电子商务的核心是人才，人才培养的关键是师资。为突破我区电商人才匮乏瓶颈，加强电子商务师资队伍建设，提高电子商务培训整体水平，完善电子商务培训服务体系，促进我区电商产业发展，由自治区商务厅、自治区非公经济组织和社会组织党工委、自治区教育厅、自治区党员干部现代远程教育管理办公室主办，广西国际电子商务中心、广西海链众服网络科技有限公司、广西大学互联网创新创业研究中心共同协办的广西首个以选拔优秀电商培训讲师为目的的大型竞技比赛─广西电商好讲师大赛于2017年6月正式启动。
@@ -571,22 +571,22 @@
 				</div>
 				<div class="ad-box box-width ruzhu_index">
 					<a target="_blank" href="/thention/lecturer.html">
-						<img src="/Public/Home/images/rizhu_02.jpg" alt="" class="img-block">
+						<img src="/Public/Home/images/rizhu_02.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block">
 					</a>
 					<a href="javascript:;" onclick="layer_ing('模块升级中，敬请期待！')">
-						<img src="/Public/Home/images/rizhu_01.jpg" alt="" class="img-block">
+						<img src="/Public/Home/images/rizhu_01.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block">
 					</a>
 					<a href="javascript:;" onclick="layer_ing('模块升级中，敬请期待！')">
-						<img src="/Public/Home/images/rizhu_03.jpg" alt="" class="img-block">
+						<img src="/Public/Home/images/rizhu_03.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block">
 					</a>
 					<a href="javascript:;" onclick="layer_ing('模块升级中，敬请期待！')">
-						<img src="/Public/Home/images/rizhu_04.jpg" alt="" class="img-block">
+						<img src="/Public/Home/images/rizhu_04.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block">
 					</a>
 					<a href="javascript:;" onclick="layer_ing('模块升级中，敬请期待！')">
-						<img src="/Public/Home/images/rizhu_05.jpg" alt="" class="img-block">
+						<img src="/Public/Home/images/rizhu_05.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block">
 					</a>
 					<a href="javascript:;" onclick="layer_ing('模块升级中，敬请期待！')">
-						<img src="/Public/Home/images/rizhu_06.jpg" alt="" class="img-block">
+						<img src="/Public/Home/images/rizhu_06.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block">
 					</a>
 				</div>
 			</div>
@@ -598,7 +598,7 @@
 	<!-- <div class="event-box box-width mar-top">
 		<div class="event-title">
 			<div class="event-title-content pull-left">
-				<i class="pull-left"><img src="/Public/Home/images/pei_01.png" alt="" class="img-block"></i>
+				<i class="pull-left"><img src="/Public/Home/images/pei_01.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block"></i>
 				<h2 class="pull-left">&nbsp;线上培训</h2>
 			</div>
 			<div class="pull-right tab-tilte">
@@ -620,7 +620,7 @@
 					<ul class="clearfix">
 						<li>
 							<p class="picture-box">
-								<img src="/Public/Home/images/p_01.jpg" alt="" class="img-block">
+								<img src="/Public/Home/images/p_01.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block">
 							</p>
 							<h4 class="text-h4">阿里巴巴DING沙龙</h4>
 							<p class=" text-content-two">,由阿里研究院和中国远见智库论潭联合
@@ -628,11 +628,11 @@
 							开
 							</p>
 							<p class="pull-left date-time">截止时间：2018-05-23</p>
-							<a href="" class="pull-right cha-link">查看</a>
+							<a href="https://gitee.com/iGaoWei/big-data-view" class="pull-right cha-link">查看</a>
 						</li>
 						<li>
 							<p class="picture-box">
-								<img src="/Public/Home/images/p_01.jpg" alt="" class="img-block">
+								<img src="/Public/Home/images/p_01.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block">
 							</p>
 							<h4 class="text-h4">阿里巴巴DING沙龙</h4>
 							<p class=" text-content-two">,由阿里研究院和中国远见智库论潭联合
@@ -640,11 +640,11 @@
 							开
 							</p>
 							<p class="pull-left date-time">截止时间：2018-05-23</p>
-							<a href="" class="pull-right cha-link">查看</a>
+							<a href="https://gitee.com/iGaoWei/big-data-view" class="pull-right cha-link">查看</a>
 						</li>
 						<li>
 							<p class="picture-box">
-								<img src="/Public/Home/images/p_01.jpg" alt="" class="img-block">
+								<img src="/Public/Home/images/p_01.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block">
 							</p>
 							<h4 class="text-h4">阿里巴巴DING沙龙</h4>
 							<p class=" text-content-two">,由阿里研究院和中国远见智库论潭联合
@@ -652,11 +652,11 @@
 							开
 							</p>
 							<p class="pull-left date-time">截止时间：2018-05-23</p>
-							<a href="" class="pull-right cha-link">查看</a>
+							<a href="https://gitee.com/iGaoWei/big-data-view" class="pull-right cha-link">查看</a>
 						</li>
 						<li>
 							<p class="picture-box">
-								<img src="/Public/Home/images/p_01.jpg" alt="" class="img-block">
+								<img src="/Public/Home/images/p_01.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block">
 							</p>
 							<h4 class="text-h4">阿里巴巴DING沙龙</h4>
 							<p class=" text-content-two">,由阿里研究院和中国远见智库论潭联合
@@ -664,11 +664,11 @@
 							开
 							</p>
 							<p class="pull-left date-time">截止时间：2018-05-23</p>
-							<a href="" class="pull-right cha-link">查看</a>
+							<a href="https://gitee.com/iGaoWei/big-data-view" class="pull-right cha-link">查看</a>
 						</li>
 						<li>
 							<p class="picture-box">
-								<img src="/Public/Home/images/p_01.jpg" alt="" class="img-block">
+								<img src="/Public/Home/images/p_01.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block">
 							</p>
 							<h4 class="text-h4">阿里巴巴DING沙龙</h4>
 							<p class=" text-content-two">,由阿里研究院和中国远见智库论潭联合
@@ -676,7 +676,7 @@
 							开
 							</p>
 							<p class="pull-left date-time">截止时间：2018-05-23</p>
-							<a href="" class="pull-right cha-link">查看</a>
+							<a href="https://gitee.com/iGaoWei/big-data-view" class="pull-right cha-link">查看</a>
 						</li>
 					</ul>
 				</div>
@@ -689,7 +689,7 @@
 	<!-- <div class="event-box box-width mar-top">
 		<div class="event-title">
 			<div class="event-title-content pull-left">
-				<i class="pull-left"><img src="/Public/Home/images/nongcun.png" alt="" class="img-block"></i>
+				<i class="pull-left"><img src="/Public/Home/images/nongcun.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block"></i>
 				<h2 class="pull-left">&nbsp;电子商务进农村示范县</h2>
 			</div>
 		</div>
@@ -698,7 +698,7 @@
 				<div class="center-centent clearfix">
 					<div class="pull-left new-box">
 						<i class="pull-left">
-							<img src="/Public/Home/images/gz_01.png" alt="" class="img-block">
+							<img src="/Public/Home/images/gz_01.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block">
 						</i>
 						<h2 class="pull-left">&nbsp;农村电商资讯</h2>
 					</div>
@@ -708,32 +708,32 @@
 				</div>
 				<ul class="text-link-centent clearfix">
 					<li>
-						<a href="">
+						<a href="https://gitee.com/iGaoWei/big-data-view">
 							<p class="pull-left text-hover">以史为鉴，2019年跨境电商“兴替”路在何方？</p>
 							<p class="pull-right">01-18</p>
 						</a>
 					</li><li>
-						<a href="">
+						<a href="https://gitee.com/iGaoWei/big-data-view">
 							<p class="pull-left text-hover">2018年跨境电商进出口商品总额1347亿 增长50％</p>
 							<p class="pull-right">01-17</p>
 						</a>
 					</li><li>
-						<a href="">
+						<a href="https://gitee.com/iGaoWei/big-data-view">
 							<p class="pull-left text-hover">广西打造中国—东盟跨境电子商务基地</p>
 							<p class="pull-right">12-17</p>
 						</a>
 					</li><li>
-						<a href="">
+						<a href="https://gitee.com/iGaoWei/big-data-view">
 							<p class="pull-left text-hover">出口电商卖家2019年海外推广必备，20款社媒工具及使用攻略</p>
 							<p class="pull-right">12-07</p>
 						</a>
 					</li><li>
-						<a href="">
+						<a href="https://gitee.com/iGaoWei/big-data-view">
 							<p class="pull-left text-hover">跨境电子商务贸易赋予全球中小企业“机遇赛道”</p>
 							<p class="pull-right">11-22</p>
 						</a>
 					</li><li>
-						<a href="">
+						<a href="https://gitee.com/iGaoWei/big-data-view">
 							<p class="pull-left text-hover">“双十一”悄然改变俄罗斯人购物习惯</p>
 							<p class="pull-right">11-15</p>
 						</a>
@@ -781,7 +781,7 @@
 	<div class="event-box box-width mar-top">
 		<div class="event-title">
 			<div class="event-title-content pull-left">
-				<i class="pull-left"><img src="/Public/Home/images/company.png" alt="" class="img-block"></i>
+				<i class="pull-left"><img src="/Public/Home/images/company.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block"></i>
 				<h2 class="pull-left">&nbsp;名企推荐</h2>
 			</div>
 			<div class="pull-right tab-tilte clearfix">
@@ -853,7 +853,7 @@
 	<div class="event-box box-width mar-top">
 		<div class="event-title">
 			<div class="event-title-content pull-left">
-				<i class="pull-left event-img"><img src="/Public/Home/images/ming_01.png" alt="" class="img-block"></i>
+				<i class="pull-left event-img"><img src="/Public/Home/images/ming_01.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block"></i>
 				<h2 class="pull-left">&nbsp;名优产品</h2>
 			</div>
 			<div class="pull-right tab-tilte clearfix">
@@ -873,14 +873,14 @@
 					<li attr-id="322">来宾市</li>
 				</ul>
 				<div class="pull-right more-box">
-					<a href="">更多&nbsp;》</a>
+					<a href="https://gitee.com/iGaoWei/big-data-view">更多&nbsp;》</a>
 				</div>
 			</div>
 		</div>
 		<div class="tab-content clearfix">
 			<div class="box-width clearfix" id="zdy_product">
 				<div class="pull-left side-box">
-					<p class="side-img"><img src="/Uploads/images/2018-06-20/20180620V12665.jpg" alt="" class="img-block"></p>
+					<p class="side-img"><img src="/Uploads/images/2018-06-20/20180620V12665.jpg" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block"></p>
 					<p class="side-title">【北海馆】鱼仔零食 芒果干 80g/罐 广西北海特产</p>
 					<p class="side-text">80g/罐</p>
 					<!-- <p class="jia-ge"><sub>¥</sub>13.90</p> -->
@@ -962,7 +962,7 @@
 <div class="shut-box hide" id="deng-lu">
 	<div class="shut-centent">
 		<div class="close-btn" onclick="close_zdy();">
-			<i class="pull-right"><img src="/Public/Home/images/gb_01.png" alt="" class="img-block"></i>
+			<i class="pull-right"><img src="/Public/Home/images/gb_01.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block"></i>
 		</div>
 		<div class="cent-box">
 			<h3>您好，</h3>
@@ -996,7 +996,7 @@
 <div class="shut-box hide" id="zhu-ce">
 	<div class="shut-centent">
 		<div class="close-btn" onclick="close_zdy();">
-			<i class="pull-right"><img src="/Public/Home/images/gb_01.png" alt="" class="img-block"></i>
+			<i class="pull-right"><img src="/Public/Home/images/gb_01.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block"></i>
 		</div>
 		<div class="cent-box">
 			<h3>注册</h3>
@@ -1042,7 +1042,7 @@
 <div class="shut-box hide" id="find-mi">
 	<div class="shut-centent">
 		<div class="close-btn" onclick="close_zdy();">
-			<i class="pull-right"><img src="/Public/Home/images/gb_01.png" alt="" class="img-block"></i>
+			<i class="pull-right"><img src="/Public/Home/images/gb_01.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block"></i>
 		</div>
 		<div class="cent-box">
 			<h3>找回密码</h3>
@@ -1112,7 +1112,7 @@
 			</div>
 			<div class="foot-right pull-right">
 				<div class="pull-left foot-left">
-					<p><img src="/Public/Home/images/kf_01.png" alt="" class="img-block"></p>
+					<p><img src="/Public/Home/images/kf_01.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="img-block"></p>
 					<p>E-mail GXHLWPT@163.com</p>
 					<p>电话：0771-2445159</p>
 					<p>周一至周五 9:00 - 17:30</p>
