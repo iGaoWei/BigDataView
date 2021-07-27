@@ -404,15 +404,15 @@ var convertData = function (data) {
 
 option = {
    // backgroundColor: '#404a59',
-  /***  title: {
+    title: {
         text: '实时行驶车辆',
-        subtext: 'data from PM25.in',
-        sublink: 'http://www.pm25.in',
+        subtext: '来源：big-data-view',
+        sublink: 'https://gitee.com/iGaoWei/big-data-view',
         left: 'center',
         textStyle: {
             color: '#fff'
         }
-    },**/
+    },
     tooltip : {
         trigger: 'item'
     },
