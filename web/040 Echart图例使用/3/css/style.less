@@ -1,0 +1,586 @@
+* {
+    margin : 0;
+    padding: 0;
+}
+
+html,
+body {
+    width   : 100%;
+    overflow: hidden;
+    height  : 100%;
+}
+
+body {
+    background     : url(../images/bg.png) no-repeat;
+    background-size: 100%;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+// 引入字体
+@font-face {
+    font-family: '汉仪铸字超然体';
+    src        : url('../fonts/汉仪铸字超然体.TTF');
+}
+
+// 头部模块
+.header {
+    width : 100%;
+    height: 10%;
+
+    // background-color: rgba(255,255,255,.5);
+    .title {
+        float                  : left;
+        width                  : 35%;
+        height                 : 100%;
+        text-align             : center;
+        font-size              : 1.5rem;
+        display                : table;
+        font-family            : '汉仪铸字超然体';
+        letter-spacing         : 0.2rem;
+        background-image       : -webkit-linear-gradient(bottom, #3aa4ff, #e6e5e5);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        span {
+            display       : table-cell;
+            vertical-align: middle;
+        }
+    }
+
+    .time {
+        width                  : 25%;
+        float                  : left;
+        height                 : 80%;
+        text-align             : center;
+        background-image       : -webkit-linear-gradient(bottom, #3aa4ff, #e6e5e5);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size              : 1rem;
+        display                : table;
+        font-family            : '汉仪铸字超然体';
+
+        span {
+            display       : table-cell;
+            vertical-align: middle;
+        }
+    }
+
+    .company {
+        width                  : 15%;
+        height                 : 100%;
+        margin-right           : 5%;
+        background-color       : rgba(255, 255, 255, .4);
+        float                  : right;
+        text-align             : center;
+        background-image       : -webkit-linear-gradient(bottom, #3aa4ff, #e6e5e5);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size              : 1.5rem;
+        display                : table;
+        font-family            : '汉仪铸字超然体';
+
+        span {
+            display       : table-cell;
+            vertical-align: middle;
+        }
+    }
+}
+
+// 主题模块
+.main {
+    width              : 100%;
+    height             : 85%;
+    // background-color: rgba(255,255,255,.3);
+    margin-top         : 5%;
+    padding            : 0 4%;
+    box-sizing         : border-box;
+
+    >div {
+        float: left;
+    }
+
+    .animate {
+        width : 75%;
+        height: 100%;
+
+        .float {
+            width : 100%;
+            height: 40%;
+
+            >div {
+                float: left;
+            }
+
+            .floating1 {
+                width          : 15%;
+                height         : 75%;
+                background     : url(../images/5.png) no-repeat bottom center;
+                background-size: 90%;
+                animation      : float 8s linear infinite;
+
+                #roate1 {
+                    width          : 100%;
+                    height         : 50%;
+                    background     : url(../images/cicle5.png) no-repeat center;
+                    background-size: 80%;
+                    position       : relative;
+
+                    .roate-item {
+                        position       : absolute;
+                        left           : 0;
+                        top            : 0;
+                        width          : 5rem;
+                        height         : 5rem;
+                        background     : url(../images/yuan2-01.png) no-repeat center;
+                        background-size: 100%;
+                        transform      : translate(-180%, -70%);
+                        text-align     : center;
+                        padding-top    : 25%;
+                        box-sizing     : border-box;
+                        color          : #fff;
+                    }
+                }
+
+                .pm {
+                    text-align: center;
+                    color     : #fff;
+                    font-size : 0.8rem;
+                }
+            }
+
+            .floating2 {
+                width          : 15%;
+                height         : 75%;
+                margin-top     : 10%;
+                background     : url(../images/3.png) no-repeat bottom center;
+                background-size: 90%;
+                margin-left    : 2%;
+                animation      : float2 6s linear infinite;
+
+                #roate2 {
+                    width          : 100%;
+                    height         : 50%;
+                    background     : url(../images/cicle2.png) no-repeat center;
+                    background-size: 80%;
+                    position       : relative;
+
+                    .roate-item2 {
+                        position       : absolute;
+                        left           : 0;
+                        top            : 0;
+                        width          : 5rem;
+                        height         : 5rem;
+                        background     : url(../images/yuan4-01.png) no-repeat center;
+                        background-size: 100%;
+                        transform      : translate(-180%, -70%);
+                        text-align     : center;
+                        padding-top    : 25%;
+                        box-sizing     : border-box;
+                        color          : #fff;
+                    }
+                }
+
+                .pm2 {
+                    text-align: center;
+                    color     : #fff;
+                    font-size : 0.8rem;
+                }
+            }
+
+            .floating3 {
+                width          : 15%;
+                height         : 75%;
+                margin-top     : 5%;
+                background     : url(../images/4.png) no-repeat bottom center;
+                background-size: 90%;
+                margin-left    : 2%;
+                animation      : float3 8s linear infinite;
+
+                #roate3 {
+                    width          : 100%;
+                    height         : 50%;
+                    background     : url(../images/cicle3.png) no-repeat center;
+                    background-size: 80%;
+                    position       : relative;
+
+                    .roate-item3 {
+                        position       : absolute;
+                        left           : 0;
+                        top            : 0;
+                        width          : 5rem;
+                        height         : 5rem;
+                        background     : url(../images/yuan3-01.png) no-repeat center;
+                        background-size: 100%;
+                        transform      : translate(-180%, -70%);
+                        text-align     : center;
+                        padding-top    : 25%;
+                        box-sizing     : border-box;
+                        color          : #fff;
+                    }
+                }
+
+                .pm3 {
+                    text-align: center;
+                    color     : #fff;
+                    font-size : 0.8rem;
+                }
+            }
+
+            .floating4 {
+                width          : 15%;
+                height         : 75%;
+                background     : url(../images/4.png) no-repeat bottom center;
+                background-size: 90%;
+                margin-left    : 2%;
+                animation      : float4 8s linear infinite;
+
+                #roate4 {
+                    width          : 100%;
+                    height         : 50%;
+                    background     : url(../images/cicle3.png) no-repeat center;
+                    background-size: 80%;
+                    position       : relative;
+
+                    .roate-item4 {
+                        position       : absolute;
+                        left           : 0;
+                        top            : 0;
+                        width          : 5rem;
+                        height         : 5rem;
+                        background     : url(../images/yuan2-01.png) no-repeat center;
+                        background-size: 100%;
+                        transform      : translate(-180%, -70%);
+                        text-align     : center;
+                        padding-top    : 25%;
+                        box-sizing     : border-box;
+                        color          : #fff;
+                    }
+                }
+
+                .pm4 {
+                    text-align: center;
+                    color     : #fff;
+                    font-size : 0.8rem;
+                }
+            }
+
+            .floating5 {
+                width          : 20%;
+                height         : 75%;
+                background     : url(../images/5.png) no-repeat bottom center;
+                background-size: 85%;
+                margin-left    : 5%;
+                margin-top     : 15%;
+                animation      : float5 6s linear infinite;
+
+                #roate5 {
+                    width          : 90%;
+                    height         : 30%;
+                    background     : url(../images/cicle1.png) no-repeat center;
+                    background-size: 80%;
+                    position       : relative;
+
+                    .roate-item5 {
+                        position       : absolute;
+                        left           : 0;
+                        top            : 0;
+                        width          : 5rem;
+                        height         : 5rem;
+                        background     : url(../images/yuan1-01.png) no-repeat center;
+                        background-size: 100%;
+                        transform      : translate(-180%, -50%);
+                        text-align     : center;
+                        padding-top    : 20%;
+                        box-sizing     : border-box;
+                        color          : #fff;
+                    }
+                }
+
+                .pm5 {
+                    text-align: center;
+                    color     : #fff;
+                    font-size : 0.8rem;
+                    margin-top: 11%;
+                }
+            }
+        }
+
+        .sum {
+            position       : relative;
+            width          : 100%;
+            height         : 50%;
+            background     : url(../images/big.png) no-repeat center;
+            background-size: 80%;
+
+            .data {
+                width     : 100%;
+                height    : 20%;
+                position  : absolute;
+                left      : 0;
+                top       : 0;
+                text-align: center;
+                color     : #fff;
+
+                span {
+                    font-family: '汉仪铸字超然体';
+                    font-size  : 1.2rem;
+                }
+            }
+
+            .cicle1 {
+                transform-style: preserve-3d;
+                position       : absolute;
+                top            : 50%;
+                left           : 50%;
+                margin         : -12rem 0 0 -15rem;
+                width          : 30rem;
+                height         : 30rem;
+                background     : url(../images/circle.png) no-repeat center;
+                background-size: contain;
+                transform      : rotateX(70deg);
+                animation      : circle 5s linear infinite;
+            }
+
+            #canvas1 {
+                position: absolute;
+                left    : 0;
+                top     : 0;
+                z-index : 1;
+            }
+
+            #canvas2 {
+                position: absolute;
+                left    : 0;
+                top     : 0;
+                z-index : 2;
+            }
+            .data1,.data2,.data3,.data4 {
+                color:#fff;
+                text-align: center;
+                position: absolute;
+                width: 8rem;
+                height: 8rem;
+                background: url(../images/di.png) no-repeat bottom center;
+                background-size: contain;
+                padding-top: 2%;
+                box-sizing: border-box;
+                .qiu {
+                    position: relative;
+                    width: 4rem;
+                    height: 4rem;
+                    margin: auto;
+                    display: table;
+                    p {
+                        display:table-cell;
+                        vertical-align: middle;
+                    }
+                }
+                .qiu::before {
+                    content:'';
+                    display: block;
+                    width: 4rem;
+                    height: 4rem;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform:translate(-50%,-50%);
+                    border-radius: 50%;
+                    border:3px solid rgba(255,255,255,.5);
+                    animation:scale 2s linear infinite;
+                }
+                span {
+                    font-size: 0.8rem;
+                }
+            }
+            .data1 {
+                left: 0%;
+                top: 10%;
+                .qiu {
+                    background: url(../images/cicle04.png) no-repeat center;
+                    background-size: 100%;
+                }
+            }
+            .data2 {
+                right: 5%;
+                top: 8%;
+                .qiu {
+                    background: url(../images/cicle02.png) no-repeat center;
+                    background-size: 100%;
+                }
+            }
+            .data3 {
+                left: 0;
+                bottom:3%;
+                .qiu {
+                    background: url(../images/cicle03.png) no-repeat center;
+                    background-size: 100%;
+                }
+            }
+            .data4 {
+                right:6%;
+                bottom: 3%;
+                .qiu {
+                    background: url(../images/cicle01.png) no-repeat center;
+                    background-size: 100%;
+                }
+            }
+        }
+    }
+
+    .charts {
+        width : 25%;
+        height: 100%;
+
+        >div {
+            width : 100%;
+            height: 50%;
+
+            .charts-title {
+                width       : 100%;
+                height      : 10%;
+                background  : url(../images/title.png) no-repeat;
+                display     : table;
+                padding-left: 5%;
+                color       : #eee;
+                font-weight : 500;
+
+                span {
+                    display       : table-cell;
+                    vertical-align: middle;
+                }
+            }
+
+            .content {
+                width : 100%;
+                height: 80%;
+
+                table {
+                    width     : 100%;
+                    margin-top: 5%;
+                    height    : 80%;
+                    color     : #fff;
+                    text-align: center;
+
+                    thead {
+                        font-size: 0.8rem;
+                    }
+
+                    tbody {
+                        font-size: 0.6rem;
+
+                        tr {
+                            height: 10%;
+
+                            td {
+                                span {
+                                    display       : inline-block;
+                                    width         : 0.9rem;
+                                    height        : 0.9rem;
+                                    vertical-align: bottom;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 上下浮动动画
+@keyframes float {
+    0% {
+        transform: translateY(0%)
+    }
+
+    50% {
+        transform: translateY(60%)
+    }
+
+    100% {
+        transform: translateY(0%)
+    }
+}
+
+@keyframes float2 {
+    0% {
+        transform: translateY(0%)
+    }
+
+    50% {
+        transform: translateY(-50%)
+    }
+
+    100% {
+        transform: translateY(0%)
+    }
+}
+
+@keyframes float3 {
+    0% {
+        transform: translateY(0%)
+    }
+
+    50% {
+        transform: translateY(-50%)
+    }
+
+    100% {
+        transform: translateY(0%)
+    }
+}
+
+@keyframes float4 {
+    0% {
+        transform: translateY(0%)
+    }
+
+    50% {
+        transform: translateY(60%)
+    }
+
+    100% {
+        transform: translateY(0%)
+    }
+}
+
+@keyframes float5 {
+    0% {
+        transform: translateY(0%)
+    }
+
+    50% {
+        transform: translateY(-60%)
+    }
+
+    100% {
+        transform: translateY(0%)
+    }
+}
+
+// 旋转动画
+@keyframes circle {
+    0% {
+        transform: rotateX(70deg) rotateZ(0);
+    }
+
+    100% {
+        transform: rotateX(70deg) rotateZ(360deg);
+    }
+}
+
+// 扩散动画
+@keyframes scale{
+    0%{
+        transform:translate(-50%,-50%) scale(0.9);
+        opacity: 1;
+    }
+    100%{
+        transform:translate(-50%,-50%) scale(1.5);
+        opacity: 0;
+    }
+}
