@@ -4,14 +4,23 @@
 <p align="center"><h1 align="center">大数据可视化模板</h1></p>
 
 </br></br>
-
 <p align="center">
 	<a href='https://gitee.com/iGaoWei/big-data-view/stargazers'><img src='https://gitee.com/iGaoWei/big-data-view/badge/star.svg?theme=white' alt='star'></img></a>
 	<a href='https://gitee.com/iGaoWei/big-data-view/members'><img src='https://gitee.com/iGaoWei/big-data-view/badge/fork.svg?theme=white' alt='fork'></img></a>
 </p>
 
+<div align="center">
+<p>以上模板均来收集于网络,欢迎大家继续补充贡献！！！</p>
 
-以上模板均来收集于网络,欢迎大家继续补充贡献！！！
+```
+如果觉得对你有对您有帮助，您可以点右上角 💘Star💘支持,谢谢！～
+```
+
+</div>
+
+</br></br>
+
+
 
 #### 使用说明
 
@@ -24,7 +33,6 @@
 
 </p>
 
-如果对您有帮助，您可以点右上角 💘Star💘支持
 
 #### 截图预览
 
@@ -67,3 +75,6 @@
 
 [![陌生人/BigDataView](https://gitee.com/iGaoWei/big-data-view/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b)](https://gitee.com/iGaoWei/big-data-view)
 
+```
+如果觉得对你有对您有帮助，您可以点右上角 💘Star💘支持,谢谢！～
+```
