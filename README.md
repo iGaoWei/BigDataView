@@ -70,7 +70,13 @@
 
 
 ##### 005 可视化监控管理
-![输入图片说明]( "屏幕截图.png") 
+![输入图片说明](https://gitee.com/iGaoWei/big-data-view/raw/master/preview/001%20001%20服务大数据可视化监管平台.png "屏幕截图.png") 
+
+
+
+<img src="./preview/001 服务大数据可视化监管平台.png" width="100%" />
+
+
 
 
 [![陌生人/BigDataView](https://gitee.com/iGaoWei/big-data-view/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b)](https://gitee.com/iGaoWei/big-data-view)
