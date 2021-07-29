@@ -1,0 +1,45 @@
+﻿{
+  "data": [
+    {
+      "id": "23134",
+      "carno": "川A23521",
+      "company": "xxxxx厂",
+      "content": "xxxxx",
+      "speed": "68",
+      "load": "6000KG"
+    },
+    {
+      "id": "72631",
+      "carno": "川C23412",
+      "company": "xxxxx厂",
+      "content": "xxxxx",
+      "speed": "68",
+      "load": "6000KG"
+    },
+    {
+      "id": "12343",
+      "carno": "川A32D1",
+      "company": "xxxxx厂",
+      "content": "xxxxx",
+      "speed": "68",
+      "load": "6000KG"
+    },
+    {
+      "id": "5231",
+      "carno": "川A92342",
+      "company": "xxxxx厂",
+      "content": "xxxxx",
+      "speed": "68",
+      "load": "6000KG"
+    },
+   {
+      "id": "5231",
+      "carno": "川A92342",
+      "company": "xxxxx厂",
+      "content": "xxxxx",
+      "speed": "68",
+      "load": "6000KG"
+    }
+
+  ]
+}
