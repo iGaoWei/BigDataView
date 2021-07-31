@@ -1,0 +1,127 @@
+﻿@charset "utf-8";
+/* CSS Document */
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box}
+*,body{padding:0px;	margin:0px;color: #222;font-family: "微软雅黑";}
+body{color:#666;font-size: 16px;}
+li{ list-style-type:none;}
+table{}
+i{ margin:0px; padding:0px; text-indent:0px;}
+img{ border:none; max-width: 100%;}
+a{ text-decoration:none; color:#399bff;}
+a.active,a:focus{ outline:none!important; text-decoration:none;}
+ol,ul,p,h1,h2,h3,h4,h5,h6{ padding:0; margin:0}
+a:hover{ color:#06c; text-decoration: none!important}
+
+
+.clearfix:after, .clearfix:before {
+	display: table;
+	content: " "
+}
+ .clearfix:after {
+	clear: both
+}
+.pulll_left{float:left;}
+.pulll_right{float:right;}
+
+
+.loading{position:fixed; left:0; top:0; font-size:16px; z-index:100000000;width:100%; height:100%; background:#1a1a1c; text-align:center;}
+.loadbox{position:absolute; width:160px;height:150px; color:rgba(255,255,255,.6); left:50%; top:50%; margin-top:-100px; margin-left:-75px;}
+.loadbox img{ margin:10px auto; display:block; width:40px;}
+ 
+.head{ height:105px; background: url(../images/head_bg.png) no-repeat center center; position: relative}
+.head h1{ color:#fff; text-align: center; font-size:42px; line-height:90px;;}
+.head h1 img{ width:1.5rem; display: inline-block; vertical-align: middle; margin-right: .2rem}
+.weather{ position:absolute; right:30px; top:0; line-height: 70px;}
+.weather span{color:rgba(255,255,255,.9)!important; font-size: 24px;}
+
+
+.mainbox{ padding:10px 20px 0px 20px;}
+.mainbox>ul{ margin-left:-.4rem; margin-right:-.4rem;}
+.mainbox>ul>li{ float: left; padding: 0 .4rem}
+.mainbox>ul>li{ width: 24%}
+.mainbox>ul>li:nth-child(2){ width: 52%}
+
+.boxall{ padding:15px;  background: rgba(0,0,0,.2); position: relative; margin-bottom:15px;; z-index: 10;}
+.alltitle{ font-size:18px; color:#fff; position: relative; padding-left: 12px;margin-bottom: 10px;}
+.alltitle:before{ width: 5px; height: 20px; top:2px; position: absolute; content: ""; background: #49bcf7; border-radius:20px; left: 0; }
+
+.navboxall{height: calc(100% - 30px);}
+/*Plugin CSS*/
+.wrap{ height:82%; overflow: hidden;}
+.wrap li{  line-height:40px; height:40px; }
+.wrap li p,.wraptit{ font-size: 0; }
+.wrap li span,.wraptit span{ display: inline-block; font-size: 18px;color: rgba(255,255,255,.6); text-align: center;}
+.wraptit { border-bottom: 1px dotted rgba(255,255,255,.15); padding:0 0 10px 0; margin-bottom: 10px;}
+.wraptit span{font-size: 20px;color: rgba(255,255,255,.8); }
+.wrap li span:nth-child(1),.wraptit span:nth-child(1){ width: 30%}
+.wrap li span:nth-child(2),.wraptit span:nth-child(2){ width: 25%}
+.wrap li span:nth-child(3),.wraptit span:nth-child(3){ width: 25%}
+.wrap li span:nth-child(4),.wraptit span:nth-child(4){ width: 20%}
+
+.str_wrap {
+	overflow:hidden;
+	width:100%;
+	position:relative;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;  
+	white-space:nowrap;
+}
+
+
+.str_move { 
+	white-space:nowrap;
+	position:absolute; 
+	top:0; 
+	left:0;
+	cursor:move;
+}
+.str_move_clone {
+	display:inline-block;
+	vertical-align:top;
+	position:absolute; 
+	left:100%;
+	top:0;
+}
+.str_vertical .str_move_clone {
+	left:0;
+	top:100%;
+}
+.str_down .str_move_clone {
+	left:0;
+	bottom:100%;
+}
+.str_vertical .str_move,
+.str_down .str_move {
+	white-space:normal;
+	width:100%;
+}
+.str_static .str_move,
+.no_drag .str_move,
+.noStop .str_move{
+	cursor:inherit;
+}
+.str_wrap img {
+	max-width:none !important;	
+}
+
+
+.sycm ul{ margin-left:-.5rem;margin-right:-.5rem;  padding: .16rem 0;}
+.sycm li{ float: left; width:50%; text-align: center; position: relative}
+.sycm li:before{ position:absolute; content: ""; height:80%; width: 1px; background: rgba(255,255,255,.1); right: 0; top: 15%;}
+.sycm li:last-child:before{ width: 0;}
+
+.sycm li h2{ font-size:46px; padding-top: 10px; color: #c7cd4f; font-weight: 700; font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";}
+.sycm li span{ font-size:20px; color: #fff; opacity: .5;}
+
+
+.jindu li{ width: 50%; float: left; height: 170px;;}
+.jindu li:nth-child(odd),.jindu div:nth-child(odd){border-right:1px dotted rgba(255,255,255,.1);}
+.jindu div{ width: 50%; float: left; color: #fff; text-align: center; border-top: 1px dotted rgba(255,255,255,.15); padding: 20px 0 0 0; margin: 20px 0 0 0; font-size: 24px;}
+
+
+
+

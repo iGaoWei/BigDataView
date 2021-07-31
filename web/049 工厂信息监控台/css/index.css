@@ -1,0 +1,224 @@
+@charset "utf-8";
+/*通用样式ͨ*/
+body,html,.main{
+	height: 100%;
+	width: 100%;
+}
+body,ul,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd,ol{
+    margin:0;
+    padding:0;
+}
+ul, li,ol{
+    list-style: none;
+}
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+body{
+    background: #040f3c;
+}
+
+.main-left,
+.main-right{
+    float: left;
+    width: 28%;
+    height: 100%;
+    padding: 0 5px;
+}
+.main-middle{
+    float: left;
+    width: 44%;
+    height: 100%;
+    padding: 0 5px;
+}
+
+.border-container {
+    position: relative;
+    margin-top: 10px;
+   /* padding: 10px;*/
+    border: 1px solid #24214e;
+}
+.main-middle .borderno-container{
+	border-top: none;
+	border-bottom: none;
+}
+.name-title{  
+    background: #4545e3;
+    padding: 8px 14px;
+    border-bottom-right-radius:6px;
+    border-bottom-left-radius:6px;
+    position: absolute;
+    left: 5%;
+    
+}
+.tile-size-color{
+	 font-size:12px ;
+    color: #fff;
+}
+.containertop{
+	height: 50%;
+}
+.containerbottom{
+	height: 47%;
+}
+#radar,.graduateyear,.bar-chart,#courserate,.line-chart,.bars-chart,.radar-chart,.progress1-chart,#mapadd,
+.progress2-chart{
+	height: 100%;
+}
+#mapadd{
+	position:relative;
+}
+#radar .radarkong{
+	height: 17%;
+	position: relative;
+}
+.Totalequipment{
+	margin-right: 18px;
+}
+#radar .radarkong p{
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+	
+}
+.SiteStatusList{
+	position: absolute;
+	bottom: 10%;
+	color: #fff;
+	font-size: 12px;
+	width: 100%;
+	display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+.SiteStatusList li:first-child{
+	margin-left: 22px;
+}
+.SiteStatusList li{
+	margin-right: 20px;
+}
+.SiteStatusList .Statussame{
+	float: left;
+    padding: 5px;
+    margin-top: 2px;
+    margin-right: 5px;
+	
+}
+.SiteStatusList .Statusnormal{
+	background: #4f8bf9;
+}
+.SiteStatusList .Statusemergency{
+	background: #fea31e;
+}
+.SiteStatusList .StatusOffline{
+	background: #959595;
+}
+.SiteStatusList .ThisweekData,.SiteStatusList .ThisweekData{
+	padding: 7px;
+	border-radius: 50%;
+	float: left;
+	cursor: pointer;
+}
+.SiteStatusList .Datasame{
+	background: #39c1f5;
+}
+.SiteStatusList .Defaultgray{
+	color: #959595;
+}
+.SiteStatusList .DataSwitch{
+	background: #555474;
+    border-radius: 10px;
+}
+.teacher-pie,.teacher-pie .teacherList{
+	height: 100%;
+}
+.teacher-pie .teacherList{
+    border: 1px solid #24214e;
+    position: relative;
+}
+.teacher-pie .teacherList:first-child{
+	width: 50%;
+	border-left: none;
+	float: left;
+}
+.teacher-pie .teacherList .name-title{
+    padding-left:10px ;
+}
+.teacher-pie .teacherList:last-child{
+	width: 49%;
+    border-right: none;
+    float: right;
+}
+
+.number-show{
+    position: absolute;
+    top: 20%;
+    right: 5%;
+}
+#mapadd .mapleft{
+	width: 33%;
+	height: 100%;
+	float: left;
+	position: relative;
+	/*background: #009688;*/
+}
+#mapadd .progressMore{
+	color: #fff;
+	font-size: 12px;
+	position: absolute;
+	right: 7%;
+	top: 60%;
+	text-decoration: underline;
+}
+#mapadd .map-chart{
+	width: 65%;
+	height: 100%;
+	float: left;
+}
+#mapadd .Devicestatus-List{
+	width: 50%;
+	position: absolute;
+	bottom: 12%;
+    left: 4%;
+    color: #fff;
+}
+#mapadd .Devicestatus-List li{
+	float: left;
+	height: 35px;
+	margin-right: 1%;
+	line-height: 35px;
+	position: relative;
+}
+#mapadd .Devicestatus-List li:nth-of-type(1){
+	width: 65.5%;
+	border: 1px solid #3ae034;
+	background: rgba(58,224,52,0.5);
+}
+#mapadd .Devicestatus-List li:nth-of-type(2){
+	width: 10.5%;
+	border: 1px solid #778699;
+	background: rgba(199,134,153,0.5);
+}
+#mapadd .Devicestatus-List li:nth-of-type(3){
+	width: 10.5%;
+	border: 1px solid #1b9fff;
+	background: rgba(27,159,255,0.5);
+}
+#mapadd .Devicestatus-List li:nth-of-type(4){
+	width: 9.5%;
+	border: 1px solid #e77407;
+	background: rgba(213,116,7,0.5);
+}
+.Devicestatus-List .DevicestatusName{
+	position: absolute;
+	top: -35px;
+	left: 0;
+}
+.pie-chart{
+	width: 100%;
+	height: 82%;
+}

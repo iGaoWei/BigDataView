@@ -1,0 +1,123 @@
+html,body{margin: 0;padding: 0;}
+body{
+    background: #1e2131;
+    color: #fff;
+    font-family: "Microsoft YaHei";
+}
+
+/*@media (max-width: 1400px) {*/
+    /*.col-lg-6 {*/
+        /*width: 50%!important;*/
+    /*}*/
+/*}*/
+
+.container-fluid-s{
+    margin: 2vw 1.5vw;
+}
+
+.total{
+    padding: 3.4vw 0;
+    text-align: center;
+}
+.hbule{
+    color: #86b5d2;
+}
+.purple{
+    color: #8129dd;
+}
+.grn{
+    color: #8ec63f;
+}
+.bule{
+    color: #2756ca;
+}
+.yel{
+    color: #f1b601;
+}
+.org{
+    color: #f86423;
+}
+.ybule{
+    color: #27aae3;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.fl{
+    float: left;
+}
+.fr{
+    float: right!important;
+}
+.mrbt{
+   margin-bottom: 20px;
+}
+.totalbox{
+    border: 1px solid #3188ff;
+    box-shadow: 0.1vw 0.1vw 1vw rgba(38,79,141,.7);
+    height: 22vw;
+}
+
+.totaltem{
+    margin: 0 0;
+}
+
+.totaltem .name{
+    font-size: 1.6vw;
+}
+
+.totaltem .number a{
+    font-size: 3.0vw;
+    color: #fff;
+    background: #204397;
+    padding:0 0.8vw;
+    margin: 0 0.2vw;
+}
+
+.totaltitle{
+    background: #252e44;
+    /*margin-right: -15px;*/
+    /*margin-left: -15px;*/
+    padding: 0.8vw 1.3vw;
+}
+.totaltitle p {
+    margin: 0;
+   font-family: "Microsoft YaHei";
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.column{
+    border: 1px solid #252e44;
+    text-align: center;
+    margin-bottom: 2vw;
+}
+.column p{
+    background: #252e44;
+    color: #fff;
+    padding: 0.5vw 0;
+    font-size: 1vw;
+}
+.column div{
+    font-size: 1vw;
+    padding: 0.5vw 0;
+}
+.nav-pills>li>a {
+    border-radius: 0;
+}
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 0 0.8vw;
+}
+
+.tab-content{
+    height: 86%;
+}
+.tab-pane{
+    height: 100%;
+}
+
