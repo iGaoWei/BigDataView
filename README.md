@@ -203,7 +203,10 @@
 <img src="./preview/050 大数据可视化展示平台通用模板.png" width="100%" />
 
 
+
 [![陌生人/BigDataView](https://gitee.com/iGaoWei/big-data-view/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b)](https://gitee.com/iGaoWei/big-data-view)
+
+#### 温馨提示：更多模板陆续更新中
 
 ```
 如果觉得对你有对您有帮助，您可以点右上角 💘Star💘支持,谢谢！～
