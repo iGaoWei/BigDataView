@@ -103,7 +103,98 @@
 ##### 020 大数据通用模版大标题样式.png
 <img src="./preview/020 大数据通用模版大标题样式.png" width="100%" />
    
+##### 020 大数据通用模版大标题样式.png
+<img src="./preview/020 大数据通用模版大标题样式.png" width="100%" />
+   
+##### 021 大数据通用模版.png
+<img src="./preview/021 大数据通用模版.png" width="100%" />
+   
+##### 022 全息档案平台中心.png
+<img src="./preview/022 全息档案平台中心.png" width="100%" />
+   
+##### 023 医院大数据展示.png
+<img src="./preview/023 医院大数据展示.png" width="100%" />
+   
+##### 024 智慧社区内网比对平台.png
+<img src="./preview/024 智慧社区内网比对平台.png" width="100%" />
+   
+##### 025 大数据可视化展板通用模板.png
+<img src="./preview/024 智慧社区内网比对平台.png" width="100%" />
+  
+##### 026 设备环境监测平台.png
+<img src="./preview/026 设备环境监测平台.png" width="100%" />
 
+##### 027 全国消费者情况看板.png
+<img src="./preview/027 全国消费者情况看板.png" width="100%" />
+
+##### 028 移动能耗管理平台.png
+<img src="./preview/028 移动能耗管理平台.png" width="100%" />
+
+##### 029 南方软件视频平台大屏中心.png
+<img src="./preview/029 南方软件视频平台大屏中心.png" width="100%" />
+
+##### 030 全国图书零售检测中心.png
+<img src="./preview/028 移动能耗管理平台.png" width="100%" />
+
+##### 031 数据可视化大屏展示系统.png
+<img src="./preview/031 数据可视化大屏展示系统.png" width="100%" />
+
+##### 032 物流云数据看板平台.png
+<img src="./preview/032 物流云数据看板平台.png" width="100%" />
+
+##### 033 数据可视化页面设计.png
+<img src="./preview/033 数据可视化页面设计.png" width="100%" />
+
+##### 034 晋城高速综合管控大数据.png
+<img src="./preview/034 晋城高速综合管控大数据.png" width="100%" />
+
+##### 035 视频监控前后台通用模板.png
+<img src="./preview/035 视频监控前后台通用模板.png" width="100%" />
+
+##### 036 门店销售监控平台.png
+<img src="./preview/036 门店销售监控平台.png" width="100%" />
+
+##### 037 建筑智慧工地管控.png
+<img src="./preview/037 建筑智慧工地管控.png" width="100%" />
+
+##### 038 无线网络大数据平台.png
+<img src="./preview/038 无线网络大数据平台.png" width="100%" />
+
+##### 039 湖南省大数据可视化平台.png
+<img src="./preview/039 湖南省大数据可视化平台.png" width="100%" />
+
+##### 040 Echart图例使用.png
+<img src="./preview/040 Echart图例使用.png" width="100%" />
+
+##### 041 智慧物流服务中心.png
+<img src="./preview/041 智慧物流服务中心.png" width="100%" />
+
+##### 042 大数据分析系统.png
+<img src="./preview/042 大数据分析系统.png" width="100%" />
+
+##### 043 网络当天实时发稿量.png
+<img src="./preview/043 网络当天实时发稿量.png" width="100%" />
+
+##### 044 车联网平台数据概览.png
+<img src="./preview/044 车联网平台数据概览.png" width="100%" />
+
+##### 045 信用风险定位系统(银行版).png
+<img src="./preview/045 信用风险定位系统(银行版).png" width="100%" />
+
+##### 046 作战指挥室.png
+<img src="./preview/046 作战指挥室.png" width="100%" />
+
+##### 047 公司名称大数据可视化平台.png
+<img src="./preview/047 公司名称大数据可视化平台.png" width="100%" />
+
+##### 048 大数据可视化展板通用模板.png
+<img src="./preview/048 大数据可视化展板通用模板.png" width="100%" />
+
+##### 049 工厂信息监控台.png
+<img src="./preview/049 工厂信息监控台.png" width="100%" />
+
+##### 050 大数据可视化展示平台通用模板.png
+<img src="./preview/050 大数据可视化展示平台通用模板.png" width="100%" />
 
 
 [![陌生人/BigDataView](https://gitee.com/iGaoWei/big-data-view/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b)](https://gitee.com/iGaoWei/big-data-view)
