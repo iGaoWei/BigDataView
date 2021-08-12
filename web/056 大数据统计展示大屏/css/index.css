@@ -1,0 +1,27 @@
+/*大屏*/
+body{padding: 10px; background: url(../images/bg_body.jpg) no-repeat;}
+ul{margin: 0; padding: 0;}
+header{width:1900px; height: 83px; line-height: 83px; color: #FFFFFF; font-size: 30px; letter-spacing: 10px; background: url(../images/bg_title.png) no-repeat; margin: 0 auto; text-align: center;}
+.container{width: 1900px;}
+.col-lg-3,.col-lg-6{padding: 0; margin: 0;}
+.m-20{margin-top: 20px;}
+.title{width: 100%; height: 60px; font-size: 20px; color: #ff9000; line-height: 60px; padding-left: 20px; background: url(../images/title_icon.png) left center no-repeat; float: left;}
+.box1{width: 455px; height: 400px; padding: 0 0 25px 25px; background: url(../images/bg_box1.png) no-repeat; float: left;}
+.box1_con{width: 455px; height: 340px; float: left;}
+.box2{width: 455px; height: 537px; padding: 0 0 25px 25px; background: url(../images/bg_box2.png) no-repeat; float: left;}
+.box2_con{width: 455px; height: 500px; float: left;}
+.box3{width: 950px; height: 500px; padding: 0 25px 25px 25px; background: url(../images/bg_box3.png) no-repeat; float: left;}
+.box3_con{width: 950px; height: 470px; float: left;}
+.box3_con .box3_con_left{width: 270px; height: 380px; float: left; margin-top: 30px;}
+.box3_con .box3_con_right{width: 680px; height: 470px; float: left;}
+.box3_con_right .box3_con_right_top{width: 680px; height: 120px;}
+.box3_con_right .box3_con_right_bot{width: 630px; height: 270px; margin-top: 30px;}
+.data_bg{width: 180px; height: 120px; background: url(../images/data_icon.png) no-repeat; margin-left: 30px; text-align: center; font-size: 24px; color: #FFFFFF; padding-top: 20px;}
+small{font-size: 18px; color: #FF9000;}
+.box4{width: 950px; height: 435px; padding: 0 25px 25px 25px; background: url(../images/bg_box4.png) no-repeat; float: left;}
+.box4_con{width: 950px; height: 370px; float: left;}
+.box5{width: 455px; height: 957px; padding: 0 25px 25px 25px; background: url(../images/bg_box5.png) no-repeat; float: right; }
+.box5_con{width: 455px; height: 957px; float: left;}
+.box5_con_top{width: 420px; height: 320px; float: left;}
+.box5_con_bot{width: 455px; height: 550px; float: left;}
+.box5_con_bot li{width: 390px; height: 60px; line-height: 60px; list-style: none; border-bottom: 1px dashed #dbdbdb; color: #F5F5F5; overflow: hidden;}
