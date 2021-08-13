@@ -1,0 +1,45 @@
+/*项目概览*/
+.none{ display:none}
+.xmglan{ width:100%;color:#fff; padding:20px 0;}
+.xmgl_heard{ width:100%; display:block; overflow:hidden}
+.xmgl_heard li{ float:left; list-style:none; font-size:12px; height:24px; line-height:24px; text-align:center;background:#0068b7; width:50%; cursor:pointer; border-top:1px #032d60 solid;border-bottom:1px #032d60 solid}
+.xmgl_heard li.hove{ background:#000c3b}
+
+/*项目概览 */
+.xm_cszs{ font-size:12px; padding:10px 10px 0 10px; }
+.xm_cszs li { line-height:22px;overflow:hidden}
+.xm_cszs li span{ color:#00ff00; padding:0 5px 0 10px}
+.xm_cszs li p{ float:left;width:33%}
+.xm_cszs li p span{ color:#00ffff; padding:0}
+.xm_cszs li p cite{ color:#00ffff;}
+/*项目人员信息状态 */
+.lytj {width:100%;float: left;height:100px;}
+.wgrytj_bt{ padding:10px; clear:both; display:block;border-top:1px #032d60 solid; color:#fff}
+.wgrytj_tb{ padding-left:10px;}
+/*仪表盘等展示*/
+.center_zs{ width:30%;}
+.box1-back{height:763px;background-image:-webkit-radial-gradient(250px 250px at 50% 50%,hsla(209,99%,32%,28),hsla(228,100%,0%,0));background-image:radial-gradient(250px 250px at 50% 50%,hsla(209,99%,32%,28),hsla(228,100%,0%,0))}
+/*问题等级*/
+.wenti_dj{ width:40%; float:left}
+.wenti_bg{ float:left; padding-top:10px; width:60%;}
+.wenti_bg table{border-collapse:collapse;border: 1px solid #00a0e9; color:#fff; width:95%}  
+.wenti_bg td{border-collapse:collapse; border: 1px solid #00a0e9; padding:2px 4px; }  
+.wenti_bg td.green{ color:#05d60f; text-align:center}  
+.wenti_bg td.orange{ color:#d75a07; text-align:center}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

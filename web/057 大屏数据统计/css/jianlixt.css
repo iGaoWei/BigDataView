@@ -1,0 +1,22 @@
+/*人力资源基本信息*/
+.none{ display:none}
+.rlzy_xx{ width:95%;color:#fff; padding:10px;}
+.rlzy_heard{ width:100%; display:block;}
+.rlzy_heard li{ float:left; list-style:none; font-size:12px;background:#999; padding:2px 4px; margin:0 2px;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px; -o-border-radius:5px;border-radius:5px; cursor:pointer}
+.rlzy_heard li.hove{background:#ffc834;  }
+#rlzy_cen{ clear:both}
+.xueli_tb{width:354px;height:340px;}
+/*人员能力提升*/
+.ryclts{ padding:10px;}
+.ryclts_tb {width:304px;float: left;height:300px; }
+
+/*仪表盘等展示*/
+.center_zs{ width:30%;}
+.box1-back{height:749px;background-image:-webkit-radial-gradient(250px 250px at 50% 50%,hsla(209,99%,32%,28),hsla(228,100%,0%,0));background-image:radial-gradient(250px 250px at 50% 50%,hsla(209,99%,32%,28),hsla(228,100%,0%,0))}
+
+/*右侧项目管理展示 */
+.xmcggl{width:480px;height:325px;}
+/*右侧项目管理展示 */
+.xmgl_zs{ width:100%; clear:both}
+.xmgl{width:1200px;height:325px;}
+

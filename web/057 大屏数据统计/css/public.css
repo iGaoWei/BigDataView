@@ -1,0 +1,34 @@
+*{padding:0px;margin:0px;font-family:"微软雅黑";font-size:12px; font-style:normal}
+dd,dl,dt,em,i,p,textarea,a,div{padding:0px;margin:0px;}
+a{text-decoration:none;}
+img{border:0px;}
+ul,li{padding:0px;margin:0px;list-style:none;}
+.fl{ float:left}
+.fr{ float:right}
+body{margin:0px; padding:0px; color:#000; background:#000c3b;}
+.clearfix:after,.clearfix:before{content:"";display:table}
+.clearfix:after{clear:both;overflow:hidden}
+
+/*头部*/
+.caption-title{font-size:22px; font-family:"黑体"; color:#fff;max-width:900px;margin:0 auto; height:48px; margin-top:10px;}
+.biaoti{ line-height:48px; display:inline-block;margin:0px; padding:0px; width:276px; text-align:center;font-size:28px;}
+.data-box1{border:2px solid #032d60;-webkit-box-shadow:#07417a 0 0 10px;-moz-box-shadow:#07417a 0 0 10px;box-shadow:inset 0 0 30px #07417a;position:relative}
+
+.zhenwen{ width:96%; margin:0 auto;overflow:hidden; padding-top:30px;}
+.left_zs{ width:30%;}
+.left_tb{ width:95%}
+.mtop40{ margin-top:40px;}
+.h30{ height:40px;}
+.right_zs{ width:40%;}
+.right_tb{ width:95%;float:right}
+
+/*四个角*/
+.topL{width:20px;height:20px;border-top-width:2px;border-top-color:#26c6f0;border-top-style:solid;border-left-width:2px;border-left-color:#26c6f0;border-left-style:solid;position:absolute;top:-2px;left:-2px}
+.topR{width:20px;height:20px;border-top-width:2px;border-top-color:#26c6f0;border-top-style:solid;border-right-width:2px;border-right-color:#26c6f0;border-right-style:solid;position:absolute;top:-2px;right:-2px}
+.bottomL{width:20px;height:20px;border-bottom-width:2px;border-bottom-color:#26c6f0;border-bottom-style:solid;border-left-width:2px;border-left-color:#26c6f0;border-left-style:solid;position:absolute;bottom:-2px;left:-2px}
+.bottomR{width:20px;height:20px;border-bottom-width:2px;border-bottom-color:#26c6f0;border-bottom-style:solid;border-right-width:2px;border-right-color:#26c6f0;border-right-style:solid;position:absolute;bottom:-2px;right:-2px}
+
+/*小标题*/
+.data-title-left,.data-title-right{color:#105eda;font-family:"微软雅黑";font-size:20px}
+.data-title{background-color:#000c3b;width:178px;margin:-18px auto 0 auto;color:#83c7e3;font-size:20px;}
+.data-title span{text-align:center;width:150px; display:inline-block; text-align:center;font-size:18px;}
