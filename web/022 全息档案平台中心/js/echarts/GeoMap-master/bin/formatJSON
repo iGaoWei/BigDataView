@@ -1,0 +1,113 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+
+var convertor_parse = {
+  "formatPoint": function(p){
+    return [
+      (p[0] < -168.5 ? p[0] + 360 : p[0]) + 170,
+      90 - p[1]
+    ];
+  },
+  "makePoint": function(p){
+    var self = this,
+      point = self.formatPoint(p),
+      x = point[0],
+      y = point[1];
+    if(self.xmin > x) self.xmin = x;
+    if(self.xmax < x) self.xmax = x;
+    if(self.ymin > y) self.ymin = y;
+    if(self.ymax < y) self.ymax = y;
+  },
+  "Point": function(coordinates){
+    this.makePoint(coordinates);
+  },
+  "LineString": function(coordinates){
+    var self = this,
+      i = 0,
+      len = coordinates.length;
+
+    for( ; i < len; i++){
+      self.makePoint(coordinates[i]);
+    }
+  },
+  "Polygon": function(coordinates){
+    var i = 0,
+      len = coordinates.length;
+
+    for(; i < len; i++){
+      this.LineString(coordinates[i]);
+    }
+  },
+  "MultiPoint": function(coordinates){
+    var i = 0,
+      len = coordinates.length;
+    for(; i < len; i++){
+      this.Point(coordinates[i]);
+    }
+  },
+  "MultiLineString": function(coordinates){
+    var i = 0,
+      len = coordinates.length;
+    for(; i < len; i++){
+      this.LineString(coordinates[i]);
+    }
+  },
+  "MultiPolygon": function(coordinates){
+    var i = 0,
+      len = coordinates.length;
+    for(; i < len; i++){
+      this.Polygon(coordinates[i]);
+    }
+  }
+};
+
+function parseSrcSize(json){
+  var
+    shapes = json.features,
+    shapeType,
+    shapeCoordinates,
+    geometries,
+    i, j,
+    len, len2,
+    val,
+    shape;
+
+  convertor_parse.xmin = 360;
+  convertor_parse.xmax = 0;
+  convertor_parse.ymin = 180;
+  convertor_parse.ymax = 0;
+
+  for(i = 0, len = shapes.length; i < len; i++){
+    shape = shapes[i];
+    if(shape.type == 'Feature'){
+      pushApath(shape.geometry, shape);
+    }else if(shape.type = 'GeometryCollection'){
+      geometries = shape.geometries;
+      for(j = 0, len2 = geometries.length; j < len2; j++){
+        val = geometries[j];
+        pushApath(val, val);
+      }
+    }
+  }
+  function pushApath(gm){
+    shapeType = gm.type;
+    shapeCoordinates = gm.coordinates;
+    convertor_parse[shapeType](shapeCoordinates);
+  }
+
+  json.srcSize = {
+    left: convertor_parse.xmin.toFixed(4) * 1,
+    top: convertor_parse.ymin.toFixed(4) * 1,
+    width: (convertor_parse.xmax - convertor_parse.xmin).toFixed(4) * 1,
+    height: (convertor_parse.ymax - convertor_parse.ymin).toFixed(4) * 1
+  };
+
+  return json;
+
+}
+
+var file = fs.readFileSync(process.argv[2]);
+file = JSON.parse(file);
+parseSrcSize(file);
+fs.writeFileSync(process.argv[2], JSON.stringify(file));
