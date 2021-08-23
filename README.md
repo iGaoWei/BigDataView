@@ -204,6 +204,39 @@
 ##### 050 大数据可视化展示平台通用模板
 <img src="./preview/050 大数据可视化展示平台通用模板.png" width="100%" />
 
+##### 051 通用大数据可视化展示平台模板
+<img src="./preview/051 通用大数据可视化展示平台模板.png" width="100%" />
+
+##### 052 智慧社区内网比对平台
+<img src="./preview/052 智慧社区内网比对平台.png" width="100%" />
+
+##### 053 通用大数据可视化展示平台模板
+<img src="./preview/053 通用大数据可视化展示平台模板.png" width="100%" />
+
+##### 054 公安大数据监控平台
+<img src="./preview/054 公安大数据监控平台 (1).png" width="100%" />
+<img src="./preview/054 公安大数据监控平台 (2).png" width="100%" />
+<img src="./preview/054 公安大数据监控平台 (3).png" width="100%" />
+<img src="./preview/054 公安大数据监控平台 (4).png" width="100%" />
+<img src="./preview/054 公安大数据监控平台 (5).png" width="100%" />
+
+##### 055 物流大数据服务平台
+<img src="./preview/055 物流大数据服务平台.png" width="100%" />
+
+##### 056 大数据统计展示大屏
+<img src="./preview/056 大数据统计展示大屏.png" width="100%" />
+
+##### 057 大屏数据统计
+<img src="./preview/057 大屏数据统计.png" width="100%" />
+
+##### 058 大屏数据智慧中心统计
+<img src="./preview/058 大屏数据智慧中心统计.png" width="100%" />
+
+##### 059 物联网平台数据统计
+<img src="./preview/059 物联网平台数据统计.png" width="100%" />
+
+##### 060 广西电子商务公共服务平台大数据中心
+<img src="./preview/060 广西电子商务公共服务平台大数据中心.png" width="100%" />
 
 
 [![陌生人/BigDataView](https://gitee.com/iGaoWei/big-data-view/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b)](https://gitee.com/iGaoWei/big-data-view)
