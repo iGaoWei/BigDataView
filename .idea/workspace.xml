@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1db8f01d-0439-420c-8e00-93b93c288a8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,9 +54,13 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2408" y="258" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1627293654920" />
-    <state x="2256" y="104" width="798" height="871" key="find.popup" timestamp="1627381145375">
+    <state x="2256" y="104" width="798" height="871" key="find.popup" timestamp="1629854814162">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2256" y="104" width="798" height="871" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1627381145375" />
+    <state x="2256" y="104" width="798" height="871" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1629854814162" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1629854603498">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1629854603498" />
   </component>
 </project>

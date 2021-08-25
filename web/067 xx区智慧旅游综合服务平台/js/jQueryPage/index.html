@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>page插件演示</title>
+	<link rel="stylesheet" href="src/jquery.page.css">
+</head>
+<body>
+	<div id="page"></div>
+	<script src="http://www.jq22.com/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="src/jquery.page.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#page").Page({
+          totalPages: 9,//分页总数
+          liNums: 7,//分页的数字按钮数(建议取奇数)
+          activeClass: 'activP', //active 类样式定义
+          callBack : function(page){
+          		//console.log(page)
+          }
+      });
+		})
+	</script>
+</body>
+</html>
