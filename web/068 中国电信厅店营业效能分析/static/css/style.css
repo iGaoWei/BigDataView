@@ -1,0 +1,123 @@
+/*大屏*/
+@charset "utf-8";
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+a{color:#333;text-decoration:none;}
+a:hover{color:#ef9b11;text-decoration:underline;}
+/*滚动条样式*/
+::-webkit-scrollbar {width: 6px;height:6px;}
+::-webkit-scrollbar-track-piece{background-color: #eee;margin: -2px;}
+::-webkit-scrollbar-thumb{background: #aaa;min-height: 150px;min-width: 150px;border-radius: 10px;}
+::-webkit-scrollbar-thumb:vertical:hover{background: #555555}
+::-webkit-scrollbar-thumb:horizontal:hover{background: #555555}
+
+/* scrolltext */
+.scrolltext{padding-top: 35px;width:90%;height:100%;overflow:hidden;margin:20px auto 0 auto;}
+.scrolltext ol li{cursor:pointer;padding-left:7px;width:570px;height:25px;font-size:13px;line-height:25px;border-bottom:2px solid #fff;}
+.scrolltext ol li a{color:#6f746e;display:inline;width:570px;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow: hidden;}
+.scrolltext ol li a:hover{color:#1990FF;text-decoration:none;}
+.scrolltext .part{width:100%;padding-top:20px;}
+.scrolltext .part span{margin-left:26px;cursor:pointer;}
+
+/*自定义横向tab切效果*/
+.Shortcut{height:2.8em;}
+.custom-nav-tabs{height:40px;line-height: 40px;vertical-align: top;text-align:left;padding-left: 2em;font-family: MicrosoftYaHei;background: #FFFFFF;border: 1px solid #E8E8E8;box-shadow: 1px 1px 10px 0 rgba(235,235,235,0.50);border-top-left-radius: 5px;border-top-right-radius: 5px;}
+.custom-nav-tabs li{float:left;margin-right:10px;height:38px;line-height:38px;vertical-align: middle;padding:0px 5px 0px 5px;}
+.custom-nav-tabs li.active{border-bottom: 3px solid #1990FF;}
+.custom-nav-tabs li:hover{border-bottom: 3px solid #1990FF;}
+.custom-nav-tabs li a{height:30px;float:left;color:#666666;font-size:13px;font-weight:bold;text-decoration:none;}
+.shortcutEntry{width:50px;height: 50px;background: #29CB97;border-radius: 5px;margin: 0 auto;margin-bottom:6px;}
+/*大屏*/
+/*页面头部菜单导航样式*/
+.all-nav {position: absolute;left: 0;top: 0;height: 50px;width: 50px;color: #fff;cursor: default;text-align: center;border-right: 1px solid hsla(0,0%,100%,.15);transition: all .2s ease-in-out;cursor:pointer;}
+.all-nav img{margin-top:11px;}
+.all-nav.active,.all-nav:hover {background:#3063E3;}
+.all-navbar-header{width:25%;position:relative;left:60px;height: 45px;vertical-align:middle;}
+.all-navbar-header svg{margin-top:12px;float:left;width:25px;height:25px;}
+.all-navbar-header div{float:left;width:180px;height:25px;margin:13px 0px 0px 5px;color:#FFFFFF;font-size:15px;font-family: MicrosoftYaHei;letter-spacing: 1.66px;}
+
+/*菜单手风琴效果*/
+.accordionMenu{background:#333333;width:200px;height:100%;display:none;z-index:999;position:absolute;top:50px;left:-500px;}
+.accordionMenu .item_dl dt{height:20px;display:block;padding:10px;border-bottom:1px solid #161616;cursor:pointer;}
+.accordionMenu .item_dl dt.expansion:hover{background:none;}
+.accordionMenu .item_dl dt svg{width:16px;height:16px;float:left;color:#fff;margin-top:2px;opacity:1;}
+.accordionMenu .item_dl dt .item_title{width:120px;font-size:14px;color:#fff;margin-left:10px;margin-right:10px;float:left;opacity:1;}
+.accordionMenu .item_dl dt .arrowClass{float:left;-ms-transform:rotate(0deg);-moz-transform:rotate(0deg);-webkit-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg);-webkit-transition: all 1s;transition: all 1s;}
+.accordionMenu .item_dl dt.active .arrowClass{-ms-transform:rotate(540deg);-moz-transform:rotate(540deg);-webkit-transform:rotate(540deg);-o-transform:rotate(540deg);transform:rotate(540deg);-webkit-transition: all 1.5s;transition: all 1.5s;}
+.accordionMenu .item_dd .menuSecond{background:#161616;min-height:50px;height:200px;overflow-y:auto;padding:5px;display: none;}
+.accordionMenu .item_dd .menuSecond div{height:30px;line-height:30px;vertical-align:middle;text-align:left;color:#fff;font-size:14px;margin:2px;cursor:pointer;opacity:0.65;padding-left: 40px;}
+.accordionMenu .item_dd .menuSecond div:hover{color:#1890FF;opacity:1;}
+.upAndExpand{width:60px;height:27.5px;line-height:27.5px;vertical-align:middle;padding-left:9px;color:#0090FF;cursor:pointer;float:right;}
+.upAndExpand.up{-ms-transform:rotate(0deg);-moz-transform:rotate(0deg);-webkit-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg);-webkit-transition: all 1s;transition: all 1s;}
+.upAndExpand.expand{-ms-transform:rotate(540deg);-moz-transform:rotate(360deg);-webkit-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg);-webkit-transition: all 1s;transition: all 1s;}
+/*自动隐藏提示框*/
+.autoHidden-nofitTips{position:fixed;padding:20px; background: url(../../images/iframe/bg_trans.png) repeat 0 0; font-size:14px; color: #fff; border-radius:5px; z-index: 120; }
+.autoHidden-nofitTips i{display: inline-block; vertical-align: -3px; margin-right: 5px; width:16px; height:16px; background: url(../../images/iframe/tipsBg.png) no-repeat;}
+.autoHidden-nofitTips i.sf-ok{background-position:-182px 0px;}
+.autoHidden-nofitTips i.sf-error{background-position:-182px -70px;}
+.autoHidden-nofitTips i.sf-tip{background-position:-182px -140px;}
+.autoHidden-nofitTips i.sf-help{background-position:-182px -210px;}
+/*阿里图标库*/
+.icon {width: 1em; height: 1em;vertical-align: -0.15em;fill: currentColor; overflow: hidden;}
+/*大屏*/
+/*办理业务耗时头部tab切换样式*/
+.navTitle{font-size:16px; font-family:'微软雅黑'; color:#333; border-left:solid 2px #0090FF; padding-left:10px}
+.tabSpan{width: 100px; height: 32px; display: inline-block; line-height: 32px; cursor: pointer;}
+
+.cation-content{width: 100%;margin: 0 auto;padding: 0;position: relative;}
+.cation-middle{height:35px;line-height: 35px;font-size: 14px;}
+.cation-middle dl {margin-bottom: 0px;border-bottom: 0.5px solid #E1E6EB}
+.cation-list{overflow: hidden;}
+.cation-list dt{float: left;width: 190px;font-weight: 400;font-family: regular;height:35px;line-height: 35px;position: relative;color: #4c4c4c;text-align: center;font-size: 14px;background: #E5E9F2;border-bottom: 0.5px solid #E1E6EB;}
+.cation-list:last-child dt{border-bottom: none;}
+.cation-list:last-child dd{border-bottom: none;}
+.cation-list dd .areaInfo{margin-left:200px;margin-top:2px;height:32px;}
+.cation-list dd .dateInfo{margin-left:200px;margin-top:3px;height:32px;}
+.cation-list dd a{color: #444;font-size: 14px;max-width:105px;text-align: left;height: 35px;line-height: 35px;display: inline-block;float: left;margin-left: 40px;text-decoration: none;}
+.cation-list dd a.all{text-align: center;}
+.cation-list dd a.active,.cation-list a:hover{color: #4D85FF;font-weight: 600;}
+.dateDim div{color: #444;font-size: 14px;float:left;margin:5px 10px 0px 10px;cursor:pointer;}
+.dateDim div.active,.dateDim div:hover{color: #4D85FF;font-weight: 600;}
+/*已选菜单*/
+#filter_condition_selected{padding-top:8px;}
+#filter_condition_selected div{height:23px;line-height:23px;vertical-align:middle;cursor:pointer;margin-right:15px;padding:0px 5px 0px 5px;float:left;}
+#filter_condition_selected div i{background: url("../../images/iframe/deleteBtn.png");background-size:16px 16px;width:16px;height:16px;margin-left:3px;display:inline-block;}
+/*营业厅提示*/
+.channelTipClass{height:30px;line-height:30px;color:#4D85FF;font-size:13px;}
+#selectChannelTable_bar{padding:5px;display:none;height:40px;}
+#selectChannelTable_bar label{width:80px;text-align: center;}
+.breadcrumb > .active a{color: #777;}
+/*动态星星特效*/
+.starIcon{position:absolute;width:32px;height:32px;background: url(../../images/iframe/star.gif) no-repeat;}
+/*动态进度条1*/
+.sf-shade{position: fixed; left: 0; top: 0; width:100%; background: #000; opacity: 0.4; height: 100%; z-index: 135;}
+.loader-progress{position: absolute;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-mos-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);transform: translate(-50%, -50%);text-align:center;-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor:default;}
+.loader-progress .text{position: absolute;left: -8.3em;top: -1.7em;-webkit-animation: text 2s infinite;-moz-animation: text 2s infinite;-moz-animation: text 2s infinite;-ms-animation: text 2s infinite;-o-animation: text 2s infinite;animation: text 2s infinite;width:250px;color:#ffffff;}
+.loader-progress .vertical{position:absolute;top: -1.84em;left: -0.4em;-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-ms-transform: rotate(90deg);-o-transform: rotate(90deg);transform: rotate(90deg);}
+.loader-progress .horizontal{position:absolute;top:0em;left:0em;-webkit-transform: rotate(0deg);-moz-transform: rotate(0deg);-ms-transform: rotate(0deg);-o-transform: rotate(0deg);transform: rotate(0deg);}
+.loader-progress .circlesup{position:absolute;top: -4.7em;right: 12.1em;}
+.loader-progress .circlesdwn{position:absolute;top:2.5em;right:-13.5em;-webkit-transform: rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);}
+.loader-progress .circle{position: absolute;width: 15em;height: 15em;-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);-ms-transform: rotate(45deg);-o-transform: rotate(45deg);transform: rotate(45deg);-webkit-animation: orbit 2s infinite;-moz-animation: orbit 2s infinite;-moz-animation: orbit 2s infinite;-ms-animation: orbit 2s infinite;-o-animation: orbit 2s infinite;animation: orbit 2s infinite;z-index:5;}
+.loader-progress .circle:after{content: '';position: absolute;width: 2em;height: 2em;-webkit-border-radius: 100%;-moz-border-radius: 100%;-ms-border-radius: 100%;-o-border-radius: 100%;border-radius: 100%;background: #13A3A5;}
+.loader-progress .circle:nth-child(2){-webkit-animation-delay: 100ms;-moz-animation-delay: 100ms;-ms-animation-delay: 100ms;-o-animation-delay: 100ms;animation-delay: 100ms;z-index:4;}
+.loader-progress .circle:nth-child(2):after{background: #56bebf;-webkit-transform: scale(0.8,0.8);-moz-transform: scale(0.8,0.8);-ms-transform: scale(0.8,0.8);-o-transform: scale(0.8,0.8);transform: scale(0.8,0.8);}
+.loader-progress .circle:nth-child(3){-webkit-animation-delay: 225ms;-moz-animation-delay: 225ms;-ms-animation-delay: 225ms;-o-animation-delay: 225ms;animation-delay: 225ms;z-index:3;}
+.loader-progress .circle:nth-child(3):after{background: #ffa489;-webkit-transform: scale(0.6,0.6);-moz-transform: scale(0.6,0.6);-ms-transform: scale(0.6,0.6);-o-transform: scale(0.6,0.6);transform: scale(0.6,0.6);}
+.loader-progress .circle:nth-child(4){-webkit-animation-delay: 350ms;-moz-animation-delay: 350ms;-ms-animation-delay: 350ms;-o-animation-delay: 350ms;animation-delay: 350ms;z-index:2;}
+.loader-progress .circle:nth-child(4):after{background: #ff6d37;-webkit-transform: scale(0.4,0.4);-moz-transform: scale(0.4,0.4);-ms-transform: scale(0.4,0.4);-o-transform: scale(0.4,0.4);transform: scale(0.4,0.4);}
+.loader-progress .circle:nth-child(5){-webkit-animation-delay: 475ms;-moz-animation-delay: 475ms;-ms-animation-delay: 475ms;-o-animation-delay: 475ms;animation-delay: 475ms;z-index:1;}
+.loader-progress .circle:nth-child(5):after{background: #DB2F00;-webkit-transform: scale(0.2,0.2);-moz-transform: scale(0.2,0.2);-ms-transform: scale(0.2,0.2);-o-transform: scale(0.2,0.2);transform: scale(0.2,0.2);}
+@-webkit-keyframes orbit{0%{-webkit-transform:rotate(45deg);}5%{-webkit-transform:rotate(45deg); -webkit-animation-timing-function: ease-out;}70%{-webkit-transform:rotate(405deg); -webkit-animation-timing-function: ease-in;}100%{-webkit-transform:rotate(405deg);}}
+@-moz-keyframes orbit{0%{-moz-transform:rotate(45deg);}5%{-moz-transform:rotate(45deg); -moz-animation-timing-function: ease-out;}70%{-moz-transform:rotate(405deg); -moz-animation-timing-function: ease-in;}100%{-moz-transform:rotate(405deg);}}
+@-ms-keyframes orbit{0%{-ms-transform:rotate(45deg);}5%{-ms-transform:rotate(45deg); -ms-animation-timing-function: ease-out;}70%{-ms-transform:rotate(405deg); -ms-animation-timing-function: ease-in;}100%{-ms-transform:rotate(405deg);}}
+@-o-keyframes orbit{0%{-o-transform:rotate(45deg);}5%{-o-transform:rotate(45deg); -o-animation-timing-function: ease-out;}70%{-o-transform:rotate(405deg); -o-animation-timing-function: ease-in;}100%{-o-transform:rotate(405deg);}}
+@keyframes orbit{0%{transform:rotate(45deg);}5%{transform:rotate(45deg); animation-timing-function: ease-out;}70%{transform:rotate(405deg); animation-timing-function: ease-in;}100%{transform:rotate(405deg);}}
+@-webkit-keyframes text{0%{-webkit-transform:scale(0.2,0.2); -webkit-animation-timing-function: ease-out;}40%,60%{-webkit-transform:scale(1,1); -webkit-animation-timing-function: ease-out;}70%,100%{-webkit-transform:scale(0.2,0.2);}}
+@-moz-keyframes text{0%{-moz-transform:scale(0.2,0.2); -moz-animation-timing-function: ease-out;}50%{-moz-transform:scale(1,1); -moz-animation-timing-function: ease-out;}60%{-moz-transform:scale(1,1);-moz-animation-timing-function: ease-out;}100%{-moz-transform:scale(0.2,0.2);}}
+@-mos-keyframes text{0%{-mos-transform:scale(0.2,0.2); -mos-animation-timing-function: ease-out;}50%{-mos-transform:scale(1,1); -mos-animation-timing-function: ease-out;}60%{-mos-transform:scale(1,1); -mos-animation-timing-function: ease-out;}100%{-mos-transform:scale(0.2,0.2);}}
+@-o-keyframes text{0%{-o-transform:scale(0.2,0.2); -o-animation-timing-function: ease-out;}50%{-o-transform:scale(1,1); -o-animation-timing-function: ease-out;}60%{-o-transform:scale(1,1); -o-animation-timing-function: ease-out;}100%{-o-transform:scale(0.2,0.2);}}
+@keyframes text{0%{transform:scale(0.2,0.2); animation-timing-function: ease-out;}50%{transform:scale(1,1); animation-timing-function: ease-out;}60%{transform:scale(1,1); animation-timing-function: ease-out;}100%{transform:scale(0.2,0.2);}}
+/*大屏*/
+/*动态进度条2*/
+.preloader{background: #fff url("../../images/iframe/loader.gif") no-repeat center center;position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 999999;}
