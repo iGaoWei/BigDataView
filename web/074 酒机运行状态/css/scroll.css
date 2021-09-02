@@ -1,0 +1,27 @@
+/*大屏*/
+::-webkit-scrollbar {
+    width: .040404rem;
+    background-color:rgba(13, 42, 121, 0.3);
+    border-radius: .050505rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #19ffec;
+    border-radius: .050505rem;
+    width: .070707rem;
+    height: .020202rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #274cb1;
+}
+
+::-webkit-scrollbar-thumb:active {
+    border: 0;
+    border-radius: 0;
+    background-color: #274cb1
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background-color: #274cb1
+}

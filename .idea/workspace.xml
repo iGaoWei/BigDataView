@@ -24,7 +24,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../web" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -39,6 +39,7 @@
       <workItem from="1627293548070" duration="1561000" />
       <workItem from="1627344333725" duration="12699000" />
       <workItem from="1627522509978" duration="39696000" />
+      <workItem from="1630484968812" duration="1073000" />
     </task>
     <servers />
   </component>
@@ -54,6 +55,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2408" y="258" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1627293654920" />
+    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1630485440833">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1630485440833" />
     <state x="2256" y="104" width="798" height="871" key="find.popup" timestamp="1629854814162">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
