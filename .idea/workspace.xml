@@ -3,18 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1db8f01d-0439-420c-8e00-93b93c288a8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/065 游戏可视化大数据用户案例/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/065 游戏可视化大数据用户案例/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/067 xx区智慧旅游综合服务平台/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/067 xx区智慧旅游综合服务平台/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/067 xx区智慧旅游综合服务平台/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/067 xx区智慧旅游综合服务平台/message.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/068 中国电信厅店营业效能分析/page/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/068 中国电信厅店营业效能分析/page/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/068 中国电信厅店营业效能分析/static/js/office_efficiency_index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/068 中国电信厅店营业效能分析/static/js/office_efficiency_index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/069 智能看板新中心/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/069 智能看板新中心/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/069 智能看板新中心/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/069 智能看板新中心/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/072 大连市突发预警实时监控/js/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/072 大连市突发预警实时监控/js/base.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/072 大连市突发预警实时监控/js/shine.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/072 大连市突发预警实时监控/js/shine.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/073 观测站综合监控平台/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/073 观测站综合监控平台/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/075 数据可视化展示/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/075 数据可视化展示/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/076 交管大数据人脸识别系统/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/076 交管大数据人脸识别系统/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +40,7 @@
       <workItem from="1627293548070" duration="1561000" />
       <workItem from="1627344333725" duration="12699000" />
       <workItem from="1627522509978" duration="39696000" />
-      <workItem from="1630484968812" duration="12713000" />
+      <workItem from="1630484968812" duration="13044000" />
     </task>
     <servers />
   </component>
@@ -71,10 +60,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1630485440833" />
-    <state x="2256" y="104" width="798" height="871" key="find.popup" timestamp="1630635532266">
+    <state x="2256" y="104" width="798" height="871" key="find.popup" timestamp="1630715851613">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2256" y="104" width="798" height="871" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1630635532266" />
+    <state x="2256" y="104" width="798" height="871" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1630715851613" />
     <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1629854603498">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
