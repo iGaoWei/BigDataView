@@ -193,7 +193,7 @@ function channelReportContent(rePortData){
 					reportContent="门店台席规划不合理，存在客户积压，请按业务类型分流";
 				}else if(0<=t1 && t1<3){
 					if(rePortData.popval<=0.3){
-						reportContent="门店运营状态良好，请继续保持,更多内容关注公众号【折腾不止的追梦人】";
+						reportContent="门店运营状态良好，请继续保持,更多内容关注公众号【DreamCoders】";
 					}else{
 						reportContent="台席规划合理，建议适当加强营销";
 					}

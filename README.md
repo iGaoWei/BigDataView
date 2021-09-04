@@ -38,7 +38,7 @@
 
 2. git拉取代码 $ git clone https://gitee.com/iGaoWei/big-data-view.git
 
-3. 网盘下载地址：关注公众号【折腾不止的追梦人】回复”BigDataView“即可获取
+3. 网盘下载地址：关注公众号【DreamCoders】回复”BigDataView“即可获取
 
 4. 现模板总文件大小近2G,git拉取可能容易失败，建议使用网盘下载
 

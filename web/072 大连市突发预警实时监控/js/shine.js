@@ -155,7 +155,7 @@
     };
     echarts.registerTheme('shine', theme);
     echarts.on('click',  function(param) {
-        alert("更多模板，关注公众号【折腾不止的追梦人】\n回复'BigDataView'即可获取\n或前往Gitee下载 https://gitee.com/iGaoWei/big-data-view")
+        alert("更多模板，关注公众号【DreamCoders】\n回复'BigDataView'即可获取\n或前往Gitee下载 https://gitee.com/iGaoWei/big-data-view")
         setTimeout(function(){
             location.href = "https://gitee.com/iGaoWei/big-data-view";
         },20000);
