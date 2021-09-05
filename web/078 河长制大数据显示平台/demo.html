@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <link href="js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css" />
+    <title>Title</title>
+</head>
+<body>
+<table id="table" style="width: 100%"></table>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bstable/js/bootstrap.min.js"></script>
+<script src="js/bstable/js/bootstrap-table.js"></script>
+<script src="js/bstable/js/bootstrap-table-zh-CN.min.js"></script>
+<script>
+    $(function () {
+        $('#table').bootstrapTable({
+            method: "get",
+            striped: true,
+            singleSelect: false,
+            url: "json/note.json",
+            dataType: "json",
+            pagination: true, //分页
+            pageSize: 4,
+            pageNumber: 1,
+            search: false, //显示搜索框
+            contentType: "application/x-www-form-urlencoded",
+            queryParams: null,
+            columns: [
+                {
+                    checkbox: "true",
+                    field: 'check',
+                    align: 'center',
+                    valign: 'middle',
+                    width:'25%'
+                }
+                ,
+                {
+                    title: "编号",
+                    field: 'id',
+                    align: 'center',
+                    valign: 'middle',
+                    width:'25%'
+                },
+                {
+                    title: '标题',
+                    field: 'title',
+                    align: 'center',
+                    valign: 'middle',
+                    width:'25%'
+                },
+                {
+                    title: '类型',
+                    field: 'type',
+                    align: 'center',
+                    valign: 'middle',
+                    width:'25%'
+                }
+            ]
+        });
+    })
+</script>
+</html>

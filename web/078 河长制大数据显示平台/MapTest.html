@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+
+    <title>Demo For WMTS(天地图) JS API 4.4</title>
+
+    <style type="text/css">
+        html, body {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .mapContainer {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <!--Styles-->
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="http://123.146.170.78:8911/API/library/4.4/dijit/themes/claro/claro.css" />
+    <link rel="stylesheet" href="http://123.146.170.78:8911/API/library/4.4/esri/css/main.css" />
+    <script src="http://123.146.170.78:8911/API/library/4.4/dojo/dojo.js"></script>
+
+</head>
+<body class="soria">
+    <input type="button" value="矢量图" onclick="showLayer('vector')" />
+
+    <input type="button" value="影像图" onclick="showLayer('image')" />
+    <input type="text" id="txtQuery" />
+    <input type="button" value="查询" onclick="addressQuery()" />
+
+    <textarea id="txtCoord" style="width:100%;height:50px"></textarea>
+    <ul id="layerList">
+        <li><input type="checkbox" />危化品企业</li>
+        <li><input type="checkbox" />仓库</li>
+        <li><input type="checkbox" />学校</li>
+        <li><input type="checkbox" />医疗卫生</li>
+        <li><input type="checkbox" />加油站</li>
+        <li><input type="checkbox" />停车场</li>
+        <li><input type="checkbox" />派出所</li>
+        <li><input type="checkbox" />应急避难场所</li>
+    </ul>
+
+    <div id="map" class="mapContainer">
+    </div>
+
+    <script type="text/javascript">
+
+    </script>
+</body>
+</html>

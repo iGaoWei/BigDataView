@@ -1,0 +1,159 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+    <title>视频信息</title>
+    <link href="js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+    <link href="css/table.css" rel="stylesheet" type="text/css">
+    <style>
+        .notice_check input,.notice_check select,.notice_check select option{border: 1px #9ca9b6  solid !important;background-color: transparent !important;color: #9ca9b6}
+        .fixed-table-pagination{border-top: 1px #39444f  solid !important;}
+        .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{border: 1px #39444f  solid !important;;}
+        .fixed-table-container tbody td{border: 1px #39444f  solid !important}
+        th{background-color: #505b6f !important;}
+        #table td, #table th, #table1 td, #table1 th, #table2 td, #table2 th{color: #d9dcde !important}
+        thead th{background-color: #ECF4FB;border: #9ca9b6 1px solid !important;}
+        tbody tr:nth-child(2n+1){background-color: #1f2838 !important;}
+        tbody tr:hover{background-color: #323b44 !important;}
+        .pagination-info{color:#8d9ca7}
+    </style>
+</head>
+<body style="background-color:#171e2b;color: #fff;font-family: 微软雅黑;overflow: auto" >
+<div class="notice_main " style="background-color: #171e2b;border: 1px #39444f  solid">
+    <div class="notice_check">
+        <p>
+            <label class="">点位号：</label>
+            <input type="text" class="find_input" placeholder="">
+            <label class="">设备类型：</label>
+            <select class="find_input">
+                <option>全部</option>
+
+            </select>
+            <label class="">所属区域：</label>
+            <select class="find_input">
+                <option>全部</option>
+
+            </select>
+            <button class="check_btn">查询</button>
+        </p>
+    </div>
+
+    <div class="clear"></div>
+
+    <table id="table" class="table_style" style="margin: 0 auto" > </table>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/bstable/js/bootstrap.min.js"></script>
+<script src="js/bstable/js/bootstrap-table.js"></script>
+<script src="js/bstable/js/bootstrap-table-zh-CN.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#table').bootstrapTable({
+            method: "get",
+            striped: true,
+            singleSelect: false,
+            url: "json/carmes.json",
+            dataType: "json",
+            pagination: true, //分页
+            pageSize: 8,
+            pageNumber: 1,
+            search: false, //显示搜索框
+            contentType: "application/x-www-form-urlencoded",
+            queryParams:null,
+            columns: [
+                {
+                    title: "序列号",
+                    field: 'id',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    title: '点位号',
+                    field: 'no02',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    title: '所属区域',
+                    field: 'no03',
+                    align: 'center',
+                    valign: 'middle'
+                },
+
+                {
+                    title: '设备类型',
+                    field: 'type',
+                    align: 'center'
+                },
+                {
+                    title: '设备名称',
+                    field: 'no05',
+                    align: 'center'
+                },
+                {
+                    title: '品牌',
+                    field: 'name',
+                    align: 'center'
+                },
+                {
+                    title: '生产厂家',
+                    field: 'unit',
+                    align: 'center'
+                },
+                {
+                    title: '安装时间',
+                    field: 'person',
+                    align: 'center'
+                },
+                {
+                    title: '安装位置',
+                    field: 'num',
+                    align: 'center'
+                }
+
+            ]
+        });
+    });
+    function edit() {
+        var Name = "运输车详情";
+        var Href = "carTail.html";
+        var data_id = $("#add").attr('data-id');
+        window.parent.$.learuntab.myAddTab(Name, Href, data_id);
+    }
+    function carAnalysis() {
+        var Name = "运输车分析";
+        var Href = "transport_analysis.html";
+        var data_id = $("#add").attr('data-id');
+        window.parent.$.learuntab.myAddTab(Name, Href, data_id);
+    }
+    function analiysis(){
+        layer.open({
+            type: 2,
+            title: '单体分析',
+            shade: 0.5,
+            skin: 'layui-layer-rim',
+            area: ['65%', '30%'],
+            shadeClose: true,
+            closeBtn: 2,
+            content: 'car_one.html'
+        });
+    }
+    function totalAnaliysis() {
+        layer.open({
+            type: 2,
+            title: '总体分析',
+            shade: 0.5,
+            skin: 'layui-layer-rim',
+            area: ['60%', '30%'],
+            shadeClose: true,
+            closeBtn: 2,
+            content: 'car_total.html'
+        })
+    }
+
+</script>
+</body>
+</html>
