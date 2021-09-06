@@ -240,6 +240,70 @@
 ##### 060 广西电子商务公共服务平台大数据中心
 <img src="./preview/060 广西电子商务公共服务平台大数据中心.png" width="100%" />
 
+##### 061 智慧小区大数据分析
+<img src="./preview/061 智慧小区大数据分析.png" width="100%" />
+
+##### 062 数据概览演示案例
+<img src="./preview/062 数据概览演示案例.png" width="100%" />
+
+##### 063 商品运营大数据
+<img src="./preview/063 商品运营大数据.png" width="100%" />
+
+##### 064 设备环境监测平台
+<img src="./preview/064 设备环境监测平台.png" width="100%" />
+
+##### 065 游戏可视化大数据用户案例
+<img src="./preview/065 游戏可视化大数据用户案例.png" width="100%" />
+
+##### 066 系统架构可视化监控
+<img src="./preview/066 系统架构可视化监控.png" width="100%" />
+
+##### 067 xx区智慧旅游综合服务平台
+<img src="./preview/067 xx区智慧旅游综合服务平台.png" width="100%" />
+<img src="./preview/067 xx区智慧旅游综合服务平台1.png" width="100%" />
+<img src="./preview/067 xx区智慧旅游综合服务平台2.png" width="100%" />
+
+##### 068 中国电信厅店营业效能分析
+<img src="./preview/068 中国电信厅店营业效能分析.png" width="100%" />
+
+##### 069 智能看板新中心
+<img src="./preview/069 智能看板新中心.png" width="100%" />
+
+##### 070 翼兴消防监控
+<img src="./preview/070 翼兴消防监控.png" width="100%" />
+
+##### 071 市突发预警平台实时监控
+<img src="./preview/071 市突发预警平台实时监控.png" width="100%" />
+
+##### 072 大连市突发预警实时监控
+<img src="./preview/072 大连市突发预警实时监控.png" width="100%" />
+
+##### 073 观测站综合监控平台
+<img src="./preview/073 观测站综合监控平台.png" width="100%" />
+
+##### 074 酒机运行状态
+<img src="./preview/074 酒机运行状态.png" width="100%" />
+
+##### 075 数据可视化展示
+<img src="./preview/075 数据可视化展示.png" width="100%" />
+
+##### 076 交管大数据人脸识别系统
+<img src="./preview/076 交管大数据人脸识别系统.png" width="100%" />
+
+##### 078 河长制大数据显示平台
+<img src="./preview/078 河长制大数据显示平台.png" width="100%" />
+<img src="./preview/078 河长制大数据显示平台1.png" width="100%" />
+
+##### 079 保税区A仓监控中心
+<img src="./preview/079 保税区A仓监控中心.png" width="100%" />
+
+
+
+
+
+
+
+
 
 [![陌生人/BigDataView](https://gitee.com/iGaoWei/big-data-view/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b)](https://gitee.com/iGaoWei/big-data-view)
 
