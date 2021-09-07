@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>数据概览</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/data_text.css">
+    <link rel="stylesheet" href="css/foundation-datepicker.css">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!--header开始-->
+<div class="header">
+    <div class="header_logo fl">
+        <a href="https://gitee.com/iGaoWei/big-data-view"><img src="img/header_logo.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view"></a>
+    </div>
+    <div class="header_nav fl">
+        <ul>
+            <li>
+                <img src="img/nav_1.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">
+                <a href="https://gitee.com/iGaoWei/big-data-view" class="nav_current">数据概览</a>
+            </li>
+            <li>
+                <img src="img/nav_2.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">
+                <a href="https://gitee.com/iGaoWei/big-data-view">车辆监控</a>
+            </li>
+            <li>
+                <img src="img/nav_3.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">
+                <a href="https://gitee.com/iGaoWei/big-data-view">政府监管</a>
+            </li>
+            <li>
+                <img src="img/nav_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">
+                <a href="https://gitee.com/iGaoWei/big-data-view">参数设置</a>
+            </li>
+            <li>
+                <img src="img/nav_5.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">
+                <a href="https://gitee.com/iGaoWei/big-data-view">车载视频</a>
+            </li>
+            <li>
+                <img src="img/nav_6.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">
+                <a href="https://gitee.com/iGaoWei/big-data-view">视频监控</a>
+            </li>
+            <li>
+                <img src="img/nav_7.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">
+                <a href="https://gitee.com/iGaoWei/big-data-view">查询统计</a>
+            </li>
+            <!--<li>-->
+                <!--<img src="img/nav_8.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">-->
+                <!--<a href="https://gitee.com/iGaoWei/big-data-view">行业应用</a>-->
+            <!--</li>-->
+            <li>
+                <img src="img/nav_9.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">
+                <a href="https://gitee.com/iGaoWei/big-data-view">系统设置</a>
+                <ul>
+                    <li>
+                        <a href="https://gitee.com/iGaoWei/big-data-view">平台管理</a>
+                        <ul>
+                            <li><a href="https://gitee.com/iGaoWei/big-data-view">平台管理1</a></li>
+                            <li><a href="https://gitee.com/iGaoWei/big-data-view">平台管理2</a></li>
+                            <li><a href="https://gitee.com/iGaoWei/big-data-view">平台管理3</a></li>
+                            <li><a href="https://gitee.com/iGaoWei/big-data-view">平台管理3</a></li>
+                            <li><a href="https://gitee.com/iGaoWei/big-data-view">平台管理3</a></li>
+                            <li><a href="https://gitee.com/iGaoWei/big-data-view">平台管理3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="https://gitee.com/iGaoWei/big-data-view">设备管理</a>
+                        <ul>
+                            <li><a href="https://gitee.com/iGaoWei/big-data-view">设备管理1</a></li>
+                            <li><a href="https://gitee.com/iGaoWei/big-data-view">设备管理2</a></li>
+                            <li><a href="https://gitee.com/iGaoWei/big-data-view">设备管理3</a></li>
+                            <li><a href="https://gitee.com/iGaoWei/big-data-view">设备管理4</a></li>
+                            <li><a href="https://gitee.com/iGaoWei/big-data-view">设备管理5</a></li>
+                            <li><a href="https://gitee.com/iGaoWei/big-data-view">设备管理6</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://gitee.com/iGaoWei/big-data-view">系统设置</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="header_myself fr">
+        <p>用户：管理员</p>
+        <a href="https://gitee.com/iGaoWei/big-data-view" data-toggle="modal" data-target=".bs-example-modal-sm">注销 &nbsp;<span class="caret"></span></a>
+    </div>
+</div>
+<!--header结束-->
+
+<!--content开始-->
+<div class="data_content">
+    <div class="data_time">
+        <img src="img/data_time.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="fl">
+        <input type="text"  value="" id="demo-1" style="background: #04425f;width: 80px;" placeholder="选择日期">
+    </div>
+    <div class="data_info">
+        <div class="info_1 fl">
+            <div class="text_1">
+                <div class="fl">
+                    <img src="img/info_1.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="fl">
+                    <div class="fl">
+                        <p>车辆总数(辆)</p>
+                        <p>15802</p>
+                    </div>
+                </div>
+                <div class="fl">
+                    <img src="img/info_2.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="fl">
+                    <div class="fl">
+                        <p>车辆使用数(辆)</p>
+                        <p>15802</p>
+                    </div>
+                </div>
+                <div class="fl">
+                    <img src="img/info_3.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="fl">
+                    <div class="fl">
+                        <p>车辆行驶数(辆)</p>
+                        <p>15802</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="info_2 fl">
+            <div class="text_2">
+                <div class="fl">
+                    <img src="img/info_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="fl">
+                    <div class="fl">
+                        <p>行驶里程总数(km)</p>
+                        <p>15802</p>
+                    </div>
+                </div>
+                <div class="fl">
+                    <img src="img/info_5.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="fl">
+                    <div class="fl">
+                        <p>行驶里程平均数(km)</p>
+                        <p>15802</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="info_3 fr">
+            <div class="text_3">
+                <div class="fl">
+                    <img src="img/info_6.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="fl">
+                    <div class="fl">
+                        <p>行驶时长总数(h)</p>
+                        <p>15802</p>
+                    </div>
+                </div>
+                <div class="fl">
+                    <img src="img/info_7.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view" class="fl">
+                    <div class="fl">
+                        <p>行驶时长平均数(h)</p>
+                        <p>15802</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="data_main">
+        <div class="main_left fl">
+            <div class="left_1">
+                <div class="main_title">
+                    <img src="img/title_1.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">
+                    车辆类型统计
+                </div>
+                <div id="chart_1" class="chart" style="width:100%;height: 280px;"></div>
+            </div>
+            <div class="left_2">
+                <div class="main_title">
+                    <img src="img/title_2.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">
+                    车辆状态统计
+                </div>
+                <div id="chart_2" class="chart" style="width:100%;height: 280px;"></div>
+            </div>
+        </div>
+        <div class="main_center fl">
+            <div class="center_text">
+                <div class="main_title">
+                    <img src="img/title_3.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">
+                    车辆分布地图
+                </div>
+                <div id="chart_map" style="width:100%;height:610px;"></div>
+            </div>
+        </div>
+        <div class="main_right fr">
+            <div class="right_1">
+                <div class="main_title">
+                    <img src="img/title_4.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">
+                    车辆行驶数量
+                </div>
+                <div class="choice">
+                    <label for="">类型：</label>
+                    <select name="" id="">
+                        <option value="">客车</option>
+                        <option value="">客车</option>
+                        <option value="">客车</option>
+                    </select>
+                </div>
+                <div id="chart_3" class="echart" style="width:100%;height: 280px;"></div>
+            </div>
+            <div class="right_2">
+                <div class="main_title">
+                    <img src="img/title_5.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">
+                    车辆报警统计
+                </div>
+                <div id="chart_4" class="echart fl" style="width:80%;height: 230px;"></div>
+                <div class="fr chart_text">
+                    <p>同比</p>
+                    <p><img src="img/down.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">2%</p>
+                    <p><img src="img/up.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">4%</p>
+                    <p><img src="img/down.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">5%</p>
+                    <p><img src="img/down.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">3%</p>
+                </div>
+                <div style="width: 80%;" class="text_sum">
+                    <div class="fl" style="width:30%">332</div>
+                    <div class="fl" style="width:40%">统计</div>
+                    <div class="fr" style="width:30%">505</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="data_bottom">
+        <div class="bottom_1 fl">
+            <div class="main_title">
+                <img src="img/title_6.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">
+                行驶里程排名前5位
+            </div>
+            <div class="main_table">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>排名</th>
+                        <th>车牌号</th>
+                        <th>里程数(km)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>京A12345</td>
+                        <td>134.2</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>京A12345</td>
+                        <td>134.2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>京A12345</td>
+                        <td>134.2</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>京A12345</td>
+                        <td>134.2</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>京A12345</td>
+                        <td>134.2</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="bottom_center fl">
+            <div class="bottom_2 fl">
+                <div class="main_title">
+                    <img src="img/title_6.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">
+                    行驶时长排名前5位
+                </div>
+                <div class="main_table">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>排名</th>
+                            <th>车牌号</th>
+                            <th>时长(h)</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>京A12345</td>
+                            <td>134.2</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>京A12345</td>
+                            <td>134.2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>京A12345</td>
+                            <td>134.2</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>京A12345</td>
+                            <td>134.2</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>京A12345</td>
+                            <td>134.2</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="bottom_3 fl">
+                <div class="main_title">
+                    <img src="img/title_6.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">
+                    行驶最高时速前5位
+                </div>
+                <div class="main_table">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>排名</th>
+                            <th>车牌号</th>
+                            <th>速度(km/h)</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>京A12345</td>
+                            <td>134.2</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>京A12345</td>
+                            <td>134.2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>京A12345</td>
+                            <td>134.2</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>京A12345</td>
+                            <td>134.2</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>京A12345</td>
+                            <td>134.2</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_4 fr">
+            <div class="main_title">
+                <img src="img/title_5.png" alt="更多资源：https://gitee.com/iGaoWei/big-data-view">
+                行驶次数车辆前5位
+            </div>
+            <div class="main_table">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>排名</th>
+                        <th>车牌号</th>
+                        <th>次数(次)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>京A12345</td>
+                        <td>134.2</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>京A12345</td>
+                        <td>134.2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>京A12345</td>
+                        <td>134.2</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>京A12345</td>
+                        <td>134.2</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>京A12345</td>
+                        <td>134.2</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+<!--content结束-->
+
+
+<!--注销模态框  开始-->
+<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">注销</h4>
+            </div>
+            <div class="modal-body">
+                <p>确认退出该系统吗？</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--注销模态框  结束-->
+
+
+
+
+</body>
+<script src="js/jquery-2.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/echart.js"></script>
+<script src="js/china.js"></script>
+<script src="js/foundation-datepicker.js"></script>
+<script src="js/foundation-datepicker.zh-CN.js"></script>
+<script>
+    $('#demo-1').fdatepicker();
+
+    var nowTemp = new Date();
+    var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+    var checkin = $('#dpd1').fdatepicker({
+        onRender: function (date) {
+            return date.valueOf() < now.valueOf() ? 'disabled' : '';
+        }
+    }).on('changeDate', function (ev) {
+        if (ev.date.valueOf() > checkout.date.valueOf()) {
+            var newDate = new Date(ev.date)
+            newDate.setDate(newDate.getDate() + 1);
+            checkout.update(newDate);
+        }
+        checkin.hide();
+        $('#dpd2')[0].focus();
+    }).data('datepicker');
+    var checkout = $('#dpd2').fdatepicker({
+        onRender: function (date) {
+            return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+        }
+    }).on('changeDate', function (ev) {
+        checkout.hide();
+    }).data('datepicker');
+</script>
+</html>
