@@ -1,0 +1,107 @@
+/* 通用css */
+body {
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	background-color: #000000;
+}
+
+.topContent {
+	width: 1560px;
+    height: 48px;
+    position: absolute;
+    left: 310px;
+    top: 119px;
+    z-index: 66;
+}
+
+.topContent .progress-bar-tr-content{
+    position: absolute;
+    top: -35px;
+    left: 1060px;
+}
+
+.topContent .progress-bar-tr-content .progress-right-bar{
+    width: 15px;
+    height: 23px;
+    background: url(../image/arrLH.png) no-repeat transparent;
+    float: left;
+    opacity: 0.2;
+}
+
+.topContent div.menu {
+    float: left;
+    width: 142px;
+    height: 48px;
+    margin: 5px 6px 0;
+    background: url(../image/dhbg.png) no-repeat;
+    text-align: center;
+    line-height: 48px;
+}
+
+.topContent div.active {
+    background: url(../image/dhbg_active.png) no-repeat;
+}
+
+.topContent div.menu:hover {
+    background: url(../image/dhbg_active.png) no-repeat;
+}
+
+.topContent div a {
+	color: rgb(155, 217, 255);
+	font-size: 24px;
+    font-family: 幼圆;
+    display: inline-block;
+    background-color: transparent;
+    text-decoration: none;
+    padding-right: 12px;
+}
+
+.topContent div:hover a {
+    color: #c4f2fa;
+}
+
+.mainContainer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1920px;
+    height: 1080px;
+    background: url(../image/mainframe.png) no-repeat;
+    z-index: 0;
+}
+
+.mainContainer .bottomContent {
+    width: 1642px;
+    height: 175px;
+    background: url(../image/mainbottom.png) no-repeat;
+    position: absolute;
+    left: 247px;
+    top: 890px;
+}
+
+
+.bottomContent .cmd-left{
+    position: absolute;
+    top: 79px;
+    left: 23px;
+    width:80px;
+    height: 80px;
+    background: url(../image/left.png) no-repeat center;
+    z-index: 1000;
+}
+
+.bottomContent .cmd-right{
+    position: absolute;
+    top: 79px;
+    left:1542px;
+    width:80px;
+    height: 80px;
+    background: url(../image/right.png) no-repeat center;
+    z-index: 1000;
+}
+
+
+
+
