@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>兴福公安综合监管大屏</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!--标题样式-->
+    <style>
+        .t_title{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 3;
+            width: 100%;
+            text-align: center;
+            font-size: 2.5em;
+            line-height: 105px;
+            color: #fff;
+        }
+    </style>
+
+    <style>
+
+        .content-window-card {
+            position: relative;
+            box-shadow: none;
+            bottom: 0;
+            left: 0;
+            width: auto;
+            padding: 0;
+        }
+
+        .content-window-card p {
+            height: 2rem;
+        }
+
+        .custom-info {
+            border: solid 1px silver;
+        }
+
+        div.info-top {
+            position: relative;
+            background: none repeat scroll 0 0 #F9F9F9;
+            border-bottom: 1px solid #CCC;
+            border-radius: 5px 5px 0 0;
+        }
+
+        div.info-top div {
+            display: inline-block;
+            color: #333333;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 31px;
+            padding: 0 10px;
+        }
+
+        div.info-top img {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            transition-duration: 0.25s;
+        }
+
+        div.info-top img:hover {
+            box-shadow: 0px 0px 5px #000;
+        }
+
+        div.info-middle {
+            font-size: 12px;
+            padding: 10px 6px;
+            line-height: 20px;
+        }
+
+        div.info-bottom {
+            height: 0px;
+            width: 100%;
+            clear: both;
+            text-align: center;
+        }
+
+        div.info-bottom img {
+            position: relative;
+            z-index: 104;
+        }
+
+        span {
+            margin-left: 5px;
+            font-size: 11px;
+        }
+
+        .info-middle img {
+            float: left;
+            margin-right: 6px;
+        }
+    </style>
+
+</head>
+<body onload="loadpage()">
+<!--地图背景-->
+<div class="ditu" id="container"></div>
+<!--地图要素筛选框-->
+<div class="ditu_yaosu">
+    <div class="yaosu1">
+    <p><input type="checkbox" checked name="category" value="锅炉" onclick="my_func('锅炉')"/>锅炉 </p>
+    <p><input type="checkbox" checked name="category" value="电梯" onclick="my_func('电梯')"/>电梯</p>
+    <p><input type="checkbox" checked name="category" value="压力管道" onclick="my_func('压力管道')"/>压力管道</p>
+    <p><input type="checkbox" checked name="category" value="客运索道" onclick="my_func('客运索道')"/>客运索道</p>
+    </div>
+    <div class="yaosu2">
+    <p><input type="checkbox" checked name="category" value="场内车辆" onclick="my_func('场内车辆')"/>场内车辆</p>
+    <p><input type="checkbox" checked name="category" value="游乐设施" onclick="my_func('游乐设施')"/>游乐设施</p>
+    <p><input type="checkbox" checked name="category" value="起重机械" onclick="my_func('起重机械')"/>起重机械</p>
+    <p><input type="checkbox" checked name="category" value="压力容器" onclick="my_func('压力容器')"/>压力容器</p>
+    </div>
+</div>
+
+<!---->
+<div class="bg_border">
+
+</div>
+<!---->
+<div class="top_border">
+
+</div>
+<!--header-->
+<div class="header">
+    <div class="bg_header">
+        <div class="header_nav fl t_title">
+            <a href="https://gitee.com/iGaoWei/big-data-view" style="color: white">兴福公安综合监管大屏</a>
+        </div>
+        <div class="short_title"></div>
+        <div class="top_datatime">
+            <div id="time"></div>
+        </div>
+        <div class="top_menu">
+            <a class="top_menu_font" href="https://gitee.com/iGaoWei/big-data-view" style=" margin-left: 40px;">视频监控</a>
+            <a class="top_menu_font" href="https://gitee.com/iGaoWei/big-data-view" >物业监控</a>
+            <a class="top_menu_font" href="./page/index.html">压力容器大屏</a>
+            <a class="top_menu_font" href="https://gitee.com/iGaoWei/big-data-view">其他...</a>
+        </div>
+    </div>
+</div>
+
+<!--main-->
+<div class="data_content">
+    <div class="left_content">
+        <div id="chart_1" class="chart" style="width:100%;height: 280px;"></div>
+        <div id="chart_2" class="chart t_btn9" style="margin-top:60px;width:100%;height: 230px;"></div>
+        <div id="chart_3" class="echart t_btn7" style="margin-top:50px;padding-left:15px;width:527px;height: 280px;"></div>
+        <div ></div>
+    </div>
+    <div class="right__content">
+        <div id="chart_4" class="echart fl t_btn4" style="padding-left:15px;width:100%;height: 280px;cursor: pointer;"></div>
+        <div id="chart_5" class="echart fl" style="margin-top:60px;width:100%;height: 230px;""></div>
+        <div id="chart_6" class="echart fl t_btn8" style="margin-top:50px;padding-left:15px;width:527px;height: 280px;"></div>
+    </div>
+</div>
+<div style="text-align:center;">
+<p>安徽省特种设备检测研究院</p>
+</div>
+</body>
+<script type="text/javascript" src="data/hotinfo-data.json"></script>
+<script src="js/jquery-2.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/dataTool.js"></script>
+<script src="js/index.js"></script>
+<script src="js/china.js"></script>
+<script src="js/hunan.js"></script>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.14&key=ea09796f19784013bb2efb5df7da9677"></script>
+
+<!--地图覆盖物-->
+<script>
+    var markerlist= [];
+    var infoWindowList = [];
+    function windowInfoList(){
+        for(var i = 0; i < datas_ditu.length; i++){
+            let item = datas_ditu[i];
+            //实例化信息窗体
+            var title = ''+ item.attr6 +'<span style="font-size:11px;color:#F00;">' + item.attr4 +'</span>';
+            content = [];
+            content.push("地址：" + item.attr3);
+            content.push("检验单位："+ item.attr7);
+            content.push("设备编号："+ item.attr5);
+            content.push("设备类型："+ item.name);
+            content.push("经度："+ item.attr1 + "，纬度："+ item.attr2);
+            var infoWindow = new AMap.InfoWindow({
+                isCustom: true,  //使用自定义窗体
+                content: createInfoWindow(title, content.join("<br/>")),
+                offset: new AMap.Pixel(16, -45)
+            });
+            infoWindowList.push(infoWindow)
+        }
+    }
+
+
+    //构建自定义信息窗体
+    function createInfoWindow(title, content) {
+        var info = document.createElement("div");
+        info.className = "custom-info input-card content-window-card";
+        //可以通过下面的方式修改自定义窗体的宽高
+        //info.style.width = "400px";
+        // 定义顶部标题
+        var top = document.createElement("div");
+        var titleD = document.createElement("div");
+        var closeX = document.createElement("img");
+        top.className = "info-top";
+        titleD.innerHTML = title;
+        closeX.src = "https://webapi.amap.com/images/close2.gif";
+        closeX.onclick = closeInfoWindow;
+        top.appendChild(titleD);
+        top.appendChild(closeX);
+        info.appendChild(top);
+
+        // 定义中部内容
+        var middle = document.createElement("div");
+        middle.className = "info-middle";
+        middle.style.backgroundColor = 'white';
+        middle.innerHTML = content;
+        info.appendChild(middle);
+
+        // 定义底部内容
+        var bottom = document.createElement("div");
+        bottom.className = "info-bottom";
+        bottom.style.position = 'relative';
+        bottom.style.top = '0px';
+        bottom.style.margin = '0 auto';
+        var sharp = document.createElement("img");
+        sharp.src = "https://webapi.amap.com/images/sharp.png";
+        bottom.appendChild(sharp);
+        info.appendChild(bottom);
+        return info;
+    }
+
+    //关闭信息窗体
+    function closeInfoWindow() {
+        map.clearInfoWindow();
+    }
+    function markerClick(e) {
+        console.log('==============markerClick')
+        console.log(e)
+        var indexMaker = e.target.content;
+        var infoWindow = infoWindowList[indexMaker];
+        infoWindow.open(map, e.target.getPosition());
+    }
+    // 页面加载
+    function loadpage() {
+        console.log('=============loadpage()')
+        this.windowInfoList();
+        var iconList = [];
+        var images_icon = ['./img/YAOSU/锅炉-01.png','./img/YAOSU/电梯.png', './img/YAOSU/压力管道-管道.png','./img/YAOSU/客运索道-轨道交通.png','./img/YAOSU/场内车辆-工程车.png','./img/YAOSU/游乐设施-游乐园.png', './img/YAOSU/起重-机械行业.png','./img/YAOSU/压力容器-容器.png', ];
+        for(var i = 0; i < datas_ditu.length; i++){
+            let item = datas_ditu[i];
+            // 构造点标记
+            var icon ;
+            var type = item.name
+            switch (type){
+                case '锅炉':
+                    icon = images_icon[0];
+                    break;
+                case '电梯':
+                    icon = images_icon[1];
+                    break;
+                case '压力管道':
+                    icon = images_icon[2];
+                    break;
+                case '客运索道':
+                    icon = images_icon[3];
+                    break;
+                case '场内车辆':
+                    icon = images_icon[4];
+                    break;
+                case '游乐设施':
+                    icon = images_icon[5];
+                    break;
+                case '起重机械':
+                    icon = images_icon[6];
+                    break;
+                case '压力容器':
+                    icon = images_icon[7];
+                    break;
+            }
+            var color_status = 'red';
+            var status = item.attr4;
+            switch (status) {
+                case '超期未检':
+                    color_status = 'pink';
+                    break;
+                case '合格':
+                    color_status = 'green';
+                    break;
+                case '不合格':
+                    color_status = 'red';
+                    break;
+            }
+            // 点标记显示内容，HTML要素字符串
+            var markerContent = '' +
+                '<div class="custom-content-marker">' +
+                '   <div style="width:15px;height:15px;border-radius:50%;background-color:'+ color_status +';position: relative;top: 18px;left:-16px;"></div>' +
+                '   <img src="'+ icon +'" style="width: 25px;height: 25px;">' +
+                // '   <img src="'+ './img/YAOSU/起重-机械行业.png' +'" style="width: 25px;height: 25px;">' +
+                '</div>';
+            var one_marker = new AMap.Marker({
+              // 将 html 传给 content
+              content: markerContent,
+              position: [item.attr1, item.attr2],
+            });
+            one_marker.content = i;
+            one_marker.on('click', markerClick);
+            markerlist.push(one_marker)
+        }
+        //默认显示全部的点
+        map.add(markerlist)
+    }
+
+</script>
+<!--初始化地图-->
+<script type="text/javascript">
+    var map = new AMap.Map('container', {
+        resizeEnable: true, //是否监控地图容器尺寸变化
+        mapStyle: "amap://styles/darkblue",
+        zoom: 100, //设置地图的缩放级别
+        center: [117.257428, 31.83923],
+        zoom: 14,
+    });
+    //实时路况图层
+    var trafficLayer = new AMap.TileLayer.Traffic({
+        zIndex: 10
+    });
+    map.add(trafficLayer);//添加图层到地图
+</script>
+<!--显示动态时间-->
+<script type="text/javascript">
+function time(){
+var vWeek,vWeek_s,vDay;
+vWeek = ["星期天","星期一","星期二","星期三","星期四","星期五","星期六"];
+var date =  new Date();
+year = date.getFullYear();
+month = date.getMonth() + 1;
+day = date.getDate();
+hours = date.getHours();
+minutes = date.getMinutes();
+seconds = date.getSeconds();
+vWeek_s = date.getDay();
+document.getElementById("time").innerHTML = year + "年" + month + "月" + day + "日" + "\t" + hours + ":" + minutes +":" + seconds + "\t" + vWeek[vWeek_s] ;
+
+};
+setInterval("time()",1000);
+</script>
+
+<!--复选框-->
+<script>
+    function my_func(type)
+    {
+        console.log('=========my_func')
+        var items = document.getElementsByName("category");
+        for(let i= 0; i< items.length;i++){
+            let name = items[i].defaultValue;
+            if(name === type){
+                let ischecked = items[i].checked;
+                if(ischecked){
+                    addPoint(type)
+                }else{
+                    removePoint(type)
+                }
+                break;
+            }
+        }
+
+    }
+</script>
+
+<!--地图增加一个点-->
+<script>
+    // 将点标记添加到地图上
+    function addPoint(type){
+        var one_markerlist = [];
+        for(var i = 0; i < datas_ditu.length; i++) {
+            let item = datas_ditu[i];
+            if(item.name === type){
+                one_markerlist.push(markerlist[i])
+            }
+        }
+        map.add(one_markerlist)
+    }
+
+    function removePoint(type){
+        var one_markerlist = [];
+        for(var i = 0; i < datas_ditu.length; i++) {
+            let item = datas_ditu[i];
+            if(item.name === type){
+                one_markerlist.push(markerlist[i])
+            }
+        }
+        map.remove(one_markerlist)
+    }
+</script>
+
+</html>
