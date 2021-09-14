@@ -1,0 +1,101 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box}
+*,body{padding:0px;	margin:0px;color: #ffffff;/*font-family: "微软雅黑";*/}
+html,body{
+    background: url("../images/bg.png") no-repeat;
+    background-size: cover;
+    font-size: .16rem;
+    color: #ffffff;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: myFirstFont !important;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+ul,ol{
+    list-style: none;
+}
+.allnav{
+    height: 100%;
+}
+@font-face
+{
+    font-family: myFirstFont;
+    src: url('DISPLAY FREE TFB.ttf')
+}
+/*谷哥滚动条样式*/
+
+::-webkit-scrollbar {width:5px;height:5px;position:absolute}
+::-webkit-scrollbar-thumb {background-color:#5bc0de}
+::-webkit-scrollbar-track {background-color:#ddd}
+
+/***/
+.allnav{
+    height: 100%;
+}
+
+
+/*第三栏头部*/
+.rightTop{
+    width: 100%;
+    height: 450px;
+    position: relative;
+    border:1px solid #0bc4e9;
+    background: rgba(0,72,115,0.28);
+    transition: all 1s;
+    cursor: pointer;
+}
+
+/*边框公共样式*/
+.border:before{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    bottom: -1px;
+    top:-1px;
+    left:10%;
+    border-bottom: 1px solid #007297;
+    border-top: 1px solid #007297;
+    transition: all 0.5s;
+}
+.border:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    left: -1px;
+    right:-1px;
+    top:10%;
+    border-left: 1px solid  #007297;
+    border-right: 1px solid  #007297;
+    transition: all 0.5s;
+}
+.border:hover::before{
+    width: 0%;
+}
+.border:hover::after{
+    height: 0%;
+}
+.border:hover{
+    box-shadow:-5px 0px 2px rgba(255,255,255,0.1),   /*左边阴影*/  0px -5px 2px rgba(255,255,255,0.1),  /*上边阴影*/ 5px 0px 2px rgba(255,255,255,0.1),  /*右边阴影*/ 0px 5px 2px rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.1);
+}
+.border h4{
+    margin: 15px 0 5px 20px;
+    color: #8adeff;
+    line-height: 35px;
+    font-size: 18px;
+    font-weight: 500;
+}
+/* 鼠标特效 */
+*{
+    cursor: url(../images/pointer.png) 8 3, auto !important;
+}

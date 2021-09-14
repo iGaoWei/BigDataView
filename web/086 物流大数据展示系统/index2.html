@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单信息</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/index1.css">
+    <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+</head>
+<script>
+/*    $(function () {
+        $('.myscroll').myScroll({
+            speed: 60, //数值越大，速度越慢
+            rowHeight: 38 //li的高度
+        });
+    });*/
+
+    $(document).ready(function () {
+        var whei = $(window).width()
+        $("html").css({ fontSize: whei / 22 });
+        $(window).resize(function () {
+            var whei = $(window).width();
+            $("html").css({ fontSize: whei / 22 })
+        });
+    });
+</script>
+<body>
+<div class="main">
+    <div class="header">
+        <div class="header-left fl" id="time"></div>
+        <div class="header-center fl">
+            <div class="header-title">
+                物流订单信息展示
+            </div>
+            <div class="header-img"></div>
+        </div>
+        <div class="header-right fl"></div>
+        <div class="header-bottom fl"></div>
+    </div>
+
+
+    <div class="center">
+        <div class="center-left fl">
+            <div class="left-top rightTop border">
+                <div class="title">城市卖家</div>
+                <div class="top-list">
+                    <p>当你征服一座山峰时，它已经在你脚下了，你必须再找一座山峰去征服，否则，你只有下山，走下坡路了</p>
+                    <ul>
+                        <li>
+                            <img src="./images/pic-4.png" alt="">
+                           <span>广州：4250</span>
+                        </li>
+                        <li>
+                            <img src="./images/pic-5.png" alt="">
+                            <span>深圳：3545</span>
+                        </li>
+                        <li>
+                            <img src="./images/pic-5.png" alt="">
+                            <span>浙江：3545</span>
+                        </li>
+                        <li>
+                            <img src="./images/pic-6.png" alt="">
+                            <span>上海：3545</span>
+                        </li>
+                        <li>
+                            <img src="./images/pic-7.png" alt="">
+                            <span>宁波：3545</span>
+                        </li>
+                        <li>
+                            <img src="./images/pic-5.png" alt="">
+                            <span>福建：3545</span>
+                        </li>
+                        <li>
+                            <img src="./images/pic-7.png" alt="">
+                            <span>北京：3545</span>
+                        </li>
+                        <li>
+                            <img src="./images/pic-5.png" alt="">
+                            <span>杭州：3545</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="left-bottom rightTop border">
+                <div class="title">商品排行</div>
+                <div class="bottom-b">
+                    <!--<div id="chart3" class="allnav"></div>-->
+                    <div class="gun">
+                        <span>排名</span>
+                        <span>商品名称</span>
+                        <span>销量</span>
+                        <span>同比</span>
+                    </div>
+                    <div id="FontScroll" class="myscroll">
+                        <ul>
+                            <li>
+                                <div class="fontInner clearfix">
+                                    <span>
+                                        <b>1</b>
+                                    </span>
+                                    <span>女装</span>
+                                    <span>4562万</span>
+                                    <span>23%</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fontInner clearfix">
+                                    <span>
+                                        <b>2</b>
+                                    </span>
+                                    <span>手机配件</span>
+                                    <span>4125万</span>
+                                    <span>21%</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fontInner clearfix">
+                                    <span>
+                                        <b>3</b>
+                                    </span>
+                                    <span>手机</span>
+                                    <span>4100万</span>
+                                    <span>19%</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fontInner clearfix">
+                                    <span>
+                                        <b>4</b>
+                                    </span>
+                                    <span>流行饰品</span>
+                                    <span>3989万</span>
+                                    <span>17%</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fontInner clearfix">
+                                    <span>
+                                        <b>5</b>
+                                    </span>
+                                    <span>男装</span>
+                                    <span>3956万</span>
+                                    <span>16%</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fontInner clearfix">
+                                    <span>
+                                        <b>6</b>
+                                    </span>
+                                    <span>真人发</span>
+                                    <span>3823万</span>
+                                    <span>12%</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fontInner clearfix">
+                                    <span>
+                                        <b>7</b>
+                                    </span>
+                                    <span>手表</span>
+                                    <span>3723万</span>
+                                    <span>10%</span>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="center-cen fl">
+            <div class="cen-top rightTop border">
+                <div class="top-title rightTop border">
+                    <ul>
+                        <li>
+                            <p>数量统计</p>
+                            <span>365</span>
+                            <!--<span>6</span>
+                            <span>5</span>-->
+                            <b>个</b>
+                            <div class="datashuji">
+                                <span>较昨日增加1200人</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>同比上升</p>
+                            <span>1312</span>
+                            <!--<span>3</span>-->
+                            <b>人</b>
+                            <div class="dataright">
+                                <span>较昨日增加1200人</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--<span>4561332件</span>-->
+                </div>
+
+                <div class="top-bottom rightTop border">
+                    <!--<div id="map" class="allnav"></div>-->
+                    <span>4561332件</span>
+                </div>
+
+
+            </div>
+            <div class="cen-bottom rightTop border">
+                <div class="title">地区销售数据</div>
+                <div class="bottom-b">
+                    <div id="chart_1" class="allnav"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+<script src="https://www.jq22.com/jquery/echarts-4.2.1.min.js"></script>
+<script src="js/china.js"></script>
+<script src="js/index2.js"></script>
+
+</body>
+</html>

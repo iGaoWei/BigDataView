@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>物流信息</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/index3.css">
+    <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function () {
+            var whei = $(window).width()
+            $("html").css({ fontSize: whei / 22 });
+            $(window).resize(function () {
+                var whei = $(window).width();
+                $("html").css({ fontSize: whei / 22 })
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div class="main">
+    <div class="header">
+        <div class="header-left fl" id="time"></div>
+        <div class="header-center fl">
+            <div class="header-title">
+                物流信息展示系统
+            </div>
+            <div class="header-img"></div>
+        </div>
+        <div class="header-right fl"></div>
+        <div class="header-bottom fl"></div>
+    </div>
+
+    <div class="center">
+        <div class="center-left fl">
+            <div class="center-left-cen rightTop border" >
+                <div class="center-left-cen-left fl">
+                    <div class="center-left-cen-top1 fl rightTop border">
+                        <div class="allnav" id="chart_7" style="height: 2.4rem;"></div>
+                    </div>
+                    <div class="center-left-cen-top2 fl rightTop border">
+                        <div class="allnav" id="Gender" style="height: 2.4rem;"></div>
+                    </div>
+                </div>
+                <div class="center-left-cen-right fr">
+                    <div class="allnav" id="china"></div>
+                </div>
+
+                <div class="center-left-zhong rightTop border fl">
+                    <div class="center-left-zhong-left fl">
+                        <div class="allnav" id="char_1" style="height: 2.4rem;"></div>
+                    </div>
+                    <div class="center-left-zhong-right fr">
+                        <div class="allnav" id="char_2" style="height: 2.2rem;"></div>
+                    </div>
+                </div>
+                <div class="center-left-bottm rightTop border fr">
+                    <div class="allnav" id="chart_5" style="height: 2.4rem;"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="center-right fr">
+            <div class="center-right-top rightTop border">
+                <div class="allnav" id="chart_3" style="height: 3rem;"></div>
+            </div>
+            <div class="center-right-cen-left fl rightTop border">
+                <div class="allnav" id="chart_6" style="height: 3rem;"></div>
+            </div>
+            <div class="center-right-cen-right fr rightTop border">
+                <div class="allnav" id="chart_8" style="height: 3.2rem;"></div>
+            </div>
+            <div class="center-right-bottom rightTop border fl">
+                <div class="allnav" id="maps" style="height: 3.35rem;"></div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+</div>
+
+
+<script src="https://www.jq22.com/jquery/echarts-4.2.1.min.js"></script>
+<script src="js/china.js"></script>
+<script src="js/index3.js"></script>
+<script src="js/newmap.js"></script>
+
+<script>
+
+</script>
+</body>
+</html>

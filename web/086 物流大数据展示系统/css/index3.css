@@ -1,0 +1,141 @@
+/*
+头部*/
+.header{
+    width: 100%;
+    height: 1.5rem;
+    /*background: red;*/
+
+}
+.header .header-left{
+    width: 25%;
+    height: 1.05rem;
+    color: white;
+    /*    border: 1px solid green;*/
+    text-align: center;
+    line-height: 1.05rem;
+}
+.header .header-center{
+    width: 50%;
+    height: 1.2rem;
+    /*border: 1px solid red;*/
+    /*    background: url("../images/head.gif") no-repeat;
+        background-size: 100% 100%;*/
+    position: relative;
+}
+.header .header-center .header-title{
+    text-align: center;
+    color: #ffffff;
+    font-size: .4rem;
+    text-shadow: 0 0 .3rem #00d8ff;
+    line-height: 1.05rem;
+}
+.header .header-img{
+    background: url("../images/head.gif") no-repeat center center;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: .4rem;
+}
+
+.header .header-right{
+    width: 25%;
+    height: 1.05rem;
+    /*border: 1px solid gold;*/
+}
+.header .header-bottom{
+    width: calc(100% - .4rem);
+    height: .16rem;
+    background: url("../images/header.png") no-repeat;
+    background-size: calc(100% - .2rem) 100%;
+    padding: 0 .2rem;
+    margin-left: .3rem;
+
+}
+
+.center{
+    padding: .1rem .2rem .1rem .2rem;
+}
+
+.center .center-left{
+    width: calc(45% - .1rem);
+    padding: .1rem;
+}
+.center .center-left .center-left-cen{
+    width: 100%;
+    height: 10.4rem;
+}
+.center-left-cen-left{
+    width: calc(35% - .2rem);
+    height: 5rem;
+/*    border: 1px solid red;*/
+}
+.center-left-cen-right{
+    width: calc(65% - .2rem);
+    height: 4.8rem;
+/*    border: 1px solid red;*/
+    margin: .2rem .2rem 0 .2rem;
+}
+.center-left-cen-top1{
+    width: calc(100% - .2rem);
+    height: 2.3rem;
+    margin: .2rem;
+}
+.center-left-cen-top2{
+    width: calc(100% - .2rem);
+    height: 2.3rem;
+    margin: 0 0 0 .2rem;
+}
+
+
+.center-left-zhong{
+    width: calc(100% - .4rem);
+    height: 2.4rem;
+    margin: .2rem;
+}
+.center-left-zhong-left{
+    width: 40%;
+    height: 100%;
+    /*border: 1px solid red;*/
+    padding: 10px;
+}
+.center-left-zhong-right{
+    width: 60%;
+    height: 100%;
+    /*border: 1px solid red;*/
+    padding: 10px 15px;
+}
+
+
+.center-left-bottm{
+    width: calc(100% - .4rem);
+    height: 2.4rem;
+    margin: 0 .2rem .2rem .2rem;
+}
+
+
+
+/*右边*/
+.center .center-right{
+    width: 55%;
+    padding: .1rem;
+}
+.center .center-right .center-right-top{
+    width: 100%;
+    height: 3rem;
+    margin-bottom: .4rem;
+}
+.center-right-cen-left{
+    width: calc(65% - .4rem);
+    height: 3rem;
+    padding: 0.1rem;
+}
+.center-right-cen-right{
+    width: 35%;
+    height: 3.2rem;
+}
+.center-right-bottom{
+    width: 100%;
+    height: 3.4rem;
+    margin-top: .4rem;
+}
