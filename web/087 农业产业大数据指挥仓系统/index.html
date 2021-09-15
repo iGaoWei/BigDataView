@@ -1,0 +1,745 @@
+<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>农业监测指挥舱</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/new_index.css">
+    <style>
+        /* ---public---- */
+        .centerBox {
+            width: 75%;
+            margin-right: 15px;
+            background: transparent;
+        }
+
+        .boxFont {
+            font-size: 1.2vw;
+        }
+
+        .centerMainBox1 {
+            width: 100%;
+            height: 60.5%;
+        }
+
+        .centerMainBox2 {
+            width: 100%;
+            height: 38%;
+            position: relative;
+            margin-top: 15px;
+        }
+
+        .centerMainBox2 .first_border {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .boxTitle2 {
+            width: 100%;
+            height: 10%;
+            font-size: .6vw;
+            text-align: center;
+            line-height: 10%;
+            margin-top: 1vw;
+            color: #0efcff;
+        }
+
+        .contList {
+            position: relative;
+            width: 70%;
+            height: 8vw;
+            margin: 1vw auto 0;
+
+        }
+
+        .content1 li {
+            display: none;
+        }
+
+        .baseBox {
+            width: 100%;
+            border: none;
+            background: none;
+        }
+
+        .boxTitle {
+            font-size: .8vw;
+            width: 38%;
+            margin-top: 1vw;
+            text-align: center;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .baseBoxLeft {
+            width: 30%;
+            height: 95%;
+            position: relative;
+        }
+
+        .baseBoxRight {
+            width: 68%;
+            height: 100%;
+        }
+
+        .baseBoxLeft .first_border {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+
+        .baseBox1,
+        .baseBox2,
+        .baseBox3 {
+            position: relative;
+        }
+
+        .baseBox1 .hardware,
+        .baseBox2 img,
+        .baseBox3 img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .csbaseBox1 {
+            position: relative;
+            z-index: 999;
+        }
+
+        #canvas {
+            display: block;
+            margin: 0 auto;
+            width: 10vw;
+            height: 5vw;
+        }
+
+        .progress {
+            position: relative;
+        }
+
+        .progress img {
+            width: 12.5vw;
+            height: 2vw;
+            position: absolute;
+            top: .4vw;
+            right: -.2vw;
+        }
+
+        .progress .disease {
+            position: absolute;
+            top: .7vw;
+            left: .5vw;
+            color: #fff;
+            font-size: .8vw;
+        }
+
+        .progress .similar {
+            position: absolute;
+            top: .8vw;
+            left: 3vw;
+            color: #0efcff;
+            font-size: .5vw;
+        }
+
+        /* 返回图标 */
+        .navLeft {
+            position: absolute;
+            top: 5%;
+            left: 35%;
+            width: 3.5%;
+            height: 8%;
+            z-index: 999;
+        }
+
+        .navLeft>img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="main">
+        <div class="nav">XXXXX产业大数据指挥舱</div>
+        <div class="nav_btn">
+            <div class="btn_left">
+                <a href="https://gitee.com/iGaoWei/big-data-view">
+                    <div class="btn_list listActive">主页</div>
+                </a>
+                <a href="https://gitee.com/iGaoWei/big-data-view">
+                    <div class="btn_list">土地流转</div>
+                </a>
+                <a href="https://gitee.com/iGaoWei/big-data-view">
+                    <div class="btn_list">空天地</div>
+                </a>
+                <a href="https://gitee.com/iGaoWei/big-data-view">
+                    <div class="btn_list">生长监测</div>
+                </a>
+            </div>
+            <div class="btn_right">
+                <a href="https://gitee.com/iGaoWei/big-data-view">
+                    <div class="btn_list">生产加工</div>
+                </a>
+                <a href="https://gitee.com/iGaoWei/big-data-view">
+                    <div class="btn_list">仓储管理</div>
+                </a>
+                <a href="https://gitee.com/iGaoWei/big-data-view">
+                    <div class="btn_list">流通销售</div>
+                </a>
+                <a href="https://gitee.com/iGaoWei/big-data-view">
+                    <div class="btn_list">数据中心</div>
+                </a>
+            </div>
+        </div>
+        <div class="content">
+
+            <div class="centerBox">
+                <div class="baseBox centerMainBox1" style="height:70%">
+                    <div class="baseBoxLeft left">
+                        <div class="boxTitle">茶叶病虫害预警</div>
+                        <img src="img/left.png" class="first_border" alt="">
+                        <div class="firstBox">
+                            <div class="pic">
+                                <img src="img/demo_pic.png" class="first_top1" alt="">
+                                <img src="img/data_pic.png" class="first_top2" alt="">
+                            </div>
+                            <div class="picText">
+                                <span>样本图片</span>
+                                <span class="text_second">茶叶病虫害大数据库</span>
+                            </div>
+                            <div class="voice_animation">
+                                <canvas id="canvas">Your browser can not support canvas</canvas>
+                            </div>
+                            <div class="progress">
+                                <span class="disease">茶饼病</span>
+                                <!-- <i class="counter-value">85</i>% -->
+                                <span class="similar">相似度:85%</span>
+                                <img src="img/progress.gif" alt="">
+                            </div>
+                            <div class="about_illness">
+                                <div class="symptom">
+                                    <div class="symptom_title">病症症状</div>
+                                    <div class="symptom_content">本模板收集于网络，无需任何付费操作
+                                    </div>
+                                </div>
+                                <div class="prevent">
+                                    <div class="prevent_title">防治方法</div>
+                                    <div class="prevent_content">
+                                        本模板收集于网络，无需任何付费操作，Gitee免费下载使用
+                                        如需获取更多模板，可关注公众号【折腾不止的追梦人】
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="baseBoxRight right">
+
+                        <a class="navLeft" href="https://gitee.com/iGaoWei/big-data-view"><img style="" src="img/fanhui.png" alt=""></a>
+
+                        <!-- 地图 -->
+                        <div class="maps">
+                            <img class="land_level" src="img/landLevel.png" alt="">
+                            <img class="wifi_gif" src="img/wifi.gif">
+                            <img class="sun_pic" src="img/sun.png" alt="">
+                            <img class="wrj_pic" src="img/wrj.png" alt="">
+                            <img class="wind_gif" src="img/wind_shape.gif" alt="">
+                            <img class="plant_pic display_box" src="img/plant.png" alt="">
+                            <div class="windows display_box">
+                                <ul>
+                                    <li>土地信息</li>
+                                    <li>本模板收集于网络</li>
+                                    <li>无需任何付费操作</li>
+                                    <li>如需获取更多模板：</li>
+                                    <li>关注公众号【折腾不止的追梦人】</li>
+                                    <li>即可免费获取</li>
+                                </ul>
+                            </div>
+                            <div class="window_two display_box">
+                                <ul>
+                                    <li>刘新武</li>
+                                    <li>年龄：41岁</li>
+                                    <li>农事活动：6次</li>
+                                    <li>信用等级：良好</li>
+                                </ul>
+                            </div>
+                            <div class="window_three display_box">
+                                <ul>
+                                    <li>土壤数据</li>
+                                    <li>湿度:63%</li>
+                                    <li>酸碱度：PH4.8</li>
+                                    <li>肥沃度：56%</li>
+                                </ul>
+                            </div>
+                            <div class="window_four display_box">
+                                <ul>
+                                    <li>气象信息</li>
+                                    <li>温度:19℃</li>
+                                    <li>湿度：52%</li>
+                                    <li>风速：2m/s</li>
+                                    <li>降水：0mm</li>
+                                </ul>
+                            </div>
+                            <div class="window_five display_box">
+                                <ul>
+                                    <li>植被信息</li>
+                                    <li>品种名称:云台山大叶良种</li>
+                                    <li>植株数量：76000株</li>
+                                    <li>所属生长周期：幼年期</li>
+                                    <li>长势情况：良好</li>
+                                </ul>
+                            </div>
+                            <div class="window_six display_box">
+                                <ul>
+                                    <li>设备信息</li>
+                                    <li>设备名称:无人机</li>
+                                    <li>所属人：安化云台八角有限公司</li>
+                                    <li>持续工作：3h</li>
+                                    <li>连接状态：正常</li>
+                                </ul>
+                            </div>
+                            <a href="https://gitee.com/iGaoWei/big-data-view">
+                                <div class="peasant"></div>
+                            </a>
+                            <div class="land_box1"></div>
+                            <div class="land_box2"></div>
+                            <div class="land_box3"></div>
+                            <div class="land_box4"></div>
+                            <div class="plant"></div>
+                            <div class="soil_data"></div>
+                            <div class="weather_info"></div>
+                            <!-- <div class="plant_info"></div> -->
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 左侧下部 -->
+                <div class="baseBox centerMainBox2" style="height:30%;">
+                    <img src="img/down2.png" class="first_border" alt="">
+                    <div class="boxTitle2" style="width:26%;">统计数据</div>
+                    <div class="boxTitle2" style="width:26%;margin-left:22vw;margin-top: -1.4vw;">生长数据</div>
+                    <div class="boxTitle2" style="width:26%;margin-left:53vw;margin-top: -1.4vw;">气象数据</div>
+                    <div class="leftBottom">
+                        <div class="land_data">
+                            <p>10cm 温度30湿度67</p>
+                            <p>20cm 温度30湿度67</p>
+                            <p>30cm 温度30湿度67</p>
+                        </div>
+
+                    </div>
+                    <div class="right_box">
+                        <div class="grow_data">
+                            <img src="img/tree_pic.png" alt="">
+                            <p>生长周期：8周</p>
+                            <p>黏土</p>
+                            <p>10cm茶土：22.88</p>
+                            <span>未来5天降水量：0mm</span>
+                            <i></i>
+                            <div class="specialistSuggest">
+                                <div>专家建议：</div>
+                                <div>本模板收集于网络，无需任何付费操作，Gitee免费下载使用</div>
+                            </div>
+                            <div class="fertilizationSuggest">
+                                <div>该生长周期施肥建议：</div>
+                                <div>氮肥含量：1.3-1.5kg</div>
+                                <div>钾肥含量：1.5-1.7kg</div>
+                            </div>
+                        </div>
+                        <div class="weather_data">
+                            <div class="weather_text text_one">
+                                <span>温度：19℃</span>
+                                <span>湿度：52%</span>
+                                <span>风向：东南风</span>
+                                <span>风速：2m/s</span>
+                            </div>
+                            <div class="weather_text text_two">
+                                <span>降雨量：0mm</span>
+                                <span>蒸发量：0.326mm/h</span>
+                                <span>气压：0.326MPa</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="leftBox right" style="width:22%">
+                <div class="baseBox baseBox1" style="margin-bottom:15px;height:40%">
+                    <img src="img/right.png" class="hardware" alt="">
+                    <div class="csbaseBox1">
+                        <div class="boxTitle">硬件设备展示</div>
+                        <ul class="boxLis">
+                            <li class="left active">农业无人机</li>
+                            <li class="left">田间控制器</li>
+                            <li class="left">监控摄像头</li>
+                            <li class="left">土壤检测仪</li>
+                        </ul>
+                        <div class="content1">
+                            <ul>
+                                <li style="display: block;" class="contList">
+                                    <!-- 四个角描边 stat -->
+                                    <div class="leftTopLine1"></div>
+                                    <div class="leftTopLine2"></div>
+                                    <div class="rightTopLine1"></div>
+                                    <div class="rightTopLine2"></div>
+                                    <div class="leftBottomLine1"></div>
+                                    <div class="leftBottomLine2"></div>
+                                    <div class="rightBottomLine1"></div>
+                                    <div class="rightBottomLine2"></div>
+
+                                    <div class="equipment_pic">
+                                        <img class="first" src="img/uva.png" alt="">
+                                        <img class="second" src="img/control.png" alt="">
+                                        <img class="third" src="img/camera.png" alt="">
+                                        <img class="fourth" src="img/detector.png" alt="">
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        <div class="liSpan">介绍</div>
+                        <p class="liP">
+                            本模板收集于网络，无需任何付费操作，Gitee免费下载使用</p>
+                    </div>
+                </div>
+                <div class="baseBox baseBox2" style="margin-bottom:15px;height:29.5%">
+                    <img src="img/right2.png" alt="">
+                    <!-- 四个角描边 end -->
+                    <div class="boxTitle2">灌溉数据</div>
+                    <div class="irrigate_data">
+                        <div class="irrigate_top">
+                            <div class="centerList">
+                                <div class="centerListFont">累计灌溉水量（m2）</div>
+                                <div class="centerListNum">
+                                    <span class="">23678</span>
+                                </div>
+                            </div>
+                            <div class="centerList">
+                                <div class="centerListFont">灌溉压力（MPa）</div>
+                                <div class="centerListNum">
+                                    <span class="">0.29</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="irrigate_bottom">
+                            <div class="every_line">
+                                <span>当前灌溉流量（m²/h）</span>
+                                <i class="">0.78</i>
+                            </div>
+                            <div class="every_line">
+                                <span>当前灌溉阀门数量</span>
+
+                                <i class="counter-value">49</i>
+                                <i class="counter-value">2</i>
+                            </div>
+                            <div class="every_line">
+                                <span>茶园水池液位</span>
+                                <i>2.30</i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="baseBox baseBox3" style="height:28%">
+                    <img src="img/right3.png" alt="">
+                    <!-- 四个角描边 end -->
+                    <div class="boxTitle2">数据日志</div>
+                    <!-- <div class="data_day" id="demo" > -->
+                    <div class="data_day" id="demo" style="width:100%;overflow:hidden;height: 75%;">
+                        <table style="text-align: left;margin-left:10%;height:80%;">
+                            <tbody id="demo1">
+                                <!-- <tr class="head">
+                                    <td>编号</td>
+                                    <td>数据类型</td>
+                                    <td>数据值</td>
+                                    <td>时间</td>
+                                </tr> -->
+                                <tr>
+                                    <td>u78</td>
+                                    <td>传感器数据</td>
+                                    <td>163.28</td>
+                                    <td>2019年10月26日</td>
+                                </tr>
+
+                                <tr>
+                                    <td>006</td>
+                                    <td>无人机数据</td>
+                                    <td>130.67</td>
+                                    <td>2019年10月25日</td>
+                                </tr>
+
+                                <tr>
+                                    <td>s07</td>
+                                    <td>控制器数据</td>
+                                    <td>163.28</td>
+                                    <td>2019年10月25日</td>
+                                </tr>
+                                <tr>
+                                    <td>872</td>
+                                    <td>监视器数据</td>
+                                    <td>130.67</td>
+                                    <td>2019年10月24日</td>
+                                </tr>
+                                <tr>
+                                    <td>d59</td>
+                                    <td>土壤仪数据</td>
+                                    <td>163.28</td>
+                                    <td>2019年10月23日</td>
+                                </tr>
+
+                                <tr>
+                                    <td>299</td>
+                                    <td>灌溉阀数据</td>
+                                    <td>130.67</td>
+                                    <td>2019年10月23日</td>
+                                </tr>
+                                <tr>
+                                    <td>256</td>
+                                    <td>传感器数据</td>
+                                    <td>163.28</td>
+                                    <td>2019年10月22日</td>
+                                </tr>
+                                <tr>
+                                    <td>026</td>
+                                    <td>无人机数据</td>
+                                    <td>130.67</td>
+                                    <td>2019年10月20日</td>
+                                </tr>
+                                <tr>
+                                    <td>037</td>
+                                    <td>传感器数据</td>
+                                    <td>163.28</td>
+                                    <td>2019年10月22日</td>
+                                </tr>
+                            </tbody>
+                            <tbody id="demo2" style="text-align: left;margin-left:10%"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/dataScoll.js"></script>
+    <!-- 文字滚动 -->
+    <script language="javascript" type="text/javascript">
+        var demo = document.getElementById("demo");
+        var demo1 = document.getElementById("demo1");
+        var demo2 = document.getElementById("demo2");
+        var speed = 15; //滚动速度值，值越大速度越慢
+        demo2.innerHTML = demo1.innerHTML //克隆demo2为demo1
+        function Marquee() {
+            if (demo2.offsetTop - demo.scrollTop <= 45) {
+                console.log('77777') //当滚动至demo1与demo2交界时
+                demo.scrollTop -= demo1.offsetHeight //demo跳到最顶端
+            } else {
+                console.log('88888')
+                demo.scrollTop++
+            }
+        }
+        var MyMar = setInterval(Marquee, speed); //设置定时器
+        demo.onmouseover = function() {
+            clearInterval(MyMar)
+        } //鼠标经过时清除定时器达到滚动停止的目的
+        demo.onmouseout = function() {
+            MyMar = setInterval(Marquee, speed)
+        } //鼠标移开时重设定时器
+    </script>
+    <!-- <script type="text/javascript" src="js/digitalScroll.js"></script> -->
+    <script>
+        var doublePI = Math.PI * 2;
+        var canvas;
+        var ctx;
+
+        //画布的高度的一半
+        var halfCanvasHeight = 100;
+        //水平边距
+        var horizontalMargin = 150;
+
+        //衰减系数(越大, 边缘衰减的就越多, 震动宽度相应也越窄)
+        var attenuationCoefficient = 2;
+        //半波长个数-1
+        var halfWaveCount = 20;
+        //振幅是画布高度的一般的百分比[0,1]
+        var amplitudePercentage = 0.3;
+        //每帧增加的弧度[0,2PI](作用于sin曲线, 正值相当于原点右移, 曲线左移)
+        var radianStep = 0.4;
+
+        //当前弧度的偏移
+        var radianOffset = 0;
+        //画布宽度
+        var canvasWidth;
+
+        function init() {
+            canvas = document.getElementById("canvas");
+            ctx = canvas.getContext("2d");
+            window.addEventListener("resize", onResize);
+
+            canvas.height = halfCanvasHeight * 2;
+            onResize();
+            loop();
+        }
+
+        function onResize() {
+            //元素的大小不能加单位, 单位默认就是像素, 而style中的长度要加单位
+            canvasWidth = canvas.width = window.innerWidth - horizontalMargin;
+        }
+
+        //设K=attenuationCoefficient, 计算信号衰减 (4K/(4K+x^4))^2K<=1 (x belong [-K,K])
+        function calcAttenuation(x) {
+            return Math.pow(4 * attenuationCoefficient / (4 * attenuationCoefficient + Math.pow(x, 4)), 2 * attenuationCoefficient);
+        }
+
+        //heightPercentage为振幅的显示比例
+        function drawAcousticWave(heightPercentage, alpha, lineWidth) {
+            ctx.strokeStyle = "white";
+            ctx.globalAlpha = alpha;
+            ctx.lineWidth = lineWidth || 1;
+            ctx.beginPath();
+            ctx.moveTo(0, halfCanvasHeight);
+            var x, y;
+            for (var i = -attenuationCoefficient; i <= attenuationCoefficient; i += 0.01) {
+                //i是当前位置相对于整个长度的比率( x=width*(i+K)/(2*K))
+                x = canvasWidth * (i + attenuationCoefficient) / (2 * attenuationCoefficient);
+                //加offset相当于把sin曲线向右平移
+                y = halfCanvasHeight + halfCanvasHeight * amplitudePercentage * calcAttenuation(i) * heightPercentage * Math.sin(halfWaveCount * i + radianOffset);
+                ctx.lineTo(x, y);
+            }
+            ctx.stroke();
+        }
+
+        function loop() {
+            radianOffset = (radianOffset + radianStep) % doublePI;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawAcousticWave(1, 1, 2);
+            for (var i = 2; i < 4; i++) {
+                var reciprocal = 1 / i;
+                drawAcousticWave(reciprocal, reciprocal / 4);
+                drawAcousticWave(-reciprocal, reciprocal / 4);
+            }
+            requestAnimationFrame(loop);
+        }
+
+        init();
+        setInterval(function() {
+            numInit();
+        }, 6500)
+
+        // mark center display
+        $('.peasant').mouseenter(function() {
+            console.log(111)
+            console.log($('.window_two'))
+            $('.window_two').removeClass('display_box')
+        })
+        $('.peasant').mouseout(function() {
+            $('.window_two').addClass('display_box')
+        })
+
+
+
+        $('.land_box1').mouseenter(function() {
+            console.log(15556)
+            $('.windows').removeClass('display_box')
+        })
+        $('.land_box2').mouseenter(function() {
+            console.log(15556)
+            $('.windows').removeClass('display_box')
+        })
+        $('.land_box3').mouseenter(function() {
+            console.log(15556)
+            $('.windows').removeClass('display_box')
+        })
+        $('.land_box4').mouseenter(function() {
+            console.log(15556)
+            $('.windows').removeClass('display_box')
+        })
+
+        $('.land_box1').mouseout(function() {
+            $('.windows').addClass('display_box')
+        })
+        $('.land_box2').mouseout(function() {
+            $('.windows').addClass('display_box')
+        })
+        $('.land_box3').mouseout(function() {
+            $('.windows').addClass('display_box')
+        })
+        $('.land_box4').mouseout(function() {
+            $('.windows').addClass('display_box')
+        })
+
+
+        $('.plant').mouseenter(function() {
+            $('.plant_pic').removeClass('display_box')
+            $('.window_five').removeClass('display_box')
+        })
+        $('.plant').mouseout(function() {
+            $('.plant_pic').addClass('display_box')
+            $('.window_five').addClass('display_box')
+        })
+
+        $('.soil_data').mouseenter(function() {
+            $('.window_three').removeClass('display_box')
+        })
+        $('.soil_data').mouseout(function() {
+            $('.window_three').addClass('display_box')
+        })
+
+        $('.weather_info').mouseenter(function() {
+            $('.window_four').removeClass('display_box')
+        })
+        $('.weather_info').mouseout(function() {
+            $('.window_four').addClass('display_box')
+        })
+
+        $('.wrj_pic').mouseenter(function() {
+            $('.window_six').removeClass('display_box')
+        })
+        $('.wrj_pic').mouseout(function() {
+            $('.window_six').addClass('display_box')
+        })
+
+
+
+        $('.boxLis').on('mouseenter', 'li', function() {
+
+            var that = $(this);
+
+            that.addClass('active').siblings().removeClass('active');
+
+            $('.equipment_pic img').hide();
+
+            $('.equipment_pic img').eq(that.index()).show()
+
+
+        })
+
+        setInterval(function() {
+            numInit();
+            numInit1();
+            numInit2();
+        }, 6000)
+    </script>
+
+</body>
+
+</html>
