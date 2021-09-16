@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>﻿
+    <link href="css/Datacages_Homeindex.css" rel="stylesheet" type="text/css">
+    <link href="css/ProgressBarWars.css" rel="stylesheet">
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .loadEffect {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            margin: 0 auto;
+            top: 26%;
+        }
+
+        .loadEffect span {
+            animation: load 1.04s ease infinite;
+            display: inline-block;
+            width: 30px;
+            height: 10px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            background: lightgreen;
+            position: absolute;
+        }
+
+        .loadEffect span:nth-child(1) {
+            left: 0;
+            top: 50%;
+            margin-top: -5px;
+            animation-delay: 0.13s;
+        }
+
+        .loadEffect span:nth-child(2) {
+            left: 10px;
+            top: 20px;
+            transform: rotate(45deg);
+            animation-delay: 0.26s;
+        }
+
+        .loadEffect span:nth-child(3) {
+            left: 50%;
+            top: 10px;
+            margin-left: -15px;
+            transform: rotate(90deg);
+            animation-delay: 0.39s;
+        }
+
+        .loadEffect span:nth-child(4) {
+            top: 20px;
+            right: 10px;
+            transform: rotate(135deg);
+            animation-delay: 0.52s;
+        }
+
+        .loadEffect span:nth-child(5) {
+            right: 0;
+            top: 50%;
+            margin-top: -5px;
+            transform: rotate(180deg);
+            animation-delay: 0.65s;
+        }
+
+        .loadEffect span:nth-child(6) {
+            right: 10px;
+            bottom: 20px;
+            transform: rotate(225deg);
+            animation-delay: 0.78s;
+        }
+
+        .loadEffect span:nth-child(7) {
+            bottom: 10px;
+            left: 50%;
+            margin-left: -15px;
+            transform: rotate(270deg);
+            animation-delay: 0.91s;
+        }
+
+        .loadEffect span:nth-child(8) {
+            bottom: 20px;
+            left: 10px;
+            transform: rotate(315deg);
+            animation-delay: 1.04s;
+        }
+
+        @keyframes load {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.2;
+            }
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #loading {
+            background-color: #181e20;
+            opacity: 0.5;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 999;
+        }
+    </style>
+    <script src="js/jquery.js"></script>
+    <script src="js/echarts-all.js"></script>
+    <script src="js/ProgressBarWars.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .progress {
+            margin-top: 30px;
+        }
+
+        .down_span {
+            color: #dfdede;
+            font-size: 12px;
+            font-weight: lighter;
+        }
+
+        h3,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .scrollbox {
+            width: 268px;
+            margin: 0 auto;
+        }
+
+        #scrollDiv {
+            width: 268px;
+            height: 280px;
+            overflow: hidden;
+        }
+
+        /*这里的高度和超出隐藏是必须的*/
+        #scrollDiv ul li {
+            height: 66px;
+            width: 259px;
+            ;
+            background-color: #07325e;
+            overflow: hidden;
+            margin-bottom: 4px;
+            color: #dfdede;
+            font-size: 14px;
+            padding: 0 9px 0 9px;
+            line-height: 30px;
+            position: relative;
+        }
+
+        #scrollDiv ul li span {
+            position: absolute;
+            bottom: 5px;
+            right: 16px;
+            display: block;
+            width: 68px;
+            height: 18px;
+            text-align: center;
+            color: #081e49;
+            background-color: #69c200;
+            line-height: 18px;
+        }
+
+        .sent-div {
+            width: 98%;
+            height: 98%;
+            margin: 0 auto;
+        }
+    </style>
+    <title>HTML大数据综合分析平台模板</title>
+    <div id="loading">
+        <div class="loadEffect"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    </div>
+    <!--标题栏-->
+    <div class="Hometitlebox"><a style=" color: #00e4ff;" href="https://gitee.com/iGaoWei/big-data-view">HTML大数据综合分析平台模板</a></div>
+    <!--动效显示-->
+    <div class="flasheffectoutbox">
+        <div style="width: 1000px; height: 500px; position: relative">
+            <div class="line2 line"></div>
+            <div class="line3 line"></div>
+            <div class="line4 line"></div>
+            <div class="line5 line"></div>
+            <div class="line6 line"></div>
+            <!--主动效-->
+            <div class="maineffectoutbox circleeffectclass"><a href="https://gitee.com/iGaoWei/big-data-view"><img class="effectposition maindataeffect" src="img/maindataeffect.png">
+                    <div class="effectposition acrossremindeffectout" style=" width: 76px; height: 76px; margin: 9px;">
+                        <div class="acrossremindeffectin" style="width: 68px; height: 68px; margin: 4px;"></div>
+                    </div><img class="effectposition maindataspecialeffect" src="img/maindataspecialeffect.png"><img class="effectposition acrossremindeffecindex" src="img/maindataicon.png"><span class="stagetitle">DreamCodersx数据中心</span>
+                </a></div>
+            <!--卫星动效-->
+            <div class="circleeffectclass aroundfunctioneffect" style="left: 254px;top: 135px;"><img class="effectposition arounddataeffect02" src="img/aroundeffect.png">
+                <div class="effectposition acrossremindeffectout acrossremindeffectoutard">
+                    <div class="acrossremindeffectin acrossremindeffectinard"></div>
+                </div><img class="effectposition acrossremindeffecindex" src="img/xingzhengshenpi.png"><span class="stagetitle stagearoundtitle">DreamCoders系统一</span>
+            </div>
+            <div class="circleeffectclass aroundfunctioneffect" style="left: 190px;bottom: 89px;"><img class="effectposition arounddataeffect01" src="img/aroundeffect.png">
+                <div class="effectposition acrossremindeffectout acrossremindeffectoutard">
+                    <div class="acrossremindeffectin acrossremindeffectinard"></div>
+                </div><img class="effectposition acrossremindeffecindex" src="img/baixingpaiAPP.png"><span class="stagetitle stagearoundtitle">DreamCoders系统二</span>
+            </div>
+            <div class="circleeffectclass aroundfunctioneffect" style="right: 405px;bottom: 53px;"><img class="effectposition arounddataeffect02" src="img/aroundeffect.png">
+                <div class="effectposition acrossremindeffectout acrossremindeffectoutard">
+                    <div class="acrossremindeffectin acrossremindeffectinard"></div>
+                </div><img class="effectposition acrossremindeffecindex" src="img/zhatuyunshu.png"><span class="stagetitle stagearoundtitle">DreamCoders系统三</span>
+            </div>
+            <div class="circleeffectclass aroundfunctioneffect" style="right: 243px;bottom: 165px;"><img class="effectposition arounddataeffect01" src="img/aroundeffect.png">
+                <div class="effectposition acrossremindeffectout acrossremindeffectoutard">
+                    <div class="acrossremindeffectin acrossremindeffectinard"></div>
+                </div><img class="effectposition acrossremindeffecindex" src="img/12319rexian.png"><span class="stagetitle stagearoundtitle">DreamCoders系统四</span>
+            </div>
+            <div class="circleeffectclass aroundfunctioneffect" style="right: 294px;top: 79px;"><img class="effectposition arounddataeffect03" src="img/aroundeffect.png">
+                <div class="effectposition acrossremindeffectout acrossremindeffectoutard">
+                    <div class="acrossremindeffectin acrossremindeffectinard"></div>
+                </div><img class="effectposition acrossremindeffecindex" src="img/zonghezhifa.png"><span class="stagetitle stagearoundtitle">DreamCoders系统五</span>
+            </div>
+            <div class="circleeffectclass decarround01" style="top: 218px;left: 92px;">
+                <div class="acrossremindeffectin decarroundin01" style=" "></div>
+            </div>
+            <div class="circleeffectclass decarround01" style="top: 197px;right: 163px;">
+                <div class="acrossremindeffectin decarroundin01" style=" "></div>
+            </div>
+            <div class="circleeffectclass decarround02" style="top: 99px;right: 93px;">
+                <div class="acrossremindeffectin decarroundin02" style=" "></div>
+            </div>
+        </div>
+    </div>
+    <!--弹出功能-->
+    <div class="popuofunxtionbox">
+        <!--标题-->
+        <div class="popupboxtitlebox"><span class="popupboxtitlemsg">xxxx审批系统数据分析</span>
+            <div class="popupboxclose"></div>
+        </div>
+    </div>
+    <!--侧边浮窗-->
+    <div class="fltoutbox leftbox">
+        <div style="height: 65px; padding-top: 25px;"><span class="analyzedatashowtitle">【xxx数据传输量】</span></div>
+        <!--左上分析内容放置框-->
+        <div class="analyzemsgbgbox" style=" margin-left: 2px;">
+            <div class="sent-div" id="container1"></div>
+        </div>
+        <!--左下分析内容放置框-->
+        <div class="analyzemsgbgbox" style="margin-top: 20px; height: 350px;overflow: hidden;"><span class="analyzedatashowtitle" style="line-height: 66px;margin-left: 38px">【本日数据接入排行】</span>
+            <div class="scrollbox">
+                <div id="scrollDiv">
+                    <ul>
+                        <li> 本季度执法案件数量超过平均值20%以上。 <span style="">11/2</span></li>
+                        <li> 人员制度管理。 <span style="">11/2</span></li>
+                        <li> 案件超期率超过30%。 <span style="">11/2</span></li>
+                        <li> 本季度执法案件数量超过平均值20%以上。 <span style="">11/2</span></li>
+                        <li> 女性人数偏少，仅占总数的20%，执法过程中女性...！ <span style="">11/2</span></li>
+                        <li> 案件超期率超过30。 <span style="">11/2</span></li>
+                    </ul>
+                </div>
+                <script type="text/javascript">
+                    $("#scrollDiv").Scroll({
+                        line: 1,
+                        speed: 500,
+                        timer: 5000,
+                        up: "but_up",
+                        down: "but_down"
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="fltdecarround fltdecarroundleft fltdecarroundtop"></div>
+        <div class="fltdecarround fltdecarroundtop fltdecarroundright "></div>
+        <div class="fltdecarround fltdecarroundleft fltdecarroundbottom"></div>
+        <div class="fltdecarround fltdecarroundbottom fltdecarroundright "></div>
+    </div>
+    <div class="fltoutbox rightbox">
+        <div style="height: 36px; padding-top: 25px;"><span class="analyzedatashowtitle">【今日人员在线】</span></div>
+        <!--右上分析内容放置框-->
+        <div class="analyzemsgbgbox " style=" margin-right: 2px;padding-bottom: 29px">
+            <div style="background-color: #022542;opacity: 0.9;height: 130px">
+                <div style="padding: 10px 0 0 16px">
+                    <div class="l_left"><span style="color: #dfdede;font-size: 10px;margin-right: 10px">人员一：</span></div>
+                    <div class="progress l_left" id="vaderSize" style="width: 150px;padding: 0;margin-top: 6px;"></div>
+                    <script>
+                        var number = 30;
+                        $(function() {
+                            $("#vaderSize").ProgressBarWars({
+                                porcentaje: 30,
+                                estilo: "vader",
+                                tiempo: 5980,
+                                alto: "8px",
+                                flag: true
+                            });
+                            setInterval(function() {
+                                number = Math.floor(Math.random() * 99 + 1);
+                                $("#vaderSize").ProgressBarWars({
+                                    porcentaje: number,
+                                    estilo: "vader",
+                                    tiempo: 5980,
+                                    alto: "30px",
+                                    flag: false
+                                });
+                            }, 5000);
+                        });
+                    </script>
+                    <div class="l_left"><span style="color: #dd9809;margin-left: 4px;font-size: 10px">743人</span></div>
+                    <div class="clear"></div>
+                </div>
+                <div style="padding: 8px 0 0 16px">
+                    <div class="l_left"><span style="color: #dfdede;font-size: 10px;margin-right: 10px">人员二：</span></div>
+                    <div class="progress l_left" id="vaderSize1" style="width: 150px;margin-top: 6px;"></div>
+                    <script>
+                        var number = 90;
+                        $(function() {
+                            $("#vaderSize1").ProgressBarWars1({
+                                porcentaje: 30,
+                                estilo: "vader1",
+                                tiempo: 5980,
+                                alto: "8px",
+                                flag: true
+                            });
+                            setInterval(function() {
+                                number = Math.floor(Math.random() * 99 + 1);
+                                $("#vaderSize1").ProgressBarWars1({
+                                    porcentaje: number,
+                                    estilo: "vader1",
+                                    tiempo: 5980,
+                                    alto: "30px",
+                                    flag: false
+                                });
+                            }, 5000);
+                        });
+                    </script>
+                    <div class="l_left"><span style="color: #00d8ff;margin-left: 4px;font-size: 10px">216人</span></div>
+                    <div class="clear"></div>
+                </div>
+                <div style="padding: 8px 0 0 16px">
+                    <div class="l_left"><span style="color: #dfdede;font-size: 10px;margin-right: 10px">人员三：</span></div>
+                    <div class="progress l_left" id="vaderSize2" style="width: 150px;margin-top: 6px;"></div>
+                    <script>
+                        var number = 60;
+                        $(function() {
+                            $("#vaderSize2").ProgressBarWars2({
+                                porcentaje: 30,
+                                estilo: "vader2",
+                                tiempo: 5980,
+                                alto: "8px",
+                                flag: true
+                            });
+                            setInterval(function() {
+                                number = Math.floor(Math.random() * 99 + 1);
+                                $("#vaderSize2").ProgressBarWars2({
+                                    porcentaje: number,
+                                    estilo: "vader2",
+                                    tiempo: 5980,
+                                    alto: "30px",
+                                    flag: false
+                                });
+                            }, 5000);
+                        });
+                    </script>
+                    <div class="l_left"><span style="color: #56a4ff;margin-left: 4px;font-size: 10px">2037人</span></div>
+                    <div class="clear"></div>
+                </div>
+                <div style="padding: 8px 0 0 16px">
+                    <div class="l_left"><span style="color: #dfdede;font-size: 10px;margin-right: 10px">人员四：</span></div>
+                    <div class="progress l_left" id="vaderSize3" style="width: 150px;margin-top: 6px;"></div>
+                    <script>
+                        var number = 90;
+                        $(function() {
+                            $("#vaderSize3").ProgressBarWars3({
+                                porcentaje: 30,
+                                estilo: "vader3",
+                                tiempo: 5980,
+                                alto: "8px",
+                                flag: true
+                            });
+                            setInterval(function() {
+                                number = Math.floor(Math.random() * 99 + 1);
+                                $("#vaderSize3").ProgressBarWars3({
+                                    porcentaje: number,
+                                    estilo: "vader3",
+                                    tiempo: 5980,
+                                    alto: "8px",
+                                    flag: false
+                                });
+                            }, 5000);
+                        });
+                    </script>
+                    <div class="l_left"><span style="color: #56ff6a;margin-left: 4px;font-size: 10px">651人</span></div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div>
+                <p style="color: #dfdede;font-size: 14px;margin: 22px 0 0 17px ">【今日车辆在线】</p>
+                <div class="progress l_left" id="vaderSize4" style="width: 200px;padding: 0;margin: 40px 0 0 18px;"></div>
+                <script>
+                    var number = 60;
+                    $(function() {
+                        $("#vaderSize4").ProgressBarWars4({
+                            porcentaje: number,
+                            estilo: "vader4",
+                            tiempo: 5980,
+                            alto: "22px",
+                            flag: true
+                        });
+                        setInterval(function() {
+                            number = Math.floor(Math.random() * 99 + 1);
+                            $("#vaderSize4").ProgressBarWars4({
+                                porcentaje: number,
+                                estilo: "vader4",
+                                tiempo: 5980,
+                                alto: "22px",
+                                flag: false
+                            });
+                        }, 5000);
+                    });
+                </script>
+                <div class="l_left" style="color: #ffea00;margin: 44px 0 0 4px;font-size: 14px"><span>413辆</span></div>
+            </div>
+            <div class="fltdecarround fltdecarroundleft fltdecarroundbottom"></div>
+            <div class="fltdecarround fltdecarroundbottom fltdecarroundright "></div>
+        </div>
+        <!--右下分析内容放置框-->
+        <div class="analyzemsgbgbox" style="margin-top: 20px; height: 350px;"><span class="analyzedatashowtitle">【各平台数据接入量】</span>
+            <div style="margin: 0 6px;background-color: #011c2f;opacity: 0.8;padding:8px 0 6px 0">
+                <div>
+                    <div><span class="down_span">【xxx系统一】</span><span style="color:#dfdede;font-size: 10px;margin-left: 118px; font-weight: lighter;">1235</span></div>
+                    <div style="margin: 5px 0 4px 12px;">
+                        <div class="progress l_left" id="vaderSize5" style="width: 190px;padding: 0;margin-top: 4px"></div>
+                        <script>
+                            $("#vaderSize5").ProgressBarWars5({
+                                porcentaje: 16,
+                                estilo: "vader5",
+                                tiempo: 5980,
+                                alto: "8px",
+                                flag: true
+                            });
+                        </script>
+                        <div><span class=" l_left" style="margin-left: 12px;color:#40e315;font-size: 12px ">8.02%</span></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div><span class="down_span">【xxx系统二】</span><span style="color:#dfdede;font-size: 10px;margin-left: 118px; font-weight: lighter;">1235</span></div>
+                    <div style="margin: 5px 0 4px 12px;">
+                        <div class="progress l_left" id="vaderSize6" style="width: 190px;padding: 0;margin-top: 4px"></div>
+                        <script>
+                            $("#vaderSize6").ProgressBarWars6({
+                                porcentaje: 16,
+                                estilo: "vader6",
+                                tiempo: 5980,
+                                alto: "8px",
+                                flag: true
+                            });
+                        </script>
+                        <div><span class="l_left" style="margin-left: 12px;color:#15e3ac;font-size: 12px ">8.09%</span></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div><span class="down_span">【xxx系统三】</span><span style="color:#dfdede;font-size: 10px;margin-left: 131px; font-weight: lighter;">1235</span></div>
+                    <div style="margin: 5px 0 4px 12px;">
+                        <div class="progress l_left" id="vaderSize7" style="width: 190px;padding: 0;margin-top: 4px"></div>
+                        <script>
+                            $("#vaderSize7").ProgressBarWars7({
+                                porcentaje: 6,
+                                estilo: "vader7",
+                                tiempo: 5980,
+                                alto: "8px",
+                                flag: true
+                            });
+                        </script>
+                        <div><span class="down_span l_left" style="margin-left: 12px;color:#1f9cff ;font-size: 12px">2.87%</span></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div><span class="down_span">【xxx系统四】</span><span style="color:#dfdede;font-size: 10px;margin-left: 143px; font-weight: lighter;">1235</span></div>
+                    <div style="margin: 5px 0 4px 12px;">
+                        <div class="progress l_left" id="vaderSize8" style="width: 190px;padding: 0;margin-top: 4px"></div>
+                        <script>
+                            $("#vaderSize8").ProgressBarWars8({
+                                porcentaje: 2,
+                                estilo: "vader8",
+                                tiempo: 5980,
+                                alto: "8px",
+                                flag: true
+                            });
+                        </script>
+                        <div><span class="down_span l_left" style="margin-left: 12px;color:#c97802;font-size: 12px ">0.85%</span></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div><span class="down_span">【1xxx系统五】</span><span style="color:#dfdede;font-size: 10px;margin-left: 108px; font-weight: lighter;">1235</span></div>
+                    <div style="margin: 5px 0 4px 12px;">
+                        <div class="progress l_left" id="vaderSize9" style="width: 190px;padding: 0;margin-top: 4px"></div>
+                        <script>
+                            $("#vaderSize9").ProgressBarWars9({
+                                porcentaje: 83,
+                                estilo: "vader9",
+                                tiempo: 5980,
+                                alto: "8px",
+                                flag: true
+                            });
+                        </script>
+                        <div><span class=" l_left" style="margin-left: 12px;color:#72ff00;font-size: 12px ">80.44%</span></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div><span class="down_span">【xxx系统六】</span><span style="color:#dfdede;font-size: 10px;margin-left: 119px; font-weight: lighter;">1235</span></div>
+                    <div style="margin: 5px 0 4px 12px;">
+                        <div class="progress l_left" id="vaderSize10" style="width: 190px;padding: 0;margin-top: 4px"></div>
+                        <script>
+                            $("#vaderSize10").ProgressBarWars10({
+                                porcentaje: 6,
+                                estilo: "vader10",
+                                tiempo: 5980,
+                                alto: "8px",
+                                flag: true
+                            });
+                        </script>
+                        <div><span class=" l_left" style="margin-left: 12px;color:#ef4503;font-size: 12px ">2.56%</span></div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="fltdecarround fltdecarroundleft fltdecarroundtop"></div>
+            <div class="fltdecarround fltdecarroundtop fltdecarroundright "></div>
+            <div class="fltdecarround fltdecarroundleft fltdecarroundbottom"></div>
+            <div class="fltdecarround fltdecarroundbottom fltdecarroundright "></div>
+        </div>
+    </div>
+    <!--版权-->
+    <div class="copyrigntoutbox"><span class="copyrigntmsg">版权所有 © 2021 关注公众号【DreamCoders】 获取更多免费模板 </span></div>
+    <script>
+        window.onload = function() {
+            var loading = document.getElementById("loading");
+            loading.style.display = "none";
+        }
+    </script>
+    <script>
+        var salesMyChart = echarts.init($("#container1")[0]);
+        option = {
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            visualMap: {
+                show: false,
+                min: 80,
+                max: 600,
+                inRange: {
+                    colorLightness: [0, 1]
+                }
+            },
+            series: [{
+                name: '数据传输量',
+                type: 'pie',
+                radius: '55%',
+                center: ['50%', '50%'],
+                data: [{
+                    value: 335,
+                    name: '系统一'
+                }, {
+                    value: 310,
+                    name: '系统二'
+                }, {
+                    value: 274,
+                    name: '系统三'
+                }, {
+                    value: 235,
+                    name: '系统四'
+                }, {
+                    value: 400,
+                    name: '系统五'
+                }].sort(function(a, b) {
+                    return a.value - b.value;
+                }),
+                roseType: 'radius',
+                label: {
+                    normal: {
+                        textStyle: {
+                            color: 'rgba(255, 255, 255, 0.5)'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        lineStyle: {
+                            color: 'rgba(255, 255, 255, 0.3)'
+                        },
+                        smooth: 0.2,
+                        length: 10,
+                        length2: 20
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#c23531',
+                        shadowBlur: 200,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                },
+                animationType: 'scale',
+                animationEasing: 'elasticOut',
+                animationDelay: function(idx) {
+                    return Math.random() * 200;
+                }
+            }]
+        };
+        salesMyChart.setOption(option);
+    </script>
+</body>
+
+</html>

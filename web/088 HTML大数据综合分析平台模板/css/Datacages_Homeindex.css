@@ -1,0 +1,521 @@
+/*全局控制栏*/
+body {
+    background-color: #020712;
+    margin: 0;
+    font-family: "Microsoft YaHei";
+    font-weight: lighter;
+    background-image: url("../img/Homebodybg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: -120px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.l_left {
+    float: left
+}
+
+.clear {
+    clear: both
+}
+
+img {
+    border: none
+}
+
+/*标题*/
+.Hometitlebox {
+    width: 686px;
+    height: 69px;
+    margin: auto;
+    background-image: url("../img/Hometitlebg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 69px;
+}
+
+/*动效栏*/
+.flasheffectoutbox {
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+    margin-top: 100px;
+    background-image: url("../img/chain_bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative
+}
+
+.circleeffectclass {
+    border-radius: 50%;
+    border: rgba(0, 168, 255, 0.6) 1px solid;
+    cursor: pointer;
+    position: absolute;
+}
+
+.effectposition {
+    position: absolute;
+}
+
+.acrossremindeffectout {
+    background-color: rgba(0, 126, 255, 0.05);
+    border-radius: 50%;
+}
+
+.acrossremindeffectoutho {
+    background-color: rgba(0, 126, 255, 0.15);
+}
+
+.acrossremindeffectin {
+    background-color: rgba(0, 126, 255, 0.3);
+    border-radius: 50%;
+    margin: auto;
+}
+
+.acrossremindeffectinho {
+    background-color: rgba(0, 126, 255, 0.45);
+}
+
+.stagetitle {
+    color: #00e4ff;
+    top: 104px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    font-weight: lighter;
+    display: block;
+    width: 116px;
+    text-align: center;
+    position: absolute;
+    left: -10%;
+}
+
+.stagearoundtitle {
+    left: -25%;
+    top: 85px;
+}
+
+.line {
+    position: absolute;
+    transform-origin: left;
+    animation-iteration-count: infinite
+}
+
+.line2 {
+    z-index: 1;
+    left: 330px;
+    top: 183px;
+    width: 0;
+    height: 3px;
+    transform: rotate(21deg);
+    animation: mm2 4s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    background-image: url("../img/linght_ef.png");
+    background-repeat: no-repeat;
+    background-position: 100%;
+}
+
+.line3 {
+    z-index: 1;
+    left: 262px;
+    top: 351px;
+    width: 0;
+    height: 3px;
+    transform: rotate(-25deg);
+    animation: mm 5s;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+    background-image: url("../img/linght_ef.png");
+    background-repeat: no-repeat;
+    background-position: 100%;
+}
+
+.line4 {
+    z-index: 1;
+    left: 638px;
+    top: 141px;
+    width: 0;
+    height: 3px;
+    transform: rotate(-211deg);
+    animation: mm4 3s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    background-image: url("../img/linght_ef.png");
+    background-repeat: no-repeat;
+    background-position: 100%;
+}
+
+.line5 {
+    z-index: 1;
+    left: 679px;
+    top: 289px;
+    width: 0;
+    height: 3px;
+    transform: rotate(-172deg);
+    animation: mm5 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    background-image: url("../img/linght_ef.png");
+    background-repeat: no-repeat;
+    background-position: 100%;
+}
+
+.line6 {
+    z-index: 1;
+    left: 537px;
+    top: 373px;
+    width: 0;
+    height: 3px;
+    transform: rotate(-116deg);
+    animation: mm6 4s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    background-image: url("../img/linght_ef.png");
+    background-repeat: no-repeat;
+    background-position: 100%;
+}
+
+@keyframes mm {
+    0% {
+        width: 0
+    }
+
+    100% {
+        width: 194px
+    }
+}
+
+@keyframes mm2 {
+    0% {
+        width: 0
+    }
+
+    100% {
+        width: 113px
+    }
+}
+
+@keyframes mm4 {
+    0% {
+        width: 0
+    }
+
+    100% {
+        width: 140px
+    }
+}
+
+@keyframes mm5 {
+    0% {
+        width: 0
+    }
+
+    100% {
+        width: 158px
+    }
+}
+
+@keyframes mm6 {
+    0% {
+        width: 0
+    }
+
+    100% {
+        width: 94px
+    }
+}
+
+/*主动效*/
+.maineffectoutbox {
+    border: rgba(0, 168, 255, 0.6) 3px solid;
+    width: 94px;
+    height: 94px;
+    top: 194px;
+    left: 430px;
+}
+
+.maindataeffect {
+    animation: scrolleffect 6.5s infinite linear;
+}
+
+.maindataspecialeffectct {
+    animation: maindataspecialeffect 0.6s forwards;
+}
+
+@keyframes scrolleffect {
+    0% {
+        transfrom: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes maindataspecialeffect {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*卫星动效*/
+.aroundfunctioneffect {
+    width: 76px;
+    height: 76px;
+}
+
+.acrossremindeffectoutard {
+    width: 60px;
+    height: 60px;
+    margin: 8px;
+}
+
+.acrossremindeffectinard {
+    width: 54px;
+    height: 54px;
+    margin: 3px;
+}
+
+.arounddataeffect01 {
+    animation: scrolleffectarround01 linear infinite 4s forwards;
+}
+
+.arounddataeffect02 {
+    animation: scrolleffectarround01 linear infinite 3.8s forwards;
+}
+
+.arounddataeffect03 {
+    animation: scrolleffectarround01 linear infinite 4.2s forwards;
+}
+
+@keyframes scrolleffectarround01 {
+    0% {
+        transfrom: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-90deg);
+    }
+
+    50% {
+        transform: rotate(-180deg);
+    }
+
+    75% {
+        transform: rotate(-270deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+/*修饰卫星*/
+.decarround01 {
+    width: 37px;
+    height: 37px;
+    cursor: auto;
+}
+
+.decarroundin01 {
+    width: 33px;
+    height: 33px;
+    margin: 2px;
+    background-color: rgba(0, 126, 255, 0.8);
+}
+
+.decarroundin01:hover {
+    background-color: rgba(0, 126, 255, 0.9);
+}
+
+.decarround02 {
+    width: 27px;
+    height: 27px;
+    cursor: auto;
+}
+
+.decarroundin02 {
+    width: 23px;
+    height: 23px;
+    margin: 2px;
+    background-color: rgba(0, 126, 255, 0.7);
+}
+
+.decarroundin02:hover {
+    background-color: rgba(0, 126, 255, 0.8);
+}
+
+/*悬浮信息*/
+.fltoutbox {
+    width: 282px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 0px;
+}
+
+.leftbox {
+    left: 2%;
+    top: 6%;
+    background-image: url("../img/fltleftbg.png");
+}
+
+.rightbox {
+    right: 2%;
+    top: 6%;
+    background-image: url("../img/fltrightbg.png");
+}
+
+.analyzedatashowtitle {
+    line-height: 44px;
+    color: #dfdede;
+    font-size: 14px;
+    margin-left: 16px;
+    display: block;
+    font-weight: bold
+}
+
+.analyzemsgbgbox {
+    background-color: rgba(0, 168, 255, 0.2);
+    width: 280px;
+    height: 260px;
+    position: relative;
+}
+
+.fltdecarround {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+}
+
+.fltdecarroundtop {
+    top: -1px;
+    border-top: #00a8ff 3px solid;
+}
+
+.fltdecarroundright {
+    right: -1px;
+    border-right: #00a8ff 3px solid;
+}
+
+.fltdecarroundbottom {
+    bottom: -1px;
+    border-bottom: #00a8ff 3px solid;
+}
+
+.fltdecarroundleft {
+    left: -1px;
+    border-left: #00a8ff 3px solid;
+}
+
+/*弹出信息*/
+.analyzepopupbox {
+    width: 1000px;
+    height: 680px;
+    background-color: rgba(0, 8, 12, 0.75);
+    position: fixed;
+    top: 100px;
+    overflow-y: scroll;
+}
+
+.popupboxtitlebox {
+    height: 30px;
+    width: 1000px;
+    background-color: #64a6d4;
+    position: fixed;
+    top: 100px;
+    z-index: 100;
+}
+
+.popupboxtitlemsg {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    line-height: 30px;
+    margin-left: 10px;
+}
+
+.popupboxclose {
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/popupboxclosebtn01.png");
+    float: right;
+    margin-right: 9px;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+.popupboxclose:hover {
+    background-image: url("../img/popupboxclosebtn02.png");
+}
+
+.popupboxmsgoutbox {
+    height: 314px;
+    width: 980px;
+    margin: auto;
+    border-bottom: #00b6cc 2px solid;
+}
+
+.popupboxmsgboxhlf {
+    padding-top: 20px;
+    float: left;
+    width: 479px;
+    margin-left: 10px;
+}
+
+.popupboxmsgboxcrs {
+    padding-top: 20px;
+}
+
+.popupboxmsgtitle {
+    font-size: 14px;
+    font-weight: bold;
+    color: #00e4ff;
+}
+
+.popupboxdata {
+    color: #fffc00;
+}
+
+.popuofunxtionbox {
+    width: 1000px;
+    margin: auto;
+    position: relative;
+    display: none;
+}
+
+/*版权*/
+.copyrigntoutbox {
+    position: absolute;
+    bottom: 10px;
+    left: 37%;
+}
+
+.copyrigntmsg {
+    display: block;
+    color: white;
+    font-size: 12px;
+}
