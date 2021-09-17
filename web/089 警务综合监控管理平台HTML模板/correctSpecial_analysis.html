@@ -1,0 +1,324 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+    <title>机构分析</title>
+
+    <link href="js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+    <link href="css/table1.css" rel="stylesheet" type="text/css">
+
+
+</head>
+<body style="background-color: #ecf0f5;font-family: 微软雅黑;color: #475059;min-width: 1000px;overflow: auto">
+<div class="from_main">
+    <div class="news_check">
+        <div class="check_left l_left">
+            <label>机构类型：</label>
+            <select class="find_input" style="margin-right: 10px">
+            <option>请选择</option>
+        </select>
+            <label>时间段：</label>
+            <input type="date" >
+            <input type="date" >
+        <button>查询</button>
+        </div>
+        <div class="check_right r_right">
+            <a href="https://gitee.com/iGaoWei/big-data-view" class="btn btn-default"><span class=" glyphicon glyphicon-circle-arrow-down l_left"></span>打印</a>
+            <a href="https://gitee.com/iGaoWei/big-data-view" class="btn btn-default"><span class=" glyphicon glyphicon-download-alt l_left"></span>导出</a>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div style="padding: 0 10px 0 10px ;border: 1px #ccc solid;background-color: #fff;">
+        <div class="e_chart">
+            <div class="charts l_left last_charts" style="width: 100%">
+                <p class="charts_p" style="text-align: center">社区矫正人员汇总信息</p>
+                <div >
+                    <table  class="annyTable01" border="1">
+                        <tr>
+                            <td style="font-weight: bold;text-align: right">刑释解教人员：</td>
+                            <td colspan="9">该区有总共有社区矫正人员人员1230名，女社区矫正人员人员256人，其中男社区矫正人员，890名。</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;text-align: right;width: 10%">社区矫正人员总数：</td>
+                            <td  colspan="3" style="color: red;font-weight: bold">1230名</td>
+                            <td style="font-weight: bold;text-align: right;width: 10%">社区矫正人员最多区域：</td>
+                            <td colspan="3">大化镇（450名，占比30%）</td>
+                            <td style="font-weight: bold;text-align: right;width: 10%">社区矫正人员最少区域：</td>
+                            <td  colspan="3">马鞍镇（120人，占比10%）</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;text-align: right;width: 10%">社区矫正人员最多年龄段：</td>
+                            <td  colspan="3" style="color: red;font-weight: bold">青年（400名，占比30%）</td>
+                            <td style="font-weight: bold;text-align: right;width: 10%">社区矫正人员最少年龄段：</td>
+                            <td colspan="3">老年（120人，占比10%）</td>
+                            <td style="font-weight: bold;text-align: right;width: 10%">社区矫正人员男女比例</td>
+                            <td  colspan="3">5:1</td>
+                        </tr>
+
+
+
+                        <tr>
+                            <td style="font-weight: bold;text-align: right">决策建议：</td>
+                            <td colspan="9" style="color: red;font-weight: bold">总体社区社区矫正人员比例失衡。</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="e_chart">
+            <div class="charts l_left">
+                <p class="charts_p">人员地区分析<span class="r_right">更多></span></p>
+                <div id="container" style="height:250px;width: 100%"></div>
+                <div style="width: 100%;margin-top: 30px">
+                    <table class="annyTable" border="1">
+                        <tr>
+                            <td class="first_td">地区分布</td>
+                            <td>大化镇</td>
+                            <td>张家镇</td>
+                            <td>大风镇</td>
+                            <td>淮远镇</td>
+                            <td>清风镇</td>
+                            <td>马鞍镇</td>
+                            <td>湖阳镇</td>
+                            <td>李镇</td>
+                        </tr>
+                        <tr>
+                            <td class="first_td">人员数量</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>5</td>
+                            <td>10</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td class="first_td">占比</td>
+                            <td>5.2%</td>
+                            <td>5.2%</td>
+                            <td>5.2%</td>
+                            <td>5.2%</td>
+                            <td>5.2%</td>
+                            <td>5.2%</td>
+                            <td>5.2%</td>
+                            <td>5.2%</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+            <div class="charts l_left last_charts">
+                <p class="charts_p">社区矫正人员性别比例<span class="r_right">更多></span></p>
+                <div id="container1" style="height:200px;width: 100%"></div>
+                <div style="width: 100%;margin-top: 30px">
+                    <table class="annyTable" border="1">
+                        <tr>
+                            <td class="first_td">姓别</td>
+                            <td>男性</td>
+                            <td>女性</td>
+                            <td>其他</td>
+                        </tr>
+                        <tr>
+                            <td class="first_td">数量</td>
+                            <td>102</td>
+                            <td>102</td>
+                            <td>102</td>
+
+                        </tr>
+                        <tr>
+                            <td class="first_td">占比</td>
+                            <td>5.2%</td>
+                            <td>5.2%</td>
+                            <td>5.2%</td>
+
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+        <div class="e_chart">
+        <div class="charts l_left">
+            <p class="charts_p">年龄层构成<span class="r_right">更多></span></p>
+            <div id="container2" style="height:200px;width: 100%"></div>
+            <div style="width: 100%;margin-top: 30px">
+                <table class="annyTable" border="1">
+                    <tr>
+                        <td class="first_td">年龄构成</td>
+                        <td>青年</td>
+                        <td>中年</td>
+                        <td>老年</td>
+
+                    </tr>
+                    <tr>
+                        <td class="first_td">人员数量</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>3</td>
+
+                    </tr>
+                    <tr>
+                        <td class="first_td">占比</td>
+                        <td>5.2%</td>
+                        <td>5.2%</td>
+                        <td>5.2%</td>
+
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+        <div class="charts l_left last_charts">
+            <p class="charts_p">文化程度分析<span class="r_right">更多></span></p>
+            <div id="container3" style="height:200px;width: 100%"></div>
+            <div style="width: 100%;margin-top: 30px">
+                <table class="annyTable" border="1">
+                    <tr>
+                        <td class="first_td">姓别</td>
+                        <td>博士</td>
+                        <td>研究生</td>
+                        <td>本科</td>
+                        <td>专科</td>
+                        <td>高中/中专/职高</td>
+                        <td>初中</td>
+                        <td>小学</td>
+                        <td>其它</td>
+                    </tr>
+                    <tr>
+                        <td class="first_td">数量</td>
+                        <td>102</td>
+                        <td>102</td>
+                        <td>102</td>
+                        <td>102</td>
+                        <td>102</td>
+                        <td>102</td>
+                        <td>102</td>
+                        <td>102</td>
+
+
+                    </tr>
+                    <tr>
+                        <td class="first_td">占比</td>
+                        <td>5.2%</td>
+                        <td>5.2%</td>
+                        <td>5.2%</td>
+                        <td>5.2%</td>
+                        <td>5.2%</td>
+                        <td>5.2%</td>
+                        <td>5.2%</td>
+                        <td>5.2%</td>
+
+
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+        <div class="clear"></div>
+        <div class="e_chart">
+            <div class="charts l_left">
+                <p class="charts_p">矫正类型构成<span class="r_right">更多></span></p>
+                <div id="container4" style="height:200px;width: 100%"></div>
+                <div style="width: 100%;margin-top: 30px">
+                    <table class="annyTable" border="1">
+                        <tr>
+                            <td class="first_td">年龄构成</td>
+                            <td>监外执行</td>
+                            <td>管制</td>
+                            <td>假释</td>
+                            <td>缓刑</td>
+                            <td>夺政治权利</td>
+
+                        </tr>
+                        <tr>
+                            <td class="first_td">人员数量</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>3</td>
+
+                        </tr>
+                        <tr>
+                            <td class="first_td">占比</td>
+                            <td>5.2%</td>
+                            <td>5.2%</td>
+                            <td>5.2%</td>
+                            <td>5.2%</td>
+                            <td>5.2%</td>
+
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+            <div class="charts l_left last_charts">
+                <p class="charts_p">帮扶情况分析<span class="r_right">更多></span></p>
+                <div id="container5" style="height:200px;width: 100%"></div>
+                <div style="width: 100%;margin-top: 30px">
+                    <table class="annyTable" border="1">
+                        <tr>
+                            <td class="first_td">地区分布</td>
+                            <td>大化镇</td>
+                            <td>张家镇</td>
+                            <td>大风镇</td>
+                            <td>淮远镇</td>
+                            <td>清风镇</td>
+                            <td>马鞍镇</td>
+                            <td>湖阳镇</td>
+                            <td>李镇</td>
+                        </tr>
+                        <tr>
+                            <td class="first_td">人员数量</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>5</td>
+                            <td>10</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td class="first_td">占比</td>
+                            <td>5.2%</td>
+                            <td>5.2%</td>
+                            <td>5.2%</td>
+                            <td>5.2%</td>
+                            <td>5.2%</td>
+                            <td>5.2%</td>
+                            <td>5.2%</td>
+                            <td>5.2%</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bstable/js/bootstrap.min.js"></script>
+<script src="js/bstable/js/bootstrap-table.js"></script>
+<script src="js/bstable/js/bootstrap-table-zh-CN.min.js"></script>
+<script src="js/echarts/echarts-all.js"></script>
+<script src="js/criminalSpecial_analysis.js"></script>
+</html>

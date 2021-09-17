@@ -1,0 +1,131 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+    <title></title>
+    <link href="js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+    <link href="css/table.css" rel="stylesheet" type="text/css">
+</head>
+<body style="background-color: #ecf0f5;font-family: 微软雅黑;color: #475059;min-width: 1150px;overflow: auto">
+<div class="notice_main">
+    <h6>车辆信息</h6>
+    <div style="border-bottom: 1px #ccc solid;padding-bottom: 8px">
+        <p style="line-height: 24px;font-size: 14px;padding: 4px 0 0 36px ;color:#bb8940;background-image: url(img/ts_03.png);background-repeat: no-repeat;background-position: 10px 8px;font-weight: bold">温馨提示</p>
+        <ul class="ts">
+            <li><span>*</span>该页面主要显示的是车辆信息的类容。</li>
+            <li><span>*</span>更多模板请关注公众号【折腾不止的追梦人】回复"BigDataView"，免费获取。</li>
+        </ul>
+    </div>
+    <div class="notice_check">
+
+        <p>
+            <label class="">车牌号码：</label>
+            <input type="text" class="find_input">
+            <label class="">车辆品牌：</label>
+            <input type="text" class="find_input">
+            <label class="">车辆特征：</label>
+            <input type="text" class="find_input">
+            <button class="check_btn">查询</button>
+        </p>
+</div>
+
+
+
+    <table id="table" class="table_style" style="margin: 0 auto" > </table>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/layer_v2.1/layer/layer.js"></script>
+<script src="js/echarts/echarts-all.js"></script>
+<script src="js/bstable/js/bootstrap.min.js"></script>
+<script src="js/bstable/js/bootstrap-table.js"></script>
+<script src="js/bstable/js/bootstrap-table-zh-CN.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#table').bootstrapTable({
+            method: "get",
+            striped: true,
+            singleSelect: false,
+            url: "json/allFind.json",
+            dataType: "json",
+            pagination: true, //分页
+            pageSize: 10,
+            pageNumber: 1,
+            search: false, //显示搜索框
+            contentType: "application/x-www-form-urlencoded",
+            queryParams: null,
+            columns: [
+                {
+                    checkbox: "true",
+                    field: 'check',
+                    align: 'center',
+                    valign: 'middle'
+                }
+                ,
+                {
+                    title: "车牌号",
+                    field: 'id',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    title: '车辆品牌',
+                    field: 'logo',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    title: '车辆类型',
+                    field: 'type',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    title: '颜色',
+                    field: 'color',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    title: '车主',
+                    field: 'person',
+                    align: 'center',
+                    valign: 'middle'
+                },
+
+                {
+                    title: '厢数',
+                    field: 'number',
+                    align: 'center'
+                },
+                {
+                    title: '操作',
+                    field: 'opear',
+                    align: 'center',
+                    formatter: function (value, row) {
+                        var e = '<button  href="javascript:void(0)"  class="btn btn-xs btn-success" title="车辆详情" onclick="addCarSearch(\'' + row.id + '\')">车辆详情</button> ';
+
+
+                        return e ;
+                    }
+                }
+            ]
+        });
+    });
+    function addCarSearch(){
+        layer.open({
+            type: 2,
+            title: '车辆详情',
+            shadeClose: true,
+            shade: 0.5,
+            skin: 'layui-layer-rim',
+            closeBtn:1,
+            area: ['80%', '510px'],
+            content: 'carTail.html'
+        });
+    }
+
+</script>
+</body>
+</html>

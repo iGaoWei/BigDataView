@@ -1,0 +1,99 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+    <title></title>
+    <!--<link href="js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">-->
+    <link href="js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/table.css" rel="stylesheet" type="text/css">
+    <script src="../090 企业营收大数据统计可视化大屏/js/js.js"></script>
+</head>
+<body style="background-color: #ecf0f5;font-family: 微软雅黑;color: #475059;min-width: 1000px;overflow: auto">
+<div class="notice_main" style="width: 99.8%">
+    <h6>更多模板请关注公众号【折腾不止的追梦人】回复"BigDataView"，免费获取</h6>
+    <div class="validate">
+        <div class="validate_nav">
+            <ul>
+                <li class="validate_nav_active">直接提交</li>
+                <li>批量反馈</li>
+                <li>其它反馈</li>
+                <div class="clear"></div>
+            </ul>
+        </div>
+        <div class="validate_main">
+            <div class="validate_from" style="display: block">
+                <div class="first">
+                    <p>选择部门</p>
+                    <select><option>全部</option></select>
+                </div>
+                <div>
+                    <p>请xxxxxxx</p>
+                    <input type="text" placeholder="请输入验证码"><button>直接提交</button>
+                </div>
+            </div>
+            <div class="validate_from">
+                <div class="first">
+                    <p>选择部门</p>
+                    <select><option>全部</option></select>
+                </div>
+                <div>
+                    <p>请先xxxx</p>
+                    <input type="text" placeholder="请输入验证码">
+                </div>
+                <div>
+                    <input type="text" placeholder="请输入验证码">
+                </div>
+                <div>
+                    <input type="text" placeholder="请输入验证码">
+                </div>
+                <div>
+                    <input type="text" placeholder="请输入验证码">
+                </div>
+                <div>
+                    <input type="text" placeholder="请输入验证码">
+                </div>
+                <div>
+                    <button style="margin-left: 0">提交</button>
+                </div>
+            </div>
+            <div class="validate_from">
+                <div class="first">
+                    <p>选择部门</p>
+                    <select><option>全部</option></select>
+                </div>
+                <div>
+                    <p>请先验证再提交</p>
+                    <input type="text" placeholder="请输入验证码"><button>确认</button>
+                </div>
+                <div class="validate_bot">
+                    <div style="padding-bottom: 8px">
+                        <p style="line-height: 24px;font-size: 16px;font-weight:bold;padding: 4px 0 0 36px ;color:#bb8940;background-image: url(img/ts_03.png);background-repeat: no-repeat;background-position: 10px 8px;font-weight: bold">温馨提示</p>
+                        <ul class="ts">
+                            <li><span></span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+                            <li><span></span>根xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx；</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="js/jquery.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $(".validate_nav ul li").each(function(index){
+            $(this).on("click",function(){
+                $(this).siblings().removeClass("validate_nav_active");
+                $(this).addClass("validate_nav_active");
+                $(".validate_main .validate_from").eq(index).fadeIn().siblings().stop().hide();
+            });
+        });
+    })
+</script>
+
+</body>
+</html>

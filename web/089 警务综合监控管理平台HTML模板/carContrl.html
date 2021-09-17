@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>车辆监控</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link href="css/zTreeStyle/zTreeStyle.css" rel="stylesheet" type="text/css" />
+
+</head>
+<style>
+
+</style>
+<body style="position: absolute;width: 100%;height:760px">
+
+<!--内容部分-->
+<div class="con1 left" id="car_control" style="height: 700px">
+<div class="left car_left">
+    <div class="left_up bow_shadow">
+        <p>
+            <input type="text" placeholder="输入车牌号" class="carNo_input"><input type="button" class="find_but"/>
+        </p>
+
+        <p class="set_list"><i class="list_i"></i> 设备列表：</p>
+        <p ><ul id="treeDemo" class="ztree"></ul></p>
+    </div>
+    <div class="left_down bow_shadow">
+<div class="text_center"><a href="https://gitee.com/iGaoWei/big-data-view" class="tab_a tab_aActive">基本信息</a><a href="https://gitee.com/iGaoWei/big-data-view" class="tab_a">云台控制</a> </div>
+        <div class="car_content">
+            <p><span>车牌号：</span><span>K89076</span></p>
+            <p><span>驾驶人姓名：</span><span>K89076</span></p>
+            <p><span>车辆品牌：</span><span>K89076</span></p>
+            <p><span>车辆型号：</span><span>K89076</span></p>
+            <p><span>所属公司：</span><span>K89076xxxxxxxxxxxxxxxxxx</span></p>
+            <p><span>行驶里程：</span><span>xxxxx</span></p>
+            <p><span>状态：</span><span>xxxxx</span></p>
+            <p><span>所在位置：</span><span>xxxxxxxxxxxxx</span></p>
+        </div>
+    </div>
+</div>
+    <div class="left car_center">
+        <video controls="controls" ></video>
+        <video controls="controls" class="magin_left"></video>
+        <video controls="controls" class="magin_top"></video>
+        <video controls="controls" class="magin_top magin_left"></video>
+    </div>
+    <div class="right car_right" id="map"></div>
+
+
+
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/echarts/echarts-all.js"></script>
+<script src="js/base.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5ieMMexWmzB9jivTq6oCRX9j&callback"></script>
+<script src="js/car_control.js"></script>
+<script src="js/ztree/jquery.ztree.all-3.5.js"></script>
+<script src="js/listTree.js"></script>
+
+</body>
+</html>

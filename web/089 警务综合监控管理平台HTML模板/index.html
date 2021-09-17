@@ -1,0 +1,227 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+<title>上海市警务通监控系统</title>
+
+<link href="css/style02.css" rel="stylesheet" type="text/css">
+    <link href="js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+    <link href="js/scroll/css/liMarquee.css" rel="stylesheet" type="text/css">
+
+
+</head>
+<body onload="change1(),change()">
+
+
+<script src="js/jquery.js"></script>
+<script src="js/layer_v2.1/layer/layer.js"></script>
+<script src="js/echarts/echarts-all.js"></script>
+<script src="js/bstable/js/bootstrap.min.js"></script>
+<script src="js/bstable/js/bootstrap-table.js"></script>
+<script src="js/bstable/js/bootstrap-table-zh-CN.min.js"></script>
+<script src="js/home_table.js"></script>
+<script src="js/home_chart.js"></script>
+<script type="text/javascript" src="js/scroll/js/jquery.liMarquee.js"></script>
+<div class="div_home">
+
+   <div class="home_title">
+
+   </div>
+<div class="clear"></div>
+
+    <div class="left_top" style="margin-top: -4%">报警信息实时显示</div>
+<div class="right_top"style="margin-top: -4%" >早晚高峰流量信息监控</div>
+<div class="clear"></div>
+    <div class="left_con1">
+        <div class="con_p1">
+<div class="p_a">
+    <span class="p_a01">停止<p>违章</p></span><span class="p_a02">142</span>
+</div>
+            <div class="p_a">
+                <span class="p_a01">今日<p>报警</p></span><span class="p_a03">6035</span>
+            </div>
+        </div>
+        <div class="con_p1">
+            <div class="p_a">
+                <span class="p_a01">警员<p>在线</p></span><span class="p_a02">5236</span>
+            </div>
+            <div class="p_a">
+                <span class="p_a01">警车<p>在线</p></span><span class="p_a03">6035</span>
+            </div>
+        </div>
+    </div>
+<div class="right_con1" >
+    <div id="con1" style="width: 92%;height: 92%;margin-left: 2%;margin-top: 2%;overflow: hidden"></div>
+</div>
+<div class="clear"></div>
+    <div class="left_top">案件管理分析</div>
+<div class="right_top" >案件xxx分析</div>
+<div class="clear"></div>
+    <div class="left_con2">
+        <h5 class="h_style"><i class="i_h"></i><span>案件xxx量</span></h5>
+        <div  class="con1_cum1" >
+            <div id="left01" style="width: 100%;height: 100%;margin: 0;padding: 0;overflow: hidden"></div>
+        </div>
+        <h5 class="h_style"><i class="i_h"></i><span>案件xxxxxx</span></h5>
+        <div class="con1_cum1" >
+            <div id="left02" style="width: 100%;height: 96%;padding: 0;margin-top: -2%;margin-left: 2%"></div>
+        </div>
+    </div>
+<div class="right_con2">
+    <div id="con2" style="width: 98%;height: 98%;margin: 0;padding: 5%"></div>
+</div>
+<div class="clear"></div>
+    <div class="left_top">实时报警信息</div>
+<div class="right_top" style="margin-top: -1.5%">移动端信息上报</div>
+<div class="clear"></div>
+<div class="left_con3">
+    <div class="ul_top"><span>等级</span><span>名称</span><span>案情</span><span>时间</span></div>
+    <div style="width: 96%;height: 96%;background: transparent;margin-top: 2%" id="div01" >
+   <ul class="ul_con"  >
+       <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: red">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+       <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: red">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+       <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: red">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+       <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: red">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+       <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: red">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+       <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: red">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+       <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: green">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+       <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: red">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+       <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: red">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+       <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: red">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+       <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: deepskyblue">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+       <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: red">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+       <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: red">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+   </ul>
+    </div>
+</div>
+<div class="right_con3"style="margin-top: -2%" id="r03">
+    <div class="ul_top"><span>等级</span><span>名称</span><span>案情</span><span>时间</span></div>
+    <div style="width: 96%;height: 96%;background: transparent;margin-top: 2%" id="div02" >
+    <ul class="ul_con" >
+        <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: red">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+        <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: red">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+        <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: deepskyblue">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+        <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: red">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+        <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: red">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+        <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: red">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+        <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: red">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+        <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: red">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+        <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: green">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+        <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: red">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+        <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: red">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+        <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: red">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+        <li><a href="https://gitee.com/iGaoWei/big-data-view"><span style="color: red">严重</span><span>xxx道路</span><span>拥堵</span><span>1/13:00</span></a> </li>
+    </ul>
+</div>
+</div>
+    <div class="clear"></div>
+
+<div class="div_bottom"><div class="bot_left"><a href="#" onclick="add()" class="title_but">视频监控 </a><a href="#" class="title_but"  onclick="addFind()">信息查询 </a></div> <ul>
+    <li><a href="https://gitee.com/iGaoWei/big-data-view"><img src="img/defaut.png"/> </a> </li>
+    <li><a href="https://gitee.com/iGaoWei/big-data-view"><img src="img/max.png"/> </a> </li>
+    <li><a href="https://gitee.com/iGaoWei/big-data-view"><img src="img/min.png"/> </a> </li>
+    <li><a href="https://gitee.com/iGaoWei/big-data-view"><img src="img/cheliangbukong.png"/> </a> </li>
+    <li><a href="https://gitee.com/iGaoWei/big-data-view"><img src="img/renyuanbukong.png"/> </a> </li>
+    <li><a href="https://gitee.com/iGaoWei/big-data-view"><img src="img/jinyuan.png"/> </a> </li>
+    <li><a href="https://gitee.com/iGaoWei/big-data-view"><img src="img/jiankong.png"/> </a> </li>
+    <li><a href="https://gitee.com/iGaoWei/big-data-view"><img src="img/weizhang.png"/> </a> </li>
+    <li><a href="https://gitee.com/iGaoWei/big-data-view"><img src="img/alam01.png"/> </a> </li>
+</ul><span class="bottom_right"><a href="#" class="title_but" onclick="addAy()">综合分析</a><a href="#" class="title_but" onclick="sumitT()">问题反馈</a> </span></div>
+<div class="video_bg">
+    <div class="video_top">
+        <span class="video_spanleft">上海市中心十字监控卡口<p>设备编号：ABC52583-2222</p></span>
+        <span class="video_spanright"><a href="https://gitee.com/iGaoWei/big-data-view"><img src="img/max_icon.png"> </a> </span>
+    </div>
+    <div class="video_con"><video src="video/test_mv02.mov" class="video_con" autoplay  controls="controls"></video> </div>
+</div>
+</div>
+<script>
+
+    function change1() {
+
+        var w01 = $(window).width();
+        $(".home_title1").css('width', w01 - 600+"px");
+    }
+    function change() {
+        var th01 = $(window).height();
+        $(".div_right").css('height', th01 - 24+"px");
+
+    }
+</script>
+<script>
+    $(function(){
+        $('#div01').liMarquee({
+            direction: 'down',
+            scrollamount: 30
+        });
+    });
+</script>
+<script>
+    $(function(){
+        $('#div02').liMarquee({
+            direction: 'down',
+            scrollamount: 30
+        });
+    });
+</script>
+<script>
+    function add() {
+
+        layer.open({
+            type: 2,
+            skin: 'demo-class',
+
+            title: '视频监控',
+            fix: true,
+            shadeClose: true,
+
+            area: ['1400px', '700px'],
+            content: 'carContrl.html',
+
+        });
+    }
+    function addFind() {
+
+        layer.open({
+            type: 2,
+            skin: 'demo-class',
+
+            title: '信息查询',
+            fix: true,
+            shadeClose: true,
+
+            area: ['1400px', '700px'],
+            content: 'car.html',
+
+        });
+    }
+    function addAy(){
+        layer.open({
+            type: 2,
+            title: '综合分析',
+            shadeClose: true,
+            shade: 0.5,
+            skin: 'layui-layer-rim',
+            closeBtn:1,
+            area: ['80%', '700px'],
+            content: 'correctSpecial_analysis.html'
+        });
+    }
+    function sumitT(){
+        layer.open({
+            type: 2,
+            title: '信息反馈',
+            shadeClose: true,
+            shade: 0.5,
+            skin: 'layui-layer-rim',
+            closeBtn:1,
+            area: ['80%', '700px'],
+            content: 'validate.html'
+        });
+    }
+</script>
+
+</body>
+</html>
