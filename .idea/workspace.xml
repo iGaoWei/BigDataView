@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1db8f01d-0439-420c-8e00-93b93c288a8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preview/001 服务大数据可视化监管平台.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/preview/002 水质情况实时监测预警系统.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/preview/003 联心菜市场数据中心.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/preview/004 政务大数据共享交换平台.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/preview/5.gif" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +42,7 @@
       <workItem from="1630484968812" duration="17136000" />
       <workItem from="1630889915691" duration="8244000" />
       <workItem from="1631239405214" duration="10797000" />
-      <workItem from="1631871037109" duration="1258000" />
+      <workItem from="1631871037109" duration="4647000" />
     </task>
     <servers />
   </component>
@@ -67,10 +62,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1630485440833" />
-    <state x="2256" y="104" width="798" height="871" key="find.popup" timestamp="1631670622882">
+    <state x="2256" y="104" width="798" height="871" key="find.popup" timestamp="1631924356475">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2256" y="104" width="798" height="871" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1631670622882" />
+    <state x="2256" y="104" width="798" height="871" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1631924356475" />
     <state x="2536" y="240" key="run.anything.popup" timestamp="1631670639591">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
