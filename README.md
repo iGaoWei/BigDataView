@@ -7,9 +7,9 @@
 	<a href='https://gitee.com/iGaoWei/big-data-view/members'><img src='https://gitee.com/iGaoWei/big-data-view/badge/fork.svg?theme=white' alt='fork'></img></a>
 </p>
 
+项目背景：由于自己公司项目里面用到一个数据可视化大屏页面，自己网上各种谷歌百度，发现资源良莠不齐，而且大多数都是收费的，甚至一个页面一收费的那种，前前后后自己不管是付费的还是免费的收集了不少，于是自己打算整理下，免费分享给大家，以免大家再走冤枉路。如果大家有珍藏的好模板，欢迎大家继续补充贡献！！！
+
 <div align="center">
-<p>项目背景：由于自己公司项目里面用到一个数据可视化大屏页面，自己网上各种谷歌百度，发现资源良莠不齐，而且大多数都是收费的，甚至一个页面一收费的那种，前前后后自己不管是付费的还是免费的收集了不少，于是自己打算整理下，免费分享给大家，以免大家再走冤枉路。如果大家有珍藏的好模板，欢迎大家继续补充贡献！！！
-</p>
 
 ```
 如果觉得对你有对您有帮助，您可以点右上角 💘Star💘支持,感谢支持！～
@@ -43,9 +43,7 @@ git clone https://gitee.com/iGaoWei/big-data-view.git
 ```
 git clone https://github.com/iGaoWei/BigDataView.git
 ```
-
 3.网盘下载地址：关注公众号【DreamCoders】回复”BigDataView“即可获取
-<img src="https://img-blog.csdnimg.cn/img_convert/91d266abad01a61f9df9d028164693d9.png" width="30%" />
 
 4.扫描下方微信小程序码，获取下载地址
 
