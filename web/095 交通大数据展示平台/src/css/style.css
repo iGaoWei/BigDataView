@@ -1,0 +1,133 @@
+html, body{
+	color: #FFFFFF;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	background: url(../../src/img/map_bg.png) no-repeat #0F1A3D;
+	background-size: cover;
+}
+
+
+/*
+ * 公共
+ */
+.pubTop{
+	margin-top: 10px;
+}
+.anchorBL {
+	display: none;
+}
+.layui-card-body {
+    padding: 5px 5px;
+    line-height: 24px;
+}
+
+
+/*
+ * 头部
+ */
+.mainTop{
+	height: 60px;
+	line-height: 60px;
+	font-size: 30px;
+	font-weight: 600;
+}
+
+
+/*
+ * 提示高度
+ */
+.mainTitleHeight{
+	height: 60px;
+	line-height: 30px;
+	text-align: center;
+}
+.mainTitleHeight span{
+	font-weight: 600;
+}
+
+
+
+/*
+ * 覆盖原样式
+ */
+.layui-card {
+    background-color: rgba(48,80,189,0.6);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+}
+
+.layui-card-header{
+	background-color: rgba(63,133,238,1);
+	color: #FFFFFF;
+    border-bottom: 1px solid #3F85EE;
+}
+
+.layui-table {
+    width: 100%;
+    margin: 10px 0;
+    background-color: rgba(63,133,238,0);
+    color: #FFFFFF;
+}
+
+.layui-table tbody tr:hover, .layui-table thead tr, .layui-table-click, .layui-table-header, .layui-table-hover, .layui-table-mend, .layui-table-patch, .layui-table-tool, 
+.layui-table[lay-even] tr:nth-child(even) {
+    background-color: transparent;
+}
+
+.layui-btn{
+	padding: 0 15px;
+}
+
+
+/*
+ * 流动背景
+ */
+.mainBack{width: 100%; text-align: center; background: linear-gradient(90deg, rgba(10,170,213,0.2), rgba(128,32,246,0.7), rgba(10,170,213,0.7), rgba(128,32,246,0.7), rgba(10,170,213,0.2)); background-size: 400% 400%; -webkit-animation: Gradient 25s ease infinite; -moz-animation: Gradient 25s ease infinite; animation: Gradient 25s ease infinite;}
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+
+/******************************* 全局滚动条配置 ******************************/
+/* chrome滚动条样式 */
+::-webkit-scrollbar{width:0px; height: 0px;}/* 滚动条宽度 */
+::-webkit-scrollbar-track{background-color:#0084b5;}/* 滚动条背景色 */
+::-webkit-scrollbar-thumb{background-color:#0084b5;}/* 滚动条颜色 */
+::-webkit-scrollbar-thumb:hover {background-color:#C5C7CA}/* 滚动条hover颜色 */
+::-webkit-scrollbar-thumb:active {background-color:#C5C7CA}/* 滚动条active颜色 */
+/* IE/火狐滚动条样式 */
+html{
+	-ms-overflow-style:none;/* IE */
+	scrollbar-width: none;/* 火狐 */
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>DreamCoders大数据展示平台</title>
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css" media="all"/>
+		<link rel="stylesheet" type="text/css" href="src/css/style.css" media="all"/>
+		<script src="http://api.map.baidu.com/api?v=3.0&ak=OvPTtKXsF74jAMW5avPC9eAAVww3auWa"  type="text/javascript"></script>
+		<script src="src/js/mainTool.js"></script>
+	</head>
+	<body>
+		
+		<div class="layui-fluid mainBack mainTop">
+			DreamCoders大数据展示平台
+		</div>
+		
+		<div class="layui-fluid pubTop">
+			<div class="layui-row layui-col-space5">
+				<div class="layui-col-md3">
+					<div class="layui-card">
+						<div class="layui-card-header">
+							<i class="layui-icon layui-icon-website"></i> 栏目名称
+						</div>
+						<div class="layui-card-body main_height">
+							<div id="mainBar"></div>
+						</div>
+					</div>
+				</div>
+				<div class="layui-col-md6">
+					<div class="layui-card">
+						<div class="layui-card-header">
+							<i class="layui-icon layui-icon-location"></i> 栏目名称
+						</div>
+						<div class="layui-card-body main_height" style="padding: 0;">
+							<div id="mapGis" style="width: 100%; height: 100%;"></div>
+						</div>
+					</div>
+				</div>
+				<div class="layui-col-md3">
+					<div class="layui-card">
+						<div class="layui-card-header">
+							<i class="layui-icon layui-icon-notice"></i> 栏目名称
+						</div>
+						<div class="layui-card-body main_height">
+							<div class="layui-row layui-col-space10">
+								<div class="layui-col-md6">
+									<div class="mainTitleHeight mainBack">
+										<p>本周数量</p>
+										<p><span>500</span> 条</p>
+									</div>
+								</div>
+								<div class="layui-col-md6">
+									<div class="mainTitleHeight mainBack">
+										<p>本月数量</p>
+										<p><span>3500</span> 条</p>
+									</div>
+								</div>
+								<div class="layui-col-md12">
+									<div class="layui-btn-container">
+										<button class="layui-btn layui-btn-warm" onclick="mapOpen()">
+											<i class="layui-icon layui-icon-location"></i>地图
+										</button>
+										<button class="layui-btn layui-btn-normal" onclick="rightOpen()">
+											<i class="layui-icon layui-icon-shrink-right"></i>侧栏
+										</button>
+										<a href="https://gitee.com/iGaoWei/big-data-view" class="layui-btn layui-btn-danger">
+											<i class="layui-icon layui-icon-app"></i>后台
+										</a>
+										<button href="https://gitee.com/iGaoWei/big-data-view" class="layui-btn" onclick="rightOpen()">
+											<i class="layui-icon layui-icon-username"></i>账户
+										</button>
+										<button class="layui-btn layui-btn-normal" onclick="rightOpen()">
+											<i class="layui-icon layui-icon-notice"></i>通知
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="layui-row layui-col-space5">
+				<div class="layui-col-md3">
+					<div class="layui-card">
+						<div class="layui-card-header">
+							<i class="layui-icon layui-icon-app"></i> 栏目名称
+						</div>
+						<div class="layui-card-body main_heights">
+							<div id="mainPie"></div>
+						</div>
+					</div>
+				</div>
+				<div class="layui-col-md6">
+					<div class="layui-card">
+						<div class="layui-card-header">
+							<i class="layui-icon layui-icon-component"></i> 栏目名称
+						</div>
+						<div class="layui-card-body main_heights main_width">
+							<div id="mainBlend"></div>
+						</div>
+					</div>
+				</div>
+				<div class="layui-col-md3">
+					<div class="layui-card">
+						<div class="layui-card-header">
+							<i class="layui-icon layui-icon-fire"></i> 栏目名称
+						</div>
+						<div class="layui-card-body main_heights">
+							<table class="layui-table" lay-skin="nob">
+								<tbody>
+									<tr>
+										<td>栏目名称</td>
+										<td>数量</td>
+										<td>占比</td>
+									</tr>
+									<tr>
+										<td>栏目名称</td>
+										<td>30 次</td>
+										<td>
+											<div class="layui-progress">
+												<div class="layui-progress-bar layui-bg-red" lay-percent="50%"></div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>栏目名称</td>
+										<td>30 次</td>
+										<td>
+											<div class="layui-progress">
+												<div class="layui-progress-bar layui-bg-blue" lay-percent="80%"></div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>栏目名称</td>
+										<td>30 次</td>
+										<td>
+											<div class="layui-progress">
+												<div class="layui-progress-bar layui-bg-green" lay-percent="70%"></div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>栏目名称</td>
+										<td>30 次</td>
+										<td>
+											<div class="layui-progress">
+												<div class="layui-progress-bar layui-bg-orange" lay-percent="100%"></div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="layui/layui.js" type="text/javascript"></script>
+		<script src="src/js/mainTool.js"></script>
+	</body>
+</html>
