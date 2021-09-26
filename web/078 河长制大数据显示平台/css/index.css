@@ -29,6 +29,7 @@ a{text-decoration: none}
 .index_nav ul .l_left{margin-left: 3%}
 .index_nav ul .r_right{margin-right: 3%}
 .index_nav ul li:hover{opacity: 1}
+
 .index_left{background-color: rgba(2,8,23,0.54);width: 626px;height: 790px;margin: 39px 0 0 19px;border-radius: 10px;position: relative}
 .left_nav{position: absolute;top:1px;left:137px;width: 354px;height: 27px;}
 .left_line1{border-radius: 10px;border: 1px #0174f5 solid;margin: 1px;height: 788px}

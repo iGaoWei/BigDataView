@@ -1,0 +1,565 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+*,
+body {
+    padding: 0px;
+    margin: 0px;
+    color: #222;
+    font-family: "微软雅黑";
+}
+
+html,
+body {
+    background: url("../img/bj.png") no-repeat;
+    background-size: cover;
+    font-size: .16rem;
+    color: #ffffff;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+/*谷哥滚动条样式*/
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    position: absolute
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #5bc0de
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ddd
+}
+
+/***/
+.allnav {
+    height: 100%;
+}
+
+.main {
+    /*width: 100%;
+    height: 100%;
+    background: url("../img/bj.png") no-repeat;
+    background-size: cover;
+    position: relative;*/
+}
+
+/*头部*/
+.header {
+    height: 1.2rem;
+    width: 100%;
+    /*background:red;*/
+}
+
+/*头部左边*/
+.header .header-left {
+    float: left;
+    width: 35%;
+    height: 1.2rem;
+    color: #ffffff;
+    /*text-align: center;*/
+    line-height: 1.2rem;
+    padding-left: .5rem;
+    font-size: .2rem;
+    /*border: 1px solid gold;*/
+}
+
+/*头部中间*/
+.header .header-cen {
+    float: left;
+    width: 30%;
+    height: 1.2rem;
+    /*border: 1px solid green;*/
+    background: url("../img/b.png") no-repeat center top;
+    background-size: 100% 100%;
+    text-align: center;
+    line-height: 1.2rem;
+}
+
+.header .header-cen h1 {
+    font-size: .4rem;
+    color: #ffffff;
+    letter-spacing: 0.2rem;
+    text-shadow: 0 0 .3rem #00d8ff;
+}
+
+/*头部右边*/
+.header .header-right {
+    float: right;
+    width: 35%;
+    height: 1.2rem;
+    /*border: 1px solid purple;*/
+}
+
+/*中间*/
+.content {
+    padding: .2rem .1rem 0 .1rem;
+}
+
+/*中间左边*/
+.content .content-left {
+    width: 25%;
+    padding: .1rem;
+    /*border: 1px solid red;*/
+}
+
+.content .content-left .left-top {
+    width: 100%;
+    height: 3.2rem;
+    /*border: 1px solid gold;*/
+    margin-bottom: .2rem;
+}
+
+.title {
+    width: 100%;
+    height: .4rem;
+    /*border: 1px solid red;*/
+    color: #ffffff;
+    font-size: .2rem;
+    padding-left: .3rem;
+    line-height: .4rem;
+    background: url("../img/ksh33.png") no-repeat;
+    background-size: 100% 100%;
+    margin-top: .1rem;
+    position: relative;
+}
+
+.title span {
+    display: inline-block;
+    color: #ffffff;
+    font-size: .2rem;
+    position: absolute;
+    top: -.1rem;
+}
+
+.list p {
+    font-size: .18rem;
+    color: #029698;
+    padding: 0 .3rem;
+}
+
+.list li {
+    float: left;
+    font-size: .2rem;
+    color: #ffffff;
+    width: 50%;
+    height: .4rem;
+    line-height: .4rem;
+    padding: .2rem;
+}
+
+.content .content-left .left-center {
+    width: 100%;
+    height: 3.2rem;
+    /*border: 1px solid gold;*/
+    margin-bottom: .2rem;
+}
+
+.content .content-left .left-bottom {
+    width: 100%;
+    height: 3.2rem;
+    /* border: 1px solid gold;*/
+}
+
+
+
+
+/*中间*/
+.content .content-center {
+    width: 50%;
+    padding: .1rem .2rem .1rem .2rem;
+    /*border: 1px solid purple;*/
+}
+
+.content .content-center .center-top {
+    width: 100%;
+    height: 6.5rem;
+    /*border: 1px solid red;*/
+    background: url("../img/a.png") no-repeat;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    margin-bottom: .3rem;
+    position: relative;
+}
+
+.content .content-center .center-top .top-title {
+    position: absolute;
+    width: 35%;
+    height: 3rem;
+    /*border: 1px solid red;*/
+    left: .5rem;
+    top: .5rem;
+}
+
+.content .content-center .center-top .top-title li {
+    float: left;
+    width: 50%;
+    height: 1rem;
+    /*border: 1px solid green;*/
+}
+
+.content .content-center .center-top .top-title li p,
+.content .content-center .center-top .top-title li span,
+.content .content-center .center-top .top-title li b {
+    color: #ffffff;
+}
+
+.content .content-center .center-top .top-title li p {
+    padding: .1rem;
+}
+
+.content .content-center .center-top .top-title li span {
+    text-align: center;
+    display: inline-block;
+    width: .35rem;
+    height: .45rem;
+    background: #55bcd4;
+    margin-left: .1rem;
+    line-height: .4rem;
+    font-size: .3rem;
+    margin-top: .1rem;
+}
+
+.content .content-center .center-top .top-bottom {
+    width: 70%;
+    height: 80%;
+    position: absolute;
+    /*border: 1px solid red;*/
+    bottom: .3rem;
+    right: .3rem;
+}
+
+.content .content-center .center-bottom {
+    width: 100%;
+    height: 3.4rem;
+    padding: .1rem;
+    border: 1px solid #55bcd4;
+    box-sizing: border-box;
+}
+
+.content .content-center .center-bottom .bottom-left {
+    width: 50%;
+    height: 100%;
+    /*border: 1px solid green;*/
+}
+
+.content .content-center .center-bottom .bottom-right {
+    width: 50%;
+    height: 100%;
+    /*border: 1px solid green;*/
+}
+
+
+/*中间右边*/
+.content .content-right {
+    width: 25%;
+    padding: .1rem;
+}
+
+.content .content-right .right-top {
+    width: 100%;
+    height: 3.2rem;
+    border: 1px solid #55bcd4;
+    margin-bottom: .2rem;
+}
+
+#tab_header {
+    width: 100%;
+    height: .4rem;
+    /*    border: 1px solid red;*/
+}
+
+#tab_header .selected {
+    background: rgba(56, 188, 233, 1);
+}
+
+#tab_header li {
+    float: left;
+    width: 50%;
+    color: #ffffff;
+    text-align: center;
+    line-height: .4rem;
+    cursor: pointer;
+}
+
+#tab_content {
+    width: 100%;
+    height: 2.8rem;
+    /*    border: 1px solid purple;*/
+}
+
+#tab_content .dom li p,
+#tab_content .dom li span,
+#tab_content .dom li label {
+    color: #ffffff;
+}
+
+#tab_content .dom li {
+    width: 33%;
+    height: 1.2rem;
+    /*border: 1px solid red;*/
+    text-align: center;
+    float: left;
+    padding: .2rem;
+}
+
+#tab_content .dom li p {
+    margin-bottom: 0.05rem;
+}
+
+#tab_content .dom li span {
+
+    font-size: .25rem;
+    padding-top: .1rem;
+}
+
+#tab_content .dom li:nth-child(1) span {
+    color: #ebec2f;
+}
+
+#tab_content .dom li:nth-child(2) span {
+    color: #25f3e6;
+}
+
+#tab_content .dom li:nth-child(3) span {
+    color: #13ff03;
+}
+
+#tab_content .dom .list-t {
+    float: left;
+    width: 100%;
+    height: 1.5rem;
+    padding-top: .3rem;
+}
+
+#tab_content .dom .list-t li {
+    width: 15%;
+    height: .8rem;
+    float: left;
+    border: 1px solid #55bcd4;
+    text-align: center;
+    padding: 0 !important;
+    margin-left: 0.07rem;
+
+}
+
+#tab_content .dom .list-t li span,
+#tab_content .dom .list-t li p {
+    color: #ffffff;
+}
+
+#tab_content .dom .list-t li span {
+    display: inline-block;
+    font-size: .2rem;
+    margin-top: .1rem;
+}
+
+.listStyle {
+    width: 100%;
+    height: 100%;
+    /*border: 1px solid red;*/
+    margin-top: .3rem;
+}
+
+.listStyle span {
+    float: left;
+    width: 50%;
+    height: .4rem;
+    font-size: .2rem;
+    color: #ffffff;
+    display: inline-block;
+    padding-left: .2rem;
+    text-align: center;
+    line-height: .4rem;
+}
+
+.listStyle strong {
+    color: #00ffff;
+}
+
+
+
+
+.content .content-right .right-center {
+    width: 100%;
+    height: 3.2rem;
+    /*border: 1px solid gold;*/
+    margin-bottom: .2rem;
+}
+
+.content .content-right .right-bottom {
+    width: 100%;
+    height: 3.2rem;
+    /*border: 1px solid gold;*/
+}
+
+.content .content-right .right-bottom .right-bottom-t {
+    /*margin-top: .8rem;*/
+    width: 100%;
+    height: 2.8rem;
+    /*height: calc(100% - 1.6rem);*/
+    /*border: 1px solid red;*/
+}
+
+.content .content-right .right-bottom .right-bottom-t .b-left {
+    float: left;
+    width: 33.3%;
+    height: 100%;
+    text-align: center;
+}
+
+.content .content-right .right-bottom .right-bottom-t .b-cent {
+    float: left;
+    width: 33.3%;
+    height: 100%;
+}
+
+.content .content-right .right-bottom .right-bottom-t .b-right {
+    float: left;
+    width: 33.3%;
+    height: 100%;
+}
+
+
+
+.gun {
+    /* width: 100%;*/
+    /*margin: 20px;*/
+}
+
+.gun span {
+    display: block;
+    float: left;
+    height: .2rem;
+    width: 33%;
+    /*background: red;*/
+    /*margin: 15px 10px 10px 10px;*/
+    /*padding: 20px;*/
+    text-align: center;
+    font-size: 0.14rem;
+    font-weight: 600;
+    color: #61d2f7;
+    text-align: center;
+    margin-bottom: .1rem;
+}
+
+#FontScroll {
+    width: 100%;
+    height: 2.3rem;
+    overflow: hidden;
+    /*float: left;*/
+    margin-top: .1rem;
+    /*margin: 0 5%;*/
+    /*margin-left: 50px;*/
+
+    /*background: gold;*/
+
+}
+
+#FontScroll ul li {
+    height: .32rem;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    line-height: .32rem;
+    /*border-bottom: 1px dashed #404040;*/
+    /*width:33.3%;*/
+    overflow: hidden;
+    font-size: 0.14rem;
+    border-bottom: 1px dashed #404040;
+    /*width:33.3%;*/
+
+
+    /*background: red;
+    margin: 0 2%;*/
+
+}
+
+#FontScroll ul li:nth-child(1) {
+    /*background-color: #072951;*/
+    box-shadow: -10px 0px 15px #034c6a inset,
+        /*左边阴影*/
+        10px 0px 15px #034c6a inset;
+
+}
+
+#FontScroll ul li:hover {
+    box-shadow: -10px 0px 15px #034c6a inset,
+        /*左边阴影*/
+        10px 0px 15px #034c6a inset;
+    cursor: pointer;
+}
+
+.fontInner span {
+    display: inline-block;
+    /*float: left;*/
+    /*height: 20px;*/
+    width: 31%;
+    color: #ffffff;
+
+    /*background: red;*/
+
+}
+
+.fontInner span b {
+    display: inline-block;
+    width: .75rem;
+    height: .2rem;
+    /*border-radius: 0.03rem;*/
+    color: #ffffff;
+    line-height: .2rem;
+    font-size: .1rem;
+}
+
+/*#FontScroll ul li:nth-child(1) .fontInner span b{
+    background: #EB6841
+
+}*/
+
+#FontScroll ul li:nth-child(1) .fontInner span b {
+    background: #FE4365
+}
+
+#FontScroll ul li:nth-child(2) .fontInner span b {
+    background: #3FB8AF
+}
+
+#FontScroll ul li:nth-child(3) .fontInner span b {
+    background: #83AF9B
+}
+
+#FontScroll ul li .fontInner span b {
+    background: #C8C8A9
+}
+
+/*#FontScroll ul li:nth-child(8n-4) .fontInner span b{ background: #20a8fe }
+#FontScroll ul li:nth-child(8n-3) .fontInner span b{ background: #EB6841 }
+#FontScroll ul li:nth-child(8n-2) .fontInner span b{ background: #3FB8AF }
+#FontScroll ul li:nth-child(8n-1) .fontInner span b{ background: #FE4365 }
+#FontScroll ul li:nth-child(8n-5) .fontInner span b{ background: #FC9D9A }
+#FontScroll ul li:nth-child(8n-6) .fontInner span b{ background: #EDC951 }
+#FontScroll ul li:nth-child(8n-7) .fontInner span b{ background: #C8C8A9 }
+#FontScroll ul li:nth-child(8n) .fontInner span b{ background: #83AF9B }
+#FontScroll ul li:first-child .fontInner span b{ background: #036564 }
+#FontScroll ul li:last-child .fontInner span b{ background: #3299BB }*/

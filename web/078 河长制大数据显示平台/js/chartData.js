@@ -2,7 +2,7 @@
  * Created by Administrator on 2017/5/17.
  */
 // 营销分析
-//
+
 // 门票渠道饼图分析
 $(function(){
     var myChart = echarts.init($(".dataLeft01Conentup02")[0]);

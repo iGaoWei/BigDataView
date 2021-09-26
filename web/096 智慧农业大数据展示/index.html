@@ -1,0 +1,399 @@
+<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>智慧农业大数据展示</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function() {
+            $('.myscroll').myScroll({
+                speed: 60, //数值越大，速度越慢
+                rowHeight: 38 //li的高度
+            });
+        })
+
+        $(document).ready(function() {
+            var whei = $(window).width()
+            $("html").css({
+                fontSize: whei / 22
+            });
+            $(window).resize(function() {
+                var whei = $(window).width();
+                $("html").css({
+                    fontSize: whei / 22
+                })
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="main">
+
+        <!--头部-->
+        <div class="header">
+            <div class="header-left" id="time"></div>
+            <div class="header-cen">
+                <h1>智慧农业大数据展示</h1>
+            </div>
+            <div class="header-right"></div>
+        </div>
+
+        <!--中间-->
+        <div class="content">
+            <!--左边-->
+            <div class="content-left fl">
+                <!--左上-->
+                <div class="left-top">
+                    <div class="title">
+                        <span>基本信息</span>
+                    </div>
+                    <div class="list">
+                        <p>托各地丰富的无公害、应季的果蔬资源、海鲜资源、山地及海域资源以及农村特色人文资源而搭建，集优质资源整合、优化、流通于一体，涵盖有机蔬果产品、特色平价海鲜、农村生态人文旅游，更多模板关注公众号【DreamCoders】,回复‘BigDataView’免费获取</p>
+                        <ul>
+                            <li>建筑面积：1168亩</li>
+                            <li>农户总数：867户</li>
+                            <li>人口总数：13万</li>
+                            <li>年总产值：680万</li>
+                            <li>年总产值：4651万</li>
+                            <li>年总产值：4546万</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--左中-->
+                <div class="left-center">
+                    <div class="title">
+                        <span>蔬菜类别</span>
+                    </div>
+                    <div class="allnav" id="ceshi"></div>
+                </div>
+                <!--左下-->
+                <div class="left-bottom">
+                    <div class="title">
+                        <span>产量/种植面积</span>
+                    </div>
+                    <div class="allnav" id="ceshi2"></div>
+                </div>
+            </div>
+            <!--中间-->
+            <div class="content-center fl">
+                <!--头部-->
+                <div class="center-top">
+                    <div class="top-title">
+                        <ul>
+                            <li>
+                                <p>种植基地</p>
+                                <span>3</span>
+                                <span>6</span>
+                                <span>5</span>
+                                <b>个</b>
+                            </li>
+                            <li>
+                                <p>已接入</p>
+                                <span>8</span>
+                                <span>3</span>
+                                <b>%</b>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="top-bottom">
+                        <div class="allnav" id="ceshi8"></div>
+                    </div>
+
+                </div>
+                <!--底部-->
+                <div class="center-bottom">
+                    <div class="bottom-left fl">
+                        <div class="allnav" id="ceshi6"></div>
+                    </div>
+                    <div class="bottom-right fr">
+                        <div class="allnav" id="ceshi7" style="width: 100%;height: 100%;"></div>
+                    </div>
+                </div>
+            </div>
+            <!--右边-->
+            <div class="content-right fr">
+                <!--右上-->
+                <div class="right-top">
+                    <!--选项卡内容-->
+                    <div id="tab_header">
+                        <ul>
+                            <li class="selected">商铺信息</li>
+                            <li>基地信息</li>
+                        </ul>
+                    </div>
+                    <!--内容-->
+                    <div id="tab_content">
+                        <div class="dom" style="display: block">
+                            <ul>
+                                <li>
+                                    <p>座收租金</p>
+                                    <span>50万</span>
+                                    <label>元</label>
+                                </li>
+                                <li>
+                                    <p>座收租金</p>
+                                    <span>50万</span>
+                                    <label>元</label>
+                                </li>
+                                <li>
+                                    <p>座收租金</p>
+                                    <span>50万</span>
+                                    <label>元</label>
+                                </li>
+                            </ul>
+                            <div class="list-t">
+                                <ul>
+                                    <li>
+                                        <span>50万</span>
+                                        <p>商铺</p>
+                                    </li>
+                                    <li>
+                                        <span>50万</span>
+                                        <p>商铺</p>
+                                    </li>
+                                    <li>
+                                        <span>50万</span>
+                                        <p>商铺</p>
+                                    </li>
+                                    <li>
+                                        <span>50万</span>
+                                        <p>商铺</p>
+                                    </li>
+                                    <li>
+                                        <span>50万</span>
+                                        <p>商铺</p>
+                                    </li>
+                                    <li>
+                                        <span>50万</span>
+                                        <p>商铺</p>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="dom" style="display: none">
+                            <div class="listStyle">
+
+                                <span>大棚：<strong>560</strong>个</span>
+                                <span>供应企业：<strong>36</strong>家</span>
+                                <span>经销商：<strong>540</strong>个</span>
+                                <span>供应链：<strong>15</strong>条</span>
+                                <span>蔬菜加工基地：<strong>20</strong>个</span>
+                                <span>售后卸载：<strong>29</strong>家</span>
+                                <span>冷藏基地：<strong>10</strong>个</span>
+                                <span>冷藏车：<strong>120</strong>台</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--选项卡内容-->
+                </div>
+                <!--右中-->
+                <div class="right-center">
+                    <div class="title">
+                        <span>销量排行</span>
+                    </div>
+
+                    <div class="echart wenzi">
+                        <div class="gun">
+                            <span>名称</span>
+                            <span>同比</span>
+                            <span>销量</span>
+                        </div>
+                        <div id="FontScroll" class="myscroll">
+                            <ul>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span>
+                                            <b> 1.辣椒</b>
+                                        </span>
+                                        <span>2.3%</span>
+                                        <span>45顿</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span>
+                                            <b>2.白菜</b>
+                                        </span>
+                                        <span>2.2%</span>
+                                        <span>44.5顿</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span>
+                                            <b>3.茄子</b>
+                                        </span>
+                                        <span>2.15%</span>
+                                        <span>44.3顿</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span>
+                                            <b>4.莴笋</b>
+                                        </span>
+                                        <span>2.1%</span>
+                                        <span>43.5顿</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span>
+                                            <b>5.洋芋</b>
+                                        </span>
+                                        <span>2%</span>
+                                        <span>43顿</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span>
+                                            <b>6.藕</b>
+                                        </span>
+                                        <span>1.95%</span>
+                                        <span>42.6顿</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span>
+                                            <b>7.豌豆</b>
+                                        </span>
+                                        <span>1.93%</span>
+                                        <span>42.3顿</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span>
+                                            <b>8.玉米</b>
+                                        </span>
+                                        <span>1.9%</span>
+                                        <span>42顿</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span>
+                                            <b>9.西红柿</b>
+                                        </span>
+                                        <span>1.8%</span>
+                                        <span>41顿</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fontInner clearfix">
+                                        <span>
+                                            <b>10.西红柿</b>
+                                        </span>
+                                        <span>1.8%</span>
+                                        <span>41顿</span>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--右下-->
+                <div class="right-bottom">
+                    <div class="title">
+                        <span>蔬菜成交价</span>
+                    </div>
+                    <div class="right-bottom-t">
+                        <div class="b-left" id="ceshi3"></div>
+                        <div class="b-cent" id="ceshi4"></div>
+                        <div class="b-right" id="ceshi5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <!--<script src="js/data01.js"></script>-->
+    <!--<script src="js/mapIndex.js"></script>-->
+
+
+    <script src="js/echart.js"></script>
+    <script src="js/fontscroll.js"></script>
+    <script src="js/china.js"></script>
+
+
+
+
+
+    <script>
+        //顶部时间
+        function getTime() {
+            var myDate = new Date();
+            var myYear = myDate.getFullYear(); //获取完整的年份(4位,1970-????)
+            var myMonth = myDate.getMonth() + 1; //获取当前月份(0-11,0代表1月)
+            var myToday = myDate.getDate(); //获取当前日(1-31)
+            var myDay = myDate.getDay(); //获取当前星期X(0-6,0代表星期天)
+            var myHour = myDate.getHours(); //获取当前小时数(0-23)
+            var myMinute = myDate.getMinutes(); //获取当前分钟数(0-59)
+            var mySecond = myDate.getSeconds(); //获取当前秒数(0-59)
+            var week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            var nowTime;
+
+            nowTime = myYear + '-' + fillZero(myMonth) + '-' + fillZero(myToday) + '&nbsp;&nbsp;' + fillZero(myHour) + ':' + fillZero(myMinute) + ':' + fillZero(mySecond) + '&nbsp;&nbsp;' + week[myDay] + '&nbsp;&nbsp;';
+            //console.log(nowTime);
+            $('#time').html(nowTime);
+        };
+
+        function fillZero(str) {
+            var realNum;
+            if (str < 10) {
+                realNum = '0' + str;
+            } else {
+                realNum = str;
+            }
+            return realNum;
+        }
+        setInterval(getTime, 1000);
+    </script>
+    <script>
+        $(function() {
+            var allLis = document.getElementById("tab_header").getElementsByTagName("li");
+            var allDom = document.getElementById("tab_content").getElementsByClassName("dom");
+
+            // console.log(allLis, allDom);
+
+            // 2. 遍历监听
+            for (var i = 0; i < allLis.length; i++) {
+                var li = allLis[i];
+                li.index = i;
+
+                li.onclick = function() {
+                    console.log(i);
+                    for (var j = 0; j < allLis.length; j++) {
+                        allLis[j].className = '';
+                        allDom[j].style.display = 'none';
+                    }
+
+                    this.className = 'selected';
+                    allDom[this.index].style.display = 'block';
+
+                }
+            }
+        })
+    </script>
+
+
+</body>
+
+</html>
