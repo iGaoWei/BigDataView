@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>程序员数据可视化大屏展示</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/myMap.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>程序员数据可视化大屏展示</h1>
+        <div class="showTime">当前时间：2021年8月<span></span></div>
+    </header>
+    <section class="mainbox">
+        <div class="column">
+            <div class="panel bar">
+                <h2>
+                    柱状图-各行业程序员数量 <a href="javascript:;">2021</a>
+                    <a href="javacript:;"> 2020</a>
+                </h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line">
+                <h2>折线图-学习变化</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel pie">
+                <h2>饼形图-工程师年龄分布</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="no">
+                <div class="no-hd">
+                    <ul>
+                        <li>225811</li>
+                        <li>104563</li>
+                    </ul>
+                </div>
+                <div class="no-bd">
+                    <ul>
+                        <li>程序员需求人数</li>
+                        <li>程序员供应人数</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="map">
+                <div class="chart"></div>
+                <div class="map1"></div>
+                <div class="map2"></div>
+                <div class="map3"></div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="panel bar1">
+                <h2>柱状图-开发技能</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line1">
+                <h2>折线图-公司人员流动</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel pie1">
+                <h2>饼形图-各地区程序员占比</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/china.js"></script>
+    <script src="js/myMap.js"></script>
+
+    <script>
+        (function(fn) {
+            fn();
+            setInterval(fn, 1000);
+        })(function() {
+            var dt = new Date();
+            document.querySelector(".showTime span").innerHTML =
+                dt.getDate() + "日-" +
+                dt.getHours() + "时" +
+                dt.getMinutes() + "分" +
+                dt.getSeconds() + "秒";
+        });
+    </script>
+
+
+</body>
+
+</html>
