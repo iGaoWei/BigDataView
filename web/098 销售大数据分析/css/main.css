@@ -1,0 +1,333 @@
+body {
+    background: url("../img/bg.jpg") no-repeat center top #0b1530;
+    background-size: 100% auto;
+    width: 1920px;
+}
+
+.header {}
+
+.header .title {
+    font-size: 40px;
+    text-align: center;
+    color: #ffffff;
+    height: 90px;
+    line-height: 90px;
+}
+
+.main {
+    padding: 0 21px;
+    margin-top: 15px;
+}
+
+.main .box.bg {
+    background: url("../img/box-bg.png") no-repeat center top;
+    background-size: 100% 100%;
+}
+
+.main .box.bg-title {
+    background: url("../img/box-bg-title.png") no-repeat center top;
+    background-size: 100% 100%;
+}
+
+.main .box.center-top-bg {
+    background: url("../img/box-bg-center-top.png") no-repeat center top;
+    background-size: 100% 100%;
+    height: 624px;
+}
+
+.main .box.center-bottom-bg {
+    background: url("../img/box-bg-center-bottom.jpg") no-repeat center top;
+    background-size: 100% 100%;
+}
+
+.main .box.right-bottom-bg {
+    background: url("../img/box-bg-right-bottom.png") no-repeat center top;
+    background-size: 100% 100%;
+}
+
+.main .box .title {
+    font-size: 24px;
+    text-align: center;
+    color: #fefeff;
+    height: 49px;
+    line-height: 49px;
+}
+
+.main .main-left {
+    width: 499px;
+}
+
+.main .main-center {
+    width: 840px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.main .main-right {
+    width: 499px;
+}
+
+/* 投诉排名 */
+.main .main-left .ranking {}
+
+.main .main-left .ranking .title2 {
+    color: #ffffff;
+    font-size: 29px;
+    padding: 25px 0 0 15px;
+}
+
+.main .main-left .ranking .content {
+    padding: 30px 20px;
+}
+
+.main .main-left .ranking .content ul li {
+    height: 22px;
+    line-height: 22px;
+    margin-top: 35px;
+}
+
+.main .main-left .ranking .content ul li .label {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.main .main-left .ranking .content ul li .percentage {
+    color: #0de0e5;
+    font-size: 16px;
+}
+
+.main .main-center {}
+
+.main .main-center .center-bottom {
+    margin-top: 11px;
+}
+
+.main .main-center .center-bottom .title2 {
+    height: 50px;
+    line-height: 50px;
+    color: #91a1e0;
+    font-size: 22px;
+    padding-left: 15px;
+}
+
+.main .main-center .center-bottom .content thead {
+    height: 38px;
+    line-height: 38px;
+    color: #ffffff;
+    background-color: #1759c7;
+    font-size: 18px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.main .main-center .center-bottom .content tr td {
+    height: 38px;
+    line-height: 38px;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.main .main-center .center-bottom .content tr:nth-of-type(odd) {
+    background: #142960;
+}
+
+/*奇数行*/
+.main .main-center .center-bottom .content tr:nth-of-type(even) {
+    background: #163c87;
+}
+
+/*偶数行*/
+
+
+/* 3D旋转缺素材，暂搁置，有兴趣的可以在html页面中放开 */
+.ball-box {
+    width: 377px;
+    height: 395px;
+    margin: 0 auto;
+    padding-top: 64px;
+    /* width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -150px 0 0 -150px; */
+    -webkit-perspective-origin: 50% 50%;
+    -moz-perspective-origin: 50% 50%;
+    -ms-perspective-origin: 50% 50%;
+    -o-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%;
+    -webkit-perspective: 3000px;
+    -moz-perspective: 3000px;
+    -ms-perspective: 3000px;
+    -o-perspective: 3000px;
+    perspective: 3000px;
+}
+
+@-webkit-keyframes rotate3d {
+    0% {
+        -webkit-transform: rotateZ(0) rotateY(0deg);
+        -moz-transform: rotateZ(0) rotateY(0deg);
+        -ms-transform: rotateZ(0) rotateY(0deg);
+        -o-transform: rotateZ(0) rotateY(0deg);
+        transform: rotateZ(0) rotateY(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotateZ(0) rotateY(360deg);
+        -moz-transform: rotateZ(0) rotateY(360deg);
+        -ms-transform: rotateZ(0) rotateY(360deg);
+        -o-transform: rotateZ(0) rotateY(360deg);
+        transform: rotateZ(0) rotateY(360deg);
+    }
+}
+
+@-moz-keyframes rotate3d {
+    0% {
+        -webkit-transform: rotateZ(0) rotateY(0deg);
+        -moz-transform: rotateZ(0) rotateY(0deg);
+        -ms-transform: rotateZ(0) rotateY(0deg);
+        -o-transform: rotateZ(0) rotateY(0deg);
+        transform: rotateZ(0) rotateY(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotateZ(0) rotateY(360deg);
+        -moz-transform: rotateZ(0) rotateY(360deg);
+        -ms-transform: rotateZ(0) rotateY(360deg);
+        -o-transform: rotateZ(0) rotateY(360deg);
+        transform: rotateZ(0) rotateY(360deg);
+    }
+}
+
+@-ms-keyframes rotate3d {
+    0% {
+        -webkit-transform: rotateZ(0) rotateY(0deg);
+        -moz-transform: rotateZ(0) rotateY(0deg);
+        -ms-transform: rotateZ(0) rotateY(0deg);
+        -o-transform: rotateZ(0) rotateY(0deg);
+        transform: rotateZ(0) rotateY(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotateZ(0) rotateY(360deg);
+        -moz-transform: rotateZ(0) rotateY(360deg);
+        -ms-transform: rotateZ(0) rotateY(360deg);
+        -o-transform: rotateZ(0) rotateY(360deg);
+        transform: rotateZ(0) rotateY(360deg);
+    }
+}
+
+@-o-keyframes rotate3d {
+    0% {
+        -webkit-transform: rotateZ(0) rotateY(0deg);
+        -moz-transform: rotateZ(0) rotateY(0deg);
+        -ms-transform: rotateZ(0) rotateY(0deg);
+        -o-transform: rotateZ(0) rotateY(0deg);
+        transform: rotateZ(0) rotateY(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotateZ(0) rotateY(360deg);
+        -moz-transform: rotateZ(0) rotateY(360deg);
+        -ms-transform: rotateZ(0) rotateY(360deg);
+        -o-transform: rotateZ(0) rotateY(360deg);
+        transform: rotateZ(0) rotateY(360deg);
+    }
+}
+
+@keyframes rotate3d {
+    0% {
+        -webkit-transform: rotateZ(0) rotateY(0deg);
+        -moz-transform: rotateZ(0) rotateY(0deg);
+        -ms-transform: rotateZ(0) rotateY(0deg);
+        -o-transform: rotateZ(0) rotateY(0deg);
+        transform: rotateZ(0) rotateY(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotateZ(0) rotateY(360deg);
+        -moz-transform: rotateZ(0) rotateY(360deg);
+        -ms-transform: rotateZ(0) rotateY(360deg);
+        -o-transform: rotateZ(0) rotateY(360deg);
+        transform: rotateZ(0) rotateY(360deg);
+    }
+}
+
+.ball {
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-animation: rotate3d 30s linear infinite;
+    -moz-animation: rotate3d 30s linear infinite;
+    -ms-animation: rotate3d 30s linear infinite;
+    -o-animation: rotate3d 30s linear infinite;
+    animation: rotate3d 30s linear infinite;
+}
+
+/* .ball:after{
+    display: block;
+    content: '';
+    width: 1px;
+    height: 500px;
+    background-color: #ff0;
+    position: absolute;
+    top: -100px;
+    left: 150px;
+} */
+.ball>div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../img/earth.png") no-repeat;
+    /* border: 1px #ffffff solid;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%; */
+}
+
+.ball .line1 {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.ball .line2 {
+    -webkit-transform: rotateY(36deg);
+    -moz-transform: rotateY(36deg);
+    -ms-transform: rotateY(36deg);
+    -o-transform: rotateY(36deg);
+    transform: rotateY(36deg);
+}
+
+.ball .line3 {
+    -webkit-transform: rotateY(72deg);
+    -moz-transform: rotateY(72deg);
+    -ms-transform: rotateY(72deg);
+    -o-transform: rotateY(72deg);
+    transform: rotateY(72deg);
+}
+
+.ball .line4 {
+    -webkit-transform: rotateY(108deg);
+    -moz-transform: rotateY(108deg);
+    -ms-transform: rotateY(108deg);
+    -o-transform: rotateY(108deg);
+    transform: rotateY(108deg);
+}
+
+.ball .line1 {
+    -webkit-transform: rotateY(144deg);
+    -moz-transform: rotateY(144deg);
+    -ms-transform: rotateY(144deg);
+    -o-transform: rotateY(144deg);
+    transform: rotateY(144deg);
+}

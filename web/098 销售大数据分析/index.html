@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>销售大数据分析</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="title">
+            <!-- 销售大数据分析 -->
+        </div>
+    </div>
+    <!-- <div class="menu"> -->
+    <!-- 预留菜单位置 -->
+    <!-- </div> -->
+    <div class="main clearfix">
+        <div class="main-left fleft">
+            <div class="box bg-title">
+                <div class="title text-center">订单品类占比</div>
+                <div class="content" style="height: 415px;">
+                    <div id="chart1" style="width: 100%; height: 400px;"></div>
+                </div>
+            </div>
+            <div class="box bg ranking mt30">
+                <div class="title2">投诉排名</div>
+                <div class="content" style="height: 334px; overflow: hidden;">
+                    <div id="chart2" style="width: 100%; height: 430px;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="main-center fleft">
+            <div class="box center-top-bg">
+                <div id="chart3" style="width: 100%; height: 620px;"></div>
+                <!-- <div class="ball-box">
+                    <div class="ball">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                        <div class="line4"></div>
+                        <div class="line5"></div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="box center-bottom center-bottom-bg">
+                <div class="title2 text-left">商家订单</div>
+                <div class="content">
+                    <table width="100%">
+                        <thead>
+                            <tr>
+                                <th>排名</th>
+                                <th>商家名称</th>
+                                <th>商品种类</th>
+                                <th>消费占比</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>阿斯丹丹</td>
+                                <td>服装</td>
+                                <td>20%</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>阿斯丹丹</td>
+                                <td>化妆品</td>
+                                <td>10%</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>阿斯丹丹</td>
+                                <td>小吃</td>
+                                <td>10%</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>阿斯丹丹</td>
+                                <td>生活用品</td>
+                                <td>10%</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>阿斯丹丹</td>
+                                <td>美妆用品</td>
+                                <td>15%</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>孩子王</td>
+                                <td>儿童用品</td>
+                                <td>19%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="main-right fright">
+
+            <div class="box bg-title">
+                <div class="title text-center">投诉热门关键</div>
+                <div class="content" style="height: 360px; overflow: hidden; padding:0 13px;">
+                    <div id="chart4" style="width: 100%; height: 340px;"></div>
+                </div>
+            </div>
+
+            <div class="box right-bottom-bg mt30">
+                <div class="content" style="height: 520px;overflow: hidden; overflow: hidden; padding:0 13px;">
+                    <div id="chart5" style="width: 100%; height: 515px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/world.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
