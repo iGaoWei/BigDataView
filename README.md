@@ -367,6 +367,8 @@ git clone https://github.com/iGaoWei/BigDataView.git
 ##### 098 销售大数据分析 [在线预览](https://igaowei.github.io/BigDataView/web/098%20%E9%94%80%E5%94%AE%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90)
 <img src="https://img-blog.csdnimg.cn/20210926171347855.gif" width="100%" />
 
+##### 099 英雄联盟LPL比赛数据可视化 [在线预览](https://igaowei.github.io/BigDataView/web/099%20%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9FLPL%E6%AF%94%E8%B5%9B%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96)
+<img src="https://img-blog.csdnimg.cn/img_convert/41f5edfa54f89f14795eaaa15540e4b6.gif" width="100%" />
 
 
 

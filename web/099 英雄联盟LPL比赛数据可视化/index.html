@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>英雄联盟LPL比赛数据可视化 BY:Java_S</title>
+    <link rel="shortcut icon" href="lol.ico" type="image/x-icon">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+    <script type="text/javascript" src="js/jquery.liMarquee.js"></script>
+    <script type="text/javascript" src="js/jquery.cxselect.min.js"></script>
+    <link rel="stylesheet" href="css/comon0.css">
+</head>
+
+<body>
+    <div style="background:#000d4a url(img/bg.png) center top;">
+        <div class="loading">
+            <div class="loadbox"> <img src="img/loading.gif"> 页面加载中... </div>
+        </div>
+        <div class="back"></div>
+        <div class="head">
+            <div class="JavaS"><a href="https://gitee.com/iGaoWei/big-data-view" target="_blank">Java_S</a></div>
+            <div class="weather"><span id="showTime"></span></div>
+            <a href="https://gitee.com/iGaoWei/big-data-view" target="_blank">
+                <h1>英雄联盟LPL比赛数据可视化</h1>
+            </a>
+
+        </div>
+        <script>
+            var t = null;
+            t = setTimeout(time, 1000); /*开始运行*/
+            function time() {
+                clearTimeout(t); /*清除定时器*/
+                dt = new Date();
+                var y = dt.getFullYear();
+                var mt = dt.getMonth() + 1;
+                var day = dt.getDate();
+                var h = dt.getHours();
+                var m = dt.getMinutes();
+                var s = dt.getSeconds();
+                document.getElementById("showTime").innerHTML = y + "年" + mt + "月" + day + "日" + h + "时" + m + "分" + s + "秒";
+                t = setTimeout(time, 1000);
+            }
+        </script>
+        <div class="mainbox">
+            <ul class="clearfix">
+                <li>
+                    <div class="boxall" style="height:400px;">
+                        <div class="alltitle">个人数据堆叠图</div>
+                        <div class="navboxall" id="echart5"></div>
+                    </div>
+                    <div class="boxall" style="height:260px;">
+                        <div class="alltitle">英雄数据轮播</div>
+                        <div class="navboxall">
+                            <div class="wraptit">
+                                <span>英雄名</span><span>出场次数</span><span>Pick比率</span><span>胜率</span>
+                            </div>
+                            <div class="wrap">
+                                <ul>
+                                    <li>
+                                        <p><span>寒冰射手</span><span>205</span><span>56%</span><span>51%</span></p>
+                                    </li>
+                                    <li>
+                                        <p><span>残月之肃</span><span>159</span><span>47%</span><span>57%</span></p>
+                                    </li>
+                                    <li>
+                                        <p><span>深海泰坦</span><span>164</span><span>38%</span><span>53%</span></p>
+                                    </li>
+                                    <li>
+                                        <p><span>探险家</span><span>137</span><span>37%</span><span>50%</span></p>
+                                    </li>
+                                    <li>
+                                        <p><span>法外狂徒</span><span>135</span><span>36%</span><span>49%</span></p>
+                                    </li>
+                                    <li>
+                                        <p><span>盲僧</span><span>135</span><span>36%</span><span>53%</span></p>
+                                    </li>
+                                    <li>
+                                        <p><span>巨魔之王</span><span>124</span><span>33%</span><span>45%</span></p>
+                                    </li>
+                                    <li>
+                                        <p><span>不灭狂雷</span><span>124</span><span>33%</span><span>45%</span></p>
+                                    </li>
+                                    <li>
+                                        <p><span>山隐之焰</span><span>122</span><span>33%</span><span>47%</span></p>
+                                    </li>
+                                    <li>
+                                        <p><span>欧豪</span><span>109</span><span>29%</span><span>43%</span></p>
+                                    </li>
+                                    <li>
+                                        <p><span>暗黑元首</span><span>102</span><span>27%</span><span>53%</span></p>
+                                    </li>
+                                    <li>
+                                        <p><span>齐天大圣</span><span>90</span><span>24%</span><span>52%</span></p>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="boxall" style="height:260px;">
+                        <div class="alltitle">2020LPL夏季赛总冠军</div>
+
+                        <div class="navboxall" id="echart1"></div>
+                    </div>
+                </li>
+                <li>
+
+                    <div class="boxall" style="height:230px">
+                        <div class="clearfix navboxall" style="height: 100%">
+
+                            <div class="pulll_left zhibiao">
+                                <div class="zb1"><span>TES<br>胜率最高</span>
+                                    <div id="zb1"></div>
+                                </div>
+                                <div class="zb2"><span>JDG<br>击杀最高</span>
+                                    <div id="zb2"></div>
+                                </div>
+                                <div class="zb3"><span>SN<br>插眼最多</span>
+                                    <div id="zb3"></div>
+                                </div>
+                            </div>
+                            <div class="pulll_right zhibiao ">
+                                <div class="zb4"><span>TESknight<br>击杀最多</span>
+                                    <div id="zb4"></div>
+                                </div>
+                                <div class="zb5"><span>IGTheShy<br>死亡最多</span>
+                                    <div id="zb5"></div>
+                                </div>
+                                <div class="zb6"><span>V5y4<br>KDA最高</span>
+                                    <div id="zb6"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="boxall" style="height:350px">
+                        <div class="alltitle">战队胜负数据</div>
+                        <div class="navboxall" id="echart4"></div>
+                    </div>
+
+                    <div class="boxall" style="height:340px">
+                        <div class="alltitle">个人击杀数据</div>
+                        <div class="navboxall" id="echart3"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="boxall" style="height:300px">
+                        <div class="alltitle">战队排行榜</div>
+                        <div class="navboxall">
+                            <table class="table1" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr>
+                                        <th scope="col" class="toptop">排名</th>
+                                        <th scope="col">战队</th>
+                                        <th scope="col">出场次数</th>
+                                        <th scope="col">胜率</th>
+                                    </tr>
+                                    <tr>
+                                        <td><span>1</span></td>
+                                        <td>TES</td>
+                                        <td>45<br></td>
+                                        <td>73%<br></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>2</span></td>
+                                        <td>JDG</td>
+                                        <td>48</td>
+                                        <td>68%</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><span>3</span></td>
+                                        <td>V5</td>
+                                        <td>49</td>
+                                        <td>61%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>4</span></td>
+                                        <td>IG</td>
+                                        <td>44</td>
+                                        <td>59%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>5</span></td>
+                                        <td>SN</td>
+                                        <td>52</td>
+                                        <td>59%</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="boxall" style="height: 300px">
+                        <div class="alltitle">个人排行榜</div>
+                        <div class="navboxall">
+                            <table class="table1" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr>
+                                        <th scope="col" class="toptop">排名</th>
+                                        <th scope="col">队员</th>
+                                        <th scope="col">位置</th>
+                                        <th scope="col">总击杀</th>
+                                    </tr>
+                                    <tr>
+                                        <td><span>1</span></td>
+                                        <td>TESknight</td>
+                                        <td>中单<br></td>
+                                        <td>239<br></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>2</span></td>
+                                        <td>WEJiumeng</td>
+                                        <td>ADC</td>
+                                        <td>205</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><span>3</span></td>
+                                        <td>TESJackeyLove</td>
+                                        <td>ADC</td>
+                                        <td>205</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>4</span></td>
+                                        <td>JDGLokeN</td>
+                                        <td>ADC</td>
+                                        <td>205</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>5</span></td>
+                                        <td>LGDxiye</td>
+                                        <td>中单</td>
+                                        <td>191</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div class="boxall" style="height:320px">
+                        <div class="alltitle">MVP种子选手</div>
+                        <div class="navboxall" id="echart2"></div>
+                    </div>
+
+
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <script>
+        $(function() {
+            $('.wrap,.adduser').liMarquee({
+                direction: 'up',
+                /*向上滚动*/
+                runshort: false,
+                /*内容不足时不滚动*/
+                scrollamount: 20 /*速度*/
+            });
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>
