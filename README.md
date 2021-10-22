@@ -370,6 +370,9 @@ git clone https://github.com/iGaoWei/BigDataView.git
 ##### 099 英雄联盟LPL比赛数据可视化 [在线预览](https://igaowei.github.io/BigDataView/web/099%20%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9FLPL%E6%AF%94%E8%B5%9B%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96)
 <img src="https://img-blog.csdnimg.cn/img_convert/41f5edfa54f89f14795eaaa15540e4b6.gif" width="100%" />
 
+##### 100 新型冠状肺炎实时监测大屏 [在线预览](https://igaowei.github.io/BigDataView/web/099%20%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9FLPL%E6%AF%94%E8%B5%9B%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96)
+<img src="https://files.catbox.moe/ch8mo2.gif" width="100%" />
+
 
 
 
@@ -389,3 +392,4 @@ git clone https://github.com/iGaoWei/BigDataView.git
 关注公众号，每天分享编程开发相关的技术文章、工具资源、精选课程、视频教程、IT资讯、学习资料等。
 </p>
 </div>
+
