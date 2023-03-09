@@ -14,7 +14,7 @@
 
 
 #### 项目背景
-#####由于自己公司项目里面用到一个数据可视化大屏页面，自己网上各种谷歌百度，发现资源良莠不齐，而且大多数都是收费的，甚至一个页面一收费的那种，前前后后自己不管是付费的还是免费的收集了不少，于是自己打算整理下，免费分享给大家，以免大家再走冤枉路。如果大家有珍藏的好模板，欢迎大家继续补充贡献！！！
+由于自己公司项目里面用到一个数据可视化大屏页面，自己网上各种谷歌百度，发现资源良莠不齐，而且大多数都是收费的，甚至一个页面一收费的那种，前前后后自己不管是付费的还是免费的收集了不少，于是自己打算整理下，免费分享给大家，以免大家再走冤枉路。如果大家有珍藏的好模板，欢迎大家继续补充贡献！！！
 
 
 ```
@@ -52,7 +52,7 @@ git clone https://github.com/iGaoWei/BigDataView.git
 
 4.扫描下方微信小程序码，获取下载地址
 
-<img src="https://img-blog.csdnimg.cn/img_convert/91d266abad01a61f9df9d028164693d9.png" width="30%" />
+<img src="https://mp-3e73bec6-149b-4708-9012-341df2257774.cdn.bspapp.com/cloudstorage/a4004598-c0e3-4fab-a3f6-4ec3d41c174b.jpg" width="30%" />
 </p>
 
 
@@ -370,10 +370,10 @@ git clone https://github.com/iGaoWei/BigDataView.git
 ##### 099 英雄联盟LPL比赛数据可视化 [在线预览](https://igaowei.github.io/BigDataView/web/099%20%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9FLPL%E6%AF%94%E8%B5%9B%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96)
 <img src="https://img-blog.csdnimg.cn/img_convert/41f5edfa54f89f14795eaaa15540e4b6.gif" width="100%" />
 
-##### 100 新型冠状肺炎实时监测大屏 [在线预览](https://igaowei.github.io/BigDataView/web/099%20%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9FLPL%E6%AF%94%E8%B5%9B%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96)
+##### 100 新型冠状肺炎实时监测大屏 [在线预览](https://igaowei.github.io/BigDataView/web/100%20%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E8%82%BA%E7%82%8E%E5%AE%9E%E6%97%B6%E7%9B%91%E6%B5%8B%E5%A4%A7%E5%B1%8F/)
 <img src="https://files.catbox.moe/ch8mo2.gif" width="100%" />
 
-##### 101 校情数据综合分析平台 [在线预览](https://igaowei.github.io/BigDataView/web/099%20%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9FLPL%E6%AF%94%E8%B5%9B%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96)
+##### 101 校情数据综合分析平台 [在线预览](https://igaowei.github.io/BigDataView/web/101%20%E6%A0%A1%E6%83%85%E6%95%B0%E6%8D%AE%E7%BB%BC%E5%90%88%E5%88%86%E6%9E%90%E5%B9%B3%E5%8F%B0/)
 <img src="./preview/101 校情数据综合分析平台.png" width="100%" />
 
 
