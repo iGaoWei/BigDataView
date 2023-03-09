@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>北京XX大学校情数据综合分析平台</title>
+    <link rel="stylesheet" href="./index.css" />
+    <style>
+        header {
+            position: relative;
+            height: 1.25rem;
+            background: none;
+        }
+        header h1 {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body style="font-size: 12px;" marginheight="0">
+<header>
+    <h1>北京XX大学 校情数据综合分析平台</h1>
+    <div class="showTime">
+        2023年3月9日10时58分26秒
+    </div>
+    <script>
+        var t = null;
+        t = setTimeout(time, 1000); //開始运行
+        function time() {
+            clearTimeout(t); //清除定时器
+            dt = new Date();
+            var y = dt.getFullYear();
+            var mt = dt.getMonth() + 1;
+            var day = dt.getDate();
+            var h = dt.getHours(); //获取时
+            var m = dt.getMinutes(); //获取分
+            var s = dt.getSeconds(); //获取秒
+            document.querySelector(".showTime").innerHTML =
+
+                y +
+                "年" +
+                mt +
+                "月" +
+                day +
+                "日" +
+                h +
+                "时" +
+                m +
+                "分" +
+                s +
+                "秒";
+            t = setTimeout(time, 1000); //设定定时器，循环运行
+        }
+    </script>
+</header>
+<section class="mainbox">
+    <div class="column">
+        <div class="panel line1_d">
+            <h2> 男女比例 </h2>
+            <div class="chart" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;">
+                <div style="position: relative; width: 271px; height: 234px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;">
+                    <canvas data-zr-dom-id="zr_0" width="271" height="234" style="position: absolute; left: 0px; top: 0px; width: 271px; height: 234px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+                <div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; background-color: rgb(255, 255, 255); border-width: 1px; border-radius: 4px; color: rgb(102, 102, 102); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(58px, 136px, 0px); border-color: rgb(208, 160, 14); pointer-events: none; visibility: hidden; opacity: 0;">
+                    <div style="margin: 0px 0 0;line-height:1;">
+                        <div style="font-size:14px;color:#666;font-weight:400;line-height:1;">
+                            男女比例
+                        </div>
+                        <div style="margin: 10px 0 0;line-height:1;">
+                            <div style="margin: 0px 0 0;line-height:1;">
+                                <span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#d0a00e;"></span>
+                                <span style="font-size:14px;color:#666;font-weight:400;margin-left:2px">男</span>
+                                <span style="float:right;margin-left:20px;font-size:14px;color:#666;font-weight:900">1,048</span>
+                                <div style="clear:both"></div>
+                            </div>
+                            <div style="clear:both"></div>
+                        </div>
+                        <div style="clear:both"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel line1_b">
+            <h2> 培养层次 </h2>
+            <div class="chart" id="pycc" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;">
+                <div style="position: relative; width: 271px; height: 234px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;">
+                    <canvas data-zr-dom-id="zr_0" width="271" height="234" style="position: absolute; left: 0px; top: 0px; width: 271px; height: 234px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+                <div class=""></div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel line1_c">
+            <h2> 宿舍入住情况 </h2>
+            <div class="chart" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;">
+                <div style="position: relative; width: 271px; height: 234px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;">
+                    <canvas data-zr-dom-id="zr_0" width="271" height="234" style="position: absolute; left: 0px; top: 0px; width: 271px; height: 234px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+                <div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; will-change: transform; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1) 0s, visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1) 0s, transform 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: transparent; border-width: 1px; border-radius: 4px; color: rgb(102, 102, 102); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(81px, 60px, 0px); border-color: rgb(255, 255, 255); pointer-events: none;">
+                    <div style="width: 79px;height: 50px;;color:#fff;position: relative;">
+                        <svg style="position: absolute;top: 50%;left: 50%;transform: translateX(-50%) translateY(-50%);" class="svg" xmlns="http://www.w3.org/2000/svg" width="100" height="71" viewbox="0 0 84 55">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #07172c;
+                                        fill-opacity: 0.8;
+                                        stroke: #a7d8ff;
+                                        stroke-linejoin: round;
+                                        stroke-opacity: 0.2;
+                                        stroke-width: 1px;
+                                        fill-rule: evenodd;
+                                    }
+
+                                </style>
+                            </defs>
+                            <path id="矩形_419" data-name="矩形 419" class="cls-1" d="M266,595h74v50H266V624.046L261,620l5-3.984V595Z" transform="translate(-258.5 -592.5)"></path>
+                        </svg>
+                        <div style="padding: 4px 8px 4px 14px;display: flex;justify-content: center;align-items: center;flex-direction: column;position: relative;z-index: 1;">
+                            <div style="margin-bottom: 4px;width:100%;display:flex;justify-content:space-between;align-items:center;">
+                                <span style="font-size:14px;color:#7ec7ff;">已入住</span>
+                                <span style="font-size:14px;color:#fff;">40</span>
+                            </div>
+                            <div style="width:100%;height:100%;display:flex;justify-content:space-between;align-items:center;">
+                                <span style="font-size:14px;color:#7ec7ff;">未入住</span>
+                                <span style="font-size:14px;color:#fff;">20</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="panel line1_a">
+            <h2> 报告厅预约统计 </h2>
+            <div class="chart" style="height: 2.8rem; margin-top: 0.15rem; left: 0.55rem; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;">
+                <div style="position: relative; width: 271px; height: 219px; padding: 0px; margin: 0px; border-width: 0px;">
+                    <canvas data-zr-dom-id="zr_0" width="271" height="219" style="position: absolute; left: 0px; top: 0px; width: 271px; height: 219px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+                <div class=""></div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+        <div style="display:none" class="panel line2_a">
+            <h2> 报告厅预约统计 </h2>
+            <div class="chart" style="height: 2.8rem; margin-top: 0.15rem; left: 0.55rem; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                <div style="position: relative; width: 0px; height: 218px; padding: 0px; margin: 0px; border-width: 0px;">
+                    <canvas data-zr-dom-id="zr_0" width="0" height="218" style="position: absolute; left: 0px; top: 0px; width: 0px; height: 218px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel line2_b">
+            <h2> 困难认定学院统计 </h2>
+            <div class="chart" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                <div style="position: relative; width: 271px; height: 234px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;">
+                    <canvas data-zr-dom-id="zr_0" width="271" height="234" style="position: absolute; left: 0px; top: 0px; width: 271px; height: 234px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel line1_f">
+            <h2> 请假审批完成率 </h2>
+            <div class="chart" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                <div style="position: relative; width: 271px; height: 234px; padding: 0px; margin: 0px; border-width: 0px;">
+                    <canvas data-zr-dom-id="zr_0" width="271" height="234" style="position: absolute; left: 0px; top: 0px; width: 271px; height: 234px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+        <div style="display:none" class="panel line2_c">
+            <h2> </h2>
+            <div class="chart" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;">
+                <div style="position: relative; width: 0px; height: 234px; padding: 0px; margin: 0px; border-width: 0px;">
+                    <canvas data-zr-dom-id="zr_0" width="0" height="234" style="position: absolute; left: 0px; top: 0px; width: 0px; height: 234px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+                <div class=""></div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="no">
+            <div class="no-bd">
+                <ul>
+                    <li>当前学生总人数</li>
+                </ul>
+            </div>
+            <div class="no-hd">
+                <ul>
+                    <li>1</li>
+                    <li>9</li>
+                    <li>8</li>
+                    <li>2</li>
+                    <li>2</li>
+                </ul>
+            </div>
+        </div>
+        <div class="map">
+            <div class="chart"></div>
+            <div class="map1"></div>
+            <div class="map2"></div>
+            <div class="map3"></div>
+            <a href="https://gitee.com/iGaoWei/big-data-view" class="up">返回控制中心</a>
+        </div>
+    </div>
+    <div class="column">
+        <div class="panel line3_e" style="height: 3rem;">
+            <h2> 学生出勤情况 </h2>
+            <div class="chart" style="height: 2.2rem; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;">
+                <div style="position: relative; width: 574px; height: 172px; padding: 0px; margin: 0px; border-width: 0px;">
+                    <canvas data-zr-dom-id="zr_0" width="574" height="172" style="position: absolute; left: 0px; top: 0px; width: 574px; height: 172px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+                <div class=""></div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel line3_f" style="height: 3rem;">
+            <h2> 师资分布情况 </h2>
+            <div class="chart" style="height: 2.2rem; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;">
+                <div style="position: relative; width: 574px; height: 172px; padding: 0px; margin: 0px; border-width: 0px;">
+                    <canvas data-zr-dom-id="zr_0" width="574" height="172" style="position: absolute; left: 0px; top: 0px; width: 574px; height: 172px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+                <div class=""></div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel line3_b" style="height: 5.575rem;">
+            <h2>学生分布情况</h2>
+            <div class="tablebox">
+                <div class="tbl-header">
+                    <table cellspacing="0" cellpadding="0" border="0">
+                        <thead>
+                        <tr>
+                            <th scope="col" >学院名称</th>
+                            <th scope="col">专业名称</th>
+                            <th scope="col">应届人数</th>
+                            <th scope="col">重修人数</th>
+                            <th scope="col">总人数</th>
+                        </tr>
+                        </thead>
+                        <tbody style="opacity:0;">
+                        <tr>
+                            <td width="50%">动物科学学院</td>
+                            <td>动物科学</td>
+                            <td>258</td>
+                            <td>98</td>
+                            <td>356</td>
+                        </tr>
+                        <tr>
+                            <td>农学院</td>
+                            <td>农学</td>
+                            <td>290</td>
+                            <td>45</td>
+                            <td>335</td>
+                        </tr>
+                        <tr>
+                            <td>林学院</td>
+                            <td>城乡规划</td>
+                            <td>332</td>
+                            <td>35</td>
+                            <td>367</td>
+                        </tr>
+                        <tr>
+                            <td>草原与资源环境学院</td>
+                            <td>农业资源与环境</td>
+                            <td>246</td>
+                            <td>31</td>
+                            <td>277</td>
+                        </tr>
+                        <tr>
+                            <td>机电工程学院</td>
+                            <td>农业电气化与自动化</td>
+                            <td>261</td>
+                            <td>48</td>
+                            <td>309</td>
+                        </tr>
+                        <tr>
+                            <td>水利与土木建筑工程学院</td>
+                            <td>土木工程</td>
+                            <td>283</td>
+                            <td>49</td>
+                            <td>332</td>
+                        </tr>
+                        <tr>
+                            <td>材料科学与艺术设计学院</td>
+                            <td>材料类</td>
+                            <td>270</td>
+                            <td>11</td>
+                            <td>281</td>
+                        </tr>
+                        <tr>
+                            <td>经济管理学院</td>
+                            <td>经济学</td>
+                            <td>264</td>
+                            <td>55</td>
+                            <td>319</td>
+                        </tr>
+                        <tr>
+                            <td>食品科学与工程学院</td>
+                            <td>食品科学与工程</td>
+                            <td>308</td>
+                            <td>51</td>
+                            <td>359</td>
+                        </tr>
+                        <tr>
+                            <td>计算机与信息工程学院</td>
+                            <td>计算机科学与技术</td>
+                            <td>313</td>
+                            <td>32</td>
+                            <td>345</td>
+                        </tr>
+                        <tr>
+                            <td>生命科学学院</td>
+                            <td>生物工程类</td>
+                            <td>255</td>
+                            <td>43</td>
+                            <td>298</td>
+                        </tr>
+                        <tr>
+                            <td>人文社会科学学院</td>
+                            <td>行政管理</td>
+                            <td>298</td>
+                            <td>25</td>
+                            <td>323</td>
+                        </tr>
+                        <tr>
+                            <td>外国语言学院</td>
+                            <td>英语</td>
+                            <td>251</td>
+                            <td>14</td>
+                            <td>265</td>
+                        </tr>
+                        <tr>
+                            <td>理学院</td>
+                            <td>应用化学</td>
+                            <td>283</td>
+                            <td>49</td>
+                            <td>332</td>
+                        </tr>
+                        <tr>
+                            <td>能源与交通工程学院</td>
+                            <td>交通运输</td>
+                            <td>298</td>
+                            <td>25</td>
+                            <td>323</td>
+                        </tr>
+                        <tr>
+                            <td>兽医学院</td>
+                            <td>动物医学</td>
+                            <td>264</td>
+                            <td>55</td>
+                            <td>319</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tbl-body" style="top: -385px;">
+                    <table cellspacing="0" cellpadding="0" border="0">
+                        <thead>
+                        <tr>
+                            <th scope="col">1</th>
+                            <th scope="col">分公司股份寿山福海</th>
+                            <th scope="col">352</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>动物科学学院</td>
+                            <td>动物科学</td>
+                            <td>258</td>
+                            <td>98</td>
+                            <td>356</td>
+                        </tr>
+                        <tr>
+                            <td>农学院</td>
+                            <td>农学</td>
+                            <td>290</td>
+                            <td>45</td>
+                            <td>335</td>
+                        </tr>
+                        <tr>
+                            <td>林学院</td>
+                            <td>城乡规划</td>
+                            <td>332</td>
+                            <td>35</td>
+                            <td>367</td>
+                        </tr>
+                        <tr>
+                            <td>草原与资源环境学院</td>
+                            <td>农业资源与环境</td>
+                            <td>246</td>
+                            <td>31</td>
+                            <td>277</td>
+                        </tr>
+                        <tr>
+                            <td>机电工程学院</td>
+                            <td>农业电气化与自动化</td>
+                            <td>261</td>
+                            <td>48</td>
+                            <td>309</td>
+                        </tr>
+                        <tr>
+                            <td>水利与土木建筑工程学院</td>
+                            <td>土木工程</td>
+                            <td>283</td>
+                            <td>49</td>
+                            <td>332</td>
+                        </tr>
+                        <tr>
+                            <td>材料科学与艺术设计学院</td>
+                            <td>材料类</td>
+                            <td>270</td>
+                            <td>11</td>
+                            <td>281</td>
+                        </tr>
+                        <tr>
+                            <td>经济管理学院</td>
+                            <td>经济学</td>
+                            <td>264</td>
+                            <td>55</td>
+                            <td>319</td>
+                        </tr>
+                        <tr>
+                            <td>食品科学与工程学院</td>
+                            <td>食品科学与工程</td>
+                            <td>308</td>
+                            <td>51</td>
+                            <td>359</td>
+                        </tr>
+                        <tr>
+                            <td>计算机与信息工程学院</td>
+                            <td>计算机科学与技术</td>
+                            <td>313</td>
+                            <td>32</td>
+                            <td>345</td>
+                        </tr>
+                        <tr>
+                            <td>生命科学学院</td>
+                            <td>生物工程类</td>
+                            <td>255</td>
+                            <td>43</td>
+                            <td>298</td>
+                        </tr>
+                        <tr>
+                            <td>人文社会科学学院</td>
+                            <td>行政管理</td>
+                            <td>298</td>
+                            <td>25</td>
+                            <td>323</td>
+                        </tr>
+                        <tr>
+                            <td>外国语言学院</td>
+                            <td>英语</td>
+                            <td>251</td>
+                            <td>14</td>
+                            <td>265</td>
+                        </tr>
+                        <tr>
+                            <td>理学院</td>
+                            <td>应用化学</td>
+                            <td>283</td>
+                            <td>49</td>
+                            <td>332</td>
+                        </tr>
+                        <tr>
+                            <td>能源与交通工程学院</td>
+                            <td>交通运输</td>
+                            <td>298</td>
+                            <td>25</td>
+                            <td>323</td>
+                        </tr>
+                        <tr>
+                            <td>兽医学院</td>
+                            <td>动物医学</td>
+                            <td>264</td>
+                            <td>55</td>
+                            <td>319</td>
+                        </tr>
+                        <tr>
+                            <td>动物科学学院</td>
+                            <td>动物科学</td>
+                            <td>258</td>
+                            <td>98</td>
+                            <td>356</td>
+                        </tr>
+                        <tr>
+                            <td>农学院</td>
+                            <td>农学</td>
+                            <td>290</td>
+                            <td>45</td>
+                            <td>335</td>
+                        </tr>
+                        <tr>
+                            <td>林学院</td>
+                            <td>城乡规划</td>
+                            <td>332</td>
+                            <td>35</td>
+                            <td>367</td>
+                        </tr>
+                        <tr>
+                            <td>草原与资源环境学院</td>
+                            <td>农业资源与环境</td>
+                            <td>246</td>
+                            <td>31</td>
+                            <td>277</td>
+                        </tr>
+                        <tr>
+                            <td>机电工程学院</td>
+                            <td>农业电气化与自动化</td>
+                            <td>261</td>
+                            <td>48</td>
+                            <td>309</td>
+                        </tr>
+                        <tr>
+                            <td>水利与土木建筑工程学院</td>
+                            <td>土木工程</td>
+                            <td>283</td>
+                            <td>49</td>
+                            <td>332</td>
+                        </tr>
+                        <tr>
+                            <td>材料科学与艺术设计学院</td>
+                            <td>材料类</td>
+                            <td>270</td>
+                            <td>11</td>
+                            <td>281</td>
+                        </tr>
+                        <tr>
+                            <td>经济管理学院</td>
+                            <td>经济学</td>
+                            <td>264</td>
+                            <td>55</td>
+                            <td>319</td>
+                        </tr>
+                        <tr>
+                            <td>食品科学与工程学院</td>
+                            <td>食品科学与工程</td>
+                            <td>308</td>
+                            <td>51</td>
+                            <td>359</td>
+                        </tr>
+                        <tr>
+                            <td>计算机与信息工程学院</td>
+                            <td>计算机科学与技术</td>
+                            <td>313</td>
+                            <td>32</td>
+                            <td>345</td>
+                        </tr>
+                        <tr>
+                            <td>生命科学学院</td>
+                            <td>生物工程类</td>
+                            <td>255</td>
+                            <td>43</td>
+                            <td>298</td>
+                        </tr>
+                        <tr>
+                            <td>人文社会科学学院</td>
+                            <td>行政管理</td>
+                            <td>298</td>
+                            <td>25</td>
+                            <td>323</td>
+                        </tr>
+                        <tr>
+                            <td>外国语言学院</td>
+                            <td>英语</td>
+                            <td>251</td>
+                            <td>14</td>
+                            <td>265</td>
+                        </tr>
+                        <tr>
+                            <td>理学院</td>
+                            <td>应用化学</td>
+                            <td>283</td>
+                            <td>49</td>
+                            <td>332</td>
+                        </tr>
+                        <tr>
+                            <td>能源与交通工程学院</td>
+                            <td>交通运输</td>
+                            <td>298</td>
+                            <td>25</td>
+                            <td>323</td>
+                        </tr>
+                        <tr>
+                            <td>兽医学院</td>
+                            <td>动物医学</td>
+                            <td>264</td>
+                            <td>55</td>
+                            <td>319</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+</section>
+<script src="./jquery.js"></script>
+<script src="./flexible.js"></script>
+<script src="./echarts.min.js"></script>
+<script src="./index.js"></script>
+<script src="./select.js"></script>
+<script>
+    var MyMarhq = '';
+    clearInterval(MyMarhq);
+    $('.tbl-body tbody').empty();
+    $('.tbl-header tbody').empty();
+    var str = '';
+    var Items = [{
+        "Ranking": "动物科学学院",
+        "City": "动物科学",
+        "SaleIncome": "258",
+        "SaleRough": "98",
+        "SalePlan": "356"
+
+    }, {
+        "Ranking": "农学院",
+        "City": "农学",
+        "SaleIncome": "290",
+        "SaleRough": "45",
+        "SalePlan": "335"
+
+    }, {
+        "Ranking": "林学院",
+        "City": "城乡规划",
+        "SaleIncome": "332",
+        "SaleRough": "35",
+        "SalePlan": "367"
+    }, {
+        "Ranking": "草原与资源环境学院",
+        "City": "农业资源与环境",
+        "SaleIncome": "246",
+        "SaleRough": "31",
+        "SalePlan": "277"
+    }, {
+        "Ranking": "机电工程学院",
+        "City": "农业电气化与自动化",
+        "SaleIncome": "261",
+        "SaleRough": "48",
+        "SalePlan": "309"
+    }, {
+        "Ranking": "水利与土木建筑工程学院",
+        "City": "土木工程",
+        "SaleIncome": "283",
+        "SaleRough": "49",
+        "SalePlan": "332"
+    }, {
+        "Ranking": "材料科学与艺术设计学院",
+        "City": "材料类",
+        "SaleIncome": "270",
+        "SaleRough": "11",
+        "SalePlan": "281"
+    }, {
+        "Ranking": "经济管理学院",
+        "City": "经济学",
+        "SaleIncome": "264",
+        "SaleRough": "55",
+        "SalePlan": "319"
+    }, {
+        "Ranking": "食品科学与工程学院",
+        "City": "食品科学与工程",
+        "SaleIncome": "308",
+        "SaleRough": "51",
+        "SalePlan": "359"
+    }, {
+        "Ranking": "计算机与信息工程学院",
+        "City": "计算机科学与技术",
+        "SaleIncome": "313",
+        "SaleRough": "32",
+        "SalePlan": "345"
+    }, {
+        "Ranking": "生命科学学院",
+        "City": "生物工程类",
+        "SaleIncome": "255",
+        "SaleRough": "43",
+        "SalePlan": "298"
+    }, {
+        "Ranking": "人文社会科学学院",
+        "City": "行政管理",
+        "SaleIncome": "298",
+        "SaleRough": "25",
+        "SalePlan": "323"
+    }, {
+        "Ranking": "外国语言学院",
+        "City": "英语",
+        "SaleIncome": "251",
+        "SaleRough": "14",
+        "SalePlan": "265"
+    }, {
+        "Ranking": "理学院",
+        "City": "应用化学",
+        "SaleIncome": "283",
+        "SaleRough": "49",
+        "SalePlan": "332"
+    }, {
+        "Ranking": "能源与交通工程学院",
+        "City": "交通运输",
+        "SaleIncome": "298",
+        "SaleRough": "25",
+        "SalePlan": "323"
+    }, {
+        "Ranking": "兽医学院",
+        "City": "动物医学",
+        "SaleIncome": "264",
+        "SaleRough": "55",
+        "SalePlan": "319"
+    }]
+    $.each(Items, function(i, item) {
+        str = '<tr>' +
+            '<td>' + item.Ranking + '</td>' +
+            '<td>' + item.City + '</td>' +
+            '<td>' + (+item.SaleIncome) + '</td>' +
+            '<td>' + (+item.SaleRough) + '</td>' +
+            '<td>' + (+item.SalePlan) + '</td>' +
+            '</tr>'
+
+        $('.tbl-body tbody').append(str);
+        $('.tbl-header tbody').append(str);
+    });
+
+    if (Items.length > 10) {
+        $('.tbl-body tbody').html($('.tbl-body tbody').html() + $('.tbl-body tbody').html());
+        $('.tbl-body').css('top', '0');
+        var tblTop = 0;
+        var speedhq = 50; // 数值越大越慢
+        var outerHeight = $('.tbl-body tbody').find("tr").outerHeight();
+        function Marqueehq() {
+            if (tblTop <= -outerHeight * Items.length) {
+                tblTop = 0;
+            } else {
+                tblTop -= 1;
+            }
+            $('.tbl-body').css('top', tblTop + 'px');
+        }
+
+        MyMarhq = setInterval(Marqueehq, speedhq);
+
+        // 鼠标移上去取消事件
+        $(".tbl-header tbody").hover(function() {
+            clearInterval(MyMarhq);
+        }, function() {
+            clearInterval(MyMarhq);
+            MyMarhq = setInterval(Marqueehq, speedhq);
+        })
+
+    }
+</script>
+</body>
+</html>

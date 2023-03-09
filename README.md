@@ -373,6 +373,8 @@ git clone https://github.com/iGaoWei/BigDataView.git
 ##### 100 新型冠状肺炎实时监测大屏 [在线预览](https://igaowei.github.io/BigDataView/web/099%20%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9FLPL%E6%AF%94%E8%B5%9B%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96)
 <img src="https://files.catbox.moe/ch8mo2.gif" width="100%" />
 
+##### 101 校情数据综合分析平台 [在线预览](https://igaowei.github.io/BigDataView/web/099%20%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9FLPL%E6%AF%94%E8%B5%9B%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96)
+<img src="./preview/101 校情数据综合分析平台.png" width="100%" />
 
 
 
