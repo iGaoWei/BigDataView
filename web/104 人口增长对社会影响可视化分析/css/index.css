@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+@font-face {
+  font-family: electronicFont;
+  src: url(../font/DS-DIGIT.TTF);
+}
+html{
+  width: 100%;
+  height: 100%;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-color: #06164A;
+    background-size: cover;
+    /* 行高是字体1.15倍 */
+    line-height: 1.15;
+    width: 100%;
+    height: 100%;
+}
+header {
+  position: relative;
+  width: 100%;
+  height: 1rem;
+  background: url(../images/head_bg.png) no-repeat top center;
+  background-size: 100% 100%;
+}
+header h1 {
+  font-size: 0.475rem;
+  color: #81E7ED;
+  text-align: center;
+  line-height: 1rem;
+}
+header .showTime {
+  position: absolute;
+  top: 0;
+  right: 0.375rem;
+  line-height: 0.9375rem;
+  font-size: 0.25rem;
+  color: #81E7ED;
+  font-weight: 600;
+}
+.mainbox {
+  width: 100%;
+  height: calc(100% - 1.25rem);
+  padding: 0.125rem;
+  display: flex;
+}
+.mainbox .column {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.mainbox .column:nth-child(2) {
+  width: 50%;
+  margin: 0 0.125rem 0.1875rem;
+  overflow: hidden;
+}
+.panel {
+  width: 100%;
+  height: 49%;
+  position: relative;
+  border: 1px solid rgba(25, 186, 139, 0.17);
+  background: rgba(255, 255, 255, 0.04) url(../images/line\(1\).png);
+  padding: 0 0.1875rem 0.5rem;
+  margin-bottom: 1px;
+}
+.panel::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #02a6b5;
+  border-left: 2px solid #02a6b5;
+  border-radius: 20%;
+}
+.panel::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #02a6b5;
+  border-right: 2px solid #02a6b5;
+  border-radius: 20%;
+}
+.panel .panel-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.panel .panel-footer::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #02a6b5;
+  border-left: 2px solid #02a6b5;
+  border-radius: 20%;
+}
+.panel .panel-footer::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #02a6b5;
+  border-right: 2px solid #02a6b5;
+  border-radius: 20%;
+}
+.panel h2 {
+  height: 0.6rem;
+  line-height: 0.6rem;
+  text-align: center;
+  color: #81E7ED;
+  font-size: 0.25rem;
+  font-weight: 600;
+}
+.panel h2 a {
+  margin: 0 0.1875rem;
+  color: #fff;
+  text-decoration: underline;
+}
+.panel .chart {
+  height: 92%;
+}
+.no {
+  background: rgba(101, 132, 226, 0.1);
+  padding: 0.1875rem;
+}
+.no .no-hd {
+  position: relative;
+  border: 1px solid rgba(25, 186, 139, 0.17);
+}
+.no .no-hd::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 10px;
+  border-top: 2px solid #02a6b5;
+  border-left: 2px solid #02a6b5;
+  top: 0;
+  left: 0;
+}
+.no .no-hd::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 10px;
+  border-bottom: 2px solid #02a6b5;
+  border-right: 2px solid #02a6b5;
+  right: 0;
+  bottom: 0;
+}
+.no .no-hd ul {
+  display: flex;
+}
+.no .no-hd ul li {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  height: 1rem;
+  line-height: 1rem;
+  font-size: 0.875rem;
+  color: #ffeb7b;
+  padding: 0.05rem 0;
+  font-family: electronicFont;
+  font-weight: bold;
+}
+.no .no-hd ul li:first-child::after {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  right: 0;
+  top: 25%;
+}
+.no .no-bd ul {
+  display: flex;
+}
+.no .no-bd ul li {
+  flex: 1;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center;
+  font-size: 0.225rem;
+  color: rgba(255, 255, 255, 0.7);
+  padding-top: 0.125rem;
+}
+.map {
+  position: relative;
+  height: 8rem;
+}
+.map .chart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  height: 8rem;
+  width: 100%;
+}
+.map .map1,
+.map .map2,
+.map .map3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6.475rem;
+  height: 6.475rem;
+  background: url(../images/map.png) no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.3;
+}
+.map .map2 {
+  width: 8.0375rem;
+  height: 8.0375rem;
+  background-image: url(../images/lbx.png);
+  opacity: 0.6;
+  animation: rotate 15s linear infinite;
+  z-index: 2;
+}
+.map .map3 {
+  width: 7.075rem;
+  height: 7.075rem;
+  background-image: url(../images/jt.png);
+  animation: rotate1 10s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes rotate1 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 42px !important;
+  }
+}
+@media screen and (min-width: 1920) {
+  html {
+    font-size: 80px !important;
+  }
+}
+
+#rule{
+  max-height: 90%;
+  overflow-y: hidden;
+  margin-top: 2%;
+}
+#list p {
+  display: flex;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.20rem;
+  margin-bottom: 0.2rem;
+}
+#list p span{
+  flex: 1;
+  text-align: center;
+}
+#list2 p {
+  display: flex;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.20rem;
+  margin-bottom: 0.2rem;
+}
+#list2 p span{
+  flex: 1;
+  text-align: center;
+}
+.change_btn{
+  position: absolute;
+  top: 0.4rem;
+  width: 1.5rem;
+  height: 0.5rem;
+  background: url('../images/btn.png') no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+  font-size: 0.2rem;
+}
+.active_btn{
+  width: 1.5rem;
+  height: 0.5rem;
+  background: url('../images/btn_active.png') no-repeat;
+  background-size: 100% 100%;
+}
+.change_btn a{
+  color: #fff !important;
+  text-decoration:none;
+  font-weight: 600;
+  line-height: 0.5rem;
+}
+.one_btn{
+  left: 0.6rem;
+}
+.two_btn{
+  left: 2.2rem;
+}
+.three_btn{
+  left: 3.8rem;
+}

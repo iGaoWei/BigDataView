@@ -1,0 +1,632 @@
+<!doctype html>
+<html>
+<head>
+<!doctype html>
+<html>
+<head>
+<!--更多资源：https://gitee.com/iGaoWei/big-data-view -->
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>人口增长对医疗影响可视化分析</title>
+<!--大屏-->
+<link type="text/css" href="css/public.css" rel="stylesheet">
+<link type="text/css" href="css/icon.css" rel="stylesheet">
+<link type="text/css" href="css/index.css" rel="stylesheet">
+<script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth /768*100 + 'px';
+</script>
+
+<script src="js/echarts.min.js"></script>
+</head>
+<style>
+.abc{
+
+}
+
+</style>
+
+<body>
+<div class="bg">
+	<div class="title">人口增长对医疗影响可视化分析</div>
+    <div class="leftMain">
+    	<div class="leftMain_top">
+        	<div class="leftMain_topIn">
+            	<ul>
+                	<li>
+                        <div class="liIn">
+                            <h3>全国医疗机构数量</h3>
+                            <p class="shu"><span class="shu1">1030935</span><i>个</i></p>
+                            <div class="zi"><span class="span1">数据来源：国家统计局</span><span>2021年数据</span></div>
+                            <span class="border_bg_leftTop"></span>
+                            <span class="border_bg_rightTop"></span>
+                            <span class="border_bg_leftBottom"></span>
+                            <span class="border_bg_rightBottom"></span>
+                        </div>
+                    </li>
+                	<li>
+                        <div class="liIn">
+                            <h3>执业医师数(万人)</h3>
+                            <p class="shu"><span class="shu3">359.08</span><i>万人</i></p>
+                            <div class="zi"><span class="span1">数据来源：国家统计局</span><span>2021年数据</span></div>
+                            <span class="border_bg_leftTop"></span>
+                            <span class="border_bg_rightTop"></span>
+                            <span class="border_bg_leftBottom"></span>
+                            <span class="border_bg_rightBottom"></span>
+                        </div>
+                    </li>
+                	<li>
+                        <div class="liIn">
+                            <h3>注册护士数(万人)</h3>
+                            <p class="shu"><span class="shu3">501.94</span><i>万人</i></p>
+                            <div class="zi"><span class="span1">数据来源：国家统计局</span><span>2021年数据</span></div>
+                            <span class="border_bg_leftTop"></span>
+                            <span class="border_bg_rightTop"></span>
+                            <span class="border_bg_leftBottom"></span>
+                            <span class="border_bg_rightBottom"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="liIn">
+                            <h3>卫生机构床位数(万张)</h3>
+                            <p class="shu"><span class="shu2">945.01</span><i>万张</i></p>
+                            <div class="zi"><span class="span1">数据来源：国家统计局</span><span>2021年数据</span></div>
+                            <span class="border_bg_leftTop"></span>
+                            <span class="border_bg_rightTop"></span>
+                            <span class="border_bg_leftBottom"></span>
+                            <span class="border_bg_rightBottom"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="leftMain_middle">
+        	<div class="leftMain_middle_left">
+            	<div class="leftMain_middle_leftIn">
+                	<h3>全国医疗机构数量趋势</h3>
+                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                    <div class="biaoge" style="width:100%; height:25vh" id="chartmain"></div>
+                    <script type="text/javascript">
+					//window.onload = function () {
+								//指定图表的配置项和数据
+								var dataAxis = ['2013年','2014年','2015年','2016年','2017年','2018年','2019年','2020年','2021年','2022年'];
+								var data = [974398, 981432, 983528, 983394, 986649, 997433, 1007579, 1022922, 1030935,2222];
+								var yMax = 1007579;
+								var dataShadow = [];
+
+								for (var i = 0; i < data.length; i++) {
+									dataShadow.push(yMax);
+								}
+
+								option = {
+									title: {
+										text: '',
+										subtext: ''
+									},
+									grid:{
+										x:60,
+										y:40,
+										x2:20,
+										y2:20,
+
+									},
+                                    tooltip: {
+                                        trigger: 'item'
+                                    },
+									xAxis: {
+										data: dataAxis,
+										axisLabel: {
+											/*inside: true,*/
+											interval:0,
+											textStyle: {
+												color: '#fff',
+												fontSize: 12
+
+											}
+										},
+										axisTick: {
+											show: false,
+										},
+										axisLine: {
+											show: true,
+											symbol:['none', 'arrow'],
+											symbolOffset: 12,
+											lineStyle:{
+												color: '#fff',
+											}
+										},
+										z: 10
+									},
+									yAxis: {
+										type: 'value',
+										name: '单位：个',
+										axisLine: {
+											show: true,
+											symbol: ['none', 'arrow'],
+											symbolOffset: 12,
+											lineStyle:{
+												color: '#fff',
+											}
+										},
+										axisTick: {
+											show: false
+										},
+										axisLabel: {
+											textStyle: {
+												color: '#fff',
+												fontSize: 12
+											}
+										}
+									},
+
+									dataZoom: [
+										{
+											type: 'inside'
+										}
+									],
+									series: [
+										{ // For shadow
+											type: 'bar',
+											itemStyle: {
+												color: 'rgba(0,0,0,0.05)'
+											},
+											barGap: '-100%',
+											barCategoryGap: '40%',
+											data: dataShadow,
+											animation: false
+										},
+										{
+											type: 'bar',
+											itemStyle: {
+												color: new echarts.graphic.LinearGradient(
+													0, 0, 0, 1,
+													[
+														{offset: 0, color: '#0efdff'},
+														{offset: 0.5, color: '#188df0'},
+														{offset: 1, color: '#188df0'}
+													]
+												)
+											},
+											emphasis: {
+												itemStyle: {
+													color: new echarts.graphic.LinearGradient(
+														0, 0, 0, 1,
+														[
+															{offset: 0, color: '#2378f7'},
+															{offset: 0.7, color: '#2378f7'},
+															{offset: 1, color: '#0efdff'}
+														]
+													)
+												}
+											},
+											data: data
+										}
+									]
+								};
+
+								// Enable data zoom when user click bar.
+								/*var zoomSize = 6;
+								myChart.on('click', function (params) {
+									console.log(dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)]);
+									myChart.dispatchAction({
+										type: 'dataZoom',
+										startValue: dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)],
+										endValue: dataAxis[Math.min(params.dataIndex + zoomSize / 2, data.length - 1)]
+									});
+								});*/
+
+								//获取dom容器
+								var myChart = echarts.init(document.getElementById('chartmain'));
+								// 使用刚指定的配置项和数据显示图表。
+								myChart.setOption(option);
+						//};
+					</script>
+                    <span class="border_bg_leftTop"></span>
+                    <span class="border_bg_rightTop"></span>
+                    <span class="border_bg_leftBottom"></span>
+                    <span class="border_bg_rightBottom"></span>
+                </div>
+            </div>
+        	<div class="leftMain_middle_right">
+            	<div class="leftMain_middle_rightIn">
+                	<h3>疾病致死率(1/10万)</h3>
+                    <div class="biaoge biaoge_pai" style="width:100%; height:25vh">
+                    	<div class="biaoge_paiIn">
+                        	<ul>
+                                <li>
+                                    <div class="liIn liIn5">
+                                        <div class="liIn_left"><span class="bot"></span><span class="zi">心脏病</span></div>
+                                        <div class="liIn_line"><div class="line_lineIn" style="width:92.5%;"></div></div>
+                                        <p class="num">165.37</p>
+                                    </div>
+                                </li>
+
+                            	<li>
+                                	<div class="liIn liIn4">
+                                    	<div class="liIn_left"><span class="bot"></span><span class="zi">恶性肿瘤 </span></div>
+                                        <div class="liIn_line"><div class="line_lineIn" style="width:89.5%;"></div></div>
+                                        <p class="num">158.70</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="liIn liIn2">
+                                        <div class="liIn_left"><span class="bot"></span><span class="zi">脑血管病 </span></div>
+                                        <div class="liIn_line"><div class="line_lineIn" style="width:85.5%;"></div></div>
+                                        <p class="num">140.02</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="liIn liIn3">
+                                        <div class="liIn_left"><span class="bot"></span><span class="zi">寄生虫病 </span></div>
+                                        <div class="liIn_line"><div class="line_lineIn" style="width:28.5%;"></div></div>
+                                        <p class="num">68.5</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="liIn">
+                                        <div class="liIn_left"><span class="bot"></span><span class="zi">传染病</span></div>
+                                        <div class="liIn_line"><div class="line_lineIn" style="width:5%;"></div></div>
+                                        <p class="num">5.30</p>
+                                    </div>
+                                </li>
+                           </ul>
+                        </div>
+                    </div>
+                    <span class="border_bg_leftTop"></span>
+                    <span class="border_bg_rightTop"></span>
+                    <span class="border_bg_leftBottom"></span>
+                    <span class="border_bg_rightBottom"></span>
+                </div>
+            </div>
+        </div>
+        <div class="leftMain_middle">
+        	<div class="leftMain_middle_left">
+            	<div class="leftMain_middle_leftIn">
+                	<h3>医务人员数量趋势分析(万人)</h3>
+                    <div class="biaoge" style="width:100%; height:25vh" id="chartmain_zhe"></div>
+                    <script type="text/javascript">
+					//window.onload = function (){
+								//指定图表的配置项和数据
+
+					option = {
+						title: {
+							text: ''
+						},
+						tooltip: {
+							trigger: 'axis'
+						},
+						legend: {
+							textStyle: {
+								color: '#fff',
+								fontSize: 12,
+							},
+							right:'10%',
+							data: ['执业医师', '注册护士']
+						},
+						grid:{
+								x:40,
+								y:40,
+								x2:20,
+								y2:20,
+							},
+						toolbox: {
+							feature: {
+								//saveAsImage: {}
+							}
+						},
+						xAxis: {
+							type: 'category',
+							boundaryGap: false,
+							axisLabel: {
+											/*inside: true,*/
+											interval:0,
+											textStyle: {
+												color: '#fff',
+												fontSize: 12
+
+											}
+										},
+										axisTick: {
+											show: false,
+										},
+										axisLine: {
+											show: true,
+											symbol:['none', 'arrow'],
+											symbolOffset: 12,
+											lineStyle:{
+												color: '#fff',
+											}
+										},
+							data:  ['2013年','2014年','2015年','2016年','2017年','2018年','2019年','2020年','2021年','2022年']
+						},
+						yAxis: {
+							type: 'value',
+
+							axisLine: {
+								show: true,
+								symbol: ['none', 'arrow'],
+								symbolOffset: 12,
+								lineStyle:{
+									color: '#fff',
+								}
+							},
+							axisTick: {
+								show: false
+							},
+							axisLabel: {
+								textStyle: {
+									color: '#fff',
+									fontSize: 12
+								}
+							}
+						},
+						series: [
+							{
+								name: '执业医师',
+								type: 'line',
+								stack: '总量',
+								data: [228, 1237, 250, 265, 282, 301, 321,340,359],
+								itemStyle: {
+									 normal: {
+									   color: "#0efdff",//折线点的颜色
+									   lineStyle: {
+									   color: "#0efdff",//折线的颜色
+									   width:2,
+									  }
+									},
+								}
+							},
+							{
+								name: '注册护士',
+								type: 'line',
+								stack: '总量',
+								data: [278, 300,324, 350, 380, 409,444,470,501]
+							},
+						]
+					};
+								//获取dom容器
+								var myChart = echarts.init(document.getElementById('chartmain_zhe'));
+								// 使用刚指定的配置项和数据显示图表。
+								myChart.setOption(option);
+						//};
+					</script>
+                    <span class="border_bg_leftTop"></span>
+                    <span class="border_bg_rightTop"></span>
+                    <span class="border_bg_leftBottom"></span>
+                    <span class="border_bg_rightBottom"></span>
+                </div>
+            </div>
+        	<div class="leftMain_middle_right">
+            	<div class="leftMain_middle_rightIn">
+                	<h3>医疗费用支出情况</h3>
+                    <div class="biaoge biaoge_bi" style="width:100%; height:25vh">
+                    	<ul style="" id="show1">
+                        	<li>
+                            	<div class="liIn">
+                                	<p class="shu shu1">76844.99</p>
+                                    <p class="zi">卫生总费用(亿元）</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="liIn">
+                                    <p class="shu shu5">5439.97	</p>
+                                    <p class="zi">人均卫生费用(元)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="liIn">
+                                    <p class="shu ">2021年</p>
+                                    <p class="zi">国家统计局数据</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="liIn">
+                                    <p class="shu shu1">72175.00</p>
+                                    <p class="zi">卫生总费用(亿元）</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="liIn">
+                                    <p class="shu shu5">5112.34</p>
+                                    <p class="zi">人均卫生费用(元)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="liIn">
+                                    <p class="shu ">2020年</p>
+                                    <p class="zi">国家统计局数据</p>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <span class="border_bg_leftTop"></span>
+                    <span class="border_bg_rightTop"></span>
+                    <span class="border_bg_leftBottom"></span>
+                    <span class="border_bg_rightBottom"></span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rightMain">
+        <div class="rightMain_top">
+            <div class="rightMain_topIn">
+                <h3>医疗卫生机构占比</h3>
+                <div class="biaoge" style="width:100%; height:30vh" id="chartmain_bing"></div>
+                <script type="text/javascript">
+					option = {
+						title: {
+							text: '数据情况统计',
+							subtext: '',
+							left: 'right',
+							textStyle: {
+								color: '#fff',
+								fontSize: 12
+							}
+						},
+						tooltip: {
+							trigger: 'item',
+							formatter: '{a} <br/>{b} : {c} ({d}%)'
+						},
+						legend: {
+							// orient: 'vertical',
+							// top: 'middle',
+							type: 'scroll',
+							orient: 'vertical',
+							right: 10,
+							top: 40,
+							bottom: 20,
+							left: 'right',
+							data: ['综合医院', '中医医院', '专科医院', '基层医疗卫生机构'],
+							textStyle: {
+								color: '#fff',
+								fontSize: 12
+							}
+
+						},
+						grid:{
+							x:'-10%',
+							y:40,
+							x2:20,
+							y2:20,
+						},
+						color : [ '#09d0fb', '#f88cfb', '#95f8fe', '#f9f390',  '#ecfeb7' ],
+						series: [
+							{
+								type: 'pie',
+								radius: '65%',
+								center: ['50%', '50%'],
+								selectedMode: 'single',
+								data: [
+									{value: 977790, name: '基层医疗卫生机构'},
+									{value: 9699, name: '专科医院'},
+									{value: 4630, name: '中医医院'},
+									{value: 20307, name: '综合医院'}
+								],
+								emphasis: {
+									itemStyle: {
+										shadowBlur: 10,
+										shadowOffsetX: 0,
+										shadowColor: 'rgba(0, 0, 0, 0.5)'
+									}
+								}
+							}
+						]
+					};
+                //获取dom容器
+								var myChart = echarts.init(document.getElementById('chartmain_bing'));
+								// 使用刚指定的配置项和数据显示图表。
+								myChart.setOption(option);
+
+                </script>
+                <span class="border_bg_leftTop"></span>
+                <span class="border_bg_rightTop"></span>
+                <span class="border_bg_leftBottom"></span>
+                <span class="border_bg_rightBottom"></span>
+            </div>
+         </div>
+        <div class="rightMain_bottom">
+            <div class="rightMain_bottomIn">
+                <h3>全国各省市医院数量TOP10</h3>
+                <div class="biaoge biaoge_list" style="width:100%; height:36vh">
+                	<div class="biaoge_listIn">
+                    	<ul class="ul_title">
+                        	<li>排名</li>
+                            <li>省份</li>
+                            <li>医院数量</li>
+                        </ul>
+                        <div class="ul_list">
+                        	<div class="ul_listIn">
+                                <ul class="ul_con">
+                                    <li>1</li>
+                                    <li>河南省</li>
+                                    <li>1758家医院</li>
+                                </ul>
+                                <ul class="ul_con">
+                                    <li>2</li>
+                                    <li>广东省</li>
+                                    <li>1664家医院</li>
+                                </ul>
+
+                                <ul class="ul_con">
+                                    <li>3</li>
+                                    <li>江苏省</li>
+                                    <li>1428家医院</li>
+                                </ul>
+
+                                <ul class="ul_con">
+                                    <li>4</li>
+                                    <li>山东省</li>
+                                    <li>1365家医院</li>
+                                </ul>
+
+                                <ul class="ul_con">
+                                    <li>5</li>
+                                    <li>湖南省</li>
+                                    <li>1189家医院</li>
+                                </ul>
+
+                                <ul class="ul_con">
+                                    <li>6</li>
+                                    <li>河北省</li>
+                                    <li>1055家医院</li>
+                                </ul>
+
+                                <ul class="ul_con">
+                                    <li>7</li>
+                                    <li>四川省</li>
+                                    <li>1053家医院</li>
+                                </ul>
+
+                                <ul class="ul_con">
+                                    <li>8</li>
+                                    <li>安徽省</li>
+                                    <li>1035家医院</li>
+                                </ul>
+
+                                <ul class="ul_con">
+                                    <li>9</li>
+                                    <li>湖北省</li>
+                                    <li>1021家医院</li>
+                                </ul>
+
+                                <ul class="ul_con">
+                                    <li>10</li>
+                                    <li>福建省</li>
+                                    <li>901家医院</li>
+                                </ul>
+                            </div>
+                       </div>
+                   </div>
+
+                </div>
+                <span class="border_bg_leftTop"></span>
+                <span class="border_bg_rightTop"></span>
+                <span class="border_bg_leftBottom"></span>
+                <span class="border_bg_rightBottom"></span>
+            </div>
+         </div>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+<!--大屏-->
+<!--数字增长累加动画-->
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="js/jquery.numscroll.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(".shu1").numScroll();
+	$(".shu2").numScroll();
+	$(".shu3").numScroll();
+	$(".shu4").numScroll();
+	$(".shu5").numScroll();
+	$(".shu6").numScroll();
+
+	/*$(".num2").numScroll({
+		time:5000
+	});*/
+</script>
+<!--大屏-->
+</body>
+</html>
