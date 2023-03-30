@@ -1,0 +1,33 @@
+.centerBoxTop{
+    width: 100%;
+    height:49%;
+
+}
+.centerBoxBottom{
+    width: 100%;
+    height: 49%;
+    margin-top: 2%;
+}
+.chain-item{
+    float: left;
+    width: 21%;
+    height: 10vw;
+    background-color: rgba(13, 226, 232, .2);
+    /* opacity: .8; */
+    margin-left: .5vw;
+    margin-top: 1vw;
+    color: #0dd8df;
+    text-align: center;
+}
+.chain-item h3{
+    font-size: .8vw;
+    padding:.5vw 0;
+}
+.chain-item p{
+    font-size: .5vw;
+    padding:.1vw 0;
+}
+/* #liquidfill-chart{
+    background: url(../img/2019072517094175.gif) no-repeat center bottom;
+    background-size: 100% 100%;
+} */

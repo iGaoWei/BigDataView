@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>茶园大数据平台指挥舱</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/video.js/5.15.0/video-js.css" rel="stylesheet">
+    <script src="https://cdn.bootcdn.net/ajax/libs/video.js/5.15.0/video.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.15.0/videojs-contrib-hls.min.js" type="text/javascript"></script>
+</head>
+<style>
+    .boxRader {
+        position: relative;
+        width: 100%;
+        height: 80%;
+    }
+
+    .centerBox {
+        width: 75%;
+        margin-right: 15px;
+        background: transparent;
+    }
+
+    .boxFont {
+        font-size: 1.2vw;
+    }
+
+    .centerMainBox1 {
+        width: 100%;
+        height: 60.5%;
+    }
+
+    .centerMainBox2 {
+        width: 100%;
+        height: 38.5%;
+        position: relative;
+        margin-top: 15px;
+    }
+
+    .centerMainBox2 img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .boxTitle2 {
+        width: 100%;
+        height: 10%;
+        font-size: .6vw;
+        text-align: center;
+        line-height: 10%;
+        margin-top: 1vw;
+        color: #0efcff;
+    }
+
+    .boxLis {
+        width: 70%;
+        height: 1.5vw;
+        margin-left: 3vw;
+        margin-top: 1vw;
+        border-bottom: .02vw solid rgb(40, 229, 233);
+    }
+
+    .boxLis>li {
+        width: 4vw;
+        height: 1.4vw;
+        display: block;
+        background: rgba(40, 229, 233, .5);
+        margin-right: .5vw;
+        color: #fff;
+        line-height: 1.4vw;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .active {
+        border-bottom: .02vw solid #040A18;
+        border-top: .02vw solid rgb(40, 229, 233);
+        border-right: .02vw solid rgb(40, 229, 233);
+        border-left: .02vw solid rgb(40, 229, 233);
+    }
+
+    .contList {
+        position: relative;
+        width: 70%;
+        height: 7vw;
+        margin: 1vw auto 0;
+
+    }
+
+    .content1 li {
+        display: none;
+    }
+
+    .baseBox {
+        width: 100%;
+        border: none;
+        background: none;
+    }
+
+    .boxTitle {
+        font-size: .8vw;
+        width: 38%;
+        margin-top: 1vw;
+        text-align: center;
+    }
+
+    .right {
+        float: right;
+    }
+
+    .baseBoxLeft {
+        width: 30%;
+        height: 95%;
+        position: relative;
+    }
+
+    .baseBoxRight {
+        width: 68%;
+        height: 75%;
+    }
+
+    .baseBoxLeft img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .maps {
+        width: 100%;
+        height: 95%;
+        margin-top: 2%;
+        background: pink;
+    }
+
+    .baseBox1,
+    .baseBox2,
+    .baseBox3 {
+        position: relative;
+    }
+
+    .baseBox1 img,
+    .baseBox2 img,
+    .baseBox3 img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .csbaseBox1 {
+        position: relative;
+        z-index: 999;
+    }
+</style>
+<!-- 黄瑶 -->
+<style>
+    .liSpan {
+        width: 100%;
+        margin-top: 3.2%;
+        text-align: center;
+        color: rgb(40, 229, 233);
+    }
+
+    .liP {
+        width: 66%;
+        margin: .3vw auto 0;
+        text-align: left;
+        font-size: .5vw;
+        color: rgb(40, 229, 233);
+    }
+
+    a:hover {
+        text-decoration: none
+    }
+
+    .titleName {
+        color: #0EFCFF;
+    }
+
+    /* 种植 */
+    .plant {
+        width: 90%;
+        height: 5.5vw;
+        margin: 2% auto 0;
+        display: -webkit-flex;
+        display: -moz-flex;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+    }
+
+    .plant>li {
+        width: 15%;
+        height: 100%;
+    }
+
+    .jumps {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 235, 255, .08);
+        display: -webkit-flex;
+        -webkit-flex-direction: column;
+        -webkit-justify-content: space-between;
+        display: -moz-flex;
+        -moz-flex-direction: column;
+        -moz-justify-content: space-between;
+    }
+
+    .jumps>div>img {
+        width: .88vw;
+        height: .88vw;
+        float: right;
+    }
+
+    .jumps>p {
+        width: 90%;
+        font-size: 1.3vw;
+        color: #fff;
+        margin: auto;
+
+    }
+
+    .jumps>div {
+        width: 90%;
+        margin: 5% auto 0;
+    }
+
+    .jumps>div>span {
+        font-size: .6vw;
+        color: #0efcff;
+        float: left;
+    }
+
+    .spans0 {
+        width: 80%;
+        height: 5%;
+        background: #03DA8D;
+    }
+
+    .spans1 {
+        width: 80%;
+        height: 5%;
+        background: #0efcff;
+    }
+
+    .spans2 {
+        width: 80%;
+        height: 5%;
+        background: #FE0000;
+    }
+
+    .spans3 {
+        width: 80%;
+        height: 5%;
+        background: #F78001;
+    }
+
+    .boxVideo {
+        width: 100%;
+        height: 100%;
+    }
+
+    .boxVideo video {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .baseDatas {
+        width: 70%;
+        height: 2vw;
+        display: -webkit-flex;
+        -webkit-justify-content: space-between;
+        margin: 1vw 0 0 5vw;
+
+    }
+
+    .baseDatas li {
+        width: 10%;
+    }
+
+    .baseDatas li a {
+        color: #fff;
+        font-size: .8vw;
+    }
+
+    .active2 a>span {
+        color: rgb(40, 229, 233);
+    }
+
+    .baseDatas li a:hover>span {
+        color: rgb(40, 229, 233);
+    }
+
+    .baseDatas li a:hover>.borderRight {
+        border-left-color: rgb(40, 229, 233);
+    }
+
+    .tableDetalis {
+        width: 92%;
+        color: #fff;
+        margin-left: 2vw;
+    }
+
+    .tableDetalis tr {
+        height: 1.3vw;
+        font-size: .8vw;
+    }
+
+    .tableDetalis tr>td {
+        text-align: center;
+    }
+
+    .tableDetalis tr>td:nth-child(7) {
+        text-align: right;
+    }
+
+    .borderRight {
+        width: 0;
+        height: 0;
+        float: left;
+        border: .4vw solid transparent;
+        border-left-color: #fff;
+        margin-top: .2vw;
+    }
+
+    .borderActive {
+        border-left-color: rgb(40, 229, 233);
+    }
+
+    .equipment_table {
+        width: 85%;
+        height: 25%;
+        margin: auto;
+        text-align: center;
+        color: #fff;
+        font-size: .5vw;
+    }
+
+    .equipment_table tr:nth-child(1) {
+        color: #0EFCFF;
+    }
+
+    .equipment_table tr {
+        border: 1px solid#0EFCFF;
+    }
+
+    .equipment_table tr:nth-child(1) {
+        font-size: .8vw;
+    }
+
+    .equipment_table img {
+        width: 1vw;
+    }
+
+    .env_table {
+        height: 35%;
+        margin-top: 5%;
+    }
+
+    .env_table td {
+        border: 1px solid#0EFCFF;
+    }
+
+    .env_table tr:nth-child(1) {
+        background: rgba(14, 252, 255, .3);
+    }
+
+    .map img {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .map img {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .mapActived1 {
+        position: absolute;
+        top: 41.5%;
+        left: 61%;
+        width: 3.5vw;
+        height: 5.5vw;
+        border-radius: 90px;
+        cursor: pointer;
+    }
+
+    .mapActived2 {
+        position: absolute;
+        top: 60%;
+        right: 16%;
+        width: 4.5vw;
+        height: 2.5vw;
+        cursor: pointer;
+    }
+
+    .mapActived3 {
+        position: absolute;
+        top: 57%;
+        right: 9%;
+        width: 2.5vw;
+        height: 7vw;
+        cursor: pointer;
+    }
+
+    .mapContent1 {
+        position: absolute;
+        height: 6vw;
+        width: 8vw;
+        left: 65%;
+        top: 33%;
+        background: rgba(255, 255, 255, .2);
+    }
+
+    .mapContent2 {
+        position: absolute;
+        height: 6vw;
+        width: 8vw;
+        left: 70%;
+        top: 35%;
+        background: rgba(255, 255, 255, .2);
+        display: none;
+    }
+
+    .mapContent3 {
+        position: absolute;
+        height: 6vw;
+        width: 8vw;
+        right: 1%;
+        top: 35%;
+        background: rgba(255, 255, 255, .2);
+        display: none;
+    }
+
+
+    .mapContentFont {
+        width: 85%;
+        margin-left: 12%;
+        font-size: .6vw;
+        color: #0efcff;
+        letter-spacing: .05vw;
+        margin-bottom: .3vw;
+    }
+
+    .mapContentFont:nth-child(1) {
+        margin-top: .6vw;
+    }
+
+    .mapContentFont span {
+        color: white;
+    }
+
+    /* lafite video样式 */
+    .video-js {
+        width: 100%;
+        height: 100%;
+    }
+    .video-js:hover .vjs-big-play-button {
+        background: none;
+    }
+    .video-js .vjs-big-play-button:hover {
+        background: none;
+    }
+    .video-js .vjs-big-play-button {
+        border: none;
+        background: none;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="nav">黄山茶园大数据平台指挥舱</div>
+        <div class="nav_btn">
+            <div class="btn_left">
+                <a href="https://gitee.com/iGaoWei/big-data-view">
+                    <div class="btn_list listActive">系统首页</div>
+                </a>
+                <a href="https://gitee.com/iGaoWei/big-data-view">
+                    <div class="btn_list">生长检测</div>
+                </a>
+                <a href="https://gitee.com/iGaoWei/big-data-view">
+                    <div class="btn_list">数据分析</div>
+                </a>
+               <a href="https://gitee.com/iGaoWei/big-data-view">
+                    <div class="btn_list">人工智能</div>
+                </a>
+            </div>
+            <div class="btn_right">
+                <a href="https://gitee.com/iGaoWei/big-data-view">
+                    <div class="btn_list">生产加工</div>
+                </a>
+                <a href="https://gitee.com/iGaoWei/big-data-view">
+                    <div class="btn_list">仓储管理</div>
+                </a>
+                <a href="https://gitee.com/iGaoWei/big-data-view">
+                    <div class="btn_list">流通销售</div>
+                </a>
+                <a href="https://gitee.com/iGaoWei/big-data-view">
+                    <div class="btn_list">数据中心</div>
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="centerBox">
+                <div class="baseBox centerMainBox1" style="height:70%">
+                    <div class="baseBoxLeft left">
+                        <div class="boxTitle">气象数据监测</div>
+                        <img src="./img/left.png" alt="">
+                        <table class="equipment_table env_table">
+                            <tr>
+                                <td>指标</td>
+                                <td>标准值</td>
+                                <td>当前值</td>
+                                <td>预警</td>
+                            </tr>
+                            <tr>
+                                <td>温度</td>
+                                <td>18～20℃</td>
+                                <td>9℃</td>
+                                <td>正常</td>
+                            </tr>
+                            <tr>
+                                <td>湿度</td>
+                                <td>40%～60%</td>
+                                <td>52%</td>
+                                <td>正常</td>
+                            </tr>
+                            <tr>
+                                <td>风速</td>
+                                <td>0m/s~4m/s</td>
+                                <td>2m/s</td>
+                                <td>正常</td>
+                            </tr>
+                            <tr>
+                                <td>降水</td>
+                                <td>2mm~4mm</td>
+                                <td>0mm</td>
+                                <td style="color:red">偏低</td>
+                            </tr>
+                        </table>
+                        <div style="width:95%;height:50%;margin-left:2.5%" id="wind"></div>
+                    </div>
+                    <div class="baseBoxRight right">
+                        <ul class="plant">
+                            <li>
+                                <a class="jumps" href="">
+                                    <div>
+                                        <span>茶园种植面积(亩)</span>
+                                        <img src="./img/qqzmj.png" alt="">
+                                    </div>
+                                    <p class="">350000</p>
+                                    <span class="spans3"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="jumps" href="">
+                                    <div>
+                                        <span>产值(亿元)</span>
+                                        <img src="./img/ccc2.png" alt="">
+                                    </div>
+                                    <p class="">180</p>
+                                    <span class="spans2" style="background: #499BFF;"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="jumps" href="">
+                                    <div>
+                                        <span>产量(吨)</span>
+                                        <img src="./img/ccc.png" alt="">
+                                    </div>
+                                    <p class="">82000</p>
+                                    <span class="spans3" style="background: #F2CE43;"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="jumps" href="./teaGarden.html">
+                                    <div class="clear plantTop ">
+                                        <span class="flexLeft">茶园(个)</span>
+                                        <img class="flexright" src="./img/cy.png" alt="">
+                                    </div>
+
+                                    <p class=" plantNum1">3207</p>
+                                    <span class="spans0"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="jumps" href="./Tea-enterprises.html">
+                                    <div class="clear plantTop ">
+                                        <span class="flexLeft">茶企(个)</span>
+                                        <img class="flexright" src="./img/cq.png" alt="">
+                                    </div>
+                                    <p class=" plantNum1">157</p>
+                                    <span class="spans1"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="jumps" href="./teaPeasant.html">
+                                    <div>
+                                        <span>茶农(人)</span>
+                                        <img src="./img/cn.png" alt="">
+                                    </div>
+                                    <p class="">360000</p>
+                                    <span class="spans2"></span>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!-- 地图 -->
+                        <div class="map">
+                            <img class="mapImg" src="./img/map1.png">
+                            <div class="mapContent1">
+                                <div class="mapContentFont">田庄乡</div>
+                                <div class="mapContentFont">
+                                    茶园:<span>101</span>
+                                </div>
+                                <div class="mapContentFont">
+                                    茶企:<span>10</span>
+                                </div>
+                                <div class="mapContentFont">
+                                    茶农:<span>18371</span>
+                                </div>
+                            </div>
+                            <a class="mapActived1" href="https://gitee.com/iGaoWei/big-data-view"></a>
+                            <a class="mapActived3" href="https://gitee.com/iGaoWei/big-data-view"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="baseBox centerMainBox2" style="height:30%;">
+                    <img src="./img/down.png" alt="">
+                    <div class="boxTitle2" style="width:26%">统计数据</div>
+                    <div class="csbaseBox1">
+                        <ul class="baseDatas">
+                            <li class="left ">
+                                <a href="https://gitee.com/iGaoWei/big-data-view" style="color: #0efcff">
+                                    <div class="borderRight "></div>
+                                    <span>茶园统计</span>
+                                </a>
+                            </li>
+                            <li class="left">
+                                <a href="https://gitee.com/iGaoWei/big-data-view" style="color: #0efcff">
+                                    <div class="borderRight "></div>
+                                    <span>茶企统计</span>
+                                </a>
+                            </li>
+                            <li class="left">
+                                <a href="https://gitee.com/iGaoWei/big-data-view" style="color: #0efcff">
+                                    <div class="borderRight "></div>
+                                    <span>茶农统计</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <table class="tableDetalis" style="color: #00ddfe">
+                            <tr>
+                                <td>名称</td>
+                                <td>类型</td>
+                                <td>面积</td>
+                                <td>名称</td>
+                                <td>类型</td>
+                                <td>面积</td>
+                                <td>姓名&nbsp&nbsp</td>
+                                <td>品种</td>
+                                <td>面积</td>
+                            </tr>
+                            <tr>
+                                <td>青云观茶园</td>
+                                <td>企业</td>
+                                <td>1800亩</td>
+                                <td>XXX</td>
+                                <td>私营</td>
+                                <td>3283亩</td>
+                                <td>刘新武</td>
+                                <td>云台大叶</td>
+                                <td>10亩</td>
+                            </tr>
+                            <tr>
+                                <td>彩云谷茶园 </td>
+                                <td>企业</td>
+                                <td>380亩</td>
+                                <td>XXX</td>
+                                <td>私营</td>
+                                <td>6200亩</td>
+                                <td>张方</td>
+                                <td>碧香早</td>
+                                <td>15亩</td>
+                            </tr>
+                            <tr>
+                                <td>赵家坪茶园</td>
+                                <td>合作社</td>
+                                <td>510亩</td>
+                                <td>XXX</td>
+                                <td>私营</td>
+                                <td>5800亩</td>
+                                <td>李小维</td>
+                                <td>槠叶齐</td>
+                                <td>12亩</td>
+                            </tr>
+                            <tr>
+                                <td>马路口茶园</td>
+                                <td>个人</td>
+                                <td>17亩</td>
+                                <td>XXX</td>
+                                <td>私营</td>
+                                <td>30000亩</td>
+                                <td>王骁骁</td>
+                                <td>黄金茶</td>
+                                <td>11亩</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <div class="leftBox right" style="width:22%">
+                <div class="baseBox baseBox1" style="margin-bottom:15px;height:40%">
+                    <img src="./img/right.png" alt="">
+                    <div class="csbaseBox1">
+                        <div class="boxTitle">视频监控设备</div>
+                        <ul class="boxLis">
+                            <li class="left active">茶园监控</li>
+                            <li class="left">生产车间监控</li>
+                            <li class="left">仓储监控</li>
+                        </ul>
+                        <div class="content1">
+                            <ul>
+                                <li style="display: block;" class="contList">
+                                    <!-- 四个角描边 stat -->
+                                    <div class="leftTopLine1"></div>
+                                    <div class="leftTopLine2"></div>
+                                    <div class="rightTopLine1"></div>
+                                    <div class="rightTopLine2"></div>
+                                    <div class="leftBottomLine1"></div>
+                                    <div class="leftBottomLine2"></div>
+                                    <div class="rightBottomLine1"></div>
+                                    <div class="rightBottomLine2"></div>
+
+                                    <div class="boxVideo">
+                                        <video class="video-js vjs-big-play-centered" data-setup='{}' controls>
+                                            <source src="http://hls01open.ys7.com/openlive/ea2001c1aec344d1ac45d8b0bbc74e87.m3u8" type="application/x-mpegURL">
+                                        </video>
+                                    </div>
+                                </li>
+                                <li class="contList">
+                                    <!-- 四个角描边 stat -->
+                                    <div class="leftTopLine1"></div>
+                                    <div class="leftTopLine2"></div>
+                                    <div class="rightTopLine1"></div>
+                                    <div class="rightTopLine2"></div>
+                                    <div class="leftBottomLine1"></div>
+                                    <div class="leftBottomLine2"></div>
+                                    <div class="rightBottomLine1"></div>
+                                    <div class="rightBottomLine2"></div>
+
+                                    <div class="boxVideo">
+                                        <video class="video-js vjs-big-play-centered" data-setup='{}' controls>
+                                            <source src="http://hls01open.ys7.com/openlive/cf40f99cc9cb4a23bd52e0b2119b534c.m3u8" type="application/x-mpegURL">
+                                        </video>
+                                    </div>
+                                </li>
+                                <li class="contList">
+                                    <!-- 四个角描边 stat -->
+                                    <div class="leftTopLine1"></div>
+                                    <div class="leftTopLine2"></div>
+                                    <div class="rightTopLine1"></div>
+                                    <div class="rightTopLine2"></div>
+                                    <div class="leftBottomLine1"></div>
+                                    <div class="leftBottomLine2"></div>
+                                    <div class="rightBottomLine1"></div>
+                                    <div class="rightBottomLine2"></div>
+
+                                    <div class="boxVideo">
+                                        <video
+                                            src="#"
+                                            controls="controls">
+                                            your browser does not support the video tag
+                                        </video>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="liSpan">介绍</div>
+                        <p class="liP">茶园环境远程监控物联网系统能够支持客户端访问方式提供远程监测与控制管理</p>
+                    </div>
+                </div>
+                <div class="baseBox baseBox2" style="margin-bottom:15px;height:29.5%">
+                    <img src="./img/right2.png" alt="">
+                    <!-- 四个角描边 end -->
+                    <div class="boxTitle2">种植品种分析</div>
+                    <div class="boxRader" id="Progress"></div>
+                </div>
+                <div class="baseBox baseBox3" style="height:28.9%">
+                    <img src="./img/right3.png" alt="">
+                    <!-- 四个角描边 end -->
+                    <div class="boxTitle2">茶叶销量分析</div>
+                    <div class="boxRader" id="mains"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.0.0-beta.2/echarts.min.js"></script>
+<script src="js/dataScoll.js"></script>
+<script>
+    // 地图hover事件
+    function HoverFn() {
+        $('.mapActived1').hover(function () {
+            $(".mapImg").attr("src", "./img/map1.png");
+            $(".mapContent1,.mapContent2,.mapContent3").hide();
+            $(".mapContent1").slideDown(500);
+        }, function () {
+
+        });
+    }
+    HoverFn()
+</script>
+<script>
+    $('.boxLis').on('mouseenter', 'li', function () {
+
+        var that = $(this);
+
+        that.addClass('active').siblings().removeClass('active');
+
+        $('.content1 .contList').hide();
+
+        console.log($('.content1 li'))
+
+        $('.content1 .contList').eq(that.index()).show()
+
+
+    })
+</script>
+<script>
+    var HYChart1 = echarts.init(document.getElementById('wind'));
+    var HYChart2 = echarts.init(document.getElementById('Progress'));
+    var HYChart3 = echarts.init(document.getElementById('mains'));
+    /**
+     * times:YYYY-mm-dd HHMMSS
+     * timeData:时间
+     * windsData:风速
+     * windxData:风向/等级
+     * temData:温度
+     * ,rainData:降水
+     * humData:湿度
+     */
+    let Data = {
+        times: ["2019-10-28 11:00:00", "2019-10-28 12:00:00", "2019-10-28 13:00:00", "2019-10-28 14:00:00", "2019-10-28 15:00:00", "2019-10-28 16:00:00", "2019-10-28 17:00:00", "2019-10-28 18:00:00", "2019-10-28 19:00:00", "2019-10-28 20:00:00", "2019-10-28 21:00:00", "2019-10-28 22:00:00"],
+        timeData: ["08/00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"],
+        windxData: ["东南", "北", "东南", "东", "东南", "东南", "西", "北", "南", "东南", "东南", "东南"],
+        windsData: ["2.8/2", "1.4/1", "2.7/2", "3/2", "2.2/2", "1.4/1", "1.5/1", "1.9/2", "1.4/1", "1.8/2", "2/2", "3.4/3"],
+        temData: [9, 11, 13, 12, 11, 9, 9, 7, 6, 4, 3, 3],
+        rainData: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        humData: [76, 76, 70, 62, 58, 53, 50, 49, 46, 44, 44, 42],
+    }
+
+    function windDen(wind) {
+        switch (wind) {
+            case '北': return 'n';
+            case '东北': return 'ne';
+            case '东': return 'e';
+            case '东南': return 'se';
+            case '南': return 's';
+            case '西南': return 'sw';
+            case '西': return 'w';
+            case '西北': return 'nw';
+            default: return ''
+        }
+    }
+
+    let colors = ['#FF6863', '#6EAB40', '#3BB5F5'];
+
+    option = {
+        color: colors,
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: { type: 'cross' },
+            formatter: function (params, ticket, callback) {
+                let index = params[0].dataIndex;
+                let Htm = `${Data.times[index]}<br>
+                    温度:${Data.temData[index]}℃<br>
+                    降水:${Data.rainData[index]}mm<br>
+                    风力:${Data.windsData[index].split('/')[0]}m/s ${Data.windsData[index].split('/')[1]}级风 ${Data.windxData[index]}<br>
+                    湿度:${Data.humData[index]}%`
+                return Htm;
+            }
+        },
+        grid: {
+            top: '17%',
+            bottom: '30%',
+            left: '25%',
+            right: '10%'
+        },
+        dataZoom: {
+            bottom: '14%',
+            height: '30',
+            dataBackground: {
+                lineStyle: { color: '#39977D' },
+                areaStyle: { color: 'rgba(57,151,125,1)' }
+            },
+            borderColor: 'rgba(57,151,125,0)',
+            textStyle: { color: '#39977D' },
+            start: 0,
+            end: 100,
+            xAxisIndex: [0, 1, 2, 3]
+        },
+        xAxis: [{
+            name: '风力等级',
+            type: 'category',
+            position: 'bottom',
+            offset: 8,
+            axisTick: { show: false },
+            axisLine: { show: false },
+            axisLabel: {
+                show: true,
+                textStyle: {
+                    color: '#fff',
+                    fontSize: 10,
+                    backgroundColor: 'transparent',
+                    lineHeight: 20,
+                    padding: [3, 3]
+                },
+                interval: 0
+            },
+            nameTextStyle: { color: '#585858', padding: [0, 0, -53] },
+            nameLocation: 'start',
+            data: Data.windsData
+        },
+        {
+            name: '风向',
+            type: 'category',
+            position: 'bottom',
+            offset: 40,
+            axisTick: { show: false },
+            axisLine: { show: false },
+            axisLabel: {
+                show: true,
+                textStyle: { color: '#fff', fontSize: 10, lineHeight: 20 },
+                interval: 0,
+                formatter: (value) => {
+                    return '{' + windDen(value) + '| }' + value + '';
+                },
+                rich: {
+                    value: {
+                        lineHeight: 16,
+                        align: 'left'
+                    },
+                    n: {
+                        height: 16,
+                        align: 'left',
+                        backgroundColor: {
+                            image: `/asset/get/s/data-1567915257914-d2XE-l1Xe.png`
+                        }
+                    },
+                    ne: {
+                        height: 16,
+                        align: 'left',
+                        backgroundColor: {
+                            image: `/asset/get/s/data-1567915419689-EqosRMRlP.png`
+                        }
+                    },
+                    e: {
+                        height: 16,
+                        align: 'left',
+                        backgroundColor: {
+                            image: `/asset/get/s/data-1567915374565-sE5G5rXU6.png`
+                        }
+                    },
+                    se: {
+                        height: 16,
+                        align: 'left',
+                        backgroundColor: {
+                            image: `/asset/get/s/data-1567915457742-e5gWU0sT0.png`
+                        }
+                    },
+                    s: {
+                        height: 16,
+                        align: 'left',
+                        backgroundColor: {
+                            image: `/asset/get/s/data-1567915473589-TN5oJTIdv.png`
+                        }
+                    },
+                    sw: {
+                        height: 16,
+                        align: 'left',
+                        backgroundColor: {
+                            image: `/asset/get/s/data-1567915498319-h9PscokI2.png`
+                        }
+                    },
+                    w: {
+                        height: 16,
+                        align: 'left',
+                        backgroundColor: {
+                            image: `/asset/get/s/data-1567915523655-sI1HtlidH.png`
+                        }
+                    },
+                    nw: {
+                        height: 16,
+                        align: 'left',
+                        backgroundColor: {
+                            image: `/asset/get/s/data-1567915566043-E6t1OVpNh.png`
+                        }
+                    }
+                }
+            },
+            nameTextStyle: { color: '#585858', padding: [0, 0, -38] },
+            nameLocation: 'start',
+            data: Data.windxData
+        },
+        {
+            type: 'category',
+            axisLine: { show: false },
+        },
+        {
+            type: 'category',
+            position: 'bottom',
+            offset: 80,
+            axisTick: { alignWithLabel: true, textStyle: { color: '#707070' } },
+            data: Data.timeData
+        }
+        ],
+        yAxis: [{
+            type: 'value',
+            name: '温度(°C)',
+            scale: true,
+            position: 'left',
+            offset: 54,
+            axisTick: { lineStyle: { color: colors[0] }, inside: true },
+            nameTextStyle: { color: colors[0] },
+            axisLabel: { color: colors[0] },
+            splitLine: { show: false }
+        },
+        {
+            type: 'value',
+            name: '降水(mm)',
+            position: 'left',
+            axisTick: { lineStyle: { color: colors[1] }, inside: true },
+            nameTextStyle: { color: colors[1] },
+            axisLabel: { color: colors[1] },
+            splitLine: { show: false }
+        },
+        {
+            type: 'value',
+            name: '相对湿度(%)',
+            scale: true,
+            position: 'right',
+            axisTick: { lineStyle: { color: colors[2] }, inside: true },
+            nameTextStyle: { color: colors[2] },
+            axisLabel: { color: colors[2] },
+            splitLine: { show: false }
+        }
+        ],
+        series: [{
+            name: '温度',
+            type: 'line',
+            step: false,
+            label: { normal: { show: true, position: 'top' } },
+            data: Data.temData
+        },
+        {
+            name: '降水',
+            type: 'bar',
+            yAxisIndex: 1,
+            color: '#bee6b2',
+            barWidth: '50%',
+            label: { normal: { show: true, position: 'top' } },
+            data: Data.rainData
+        },
+        {
+            name: '相对湿度',
+            type: 'line',
+            step: false,
+            yAxisIndex: 2,
+            color: colors[2],
+            label: { normal: { show: true, position: 'top' } },
+            data: Data.humData
+        }
+        ]
+    };
+
+    // 进度条
+    var baifenbi = [63000, 153210, 37210, 43780].reverse();
+    var grayBar = [1, 1, 1, 1,];
+    var zongjine = [500, 500, 500, 500];
+    var xingm = ['云台大叶', '槠叶齐', '碧香早', '黄金茶'].reverse();
+    // console.log(xingm.reverse())
+    option2 = {
+
+        tooltip: {
+            trigger: 'axis'
+        },
+        grid: {
+            left: '30%',
+            right: '5%',
+            top: '0%',
+            bottom: '0%',
+        },
+        backgroundColor: 'transparent',
+        xAxis: [{
+            show: false,
+        },
+        //由于下边X轴已经是百分比刻度了,所以需要在顶部加一个X轴,刻度是金额,也隐藏掉
+        {
+            show: false,
+        }
+        ],
+        yAxis: {
+            type: 'category',
+            axisLabel: {
+                show: false, //让Y轴数据不显示
+            },
+            itemStyle: {
+
+            },
+            axisTick: {
+                show: false, //隐藏Y轴刻度
+            },
+            axisLine: {
+                show: false, //隐藏Y轴线段
+            },
+            data: xingm,
+        },
+        series: [
+            //背景色--------------------我是分割线君------------------------------//
+
+            {
+                show: true,
+                type: 'bar',
+                barGap: '-100%',
+                barWidth: '40%', //统计条宽度 
+                itemStyle: {
+                    normal: {
+                        color: '#3B4254'
+                    },
+                },
+                z: 1,
+                // data: grayBar,
+            },
+            //蓝条--------------------我是分割线君------------------------------//
+            {
+                show: true,
+                type: 'bar',
+                barGap: '-100%',
+                barWidth: '40%', //统计条宽度
+                itemStyle: {
+                    color: function (params) {
+                        var colorList = ['#0EFCFF', '#1AC5CC', '#288E9A', '#FA8100', '#C06F18'].reverse();
+                        return colorList[params.dataIndex]
+                    },
+                },
+                max: 1,
+                label: {
+                    normal: {
+                        show: true,
+                        textStyle: {
+                            color: '#fff', //百分比颜色
+                            fontSize: 8
+                        },
+                        position: 'right',
+                        //百分比格式
+                        formatter: function (data) {
+                            return (baifenbi[data.dataIndex]);
+                        },
+                    }
+                },
+                labelLine: {
+                    show: false,
+                },
+                z: 2,
+                data: baifenbi,
+            },
+            //数据条--------------------我是分割线君------------------------------//
+            {
+                show: true,
+                type: 'bar',
+                xAxisIndex: 1, //代表使用第二个X轴刻度!!!!!!!!!!!!!!!!!!!!!!!!
+                barGap: '-100%',
+                barWidth: '40%', //统计条宽度
+                itemStyle: {
+                    normal: {
+                        barBorderRadius: 200,
+                        color: 'transparent'
+                    },
+                },
+                label: {
+                    normal: {
+                        show: true,
+                        //label 的position位置可以是top bottom left,right,也可以是固定值
+                        //在这里需要上下统一对齐,所以用固定值
+                        position: ["-38%", '5%'],
+                        rich: { //富文本
+                            color: { //自定义颜色
+                                color: '#1BC5CC',
+                                fontSize: 12
+                            },
+                            value: xingm,
+                            start1: {
+                            },
+
+                        },
+                        formatter: function (data) {
+                            //富文本固定格式{colorName|这里填你想要写的内容}
+                            return '{start1|}{color|' + xingm[data.dataIndex] + '}'
+
+                        },
+                    }
+                },
+                data: zongjine
+            }
+
+        ]
+    };
+
+    option3 = {
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            x: 'center',
+            data: ['销售', '销售额'],
+            textStyle: {
+                color: "#fff",
+                fontSize: 12
+            },
+            itemWidth: 8,
+            itemHeight: 8,
+        },
+        calculable: true,
+        xAxis: [
+            {
+                type: 'category',
+                data: ['2019', '2020', '2021', '2022', '2023'],
+                axisLabel: {
+                    textStyle: {
+                        color: 'rgba(255,255,255,.2)',
+                        // opacity: 0.1,
+                    }
+                },
+                "axisTick": {       //y轴刻度线
+                    "show": false
+                },
+                "axisLine": {       //y轴
+                    "show": false,
+                },
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                scale: true,
+                name: "销量(吨)",
+                nameTextStyle: {
+                    color: 'rgba(255,255,255,.2)',
+                },
+                max: 100000,
+                min: 0,
+                boundaryGap: [0.2, 0.2],
+                "axisTick": {       //y轴刻度线
+                    "show": false
+                },
+                "axisLine": {       //y轴
+                    "show": false,
+                },
+                axisLabel: {
+                    textStyle: {
+                        color: 'rgba(255,255,255,.2)',
+                        // opacity: 0.1,
+                    }
+                },
+                splitLine: {  //决定是否显示坐标中网格
+                    show: true,
+                    lineStyle: {
+                        color: ['#fff'],
+                        opacity: 0.2
+                    }
+                },
+            },
+            {
+                type: 'value',
+                scale: true,
+                name: "销量额(万元)",
+                nameTextStyle: {
+                    color: 'rgba(255,255,255,.2)',
+                },
+                max: 600000,
+                min: 0,
+                boundaryGap: [0.2, 0.2],
+                "axisTick": {       //y轴刻度线
+                    "show": false
+                },
+                "axisLine": {       //y轴
+                    "show": false,
+                },
+                axisLabel: {
+                    textStyle: {
+                        color: 'rgba(255,255,255,.2)',
+                        // opacity: 0.1,
+                    }
+                },
+                splitLine: {  //决定是否显示坐标中网格
+                    show: false,
+                    lineStyle: {
+                        color: ['#fff'],
+                        opacity: 0.2
+                    }
+                },
+
+            }
+        ],
+        color: ['#0efcff', '#F45E23'],
+        grid: {
+            left: '3%',
+            right: '4%',
+            top: '25%',
+            bottom: '5%',
+            containLabel: true
+        },
+        series: [
+            {
+                name: '销售',
+                type: 'bar',
+                data: [47800, 55000, 63580, 70000, 82000],
+            },
+            {
+                name: '销售额',
+                type: 'bar',
+                data: [28680, 33000, 38148, 45500, 53300],
+            }
+        ]
+    };
+
+    HYChart1.setOption(option)
+    HYChart2.setOption(option2)
+    HYChart3.setOption(option3)
+
+    setInterval(function () {
+        numInit();
+        HYChart1.clear();
+        HYChart2.clear();
+        HYChart3.clear();
+
+        HYChart1.setOption(option);
+        HYChart2.setOption(option2);
+        HYChart3.setOption(option3);
+
+    }, 7000)
+</script>

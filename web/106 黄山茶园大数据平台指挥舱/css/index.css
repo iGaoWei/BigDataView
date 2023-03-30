@@ -1,0 +1,372 @@
+.main .unit {
+    position : absolute;
+    z-index  : 999;
+    top      : 3%;
+    left     : 13%;
+    font-size: 0.6vw;
+    color: rgba(255,255,255,.2);
+}
+
+.dataGet,
+.dataStorage,
+.gettingDate,
+.dataClean,
+.dataSave,
+.dataDesensitization {
+    width: 100%;
+    height: 90%;
+    /* border       : 1px solid #ccc; */
+    /* padding      : 10px; */
+
+    color        : #383F4E;
+    /* margin-top: -10%; */
+}
+
+.gettingDate {
+    margin-top: -10%;height: 90%;
+}
+
+.textBox {
+    width: 100%;
+}
+
+.textBox .pieText,
+.pieText2 {
+    position     : absolute;
+    color        : #fff;
+    font-size    : 0.6vw;
+    left         : 18%;
+    /* margin-top: 20%; */
+}
+
+.textBox .pieText {
+    top: 48%;
+}
+
+.textBox .pieText2 {
+    top: 91%;
+}
+
+.textBox .pieText .text2 {
+    margin-left: 4.8vw;
+}
+
+.textBox .pieText2 .text2 {
+    margin-left: 4.6vw;
+}
+
+.centerTop {
+    position: relative;
+    width: 100%;
+    height: 13%;
+    border: 1px solid #27E5E9;
+    /* padding-left: 5%; */
+}
+.centerTop .leftTime {
+    float: left;
+    width: 30%;
+    height: 100%;
+    line-height: 100%;
+    color: #C3CADA;
+    font-size: 0.8vw;
+    
+}
+.centerTop .leftTime .year {
+    position: absolute;
+    top: 38%;
+    left: 5%;
+}
+.centerTop .leftTime .hour {
+    position: absolute;
+    top: 55%;
+    left: 7%;
+}
+.centerTop .number{
+    /* position: relative; */
+    float: left;
+    width: 80%;
+    height: 100%;
+    color: #0DFAFC;
+    font-size: 1.2vw;
+    /* text-align: center; */
+}
+.centerTop .number .numBox span {
+    margin-left: 2%;
+    margin-top: 9%;
+    display: inline-block;
+    width: 6%;
+    height: 35%;
+    text-align: center;
+    border: 1px solid #0755A2;
+    background-color: #0A4253;
+}
+.centerTop .number .numBox i {
+    position: relative;
+    top: 10%;
+    left: 1%;
+}
+.centerBottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 32.3%;
+    /* border: 1px solid #6077AD; */
+}
+.centerBottom .dataTransmissionTitle {
+    position: relative;
+    display: flex;
+    align-items:center;
+    width: 95%;
+    height: 13%;
+    margin-left: 2.5%;
+    margin-top: .7vw;
+    background-color: #223B5A;
+    color: #11F9FD;
+}
+.centerBottom .dataTransmissionTitle .first {
+    /* float: left; */
+    text-align: center;
+    /* display: inline-block; */
+    /* width: 14%; */
+    /* height: 100%; */
+    /* background-color: red; */
+    font-size: .7vw;
+    margin-left: .7vw;
+}
+.dataTransmissionTitle .rightContent {
+    margin-left: 1vw;
+}
+.centerBottom .dataTransmissionTitle .centertTitle{
+    position: absolute;
+    font-size: .4vw;
+}
+.centerBottom .dataTransmissionTitle .centertTitleTop{
+    top: .3vw;
+}
+.centerBottom .dataTransmissionTitle .centertTitleBottom{
+    top: 1.3vw;
+}
+.centertTitle .point {
+    position: absolute;
+    left: .8vw;
+    top: .15vw;
+    display: inline-block;
+    width: .2vw;
+    height: .2vw;
+    background-color: #0EFAFC;
+}
+.squareBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: .5vw; */
+    float: left;
+    width: 1.7vw;
+    height: 1.7vw;
+    background-color: #1F2C3F;
+}
+.squareBox .transformBox {
+    display: inline-block;
+    width: .3vw;
+    height: .3vw;
+    border: 3px solid #0EFAFC;
+    /* background-color: #11F9FD; */
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg); 	
+    -moz-transform:rotate(45deg); 	
+    -webkit-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+}
+.dataTransmissionTitle .rightName {
+    font-size: 1vw;
+    margin-left: 2vw;
+}
+.centerBottom .insideText {
+    margin: .3vw 0 .3vw 2.5%;
+    font-size: .4vw;
+    color: #0EFAFC;
+}
+.centerBottom .lightBox {
+    margin-left: 2.5%;
+    width: 95%;
+    height: 3%;
+    /* background-color: red; */
+}
+.lightBox .shortLine {
+    float: left;
+    margin-right: .2vw;
+    display: inline-block;
+    width: 11%;
+    height: 100%;
+    background-color: #0EFCFF;
+}
+.lightBox .longLine {
+    float: right;
+    width: 40%;
+    height: 100%;
+    border: 1px solid #0EFCFF;
+}
+.centerBottom .bottomBox {
+    width: 95%;
+    height: 52%;
+    background-color: #1F2C3F;
+    margin-left: 2.5%;
+    margin-top: .3vw;
+    color: #0EFAFC;
+    font-size: .8vw;
+}
+.bottomBox .code {
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+    width: 100%;
+    height: 100%;
+    /* overflow: scroll; */
+    /* overflow-x:hidden; */
+    /* word-wrap:break-word; */
+}
+.circleBox {
+    /* position: relative; */
+}
+.circleBox .bigCircle {
+    position: relative;
+    left:10%;
+    top: 10%;
+    display: inline-block;
+    width: 1vw;
+    height: 1vw;
+    border-radius: 50%;
+    border: 1px solid #0EFAFC;
+}
+.circleBox .bigCircle2{
+    left: 5.02%;
+    top: 30%;
+}
+.circleBox .smallCircle {
+    position: absolute;
+    left: 26%;
+    top: 26%;
+    display: inline-block;
+    width: .3vw;
+    height: .3vw;
+    border-radius: 50%;
+    border: 1px solid #EB1B55;
+}
+.circleBox .smallCircle2{
+    border: 1px solid #0EFAFC;
+}
+/* 我的 */
+.service {
+    overflow     : hidden;
+    margin       : .6vw 1vw;
+    padding      : .3vw 0;
+    border-bottom: 1px solid #0efcff;
+}
+
+.service span {
+    font-size: .6vw;
+    color    : #0efcff;
+}
+
+.service-data {
+    overflow: hidden;
+    margin  : .6vw 1vw;
+    padding : .3vw 0;
+}
+
+.service-data .img-box {
+    width : 4vw;
+    height: 4vw;
+}
+
+.service-data .img-box img {
+    width : 100%;
+    height: 100%;
+}
+
+.service-data span {
+    font-size : .6vw;
+    color     : #0efcff;
+    margin-top: .2vw;
+}
+
+.service-data .right ul li {
+    float     : right;
+    color     : #0efcff;
+    font-size : .6vw;
+    padding   : .4vw;
+    text-align: center;
+}
+
+.service-data .right ul li p {
+    margin: .5vw 0;
+}
+
+.centerBox .earthBox {
+    background     : url(../img/earth.png) no-repeat;
+    background-size: 100% 100%;
+    width          : 100%;
+    height         : 51.3%;
+    position       : relative;
+    margin-top: 2%;
+}
+
+.centerBox .earthBox .lineImg {
+    position: absolute;
+    left    : 25%;
+    top     : 12%;
+    width   : 60%;
+    height  : 60%;
+}
+
+.centerBox .earthBox .img-item {
+    position: absolute;
+    width   : 22%;
+    height  : 2.5vw;
+    font-size: .6vw;
+}
+.centerBox .earthBox .img-item img{
+    width: 100%;
+    height: 100%;
+}
+.centerBox .earthBox .img-item span{
+    position: absolute;
+    left: 3.2vw;
+    top: .8vw;
+    color: #0efcff;
+    cursor: pointer ;
+}
+.centerBox .earthBox .pc1 {
+    left: 8vw;
+    top : 14vw;
+}
+
+.centerBox .earthBox .pc2 {
+    left: 13vw;
+    top : 17vw;
+}
+
+.centerBox .earthBox .pc3 {
+    left: 2vw;
+    top : 10vw;
+}
+
+.centerBox .earthBox .pc4 {
+    left: 21vw;
+    top : 17vw;
+}
+.centerBox .earthBox .pc5 {
+    left: 18vw;
+    top : 13vw;
+}
+.centerBox .earthBox .pc6 {
+    left: 10vw;
+    top : 10vw;
+}
+.centerBox .earthBox .pc7 {
+    left: 7vw;
+    top : 6vw;
+}
+.centerBox .earthBox .pc8 {
+    left: 4.5vw;
+    top : 2vw;
+}
