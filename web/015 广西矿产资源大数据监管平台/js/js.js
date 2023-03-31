@@ -690,7 +690,8 @@ $.getJSON(uploadedDataURL, function(geoJson) {
 
         geo: {
             map: 'chenxi',
-			  zoom: 1,
+            roam: true,
+            zoom: 1.1,
 			 itemStyle: {
             normal: {
                 areaColor: 'rgba(0,97,225,.3)',
@@ -712,6 +713,7 @@ $.getJSON(uploadedDataURL, function(geoJson) {
             symbolSize: function(val) {
                 return val[2] / 5;
             },
+
             label: {
                 normal: {
                     formatter: '{b}',
@@ -871,7 +873,8 @@ $.getJSON(uploadedDataURL, function(geoJson) {
 
         geo: {
             map: 'guangxi',
-			  zoom: 1,
+            roam: true,
+            zoom: 1.1,
 			 itemStyle: {
             normal: {
                 areaColor: 'rgba(0,97,225,.3)',

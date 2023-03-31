@@ -165,8 +165,8 @@ $.get(guangdong, function(tjJson) {
     option = {
       //  backgroundColor: '#FDF7F2',
         title: {
-       text: '业务覆盖',
-       subtext: '2016-2018年数据',
+       text: '全国核心业务覆盖',
+       subtext: '更多模板关注公众号”DreamCoders“',
         left: 'center',
 		top:'0',
         textStyle: {

@@ -4,6 +4,19 @@
     <list default="true" id="1db8f01d-0439-420c-8e00-93b93c288a8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/001 服务大数据可视化监管平台.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/001 服务大数据可视化监管平台.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 联心菜市场数据中心/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/004 政务大数据共享交换平台/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/004 政务大数据共享交换平台/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/005 可视化监控管理/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/005 可视化监控管理/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/007 惠民服务平台/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/007 惠民服务平台/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/010 双数智慧公卫-传染病督导平台/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/010 双数智慧公卫-传染病督导平台/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/011 大数据可视化系统数据分析通用模版/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/011 大数据可视化系统数据分析通用模版/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/015 广西矿产资源大数据监管平台/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/015 广西矿产资源大数据监管平台/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/015 广西矿产资源大数据监管平台/js/js.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/015 广西矿产资源大数据监管平台/js/js.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/019 大数据可视化系统数据分析通用模版/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/019 大数据可视化系统数据分析通用模版/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/020 大数据通用模版大标题样式/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/020 大数据通用模版大标题样式/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/020 大数据通用模版大标题样式/js/area_echarts.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/020 大数据通用模版大标题样式/js/area_echarts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +65,7 @@
       <workItem from="1632269242215" duration="17937000" />
       <workItem from="1632787642798" duration="2531000" />
       <workItem from="1634515711877" duration="1810000" />
+      <workItem from="1680245959274" duration="806000" />
     </task>
     <servers />
   </component>

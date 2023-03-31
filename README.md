@@ -1,5 +1,5 @@
 
-<p align="center"><h1 align="center">100套大数据可视化模板</h1></p>
+<p align="center"><h1 align="center">100+套大数据可视化模板</h1></p>
 
 </br></br>
 
@@ -61,7 +61,7 @@ git clone https://github.com/iGaoWei/BigDataView.git
 在线预览时，有可能因为GithubPages浏览器环境问题，导致页面不兼容，不能正常显示，请以截图为准，或下载到本地测试预览,感谢支持！～
 ```
 ##### 001 服务大数据可视化监管平台 [在线预览](https://iGaoWei.github.io/BigDataView/web/001%20%E6%9C%8D%E5%8A%A1%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9B%91%E7%AE%A1%E5%B9%B3%E5%8F%B0/)
-<img src="https://img-blog.csdnimg.cn/img_convert/a21a4904789738a592b48b8f767f653d.gif" width="100%" />
+<img src="https://static-mp-bbac8ef1-0ccb-4c3b-9e01-45308177d568.next.bspapp.com/BigDataView/001/001.gif" width="100%" />
 
 ##### 002 水质情况实时监测预警系统 [在线预览](https://igaowei.github.io/BigDataView/web/002%20%E6%B0%B4%E8%B4%A8%E6%83%85%E5%86%B5%E5%AE%9E%E6%97%B6%E7%9B%91%E6%B5%8B%E9%A2%84%E8%AD%A6%E7%B3%BB%E7%BB%9F/)
 <img src="https://img-blog.csdnimg.cn/img_convert/5aa69cd9e2f53c714ef87d62ef165233.gif" width="100%" />
