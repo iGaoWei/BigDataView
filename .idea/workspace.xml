@@ -22,63 +22,6 @@
     <list default="true" id="1db8f01d-0439-420c-8e00-93b93c288a8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/001 服务大数据可视化监管平台.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/css/circulationSales.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/css/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/css/land_flow.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/css/new_index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/css/production.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/css/production_testing.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/css/reset.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/admin_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/center_num.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/main_bootm_middle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/main_bottom_bottom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/main_bottopm_top1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/main_bottopm_top2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/main_middle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/main_top_bottom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/main_top_left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/nums.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/title_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/web_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/光-表格.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/光晕1-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/光晕1-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/光晕1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/光晕2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/光晕3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/光线1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/光线2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/js/dataScoll.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/js/digitalScroll.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/js/jcarousellite.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/js/particles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/js/particles.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/更多内容关注公众号.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/003 联心菜市场数据中心.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/003 酷炫智能大屏数据中心.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/css/icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/css/icon.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/css/public.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/css/public.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/fonts/DIN-Bold.otf" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/fonts/DIN-Bold.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/fonts/DIN-Light.otf" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/fonts/DIN-Light.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/fonts/DIN-Medium.otf" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/fonts/DIN-Medium.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/images/bg2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/images/bg2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/images/border_bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/images/border_bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/images/title_border_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/images/title_border_bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/images/title_left_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/images/title_left_bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/images/title_right_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/images/title_right_bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/js/echarts.all.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/js/echarts.all.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/js/echarts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/js/echarts.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/js/jquery-1.11.0.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/js/jquery-1.11.0.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/js/jquery.numscroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/js/jquery.numscroll.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/更多内容关注公众号.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/更多内容关注公众号.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/006 全国疫情实时监控/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/006 全国疫情实时监控/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/007 惠民服务平台/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/007 惠民服务平台/data.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +70,7 @@
       <workItem from="1632269242215" duration="17937000" />
       <workItem from="1632787642798" duration="2531000" />
       <workItem from="1634515711877" duration="1810000" />
-      <workItem from="1680245959274" duration="2988000" />
+      <workItem from="1680245959274" duration="3137000" />
     </task>
     <servers />
   </component>

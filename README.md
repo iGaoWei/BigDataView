@@ -60,10 +60,10 @@ git clone https://github.com/iGaoWei/BigDataView.git
 ```
 在线预览时，有可能因为GithubPages浏览器环境问题，导致页面不兼容，不能正常显示，请以截图为准，或下载到本地测试预览,感谢支持！～
 ```
-##### 001 政务服务大数据可视化监管平台 [在线预览](https://iGaoWei.github.io/BigDataView/web/001%20%E6%9C%8D%E5%8A%A1%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9B%91%E7%AE%A1%E5%B9%B3%E5%8F%B0/)
+##### 001 政务服务大数据可视化监管平台 [在线预览](https://igaowei.github.io/BigDataView/web/001%20%E6%9C%8D%E5%8A%A1%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9B%91%E7%AE%A1%E5%B9%B3%E5%8F%B0/)
 <img src="https://static-mp-bbac8ef1-0ccb-4c3b-9e01-45308177d568.next.bspapp.com/BigDataView/image/001.gif" width="100%" />
 
-##### 002 水质情况实时监测预警系统 [在线预览](https://igaowei.github.io/BigDataView/web/002 水质情况实时监测预警系统/)
+##### 002 水质情况实时监测预警系统 [在线预览](https://igaowei.github.io/BigDataView/web/001%20%E6%9C%8D%E5%8A%A1%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9B%91%E7%AE%A1%E5%B9%B3%E5%8F%B0/)
 <img src="https://static-mp-bbac8ef1-0ccb-4c3b-9e01-45308177d568.next.bspapp.com/BigDataView/image/002.gif" width="100%" />
 
 ##### 003 酷炫智能大屏数据中心 [在线预览](https://igaowei.github.io/BigDataView/web/003%20%E8%81%94%E5%BF%83%E8%8F%9C%E5%B8%82%E5%9C%BA%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83/)
