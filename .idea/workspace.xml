@@ -1,22 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1db8f01d-0439-420c-8e00-93b93c288a8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/001 服务大数据可视化监管平台.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/001 服务大数据可视化监管平台.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 联心菜市场数据中心/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/004 政务大数据共享交换平台/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/004 政务大数据共享交换平台/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/005 可视化监控管理/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/005 可视化监控管理/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/007 惠民服务平台/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/007 惠民服务平台/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/010 双数智慧公卫-传染病督导平台/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/010 双数智慧公卫-传染病督导平台/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/011 大数据可视化系统数据分析通用模版/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/011 大数据可视化系统数据分析通用模版/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/015 广西矿产资源大数据监管平台/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/015 广西矿产资源大数据监管平台/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/015 广西矿产资源大数据监管平台/js/js.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/015 广西矿产资源大数据监管平台/js/js.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/019 大数据可视化系统数据分析通用模版/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/019 大数据可视化系统数据分析通用模版/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/020 大数据通用模版大标题样式/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/020 大数据通用模版大标题样式/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/020 大数据通用模版大标题样式/js/area_echarts.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/020 大数据通用模版大标题样式/js/area_echarts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/001 服务大数据可视化监管平台.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/css/circulationSales.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/css/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/css/land_flow.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/css/new_index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/css/production.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/css/production_testing.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/css/reset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/admin_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/center_num.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/main_bootm_middle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/main_bottom_bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/main_bottopm_top1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/main_bottopm_top2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/main_middle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/main_top_bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/main_top_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/nums.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/title_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/web_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/光-表格.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/光晕1-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/光晕1-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/光晕1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/光晕2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/光晕3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/光线1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/images/光线2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/js/dataScoll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/js/digitalScroll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/js/jcarousellite.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/js/particles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/js/particles.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/001 服务大数据可视化监管平台/更多内容关注公众号.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/003 联心菜市场数据中心.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/003 酷炫智能大屏数据中心.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/css/icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/css/icon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/css/public.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/css/public.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/fonts/DIN-Bold.otf" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/fonts/DIN-Bold.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/fonts/DIN-Light.otf" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/fonts/DIN-Light.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/fonts/DIN-Medium.otf" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/fonts/DIN-Medium.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/images/bg2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/images/bg2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/images/border_bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/images/border_bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/images/title_border_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/images/title_border_bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/images/title_left_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/images/title_left_bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/images/title_right_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/images/title_right_bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/js/echarts.all.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/js/echarts.all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/js/echarts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/js/echarts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/js/jquery-1.11.0.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/js/jquery-1.11.0.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/js/jquery.numscroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/js/jquery.numscroll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/003 联心菜市场数据中心/更多内容关注公众号.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/003 酷炫智能大屏数据中心/更多内容关注公众号.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/006 全国疫情实时监控/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/006 全国疫情实时监控/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/007 惠民服务平台/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/007 惠民服务平台/data.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,37 +127,32 @@
       <workItem from="1632269242215" duration="17937000" />
       <workItem from="1632787642798" duration="2531000" />
       <workItem from="1634515711877" duration="1810000" />
-      <workItem from="1680245959274" duration="806000" />
+      <workItem from="1680245959274" duration="2988000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state width="943" height="524" key="#com.intellij.structuralsearch.plugin.ui.StructuralReplaceDialog" timestamp="1627293654920">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="2582" y="248" width="596" height="584" key="find.popup" timestamp="1680309342179">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="943" height="524" key="#com.intellij.structuralsearch.plugin.ui.StructuralReplaceDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1627293654920" />
-    <state x="2408" y="258" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog" timestamp="1627293654920">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="2582" y="248" width="596" height="584" key="find.popup/0.0.1920.1032/1920.0.1920.1080@1920.0.1920.1080" timestamp="1680309342179" />
+    <state x="2536" y="250" key="run.anything.popup" timestamp="1680309465518">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2408" y="258" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1627293654920" />
-    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1630485440833">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1630485440833" />
-    <state x="2256" y="104" width="798" height="871" key="find.popup" timestamp="1632622412501">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2256" y="104" width="798" height="871" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1632622412501" />
-    <state x="2536" y="240" key="run.anything.popup" timestamp="1631670639591">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2536" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1631670639591" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1629854603498">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1629854603498" />
+    <state x="2536" y="250" key="run.anything.popup/0.0.1920.1032/1920.0.1920.1080@1920.0.1920.1080" timestamp="1680309465518" />
   </component>
 </project>
