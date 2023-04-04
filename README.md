@@ -388,17 +388,19 @@ git clone https://github.com/iGaoWei/BigDataView.git
 ##### 106 黄山茶园大数据平台指挥舱 [在线预览](https://igaowei.github.io/BigDataView/web/101%20%E6%A0%A1%E6%83%85%E6%95%B0%E6%8D%AE%E7%BB%BC%E5%90%88%E5%88%86%E6%9E%90%E5%B9%B3%E5%8F%B0/)
 <img src="https://static-mp-bbac8ef1-0ccb-4c3b-9e01-45308177d568.next.bspapp.com/BigDataView/image/106.gif" onerror="this.src='https://cdn.staticaly.com/gh/iGaoWei/codercdn@master/img/106.gif'" width="100%" />
 
-[![陌生人/BigDataView](https://gitee.com/iGaoWei/big-data-view/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b)](https://gitee.com/iGaoWei/big-data-view)
+##### 107 上海XX大学迎新实时大数据看板 [在线预览](https://igaowei.github.io/BigDataView/web/101%20%E6%A0%A1%E6%83%85%E6%95%B0%E6%8D%AE%E7%BB%BC%E5%90%88%E5%88%86%E6%9E%90%E5%B9%B3%E5%8F%B0/)
+<img src="https://static-mp-bbac8ef1-0ccb-4c3b-9e01-45308177d568.next.bspapp.com/BigDataView/image/107.gif" onerror="this.src='https://cdn.staticaly.com/gh/iGaoWei/codercdn@master/img/107.gif'" width="100%" />
+
 
 #### 温馨提示：更多模板陆续更新中
 
 
 <div align="center">
 <p>更多互联网资源内容请关注公众号</p>
-<img src="https://cdn.staticaly.com/gh/iGaoWei/codercdn@master/img/赞赏码.jpg" onerror="this.src='https://cdn.staticaly.com/gh/iGaoWei/codercdn@master/img/更多内容关注公众号.gif'" width="50%"/>
+<img src="https://cdn.staticaly.com/gh/iGaoWei/codercdn@master/img/赞赏码.jpg" onerror="this.src='https://cdn.staticaly.com/gh/iGaoWei/codercdn@master/img/更多内容关注公众号.gif'" width="60%"/>
 <p>
 收集整理不易，如果觉得对你有对您有帮助，您可以点赞评论收藏支持! <br>
-如果觉得对你有对您有帮助，您可以点右上角 💘Star💘支持,谢谢！～
+也可以微信扫码上方赞赏码随意支持，最好您可以点右上角 💘Star💘支持,谢谢！～
 </p>
 </div>
 
@@ -411,3 +413,5 @@ git clone https://github.com/iGaoWei/BigDataView.git
 关注公众号，每天分享编程开发相关的技术文章、工具资源、精选课程、视频教程、IT资讯、学习资料等。
 </p>
 </div>
+
+[![陌生人/BigDataView](https://gitee.com/iGaoWei/big-data-view/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b)](https://gitee.com/iGaoWei/big-data-view)

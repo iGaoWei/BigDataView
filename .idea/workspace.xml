@@ -22,15 +22,6 @@
     <list default="true" id="1db8f01d-0439-420c-8e00-93b93c288a8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/013 某公司大数据展示模版/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/013 某公司大数据展示模版/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/049 工厂信息监控台/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/049 工厂信息监控台/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/050 大数据可视化展示平台通用模板/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/050 大数据可视化展示平台通用模板/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/051 通用大数据可视化展示平台模板/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/051 通用大数据可视化展示平台模板/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/089 警务综合监控管理平台HTML模板/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/089 警务综合监控管理平台HTML模板/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/091 ECharts扩展示例自定义视图/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/091 ECharts扩展示例自定义视图/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/092 酷炫大屏数据可视化模板/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/092 酷炫大屏数据可视化模板/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/093 办税渠道运行状态大数据监控平台/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/093 办税渠道运行状态大数据监控平台/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/097 程序员数据可视化大屏展示/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/097 程序员数据可视化大屏展示/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +70,8 @@
       <workItem from="1632269242215" duration="17937000" />
       <workItem from="1632787642798" duration="2531000" />
       <workItem from="1634515711877" duration="1810000" />
-      <workItem from="1680245959274" duration="13756000" />
+      <workItem from="1680245959274" duration="15935000" />
+      <workItem from="1680595499060" duration="121000" />
     </task>
     <servers />
   </component>
@@ -96,6 +88,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2582" y="248" width="655" height="608" key="find.popup" timestamp="1680317307328">
