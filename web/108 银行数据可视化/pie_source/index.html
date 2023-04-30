@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>【27】数据可视化大屏：基于 Echarts + Flask 实现的 32:9 超宽屏可视化范例 - 监控指挥中心</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<link href="css/bootstrap-combined.min.css" rel="stylesheet">
+<link href="css/layoutit.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+</script>
+<!-- 官方库依赖 -->
+<script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/vue/vue.js"></script>
+<script type="text/javascript" src="js/vue/dv.js"></script>
+<script type="text/javascript" src="js/echarts/echarts.min.js"></script>
+
+<body style="background-color:rgb(11, 18, 39)">
+    <div id="vue_app" class="container-fluid">
+        <div class="row" style="height: 100%;">
+            <div class="col-6">
+                <div id="container_l1" style="height: 100%; "></div>
+            </div>
+            <div class="col-6">
+                <div id="container_l2" style="height: 100%; "></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var vpp = new Vue({
+        el: "#vue_app",
+        data() { }
+    })
+</script>
+<!-- 用户自定义函数依赖 -->
+<script type="text/javascript" src="js/udf/base.js"></script>
+<script type="text/javascript" src="pie_source/loader.js"></script>

@@ -1,0 +1,17 @@
+#right_menu {
+
+    /* list-style: none; */
+    background: rgb(143, 181, 238);
+    /* border: solid 1px rgb(196, 222, 236); */
+    margin: 10px;
+    padding: 10px;
+    position: absolute;
+    /* left: 0px; */
+    top: 10px;
+    /* 默认不显示 */
+    display: none;
+}
+
+#right_menu li {
+    border-bottom: dotted 1px rgb(74, 107, 129);
+}

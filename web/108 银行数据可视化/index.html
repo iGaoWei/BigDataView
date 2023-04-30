@@ -1,0 +1,166 @@
+<html>
+
+<head>
+    <title>动态实时大屏 - 银行监管系统</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            color: aliceblue;
+        }
+
+        button {
+            background-color: aqua;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .grid-container {
+            display: grid;
+            /* 6列，定义列宽 */
+            grid-template-columns: 14% 14.5% 20% 20% 14.5% 14%;
+            /* auto: 它用于自动设置行的高度，即取决于行中容器和内容的大小。 */
+            grid-template-rows: 10% 25% 30% 30%;
+            grid-gap: 10px;
+            /* background-color: #2196F3; */
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #lo_0 {
+            grid-area: 1 / 1 / 2 / 7;
+            background-image: url(img/header/15.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        #lo_5 {
+            grid-area: 3 / 1 / 4 / 3;
+        }
+
+        #lo_6 {
+            grid-area: 3 / 5 / 4 / 7;
+        }
+
+        #lo_7 {
+            grid-area: 4 / 1 / 5 / 3;
+        }
+
+        #lo_8 {
+            grid-area: 2 / 3 / 4 / 5;
+        }
+
+        #lo_9 {
+            grid-area: 4 / 3 / 5 / 5;
+        }
+
+        #lo_10 {
+            grid-area: 4 / 5 / 5 / 7;
+        }
+
+        #lo_1,
+        #lo_2,
+        #lo_3,
+        #lo_4,
+        #lo_5,
+        #lo_6,
+        #lo_7,
+        #lo_8,
+        #lo_9,
+        #lo_10 {
+            /* 使用border效果 */
+            border: 6px solid transparent;
+            border-image: url(img/46.png);
+            border-image-slice: 6;
+            border-image-repeat: stretch;
+
+            /* border: 5px solid blueviolet; */
+            text-align: center;
+            padding: 0;
+            font-size: 30px;
+        }
+    </style>
+    <!-- 官方库依赖 -->
+    <script type="text/javascript" src="js/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/echarts/echarts.min.js"></script>
+</head>
+
+<body style="background-image: url(img/bg-16.png);  background-size: 100% ;  background-repeat: no-repeat;">
+
+    <div class="grid-container">
+        <div id="lo_0">
+            <h2>数据可视化-银行监管系统</h2>
+        </div>
+        <div id="lo_1">
+
+        </div>
+        <div id="lo_2">
+
+        </div>
+        <div id="lo_3">
+
+        </div>
+        <div id="lo_4">
+
+        </div>
+        <div id="lo_5">
+
+        </div>
+        <div id="lo_6">
+
+        </div>
+        <div id="lo_7">
+
+        </div>
+        <div id="lo_8">
+            <div style="height: 10%;">
+                <button
+                    onclick="async_echart_china('container_8', 'map_china_map/map_china_map.json', 'confirmAdd')">新增金额</button>
+                <button
+                    onclick="async_echart_china('container_8', 'map_china_map/map_china_map.json', 'confirm')">累计金额</button>
+                <button
+                    onclick="async_echart_china('container_8', 'map_china_map/map_china_map.json', 'nowConfirm')">现有金额</button>
+            </div>
+            <div id="container_8" style="height: 90%;"></div>
+        </div>
+        <div id="lo_9">9</div>
+        <div id="lo_10">10</div>
+    </div>
+    <!-- 鼠标右键切换主题 theme [1/2] -->
+    <!-- style="width: 200px;" 必须写在html，不能写在css文件中 -->
+<!--    <ul id="right_menu" style="width: 200px;">-->
+<!--        <li><img src="img/drop-down.png"> 主题列表</li>-->
+<!--        <li>infographic</li>-->
+<!--        <li>macarons</li>-->
+<!--        <li>roma</li>-->
+<!--        <li>shine</li>-->
+<!--        <li>walden</li>-->
+<!--        <li>westeros</li>-->
+<!--        <li>wonderland</li>-->
+<!--        <li>vintage</li>-->
+<!--        <li>purple-passion</li>-->
+<!--        <li>chalk</li>-->
+<!--        <li>dark</li>-->
+<!--        <li>essos</li>-->
+<!--    </ul>-->
+</body>
+<!-- 用户自定义函数依赖 -->
+<script type="text/javascript" src="js/udf/base.js"></script>
+
+<!-- 鼠标右键切换主题 theme [2/2] -->
+<script type="text/javascript" src="theme/js/switch_theme.js"></script>
+<script type="text/javascript" src="pie_source/loader.js"></script>
+<script type="text/javascript" src="line_visualMap/loader.js"></script>
+<script type="text/javascript" src="line_area_chart/loader.js"></script>
+<script type="text/javascript" src="map_china_map/loader.js"></script>
+<script type="text/javascript" src="bar_stacked/loader.js"></script>
+<script type="text/javascript" src="funnel/loader.js"></script>
+<script type="text/javascript" src="bar_markLine/loader.js"></script>
+<script type="text/javascript" src="pie_source_rose/loader.js"></script>
+<script type="text/javascript" src="bar_ROA/loader.js"></script>
+<script type="text/javascript" src="bar_horizontal/loader.js"></script>
+
+</html>
