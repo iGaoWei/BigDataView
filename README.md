@@ -18,9 +18,10 @@
 
 
 ```
-如果觉得对你有对您有帮助，您可以点右上角 💘Star💘支持,感谢支持！～
+收集整理不易，如果觉得对你有对您有帮助，欢迎 `Watch`、`Star`。当然也可以请我喝杯咖啡 💘感谢支持💘支持,感谢支持！
 ```
 
+<p align="center"><img src="https://cdn.staticaly.com/gh/iGaoWei/codercdn@master/img/wechat-code.png" width="320" height="320" alt="微信赞赏码" /></p>
 
 </br></br>
 
