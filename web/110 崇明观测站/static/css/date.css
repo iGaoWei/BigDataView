@@ -1,0 +1,41 @@
+.layui-laydate-main {
+    background-color: #0f2b7b !important;
+    color: #52d2ff !important;
+}
+
+.layui-laydate-header {
+    border-bottom: 1px solid #52d2ff !important;
+}
+
+.layui-laydate-header i {
+    color: #52d2ff !important;
+}
+
+.layui-laydate-content td {
+    color: #52d2ff !important;
+}
+
+.layui-laydate-footer {
+    border-top: 1px solid #52d2ff !important;
+}
+
+.laydate-footer-btns span {
+    border: 1px solid #52d2ff !important;
+    background-color: #0f2b7b !important;
+}
+
+.layui-laydate-content th {
+
+    color: #52d2ff !important;
+}
+
+.layui-laydate-footer {
+    background-color: #0f2b7b;
+}
+
+.laydate-footer-btns {
+    color: #52d2ff;
+}
+.layui-laydate{
+    border: 1px solid #52d2ff !important;
+}
