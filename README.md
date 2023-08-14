@@ -422,6 +422,8 @@ git clone https://github.com/iGaoWei/BigDataView.git
 <p>记录自己折腾不止的人生，留住时光的一抹轨迹 ! 
 关注公众号，每天分享编程开发相关的技术文章、工具资源、精选课程、视频教程、IT资讯、学习资料等。
 </p>
+
 </div>
+
 
 [![陌生人/BigDataView](https://gitee.com/iGaoWei/big-data-view/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b)](https://gitee.com/iGaoWei/big-data-view)
