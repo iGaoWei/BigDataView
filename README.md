@@ -20,7 +20,7 @@
 ```
 收集整理不易，如果觉得对您有帮助，欢迎 `Watch`、`Star`。当然也可以请我喝杯咖啡 💘感谢支持💘
 ```
-<p align="center"><img src="https://cdn.staticaly.com/gh/iGaoWei/codercdn@master/img/wechat-code.png" width="320" height="320" alt="微信赞赏码" /></p>
+<p align="center"><img src="https://gitee.com/iGaoWei/big-data-view/raw/master/preview/wechat-code.png" width="320" height="320" alt="微信赞赏码" /></p>
 
 </br></br>
 
@@ -52,7 +52,7 @@ git clone https://github.com/iGaoWei/BigDataView.git
 
 4.扫描下方微信小程序码，获取下载地址
 
-<img src="https://cdn.staticaly.com/gh/iGaoWei/codercdn@master/img/微信小程序.jpg" width="30%" onerror="this.src='https://cdn.staticaly.com/gh/iGaoWei/codercdn@master/img/更多内容关注公众号.gif'" />
+<img src="https://cdn.staticaly.com/gh/iGaoWei/codercdn@master/img/微信小程序.jpg" width="30%" onerror="this.src='https://gitee.com/iGaoWei/big-data-view/raw/master/preview/%E6%9B%B4%E5%A4%9A%E5%86%85%E5%AE%B9%E5%85%B3%E6%B3%A8%E5%85%AC%E4%BC%97%E5%8F%B7.gif'" />
 </p>
 
 
