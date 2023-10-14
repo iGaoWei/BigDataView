@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap-3.3.4.css">
+    <link rel="stylesheet" type="text/css" media="all" href="static/css/daterangepicker.css" />
+    <link rel="stylesheet" href="static/css/css.css">
+    <link rel="stylesheet" href="static/css/index2.css">
+    <link rel="stylesheet" href="static/css/daterangepicker.css">
+    <title>福鼎白茶大数据溯源平台</title>
+    <style>
+        @font-face {
+            font-family: 'DINPro';
+            src: url(/fonts/DINPro.woff.ttf);
+        }
+    </style>
+</head>
+<script type="text/javascript">
+    window._AMapSecurityConfig = {
+        securityJsCode: 'd016a95780d3e7402b8d354d2556337b', //密钥
+    }
+</script>
+<script type="text/javascript"
+    src="static/js/dc94675363994d37877d674545fccad6.js"></script>
+
+<body>
+    <div class="content" onclick="fun(event)">
+        <div class="header">
+            <div class="header_l">
+                <ul>
+                    <li class="sel_li">
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <img src="static/picture/header-3.png" alt="">
+                            <span>首页</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <span>应用介绍</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <span>产业介绍</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header_m">
+                <h1>福鼎白茶大数据溯源平台</h1>
+            </div>
+            <div class="header_r">
+                <ul>
+
+                    <li class="">
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <span>产量产值</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <span>业务系统</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <img src="static/picture/header-1.png" alt="">
+                            <span>退出</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main_l">
+                <div class="item mainl1">
+                    <div class="title">
+                        <h2>交易产量</h2>
+                        <p><span class="span_c day1_cl">日</span><span class="month1_cl">月</span><span
+                                class="year1_cl">年</span></p>
+                        <button id="date1"></button>
+                    </div>
+                    <div class="con">
+                        <div class="con_t">
+                            <p>当日茶青交易产量：<span class="jyl_1" data-ride="numberGrow21" data-value="150.9" data-time="3"
+                                    data-digit="2">150.9</span><b>公斤</b></p>
+                        </div>
+                        <div class="con_f bar1"></div>
+                    </div>
+                </div>
+                <div class="item mainl2">
+                    <div class="title">
+                        <h2>交易产量</h2>
+                        <p><span class="span_c day2_cl">日</span><span class="month2_cl">月</span><span
+                                class="year2_cl">年</span></p>
+                        <button id="date2"></button>
+                    </div>
+                    <div class="con">
+                        <div class="con_t">
+                            <p>当日毛茶交易产量：<span class="jyl_2" data-ride="numberGrow22" data-value="150.9" data-time="3"
+                                    data-digit="2">150.9</span><b>公斤</b></p>
+                        </div>
+                        <div class="con_f bar2"></div>
+                    </div>
+                </div>
+                <!-- <img src="static/picture/dot.png" alt=""> -->
+            </div>
+            <!-- <div class="point">
+                <img src="static/picture/dot.png" alt="">
+                <span class="point_child" style="color: white;font-size: 14px;white-space: nowrap;margin-top: -10px;">福鼎市</span>
+            </div> -->
+            <!-- <div class="main_m"> -->
+            <div class="eject_bigbox">
+                <div class="close2"></div>
+                <h2>产业介绍</h2>
+                <div class="con_box">
+                    <video src="/images/video.mp4" controls></video>
+                    <div class="textbox">
+                        <p>福鼎是中国白茶发源地和核心产区，也是唯一由国家部委授予的“中国白茶之乡”，素有“世界白茶在中国，中国白茶在福鼎”之美誉。这里三面环山一面临海，以花岗岩地貌、微酸性砂砾土壤为主，千百年来，独特的地理气候条件孕育出福鼎大白茶、福鼎大毫茶两大国家级茶树良种。福鼎白茶运用传统独特工艺，最大限度地保留了茶叶中的营养和活性，造就了福鼎白茶“毫香蜜韵、历久弥香、自然健康”的特质。新茶有甜爽之美，老茶有甘醇之韵，广为世人所推崇。
+                        </p>
+                        <p>福鼎市大力实施基地化生态茶园建设，推行茶园不使用化学农药全覆盖，始终坚持做老百姓喝得起的放心茶、健康茶。福鼎白茶大数据溯源系统于2021年3月10日正式启用，必将更好地维护消费者的权益，确保每一份福鼎白茶都来自福鼎正宗原产地。
+                        </p>
+                        <p>福鼎白茶，让世界更美好！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="main_m">
+                <div class="main_m_t">
+                    <div class="item1">
+                        <p data-ride="numberGrow25" data-value="6551" data-time="3" data-digit="2">6551</p>
+                        <span>茶农 (户)</span>
+                        <p data-ride="numberGrow25" data-value="150.6" data-time="3" data-digit="2">150.6</p>
+                        <span>经纪人(家)</span>
+                    </div>
+                    <div class="item1">
+                        <p data-ride="numberGrow25" data-value="85" data-time="3" data-digit="2">85</p>
+                        <span>茶企 (家)</span>
+                        <p data-ride="numberGrow25" data-value="65.8" data-time="3" data-digit="2">65.8</p>
+                        <span>加工点(家)</span>
+                    </div>
+                    <div class="item1">
+                        <p data-ride="numberGrow25" data-value="14374.64" data-time="3" data-digit="2">14,374.64</p>
+                        <span>茶园总面积 (万亩)</span>
+                        <p data-ride="numberGrow25" data-value="35.40" data-time="3" data-digit="2">35.40</p>
+                        <span>交易额 (亿元)</span>
+                    </div>
+                    <div class="item1">
+                        <p data-ride="numberGrow25" data-value="338029.51" data-time="3" data-digit="2">338,029.51</p>
+                        <span>交易产量 (万吨)</span>
+                        <p data-ride="numberGrow25" data-value="2.4576" data-time="3" data-digit="2">2.4576</p>
+                        <span>溯源码量 (个)</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="eject control">
+                <div class="close"></div>
+                <div class="infor">
+                    <h2><img src="static/picture/address.png" alt=""><span class="areaname">地区名称</span></h2>
+                    <div class="con_text">
+                        <p>茶农(户):<span>152</span></p>
+                        <p>茶企(家):<span>152</span></p>
+                        <p>茶园面积(千克):<span>152</span></p>
+                        <p>预测产量(户):<span>152</span></p>
+                        <p>当年实际产量(千克):<span>152</span></p>
+                        <p>当年溯源产量(千克):<span>152</span></p>
+                        <p>茶叶产值</p>
+                    </div>
+                </div>
+                <div class="line5">
+
+                </div>
+
+                <!-- <div class="con "></div> -->
+            </div>
+            <div class="main_m_f">
+                <ul>
+                    <li class="active">
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <img src="static/picture/mainm-4.png" alt=""> <img src="static/picture/mainm-4h.png" alt="">
+                        </a>
+                        <span>数字溯源</span>
+                    </li>
+                    <li>
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <img src="static/picture/mainm-5.png" alt=""> <img src="static/picture/mainm-5h.png" alt="">
+                        </a>
+                        <span>病虫害测报</span>
+                    </li>
+                    <li>
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <img src="static/picture/mainm-6.png" alt=""> <img src="static/picture/mainm-6h.png" alt="">
+                        </a>
+                        <span>非化学农药监管</span>
+                    </li>
+                    <li>
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <img src="static/picture/mainm-7.png" alt=""> <img src="static/picture/mainm-7h.png" alt="">
+                        </a>
+                        <span>茶山地貌</span>
+                    </li>
+                    <li>
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <img src="static/picture/mainm-8.png" alt=""> <img src="static/picture/mainm-8h.png" alt="">
+                        </a>
+                        <span>数字交易</span>
+                    </li>
+                    <li>
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <img src="static/picture/mainm-9.png" alt=""> <img src="static/picture/mainm-9h.png" alt="">
+                        </a>
+                        <span>数字加工</span>
+                    </li>
+                    <li>
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <img src="static/picture/mainm-10.png" alt=""> <img src="static/picture/mainm-10h.png" alt="">
+                        </a>
+                        <span>白茶文旅</span>
+                    </li>
+                    <li>
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <img src="static/picture/mainm-11.png" alt=""> <img src="static/picture/mainm-11h.png" alt="">
+                        </a>
+                        <span>茶文化</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- </div> -->
+            <div class="main_r">
+                <div class="item mainr1">
+                    <div class="title">
+                        <h2>交易额</h2>
+                        <p><span class="span_c day3_cl">日</span><span class="month3_cl">月</span><span
+                                class="year3_cl">年</span></p>
+                        <button id="date3"></button>
+                    </div>
+                    <div class="con">
+                        <div class="con_t">
+                            <p>当月茶青交易额：<span class="jyl_3" data-ride="numberGrow23" data-value="150.9" data-time="3"
+                                    data-digit="2">150.9</span><b>万元</b></p>
+                        </div>
+                        <div class="con_f bar3"></div>
+                    </div>
+                </div>
+                <div class="item mainr2">
+                    <div class="title">
+                        <h2>交易额</h2>
+                        <p><span class="span_c day4_cl">日</span><span class="month4_cl">月</span><span
+                                class="year4_cl">年</span></p>
+                        <button id="date4"></button>
+                    </div>
+                    <div class="con">
+                        <div class="con_t">
+                            <p>当月毛茶交易额：<span class="jyl_4" data-ride="numberGrow24" data-value="150.9" data-time="3"
+                                    data-digit="2">150.9</span><b>公斤</b></p>
+                        </div>
+                        <div class="con_f bar4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="map3" id="map3">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="well configurator" style="display: none;">
+            <form>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="parentEl">parentEl</label>
+                            <input type="text" class="form-control" id="parentEl" value="" placeholder="body">
+                        </div>
+                        <div class="form-group">
+                            <label for="startDate">startDate</label>
+                            <input type="text" class="form-control" id="startDate" value="07/01/2015">
+                        </div>
+                        <div class="form-group">
+                            <label for="endDate">endDate</label>
+                            <input type="text" class="form-control" id="endDate" value="07/15/2015">
+                        </div>
+                        <div class="form-group">
+                            <label for="minDate">minDate</label>
+                            <input type="text" class="form-control" id="minDate" value="" placeholder="MM/DD/YYYY">
+                        </div>
+                        <div class="form-group">
+                            <label for="maxDate">maxDate</label>
+                            <input type="text" class="form-control" id="maxDate" value="" placeholder="MM/DD/YYYY">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="autoApply"> autoApply
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="singleDatePicker"> singleDatePicker
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="showDropdowns"> showDropdowns
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="showWeekNumbers"> showWeekNumbers
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="showISOWeekNumbers"> showISOWeekNumbers
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="timePicker"> timePicker
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="timePicker24Hour"> timePicker24Hour
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="timePickerIncrement">timePickerIncrement (in minutes)</label>
+                            <input type="text" class="form-control" id="timePickerIncrement" value="1">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="timePickerSeconds"> timePickerSeconds
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="dateLimit"> dateLimit (with example date range span)
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="ranges"> ranges (with example predefined ranges)
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="locale"> locale (with example settings)
+                            </label>
+                            <label id="rtl-wrap">
+                                <input type="checkbox" id="rtl"> RTL (right-to-left)
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="alwaysShowCalendars"> alwaysShowCalendars
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="linkedCalendars" checked="checked"> linkedCalendars
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="autoUpdateInput" checked="checked"> autoUpdateInput
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="showCustomRangeLabel" checked="checked"> showCustomRangeLabel
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="opens">opens</label>
+                            <select id="opens" class="form-control">
+                                <option value="right" selected>right</option>
+                                <option value="left">left</option>
+                                <option value="center">center</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="drops">drops</label>
+                            <select id="drops" class="form-control">
+                                <option value="down" selected>down</option>
+                                <option value="up">up</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="buttonClasses">buttonClasses</label>
+                            <input type="text" class="form-control" id="buttonClasses" value="btn btn-sm">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="applyClass">applyClass</label>
+                            <input type="text" class="form-control" id="applyClass" value="btn-success">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cancelClass">cancelClass</label>
+                            <input type="text" class="form-control" id="cancelClass" value="btn-default">
+                        </div>
+
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+    <style type="text/css">
+        .demo {
+            position: relative;
+        }
+
+        .demo i {
+            position: absolute;
+            bottom: 10px;
+            right: 24px;
+            top: auto;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            font-size: .1rem;
+            color: #4B7EFE;
+        }
+    </style>
+
+
+    <script src="static/js/main.js"></script>
+    <script src="static/js/jquery-1.10.2.js"></script>
+    <script src="static/js/bootstrap-3.3.4.js"></script>
+    <script src="static/js/echarts.min.js"></script>
+    <script src="static/js/flexible.js"></script>
+    <script src="static/js/jquery.js"></script>
+    <script src="static/js/moment.js"></script>
+    <script src="static/js/moment.min.js"></script>
+    <script src="static/js/daterangepicker.js"></script>
+    <script src="static/js/date.js"></script>
+    <script src="static/js/echarts-gl.min.js"></script>
+    <script src="static/js/index2.js"></script>
+    <script src="static/js/echarts-amap.min.js"></script>
+    <script src="static/js/scrolllazyinit.js"></script>
+    <!-- <script src="static/js/vue.min.js"></script> -->
+    <script type="text/javascript">
+        window._AMapSecurityConfig = {
+            securityJsCode: 'd016a95780d3e7402b8d354d2556337b', //密钥
+        }
+    </script>
+    <script type="text/javascript"
+        src="static/js/c704ac907ae64ebe95b77033f819f0dd.js"></script>
+    <script language="javascript">
+        var options = {
+            subdistrict: 0,
+            extensions: 'all',
+            level: 'district'
+        };
+        var district = new AMap.DistrictSearch(options);
+        //查询福鼎市区域
+        console.log(district);
+        district.search('福鼎市', function (status, result) {
+            // var bounds = result.districtList[0]['boundaries'];
+            console.log(status);
+            console.log(result);
+            var bounds = result.districtList[0]['boundaries'];
+            var mask = [];
+            for (var i = 0; i < bounds.length; i++) {
+                mask.push([bounds[i]]);
+            }
+            //实例化地图
+            var map = new AMap.Map('map3', {
+                mask: mask,
+                zoom: 10, //设置当前显示级别
+                expandZoomRange: true, //开启显示范围设置
+                zooms: [7, 16], //最小显示级别为7，最大显示级别为20
+                center: [120.219761, 27.218884],
+                viewMode: '3D', //这里特别注意，设置为3D则其它地区不显示
+                zoomEnable: true, //是否可以缩放地图
+                resizeEnable: true,
+                features: ['bg'],
+                layers: [new AMap.TileLayer.Satellite()],
+                // mapStyle: "amap://styles/light"
+            });
+            console.log(mask, 'mask');
+            //添加描边
+            for (var i = 0; i < bounds.length; i++) {
+                new AMap.Polyline({
+                    path: bounds[i],
+                    strokeColor: '#3078AC',
+                    strokeWeight: 2,
+                    map: map
+                })
+            }
+            // var map = new AMap.Map('container', {
+            //     center: [116.397428, 39.90923],
+            //     layers: [new AMap.TileLayer.Satellite()],
+            //     zoom: 13
+            // });
+
+            var marker1 = new AMap.Marker({
+                position: new AMap.LngLat(120.17931, 27.18487), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+                content: `<div class="point">
+        <img class="point_child_img" data-name="白琳镇"  style="display:block;margin-left:10px;width:31px;height:45px;" src="static/picture/dot.png" alt="">
+        <span class="point_child" style="color: white;font-size: 14px;white-space: nowrap;margin-top: -10px;">白琳镇</span>
+    </div>`,
+                offset: new AMap.Pixel(-15, -20),
+            });
+            var marker2 = new AMap.Marker({
+                position: new AMap.LngLat(120.18986, 27.23783), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+                content: `<div class="point">
+        <img class="point_child_img" data-name="点头镇"  style="display:block;margin-left:10px;width:31px;height:45px;" src="static/picture/dot.png" alt="">
+        <span class="point_child" style="color: white;font-size: 14px;white-space: nowrap;margin-top: -10px;">点头镇</span>
+    </div>`,
+                offset: new AMap.Pixel(-15, -20),
+            });
+            var marker3 = new AMap.Marker({
+                position: new AMap.LngLat(120.33273, 27.16229), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+                content: `<div class="point">
+        <img class="point_child_img" data-name="店下镇" style="display:block;margin-left:10px;width:31px;height:45px;" src="static/picture/dot.png" alt="">
+        <span class="point_child" style="color: white;font-size: 14px;white-space: nowrap;margin-top: -10px;">店下镇</span>
+    </div>`,
+                offset: new AMap.Pixel(-15, -20),
+            });
+            var marker4 = new AMap.Marker({
+                position: new AMap.LngLat(120.10877, 27.39024), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+                content: `<div class="point">
+        <img class="point_child_img" data-name="叠石乡" style="display:block;margin-left:10px;width:31px;height:45px;" src="static/picture/dot.png" alt="">
+        <span class="point_child" style="color: white;font-size: 14px;white-space: nowrap;margin-top: -10px;">叠石乡</span>
+    </div>`,
+                offset: new AMap.Pixel(-15, -20),
+            });
+            var marker5 = new AMap.Marker({
+                position: new AMap.LngLat(120.04024, 27.25816), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+                content: `<div class="point">
+        <img class="point_child_img" data-name="管阳镇"  style="display:block;margin-left:10px;width:31px;height:45px;" src="static/picture/dot.png" alt="">
+        <span class="point_child" style="color: white;font-size: 14px;white-space: nowrap;margin-top: -10px;">管阳镇</span>
+    </div>`,
+                offset: new AMap.Pixel(-15, -20),
+            });
+            var marker6 = new AMap.Marker({
+                position: new AMap.LngLat(120.23642, 27.39734), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+                content: `<div class="point">
+        <img class="point_child_img" data-name="贯岭镇"  style="display:block;margin-left:10px;width:31px;height:45px;" src="static/picture/dot.png" alt="">
+        <span class="point_child" style="color: white;font-size: 14px;white-space: nowrap;margin-top: -10px;">贯岭镇</span>
+    </div>`,
+                offset: new AMap.Pixel(-15, -20),
+            });
+            var marker7 = new AMap.Marker({
+                position: new AMap.LngLat(120.36065, 27.28290), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+                content: `<div class="point">
+        <img class="point_child_img" data-name="佳阳乡"  style="display:block;margin-left:10px;width:31px;height:45px;" src="static/picture/dot.png" alt="">
+        <span class="point_child" style="color: white;font-size: 14px;white-space: nowrap;margin-top: -10px;">佳阳乡</span>
+    </div>`,
+                offset: new AMap.Pixel(-15, -20),
+            });
+            var marker8 = new AMap.Marker({
+                position: new AMap.LngLat(120.37194, 27.19149), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+                content: `<div class="point">
+        <img class="point_child_img" data-name="龙安开发区"  style="display:block;margin-left:10px;width:31px;height:45px;" src="static/picture/dot.png" alt="">
+        <span class="point_child" style="color: white;font-size: 14px;white-space: nowrap;margin-top: -10px;">龙安开发区</span>
+    </div>`,
+                offset: new AMap.Pixel(-15, -20),
+            });
+
+            var marker9 = new AMap.Marker({
+                position: new AMap.LngLat(120.12456, 27.16098), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+                content: `<div class="point">
+        <img class="point_child_img" data-name="磻溪镇"  style="display:block;margin-left:10px;width:31px;height:45px;" src="static/picture/dot.png" alt="">
+        <span class="point_child" style="color: white;font-size: 14px;white-space: nowrap;margin-top: -10px;">磻溪镇</span>
+    </div>`,
+                offset: new AMap.Pixel(-15, -20),
+            });
+
+            var marker10 = new AMap.Marker({
+                position: new AMap.LngLat(120.32633, 27.31061), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+                content: `<div class="point">
+        <img class="point_child_img" data-name="前岐镇"  style="display:block;margin-left:10px;width:31px;height:45px;" src="static/picture/dot.png" alt="">
+        <span class="point_child" style="color: white;font-size: 14px;white-space: nowrap;margin-top: -10px;">前岐镇</span>
+    </div>`,
+                offset: new AMap.Pixel(-15, -20),
+            });
+
+            var marker11 = new AMap.Marker({
+                position: new AMap.LngLat(120.42714, 27.16607), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+                content: `<div class="point">
+        <img class="point_child_img" data-name="沙埕镇"  style="display:block;margin-left:10px;width:31px;height:45px;" src="static/picture/dot.png" alt="">
+        <span class="point_child" style="color: white;font-size: 14px;white-space: nowrap;margin-top: -10px;">沙埕镇</span>
+    </div>`,
+                offset: new AMap.Pixel(-15, -20),
+            });
+            var marker12 = new AMap.Marker({
+                position: new AMap.LngLat(120.22933, 27.33183), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+                content: `<div class="point">
+        <img class="point_child_img" data-name="山前街道"  style="display:block;margin-left:10px;width:31px;height:45px;" src="static/picture/dot.png" alt="">
+        <span class="point_child" style="color: white;font-size: 14px;white-space: nowrap;margin-top: -10px;">山前街道</span>
+    </div>`,
+                offset: new AMap.Pixel(-15, -20),
+            });
+            var marker13 = new AMap.Marker({
+                position: new AMap.LngLat(120.25803, 27.10589), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+                content: `<div class="point">
+        <img class="point_child_img" data-name="太姥山镇"  style="display:block;margin-left:10px;width:31px;height:45px;" src="static/picture/dot.png" alt="">
+        <span class="point_child" style="color: white;font-size: 14px;white-space: nowrap;margin-top: -10px;">太姥山镇</span>
+    </div>`,
+                offset: new AMap.Pixel(-15, -20),
+            });
+            var marker14 = new AMap.Marker({
+                position: new AMap.LngLat(120.22068, 27.33119), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+                content: `<div class="point">
+        <img class="point_child_img"  data-name="桐山街道" style="display:block;margin-left:10px;width:31px;height:45px;" src="static/picture/dot.png" alt="">
+        <span class="point_child" style="color: white;font-size: 14px;white-space: nowrap;margin-top: -10px;">桐山街道</span>
+    </div>`,
+                offset: new AMap.Pixel(-15, -20),
+            });
+            var marker15 = new AMap.Marker({
+                position: new AMap.LngLat(120.21741, 27.33213), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+                content: `<div class="point">
+        <img class="point_child_img"  data-name="桐城街道" style="display:block;margin-left:10px;width:31px;height:45px;" src="static/picture/dot.png" alt="">
+        <span class="point_child" style="color: white;font-size: 14px;white-space: nowrap;margin-top: -10px;">桐城街道</span>
+    </div>`,
+                offset: new AMap.Pixel(15, -20),
+            });
+            var marker16 = new AMap.Marker({
+                position: new AMap.LngLat(120.23491, 27.03605), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+                content: `<div class="point">
+        <img class="point_child_img" data-name="硖门畲族乡"  style="display:block;margin-left:10px;width:31px;height:45px;" src="static/picture/dot.png" alt="">
+        <span class="point_child" style="color: white;font-size: 14px;white-space: nowrap;margin-top: -10px;">硖门畲族乡</span>
+    </div>`,
+                offset: new AMap.Pixel(-15, -20),
+            });
+            var marker17 = new AMap.Marker({
+                position: new AMap.LngLat(120.33378, 26.96008), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+                content: `<div class="point">
+        <img class="point_child_img" data-name="嵛山镇"  style="display:block;margin-left:10px;width:31px;height:45px;" src="static/picture/dot.png" alt="">
+        <span class="point_child" style="color: white;font-size: 14px;white-space: nowrap;margin-top: -10px;">嵛山镇</span>
+    </div>`,
+                offset: new AMap.Pixel(-15, -20),
+            });
+            var markerList = [marker1, marker2, marker3, marker4, marker5, marker6, marker7, marker8, marker9, marker10, marker11, marker12, marker13, marker14, marker15, marker16, marker17]
+            // console.log(marker1);
+            // console.log(markerList);
+            map.add(markerList);
+        });
+    </script>
+
+
+    <script>
+        var eject1 = document.getElementsByClassName('eject')[0]
+        var eject2 = document.getElementsByClassName('eject_bigbox')[0]
+        eject1.onclick = function () {
+            eject1.classList.add("control")
+        }
+        eject2.onclick = function () {
+            eject2.classList.add("eject_bigbox_control")
+        }
+
+
+        function fun(e) {
+            var tar = e.target
+            console.log(tar)
+            if (tar.classList[0] == 'point_child') {
+                // tar.innerHTML
+                eject1.classList.remove("control")
+                eject1.children[1].children[0].children[1].innerHTML = tar.innerHTML;
+            } else if (tar.classList[0] == 'point_child_img') {
+                eject1.classList.remove("control")
+                eject1.children[1].children[0].children[1].innerHTML = tar.dataset.name;
+            } else {
+                eject1.classList.add("control")
+            }
+        }
+        $('.content .main .main_m_f ul li').click(function () {
+            $(this).addClass('active').siblings().removeClass('active')
+        })
+    </script>
+</body>
+
+
+</html>

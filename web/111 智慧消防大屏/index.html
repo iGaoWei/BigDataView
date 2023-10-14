@@ -1,0 +1,2713 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>智慧消防大屏</title>
+    <link href="./static/app.74ee2ad5.css" rel="preload" as="style" />
+    <link
+            href="./static/chunk-vendors.6438a5d4.css"
+            rel="preload"
+            as="style"
+    />
+    <link href="./static/app.bdf8bad6.js" rel="preload" as="script" />
+    <link
+            href="./static/chunk-vendors.bff9ba8f.js"
+            rel="preload"
+            as="script"
+    />
+    <link href="./static/chunk-vendors.6438a5d4.css" rel="stylesheet" />
+    <link href="./static/app.74ee2ad5.css" rel="stylesheet" />
+    <style type="text/css">
+        x-vue-echarts {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="static/app.74ee2ad5.css">
+</head>
+<body>
+<noscript
+><strong
+>We're sorry but app2 doesn't work properly without JavaScript enabled.
+    Please enable it to continue.</strong
+></noscript
+>
+<div id="app">
+    <div
+            class="page"
+            id="screen"
+            style="
+          width: 1920px;
+          height: 1080px;
+          transform: scaleY(0.85463) scaleX(1) translate(-50%, -50%);
+        "
+    >
+        <div class="map"></div>
+        <div class="content">
+            <div class="head">
+                <div class="date">2023.10.08 星期日 10:50:21</div>
+                <div class="title">
+                    <img
+                            src="./img/title.3ad275b0.png"
+                            alt=""
+                            style="width: 436px; height: 48px"
+                    />
+                </div>
+                <div class="date date2">
+                    <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADUAAAA1CAYAAADh5qNwAAAAAXNSR0IArs4c6QAABrlJREFUaEPtWj1vG0cQfXOm68hVgDRRfoFlpI5JFQECpDCFkHWsOggsdaliukhtuTCQLlZa0jDdpRMp14Gp/AErTYBUkd2Suglmb3dv7nh33KVEVzoIAiXt7c6bzzezImz4+e6Uu0mKpyBsgzGeMw7Hu3S+yWNpk5t3T3j7doJ3hTMYs2GH7m3y3I2C6r3hDqU4YUEg38h8YZ7ii01a66OAKluFE+yOvqLJpqx1AypWs879biwVq7mK9Y3u1z3hrRbhFRE6zLjgBPsv79M49FyfKFSSkHfnKe6Md+kieJ9TPkCKx0TYsmVhv+n9RlD9KUswt/XhDByN2nQYIpBVyowIn/v1jLNhh3ZC3pc1vSm/IOD7UlkYDzu0V7dHLaj+Ce8gwVuTjRkgtZIZkwVjL0TbtlYdANhhYLJIcRTyXiUga3H527CtJSrCqwUlWr6d4D9VYnytMVswZnPGbpWAvVN+QCm6DGwTsG3YhH1EIfKRCON5itd19arKQg4TM/4edcjvWbZYs/ud8kMwfnPATAE1EmVFFIT94X16IR+NRQiPQXgY6lpWOecpYfCyTcfuPUOtGK9Kbp+dyfgARnu4S7No93MvmGC/xBiETwSU0ZZVBQNPxJ1aCR4RMFBxAyTZT8Z19enuB9lIuZOx4C08kaLsrOQtk+kxCJDV+Wq9WisIsLt6dXqJb5MEv4DgA1/JmUnirKteLK/hVMUsYR9s9nukHCMYUDAo615brQRHxOgCOE+BYwJ+tmk2N4cASZ1qGxRWQFYKV8aIgK+Nd0RYyJ22Fk2SzMiEkyVAJUHBOANhwoCuSTvE6CiBwQlAua+ZTwz8CuBfEXSR4kUMAY4GZbIi4US7nI+dbLcPDDxdJYhNBpLqszpYVkgpEa0OknxFNKjehMVCHS8EAZyCiUwETecpuqF1SMTonfIBMZ4WgOlYTHGvKdNVgY0C5QlqMWuZbMjA8ahNcencSmQKPWHiXVInFcZk1KHdjVmqP+G34nYek/1wFUBO2AKDkTqoUn5s/xVsKVcQPWWyLiLVfcHYiXG5Oq17V8yV5arC61GbJOsGPcGg+lM+crXD4LF8MCXsxTD3VVL1JnxuCHCpxsUw+3BQE37nOZw7MJJxrwIkf+9balZ2cU3JVu1jQBnGcEu1B/qtS7yfAxcyFSqzdQDPhm2StHxtjybSZtPcYuYsk6y4iqcA80ucSRhQFXksS8iMP4jwjU/jzuc3NEDpT3hmKJnmicDUylXo77Ss0sjiFvbI+XBV7SuA00TMLV6jhoSY1DenRfIr7OSucGrXJBQA5cxsSv2pONVyI7hkLfsLHYRNjVqI8HVrXFLSyYKBfwj4rE756vdTcqY20Eppw/MxC9r1US62NjWUrLRUij+R4EujCGuusic5EkCFfqlGdSnwPAF++Ggx5WYjyzEljeGjBi8wNM3bRjJgq5W33e5Fadp8tS+3C4TD0X2S+nWtjw8J15BmzamnYWKI8oGLBWaOAMTUqQvhZiYAHY0BpsM2LR1wFYQ+G5dYRXSdChHCD0LywpvF4DVnQN8F5DTMEOaY+A23lKv0lh6pyU40i65T4lIXsCZzCQalB5OmUGgWfQ2xZfd/J930VSiSIyEh3mfWOF7msqAHl+3kx2XBG9qFhW7aIVJdQNOMr+qsYEu5lz2LLh1uy8dg1KYnMaBsg/jKXp/6WsmcddPrdAHRoApdqvN51Sbo+V0TOONuel54jd10NCgRtJIEZ7OKfObOOGcyQ9AJqWkSM4RlS/te3fTl4Ey5kOSha1CIFwSDkq7UXafYefiQCM8dbXEUy823ypSrUhhtnaw8ZAMcxhkv8CO18Lu4pbBvSnDoRtyrgAWBqhnWv4YMN/VIukSfPbF3H1xq0u5qg1GNso8XKQ5ahOIVUEQyWgmqDMiRWdHeqEN3LIUSquTnd8YADTsXwOb87j0nGAjtqrtWNRYKyLKNoAozOWtzTfE1RZJ0zykGhQs2awXditW45bN5ioHjbjbFn1eNzGTLVRmxEVR/wobvOR9WRbH2OsVqucuM7hLAfKP3LAlE7qguMa6aRPmaqAJIsRjjJXWx1QxKNZD+TirgfkgfZlP3T8z4FMBfLzuUTWMDniVgyk3WukmUM3tTHhPwwJ8fCcjuUb6zjRrWVFls1cCn0VJWy0fIbilmlGIQM9cuTF1VYx07BnCXCczYtteqPv6uhSYFeI1fcvPPITHaWrF2ZZ26ylk3lrqK9krvfhxLuXmD7ZpjWvN1sG4UlEnp7hbDMZIV/9ixDojyOxsHZUZvQnxh2vSL2LKwDsj/AaJ4vzUG6eOvAAAAAElFTkSuQmCC"
+                            alt=""
+                            srcset=""
+                            style="width: 25px; height: 25px"
+                    />
+                    晴 25℃
+                </div>
+            </div>
+            <div class="body">
+                <div class="left">
+                    <div class="card card1">
+                        <div class="card-head">
+                            <div class="card-head-icon"></div>
+                            <div class="card-head-text">
+                                <div class="card-title">今日总数据</div>
+                                <div class="card-subtitle">TOTAL DATA FOR TODAY</div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card1-item">
+                                <div class="name">今日入馆</div>
+                                <div class="value">
+                                    <div class="value1">752</div>
+                                    <div class="value1 value2">人</div>
+                                </div>
+                            </div>
+                            <div class="card1-item">
+                                <div class="name">今日入馆</div>
+                                <div class="value">
+                                    <div class="value1">752</div>
+                                    <div class="value1 value2">人</div>
+                                </div>
+                            </div>
+                            <div class="card1-item">
+                                <div class="name">今日入馆</div>
+                                <div class="value">
+                                    <div class="value1">752</div>
+                                    <div class="value1 value2">人</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card2">
+                        <div class="card-head">
+                            <div class="card-head-icon"></div>
+                            <div class="card-head-text">
+                                <div class="card-title">数据统计</div>
+                                <div class="card-subtitle">TOTAL DATA FOR TODAY</div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <x-vue-echarts
+                                    class="echarts"
+                                    _echarts_instance_="ec_1696733386971"
+                                    style="
+                      width: 100%;
+                      height: 100%;
+                      user-select: none;
+                      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                      position: relative;
+                    "
+                            ><div
+                                    style="
+                        position: relative;
+                        width: 483px;
+                        height: 251px;
+                        padding: 0px;
+                        margin: 0px;
+                        border-width: 0px;
+                        cursor: pointer;
+                      "
+                            >
+                                <canvas
+                                        data-zr-dom-id="zr_0"
+                                        width="483"
+                                        height="251"
+                                        style="
+                          position: absolute;
+                          left: 0px;
+                          top: 0px;
+                          width: 483px;
+                          height: 251px;
+                          user-select: none;
+                          -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                          padding: 0px;
+                          margin: 0px;
+                          border-width: 0px;
+                        "
+                                ></canvas>
+                            </div>
+                                <div
+                                        class=""
+                                        style="
+                        position: absolute;
+                        display: block;
+                        border-style: solid;
+                        white-space: nowrap;
+                        z-index: 9999999;
+                        box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px;
+                        transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1)
+                            0s,
+                          visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1) 0s,
+                          transform 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+                        background-color: rgb(255, 255, 255);
+                        border-width: 1px;
+                        border-radius: 4px;
+                        color: rgb(102, 102, 102);
+                        font: 14px / 21px 'Microsoft YaHei';
+                        padding: 10px;
+                        top: 0px;
+                        left: 0px;
+                        transform: translate3d(338px, 143px, 0px);
+                        border-color: rgb(255, 180, 81);
+                        pointer-events: none;
+                        visibility: hidden;
+                        opacity: 0;
+                      "
+                                >
+                                    <div style="margin: 0px 0 0; line-height: 1">
+                                        <div
+                                                style="
+                            font-size: 14px;
+                            color: #666;
+                            font-weight: 400;
+                            line-height: 1;
+                          "
+                                        >
+                                            入馆
+                                        </div>
+                                        <div style="margin: 10px 0 0; line-height: 1">
+                                            <div style="margin: 0px 0 0; line-height: 1">
+                            <span
+                                    style="
+                                display: inline-block;
+                                margin-right: 4px;
+                                border-radius: 10px;
+                                width: 10px;
+                                height: 10px;
+                                background-color: #ffb451;
+                              "
+                            ></span
+                            ><span
+                                                    style="
+                                font-size: 14px;
+                                color: #666;
+                                font-weight: 400;
+                                margin-left: 2px;
+                              "
+                                            >6月5日</span
+                                            ><span
+                                                    style="
+                                float: right;
+                                margin-left: 20px;
+                                font-size: 14px;
+                                color: #666;
+                                font-weight: 900;
+                              "
+                                            >250</span
+                                            >
+                                                <div style="clear: both"></div>
+                                            </div>
+                                            <div style="clear: both"></div>
+                                        </div>
+                                        <div style="clear: both"></div>
+                                    </div></div
+                                ></x-vue-echarts>
+                        </div>
+                    </div>
+                    <div class="card card3">
+                        <div class="card-head">
+                            <div class="card-head-icon"></div>
+                            <div class="card-head-text">
+                                <div class="card-title"></div>
+                                <div class="card-subtitle">TOTAL DATA FOR TODAY</div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card3-item">
+                                <div class="name">1.梁溪区分馆</div>
+                                <div
+                                        data-v-d5014e54=""
+                                        class="processBox"
+                                        style="width: 330px"
+                                >
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                </div>
+                                <div class="day">30天</div>
+                            </div>
+                            <div class="card3-item">
+                                <div class="name">2.梁溪区分馆</div>
+                                <div
+                                        data-v-d5014e54=""
+                                        class="processBox"
+                                        style="width: 330px"
+                                >
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                </div>
+                                <div class="day">30天</div>
+                            </div>
+                            <div class="card3-item">
+                                <div class="name">3.梁溪区分馆</div>
+                                <div
+                                        data-v-d5014e54=""
+                                        class="processBox"
+                                        style="width: 330px"
+                                >
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                </div>
+                                <div class="day">30天</div>
+                            </div>
+                            <div class="card3-item">
+                                <div class="name">4.梁溪区分馆</div>
+                                <div
+                                        data-v-d5014e54=""
+                                        class="processBox"
+                                        style="width: 330px"
+                                >
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                </div>
+                                <div class="day">30天</div>
+                            </div>
+                            <div class="card3-item">
+                                <div class="name">5.梁溪区分馆</div>
+                                <div
+                                        data-v-d5014e54=""
+                                        class="processBox"
+                                        style="width: 330px"
+                                >
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(251, 114, 147);
+                        "
+                                    ></div>
+                                </div>
+                                <div class="day">30天</div>
+                            </div>
+                            <div class="card3-item">
+                                <div class="name">6.梁溪区分馆</div>
+                                <div
+                                        data-v-d5014e54=""
+                                        class="processBox"
+                                        style="width: 330px"
+                                >
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                </div>
+                                <div class="day">30天</div>
+                            </div>
+                            <div class="card3-item">
+                                <div class="name">7.梁溪区分馆</div>
+                                <div
+                                        data-v-d5014e54=""
+                                        class="processBox"
+                                        style="width: 330px"
+                                >
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                </div>
+                                <div class="day">30天</div>
+                            </div>
+                            <div class="card3-item">
+                                <div class="name">8.梁溪区分馆</div>
+                                <div
+                                        data-v-d5014e54=""
+                                        class="processBox"
+                                        style="width: 330px"
+                                >
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                </div>
+                                <div class="day">30天</div>
+                            </div>
+                            <div class="card3-item">
+                                <div class="name">9.梁溪区分馆</div>
+                                <div
+                                        data-v-d5014e54=""
+                                        class="processBox"
+                                        style="width: 330px"
+                                >
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                </div>
+                                <div class="day">30天</div>
+                            </div>
+                            <div class="card3-item">
+                                <div class="name">10.梁溪区分馆</div>
+                                <div
+                                        data-v-d5014e54=""
+                                        class="processBox"
+                                        style="width: 330px"
+                                >
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                    <div
+                                            data-v-d5014e54=""
+                                            class="qg"
+                                            style="
+                          width: 4.125px;
+                          margin-right: 4.125px;
+                          background-color: rgb(0, 255, 255);
+                        "
+                                    ></div>
+                                </div>
+                                <div class="day">30天</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="box1">
+                        <div class="left1"></div>
+                        <div class="left2"></div>
+                        <div class="right1"></div>
+                        <div class="right2"></div>
+                        <div class="name">在线状态</div>
+                        <div class="box1-item box1-item1">
+                            <img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAA5CAYAAACF8yP/AAAAAXNSR0IArs4c6QAAArdJREFUaEPtm911mzAUx/8XD9B0gtIJmk5Qc0ie2w3SbJC+xy6B7hF3gvS95tjdoN0g2cAdwKgHFLBSCwwCxJd44tjo43f/V1dXSBDSa728AnADwnn22zhuHgGs4Pp3KQ4lN+HiHqDP42DMoWBsi4vAif8lrG8/gayHUQMf4O7g+h4hXGwB+jAR6B1c/zUhXLKJAHNMy3ovh44iB5fftoM3hkzQKHIMdKasUXrATm7c+1m8Xo/pcMGTJTdYKfvaoJROgOmew7JrZfDBQL8ATjVWBB8EtBQ4Fpv9xWxmw/F2lVy999DFwHM43u9KwMlCSpJt9iaQtQGsFXrjnSPaX8ENvpRSpi1gbdAJcLQBcAawFdzguhC8TWAt0C+As6ibD942sBbo3HW5RHEdwFqgN94Zon38QuLdsUsL4LqAtUDHjZwCB34dMi3BNHweVpuWioKGtimrEFzSw7aAtSmdMpUFbxNYO/RJV89Sy+ZdWnQmbe4tNpqneNsKp33oBFqmuC7gTtxbpjiD3UqUzovgnSktBjcgXh5WXy2VSuIlD3UOrdrxOuUM9LP1erOerqNmLzKytgBU6jXubdxb/vJseruWDDewmL75VGW8linD6Hi7OYne68UORK/K1DGKZyzrLWG9/AHCx1EAnYRgT3ADm/Dzdg7Lit9gTuDi20PpkSphw2yk7AzfceEnO6Ecmi8BbewjD8TsZrDrnlhifwBU27uSdZzRI1i0EmejA3QzpIda6p5aavEIiIFuVGyjtII5jXsrGK2gSHNjOo7+bP8ma0uWAlbpu5gK0+wJjhcfYW7kag46XHoAvjbSq+NKktO7TdVtoGtZchJK8y1XYQyzOYjmtQyXVzg+lU//LROFzxOqtqnu3l0fjnd95b4rF+z8iwADXc3BjdKV7MUDWUPL0Eot84drzNv/AAvLdwZ2tvNiAAAAAElFTkSuQmCC"
+                                    alt=""
+                                    srcset=""
+                            />
+                            <div class="value">
+                                <div class="value1">在线</div>
+                                <div class="value2">70家</div>
+                            </div>
+                        </div>
+                        <div class="box1-item box1-item2">
+                            <img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAA5CAYAAACF8yP/AAAAAXNSR0IArs4c6QAAAvdJREFUaEPtmlFy2jAQhv9lyHN7BDhB0wM0mBvQKTyX3ICcIMkNeoPQZ9MZ3wBID1B6gqY3SJ+h3s462FBjbNkSMgH5AWbAkvfb/SXtyiKsr0+P3GuEuAXhMv7tZL4ZARj3fpcWwkTyMZjxAwjDk4HcAxISPn67ooD639mjENNTBxY+ZjyvGG0azHkGoHMO0BE44Uag+VyA15zzTGjxBgjRoH/VV4ghAZ9TDHugG+hOPpDI/lVf/TnfEXDroAEX6UQFbEjevSm3gi49lRkjvSm/lfuDLj2XaZd1r3V5D6Z8yYQpAYHv0bUKgABf0EvO4Hv0XqVN3j1WoRNgQhQ1MMZF4AlwnAYrtClyijVokXST8INi4NiyHIgdYIU2RcDyv01okegMhHc7hmWA7wWOBIKvkw5VrgmsQQvoGqQQ/JDAViMdR7cIfMm4iSatjFJWN8KxDVYjrQIuFc/OuDcg6e0hVQt0odRTg95UhGuNtErENxO13qR1FMlJ2ghZyi4a+JW51DCefI/aKstQmXtqk/eWxDMnrQTCQDKSdkht0HnLkso6XiayRwGdC8z4A8KbQ4Jbj3RR4rEKMSqTuVWJuFXoIuA4tSxKYIqKlCJHWINWBVZZzhi4n3Torghu3//WoKWsxEvB8d94zUs89kVcN1mxBi1eT4OrGL8Dzvjpe6T1iskq9DY4EwLV8jABB7BkeLpbRtah10nJee2RVZ18TLarJdImAar05aA3XnOb/ZuCx9BmfxVJmmzj5O3kfZYv5We8yNyYNzm4jqgvKWJo8MhDMB6OyK6DmrIM0Y6OVPXnPM44pnDQh9fSOeHavyJhfbmi6Z0xytzCqcVCcw9lxm9uYCRnyKTXBHqrqG81m2jpPpL+4ovOXCHlKBoY69qxWmGRrtZ2oHUfErfXPZ+mu2uSx+GgTUVZ+nGRruBNJ+8KTrMypg99mtjvkLH5x1hHDtqwHKU7F2lNp1aWt+6SpGm3HLeq/MrHQZfxvot0GW8ZutfJu6Qj/wE5LZ8HCxY+zgAAAABJRU5ErkJggg=="
+                                    alt=""
+                                    srcset=""
+                            />
+                            <div class="value">
+                                <div class="value1">离线</div>
+                                <div class="value2">11家</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box1 box2">
+                        <div class="left1"></div>
+                        <div class="left2"></div>
+                        <div class="right1"></div>
+                        <div class="right2"></div>
+                        <div class="name">在线状态</div>
+                        <div class="box2-item">
+                            <div class="box2-item-name">梁溪区少儿分馆</div>
+                            <div class="box2-item-value">3小时</div>
+                        </div>
+                        <div class="box2-item">
+                            <div class="box2-item-name">梁溪区少儿分馆</div>
+                            <div class="box2-item-value">3小时</div>
+                        </div>
+                        <div class="box2-item">
+                            <div class="box2-item-name">梁溪区少儿分馆</div>
+                            <div class="box2-item-value">3小时</div>
+                        </div>
+                        <div class="box2-item">
+                            <div class="box2-item-name">梁溪区少儿分馆</div>
+                            <div class="box2-item-value">3小时</div>
+                        </div>
+                        <div class="box2-item">
+                            <div class="box2-item-name">梁溪区少儿分馆</div>
+                            <div class="box2-item-value">3小时</div>
+                        </div>
+                        <div class="box2-item">
+                            <div class="box2-item-name">梁溪区少儿分馆</div>
+                            <div class="box2-item-value">3小时</div>
+                        </div>
+                        <div class="box2-item">
+                            <div class="box2-item-name">梁溪区少儿分馆</div>
+                            <div class="box2-item-value">3小时</div>
+                        </div>
+                    </div>
+                    <div class="box3">
+                        <div class="name">在线状态</div>
+                        <div class="box3-item active">
+                            <div class="icon"></div>
+                            <div class="text">在线</div>
+                        </div>
+                        <div class="box3-item">
+                            <div class="icon"></div>
+                            <div class="text">离线</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="card card4">
+                        <div class="card-head">
+                            <div class="card-head-icon"></div>
+                            <div class="card-head-text">
+                                <div class="card-title">图书馆简介</div>
+                                <div class="card-subtitle">LIBRARY INTRODUCTION</div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <div class="el-carousel el-carousel--horizontal">
+                                    <div class="el-carousel__container" style="height: 262px">
+                                        <button
+                                                type="button"
+                                                class="el-carousel__arrow el-carousel__arrow--left"
+                                                style="display: none"
+                                        >
+                                            <i class="el-icon-arrow-left"></i></button
+                                        ><button
+                                            type="button"
+                                            class="el-carousel__arrow el-carousel__arrow--right"
+                                            style="display: none"
+                                    >
+                                        <i class="el-icon-arrow-right"></i>
+                                    </button>
+                                        <div
+                                                class="el-carousel__item is-animating"
+                                                style="transform: translateX(483px) scale(1)"
+                                        >
+                                            <!----><img
+                                                src="./static/2x.4e1d7985.png"
+                                                alt=""
+                                                style="width: 496px; height: 234px"
+                                        />
+                                        </div>
+                                        <div
+                                                class="el-carousel__item"
+                                                style="transform: translateX(-483px) scale(1)"
+                                        >
+                                            <!----><img
+                                                src="./static/2x.4e1d7985.png"
+                                                alt=""
+                                                style="width: 496px; height: 234px"
+                                        />
+                                        </div>
+                                        <div
+                                                class="el-carousel__item is-active is-animating"
+                                                style="transform: translateX(0px) scale(1)"
+                                        >
+                                            <!----><img
+                                                src="./static/2x.4e1d7985.png"
+                                                alt=""
+                                                style="width: 496px; height: 234px"
+                                        />
+                                        </div>
+                                    </div>
+                                    <ul
+                                            class="el-carousel__indicators el-carousel__indicators--horizontal"
+                                    >
+                                        <li
+                                                class="el-carousel__indicator el-carousel__indicator--horizontal"
+                                        >
+                                            <button class="el-carousel__button"><!----></button>
+                                        </li>
+                                        <li
+                                                class="el-carousel__indicator el-carousel__indicator--horizontal"
+                                        >
+                                            <button class="el-carousel__button"><!----></button>
+                                        </li>
+                                        <li
+                                                class="el-carousel__indicator el-carousel__indicator--horizontal is-active"
+                                        >
+                                            <button class="el-carousel__button"><!----></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="seamless-warp">
+                                    <!---->
+                                    <!---->
+                                    <div
+                                            style="
+                          transform: translate(0px, -114px);
+                          transition: all 0ms ease-in 0s;
+                          overflow: hidden;
+                        "
+                                    >
+                                        <div style="overflow: hidden">
+                                            <div class="text">
+                                                梁溪区图书馆总馆位于人民东路328号，民丰分管位于民丰路200号，馆总藏量达到150万册件，其中纸质图书110万册，期刊和报纸459种，并购有汇雅电子书、云图有声、名师讲坛、读秀学术检索等数字资源。馆内设有成人借阅室、少儿借阅室、报刊阅览室、电子阅览室、未成年人成长指导中心、多功能厅、休闲书吧等多个配套服务场所和设施，常年举办讲座报告会、中小型展览、读者互动娱乐等市民喜闻乐见的活动。
+                                            </div>
+                                            <div class="text">
+                                                梁溪区图书馆总馆位于人民东路328号，民丰分管位于民丰路200号，馆总藏量达到150万册件，其中纸质图书110万册，期刊和报纸459种，并购有汇雅电子书、云图有声、名师讲坛、读秀学术检索等数字资源。馆内设有成人借阅室、少儿借阅室、报刊阅览室、电子阅览室、未成年人成长指导中心、多功能厅、休闲书吧等多个配套服务场所和设施，常年举办讲座报告会、中小型展览、读者互动娱乐等市民喜闻乐见的活动。
+                                            </div>
+                                        </div>
+                                        <div style="overflow: hidden">
+                                            <div class="text">
+                                                梁溪区图书馆总馆位于人民东路328号，民丰分管位于民丰路200号，馆总藏量达到150万册件，其中纸质图书110万册，期刊和报纸459种，并购有汇雅电子书、云图有声、名师讲坛、读秀学术检索等数字资源。馆内设有成人借阅室、少儿借阅室、报刊阅览室、电子阅览室、未成年人成长指导中心、多功能厅、休闲书吧等多个配套服务场所和设施，常年举办讲座报告会、中小型展览、读者互动娱乐等市民喜闻乐见的活动。
+                                            </div>
+                                            <div class="text">
+                                                梁溪区图书馆总馆位于人民东路328号，民丰分管位于民丰路200号，馆总藏量达到150万册件，其中纸质图书110万册，期刊和报纸459种，并购有汇雅电子书、云图有声、名师讲坛、读秀学术检索等数字资源。馆内设有成人借阅室、少儿借阅室、报刊阅览室、电子阅览室、未成年人成长指导中心、多功能厅、休闲书吧等多个配套服务场所和设施，常年举办讲座报告会、中小型展览、读者互动娱乐等市民喜闻乐见的活动。
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card5">
+                        <div class="card-head">
+                            <div class="card-head-icon"></div>
+                            <div class="card-head-text">
+                                <div class="card-title">本月热门图书排行榜</div>
+                                <div class="card-subtitle">BOOK RANKING LIST</div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <table class="book-rank-table">
+                                <thead>
+                                <tr>
+                                    <th class="index">排名</th>
+                                    <th class="name">书名</th>
+                                    <th class="author">作者</th>
+                                    <th class="count">借阅册次</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="index" style="color: rgb(255, 180, 81)">
+                                        1.
+                                    </td>
+                                    <td class="name" style="color: rgb(255, 180, 81)">
+                                        市民安全救护手册
+                                    </td>
+                                    <td class="author" style="color: rgb(255, 180, 81)">
+                                        中国红十字
+                                    </td>
+                                    <td class="count" style="color: rgb(255, 180, 81)">
+                                        23
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="index" style="color: rgb(255, 180, 81)">
+                                        2.
+                                    </td>
+                                    <td class="name" style="color: rgb(255, 180, 81)">
+                                        市民安全救护手册
+                                    </td>
+                                    <td class="author" style="color: rgb(255, 180, 81)">
+                                        中国红十字
+                                    </td>
+                                    <td class="count" style="color: rgb(255, 180, 81)">
+                                        23
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="index" style="color: rgb(255, 180, 81)">
+                                        3.
+                                    </td>
+                                    <td class="name" style="color: rgb(255, 180, 81)">
+                                        市民安全救护手册
+                                    </td>
+                                    <td class="author" style="color: rgb(255, 180, 81)">
+                                        中国红十字
+                                    </td>
+                                    <td class="count" style="color: rgb(255, 180, 81)">
+                                        23
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="index" style="color: rgb(85, 193, 255)">
+                                        4.
+                                    </td>
+                                    <td class="name" style="color: rgb(85, 193, 255)">
+                                        市民安全救护手册
+                                    </td>
+                                    <td class="author" style="color: rgb(85, 193, 255)">
+                                        中国红十字
+                                    </td>
+                                    <td class="count" style="color: rgb(85, 193, 255)">
+                                        23
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="index" style="color: rgb(85, 193, 255)">
+                                        5.
+                                    </td>
+                                    <td class="name" style="color: rgb(85, 193, 255)">
+                                        市民安全救护手册
+                                    </td>
+                                    <td class="author" style="color: rgb(85, 193, 255)">
+                                        中国红十字
+                                    </td>
+                                    <td class="count" style="color: rgb(85, 193, 255)">
+                                        23
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="index" style="color: rgb(85, 193, 255)">
+                                        6.
+                                    </td>
+                                    <td class="name" style="color: rgb(85, 193, 255)">
+                                        市民安全救护手册
+                                    </td>
+                                    <td class="author" style="color: rgb(85, 193, 255)">
+                                        中国红十字
+                                    </td>
+                                    <td class="count" style="color: rgb(85, 193, 255)">
+                                        23
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="index" style="color: rgb(85, 193, 255)">
+                                        7.
+                                    </td>
+                                    <td class="name" style="color: rgb(85, 193, 255)">
+                                        市民安全救护手册
+                                    </td>
+                                    <td class="author" style="color: rgb(85, 193, 255)">
+                                        中国红十字
+                                    </td>
+                                    <td class="count" style="color: rgb(85, 193, 255)">
+                                        23
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="index" style="color: rgb(85, 193, 255)">
+                                        8.
+                                    </td>
+                                    <td class="name" style="color: rgb(85, 193, 255)">
+                                        市民安全救护手册
+                                    </td>
+                                    <td class="author" style="color: rgb(85, 193, 255)">
+                                        中国红十字
+                                    </td>
+                                    <td class="count" style="color: rgb(85, 193, 255)">
+                                        23
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="index" style="color: rgb(85, 193, 255)">
+                                        9.
+                                    </td>
+                                    <td class="name" style="color: rgb(85, 193, 255)">
+                                        市民安全救护手册
+                                    </td>
+                                    <td class="author" style="color: rgb(85, 193, 255)">
+                                        中国红十字
+                                    </td>
+                                    <td class="count" style="color: rgb(85, 193, 255)">
+                                        23
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="index" style="color: rgb(85, 193, 255)">
+                                        10.
+                                    </td>
+                                    <td class="name" style="color: rgb(85, 193, 255)">
+                                        市民安全救护手册
+                                    </td>
+                                    <td class="author" style="color: rgb(85, 193, 255)">
+                                        中国红十字
+                                    </td>
+                                    <td class="count" style="color: rgb(85, 193, 255)">
+                                        23
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./static/chunk-vendors.bff9ba8f.js"></script>
+<script src="./static/app.bdf8bad6.js"></script>
+</body>
+</html>

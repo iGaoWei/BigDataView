@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap-3.3.4.css">
+    <link rel="stylesheet" type="text/css" media="all" href="static/css/daterangepicker.css" />
+    <link rel="stylesheet" href="static/css/css.css">
+    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="static/css/daterangepicker.css">
+    <title>茶叶种植大数据溯源平台</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="header">
+            <div class="header_l">
+                <ul>
+                    <li class="sel_li">
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <img src="static/picture/header-3.png" alt="">
+                            <span>大屏首页</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <span>应用介绍</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <span>产业介绍</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header_m">
+                <h1>茶叶种植大数据溯源平台</h1>
+            </div>
+            <div class="header_r">
+                <ul>
+
+                    <li class="">
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <span>产量产值</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <span>业务系统</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <img src="static/picture/header-1.png" alt="">
+                            <span>退出</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main_l">
+                <div class="item mainl1">
+                    <div class="title">
+                        <h2>产量溯源</h2>
+                        <p><span class="span_c day_cl" onclick="cl1()">日</span><span class="month_cl"
+                                onclick="cl2()">月</span><span class="year_cl" onclick="cl3()">年</span></p>
+                        <button id="date1"></button>
+                    </div>
+                    <ul>
+                        <li>
+                            <span>赋码量</span>
+                            <p><span class="span_cl1" data-ride="numberGrow1" data-value="10.00" data-time="3"
+                                    data-digit="2"></span>个</p>
+                        </li>
+                        <li>
+                            <span>消费者溯源量</span>
+                            <p><span class="span_cl2" data-ride="numberGrow1" data-value="10.00" data-time="3"
+                                    data-digit="2">33,521.1</span>次</p>
+                        </li>
+                        <li>
+                            <span>企业溯源标量</span>
+                            <p><span class="span_cl3" data-ride="numberGrow1" data-value="10.00" data-time="3"
+                                    data-digit="2">33,521.1</span>个</p>
+                        </li>
+                        <li>
+                            <span>农产品溯源标量</span>
+                            <p><span class="span_cl4" data-ride="numberGrow1" data-value="10.00" data-time="3"
+                                    data-digit="2">33,521.1</span>个</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item mainl2">
+                    <div class="title">
+                        <h2>茶叶溯源</h2>
+                        <p><span class="span_c qiye_yz" onclick="qiye_yz1()">企业码</span><span class="nongchan_yz"
+                                onclick="nongchan_yz1()">农产品码</span></p>
+                    </div>
+                    <div class="con">
+                        <div class="con_t">
+                            <p><span class="span_c1 day_yz" onclick="yz1(this)"><i></i>日</span><span class="month_yz"
+                                    onclick="yz2()"><i></i>月</span><span class="year_yz" onclick="yz3()"><i></i>年</span>
+                            </p>
+                            <button id="date2"></button>
+                        </div>
+                        <div class="con_m">
+                            <ul>
+                                <li class="li-sel1 li1_yz" onclick="yz4()">
+                                    <p><span data-ride="numberGrow2" data-value="3" data-time="3"
+                                            data-digit="2">3</span>个</p>
+                                    <h6>赋码量</h6>
+                                </li>
+                                <li class="li2_yz" onclick="yz5()">
+                                    <p><span data-ride="numberGrow2" data-value="2.39" data-time="3"
+                                            data-digit="2">2.39</span>吨</p>
+                                    <h6>销售量</h6>
+                                </li>
+                                <li class="li3_yz" onclick="yz6()">
+                                    <p><span data-ride="numberGrow2" data-value="676" data-time="3"
+                                            data-digit="2">676</span>次</p>
+                                    <h6>消费者追溯量</h6>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="con_f line1"></div>
+                    </div>
+                </div>
+                <div class="item mainl3">
+                    <div class="title">
+                        <h2>茶叶溯源</h2>
+                        <p><span class="span_c qiye_md" onclick="qiye_md1()">企业码</span><span class="nongchan_md"
+                                onclick="nongchan_md1()">农产品码</span></p>
+                    </div>
+                    <div class="con">
+                        <div class="con_t">
+                            <p><span class="span_c1 day_md" onclick="md1()"><i></i>日</span><span class="month_md"
+                                    onclick="md2()"><i></i>月</span><span class="year_md" onclick="md3()"><i></i>年</span>
+                            </p>
+                            <button id="date3"></button>
+                        </div>
+                        <div class="con_m">
+                            <ul>
+                                <li class="li1_md li-sel1" onclick="md4()">
+                                    <p><span data-ride="numberGrow3" data-value="3" data-time="3"
+                                            data-digit="2">3</span>个</p>
+                                    <h6>赋码量</h6>
+                                </li>
+                                <li class="li2_md" onclick="md5()">
+                                    <p><span data-ride="numberGrow3" data-value="2.39" data-time="3"
+                                            data-digit="2">2.39</span>吨</p>
+                                    <h6>销售量</h6>
+                                </li>
+                                <li class="li3_md" onclick="md6()">
+                                    <p><span data-ride="numberGrow3" data-value="676" data-time="3"
+                                            data-digit="2">676</span>次</p>
+                                    <h6>消费者追溯量</h6>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="con_f line2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_m">
+                <div class="main_m_t">
+                    <div class="item1">
+                        <p><span data-ride="numberGrow6" data-value="3" data-time="3" data-digit="2">3</span>吨</p>
+                        <p><span data-ride="numberGrow6" data-value="3" data-time="3" data-digit="2">3</span>万元</p>
+                        <p>溯源茶叶</p>
+                    </div>
+                    <div class="item1">
+                        <p><span data-ride="numberGrow6" data-value="20" data-time="3" data-digit="2">20</span>吨</p>
+                        <p><span data-ride="numberGrow6" data-value="20" data-time="3" data-digit="2">20</span>万元</p>
+                        <p>溯源茶叶</p>
+                    </div>
+                    <div class="item1">
+                        <p><span data-ride="numberGrow6" data-value="64.0" data-time="3" data-digit="2">64.0</span>吨</p>
+                        <p><span data-ride="numberGrow6" data-value="64.0" data-time="3" data-digit="2">64.0</span>万元
+                        </p>
+                        <p>溯源茶叶</p>
+                    </div>
+                    <div class="item1">
+                        <p><span data-ride="numberGrow6" data-value="321" data-time="3" data-digit="2">321</span>吨</p>
+                        <p><span data-ride="numberGrow6" data-value="321" data-time="3" data-digit="2">321</span>万元</p>
+                        <p>溯源茶叶</p>
+                    </div>
+                    <div class="point">
+                        <i></i>
+                        <span>地点一</span>
+                    </div>
+                </div>
+                <div class="main_m_m">
+                    <h2>市场流向分析</h2>
+                </div>
+
+            </div>
+            <div class="main_m_f">
+                <ul>
+                    <li class="active">
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <img src="static/picture/mainm-4.png" alt=""> <img src="static/picture/mainm-4h.png" alt="">
+                        </a>
+                        <span>数字溯源</span>
+                    </li>
+                    <li>
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <img src="static/picture/mainm-5.png" alt=""> <img src="static/picture/mainm-5h.png" alt="">
+                        </a>
+                        <span>病虫害测报</span>
+                    </li>
+                    <li>
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <img src="static/picture/mainm-6.png" alt=""> <img src="static/picture/mainm-6h.png" alt="">
+                        </a>
+                        <span>非化学农药监管</span>
+                    </li>
+                    <li>
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <img src="static/picture/mainm-7.png" alt=""> <img src="static/picture/mainm-7h.png" alt="">
+                        </a>
+                        <span>茶山地貌</span>
+                    </li>
+                    <li>
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <img src="static/picture/mainm-8.png" alt=""> <img src="static/picture/mainm-8h.png" alt="">
+                        </a>
+                        <span>数字交易</span>
+                    </li>
+                    <li>
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <img src="static/picture/mainm-9.png" alt=""> <img src="static/picture/mainm-9h.png" alt="">
+                        </a>
+                        <span>数字加工</span>
+                    </li>
+                    <li>
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <img src="static/picture/mainm-10.png" alt=""> <img src="static/picture/mainm-10h.png" alt="">
+                        </a>
+                        <span>白茶文旅</span>
+                    </li>
+                    <li>
+                        <a href="https://gitee.com/iGaoWei/big-data-view">
+                            <img src="static/picture/mainm-11.png" alt=""> <img src="static/picture/mainm-11h.png" alt="">
+                        </a>
+                        <span>茶文化</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="main_r">
+                <div class="item mainr1">
+                    <div class="title">
+                        <h2>茶叶溯源</h2>
+                        <p><span class="span_c qiye_sm" onclick="qiye_sm1()">企业码</span><span class="nongchan_sm"
+                                onclick="nongchan_sm1()">农产品码</span></p>
+                    </div>
+                    <div class="con">
+                        <div class="con_t">
+                            <p><span class="span_c1 day_sm" onclick="sm1()"><i></i>日</span><span class="month_sm"
+                                    onclick="sm2()"><i></i>月</span><span class="year_sm" onclick="sm3()"><i></i>年</span>
+                            </p>
+                            <button id="date4"></button>
+                        </div>
+                        <div class="con_m">
+                            <ul>
+                                <li class="li1_sm li-sel1" onclick="sm4()">
+                                    <p><span data-ride="numberGrow4" data-value="3" data-time="3"
+                                            data-digit="2">3</span>个</p>
+                                    <h6>赋码量</h6>
+                                </li>
+                                <li class="li2_sm" onclick="sm5()">
+                                    <p><span data-ride="numberGrow4" data-value="2.39" data-time="3"
+                                            data-digit="2">2.39</span>吨</p>
+                                    <h6>销售量</h6>
+                                </li>
+                                <li class="li3_sm" onclick="sm6()">
+                                    <p><span data-ride="numberGrow4" data-value="676" data-time="3"
+                                            data-digit="2">676</span>次</p>
+                                    <h6>消费者追溯量</h6>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="con_f line3"></div>
+                    </div>
+                </div>
+                <div class="item mainr2">
+                    <div class="title">
+                        <h2>茶叶溯源</h2>
+                        <p><span class="span_c qiye_gm" onclick="qiye_gm1()">企业码</span><span class="nongchan_gm"
+                                onclick="nongchan_gm1()">农产品码</span></p>
+                    </div>
+                    <div class="con">
+                        <div class="con_t">
+                            <p><span class="span_c1 day_gm" onclick="gm1()"><i></i>日</span><span class="month_gm"
+                                    onclick="gm2()"><i></i>月</span><span class="year_gm" onclick="gm3()"><i></i>年</span>
+                            </p>
+                            <button id="date5"></button>
+                        </div>
+                        <div class="con_m">
+                            <ul>
+                                <li class="li1_gm li-sel1" onclick="gm4()">
+                                    <p><span data-ride="numberGrow5" data-value="3" data-time="3"
+                                            data-digit="2">3</span>个</p>
+                                    <h6>赋码量</h6>
+                                </li>
+                                <li class="li2_gm" onclick="gm5()">
+                                    <p><span data-ride="numberGrow5" data-value="2.39" data-time="3"
+                                            data-digit="2">2.39</span>吨</p>
+                                    <h6>销售量</h6>
+                                </li>
+                                <li class="li3_gm" onclick="gm6()">
+                                    <p><span data-ride="numberGrow5" data-value="676" data-time="3"
+                                            data-digit="2">676</span>次</p>
+                                    <h6>消费者追溯量</h6>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="con_f line4"></div>
+                    </div>
+                </div>
+                <div class="item mainr3">
+                    <div class="title">
+                        <h2>主体溯源</h2>
+                    </div>
+                    <div class="con">
+                        <div class="con_box box1">
+                            <p><b data-ride="numberGrow7" data-value="0.05" data-time="3" data-digit="2">0.05</b>%</p>
+                            <span><b data-ride="numberGrow7" data-value="3" data-time="3" data-digit="2">3</b>户</span>
+                        </div>
+                        <div class="con_box box2">
+                            <p><b data-ride="numberGrow7" data-value="0.05" data-time="3" data-digit="2">0.05</b>%</p>
+                            <span><b data-ride="numberGrow7" data-value="3" data-time="3" data-digit="2">3</b>户</span>
+                        </div>
+                    </div>
+                    <div class="text_box">
+                        <div class="text1">
+                            <p><span data-ride="numberGrow7" data-value="34.53" data-time="3"
+                                    data-digit="2">34.53</span>个</p>
+                            <p><span data-ride="numberGrow7" data-value="23990.81" data-time="3"
+                                    data-digit="2">23,990.81</span>千克</p>
+                        </div>
+                        <div class="text2">
+                            <span>企业溯源码</span>
+                            <span>农产品溯源码</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map" id="map"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="well configurator" style="display: none;">
+            <form>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="parentEl">parentEl</label>
+                            <input type="text" class="form-control" id="parentEl" value="" placeholder="body">
+                        </div>
+                        <div class="form-group">
+                            <label for="startDate">startDate</label>
+                            <input type="text" class="form-control" id="startDate" value="07/01/2015">
+                        </div>
+                        <div class="form-group">
+                            <label for="endDate">endDate</label>
+                            <input type="text" class="form-control" id="endDate" value="07/15/2015">
+                        </div>
+                        <div class="form-group">
+                            <label for="minDate">minDate</label>
+                            <input type="text" class="form-control" id="minDate" value="" placeholder="MM/DD/YYYY">
+                        </div>
+                        <div class="form-group">
+                            <label for="maxDate">maxDate</label>
+                            <input type="text" class="form-control" id="maxDate" value="" placeholder="MM/DD/YYYY">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="autoApply"> autoApply
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="singleDatePicker"> singleDatePicker
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="showDropdowns"> showDropdowns
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="showWeekNumbers"> showWeekNumbers
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="showISOWeekNumbers"> showISOWeekNumbers
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="timePicker"> timePicker
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="timePicker24Hour"> timePicker24Hour
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="timePickerIncrement">timePickerIncrement (in minutes)</label>
+                            <input type="text" class="form-control" id="timePickerIncrement" value="1">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="timePickerSeconds"> timePickerSeconds
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="dateLimit"> dateLimit (with example date range span)
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="ranges"> ranges (with example predefined ranges)
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="locale"> locale (with example settings)
+                            </label>
+                            <label id="rtl-wrap">
+                                <input type="checkbox" id="rtl"> RTL (right-to-left)
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="alwaysShowCalendars"> alwaysShowCalendars
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="linkedCalendars" checked="checked"> linkedCalendars
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="autoUpdateInput" checked="checked"> autoUpdateInput
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="showCustomRangeLabel" checked="checked"> showCustomRangeLabel
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="opens">opens</label>
+                            <select id="opens" class="form-control">
+                                <option value="right" selected>right</option>
+                                <option value="left">left</option>
+                                <option value="center">center</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="drops">drops</label>
+                            <select id="drops" class="form-control">
+                                <option value="down" selected>down</option>
+                                <option value="up">up</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="buttonClasses">buttonClasses</label>
+                            <input type="text" class="form-control" id="buttonClasses" value="btn btn-sm">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="applyClass">applyClass</label>
+                            <input type="text" class="form-control" id="applyClass" value="btn-success">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cancelClass">cancelClass</label>
+                            <input type="text" class="form-control" id="cancelClass" value="btn-default">
+                        </div>
+
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+    <style type="text/css">
+        .demo {
+            position: relative;
+        }
+
+        .demo i {
+            position: absolute;
+            bottom: 10px;
+            right: 24px;
+            top: auto;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            font-size: .1rem;
+            color: #4B7EFE;
+        }
+    </style>
+
+    <script src="static/js/jquery-1.10.2.js"></script>
+    <script src="static/js/bootstrap-3.3.4.js"></script>
+    <script src="static/js/echarts.min.js"></script>
+    <script src="static/js/flexible.js"></script>
+    <script src="static/js/jquery.js"></script>
+    <script src="static/js/index.js"></script>
+    <script src="static/js/moment.js"></script>
+    <script src="static/js/moment.min.js"></script>
+    <script src="static/js/daterangepicker.js"></script>
+    <script src="static/js/date.js"></script>
+    <!-- <script src="static/js/map.js"></script> -->
+    <script src="static/js/scrolllazyinit.js"></script>
+
+    <script src="static/js/loader.js"></script>
+    <script type="text/javascript">
+        window._AMapSecurityConfig = {
+            securityJsCode: '4693176f00affa246d4e60fed6ab3d1c', //密钥
+        }
+    </script>
+    <script type="text/javascript"
+        src="static/js/dea8af9c659f4051ab482acf9fa83781.js"></script>
+</body>
+<script language="javascript">
+    var mapData = [{
+        "name": "新疆",
+        "cp": [84.9023, 41.748],
+    }, {
+        "name": "西藏",
+        "cp": [88.7695, 31.6846],
+    }, {
+        "name": "内蒙古",
+        "cp": [110.5977, 40.3408],
+    }, {
+        "name": "青海",
+        "cp": [96.2402, 35.4199],
+    }, {
+        "name": "四川",
+        "cp": [102.9199, 30.1904],
+    }, {
+        "name": "黑龙江",
+        "cp": [128.1445, 45.5156],
+    }, {
+        "name": "甘肃",
+        "cp": [103.9129, 33.5],
+    }, {
+        "name": "云南",
+        "cp": [101.8652, 23.1807],
+    }, {
+        "name": "广西",
+        "cp": [108.2813, 21.6426],
+    }, {
+        "name": "湖南",
+        "cp": [111.5332, 25.8779],
+    }, {
+        "name": "陕西",
+        "cp": [108.5996, 32.6396],
+    }, {
+        "name": "广东",
+        "cp": [113.4668, 23.3076],
+    }, {
+        "name": "吉林",
+        "cp": [126.4746, 42.0938],
+    }, {
+        "name": "河北",
+        "cp": [115.4004, 36.5688],
+    }, {
+        "name": "湖北",
+        "cp": [112.2363, 29.1572],
+    }, {
+        "name": "贵州",
+        "cp": [106.6113, 24.9385],
+    }, {
+        "name": "山东",
+        "cp": [117.7402, 34.4307],
+    }, {
+        "name": "江西",
+        "cp": [115.5156, 26.29],
+    }, {
+        "name": "河南",
+        "cp": [113.4668, 32.3],
+    }, {
+        "name": "辽宁",
+        "cp": [122.3438, 40.0889],
+    }, {
+        "name": "山西",
+        "cp": [112.0121, 35.6611],
+    }, {
+        "name": "安徽",
+        "cp": [117.2461, 30.0361],
+    }, {
+        "name": "福建",
+        "cp": [118.0008, 24.2277],
+    }, {
+        "name": "浙江",
+        "cp": [120.0498, 27.6918],
+    }, {
+        "name": "江苏",
+        "cp": [120.0586, 30.915],
+    }, {
+        "name": "重庆",
+        "cp": [107.7539, 28.3],
+    }, {
+        "name": "宁夏",
+        "cp": [105.9961, 35.3096],
+    }, {
+        "name": "海南",
+        "cp": [109.9512, 18.3041],
+    }, {
+        "name": "台湾",
+        "cp": [121.0254, 22.7986],
+    }, {
+        "name": "天津",
+        "cp": [117.4219, 38.0189],
+    }, {
+        "name": "上海",
+        "cp": [121.4648, 29.2891],
+    }, {
+        "name": "香港",
+        "cp": [114.0578, 22.3242],
+    }, {
+        "name": "澳门",
+        "cp": [112.3578, 21.7242],
+    }];
+    console.log(mapData[0].cp);
+    var pointData = [{
+        name: '地点一',
+        address: [115, 40],
+        amount: 20
+    }, {
+        name: '地点二',
+        address: [121, 41],
+        amount: 120
+    }, {
+        name: '地点三',
+        address: [122, 42],
+        amount: 220
+    }, {
+        name: '地点四',
+        address: [123, 43],
+        amount: 320
+    }];
+    var markerarr = [];
+    console.log(pointData, 'pointData');
+    console.log(pointData[0]);
+    console.log(pointData[0].name);
+    console.log(pointData[0].address);
+    console.log(pointData[0].address[0]);
+    console.log(pointData[0].address[1]);
+    var options = {
+        subdistrict: 3,
+        extensions: 'all',
+        level: 'country'
+    };
+    var district = new AMap.DistrictSearch(options);
+    //查询中国区域
+    console.log(district);
+    district.search('中国', function (status, result) {
+        // var bounds = result.districtList[0]['boundaries'];
+        console.log(status);
+        console.log(result);
+        var bounds = result.districtList[0]['boundaries'];
+        var mask = [];
+        for (var i = 0; i < bounds.length; i++) {
+            mask.push([bounds[i]]);
+        }
+        //实例化地图
+        var roadNet = new AMap.TileLayer.RoadNet();
+        var map = new AMap.Map('map', {
+            mask: mask,
+            zoom: 4, //设置当前显示级别
+            expandZoomRange: true, //开启显示范围设置
+            // zooms: [4,5], //最小显示级别为7，最大显示级别为20
+            center: [103, 44],
+            viewMode: '3D', //这里特别注意，设置为3D则其它地区不显示
+            zoomEnable: false, //是否可以缩放地图
+            resizeEnable: true,
+            features: ['bg', 'point', 'road'],
+            layers: [new AMap.TileLayer.Satellite(), roadNet],
+            // layers: [
+            //         satellite(),
+            //         roadNet
+            //     ]
+            // mapStyle: "amap://styles/light"
+        });
+        // console.log(mask, 'mask');
+        // 实时路况图层
+        // const trafficLayer = new AMap.TileLayer.Traffic({
+        //     zIndex: 10, // 这个是什么意思？
+        //     zooms: [3, 22], // 地图缩放的范围
+        // });
+
+
+        // // trafficLayer.setMap(map); // 这个似乎也是添加图层到地图中，但是感觉不同
+        // map.add(trafficLayer) //添加图层到地图
+
+        for (let s = 0; s < mapData.length; s++) {
+            var address1 = mapData[s].cp[0];
+            var address2 = mapData[s].cp[1];
+            // console.log(address1);
+            var marker = new AMap.Marker({
+                position: new AMap.LngLat(address1, address2), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+                content: `<div class="area">
+                            <span>${mapData[s].name}</span>
+                        </div>`,
+                offset: new AMap.Pixel(-15, -20),
+            });
+            markerarr.push(marker);
+        }
+
+        map.add(markerarr);
+        for (let i = 0; i < pointData.length; i++) {
+
+            var address1 = pointData[i].address[0];
+            var address2 = pointData[i].address[1];
+            var pointsize = (Math.ceil(pointData[i].amount / 100) * 0.125);
+            console.log(pointsize);
+
+            // if (pointData[i].amount < 100) {
+            //     pointsize = '0.125rem';
+            // }
+            var marker = new AMap.Marker({
+                position: new AMap.LngLat(address1, address2), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+                content: `<div class="point">
+                        <i style="width:${pointsize}rem;height:${pointsize}rem;"></i>
+                        <span>${pointData[i].amount}</span>
+                    </div>`,
+                offset: new AMap.Pixel(-15, -20),
+            });
+            markerarr.push(marker);
+        }
+        console.log(markerarr);
+        map.add(markerarr);
+
+
+        map.on('zoomend', mapZoomend);
+
+        var pointspan = document.getElementsByClassName('point');
+        // console.log(pointspan[0].children[1]);
+
+        function mapZoomend() {
+            // document.querySelector("#text").innerText = '缩放结束';
+            var zoom = map.getZoom(); //获取当前地图级别
+            console.log(zoom);
+            console.log('缩放结束');
+            if (zoom > 6) {
+                for (var a = 0; a < pointspan.length; a++) {
+                    pointspan[a].children[1].style.display = 'block';
+                }
+            } else {
+                for (var a = 0; a < pointspan.length; a++) {
+                    pointspan[a].children[1].style.display = 'none';
+                }
+            }
+        }
+    });
+    // var spanlist = document.getElementsByClassName('main_m_f')[0].children[0].children
+    // console.log(spanlist);
+    $('.content .main .main_m_f ul li').click(function () {
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+</script>
+
+
+</html>

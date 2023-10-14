@@ -342,7 +342,7 @@ git clone https://github.com/iGaoWei/BigDataView.git
 <img src="https://gitee.com/iGaoWei/big-data-view/raw/master/gif/089.gif" onerror="this.src='https://gitee.com/iGaoWei/big-data-view/raw/master/gif/089.gif'" width="100%" />
 
 ##### 090 企业营收大数据统计可视化大屏 [在线预览](https://igaowei.github.io/BigDataView/web/090%20%E4%BC%81%E4%B8%9A%E8%90%A5%E6%94%B6%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1%E5%8F%AF%E8%A7%86%E5%8C%96%E5%A4%A7%E5%B1%8F)
-<img src="https://gitee.com/iGaoWei/big-data-view/raw/master/gif/090.gif" onerror="this.src='https://gitee.com/iGaoWei/big-data-view/raw/master/gif/090.gif'" width="100%" />
+<img src="https://gitee.com/iGaoWei/big-data-view/raw/master/gif/090.png" onerror="this.src='https://gitee.com/iGaoWei/big-data-view/raw/master/gif/090.gif'" width="100%" />
 
 ##### 091 ECharts扩展示例自定义视图 [在线预览](https://igaowei.github.io/BigDataView/web/091%20ECharts%E6%89%A9%E5%B1%95%E7%A4%BA%E4%BE%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E8%A7%86%E5%9B%BE)
 <img src="https://gitee.com/iGaoWei/big-data-view/raw/master/gif/091.gif" onerror="this.src='https://gitee.com/iGaoWei/big-data-view/raw/master/gif/091.gif'" width="100%" />
@@ -404,6 +404,14 @@ git clone https://github.com/iGaoWei/BigDataView.git
 ##### 110 崇明观测站 [在线预览](https://igaowei.github.io/BigDataView/web/110%20崇明观测站/index.html)
 <img src="https://gitee.com/iGaoWei/big-data-view/raw/master/gif/110.png" onerror="this.src='https://gitee.com/iGaoWei/big-data-view/raw/master/gif/更多内容关注公众号.gif'" width="100%" />
 
+##### 111 智慧消防大屏 [在线预览](https://igaowei.github.io/BigDataView/web/110%20崇明观测站/index.html)
+<img src="https://gitee.com/iGaoWei/big-data-view/raw/master/gif/111.png" onerror="this.src='https://gitee.com/iGaoWei/big-data-view/raw/master/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### 112 茶叶种植大数据溯源平台 [在线预览](https://igaowei.github.io/BigDataView/web/110%20崇明观测站/index.html)
+<img src="https://gitee.com/iGaoWei/big-data-view/raw/master/gif/112.png" onerror="this.src='https://gitee.com/iGaoWei/big-data-view/raw/master/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### 113 白茶种植大数据溯源平台 [在线预览](https://igaowei.github.io/BigDataView/web/110%20崇明观测站/index.html)
+<img src="https://gitee.com/iGaoWei/big-data-view/raw/master/gif/113.png" onerror="this.src='https://gitee.com/iGaoWei/big-data-view/raw/master/gif/更多内容关注公众号.gif'" width="100%" />
 
 
 #### 温馨提示：更多模板陆续更新中
@@ -411,7 +419,7 @@ git clone https://github.com/iGaoWei/BigDataView.git
 
 <div align="center">
 <p>更多互联网资源内容请关注公众号</p>
-<img src="https://gitee.com/iGaoWei/big-data-view/raw/master/gif/赞赏码.jpg" onerror="this.src='https://gitee.com/iGaoWei/big-data-view/raw/master/gif/更多内容关注公众号.gif'" width="60%"/>
+<img src="https://gitee.com/iGaoWei/big-data-view/raw/master/preview/wechat-code.png" onerror="this.src='https://gitee.com/iGaoWei/big-data-view/raw/master/gif/更多内容关注公众号.gif'" width="60%"/>
 <p>
 收集整理不易，如果觉得对你有对您有帮助，您可以点赞评论收藏支持! <br>
 也可以微信扫码上方赞赏码随意支持，最好您可以点右上角 💘Star💘支持,谢谢！～

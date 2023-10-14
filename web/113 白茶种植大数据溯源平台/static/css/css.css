@@ -1,0 +1,150 @@
+@charset 'UTF-8';
+
+/* 公共样式*/
+
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #000;
+    font: 0.15rem/0.25rem "Microsoft YaHei", "微软雅黑", "Arial Narrow", HELVETICA;
+    background: #fff
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+img {
+    display: block;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: 'SimSun', '微软雅黑';
+}
+
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+select,
+input {
+    vertical-align: middle;
+}
+
+select,
+input,
+textarea {
+    margin: 0;
+    outline-style: none;
+}
+
+input,
+textarea {
+    outline-style: none;
+    /* -webkit-appearance: none; */
+}
+
+textarea {
+    resize: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.clearfix:after {
+    content: '.';
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearit {
+    clear: both;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.fl {
+    float: left;
+    _display: inline;
+}
+
+.fr {
+    float: right;
+    _display: inline;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus,
+a:visited {
+    text-decoration: underline;
+    text-decoration: none;
+}
+
+
+/* 公共样式结束*/
+#non {
+    display: none;
+}
