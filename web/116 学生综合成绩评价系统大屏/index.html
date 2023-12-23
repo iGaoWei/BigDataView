@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 80px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="./static/flexible.js"></script>
+    <link rel="stylesheet" href="./static/index2.css" />
+    <title>学生综合成绩评价系统</title>
+    <link rel="stylesheet" href="static/index2.css" />
+</head>
+<body style="font-size: 12px;">
+<!-- 头部模块 -->
+<div class="header">
+    <span class="title">学生综合成绩评价智慧大屏</span>
+    <span class="time" id="show_time">2023-12-23 15:50:50</span>
+    <span class="desc">更多模板-关注我-免费获取：<a href="https://gitee.com/iGaoWei/big-data-view">DreamCoders</a></span>
+</div>
+<!-- 主题模块 -->
+<div class="main">
+    <div class="left_main">
+        <div class="slide_wrap">
+            <div class="box_btn">
+                <img src="./static/area1.04887f6d.png" alt="" />
+                <span>课前导学</span>
+            </div>
+            <div class="box_btn">
+                <img src="./static/area2.40012ad8.png" alt="" />
+                <span>课中研学</span>
+            </div>
+            <div class="box_btn two_btn">
+                <span><b>●</b> 学生自评</span>
+            </div>
+            <div class="box_btn two_btn">
+                <span><b>●</b> 小组互评</span>
+            </div>
+            <div class="box_btn two_btn">
+                <span><b>●</b> 竞赛评价</span>
+            </div>
+            <div class="box_btn two_btn">
+                <span><b>●</b> 导师评价</span>
+            </div>
+            <div class="box_btn two_btn">
+                <span><b>●</b> 教师评价</span>
+            </div>
+            <div class="box_btn two_btn">
+                <span><b>▲</b> 统计分析</span>
+            </div>
+            <div class="box_btn" style="margin: 0;">
+                <img src="./static/area3.254bbecb.png" alt="" />
+                <span>课后拓展</span>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+    <div class="center_main">
+        <div class="center_top">
+            <div class="right_title">
+                <img src="./static/title.png" alt="" />本项目学生积分情况
+            </div>
+            <div id="center_bar" _echarts_instance_="ec_1703317818761" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative;">
+                <div style="position: relative; overflow: hidden; width: 814px; height: 363px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;">
+                    <canvas data-zr-dom-id="zr_0" width="814" height="363" style="position: absolute; left: 0px; top: 0px; width: 814px; height: 363px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+                <div style="position: absolute; display: none; border-style: solid; white-space: nowrap; z-index: 9999999; transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: rgba(50, 50, 50, 0.7); border-width: 0px; border-color: rgb(51, 51, 51); border-radius: 4px; color: rgb(255, 255, 255); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 5px; left: 670px; top: 142px; pointer-events: none;">
+                    陈佳怡
+                    <br />
+                    <span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#00FFE3;"></span>膳食指南: 8
+                    <br />
+                    <span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#28ffb3;"></span>增值: 3
+                </div>
+            </div>
+        </div>
+        <div class="center_bottom">
+            <div class="center_bottom_box">
+                <div class="right_title">
+                    <img src="./static/title.png" alt="" />本项目小组积分情况
+                </div>
+                <div id="center_pie" _echarts_instance_="ec_1703317818762" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative;">
+                    <div style="position: relative; overflow: hidden; width: 399px; height: 228px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;">
+                        <canvas data-zr-dom-id="zr_0" width="399" height="228" style="position: absolute; left: 0px; top: 0px; width: 399px; height: 228px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="center_bottom_box">
+                <div class="right_title">
+                    <img src="./static/title.png" alt="" />积分明细
+                </div>
+                <div class="table_th">
+                    <span>小组</span>
+                    <span>姓名</span>
+                    <span>明细</span>
+                </div>
+                <div id="rule">
+                    <div class="list" id="list">
+                        <div>
+                            <span>第1组</span>
+                            <span>洪英妹</span>
+                            <span style="color: #4bd8ba; font-weight:900">+2</span>
+                        </div>,
+                        <div>
+                            <span>第1组</span>
+                            <span>薛安琪</span>
+                            <span style="color: #4bd8ba; font-weight:900">+3</span>
+                        </div>,
+                        <div>
+                            <span>第1组</span>
+                            <span>陈静语</span>
+                            <span style="color: #4bd8ba; font-weight:900">+3</span>
+                        </div>,
+                        <div>
+                            <span>第1组</span>
+                            <span>邓雪萍</span>
+                            <span style="color: #4bd8ba; font-weight:900">+3</span>
+                        </div>,
+                        <div>
+                            <span>第1组</span>
+                            <span>蔡梅花</span>
+                            <span style="color: #4bd8ba; font-weight:900">+3</span>
+                        </div>,
+                        <div>
+                            <span>第2组</span>
+                            <span>欧文熙</span>
+                            <span style="color: #4bd8ba; font-weight:900">+5</span>
+                        </div>,
+                        <div>
+                            <span>第2组</span>
+                            <span>黄淑榕</span>
+                            <span style="color: #4bd8ba; font-weight:900">+5</span>
+                        </div>,
+                        <div>
+                            <span>第2组</span>
+                            <span>田鑫玲</span>
+                            <span style="color: #4bd8ba; font-weight:900">+5</span>
+                        </div>,
+                        <div>
+                            <span>第2组</span>
+                            <span>李鼎炜</span>
+                            <span style="color: #4bd8ba; font-weight:900">+5</span>
+                        </div>,
+                        <div>
+                            <span>第2组</span>
+                            <span>蔡婷婷</span>
+                            <span style="color: #4bd8ba; font-weight:900">+5</span>
+                        </div>,
+                        <div>
+                            <span>第3组</span>
+                            <span>余添招</span>
+                            <span style="color: #4bd8ba; font-weight:900">+3</span>
+                        </div>,
+                        <div>
+                            <span>第3组</span>
+                            <span>林明雪</span>
+                            <span style="color: #4bd8ba; font-weight:900">+3</span>
+                        </div>,
+                        <div>
+                            <span>第3组</span>
+                            <span>黄思菡</span>
+                            <span style="color: #4bd8ba; font-weight:900">+3</span>
+                        </div>,
+                        <div>
+                            <span>第3组</span>
+                            <span>张冉冉</span>
+                            <span style="color: #4bd8ba; font-weight:900">+3</span>
+                        </div>,
+                        <div>
+                            <span>第3组</span>
+                            <span>黄丽君</span>
+                            <span style="color: #4bd8ba; font-weight:900">+3</span>
+                        </div>,
+                        <div>
+                            <span>第4组</span>
+                            <span>陈智勇</span>
+                            <span style="color: #4bd8ba; font-weight:900">+4</span>
+                        </div>,
+                        <div>
+                            <span>第4组</span>
+                            <span>李静</span>
+                            <span style="color: #4bd8ba; font-weight:900">+4</span>
+                        </div>,
+                        <div>
+                            <span>第4组</span>
+                            <span>李舒媛</span>
+                            <span style="color: #4bd8ba; font-weight:900">+4</span>
+                        </div>,
+                        <div>
+                            <span>第4组</span>
+                            <span>陈奕</span>
+                            <span style="color: #4bd8ba; font-weight:900">+4</span>
+                        </div>,
+                        <div>
+                            <span>第4组</span>
+                            <span>陈佳怡</span>
+                            <span style="color: #4bd8ba; font-weight:900">+4</span>
+                        </div>
+                    </div>
+                    <div class="list2" id="list2">
+                        <div>
+                            <span>第1组</span>
+                            <span>洪英妹</span>
+                            <span style="color: #4bd8ba; font-weight:900">+2</span>
+                        </div>,
+                        <div>
+                            <span>第1组</span>
+                            <span>薛安琪</span>
+                            <span style="color: #4bd8ba; font-weight:900">+3</span>
+                        </div>,
+                        <div>
+                            <span>第1组</span>
+                            <span>陈静语</span>
+                            <span style="color: #4bd8ba; font-weight:900">+3</span>
+                        </div>,
+                        <div>
+                            <span>第1组</span>
+                            <span>邓雪萍</span>
+                            <span style="color: #4bd8ba; font-weight:900">+3</span>
+                        </div>,
+                        <div>
+                            <span>第1组</span>
+                            <span>蔡梅花</span>
+                            <span style="color: #4bd8ba; font-weight:900">+3</span>
+                        </div>,
+                        <div>
+                            <span>第2组</span>
+                            <span>欧文熙</span>
+                            <span style="color: #4bd8ba; font-weight:900">+5</span>
+                        </div>,
+                        <div>
+                            <span>第2组</span>
+                            <span>黄淑榕</span>
+                            <span style="color: #4bd8ba; font-weight:900">+5</span>
+                        </div>,
+                        <div>
+                            <span>第2组</span>
+                            <span>田鑫玲</span>
+                            <span style="color: #4bd8ba; font-weight:900">+5</span>
+                        </div>,
+                        <div>
+                            <span>第2组</span>
+                            <span>李鼎炜</span>
+                            <span style="color: #4bd8ba; font-weight:900">+5</span>
+                        </div>,
+                        <div>
+                            <span>第2组</span>
+                            <span>蔡婷婷</span>
+                            <span style="color: #4bd8ba; font-weight:900">+5</span>
+                        </div>,
+                        <div>
+                            <span>第3组</span>
+                            <span>余添招</span>
+                            <span style="color: #4bd8ba; font-weight:900">+3</span>
+                        </div>,
+                        <div>
+                            <span>第3组</span>
+                            <span>林明雪</span>
+                            <span style="color: #4bd8ba; font-weight:900">+3</span>
+                        </div>,
+                        <div>
+                            <span>第3组</span>
+                            <span>黄思菡</span>
+                            <span style="color: #4bd8ba; font-weight:900">+3</span>
+                        </div>,
+                        <div>
+                            <span>第3组</span>
+                            <span>张冉冉</span>
+                            <span style="color: #4bd8ba; font-weight:900">+3</span>
+                        </div>,
+                        <div>
+                            <span>第3组</span>
+                            <span>黄丽君</span>
+                            <span style="color: #4bd8ba; font-weight:900">+3</span>
+                        </div>,
+                        <div>
+                            <span>第4组</span>
+                            <span>陈智勇</span>
+                            <span style="color: #4bd8ba; font-weight:900">+4</span>
+                        </div>,
+                        <div>
+                            <span>第4组</span>
+                            <span>李静</span>
+                            <span style="color: #4bd8ba; font-weight:900">+4</span>
+                        </div>,
+                        <div>
+                            <span>第4组</span>
+                            <span>李舒媛</span>
+                            <span style="color: #4bd8ba; font-weight:900">+4</span>
+                        </div>,
+                        <div>
+                            <span>第4组</span>
+                            <span>陈奕</span>
+                            <span style="color: #4bd8ba; font-weight:900">+4</span>
+                        </div>,
+                        <div>
+                            <span>第4组</span>
+                            <span>陈佳怡</span>
+                            <span style="color: #4bd8ba; font-weight:900">+4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right_main">
+        <div class="right_box">
+            <div class="right_title">
+                <img src="./static/title.png" alt="" />小组过程性评价总积分
+            </div>
+            <div id="one_echarts" _echarts_instance_="ec_1703317818763" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative;">
+                <div style="position: relative; overflow: hidden; width: 579px; height: 181px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;">
+                    <canvas data-zr-dom-id="zr_0" width="579" height="181" style="position: absolute; left: 0px; top: 0px; width: 579px; height: 181px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+                <div style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: rgba(50, 50, 50, 0.7); border-width: 0px; border-color: rgb(51, 51, 51); border-radius: 4px; color: rgb(255, 255, 255); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 5px; left: 251px; top: 58px; pointer-events: none;">
+                    <span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#0B4EC3;"></span>第二组: 271
+                </div>
+            </div>
+        </div>
+        <div class="right_box">
+            <div class="right_title">
+                <img src="./static/title.png" alt="" />各小组贡献度最佳名单
+            </div>
+            <div class="two_echarts">
+                <div id="pie1" _echarts_instance_="ec_1703317818764" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative;">
+                    <div style="position: relative; overflow: hidden; width: 145px; height: 181px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;">
+                        <canvas data-zr-dom-id="zr_0" width="145" height="181" style="position: absolute; left: 0px; top: 0px; width: 145px; height: 181px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                    </div>
+                    <div style="position: absolute; display: none; border-style: solid; white-space: nowrap; z-index: 9999999; transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: rgba(50, 50, 50, 0.7); border-width: 0px; border-color: rgb(51, 51, 51); border-radius: 4px; color: rgb(255, 255, 255); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 5px; left: 23px; top: -151px; pointer-events: none;">
+                        <span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#00ffff;"></span>洪英妹: 10
+                    </div>
+                </div>
+                <div id="pie2" _echarts_instance_="ec_1703317818765" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative;">
+                    <div style="position: relative; overflow: hidden; width: 145px; height: 181px; padding: 0px; margin: 0px; border-width: 0px;">
+                        <canvas data-zr-dom-id="zr_0" width="145" height="181" style="position: absolute; left: 0px; top: 0px; width: 145px; height: 181px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                    </div>
+                    <div></div>
+                </div>
+                <div id="pie3" _echarts_instance_="ec_1703317818766" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative;">
+                    <div style="position: relative; overflow: hidden; width: 145px; height: 181px; padding: 0px; margin: 0px; border-width: 0px;">
+                        <canvas data-zr-dom-id="zr_0" width="145" height="181" style="position: absolute; left: 0px; top: 0px; width: 145px; height: 181px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                    </div>
+                    <div></div>
+                </div>
+                <div id="pie4" _echarts_instance_="ec_1703317818767" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative;">
+                    <div style="position: relative; overflow: hidden; width: 145px; height: 181px; padding: 0px; margin: 0px; border-width: 0px;">
+                        <canvas data-zr-dom-id="zr_0" width="145" height="181" style="position: absolute; left: 0px; top: 0px; width: 145px; height: 181px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="right_box">
+            <div class="right_title">
+                <img src="./static/title.png" alt="" />个人成绩增值排名前五
+            </div>
+            <div id="three_echarts" _echarts_instance_="ec_1703317818768" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative;">
+                <div style="position: relative; overflow: hidden; width: 579px; height: 181px; padding: 0px; margin: 0px; border-width: 0px;">
+                    <canvas data-zr-dom-id="zr_0" width="579" height="181" style="position: absolute; left: 0px; top: 0px; width: 579px; height: 181px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                    <canvas data-zr-dom-id="zr_1" width="579" height="181" style="position: absolute; left: 0px; top: 0px; width: 579px; height: 181px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./static/echarts.min.js"></script>
+<script src="./static/index2.js"></script>
+</body>
+</html>

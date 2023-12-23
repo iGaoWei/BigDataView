@@ -413,6 +413,15 @@ git clone https://github.com/iGaoWei/BigDataView.git
 ##### 113 白茶种植大数据溯源平台 [在线预览](https://igaowei.github.io/BigDataView/web/110%20崇明观测站/index.html)
 <img src="https://gitee.com/iGaoWei/big-data-view/raw/master/gif/113.png" onerror="this.src='https://gitee.com/iGaoWei/big-data-view/raw/master/gif/更多内容关注公众号.gif'" width="100%" />
 
+##### 114 HELLO共享单车运营管理平台 [在线预览](https://igaowei.github.io/BigDataView/web/110%20崇明观测站/index.html)
+<img src="https://gitee.com/iGaoWei/big-data-view/raw/master/gif/114.png" onerror="this.src='https://gitee.com/iGaoWei/big-data-view/raw/master/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### 115 新能源汽车数量统计大屏 [在线预览](https://igaowei.github.io/BigDataView/web/110%20崇明观测站/index.html)
+<img src="https://gitee.com/iGaoWei/big-data-view/raw/master/gif/115.png" onerror="this.src='https://gitee.com/iGaoWei/big-data-view/raw/master/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### 116 学生综合成绩评价系统大屏 [在线预览](https://igaowei.github.io/BigDataView/web/110%20崇明观测站/index.html)
+<img src="https://gitee.com/iGaoWei/big-data-view/raw/master/gif/116.png" onerror="this.src='https://gitee.com/iGaoWei/big-data-view/raw/master/gif/更多内容关注公众号.gif'" width="100%" />
+
 
 #### 温馨提示：更多模板陆续更新中
 

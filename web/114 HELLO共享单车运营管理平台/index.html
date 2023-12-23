@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HELLO共享单车运营管理平台</title>
+    <link rel='stylesheet' type='text/css' href='css/main.css'>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/echarts.js"></script>
+    <script type="text/javascript" src="js/echarts-gl.js"></script>
+
+
+    <script type="text/javascript" src="js/taskjs/time.js"></script>
+</head>
+
+<header class="flex-layout">
+    <h1 class="h1_time">HELLO共享单车运营管理平台</h1>
+    <div class="showTime h1_time"></div>
+</header>
+<section class="mainbox flex-layout">
+    <div class="column">
+        <div class="panel leftUp">
+            <h2>按季节：每小时租赁数</h2>
+            <div id="chart11" class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel leftMid">
+            <h2>注册用户：每小时租赁数</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel leftDown">
+            <h2>注册、非注册用户按周：每天租赁数</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+
+    <!-- {#    中间#} -->
+    <div class="column column2">
+        <div class="panel midUp">
+            <h2>注册与非注册用户对比</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel midDown">
+            <h2>租赁数影响因素分析</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+    <!-- {#    右边#} -->
+    <div class="column">
+        <div class="panel rightUp">
+            <h2>按周：每小时租赁数</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel rightMid">
+            <h2>天气分析</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel rightDown">
+            <h2>租赁概况</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+</section>
+<script>
+    document.write("<scr"+"ipt src='js/taskjs/leftup.js'></scr"+"ipt>");
+    document.write("<scr"+"ipt src='js/taskjs/leftmid.js'></scr"+"ipt>");
+    document.write("<scr"+"ipt src='js/taskjs/leftdown.js'></scr"+"ipt>");
+    document.write("<scr"+"ipt src='js/taskjs/midup.js'></scr"+"ipt>");
+    document.write("<scr"+"ipt src='js/taskjs/middown.js'></scr"+"ipt>");
+    document.write("<scr"+"ipt src='js/taskjs/rightup.js'></scr"+"ipt>");
+    document.write("<scr"+"ipt src='js/taskjs/rightmid.js'></scr"+"ipt>");
+    document.write("<scr"+"ipt src='js/taskjs/rightdown.js'></scr"+"ipt>");
+</script>
+
+</html>

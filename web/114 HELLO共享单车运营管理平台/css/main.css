@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: electronicFont;
+    src: url("font/DS-DIGIT.TTF");
+}
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: #2c343c;
+    overflow: hidden;
+}
+.flex-layout {
+    display: flex;
+    justify-content: center;
+}
+.mainbox {
+    flex: 9;
+    padding: 0.1vh 0.1vh 0;
+}
+header {
+    background: url("images/head_bg.png") no-repeat top center;
+    background-size: 100% 100%;
+}
+
+.h1_time {
+    height: 7vh;
+    font-size: 3vh;
+    line-height: 7vh;
+    color: #fff;
+}
+.showTime {
+    position: absolute;
+    left: 77vw;
+    font-size: 2vh;
+    color: rgba(255, 255, 255, 0.7);
+    overflow: hidden;
+}
+
+.column {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.column:nth-child(2) {
+    margin: 0.1vh .15vh;
+    width: 40%;
+}
+.panel {
+    position: relative;
+    flex: 1;
+    border: 1px solid rgba(25, 186, 139, 0.17);
+    background: url("images/line(1).png");
+    padding: 0 0.15vh 0.5vh;
+    margin-bottom: 0.15vh;
+}
+
+.panel:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #02a6b5;
+    border-left: 2px solid #02a6b5;
+}
+.panel:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #02a6b5;
+    border-right: 2px solid #02a6b5;
+}
+.panel-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.panel-footer:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #02a6b5;
+    border-left: 2px solid #02a6b5;
+}
+.panel-footer:after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #02a6b5;
+    border-right: 2px solid #02a6b5;
+}
+
+.panel > h2 {
+    height: 5vh;
+    line-height: 5vh;
+    text-align: center;
+    color: #fff;
+    font-size: 2vh;
+    font-weight: 400;
+}
+.panel > .chart {
+    height: 24.8vh;
+}
+.column2 .chart{
+    height: 40vh;
+}
+
