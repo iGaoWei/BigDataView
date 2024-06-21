@@ -422,8 +422,8 @@ git clone https://github.com/iGaoWei/BigDataView.git
 ##### 116 学生综合成绩评价系统大屏 [在线预览](https://igaowei.github.io/BigDataView/web/110%20崇明观测站/index.html)
 <img src="https://gitee.com/iGaoWei/big-data-view/raw/master/gif/116.png" onerror="this.src='https://gitee.com/iGaoWei/big-data-view/raw/master/gif/更多内容关注公众号.gif'" width="100%" />
 
-##### 116 学生综合成绩评价系统大屏 [在线预览](https://igaowei.github.io/BigDataView/web/110%20崇明观测站/index.html)
-<img src="https://gitee.com/iGaoWei/big-data-view/raw/master/gif/117.png" onerror="this.src='https://gitee.com/iGaoWei/big-data-view/raw/master/gif/更多内容关注公众号.gif'" width="100%" />
+##### 117 上海市图书馆大屏看板 [在线预览](https://igaowei.github.io/BigDataView/web/110%20崇明观测站/index.html)
+<img src="https://gitee.com/iGaoWei/big-data-view/raw/master/gif/117.jpg" onerror="this.src='https://gitee.com/iGaoWei/big-data-view/raw/master/gif/更多内容关注公众号.gif'" width="100%" />
 
 #### 温馨提示：更多模板陆续更新中
 
