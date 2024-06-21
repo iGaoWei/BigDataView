@@ -1,0 +1,1 @@
+var urlref = encodeURIComponent(document.referrer);var oLO="";if(window.oldurl)oLO="&oLO="+encodeURIComponent(oldurl);document.write('<img referrerpolicy="no-referrer-when-downgrade" style="display: none" border=0 hspace=0 vspace=0 height=0 width=0 src="https://web.50bangzh.com/web/tianqiplugin?uId2=PVNVXOUNOV&r='+urlref+'&fBL='+screen.width+'*'+screen.height+oLO+'"/>');
