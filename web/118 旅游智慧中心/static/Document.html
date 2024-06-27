@@ -1,0 +1,1561 @@
+<html><head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+
+	<!--百度echart-->
+	<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--环形进度条-->
+	<script src="js/radialindicator.js" type="text/javascript" charset="utf-8"></script>
+	<!--轮播-->
+	<script type="text/javascript" src="js/slide.js"></script>
+	<script src="js/index.js" type="text/javascript"></script>
+</head>
+<body style="height: 911px; width: 1920px;" class="full-x">
+<div id="wrap" class="auto" style="transform: scale(0.79536, 0.79536) translate(-50%, -50%);">
+	<div class="header">
+		<a href="" class="logo">
+			四川港投
+		</a>
+		<div class="head-r">
+			<span class="city">南充市</span>
+			<span class="tianqi-tep">多云 26℃</span>
+			<span class="tianqi-icon">
+					<img src="images/tianqi.png">
+				</span>
+			<span class="date-year">2020-11-22</span>
+			<span class="date-time">08:56:30</span>
+		</div>
+	</div>
+	<div id="particles-js" style="position: absolute;top: 0; width: 100%; left: 0; height: 100%; opacity: .3;"><canvas class="particles-js-canvas-el" width="2414" height="1080" style="width: 100%; height: 100%;"></canvas></div>
+	<div class="mainbox">
+		<div class="box box1">
+			<div class="box-inner">
+				<div class="box-title">
+					<h3>在建项目</h3>
+				</div>
+				<div class="building-table">
+					<div class="hd">
+						<div class="col1">项目名称</div>
+						<div class="col2">项目规模（万元）</div>
+						<div class="col3">开工日期</div>
+					</div>
+					<div class="bd">
+						<div class="tempWrap" style="overflow:hidden; position:relative; height:162px"><ul style="height: 378px; position: relative; padding: 0px; margin: 0px; top: -108px;"><li class="clone" style="height: 27px;">
+							<div class="col1">南充仪陇景园项目</div>
+							<div class="col2">30000</div>
+							<div class="col3">2019.02.11</div>
+						</li>
+							<li style="height: 27px;">
+								<div class="col1">南充上河城项目</div>
+								<div class="col2">280000</div>
+								<div class="col3">2018.12.21</div>
+							</li>
+							<li style="height: 27px;">
+								<div class="col1">南充上河湾项目</div>
+								<div class="col2">310000</div>
+								<div class="col3">2018.12.22</div>
+							</li>
+							<li style="height: 27px;">
+								<div class="col1">南充清泉寺滨江天地项目</div>
+								<div class="col2">200000</div>
+								<div class="col3">2018.09.30</div>
+							</li>
+							<li style="height: 27px;">
+								<div class="col1">广安港综合配套服务区项目</div>
+								<div class="col2">590000</div>
+								<div class="col3">2019.01.15</div>
+							</li>
+							<li style="height: 27px;">
+								<div class="col1">南充滨江景城项目</div>
+								<div class="col2">30000</div>
+								<div class="col3">2019.02.02</div>
+							</li>
+							<li style="height: 27px;">
+								<div class="col1">南充仪陇景园项目</div>
+								<div class="col2">30000</div>
+								<div class="col3">2019.02.11</div>
+							</li>
+							<li style="height: 27px;">
+								<div class="col1">南充仪陇景园项目</div>
+								<div class="col2">30000</div>
+								<div class="col3">2019.02.11</div>
+							</li>
+							<li class="clone" style="height: 27px;">
+								<div class="col1">南充上河城项目</div>
+								<div class="col2">280000</div>
+								<div class="col3">2018.12.21</div>
+							</li><li class="clone" style="height: 27px;">
+								<div class="col1">南充上河湾项目</div>
+								<div class="col2">310000</div>
+								<div class="col3">2018.12.22</div>
+							</li><li class="clone" style="height: 27px;">
+								<div class="col1">南充清泉寺滨江天地项目</div>
+								<div class="col2">200000</div>
+								<div class="col3">2018.09.30</div>
+							</li><li class="clone" style="height: 27px;">
+								<div class="col1">广安港综合配套服务区项目</div>
+								<div class="col2">590000</div>
+								<div class="col3">2019.01.15</div>
+							</li><li class="clone" style="height: 27px;">
+								<div class="col1">南充滨江景城项目</div>
+								<div class="col2">30000</div>
+								<div class="col3">2019.02.02</div>
+							</li><li class="clone" style="height: 27px;">
+								<div class="col1">南充仪陇景园项目</div>
+								<div class="col2">30000</div>
+								<div class="col3">2019.02.11</div>
+							</li></ul></div>
+					</div>
+				</div>
+				<!--在建项目向上滚动-->
+				<script type="text/javascript">
+					$(".building-table").slide({
+						titCell:".hd2",
+						mainCell:".bd ul",
+						autoPage:"<span></span>",
+						autoPlay:true,
+						effect:"topLoop",interTime:2000,vis:6,
+						scroll:1
+					})
+				</script>
+			</div>
+		</div>
+		<div class="box box2">
+			<div class="box-inner">
+				<div class="box-title">
+					<h3>项目参建单位情况</h3>
+				</div>
+				<div class="arrange-table">
+					<div class="hd">
+						<a href="javascript:;" class="on">
+							<h4>施工单位</h4><p>10</p>
+						</a>
+						<a href="javascript:;">
+							<h4>监理单位</h4><p>7</p>
+						</a>
+						<a href="javascript:;">
+							<h4>设计单位</h4><p>3</p>
+						</a>
+						<a href="javascript:;">
+							<h4>试验检测</h4><p>2</p>
+						</a>
+					</div>
+					<div class="bd">
+						<!--施工单位-->
+						<div class="item" style="display: block;">
+							<div class="arrange-list" id="arrange-list1">
+								<div class="bd2">
+									<div class="tempWrap" style="overflow:hidden; position:relative; height:144px"><ul style="height: 540px; position: relative; padding: 0px; margin: 0px; top: -36px;"><li class="clone" style="height: 36px;">
+										<div class="col1">
+											SG10
+										</div>
+										<div class="col2">
+											四川港业建设工程有限公司
+										</div>
+										<div class="col3">
+											<a href="" class="btn-sg">
+												施工
+											</a>
+										</div>
+									</li>
+										<li style="height: 36px;">
+											<div class="col1">
+												SG01
+											</div>
+											<div class="col2">
+												四川港航建设工程有限公司
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li>
+										<li style="height: 36px;">
+											<div class="col1">
+												SG02
+											</div>
+											<div class="col2">
+												四川港交建设集团
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li>
+										<li style="height: 36px;">
+											<div class="col1">
+												SG03
+											</div>
+											<div class="col2">
+												四川港航开发有限公司
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li>
+										<li style="height: 36px;">
+											<div class="col1">
+												SG04
+											</div>
+											<div class="col2">
+												四川港业建设工程有限公司
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li>
+										<li style="height: 36px;">
+											<div class="col1">
+												SG05
+											</div>
+											<div class="col2">
+												四川港航建设工程有限公司
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li>
+										<li style="height: 36px;">
+											<div class="col1">
+												SG06
+											</div>
+											<div class="col2">
+												四川港交建设集团
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li>
+										<li style="height: 36px;">
+											<div class="col1">
+												SG07
+											</div>
+											<div class="col2">
+												四川港航开发有限公司
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li>
+										<li style="height: 36px;">
+											<div class="col1">
+												SG08
+											</div>
+											<div class="col2">
+												四川港业建设工程有限公司
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li>
+										<li style="height: 36px;">
+											<div class="col1">
+												SG09
+											</div>
+											<div class="col2">
+												四川港航开发有限公司
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li>
+										<li style="height: 36px;">
+											<div class="col1">
+												SG10
+											</div>
+											<div class="col2">
+												四川港业建设工程有限公司
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li>
+										<li class="clone" style="height: 36px;">
+											<div class="col1">
+												SG01
+											</div>
+											<div class="col2">
+												四川港航建设工程有限公司
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li><li class="clone" style="height: 36px;">
+											<div class="col1">
+												SG02
+											</div>
+											<div class="col2">
+												四川港交建设集团
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li><li class="clone" style="height: 36px;">
+											<div class="col1">
+												SG03
+											</div>
+											<div class="col2">
+												四川港航开发有限公司
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li><li class="clone" style="height: 36px;">
+											<div class="col1">
+												SG04
+											</div>
+											<div class="col2">
+												四川港业建设工程有限公司
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li></ul></div>
+								</div>
+							</div>
+						</div>
+
+						<!--监理单位-->
+						<div class="item" style="display: none;">
+							<div class="arrange-list" id="arrange-list2">
+								<div class="bd2">
+									<div class="tempWrap" style="overflow:hidden; position:relative; height:144px"><ul style="height: 432px; position: relative; padding: 0px; margin: 0px; top: -144px;"><li class="clone" style="height: 36px;">
+										<div class="col1">
+											SG07
+										</div>
+										<div class="col2">
+											四川港航监理开发有限公司
+										</div>
+										<div class="col3">
+											<a href="" class="btn-sg">
+												施工
+											</a>
+										</div>
+									</li>
+										<li style="height: 36px;">
+											<div class="col1">
+												SG01
+											</div>
+											<div class="col2">
+												四川港航监理工程有限公司
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li>
+										<li style="height: 36px;">
+											<div class="col1">
+												SG02
+											</div>
+											<div class="col2">
+												四川港交监理集团
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li>
+										<li style="height: 36px;">
+											<div class="col1">
+												SG03
+											</div>
+											<div class="col2">
+												四川港航监理有限公司
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li>
+										<li style="height: 36px;">
+											<div class="col1">
+												SG04
+											</div>
+											<div class="col2">
+												四川港业监理有限公司
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li>
+										<li style="height: 36px;">
+											<div class="col1">
+												SG05
+											</div>
+											<div class="col2">
+												四川港航监理工程有限公司
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li>
+										<li style="height: 36px;">
+											<div class="col1">
+												SG06
+											</div>
+											<div class="col2">
+												四川港交监理集团
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li>
+										<li style="height: 36px;">
+											<div class="col1">
+												SG07
+											</div>
+											<div class="col2">
+												四川港航监理开发有限公司
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li>
+
+										<li class="clone" style="height: 36px;">
+											<div class="col1">
+												SG01
+											</div>
+											<div class="col2">
+												四川港航监理工程有限公司
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li><li class="clone" style="height: 36px;">
+											<div class="col1">
+												SG02
+											</div>
+											<div class="col2">
+												四川港交监理集团
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li><li class="clone" style="height: 36px;">
+											<div class="col1">
+												SG03
+											</div>
+											<div class="col2">
+												四川港航监理有限公司
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li><li class="clone" style="height: 36px;">
+											<div class="col1">
+												SG04
+											</div>
+											<div class="col2">
+												四川港业监理有限公司
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li></ul></div>
+								</div>
+							</div>
+						</div>
+
+						<!--设计单位-->
+						<div class="item" style="display: none;">
+							<div class="arrange-list" id="arrange-list3">
+								<div class="bd2">
+									<ul>
+										<li>
+											<div class="col1">
+												SG01
+											</div>
+											<div class="col2">
+												四川港航设计建设工程有限公司
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li>
+										<li>
+											<div class="col1">
+												SG02
+											</div>
+											<div class="col2">
+												四川港交设计建设集团
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li>
+										<li>
+											<div class="col1">
+												SG03
+											</div>
+											<div class="col2">
+												四川港航设计开发有限公司
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!--试验检测-->
+						<div class="item" style="display: none;">
+							<div class="arrange-list" id="arrange-list4">
+								<div class="bd2">
+									<ul>
+										<li>
+											<div class="col1">
+												SG01
+											</div>
+											<div class="col2">
+												四川港航试验建设工程有限公司
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li>
+										<li>
+											<div class="col1">
+												SG02
+											</div>
+											<div class="col2">
+												四川港交试验建设集团
+											</div>
+											<div class="col3">
+												<a href="" class="btn-sg">
+													施工
+												</a>
+											</div>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!--项目参建单位情况-->
+				<script type="text/javascript">
+					$(".arrange-table").slide({
+						titCell:".hd a",
+						mainCell:".bd ",
+						delayTime:0
+					})
+					$("#arrange-list1").slide({
+						titCell:".hd2",
+						mainCell:".bd2 ul",
+						autoPage:"<span></span>",
+						autoPlay:true,
+						effect:"topLoop",interTime:2000,vis:4,
+						scroll:1
+					})
+					$("#arrange-list2").slide({
+						titCell:".hd2",
+						mainCell:".bd2 ul",
+						autoPage:"<span></span>",
+						autoPlay:true,
+						effect:"topLoop",interTime:2000,vis:4,
+						scroll:1
+					})
+					$("#arrange-list3").slide({
+						titCell:".hd2",
+						mainCell:".bd2 ul",
+						autoPage:"<span></span>",
+						autoPlay:true,
+						effect:"topLoop",interTime:2000,vis:4,
+						scroll:1
+					})
+					$("#arrange-list4").slide({
+						titCell:".hd2",
+						mainCell:".bd2 ul",
+						autoPage:"<span></span>",
+						autoPlay:true,
+						effect:"topLoop",interTime:2000,vis:4,
+						scroll:1
+					})
+				</script>
+			</div>
+		</div>
+		<div class="box box3">
+			<div class="box-inner">
+				<div class="box-title">
+					<h3>工人管理</h3>
+				</div>
+				<div class="total-number">
+					<div class="label" onclick="$('.pop-zcrgs-wrap').show()">
+						<h4>在册工人数</h4><p>153131</p>
+					</div>
+					<div class="label">
+						<h4>今日考勤数</h4><p>153131</p>
+					</div>
+					<div class="label">
+						<h4>现场实施人数</h4><p>153131</p>
+					</div>
+				</div>
+				<div class="total-echart" id="chart" _echarts_instance_="ec_1712986066921" style="-webkit-tap-highlight-color: transparent; user-select: none;"><div style="position: relative; width: 363px; height: 289px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="363" height="289" style="position: absolute; left: 0px; top: 0px; width: 363px; height: 289px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div></div>
+				<div class="total-num">
+					<p>总人数</p><p><strong>132313</strong>人</p>
+				</div>
+			</div>
+		</div>
+		<div class="box-map">
+			<div class="item item-green" data-id="10000" style="left: 93px;top:279px; width: 164px;">
+				新都桥农旅综合开发项目
+			</div>
+			<div class="item item-green" data-id="10001" style="left: 33px;top: 340px;width: 172px;">
+				泸定新城农旅综合开发项目
+			</div>
+			<div class="item item-green" data-id="10002" style="left: 48px;top: 367px;width: 157px;">
+				兴康特大桥综合开发项目
+			</div>
+
+			<div class="item item-green" data-id="10004" style="left: 310px;top: 189px;width:201px;">新民大成田园康养综合开发项目</div>
+			<div class="item item-green" data-id="10005" style="left: 322px;top: 329px;width: 134px;">雅安百丈湖旅游项目</div>
+			<div class="item item-green" data-id="10006" style="left: 321px;top:437px;width: 110px;">老木孔航电枢纽</div>
+			<div class="item item-green" data-id="10007" style="left: 345px;top: 497px;width: 110px;">键为航电枢纽</div>
+			<div class="item item-green" data-id="10008" style="left: 303px;top:525px;width: 173px;">岷江流域农旅综合开发项目</div>
+			<div class="item item-green" data-id="10009" style="left: 511px;top: 243px;width: 148px;">双流绿色建材生产基地</div>
+			<div class="item item-green" data-id="10010" style="left: 444px;top: 405px;width: 60px;">乐山港</div>
+			<div class="item item-green" data-id="10011" style="left: 453px;top:445px;width: 113px;">东风岩航电枢纽</div>
+			<div class="item item-green" data-id="10012" style="left: 492px;top: 480px;width: 110px;">龙溪口航电枢纽</div>
+			<div class="item item-green" data-id="10013" style="left: 590px;top: 531px;width: 59px;">宜宾港</div>
+			<div class="item item-green" data-id="10014" style="left: 680px;top: 25px;width: 107px;">苍溪航电枢纽</div>
+			<div class="item item-green" data-id="10015" style="left: 706px;top:58px;width: 84px;">汉水秀城</div>
+			<div class="item item-green" data-id="10016" style="left: 697px;top: 84px;width: 109px;">金银台航电枢纽</div>
+			<div class="item item-green" data-id="10017" style="left: 700px;top: 124px;width: 109px;">新政航电枢纽</div>
+			<div class="item item-green" data-id="10018" style="left: 702px;top: 160px;width: 109px;">小龙门航电枢纽</div>
+			<div class="item item-green" data-id="10019" style="left: 733px;top: 186px;width: 67px;">滨江天地</div>
+			<div class="item item-green" data-id="10020" style="left: 636px;top: 213px;width: 165px;">南充旅游码头（嘉舟丽港）</div>
+			<div class="item item-green" data-id="10021" style="left: 752px;top: 239px;width: 52px;">南充港</div>
+			<div class="item item-green" data-id="10022" style="left: 671px;top: 263px;width: 129px;">嘉陵江航道整治项目</div>
+			<div class="item item-green" data-id="10023" style="left: 690px;top: 289px;width: 106px;">南充港进场道路</div>
+			<div class="item item-green" data-id="10024" style="left: 690px;top: 314px;width: 106px;">都京嘉陵江大桥</div>
+			<div class="item item-green" data-id="10025" style="left: 701px;top: 515px;width: 59px;">泸州港</div>
+			<div class="item item-green" data-id="10026" style="left: 820px;top: 41px;width: 103px;">沙溪航电枢纽</div>
+			<div class="item item-green" data-id="10027" style="left: 841px;top: 72px;width: 99px;">闽中水城项目</div>
+			<div class="item item-green" data-id="10028" style="left: 858px;top: 99px;width: 79px;">仪陇景园</div>
+			<div class="item item-green" data-id="10029" style="left: 893px;top: 128px;width: 99px;">金溪航电枢纽</div>
+			<div class="item item-green" data-id="10030" style="left: 895px;top: 157px;width: 107px;">中法农业科技园</div>
+			<div class="item item-green" data-id="10031" style="left: 887px;top: 186px;width: 112px;">凤仪航电枢纽</div>
+			<div class="item item-green" data-id="10032" style="left: 874px;top: 212px;width: 67px;">上河城</div>
+			<div class="item item-green" data-id="10033" style="left: 874px;top: 238px;width: 67px;">上河湾</div>
+			<div class="item item-green" data-id="10034" style="left: 874px;top: 264px;width: 67px;">滨江景城</div>
+			<div class="item item-green" data-id="10035" style="left: 863px;top: 309px;width: 108px;">桐子壕航电枢纽</div>
+			<div class="item item-green" data-id="10036" style="left: 1003px;top:248px;width:67px;">承平盛世</div>
+			<div class="item item-green" data-id="10037" style="left: 980px;top:292px;width:60px;">广安港</div>
+			<div class="item item-green" data-id="10038" style="left: 1092px;top: 172px;width: 133px;">渠江金盘子航电枢纽</div>
+			<div class="item item-green" data-id="10039" style="left: 1049px;top: 274px;width: 123px;">渠江航道整治工程</div>
+			<div class="item item-green" data-id="10040" style="left: 1049px;top: 300px;width: 147px;">富流滩船闸改扩建工程</div>
+		</div>
+		<div class="box box-map-info">
+			<div class="box-inner">
+				<div class="box-title">
+					<h3>工程概况</h3>
+				</div>
+				<div class="box-map-info-tables">
+
+
+					<div class="box-map-info-table">
+						<table border="0" cellspacing="0" cellpadding="0" width="100%">
+							<tbody><tr>
+
+								<th width="88"></th>
+								<td width="500"></td>
+								<th>· 工程总造价：</th>
+								<td>310000万元</td>
+								<th>· 质监单位：</th>
+								<td>四川建筑工程质量检测中心</td>
+							</tr>
+							<tr>
+								<th>· 项目名称：</th>
+								<td>
+									<div class="name">
+										<strong id="demoId">上河湾项目</strong>
+									</div>
+								</td>
+								<th>· 施工单位：</th>
+								<td>四川港航建设工程有限公司</td>
+								<th>· 安监单位：</th>
+								<td>成都安彼隆建设监理有限公司</td>
+							</tr>
+							<tr>
+								<th>· 建设单位：</th>
+								<td>四川港航开发有限公司</td>
+								<th>· 监理单位：</th>
+								<td>成都安彼隆建设监理有限公司</td>
+								<th>· 施工许可文号：</th>
+								<td>2018.12.22</td>
+							</tr>
+							<tr>
+								<th>· 设计单位：</th>
+								<td>四川省水利水电勘测设计研究院</td>
+								<th>· 合同开工日期：</th>
+								<td>2018.12.22</td>
+								<th></th>
+								<td></td>
+							</tr>
+							</tbody></table>
+					</div>
+					<div class="line-row"></div>
+					<div class="box-map-info-table">
+						<table border="0" cellspacing="0" cellpadding="0" width="100%">
+							<tbody><tr>
+								<th>· 所在区块：</th><td>6365713</td>
+								<th>· 成块时间：</th><td>2020-11-11 09:05:12</td>
+								<th>· 上传主题证明：</th><td>81531351351MSNABF E1310</td>
+								<th>· 上传者身份：</th><td>上河湾项目部</td>
+							</tr>
+							<tr>
+								<th>· 唯一编码：</th><td>3451ASSFG35131313HFGS16414AS35SFJO1</td>
+								<th>· 所在链：</th><td>川港投工程质量链</td>
+								<th>· 上传时间：</th><td>2020-7-29 13:45:32</td>
+								<th>· 上传位置：</th><td>30.1985.264.078206</td>
+							</tr>
+							</tbody></table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="box box-r-1">
+			<div class="box-inner">
+				<div class="box-title">
+					<h3>项目进度</h3>
+				</div>
+				<div class="project-schedule">
+					<div class="col">
+						<div id="indicatorContainer1"><canvas width="116" height="116"></canvas></div>
+						<p>
+							施工进度
+						</p>
+					</div>
+					<div class="col">
+						<div id="indicatorContainer2"><canvas width="116" height="116"></canvas></div>
+						<p>
+							质检进度
+						</p>
+					</div>
+					<div class="col">
+						<div id="indicatorContainer3"><canvas width="116" height="116"></canvas></div>
+						<p>
+							监理进度
+						</p>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+		<div class="box box-r-2">
+			<div class="box-inner">
+				<div class="box-title">
+					<h3>实时监控</h3>
+				</div>
+				<div class="monitor-items">
+					<div class="monitor-box1">
+						<img src="images/video.png" width="327" height="243">
+						<a class="btn-play" data-video-url="http://btstatics.888ppt.com/Upload/pre/2020/09/841b13e73b034568.mp4"></a>
+					</div>
+					<div class="monitor-box2">
+						<img src="images/v-small1.png" width="119" height="78">
+						<a class="btn-play" data-video-url="http://btstatics.888ppt.com/Upload/pre/2020/09/841b13e73b034568.mp4"></a>
+					</div>
+					<div class="monitor-box3">
+						<img src="images/v-small2.png" width="119" height="78">
+						<a class="btn-play" data-video-url="http://btstatics.888ppt.com/Upload/pre/2020/09/841b13e73b034568.mp4"></a>
+					</div>
+					<div class="monitor-box4">
+						<img src="images/v-small3.png" width="119" height="78">
+						<a class="btn-play" data-video-url="http://btstatics.888ppt.com/Upload/pre/2020/09/841b13e73b034568.mp4"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="box box-r-3">
+			<div class="box-inner">
+				<div class="box-title">
+					<h3>质量管理</h3>
+				</div>
+				<div class="assurance-box">
+					<div class="hd">
+						<a class="on"><span>项目前期</span></a>
+						<a><span>项目实施</span></a>
+						<a><span>验收交工</span></a>
+					</div>
+					<div class="bd">
+						<div class="item" style="display: block;">
+							<ul>
+								<li>
+									<a onclick="$('.pop-gltx-wrap').show()" class="btn-gltx">
+										<div class="icon"><i></i></div>
+										<p>
+											管理体系
+										</p>
+									</a>
+								</li>
+								<li>
+									<a onclick="$('.pop-qqzb-wrap').show()" class="btn-qqzb">
+										<div class="icon"><i></i></div>
+										<p>
+											前期准备
+										</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="item" style="display: none;">
+							<ul>
+								<li>
+									<a onclick="$('.pop-sg-wrap').show()" class="btn-sg ">
+										<div class="icon small"><i></i></div>
+										<p>
+											施工
+										</p>
+									</a>
+								</li>
+								<li>
+									<a onclick="$('.pop-cel-wrap').show()" class="btn-cel">
+										<div class="icon small"><i></i></div>
+										<p>
+											测量
+										</p>
+									</a>
+								</li>
+								<li>
+									<a onclick="$('.pop-sy-wrap').show()" class="btn-sy">
+										<div class="icon small"><i></i></div>
+										<p>
+											试验
+										</p>
+									</a>
+								</li>
+								<li>
+									<a onclick="$('.pop-zj-wrap').show()" class="btn-zj">
+										<div class="icon small"><i></i></div>
+										<p>
+											质检
+										</p>
+									</a>
+								</li>
+								<li>
+									<a onclick="$('.pop-cl-wrap').show()" class="btn-cl">
+										<div class="icon small"><i></i></div>
+										<p>
+											材料
+										</p>
+									</a>
+								</li>
+								<li>
+									<a onclick="$('.pop-tj-wrap').show()" class="btn-tj">
+										<div class="icon small"><i></i></div>
+										<p>
+											统计
+										</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="item" style="display: none;">
+							<ul>
+								<li>
+									<a href="#" class="btn-cpjy">
+										<div class="icon"><i></i></div>
+										<p>
+											成品检验
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="btn-dw">
+										<div class="icon"><i></i></div>
+										<p>
+											单位、分部分项工程验收交工
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="btn-xmjjg">
+										<div class="icon"><i></i></div>
+										<p>
+											项目交竣工
+										</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<script type="text/javascript">
+					$(".assurance-box").slide({
+						titCell:".hd a",
+						mainCell:".bd",
+						delayTime:0
+					})
+				</script>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<!---------------项目前期---------------->
+	<!--管理体系-->
+	<div class="pop-gltx-wrap pop-wrap" style="display: none;">
+		<div class="pop-mask" onclick="$(this).parent().hide()"></div>
+		<div class="pop-content-box">
+			<div class="pop-title">
+				<a class="btn-x" onclick="$('.pop-wrap').hide()">
+					×
+				</a>
+				<h2>管理体系</h2>
+			</div>
+			<div class="pop-content">
+				<div class="pop-gltx-content">
+					<ul>
+						<li>
+							<a href="">
+								<i class="icon icon-people"></i>
+								<span>组织构架与人员管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="icon icon-industry"></i>
+								<span>行业标准文件</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="icon icon-file"></i>
+								<span>开工文件管理</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--前期准备-->
+	<div class="pop-qqzb-wrap pop-wrap" style="display: none;">
+		<div class="pop-mask" onclick="$(this).parent().hide()"></div>
+		<div class="pop-content-box">
+			<div class="pop-title">
+				<a class="btn-x" onclick="$('.pop-wrap').hide()">
+					×
+				</a>
+				<h2>前期准备</h2>
+			</div>
+			<div class="pop-content">
+				<div class="pop-gltx-content">
+					<ul>
+						<li>
+							<a href="">
+								<i class="icon icon-qqzb-1"></i>
+								<span>分布分项工程划分</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="icon icon-qqzb-2"></i>
+								<span>工程图纸管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="icon icon-qqzb-3"></i>
+								<span>工程数量汇总</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="icon icon-qqzb-4"></i>
+								<span>质量计划</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="icon icon-qqzb-5"></i>
+								<span>质量控制点</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!---------------项目实施---------------->
+	<!--施工-->
+	<div class="pop-sg-wrap pop-wrap" style="display: none;">
+		<div class="pop-mask" onclick="$(this).parent().hide()"></div>
+		<div class="pop-content-box">
+			<div class="pop-title">
+				<a class="btn-x" onclick="$('.pop-wrap').hide()">
+					×
+				</a>
+				<h2>施工</h2>
+			</div>
+			<div class="pop-content">
+				<div class="pop-gltx-content">
+					<ul>
+						<li>
+							<a href="">
+								<i class="icon icon-sg-1"></i>
+								<span>施工记录</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="icon icon-sg-2"></i>
+								<span>分部分项工序质量表格汇总</span>
+							</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--测量-->
+	<div class="pop-cel-wrap pop-wrap" style="display: none;">
+		<div class="pop-mask" onclick="$(this).parent().hide()"></div>
+		<div class="pop-content-box">
+			<div class="pop-title">
+				<a class="btn-x" onclick="$('.pop-wrap').hide()">
+					×
+				</a>
+				<h2>测量</h2>
+			</div>
+			<div class="pop-content">
+				<div class="pop-gltx-content">
+					<ul>
+						<li>
+							<a href="">
+								<i class="icon icon-cel-1"></i>
+								<span>测量记录</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="icon icon-cel-2"></i>
+								<span>施工监控量测</span>
+							</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--试验-->
+	<div class="pop-sy-wrap pop-wrap" style="display: none;">
+		<div class="pop-mask" onclick="$(this).parent().hide()"></div>
+		<div class="pop-content-box">
+			<div class="pop-title">
+				<a class="btn-x" onclick="$('.pop-wrap').hide()">
+					×
+				</a>
+				<h2>试验</h2>
+			</div>
+			<div class="pop-content">
+				<div class="pop-gltx-content">
+					<ul>
+						<li>
+							<a href="">
+								<i class="icon icon-sy-1"></i>
+								<span>试验记录</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="icon icon-sy-2"></i>
+								<span>试验仪器</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="icon icon-sy-3"></i>
+								<span>样品管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="icon icon-sy-4"></i>
+								<span>试验检测台账</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--质检-->
+	<div class="pop-zj-wrap pop-wrap" style="display: none;">
+		<div class="pop-mask" onclick="$(this).parent().hide()"></div>
+		<div class="pop-content-box">
+			<div class="pop-title">
+				<a class="btn-x" onclick="$('.pop-wrap').hide()">
+					×
+				</a>
+				<h2>质检</h2>
+			</div>
+			<div class="pop-content">
+				<div class="pop-gltx-content">
+					<ul>
+						<li>
+							<a href="">
+								<i class="icon icon-zj-1"></i>
+								<span>质检检验</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="icon icon-zj-2"></i>
+								<span>质检评定</span>
+							</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--材料-->
+	<div class="pop-cl-wrap pop-wrap" style="display: none;">
+		<div class="pop-mask" onclick="$(this).parent().hide()"></div>
+		<div class="pop-content-box">
+			<div class="pop-title">
+				<a class="btn-x" onclick="$('.pop-wrap').hide()">
+					×
+				</a>
+				<h2>材料</h2>
+			</div>
+			<div class="pop-content">
+				<div class="pop-gltx-content">
+					<ul>
+						<li>
+							<a href="">
+								<i class="icon icon-cl-1"></i>
+								<span>进场材料管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="icon icon-cl-2"></i>
+								<span>原材料使用情况</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="icon icon-cl-3"></i>
+								<span>原材料检验结果</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="icon icon-cl-4"></i>
+								<span>原材料检验频率</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="icon icon-cl-5"></i>
+								<span>原材料汇总统计</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--统计-->
+	<div class="pop-tj-wrap pop-wrap" style="display: none;">
+		<div class="pop-mask" onclick="$(this).parent().hide()"></div>
+		<div class="pop-content-box">
+			<div class="pop-title">
+				<a class="btn-x" onclick="$('.pop-wrap').hide()">
+					×
+				</a>
+				<h2>统计</h2>
+			</div>
+			<div class="pop-content">
+				<div class="pop-gltx-content">
+					<ul>
+						<li>
+							<a href="">
+								<i class="icon icon-tj-1"></i>
+								<span>数据整理</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="icon icon-tj-2"></i>
+								<span>质量数据统计分析</span>
+							</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!------------------工人管理------------------------------->
+
+
+	<!--在册工人数-->
+	<div class="pop-zcrgs-wrap pop-wrap" style="display: none;">
+		<div class="pop-mask" onclick="$(this).parent().hide()"></div>
+		<div class="pop-content-box">
+			<div class="pop-title">
+				<a class="btn-x" onclick="$('.pop-wrap').hide()">
+					×
+				</a>
+				<h2>在册工人数</h2>
+				<div class="search-box">
+					<input type="text" class="input" placeholder="搜索您需要的名字">
+					<a class="btn-so">search</a>
+				</div>
+			</div>
+			<div class="pop-content pop-gr-content">
+				<div class="">
+					<div class="hd">
+						<div class="col1">姓名</div>
+						<div class="col2">性别</div>
+						<div class="col3">所属单位</div>
+						<div class="col4">工种</div>
+					</div>
+					<div class="bd">
+						<ul>
+							<li>
+								<div class="col1 btn-pop-user" data-user-url="员工信息.html">孔琼文</div>
+								<div class="col2">男</div>
+								<div class="col3"><p>四川港航建设工程有限公司</p></div>
+								<div class="col4">水电工</div>
+							</li>
+							<li>
+								<div class="col1 btn-pop-user" data-user-url="员工信息.html">冯柏宇</div>
+								<div class="col2">男</div>
+								<div class="col3"><p>四川港航建设工程有限公司</p></div>
+								<div class="col4">水电工</div>
+							</li>
+							<li>
+								<div class="col1 btn-pop-user" data-user-url="员工信息.html">钟士杰</div>
+								<div class="col2">男</div>
+								<div class="col3"><p>四川港航建设工程有限公司</p></div>
+								<div class="col4">水电工</div>
+							</li>
+							<li>
+								<div class="col1 btn-pop-user" data-user-url="员工信息.html">严俊良</div>
+								<div class="col2">男</div>
+								<div class="col3"><p>四川港航建设工程有限公司</p></div>
+								<div class="col4">水电工</div>
+							</li>
+							<li>
+								<div class="col1 btn-pop-user" data-user-url="员工信息.html">石文杰</div>
+								<div class="col2">男</div>
+								<div class="col3"><p>四川港航建设工程有限公司</p></div>
+								<div class="col4">水电工</div>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--监控视频-->
+	<div class="pop-jksp-wrap pop-wrap" style="display: none;">
+		<div class="pop-mask" onclick="$(this).parent().hide()"></div>
+		<div class="pop-content-box">
+			<div class="pop-title">
+				<a class="btn-x" onclick="$('.pop-wrap').hide()">
+					×
+				</a>
+				<h2>监控视频</h2>
+			</div>
+			<div class="pop-content pop-jksp-content">
+				<video id="video" src="http://btstatics.888ppt.com/Upload/pre/2020/09/841b13e73b034568.mp4" controls="controls">
+					your browser does not support the video tag
+				</video>
+			</div>
+		</div>
+	</div>
+
+	<!--员工信息弹出框-->
+	<div class="pop-ygxx-wrap pop-wrap" style="display: none;">
+		<div class="pop-mask" onclick="$(this).parent().hide()"></div>
+		<div class="pop-content-box">
+			<div class="pop-title">
+				<a class="btn-x" onclick="$('.pop-wrap').hide()">
+					×
+				</a>
+				<h2>详细信息</h2>
+			</div>
+			<div class="pop-content pop-ygxx-content">
+				<iframe src="员工信息.html" frameborder="0"></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--视频监控-->
+<script type="text/javascript">
+	$(document).on("click",".btn-play",function(){
+		document.getElementById("video").pause()
+		$("#video").attr("src",$(this).attr("data-video-url"))
+		$(".pop-jksp-wrap").show()
+	})
+</script>
+
+<!--查看员工信息-->
+<script type="text/javascript">
+	$(document).on("click",".btn-pop-user",function(){
+		$(".pop-wrap").hide()
+		$(".pop-ygxx-wrap").show()
+	})
+</script>
+
+
+
+
+
+
+
+
+
+<!--背景线条-->
+<script type="text/javascript" src="js/particles.min.js"></script>
+<!--工人管理-->
+<script type="text/javascript">
+	//		工人管理
+	(function($){
+		var dom = document.getElementById("chart");
+		var myChart = echarts.init(dom);
+		var app = {};
+		option = null;
+		option = {
+			color:["#BBBBBB","#FF7E00","#FB497C","#5583FF","#3EE19A","#50CFFF","#FFC760","#D13E3E","#D13E3E","#90AEFF"],
+//  tooltip: {
+//      trigger: 'item',
+//      formatter: '{a} <br/>{b}: {c} ({d}%)'
+//  },
+			legend: {
+				orient: 'vertical',
+				left: 10,
+				top:"center",
+				itemGap:10,
+				textStyle:{
+					color:"#fff",
+					borderRadius:0
+				},
+			},
+			series: [
+				{
+					name: '工人管理',
+					type: 'pie',
+					radius: ['35%', '45%'],
+					center: ['60%', '50%'],
+					avoidLabelOverlap: false,
+					hoverOffset:5,
+					label: {
+						show: true,
+//              position: 'center',
+						formatter: '{b}\n{c}人'
+					},
+					labelLine:{
+						length:15,
+						length2:10
+					},
+					emphasis: {
+						label: {
+							show: true,
+							position: 'inside',
+							fontSize: '15',
+							fontWeight: '100',
+							rotate:90
+						}
+					},
+
+					data: [
+						{value: 335, name: '杂工'},
+						{value: 310, name: '管理人员'},
+						{value: 234, name: '木工'},
+						{value: 135, name: '其他'},
+						{value: 158,name: '焊工'},
+						{value: 310, name: '钢筋工'},
+						{value: 234, name: '水电工'},
+						{value: 135, name: '水泥工'},
+						{value: 548, name: '架子工'}
+					]
+				}
+			]
+
+		};;
+		if (option && typeof option === "object") {
+			myChart.setOption(option, true);
+		}
+
+	})(jQuery);
+</script>
+<!--项目进度-->
+<script type="text/javascript">
+	//项目进度 https://www.jq22.com/yanshi4495
+	var radialObj1=$('#indicatorContainer1').radialIndicator({
+		barColor: {
+			0: '#52C92D',
+			40: '#52C92D',
+			60: '#F49B02',
+			70: '#3F89FF',
+			100: '#3F89FF'
+		},
+		initValue:"0",
+		percentage: true
+	}).data('radialIndicator')
+	var radialObj2=$('#indicatorContainer2').radialIndicator({
+		barColor: {
+			0: '#52C92D',
+			40: '#52C92D',
+			60: '#F49B02',
+			70: '#3F89FF',
+			100: '#3F89FF'
+		},
+		initValue:"0",
+		percentage: true
+	}).data('radialIndicator')
+	var radialObj3=$('#indicatorContainer3').radialIndicator({
+		barColor: {
+			0: '#52C92D',
+			40: '#52C92D',
+			60: '#F49B02',
+			70: '#3F89FF',
+			100: '#3F89FF'
+		},
+		initValue:"0",
+		percentage: true
+	}).data('radialIndicator')
+	radialObj1.animate(73)
+	radialObj2.animate(55)
+	radialObj3.animate(37)
+</script>
+
+
+<!--分布图-->
+<script type="text/javascript">
+	//		随机数
+	function getRandomNumberByRange(start, end) {
+		return Math.floor(Math.random() * (end - start) + start)
+	}
+	$(document).on("click",".box-map .item",function(){
+		$("#demoId").text($(this).text())
+		//模拟项目进度
+		radialObj1.animate(getRandomNumberByRange(60,100))
+		radialObj2.animate(getRandomNumberByRange(40,60))
+		radialObj3.animate(getRandomNumberByRange(20,40))
+
+	})
+</script>
+
+
+
+
+
+
+
+
+<!--等比例缩放-->
+<script type="text/javascript">
+
+	auto ()
+	window.onresize=function () {
+		auto ()
+	}
+	function auto () {
+		var ww=$(window).width();
+		var hh=$(window).height();
+		var wBi=ww/2414;
+		var hBi=hh/1080;
+		$("body").height(hh).width(ww)
+		//$("#wrap").addClass("auto")
+		if (wBi>hBi) {
+//				console.log("宽大于高")
+			$("#wrap").css("transform","scale("+ hBi +", "+ hBi +") translate(-50%, -50%)")
+			$("body").removeClass("full-x")
+		} else{
+//				console.log("宽小于高")
+			$("body").addClass("full-x")
+			$("#wrap").css("transform","scale("+ wBi +", "+ wBi +") translate(-50%, -50%)")
+		}
+	}
+
+</script>
+
+
+
+
+</body></html>

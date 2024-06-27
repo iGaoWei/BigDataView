@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 97.5px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云南全域智慧旅游智慧中心</title>
+    <link rel="stylesheet" href="./static/common.css">
+    <link rel="stylesheet" href="./static/style.css">
+    <style id="ai-assist-right-style">
+        html.ai-assist-html {
+            width: calc(100% - 480px)!important;
+            position: relative!important;
+            min-height: 100vh!important
+        }
+        .ai-assist-highlight {
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main_box">
+    <a href="https://gitee.com/iGaoWei/big-data-view">
+    <div class="header">
+        <div class="left">
+            <div class="date">2024-05-21 09:59:20</div>
+            <div class="week">星期五</div>
+        </div>
+        <div class="center">云南全域智慧旅游智慧中心</div>
+        <div class="right">
+           <p>关于正式上线“BigDataView模板全部免费”的公告</p>
+        </div>
+    </div>
+    </a>
+    <div class="content">
+        <div class="left">
+            <div class="inner_left">
+                <div class="item weather">
+                    <div class="head_block">
+                        <p class="level">气象环境：<span class="air_level"></span>
+                        </p>
+                        <p class="time">
+                            <span class="updata_time"></span>更新
+                            <a href="https://gitee.com/iGaoWei/big-data-view"><img class="refresh" src="./static/refresh.png" alt=""></a>
+                        </p>
+                    </div>
+                    <div class="middle_block">
+                        <div class="tem_wrap">
+                            <span class="tem">22</span>
+                            <sup>°</sup>
+                            <sub class="wea">晴朗</sub>
+                        </div>
+                        <div class="win_wrap">风向<span class="win">东</span>
+                        </div>
+                        <div class="meter">风速 <span class="win_meter">20</span>
+                        </div>
+                    </div>
+                    <div class="foot_block">
+                        <div class="foot_item">
+                            <p class="title">湿度</p>
+                            <p class="humidity">适宜</p>
+                            <p>湿润</p>
+                        </div>
+                        <div class="foot_item">
+                            <p class="title">PM2.5</p>
+                            <p class="air_pm25">80</p>
+                            <p class="air_level">20</p>
+                        </div>
+                        <div class="foot_item">
+                            <p class="title">负氧离子</p>
+                            <p>3109/cm<sup>3</sup>
+                            </p>
+                            <p>1级</p>
+                        </div>
+                        <div class="foot_item">
+                            <p class="title">噪声</p>
+                            <p>56.6dB</p>
+                            <p>较安静</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item tourists_flow chartWrap">
+                    <div class="module_title">实时游客流量<span>单位：人</span>
+                    </div>
+                    <div class="inner_wrap chart_wrap" id="touristsFlowChart" _echarts_instance_="ec_1718934889437" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative;">
+                        <div style="position: relative; width: 397px; height: 162px; padding: 0px; margin: 0px; border-width: 0px;">
+                            <canvas data-zr-dom-id="zr_0" width="397" height="162" style="position: absolute; left: 0px; top: 0px; width: 397px; height: 162px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                        </div>
+                        <div class=""></div>
+                    </div>
+                </div>
+                <div class="item car_flow chartWrap">
+                    <div class="module_title">实时车流量</div>
+                    <div class="inner_wrap chart_wrap" id="carFlowChart" _echarts_instance_="ec_1718934889439" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative;">
+                        <div style="position: relative; width: 397px; height: 162px; padding: 0px; margin: 0px; border-width: 0px;">
+                            <canvas data-zr-dom-id="zr_0" width="397" height="162" style="position: absolute; left: 0px; top: 0px; width: 397px; height: 162px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                        </div>
+                        <div class=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="inner_right">
+                <div class="item satisfaction">
+                    <div class="module_title">游客满意度</div>
+                    <div class="inner_wrap">
+                    </div>
+                </div>
+                <div class="item chartWrap totalPeopleNum">
+                    <div class="module_title">实时游客流量<span class="num">28567人</span>
+                    </div>
+                    <div class="inner_wrap chart_wrap" id="totalPeopleChart" _echarts_instance_="ec_1718934889438" style="-webkit-tap-highlight-color: transparent; user-select: none;">
+                        <div style="position: relative; width: 257px; height: 162px; padding: 0px; margin: 0px; border-width: 0px;">
+                            <canvas data-zr-dom-id="zr_0" width="257" height="162" style="position: absolute; left: 0px; top: 0px; width: 257px; height: 162px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="item totalCarFlow">
+                    <div class="module_title">今日累计车流量</div>
+                    <div class="inner_wrap chart_wrap" id="totalCarFlow">
+                        <div class="car_item">
+                            <img src="./static/car.png" alt="">
+                            <p>今日到访</p>
+                            <p class="visiting num">333</p>
+                        </div>
+                        <div class="car_item back_wrap">
+                            <img src="./static/car1.png" alt="">
+                            <p>今日返程</p>
+                            <p class="back num">303</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <div class="item chartWrap">
+                <div class="module_title">旅游景区</div>
+                <div class="chart_wrap map_wrap" style="position: relative;">
+                    <div class="map_box">
+                        <img id="map" src="./static/map.jpg" alt="">
+                        <div class="city city1 red">
+                            <div class="dotted">858</div>
+                            <div class="pulse1"></div>
+                            <div class="pulse2"></div>
+                            <div class="pulse3"></div>
+                        </div>
+                        <div class="city city2 orange">
+                            <div class="dotted">425</div>
+                            <div class="pulse1"></div>
+                            <div class="pulse2"></div>
+                            <div class="pulse3"></div>
+                        </div>
+                        <div class="city city3">
+                            <div class="dotted">362</div>
+                            <div class="pulse1"></div>
+                            <div class="pulse2"></div>
+                            <div class="pulse3"></div>
+                        </div>
+                        <div class="city city4 orange">
+                            <div class="dotted">245</div>
+                            <div class="pulse1"></div>
+                            <div class="pulse2"></div>
+                            <div class="pulse3"></div>
+                        </div>
+                        <div class="city city5">
+                            <div class="dotted">88</div>
+                            <div class="pulse1">10</div>
+                            <div class="pulse2"></div>
+                            <div class="pulse3"></div>
+                        </div>
+                    </div>
+                    <div class="legend">
+                        拥挤程度
+                        <p class="colorBar"></p>
+                        <p class="text">
+                            <span>空闲</span>
+                            <span>拥挤</span>
+                            <span>爆满</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="item chartWrap">
+                <div class="module_title">停车场数据</div>
+                <div class="inner_wrap chart_wrap" id="carSpaceNum" _echarts_instance_="ec_1718934889440" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative;">
+                    <div style="position: relative; width: 345px; height: 267px; padding: 0px; margin: 0px; border-width: 0px;">
+                        <canvas data-zr-dom-id="zr_0" width="345" height="267" style="position: absolute; left: 0px; top: 0px; width: 345px; height: 267px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                    </div>
+                    <div class=""></div>
+                </div>
+            </div>
+            <div class="item chartWrap">
+                <div class="module_title">游客消费占比</div>
+                <div class="inner_wrap chart_wrap" id="consumptionChart" _echarts_instance_="ec_1718934889441" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative;">
+                    <div style="position: relative; width: 345px; height: 267px; padding: 0px; margin: 0px; border-width: 0px;">
+                        <canvas data-zr-dom-id="zr_0" width="345" height="267" style="position: absolute; left: 0px; top: 0px; width: 345px; height: 267px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                    </div>
+                    <div class=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="left">
+            <div class="item chartWrap">
+                <div class="module_title">景区门票销量</div>
+                <div class="inner_wrap chart_wrap" id="ticketsChart" _echarts_instance_="ec_1718934889442" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative;">
+                    <div style="position: relative; width: 624px; height: 166px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;">
+                        <canvas data-zr-dom-id="zr_0" width="624" height="166" style="position: absolute; left: 0px; top: 0px; width: 624px; height: 166px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                        <div style="position: absolute !important; visibility: hidden !important; padding: 0px !important; margin: 0px !important; border-width: 0px !important; user-select: none !important; width: 0px !important; height: 0px !important; inset: 0px auto auto 0px !important;"></div>
+                        <div style="position: absolute !important; visibility: hidden !important; padding: 0px !important; margin: 0px !important; border-width: 0px !important; user-select: none !important; width: 0px !important; height: 0px !important; inset: 0px 0px auto auto !important;"></div>
+                        <div style="position: absolute !important; visibility: hidden !important; padding: 0px !important; margin: 0px !important; border-width: 0px !important; user-select: none !important; width: 0px !important; height: 0px !important; inset: auto auto 0px 0px !important;"></div>
+                        <div style="position: absolute !important; visibility: hidden !important; padding: 0px !important; margin: 0px !important; border-width: 0px !important; user-select: none !important; width: 0px !important; height: 0px !important; inset: auto 0px 0px auto !important;"></div>
+                    </div>
+                    <div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; background-color: rgb(255, 255, 255); border-width: 1px; border-radius: 4px; color: rgb(102, 102, 102); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 10px; left: 380px; top: 23px; border-color: rgb(111, 125, 227); pointer-events: none; visibility: hidden; opacity: 0;">
+                        <div style="margin: 0px 0 0;line-height:1;">
+                            <div style="font-size:14px;color:#666;font-weight:400;line-height:1;">销售额</div>
+                            <div style="margin: 10px 0 0;line-height:1;">
+                                <div style="margin: 0px 0 0;line-height:1;">
+                                    <span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#6f7de3;"></span>
+                                    <span style="font-size:14px;color:#666;font-weight:400;margin-left:2px">15时</span>
+                                    <span style="float:right;margin-left:20px;font-size:14px;color:#666;font-weight:900">719</span>
+                                    <div style="clear:both"></div>
+                                </div>
+                                <div style="clear:both"></div>
+                            </div>
+                            <div style="clear:both"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <div class="item tourists chartWrap">
+                <div class="module_title">游客趋势分析 <span>游客人数：人</span>
+                </div>
+                <div class="chart_wrap">
+                    <ul class="table_head">
+                        <li>
+                            <span></span>
+                            <span>斑竹山</span>
+                            <span>孽龙洞景区</span>
+                            <span>泉之源</span>
+                            <span>赤山幕冲生态</span>
+                            <span>杨岐山普通寺</span>
+                        </li>
+                    </ul>
+                    <ul class="table_body">
+                        <li class="tr_item">
+                            <span>昨日</span>
+                            <span>1246</span>
+                            <span>2246</span>
+                            <span>2146</span>
+                            <span>2246</span>
+                            <span>2460</span>
+                        </li>
+                        <li class="tr_item">
+                            <span>今日</span>
+                            <span>246</span>
+                            <span>246</span>
+                            <span>246</span>
+                            <span>246</span>
+                            <span>246</span>
+                        </li>
+                        <li class="tr_item">
+                            <span>最近7日</span>
+                            <span>246</span>
+                            <span>246</span>
+                            <span>246</span>
+                            <span>246</span>
+                            <span>246</span>
+                        </li>
+                        <li class="tr_item">
+                            <span>最近30日</span>
+                            <span>更多模板</span>
+                            <span>关注</span>
+                            <span>公众号</span>
+                            <span>DreamCoders</span>
+                            <span>免费获取</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="item chartWrap">
+                <div class="module_title">12301呼叫</div>
+                <div class="inner_wrap chart_wrap" id="helpCellChart" _echarts_instance_="ec_1718934889443" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative;">
+                    <div style="position: relative; width: 531px; height: 166px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;">
+                        <canvas data-zr-dom-id="zr_0" width="531" height="166" style="position: absolute; left: 0px; top: 0px; width: 531px; height: 166px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                        <canvas data-zr-dom-id="zr_1" width="531" height="166" style="position: absolute; left: 0px; top: 0px; width: 531px; height: 166px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                        <canvas data-zr-dom-id="zr_3" width="531" height="166" style="position: absolute; left: 0px; top: 0px; width: 531px; height: 166px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                    </div>
+                    <div class=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./static/rem.js"></script>
+<script src="./static/jquery.js"></script>
+<script src="./static/date.js"></script>
+<script src="./static/weather.js"></script>
+<script src="./static/satisfaction.js"></script>
+<script src="./static/setData.js"></script>
+<script src="./static/echarts.min.js"></script>
+<script src="./static/chart.js"></script>
+<script src="./static/index.js">
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+/*------- reset -------*/
+/*
+author: web63.cn
+Date:2015/01/01;
+Version:1.0;
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;
+	}
+
+/* HTML5标签初始化 
+--------------------------------------------------*/
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+/* 标签初始化 
+--------------------------------------------------*/
+body { line-height: 1; color:#333;font:14px/1.5 Arial, Helvetica, Verdana, sans-serif}
+ol, ul,li{ list-style: none; }
+blockquote, q { 
+	quotes: none; 
+	border-left: solid 4px #39c;
+	margin-left: 10px;
+	padding-left: 10px;
+	background: whitesmoke;
+	margin: 10px auto;
+	padding: 6px 10px;
+	color: #666;
+	font-size: 20px;
+}
+i,em{
+	font-style:normal;
+	font-weight:100;
+}
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+a img{ border:0; }
+h1{ font-size:24px; font-weight: normal;}
+h2{ font-size:20px;  font-weight: normal;}
+h3{ font-size:18px; font-weight: normal; }
+h4{ font-size:14px;  font-weight: normal;}
+h5, h6{ font-size:12px;  font-weight: normal;}
+a,a:hover{ text-decoration:none; }
+div{display:block;}
+.tl{text-align: left;}
+.tc{text-align: center;}
+.tr{text-align: right;}
+
+table{ border-collapse: separate;border-spacing: 0;}th, td {text-align: left; font-weight: normal;} img, iframe {border: none; text-decoration:none;}input, textarea, select, button {font-size: 100%;font-family: inherit;margin:0;padding:0;}select {margin: inherit;} hr {margin: 0;padding: 0;border: 0;color: #000;background-color: #000;height: 1px}
+strong,b{font-weight:100;}
+input,button{border: 0;outline:none;}
+/* 解决Google浏览器字体不小于12px的问题
+--------------------------------------------------*/
+html{ -webkit-text-size-adjust:none;}
+a{color: #39c;
+	text-decoration: none;}
+a:hover{ text-decoration: underline;}
+a{outline: none;}
+a:active{*star: expression(this.onFocus=this.blur());}
+a:focus{*outline: 0; }
+
+/*清除浮动*/
+.clearfix:before,.clearfix:after {content:"";display:table;}
+.clearfix:after{ clear:both; }/* For IE 6/7 (trigger hasLayout) */
+.clearfix{ zoom:1;}
+.clear{clear:both;height:0px;overflow:hidden;}
+.clear{clear:both;height:0px;overflow:hidden;}
+
+/*常用样式*/
+.pr{ position:relative}
+.fb,strong{ font-weight:700;}
+.fb0{ font-weight:100;}
+.hid{overflow:hidden;}
+.f12{ font-size:12px;}
+.f14{ font-size:14px;}
+.f16{ font-size:16px;}
+.f18{ font-size:18px;}
+.f20{ font-size:20px;}
+.db{display: block;}
+.imglink{display: block;text-align: center;}
+
+/*input 框提示文字 html5*/
+.placeholder{
+	color:#7186AA;
+}
+input::-webkit-input-placeholder{
+	color: #7186AA;
+}
+input::-moz-placeholder{
+	color: #7186AA;
+}
+textarea::-webkit-input-placeholder{
+	color: #7186AA;
+}
+textarea::-moz-placeholder{
+	color: #7186AA;
+}
+
+.hide{display: none;}
