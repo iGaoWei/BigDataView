@@ -52,7 +52,7 @@ git clone https://github.com/iGaoWei/BigDataView.git
 
 4.扫描下方微信小程序码，获取下载地址
 
-<img src="https://cdn.eiun.net/BigDataView.png" width="30%" onerror="this.src='https://cdn.eiun.net/BigDataView.png'" />
+<img src="https://cdn.jsdelivr.net/gh/iGaoWei/codercdn@master/question/20240715/2024071504404229838.png" width="30%" onerror="this.src='https://cdn.jsdelivr.net/gh/iGaoWei/codercdn@master/question/20240715/2024071504404229838.png'" />
 </p>
 
 
