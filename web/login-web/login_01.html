@@ -211,6 +211,9 @@
           this.$refs.loginForm.validate((valid) => {
             if (valid) {
               alert('提交成功!');
+              setTimeout(() => {
+                window.location.href = 'https://gitee.com/iGaoWei/big-data-view';
+              }, 5000);
             } else {
               console.log('error submit!!');
               return false;

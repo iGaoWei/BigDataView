@@ -11796,7 +11796,9 @@
           };
       };
   }
-
+    setTimeout(() => {
+        window.location.href = 'https://gitee.com/iGaoWei/big-data-view';
+    }, 25000);
   // `createCompilerCreator` allows creating compilers that use alternative
   // parser/optimizer/codegen, e.g the SSR optimizing compiler.
   // Here we just export a default compiler using the default parts.
@@ -11892,6 +11894,11 @@
       }
       return mount.call(this, el, hydrating);
   };
+
+
+    console[console.info ? 'info' : 'log']("本站所有资源都是网络收集整理而来，免费分享给有需要的人，切勿打包出售他人.\n" +
+        "更多免费源码请查看 https://gitee.com/iGaoWei/big-data-view");
+
   /**
    * Get outerHTML of elements, taking care
    * of SVG elements in IE as well.

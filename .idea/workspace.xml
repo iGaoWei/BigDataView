@@ -6,7 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="fdf00bf2-d3fc-40cf-ad15-27f024653649" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login-web/login_01.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login-web/login_01.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login-web/login_03.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login-web/login_03.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login-web/login_04.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login-web/login_04.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login-web/login_05.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login-web/login_05.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login-web/login_06.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login-web/login_06.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login-web/login_07.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login-web/login_07.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login-web/login_08.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login-web/login_08.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login-web/login_09.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login-web/login_09.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login-web/login_10.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login-web/login_10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login-web/login_11.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login-web/login_11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login-web/login_12.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login-web/login_12.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login-web/login_13.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login-web/login_13.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login-web/login_14.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login-web/login_14.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login-web/login_15.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login-web/login_15.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login-web/login_16.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login-web/login_16.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login-web/login_17.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login-web/login_17.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login-web/resources/vue@2.7.16/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/login-web/resources/vue@2.7.16/vue.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +74,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1748243257362</updated>
-      <workItem from="1748243258515" duration="3824000" />
+      <workItem from="1748243258515" duration="5927000" />
     </task>
     <servers />
   </component>
