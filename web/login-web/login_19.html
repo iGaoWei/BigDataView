@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" data-dpr="1" style="font-size: 191.2px;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <link rel="icon" type="image/svg+xml" href="assets/science.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>炫酷登录页面19</title>
+
+  <!-- 引入wow.js和animate.css：注意一定要引入3.3.1版本，因为4.1.1版本有问题（引入后没有任何动画效果）-->
+  <link rel="stylesheet" href="resources/animate@3.3.1/animate.min.css" />
+  <script src="resources/wow@1.1.2/wow.min.js"></script>
+
+  <!-- 引入vue和element  -->
+  <link rel="stylesheet" href="resources/element-ui@2.15.14/theme-chalk/index.css">
+  <script src="resources/vue@2.7.16/vue.js"></script>
+  <script src="resources/element-ui@2.15.14/index.js"></script>
+
+  <!-- 忘记密码 -->
+  <link rel="stylesheet" href="resources/rememberPwd.css" />
+
+  <style type="text/css">
+    body {
+      background-size: 100% 100%;
+      height: 100vh;
+      margin: 0;
+    }
+    .pageBg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background: url(assets/login_19/bg-8463fb15.jpg) no-repeat;
+      background-size: 100% 100%;
+      z-index: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .pageBg .leftImg {
+      background: url(assets/login_19/left-75ccabb7.png) no-repeat;
+      background-size: 100% 100%;
+      width: 2.56771rem;
+      height: 1.88542rem;
+      position: relative;
+      left: 5%;
+      animation: flyMove 2s ease-in 0s infinite alternate;
+    }
+
+    .pageBg .rightImg {
+      background: url(assets/login_19/right-1da43dc5.png) no-repeat;
+      background-size: 100% 100%;
+      width: 2.65104rem;
+      height: 1.91667rem;
+      right: 5%;
+      animation: flyMove 2s ease-in 0s infinite alternate;
+    }
+
+    .gridView {
+      position: absolute;
+      background: url(assets/login_19/bg-fd337dda.png);
+      background-size: 100% 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      right: 0;
+      z-index: 0;
+      pointer-events: none
+    }
+
+    .loginMain {
+      position: relative;
+      width: 2.90104rem;
+      height: 2.23438rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .loginMain input {
+      background: none;
+      width: calc(100% - .0625rem);
+      outline: none;
+      border: none;
+      position: relative;
+      height: calc(100% - .01563rem);
+      color: #fff;
+      margin-left: .0625rem
+    }
+
+    .loginMain input::-moz-placeholder {
+      color: #7eafec
+    }
+
+    .loginMain input::placeholder {
+      color: #7eafec
+    }
+
+    .loginMain input::-webkit-input-placeholder {
+      color: #7eafec
+    }
+
+    .loginMain input:-ms-input-placeholder {
+      color: #7eafec
+    }
+
+    h4 {
+      font-size: .11458rem;
+      font-family: MicrosoftYaHei;
+      font-weight: 700;
+      color: #55a5f8;
+      opacity: .7;
+      text-shadow: 0px .02604rem .04167rem rgba(0, 0, 0, .29);
+      background: linear-gradient(0deg, #55A5F8 0%, #B0D7FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent
+    }
+
+    .loginMainInner {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start;
+      width: 100%;
+      position: relative;
+      height: 100%
+    }
+
+    .loginMainInner .loginMainInnerTitle {
+      font-size: .11458rem;
+      font-family: MicrosoftYaHei;
+      font-weight: 700;
+      opacity: .7;
+      padding-top: .21875rem;
+      background: linear-gradient(0deg, #55A5F8 0%, #B0D7FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent
+    }
+
+    .form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start;
+      margin-top: .20833rem
+    }
+
+    .form .formItem {
+      width: 2.02083rem;
+      height: .20833rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      background: url(data:image/png;base64,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);
+      background-size: 100% 100%;
+      margin-bottom: .10417rem
+    }
+
+    .form .formItem .formItem1 {
+      width: .52083rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+      height: 100%
+    }
+
+    .form .formItem .formItem1 img {
+      height: .0625rem;
+      margin-right: .05208rem
+    }
+
+    .form .formItem .formItem1 span {
+      font-size: .07292rem;
+      font-family: MicrosoftYaHei;
+      font-weight: 400;
+      color: #fff;
+      margin-right: .05208rem
+    }
+
+    .form .formItem .line {
+      width: 1px;
+      height: .07292rem;
+      background: #55A5F8
+    }
+
+    .form .formItem .formItem2 {
+      width: 100%;
+      position: relative;
+      height: 100%
+    }
+
+    .form .loginBut {
+      background: url(data:image/png;base64,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);
+      width: 1.51042rem;
+      height: .22396rem;
+      background-size: 100% 100%;
+      cursor: pointer
+    }
+
+    .form .formItemCode {
+      width: 1.51042rem;
+      height: .22396rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .form .formItemCode .formItemCodel {
+      background: url(data:image/png;base64,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);
+      width: 1.07813rem;
+      height: .20833rem;
+      background-size: 100% 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .form .formItemCode .formItemCodel input {
+      width: 80%
+    }
+
+    .form .formItemCode .formItemCoder {
+      background: url(assets/login_19/codeImgr-f0dd3786.png);
+      width: .53646rem;
+      height: .20833rem;
+      background-size: 100% 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .form .rememberPasswordBody {
+      width: 1.51042rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      margin-bottom: .10417rem
+    }
+
+    .login29 .el-checkbox.is-checked .el-checkbox__input.is-checked .el-checkbox__inner,
+    .login29 .el-checkbox.is-checked .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+      background-color: #4899ef !important;
+      border-color: #4899ef !important
+    }
+
+    .login29 .el-checkbox__label {
+      font-size: .09375rem;
+      font-family: Source Han Sans CN;
+      font-weight: 400;
+      color: #4899ef !important
+    }
+
+    .loginPage {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start;
+      z-index: 1
+    }
+
+    .loginPage .login {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start
+    }
+
+    .loginPage .login .loginTitle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start;
+      margin-bottom: .15625rem
+    }
+
+    .loginPage .login .loginTitle h3 {
+      font-size: .1875rem;
+      font-family: AlimamaShuHeiTi;
+      font-weight: 700;
+      color: #e9e8ea;
+      background: linear-gradient(0deg, #55A5F8 0%, #B0D7FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0
+    }
+
+    .loginPage .login .loginTitle span {
+      font-size: .07292rem;
+      font-family: MicrosoftYaHei;
+      font-weight: 400;
+      color: #7eafec;
+      opacity: .7;
+      text-transform: uppercase
+    }
+
+    @keyframes flyMove {
+      from {
+        transform: translateY(15px)
+      }
+
+      to {
+        transform: translateY(0)
+      }
+    }
+  </style>
+</head>
+
+<body style="font-size: 12px;" inmaintabuse="1">
+  <div id="app">
+    <div class="body">
+      <div class="loginPage" id="home">
+        <div class="pageBg">
+          <div class="leftImg" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, -9.2602px, 0px);"></div>
+          <div class="rightImg" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, -9.2602px, 0px);"></div>
+        </div>
+        <div class="login">
+          <div class="loginTitle">
+            <h3 class="wow fadeInUp">监测系统登录
+            </h3><span data-wow-delay="0.2s" class="wow fadeInUp">welcome to the system</span>
+          </div>
+          <div class="loginMain login29 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="gridView"></div>
+            <div class="loginMainInner">
+              <div data-wow-delay="1s" data-wow-duration="1s" class="loginMainInnerTitle  wow flipInX">系统登录
+              </div>
+              <div class="form">
+                <div class="formItem  wow flipInX" data-wow-delay="1s" data-wow-duration="1s">
+                  <div class="formItem1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAMCAYAAAC0qUeeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJtJREFUeNpi+P//PwMSdgTi3UD8EEq7I8sjK7T9jx3YYVO8H4fiwzA1TAwIwMOAHSDEkUyOwmFyDDZngHAiEF8D4q9AfB2IM5DlGcE6UAEzEMsD8SMg/oMswQKlJYG4BohtoAq+AjE3VP4YELcA8VOQ8fJA/O4/fvABiJVAivf+Jw4cArn5PwORAOSmMiBOBGJRPOreAPE8gAADALWQIjhc+hDcAAAAAElFTkSuQmCC" alt=""><span>账户</span></div>
+                  <div class="line"></div>
+                  <div class="formItem2"><input type="text" placeholder="请输入用户名"></div>
+                </div>
+                <div class="formItem  wow flipInX" data-wow-delay="1.2s" data-wow-duration="1s">
+                  <div class="formItem1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAMCAYAAABbayygAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAL9JREFUeNqE0LEOwVAUxvGrrUEsjaSzySrhBWxWb2C0SieDxav0FTyHQTexmYQaatXE9T+ccsTgJL+k+frdk9zrvPdOhVj7z+To1v+dKeZamGOGI26IbXGqpcQcdJpl8h241wywQ+G+J0NfPiLEWuxggRCyoMIQbSSyfuP/z1aKdxNUSDHB3uZSvJjgYC6SmryQoDCBPMdIi3bjOdAL1dPEGC30TB41/PM1f6bSQ++RjUuccEWJu5ZKzc5YPQQYAGP7D6obEcDVAAAAAElFTkSuQmCC" alt=""><span>密码</span></div>
+                  <div class="line"></div>
+                  <div class="formItem2"><input type="password" placeholder="请输入密码"></div>
+                </div>
+                <div class="formItemCode  wow flipInX" data-wow-delay="1.4s" data-wow-duration="1s">
+                  <div class="formItemCodel"><input type="text" placeholder="请输入验证码"></div>
+                  <div class="formItemCoder"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAXCAYAAACmnHcKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAmpJREFUeNrUVyF0gzAQBR4KXbkNW+zQzFKNrma2s5vu9HR1ZzvbajSzzHabGxrL7vou3TVNArS8tb338gKES3L3/90ldv5Vjy3LiiyzlLdX1pN15uL+52K2bW96cCA6bwRtQEMFtFV4bWNv1XWt04uhC6H5NFRBW4LeCl+clvv46csgYsKYGYISQJvAWGjQe4QuYYagePgNxtINMmDVHPq5QjmiRVFWPRkSNFAaN5trxnyDXghz+65mUY8mRskQfhn6A4V7fiHoQZ7FsQGhozJoh1K4eehShvDQMXjIo+dlj2GzpZbYlDCsBQJTrgPPa4q1rTgKVAaMCohK2aMxFVsnZt/vpDjYh1S9jxv2/KGi2Yg9L3tOaGtGNQzc5MhEIlAsECnHgEreMyobpLFmab63NQLjasL2WYoE5hoCNNfVCRaAkZSd0AEzXbKAsQr0phSTEVsnY+9VQzZMGRUxZmY4r8oYwd0KfsgbJp00ZCutQeTJuUQZTkXVmj5bs6JsmCkTAP3MK7IWZo0hbWmS0hziPZFQKTSlImW0msqGyMgMm7yjSBD43ysGn1SbmmoNFjnVGNaRSkHTgDka+6lCf+Fq8vunoZhyL74IvjL6HCqFVHvaVv8/ZJgXZnxAE8SBlLYDcS4ilN7EYdEgC0LXY3qZijZNtWcvQXU5prx/WzGjEnoxVvz2DNeF9SmuAM4RuroDY3yq+8wxxqD3H4Ae9xg7Xfl9DsaUUoEUwV+wDOhdijE8FiJRL+jY7vd9ket8k+2SAPA4Q+eiwJStIAGsLiVm5obzk6lWnB8y7EiTsLPYzi2wp1tpZ/kVYABoOhI7g734pwAAAABJRU5ErkJggg==" alt=""></div>
+                </div>
+                <div class="rememberPasswordBody  wow flipInX" data-wow-delay="1.6s" data-wow-duration="1s">
+                  <div class="rememberPwd"><el-checkbox>记住密码</el-checkbox></div>
+                </div>
+                <div class="loginBut  wow flipInX" data-wow-delay="1.8s" data-wow-duration="1s"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // 初始化vue
+    new Vue({
+      el: '#app',
+      data: {},
+      methods: {},
+      mounted() {
+        // 初始化WOW.js
+        new WOW().init();
+      }
+    });
+  </script>
+</body>
+
+</html>

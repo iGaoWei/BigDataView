@@ -1,0 +1,25 @@
+.rememberPwd[data-v-8d6e4f2b] {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: flex-start
+}
+
+.rememberPwd[data-v-8d6e4f2b] .el-checkbox__label {
+    color: #fff
+}
+
+.rememberPwd[data-v-8d6e4f2b] .el-checkbox.is-checked {
+    color: #24cdff
+}
+
+.rememberPwd[data-v-8d6e4f2b] .el-checkbox.is-checked .el-checkbox__input.is-checked .el-checkbox__inner, .rememberPwd[data-v-8d6e4f2b] .el-checkbox.is-checked .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+    background-color: #24cdff;
+    border-color: #24cdff
+}
+
+.rememberPwd[data-v-8d6e4f2b] .el-checkbox__label {
+    color: #24cdff
+}

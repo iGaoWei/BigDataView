@@ -1,17 +1,14 @@
 
 <p align="center"><h1 align="center">100+套大数据可视化模板</h1></p>
 
-</br></br>
-
 <p align="center">
-  <a href="https://demo.eiun.net/"><img src="https://img.shields.io/badge/%E9%A2%84%E8%A7%88-Demo-green" alt="预览"></a>
+  <a href="https://igaowei.github.io/BigDataView/"><img src="https://img.shields.io/badge/%E9%A2%84%E8%A7%88-Demo-green" alt="预览"></a>
   <a href="#公众号"><img src="https://img.shields.io/badge/%E5%85%AC%E4%BC%97%E5%8F%B7-DreamCoders-blue" alt="公众号"></a>
   <a href="https://blog.csdn.net/qq_31766533/article/details/119274641"><img src="https://img.shields.io/badge/CSDN-DreamCorders-orange" alt="CSDN"></a>
   <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/igaowei/bigdataview?label=Github&style=flat-square">
   <a href='https://gitee.com/iGaoWei/big-data-view/stargazers'><img src='https://gitee.com/iGaoWei/big-data-view/badge/star.svg?theme=white' alt='star'></img></a>
   <a href='https://gitee.com/iGaoWei/big-data-view/members'><img src='https://gitee.com/iGaoWei/big-data-view/badge/fork.svg?theme=white' alt='fork'></img></a>
 </p>
-
 
 #### 项目背景
 由于自己公司项目里面用到一个数据可视化大屏页面，自己网上各种谷歌百度，发现资源良莠不齐，而且大多数都是收费的，甚至一个页面一收费的那种，前前后后自己不管是付费的还是免费的收集了不少，于是自己打算整理下，免费分享给大家，以免大家再走冤枉路。如果大家有珍藏的好模板，欢迎大家继续补充贡献！！！
@@ -21,8 +18,6 @@
 收集整理不易，如果觉得对您有帮助，欢迎 `Watch`、`Star`。当然也可以请我喝杯咖啡 💘感谢支持💘
 ```
 <p align="center"><img src="https://demo.eiun.net/preview/wechat-code.png" width="320" height="320" alt="微信赞赏码" /></p>
-
-</br></br>
 
 #### 源码地址
 
@@ -38,33 +33,33 @@
 
 <p style="padding:10px;"  width="90%">
 
-1.Gitee直接克隆下载，使用浏览器访问静态页面即可。
+##### 1.Gitee直接克隆下载，使用浏览器访问静态页面即可。
 
 ```
 git clone https://gitee.com/iGaoWei/big-data-view.git
 ```
 
-2.GitHub直接克隆下载，使用浏览器访问静态页面即可。
+##### 2.GitHub直接克隆下载，使用浏览器访问静态页面即可。
 ```
 git clone https://github.com/iGaoWei/BigDataView.git
 ```
-3.网盘下载地址：关注公众号【DreamCoders】回复”BigDataView“即可获取
+##### 3.网盘下载地址：关注公众号【DreamCoders】回复”BigDataView“即可获取
 
-4.扫描下方微信小程序码，获取下载地址
+##### 4.扫描下方微信小程序码，获取下载地址
 
+<p align="center">
 <img src="https://jsd.onmicrosoft.cn/gh/iGaoWei/codercdn@master/question/20240715/2024071504404229838.png" width="30%" onerror="this.src='https://cdn.jsdelivr.net/gh/iGaoWei/codercdn@master/question/20240715/2024071504404229838.png'" />
 </p>
-
 
 ```
 所有资源都是网络收集整理而来，免费分享给有需要的人，切勿打包出售他人
 ```
 
-#### 截图预览
+#### 大屏截图预览
 ```
 在线预览时，有可能因为GithubPages浏览器环境问题，导致页面不兼容，不能正常显示，请以截图为准，或下载到本地测试预览,感谢支持！～
 ```
-##### 001 政务服务大数据可视化监管平台 [在线预览](https://demo.eiun.net/web/001%20%E6%9C%8D%E5%8A%A1%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9B%91%E7%AE%A1%E5%B9%B3%E5%8F%B0/)
+##### 001 政务服务大数据可视化监管平台 [在线预览](https://demo.eiun.net/web/001%20政务服务大数据可视化监管平台)
 <img src="https://demo.eiun.net/gif/001.gif" onerror="this.src='https://demo.eiun.net/gif/001.gif'" width="100%" />
 
 ##### 002 水质情况实时监测预警系统 [在线预览](https://demo.eiun.net/web/002%20水质情况实时监测预警系统/index.html)
@@ -427,6 +422,127 @@ git clone https://github.com/iGaoWei/BigDataView.git
 
 ##### 118 云南全域智慧旅游智慧中心 [在线预览](https://demo.eiun.net/web/118%20旅游智慧中心/index.html)
 <img src="https://demo.eiun.net/gif/118.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+
+#### 登录页截图预览
+
+<p>感谢来自<code>孔祥生</code>的投稿，以下登录页源码均来自<code>孔祥生</code>;大家有好的页面或源码都可以免费投稿，赠人玫瑰，手有余香</p>
+
+##### login_01.html [在线预览](https://demo.eiun.net/web/login-web/login_01.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_02.html [在线预览](https://demo.eiun.net/web/login-web/login_02.html)
+<img src="https://demo.eiun.net/web/login-web/login_03.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_03.html [在线预览](https://demo.eiun.net/web/login-web/login_03.html)
+<img src="https://demo.eiun.net/web/login-web/login_03.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_04.html [在线预览](https://demo.eiun.net/web/login-web/login_04.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_05.html [在线预览](https://demo.eiun.net/web/login-web/login_05.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_06.html [在线预览](https://demo.eiun.net/web/login-web/login_06.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_07.html [在线预览](https://demo.eiun.net/web/login-web/login_07.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_08.html [在线预览](https://demo.eiun.net/web/login-web/login_08.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_09.html [在线预览](https://demo.eiun.net/web/login-web/login_09.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_10.html [在线预览](https://demo.eiun.net/web/login-web/login_10.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_11.html [在线预览](https://demo.eiun.net/web/login-web/login_11.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_12.html [在线预览](https://demo.eiun.net/web/login-web/login_12.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_13.html [在线预览](https://demo.eiun.net/web/login-web/login_13.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_14.html [在线预览](https://demo.eiun.net/web/login-web/login_14.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_15.html [在线预览](https://demo.eiun.net/web/login-web/login_15.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_16.html [在线预览](https://demo.eiun.net/web/login-web/login_16.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_17.html [在线预览](https://demo.eiun.net/web/login-web/login_17.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_18.html [在线预览](https://demo.eiun.net/web/login-web/login_18.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_19.html [在线预览](https://demo.eiun.net/web/login-web/login_19.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_20.html [在线预览](https://demo.eiun.net/web/login-web/login_20.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_21.html [在线预览](https://demo.eiun.net/web/login-web/login_21.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_22.html [在线预览](https://demo.eiun.net/web/login-web/login_22.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_23.html [在线预览](https://demo.eiun.net/web/login-web/login_23.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_24.html [在线预览](https://demo.eiun.net/web/login-web/login_24.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_25.html [在线预览](https://demo.eiun.net/web/login-web/login_25.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_26.html [在线预览](https://demo.eiun.net/web/login-web/login_26.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_27.html [在线预览](https://demo.eiun.net/web/login-web/login_27.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_28.html [在线预览](https://demo.eiun.net/web/login-web/login_28.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_29.html [在线预览](https://demo.eiun.net/web/login-web/login_29.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_30.html [在线预览](https://demo.eiun.net/web/login-web/login_30.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_31.html [在线预览](https://demo.eiun.net/web/login-web/login_31.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_32.html [在线预览](https://demo.eiun.net/web/login-web/login_32.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_33.html [在线预览](https://demo.eiun.net/web/login-web/login_33.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_34.html [在线预览](https://demo.eiun.net/web/login-web/login_34.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_35.html [在线预览](https://demo.eiun.net/web/login-web/login_35.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_36.html [在线预览](https://demo.eiun.net/web/login-web/login_36.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+##### login_37.html [在线预览](https://demo.eiun.net/web/login-web/login_37.html)
+<img src="https://demo.eiun.net/web/login-web/login_01.jpg" onerror="this.src='https://demo.eiun.net/gif/更多内容关注公众号.gif'" width="100%" />
+
+
+
+
+
 
 #### 温馨提示：更多模板陆续更新中
 

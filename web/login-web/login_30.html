@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" data-dpr="1" style="font-size: 191.2px;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <link rel="icon" type="image/svg+xml" href="assets/science.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>炫酷登录页面30</title>
+
+  <!-- 引入wow.js和animate.css：注意一定要引入3.3.1版本，因为4.1.1版本有问题（引入后没有任何动画效果）-->
+  <link rel="stylesheet" href="resources/animate@3.3.1/animate.min.css" />
+  <script src="resources/wow@1.1.2/wow.min.js"></script>
+
+  <!-- 引入vue和element  -->
+  <link rel="stylesheet" href="resources/element-ui@2.15.14/theme-chalk/index.css">
+  <script src="resources/vue@2.7.16/vue.js"></script>
+  <script src="resources/element-ui@2.15.14/index.js"></script>
+
+
+  <!-- 引入wow.js和animate.css：注意一定要引入3.3.1版本，因为4.1.1版本有问题（引入后没有任何动画效果）-->
+  <link rel="stylesheet" href="resources/rememberPwd-f8b5d577.css" />
+  <style type="text/css">
+    body {
+      background-size: 100% 100%;
+      height: 100vh;
+      margin: 0;
+    }
+    .header {
+      background: url(assets/login_30/topTitle-364e9456.png) no-repeat;
+      width: 100%;
+      height: .86458rem;
+      background-size: 100% 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .header .headerLeft {
+      width: 30%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .header .headerLeft span {
+      font-size: .07292rem;
+      font-family: Alibaba PuHuiTi;
+      font-weight: 400;
+      color: #fff;
+      padding-top: .05208rem;
+      margin-left: .15625rem
+    }
+
+    .header .headerTitle {
+      width: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      font-size: .20833rem;
+      font-family: Alibaba PuHuiTi;
+      font-weight: 400;
+      color: #fff;
+      padding-top: .05208rem
+    }
+
+    .header .headerRight {
+      width: 30%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .header .headerRight .info1 {
+      font-size: .07292rem;
+      font-family: Alibaba PuHuiTi;
+      font-weight: 400;
+      color: #fff;
+      padding-top: .05208rem;
+      margin-right: .15625rem
+    }
+
+    .item1 {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .itemBodys {
+      width: 100%;
+      position: relative;
+      height: calc(100% + -0px)
+    }
+
+    .line {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0
+    }
+
+    .line img {
+      width: 3.09896rem;
+      height: .73438rem;
+      top: -.33854rem;
+      position: absolute;
+      left: -100%
+    }
+
+    .line {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0
+    }
+
+    .line img {
+      height: 3.09896rem;
+      width: .73438rem;
+      left: -.33854rem;
+      position: absolute;
+      bottom: -100%
+    }
+
+    .loginBody {
+      background: url(assets/login_30/bg-ee287c4c.jpg) center center no-repeat;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      background-size: 100% 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .centerBody {
+      background: url(assets/login_30/centerBg-07af1b4d.png) no-repeat;
+      width: 5.02604rem;
+      height: 2.92188rem;
+      margin: 0 auto;
+      background-size: 100% 100%;
+      position: relative
+    }
+
+    .centerBody .centerBodyTitle {
+      font-size: .15625rem;
+      font-family: Alibaba PuHuiTi;
+      font-weight: 500;
+      color: #2fd5ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      padding-top: .05208rem
+    }
+
+    .centerBody .centerBodyDesc {
+      font-size: .1875rem;
+      font-family: Alibaba PuHuiTi;
+      font-weight: 400;
+      color: #97e3f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      padding-top: 0;
+      letter-spacing: .05208rem;
+      margin-bottom: .20833rem
+    }
+
+    .centerBody .centerBodyInner {
+      position: relative;
+      height: calc(100% - .625rem);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .centerBody .centerBodyInner .centerBodyInnerl {
+      width: 50%;
+      position: relative;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start
+    }
+
+    .centerBody .centerBodyInner .centerBodyInnerl .dizuo {
+      position: absolute;
+      bottom: 15%;
+      -webkit-user-drag: none;
+      width: 3.42708rem
+    }
+
+    .centerBody .centerBodyInner .centerBodyInnerl .map {
+      position: relative;
+      width: 100%;
+      height: 60%
+    }
+
+    .centerBody .centerBodyInner .centerBodyInnerr {
+      width: 50%;
+      height: calc(100% - .19792rem);
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start;
+      margin-top: .19792rem
+    }
+
+    .centerBody .centerBodyInner .centerBodyInnerr .formInput {
+      width: 1.97917rem;
+      height: .30208rem;
+      margin-bottom: .18229rem;
+      background: rgba(18, 211, 252, .04);
+      border: .01042rem solid #134B7E;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .centerBody .centerBodyInner .centerBodyInnerr .formInput .icon {
+      width: .30208rem;
+      height: .27604rem;
+      margin-left: .01563rem;
+      margin-right: .07813rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      flex-shrink: 0
+    }
+
+    .centerBody .centerBodyInner .centerBodyInnerr .formInput .icon img {
+      width: .13021rem
+    }
+
+    .centerBody .centerBodyInner .centerBodyInnerr .formInput input {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      background: none;
+      border: none;
+      outline: none
+    }
+
+    input {
+      width: 100%;
+      background: none;
+      height: .29688rem;
+      position: relative;
+      border: none;
+      outline: none;
+      font-size: .10417rem;
+      font-family: Alibaba PuHuiTi;
+      font-weight: 400;
+      color: #a4d6ef;
+      font-family: PingFang;
+      font-weight: 700
+    }
+
+    input::-webkit-input-placeholder {
+      color: #fff
+    }
+
+    input::-moz-placeholder {
+      color: #fff
+    }
+
+    input:-moz-placeholder {
+      color: #fff
+    }
+
+    input:-ms-input-placeholder {
+      color: #fff
+    }
+
+    .yzm img {
+      width: .46875rem
+    }
+
+    .loginBut {
+      width: 1.98438rem;
+      height: .30208rem;
+      background: #006CC6;
+      border: 1px solid #134B7E;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      font-size: .13021rem;
+      font-family: Alibaba PuHuiTi;
+      font-weight: 400;
+      color: #b5e1f7;
+      margin-top: .19792rem
+    }
+
+    .lines {
+      width: 1.30208rem;
+      height: .05208rem;
+      position: relative;
+      overflow: hidden
+    }
+
+    .lines2 {
+      width: calc(100% - .20833rem);
+      margin-left: .10417rem;
+      height: .05208rem;
+      position: absolute;
+      overflow: hidden;
+      margin-top: -.125rem;
+      bottom: .01042rem
+    }
+
+    .linesBody {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      top: 10%
+    }
+
+    .linesleft {
+      position: absolute;
+      width: .05208rem;
+      height: calc(100% - .26042rem);
+      left: -.02083rem;
+      top: .13021rem;
+      overflow: hidden
+    }
+
+    .linesright {
+      position: absolute;
+      width: .05208rem;
+      height: calc(100% - .26042rem);
+      right: -.01563rem;
+      top: .13021rem;
+      overflow: hidden
+    }
+  </style>
+</head>
+
+<body style="font-size: 12px;" inmaintabuse="1">
+  <div id="app">
+    <div class="body">
+      <div class="loginBody">
+        <div class="header wow fadeInDown" id="header" >
+          <div class="headerLeft"><span>欢迎进入数据大屏</span></div>
+          <div class="headerTitle">
+            <p>监测平台登录页</p>
+          </div>
+          <div class="headerRight">
+            <div class="info1">2024-12-05 17:36:44</div>
+          </div>
+        </div>
+        <div class="centerBody wow fadeInDown" >
+          <div class="centerBodyTitle wow fadeInLeft" ></div>
+          <div class="linesBody">
+            <div class="lines">
+              <div class="line"><img src="assets/login_30//line2-60ba5ffe.png" alt="" style="left: 92.0207%;"></div>
+            </div>
+          </div>
+          <div class="centerBodyDesc wow fadeInRight" >欢迎登录</div>
+          <div class="centerBodyInner">
+            <div class="centerBodyInnerl">
+              <div class="map">
+                <div class="itemBodys">
+                  <div class="item1" list="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]" style="-webkit-tap-highlight-color: transparent; user-select: none;" _echarts_instance_="ec_1733391393168">
+                    <div style="position: relative; width: 480px; height: 263px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;">
+                      <canvas width="480" height="263" style="width: 480px; height: 263px; position: absolute; left: 0px; top: 0px;"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div><img class="dizuo wow bounceIn" data-wow-delay="1s" src="assets/login_30//dizuo-c260d164.png" alt="" >
+            </div>
+            <div class="line"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAFLCAYAAAAXoeY3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDA2IDc5LmRhYmFjYmIsIDIwMjEvMDQvMTQtMDA6Mzk6NDQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMi40IChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkJBNzM1NkIxRDJEQTExRURCMUREQkUyN0JENjU3OTY0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkJBNzM1NkIyRDJEQTExRURCMUREQkUyN0JENjU3OTY0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QkE3MzU2QUZEMkRBMTFFREIxRERCRTI3QkQ2NTc5NjQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QkE3MzU2QjBEMkRBMTFFREIxRERCRTI3QkQ2NTc5NjQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5CnYMTAAAAlUlEQVR42uyRSw6AIAxEEdClJ/PKXkywaFzUtJkCYY2Ll5m2wX7cfpyLd+/HMO1i2Q/esr6KwCrKWGSlbLSwMlTsU5tV16HQo6gX1HiQU4b2NtA660DncW2L0FEyMTGGMlaHbJGWZOLPksxSFbdUClmqLGMJJC5Wqa2QTeBl9CPUUAbdq9nU0FRdGFpnAeehjjM+AgwAm8RXrRTHktkAAAAASUVORK5CYII=" alt=""></div>
+            <div class="centerBodyInnerr">
+              <div class="formInput wow fadeInLeft" data-wow-delay="1s" >
+                <div class="icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDA2IDc5LmRhYmFjYmIsIDIwMjEvMDQvMTQtMDA6Mzk6NDQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMi40IChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNERTUwNzA1RDJERjExRURCMUREQkUyN0JENjU3OTY0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNERTUwNzA2RDJERjExRURCMUREQkUyN0JENjU3OTY0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6M0RFNTA3MDNEMkRGMTFFREIxRERCRTI3QkQ2NTc5NjQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6M0RFNTA3MDREMkRGMTFFREIxRERCRTI3QkQ2NTc5NjQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7DKhi6AAACZklEQVR42rSWy0tVURSHzznerjc9Uj6yyF5goBZqiURvej+khpHOCqRJf0B/QfMmzZw1aNokoggjCntQGUUkVJRpEUElpiJd5fYt+A2ul3PP3edyXfBN9jl7//baa629tn9lZMwrYT7Uw1E4CZ2wWuNT8AJuw0OYiVso5ZW2WtgJx+AAbISV+jYPNfAPfsFrjZUlFkrkIuyHhoLvGdgOa6AJbsAjmEsqZsfUC5fgdIlNNcN5WAF/4QnkCn8KYhZogVM6OhezjR+EI7A26oc4sS2KVei52zrYobg6i1XBpmI7LGEtEqtyFbNsa1QCJLVQyZJR3GPFfO0qFbU7B7MkSbt6llPq/omrmRibUc3NFWZksWPMwqQmJbUf8BUWkmTjJ3ib0LtpeANfkqb+Z7gLz6IKtMjxP4Vh+FbOdXVPx5FVwaZj4mQbuw6Py7kb0/put/pVeAl7VeyhTsWupg/wAO7AR41bJi66itXomupRVtrlOgT31WLWa1FLhFEYhzo4py4xquOfjxPzNck8GIQ+mIVbcBNewTsVrcXou+bthn51iGp5ad49z+9xhWLVis1lCWY0NgBd2u244rioBdvUflrzbpw+eXgNRhTzJWLm1S64oMlh3nit2k2r4rQgz2z+qog+Z539kEphWse6RGwDnIETRW76QPdlo2PN2dPhLIypjKaCvMzbo93UeZWzevXEfeZASjveDIeh3au8WX87Dj8DpbmJbEvYKF3NTqrb3iqBlLv1jvCXQcxXPrSn9JjpisioSpqt3WZiHbBV7uaWyTOrvyYTe6+4NSgrsxUWM6HfMPFfgAEAH0xwZ7WOuMQAAAAASUVORK5CYII=" alt=""></div><input type="text" placeholder="输入用户名">
+              </div>
+              <div class="formInput wow fadeInRight" data-wow-delay="1.5s" >
+                <div class="icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAcCAYAAACUJBTQAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDA2IDc5LmRhYmFjYmIsIDIwMjEvMDQvMTQtMDA6Mzk6NDQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMi40IChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNERTUwNzA5RDJERjExRURCMUREQkUyN0JENjU3OTY0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNERTUwNzBBRDJERjExRURCMUREQkUyN0JENjU3OTY0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6M0RFNTA3MDdEMkRGMTFFREIxRERCRTI3QkQ2NTc5NjQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6M0RFNTA3MDhEMkRGMTFFREIxRERCRTI3QkQ2NTc5NjQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6NhvqiAAACfElEQVR42rTWyWsUQRTH8Z7umTGSmGgSlxBxX3FFRUVwA0EPIgjBuIALgjcvevCP8C/wKKInr6KoIAgqgiIIYlwQjUsM7prRmUxm2u+DX0MxZnq6YSz4HMJU1at6r6o6mTN3B7yYlsMy9GM35iGPKt7jKi7iAUbrTZL14lsPNmEbltT0n4vNeIVveIGxtEFW4Lh2MF8rtdWX4GOq+pzEIpzHPYRJgyzACRzFBNzCHbxDBRl0Yqt2eRhtCnBf6awbxAZ34RAOIsAlXFDef6pPVK/bGMQB9OErhvA6Loiteg32aqWXcRZPnD5ROkpKz2fNcww7tONBdzd+TZAWLMVMfMBNPG9wOD7imgrfi/WY4c5dG6RLRWzHWzxFuUGQAh7hsRZpR36aUv1PkKgevdqqBfnkNW7W9zuGlcpudNTbSUZ/22X7jS8qdJIW6o5UnXnC8YJYhx9Skj8Jg4wqrWWNK7pBssr/mM7/ROdHO2mt+KV+QZ3JK7ojee0iUG3yUT1t8Gn9OKxTsRCTVMD9OqI557iHTnpLWqDVcpUWZjXZpQtt4wo28JQmGFL6urWDlXq7omfEHydIVIcWnaicFrpPqZ5sdc1qq9GD57Z2Sdss5XPcR9b3/n8L0wax+/AGIynGVLIpOr/EDTzTq7AFi1WH2JY0iL2uV3AOA8q5faiO6J2LbX7C22wTX9cuQqXsoZ4erxlBPL1Fnc6FDHXy2poZZDZ2YrnGrMZ2zGpWkIxWvFYFtzHrsFE7bNpOoge0qlS16pZ7zQ5S1iegoveskHRgmnsyHXt0ZDdgStKNpAnSo//D+lWjIE2QovJbbNA50M47ar4lmZgxNu/IXwEGAObkkN+6BqO3AAAAAElFTkSuQmCC" alt=""></div><input type="password" placeholder="输入密码">
+              </div>
+              <div class="loginBut wow fadeInUp cur" data-wow-delay="2s" ><span>安全登录</span></div>
+            </div>
+          </div>
+          <div class="lines2">
+            <div class="line"><img src="assets/login_30//line2-60ba5ffe.png" alt="" style="left: 92.0194%;"></div>
+          </div>
+          <div class="linesleft">
+            <div class="line"><img src="assets/login_30//line3-97cbc7a4.png" alt="" style="bottom: 92.0211%;"></div>
+          </div>
+          <div class="linesright">
+            <div class="line"><img src="assets/login_30//line3-97cbc7a4.png" alt="" style="bottom: 92.0211%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // 初始化vue
+    new Vue({
+      el: '#app',
+      data: {},
+      methods: {},
+      mounted() {
+        // 初始化WOW.js
+        new WOW().init();
+      }
+    });
+  </script>
+</body>
+
+</html>

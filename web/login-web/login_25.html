@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" data-dpr="1" style="font-size: 191.2px;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <link rel="icon" type="image/svg+xml" href="assets/science.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>炫酷登录页面25</title>
+
+  <!-- 引入wow.js和animate.css：注意一定要引入3.3.1版本，因为4.1.1版本有问题（引入后没有任何动画效果）-->
+  <link rel="stylesheet" href="resources/animate@3.3.1/animate.min.css" />
+  <script src="resources/wow@1.1.2/wow.min.js"></script>
+
+  <!-- 引入vue和element  -->
+  <link rel="stylesheet" href="resources/element-ui@2.15.14/theme-chalk/index.css">
+  <script src="resources/vue@2.7.16/vue.js"></script>
+  <script src="resources/element-ui@2.15.14/index.js"></script>
+
+  <!-- 忘记密码 -->
+  <link rel="stylesheet" href="resources/rememberPwd-f8b5d577.css" />
+  <style type="text/css">
+    body {
+      background-size: 100% 100%;
+      height: 100vh;
+      margin: 0;
+    }
+    .pageBg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background: url(assets/login_25/bg-e5bdcff9.jpg) no-repeat;
+      background-size: 100% 100%;
+      z-index: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .gridView {
+      position: absolute;
+      background: url(assets/login_25/bg-1b78ac51.png);
+      background-size: 100% 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      right: 0;
+      z-index: 0;
+      pointer-events: none
+    }
+
+    .loginMain {
+      position: relative;
+      width: 3.51042rem;
+      height: 2.84375rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .loginMain input {
+      background: none;
+      width: calc(100% - .0625rem);
+      outline: none;
+      border: none;
+      position: relative;
+      height: calc(100% - .01563rem);
+      color: #fff;
+      margin-left: .0625rem
+    }
+
+    .loginMain input::-moz-placeholder {
+      color: #7eafec
+    }
+
+    .loginMain input::placeholder {
+      color: #7eafec
+    }
+
+    .loginMain input::-webkit-input-placeholder {
+      color: #7eafec
+    }
+
+    .loginMain input:-ms-input-placeholder {
+      color: #7eafec
+    }
+
+    h4 {
+      font-size: .11458rem;
+      font-family: MicrosoftYaHei;
+      font-weight: 700;
+      color: #55a5f8;
+      opacity: .7;
+      text-shadow: 0px .02604rem .04167rem rgba(0, 0, 0, .29);
+      background: linear-gradient(0deg, #55A5F8 0%, #B0D7FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent
+    }
+
+    .loginMainInner {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start;
+      width: 100%;
+      position: relative;
+      height: 100%
+    }
+
+    .loginMainInner .loginMainInnerTitle {
+      font-size: .11458rem;
+      font-family: MicrosoftYaHei;
+      font-weight: 700;
+      color: #fff;
+      margin-top: .48438rem;
+      background: linear-gradient(0deg, #72f0f8 0%, #e0fdff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent
+    }
+
+    .form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start;
+      margin-top: .3125rem
+    }
+
+    .form .formItem {
+      width: 2.02083rem;
+      height: .20833rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      background: url(data:image/png;base64,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);
+      background-size: 100% 100%;
+      margin-bottom: .10417rem
+    }
+
+    .form .formItem .formItem1 {
+      width: .625rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+      height: 100%
+    }
+
+    .form .formItem .formItem1 img {
+      height: .125rem;
+      width: auto;
+      margin-left: .15625rem
+    }
+
+    .form .formItem .formItem1 span {
+      font-size: .09375rem;
+      font-family: MicrosoftYaHei;
+      font-weight: 400;
+      color: #fff;
+      margin-left: .10417rem;
+      margin-right: .05208rem
+    }
+
+    .form .formItem .line {
+      width: 1px;
+      height: .07292rem;
+      background: rgb(162, 208, 255)
+    }
+
+    .form .formItem .formItem2 {
+      width: calc(100% - .625rem);
+      position: relative;
+      height: 100%
+    }
+
+    .form .formItem .formItem2 input::-moz-placeholder {
+      font-size: .09375rem;
+      font-family: MicrosoftYaHei;
+      font-weight: 400;
+      color: #fff
+    }
+
+    .form .formItem .formItem2 input::placeholder {
+      font-size: .09375rem;
+      font-family: MicrosoftYaHei;
+      font-weight: 400;
+      color: #fff
+    }
+
+    .form .loginBut {
+      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAAArCAYAAADcxoXKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABAtJREFUeNrsnU1IVGEUhs/oZKmNP5laRgZmtSjoB/qBIvpZ1KKQWhQhRIHQJmoRRUhWoyaSBAURBEFFuKhFEbWoIIqoRUFUkItKrKQSlbEh0yhHp3ObS9yVztzvzIzX8z7wggvR8fnee+53r8xc34aXHykJrOM8ImDCY856+AQaup6RpB/cALfG1MEn0NL1ZAyiTZw1cGvEfc5T+ARaup6MQRSEW2NOwCfQ1HXpQbSVsxJujbjDeQ6fQFPXJQeRD2dvY6KO3RB8Ai1dFx1E2zhL4deIW5xX8AmUdV1sEGXg7G3MiOMMAZ9AS9dFB9EOziL4NeIG5y18AmVdFxtEmZyTcGvEsMMhfAItXRcdRNWcBfBrRCvnHXwCZV3/j8/wLR5++4dWwK9rIvbg6YBPoKjrojuivThojLnsWBj4BFq6LrYjyuK858yBX9f84cznfIZPoKjrJLkjqsFBY8wlx8LAJ9DSdbEdUTbnA2cW/LrmF2ce5yt8AkVdJ8kd0T4cNMZcdCwMfAItXRfbEeVQ7IZTKfy6ZpBiN6W74RMo6jpJ7oj2e+mgWRaYQjVlhePtZZ13LIynfAJg0HWxQRTgHPGShelZfto1I59OzS0ZLy+pn3Paqz4BcNl10UF0kFPkJRMPQj/pbGeIVuXnUH3FuBhG5zghr/oEwGXXRyWRe0QFFLuXUehFI1XFATowu4iehAcp2NGTrpcRtq+Xv3vdJwAJdF10R3TIywfN7d5+uvClj9YW5FBj+i7TzjgWxtM+AUig62I7oiL77J3ndTvL87KpubKUHvYNUNOn3lT+6pB9hvgxkXwCMEbX48If5/cdTvVBs3tmAeVmyn6k9kg0Sr1DwxSODNPGabkU8GdQbXv3v8+sTAEtjoVJuU8AUkhLIkMo3h1RiX32zk3ppdTicpqamZzHrvXxMIrwUCrO8tPVrjBd6won+8/psc8QA+nyCUCKcHY9buLZER1Nx0FT9aZzIi1Os2Nh0uITgDR0XWxHVMZpp9h7oYA7vnEqKfZ+G/gEWrqeEGNd+9TioDGmybEw8Am0dF1sR1ROsc/HmQy/rrGuL63PYPkNn0BR1xNmtB3RMRw0xjQ6FgY+gZauiw0i6673Hrg1wvrP2BX4BMq6LjqIjnMmwa8R9Zwh+ATKui42iKxP2a+GWyOsJ3G0widQ1nXRQWQ9CtYPv0ZYj4uOwCdQ1nWxQbSQsxNujWjjXIdPoKzrooMoSDJPf9WMtQMagU+grOtig2gJZzvcGvGacxM+gbKuiw4i6863D36NsP47FoVPoKzrYoNoBWcL3BrxgnMXPoGyrosOoiDO3iLXy1H4BMq6LjaIVnM2w60Rzzj37K/hE2jpuuggaoBbY+ocX8Mn0NJ1Mf4KMAATXQDAk/q7fgAAAABJRU5ErkJggg==);
+      width: 1.51042rem;
+      height: .22396rem;
+      background-size: 100% 100%;
+      cursor: pointer;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .form .loginBut span {
+      font-size: .09375rem;
+      font-family: MicrosoftYaHei;
+      font-weight: 400;
+      color: #fefefe;
+      margin-left: .85938rem
+    }
+
+    .form .formItemCode {
+      width: 1.51042rem;
+      height: .22396rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .form .formItemCode .formItemCodel {
+      width: 1.07813rem;
+      height: .20833rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .form .formItemCode .formItemCodel input {
+      width: 80%
+    }
+
+    .form .formItemCode .formItemCoder {
+      width: .53646rem;
+      height: .20833rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .form .rememberPasswordBody {
+      width: 1.51042rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      margin-bottom: .10417rem
+    }
+
+    .login35 .rememberPwd {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .login35 .rememberPwd .el-checkbox__label {
+      color: #fff
+    }
+
+    .login35 .rememberPwd .el-checkbox.is-checked .el-checkbox__input.is-checked .el-checkbox__inner,
+    .login35 .rememberPwd .el-checkbox.is-checked .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+      background-color: #43cedf;
+      border-color: #43cedf
+    }
+
+    .login35 .rememberPwd .el-checkbox.is-checked .el-checkbox__label {
+      color: #43cfdf;
+      font-size: .07292rem
+    }
+
+    .login35 .rememberPwd .el-checkbox__label {
+      color: #fff;
+      font-size: .07292rem
+    }
+
+    .login35videoBg .videoBg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+      -o-object-fit: fill;
+      object-fit: fill;
+      z-index: -1;
+      top: 0;
+      left: 0
+    }
+
+    .login35videoBg .videoBg video::-webkit-media-controls {
+      display: none !important
+    }
+
+    .loginPage {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start;
+      z-index: 1
+    }
+
+    .loginPage .login {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start
+    }
+
+    .loginPage .login .loginTitle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start;
+      margin-bottom: .15625rem;
+      margin-top: .78125rem
+    }
+
+    .loginPage .login .loginTitle h3 {
+      font-size: .3125rem;
+      font-family: AlimamaShuHeiTi;
+      font-weight: 700;
+      color: #fff;
+      line-height: .41667rem;
+      margin: 0;
+      text-shadow: 0 0 .05208rem #34a9c0, 0 0 .10417rem #34a9c0, 0 0 .15625rem #34a9c0
+    }
+
+    .loginPage .login .loginTitle span {
+      font-size: .07292rem;
+      font-family: MicrosoftYaHei;
+      font-weight: 400;
+      color: #7eafec;
+      opacity: .7;
+      text-transform: uppercase
+    }
+  </style>
+</head>
+
+<body style="font-size: 12px;">
+  <div id="app">
+    <div class="body">
+      <div class="loginPage" id="home">
+        <div class="pageBg"></div>
+        <div class="login">
+          <div class="loginTitle">
+            <h3 class="wow fadeInUp">数据中心可视化平台
+            </h3>
+          </div>
+          <div class="loginMain login35 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="gridView"></div>
+            <div class="loginMainInner">
+              <div data-wow-delay="1s" class="loginMainInnerTitle wow flipInY">系统登录
+              </div>
+              <div class="form">
+                <div class="formItem wow flipInX" data-wow-delay="1s">
+                  <div class="formItem1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAYCAYAAAD+vg1LAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAT9JREFUeNpi/P//PwMB4AzE/kCsCcRcQPwMiPcC8SogfodTF8hgHFgSiNf8xw1eAXEYLv24DOUG4hv/CYNfQBxLisFT/xMP3gExDzEGc/wnHRSjm8OEJdidGEgH0egC2AzmI8NgHmIMPkuGwceITW7XSAxjDWJThSEJhs4FYiZiDWYE4ggg/kjA0LVAzEtKOoZhRSBeAU2rMPAXiE8BcQI+vYxElBUgwAHEFkDMCcRXgfgRIQ3EGkwyYMEixg7EPkDsDsQqQMyNQ+8/IH4KxKeBeB0Q38aX3AKA+AEZWfoPtHzhwxZ5Nf8pB9eBWBTZ4ESordQAZ0AFGSjymIEh8hKIhakYdxmgsiKeyoaCQDzIxaeADFNqJzeQwV+hlSRVASgosqBpkppgAyzn6QJxCjRjiJNp0W9oZlkKxCsAAgwA1CKD5+EkZ2EAAAAASUVORK5CYII=" alt=""><span>账户</span></div>
+                  <div class="line"></div>
+                  <div class="formItem2"><input type="text" placeholder="请输入用户名"></div>
+                </div>
+                <div class="formItem wow flipInX" data-wow-delay="1.2s">
+                  <div class="formItem1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAYAAAD6S912AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAY9JREFUeNqslL9KA0EQxve8BKIRDIjEQDBgYxGfQcEihZWVnZAHEEVFLQQrey18BFMIKdKKjWCjlV0QBDWEKIIKEbER7/xGZ2GzZv9EMvDjNnMz3+3MzkbEcSwMpMAKOAOPoA0aoAoWTHkmsSKox3argIyeG/yodloe3IAU/74Hp6ANCmAepPndOZjpyNa+kAAXyi62uHQ1Jg9qSsy+reQS+OLAVUt/iUuOo/7mpH9AK3cWkK8BKsJu6+ATjIIp6dQFJ/l5C54dgtegCZJgxCQ4xM+mcNs7+OB1KJ0JLSjS/KFFkGICebbSKceGjn4bzPG40JdflYRuRu/GuGTq+SE4IEFqaL1L+b0a7WyPBE+wKIn+2BMJPmCRcwTWwBUogkX7Pn8H02QR2NEGelMZ/j9GAS2L4AuY0ATTVJUpwXUQQa9NdAlmQFnzLYOsrYet2G3TXO6gK9B39ob5mfQpOfAcWvVqet1Hmx3zdQx9BO/AuCOu4NmaNyp5Q/TPjuS/zRLY5SsY/UOIcqpg7VuAAQCpsycveosltQAAAABJRU5ErkJggg==" alt=""><span>密码</span></div>
+                  <div class="line"></div>
+                  <div class="formItem2"><input type="password" placeholder="请输入密码"></div>
+                </div>
+                <div class="rememberPasswordBody wow flipInX" data-wow-delay="1.6s">
+                  <div class="rememberPwd"><el-checkbox>记住密码</el-checkbox></div>
+                </div>
+                <div class="loginBut wow flipInX" data-wow-delay="1.8s"><span>登录</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // 初始化vue
+    new Vue({
+      el: '#app',
+      data: {},
+      methods: {},
+      mounted() {
+        // 初始化WOW.js
+        new WOW().init();
+      }
+    });
+  </script>
+</body>
+
+</html>

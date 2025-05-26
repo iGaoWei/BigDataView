@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" data-dpr="1" style="font-size: 191.2px;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <link rel="icon" type="image/svg+xml" href="assets/science.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>炫酷登录页面6</title>
+
+  <!-- 引入wow.js和animate.css：注意一定要引入3.3.1版本，因为4.1.1版本有问题（引入后没有任何动画效果）-->
+  <link rel="stylesheet" href="resources/animate@3.3.1/animate.min.css" />
+  <script src="resources/wow@1.1.2/wow.min.js"></script>
+
+  <!-- 引入vue和element  -->
+  <link rel="stylesheet" href="resources/element-ui@2.15.14/theme-chalk/index.css">
+  <script src="resources/vue@2.7.16/vue.js"></script>
+  <script src="resources/element-ui@2.15.14/index.js"></script>
+
+  <!-- 忘记密码 -->
+  <link rel="stylesheet" href="resources/rememberPwd-f8b5d577.css" />
+  <style type="text/css">
+    body {
+      background-size: 100% 100%;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .icon-geren:before {
+      content: "\e643"
+    }
+
+    .icon-lock:before {
+      content: "\e621"
+    }
+
+    html,
+    body {
+      background-color: #031233
+    }
+
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none
+    }
+
+    img {
+      max-width: 100%
+    }
+
+    .login-container {
+      width: 7.5rem;
+      height: 100%;
+      background: rgb(4, 19, 50);
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .login-wrap {
+      overflow: hidden;
+      height: calc(100vh - .52083rem);
+      width: calc(100% + -0px);
+      background: #021233;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start;
+      padding-top: .52083rem
+    }
+
+    .login-grid {
+      position: relative;
+      z-index: 999;
+      float: left
+    }
+
+    .login-main {
+      position: relative;
+      z-index: 1000;
+      width: 1.97917rem;
+      height: 2.1875rem;
+      box-shadow: 0 0 .05208rem #284fa8 inset;
+      background-color: #05143399;
+      border-radius: .05208rem
+    }
+
+    .login-main .inner {
+      padding: .15625rem
+    }
+
+    .login-text {
+      font-size: .13542rem;
+      color: #00a8ff;
+      text-align: center;
+      line-height: 1.5;
+      margin-bottom: .10417rem;
+      font-weight: 700;
+      background: url(assets/login_06/titleLine.png) center bottom no-repeat;
+      padding: .05208rem 0
+    }
+
+    .piao-list {
+      position: absolute;
+      top: -.10417rem;
+      text-align: center;
+      left: .83333rem;
+      z-index: 99
+    }
+
+    .piao-list li {
+      float: left;
+      margin-right: .23438rem;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-name: fadeInUp
+    }
+
+    .piao-list li a {
+      display: block
+    }
+
+    .piao-list li:nth-child(2) {
+      margin-top: -.05208rem;
+      animation-delay: .5s;
+      -webkit-animation-delay: .5s
+    }
+
+    .piao-list li:nth-child(3) {
+      margin-top: -.36458rem;
+      margin-right: .13021rem;
+      animation-delay: 1s;
+      -webkit-animation-delay: 1s
+    }
+
+    .piao-list li:nth-child(4) {
+      margin-top: .07813rem;
+      margin-right: .13021rem;
+      animation-delay: 1.5s;
+      -webkit-animation-delay: 1.5s
+    }
+
+    .piao-list li:nth-child(5) {
+      margin-top: .41667rem;
+      margin-right: 0;
+      animation-delay: 2s;
+      -webkit-animation-delay: 2s
+    }
+
+    .form-row {
+      position: relative;
+      margin-bottom: .07813rem
+    }
+
+    .form-row input {
+      outline: none
+    }
+
+    .row-label {
+      position: absolute;
+      left: .02604rem;
+      top: .0625rem;
+      color: #00a8ff
+    }
+    .row-label .icon {
+      height: .10417rem;
+      width: .10417rem;
+    }
+    .form-row .form-control {
+      height: .26042rem;
+      background-color: transparent;
+      border: 0;
+      border-radius: 0;
+      width: calc(100% - .20833rem);
+      border-bottom: 1px solid rgba(255, 255, 255, .2);
+      padding-left: .20833rem;
+      color: #00a8ff
+    }
+
+    .form-row ::-webkit-input-placeholder {
+      color: #687ca4
+    }
+
+    .form-row ::-moz-placeholder {
+      color: #687ca4
+    }
+
+    .form-row ::-ms-input-placeholder {
+      color: #687ca4
+    }
+
+    .form-foot {
+      padding-top: 0
+    }
+
+    .form-row .form-control:focus {
+      box-shadow: 0 0 0 transparent
+    }
+
+    .form-row .btn-login-primary,
+    .form-row .btn-login-primary:hover,
+    .form-row .btn-login-primary:focus,
+    .form-row .btn-login-primary:active {
+      outline: none;
+      width: .67708rem;
+      height: .20833rem;
+      line-height: .20833rem;
+      padding: 0;
+      background-image: linear-gradient(to right, #0093fe, #00f2fe);
+      color: #fff;
+      border-radius: .02083rem;
+      font-size: .08333rem;
+      border: 0;
+      font-weight: 700
+    }
+
+    .login-heading {
+      color: #fff;
+      font-weight: 700;
+      font-size: .16667rem;
+      text-align: center;
+      position: fixed;
+      z-index: 10;
+      top: .26042rem
+    }
+
+    .login-heading * {
+      display: inline-block;
+      vertical-align: middle
+    }
+
+    .login-heading img {
+      margin-right: .05208rem
+    }
+
+    .login-heading span {
+      color: #aeb100;
+      font-size: .08333rem
+    }
+
+    .login-a-pic img {
+      display: block;
+      position: absolute;
+      transition: .4s all
+    }
+
+
+    .form-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row
+    }
+
+    .form-row2 {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      color: #02a8fe;
+      padding-top: .05208rem
+    }
+
+    .cur {
+      cursor: pointer
+    }
+
+    .forminput3 {
+      font-size: .07292rem;
+      font-family: PingFang;
+      font-weight: 300;
+      width: 100%;
+      border-radius: .05208rem;
+      margin: auto;
+      margin-bottom: .125rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row
+    }
+
+    .forminput3 a {
+      color: #00e4ff;
+      text-decoration: none
+    }
+
+    .login8 .rememberPwd .el-checkbox__label {
+      color: #0d79bd
+    }
+
+    .login8 .el-checkbox__input.is-checked .el-checkbox__inner {
+      background-color: #0d79bd !important;
+      border-color: #0d79bd !important
+    }
+  </style>
+</head>
+
+<body style="font-size: 12px;" inmaintabuse="1">
+  <div id="app">
+    <div class="body">
+      <div class="login-wrap login8" id="home">
+        <div class="login-heading"> 云平台登录</div>
+        <div class="login-container">
+          <div class="login-grid">
+            <div class="lou-pic"><img src="./assets/login_06/lou.png">
+            </div>
+            <ul class="piao-list clearfix">
+              <li><a><img src="assets/login_06/ball1.png"></a></li>
+              <li><a><img src="assets/login_06/ball2.png"></a></li>
+              <li><a><img src="assets/login_06/ball3.png"></a></li>
+              <li><a><img src="assets/login_06/ball4.png"></a></li>
+              <li><a><img src="assets/login_06/ball5.png"></a></li>
+            </ul>
+          </div>
+          <div class="login-main">
+            <div class="inner">
+              <div class="login-text wow fadeInDown" >用户登录
+              </div>
+              <div class="form">
+                <div class="form-row wow fadeInLeft" data-wow-delay="0.5s" >
+                  <div class="row-label">
+                     <img class="icon" src="assets/login_06/yonghu.svg" alt="">
+                  </div>
+                  <input type="text" placeholder="请输入用户名" class="form-control">
+                </div>
+                <div class="form-row wow fadeInRight" data-wow-delay="0.5s" >
+                  <div class="row-label">
+                     <img class="icon" src="assets/login_06/mima.svg" alt="">
+                  </div>
+                  <input type="password" placeholder="请输入密码" class="form-control">
+                </div>
+                <div class="forminput3 wow fadeInUp" data-wow-delay="1.2s" >
+                  <div class="rememberl">
+                    <div class="rememberPwd"><el-checkbox>记住密码</el-checkbox></div>
+                  </div>
+                  <div class="form-row form-row2 wow fadeInRight" ><span class="cur">忘记密码</span></div>
+                </div>
+                <div class="form-row form-foot text-center wow fadeInUp" >
+                  <button disabled="" type="button" class="btn btn-login-primary"> 登录
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // 初始化vue
+    new Vue({
+      el: '#app',
+      data: {},
+      methods: {},
+      mounted() {
+        // 初始化WOW.js
+        new WOW().init();
+      }
+    });
+  </script>
+</body>
+
+</html>

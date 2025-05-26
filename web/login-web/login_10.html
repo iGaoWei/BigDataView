@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-dpr="1" style="font-size: 191.2px;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <link rel="icon" type="image/svg+xml" href="assets/science.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>炫酷登录页面10</title>
+
+  <!-- 引入wow.js和animate.css：注意一定要引入3.3.1版本，因为4.1.1版本有问题（引入后没有任何动画效果）-->
+  <link rel="stylesheet" href="resources/animate@3.3.1/animate.min.css" />
+  <script src="resources/wow@1.1.2/wow.min.js"></script>
+
+  <!-- 引入vue和element  -->
+  <link rel="stylesheet" href="resources/element-ui@2.15.14/theme-chalk/index.css">
+  <script src="resources/vue@2.7.16/vue.js"></script>
+  <script src="resources/element-ui@2.15.14/index.js"></script>
+
+  <link rel="stylesheet" href="resources/rememberPwd-f8b5d577.css" />
+  <style type="text/css">
+    body {
+      background-size: 100% 100%;
+      height: 100vh;
+      margin: 0;
+    }
+    .login-container {
+      width: 86%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      position: relative
+    }
+
+    .login-container .leftImg,
+    .login-container .leftImg img {
+      width: 4.51042rem
+    }
+
+    .login-container .login-containerR {
+      width: 2.60417rem;
+      height: 2.91667rem;
+      background: #FFFFFF;
+      box-shadow: 0 .02083rem .25521rem #1b644a1a;
+      border-radius: .08333rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .login-wrap {
+      overflow: hidden;
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      background: url(assets/login_10/loginbg.jpg) no-repeat;
+      background-size: 100% 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .loginBody2 {
+      width: 2.01563rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start
+    }
+
+    .loginBody2Title {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      width: 100%;
+      align-content: flex-start;
+      padding-bottom: .20833rem
+    }
+
+    .loginBody2Title span {
+      font-size: .15625rem;
+      font-family: Source Han Sans CN;
+      font-weight: 700;
+      color: #333
+    }
+
+    .loginBody2Title p {
+      font-size: .11458rem;
+      font-family: Source Han Sans CN;
+      font-weight: 400;
+      color: #4577e0;
+      margin-left: .05208rem
+    }
+
+    .loginBut {
+      width: 2.01563rem;
+      height: .26042rem;
+      background: linear-gradient(90deg, #4A8FFF, #505DE0);
+      border-radius: .03125rem;
+      display: flex;
+      font-size: .125rem;
+      font-family: Source Han Sans CN;
+      font-weight: 700;
+      color: #fff;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      cursor: pointer;
+      margin-top: .26042rem
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      width: 2.08333rem;
+      align-items: center;
+      margin: 0 auto;
+      flex-wrap: nowrap;
+      margin-top: .15625rem;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .info .forget {
+      font-size: .07292rem;
+      font-family: Source Han Sans CN;
+      font-weight: 400;
+      color: #347cef
+    }
+
+    .loginInput {
+      width: 100%;
+      height: .36458rem;
+      border-bottom: 1px solid rgb(245, 245, 245);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .loginInput .icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      width: .23438rem;
+      height: .33333rem;
+      flex-direction: row;
+      align-content: flex-start;
+      flex-shrink: 0
+    }
+
+    .loginInput .icons img {
+      width: .07813rem
+    }
+
+    .loginInput input {
+      width: calc(100% - .10417rem);
+      position: relative;
+      height: 100%;
+      border: 0;
+      background: none;
+      font-size: .09375rem;
+      font-family: PingFang;
+      font-weight: 500;
+      outline: none;
+      color: #333
+    }
+
+    .loginInput:hover {
+      border-bottom: 1px solid rgb(220, 220, 220)
+    }
+
+    input::-webkit-input-placeholder {
+      color: #666
+    }
+
+    input::-moz-placeholder {
+      color: #666
+    }
+
+    input:-moz-placeholder {
+      color: #666
+    }
+
+    input:-ms-input-placeholder {
+      color: #666
+    }
+
+    .login20 .el-checkbox.is-checked .el-checkbox__input.is-checked .el-checkbox__inner,
+    .login20 .el-checkbox.is-checked .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+      background-color: #347cef !important;
+      border-color: #3d80f4 !important
+    }
+
+    .login20 .el-checkbox__label {
+      font-size: .09375rem;
+      font-family: Source Han Sans CN;
+      font-weight: 400;
+      color: #347cef !important
+    }
+  </style>
+</head>
+
+<body style="font-size: 12px;" inmaintabuse="1">
+  <div id="app">
+    <div class="body">
+      <div class="login-wrap login20" id="home">
+        <div class="login-container">
+          <div class="leftImg wow fadeInLeft" ><img src="assets/login_10/leftImg.png" alt=""></div>
+          <div class="login-containerR">
+            <div class="loginBody2">
+              <div class="loginBody2Title wow fadeInDown" data-wow-delay="0.5s" ><span>登录</span>
+                <p>SIGN IN</p>
+              </div>
+              <div class="loginInput wow fadeInLeft" data-wow-delay="1s" >
+                <div class="icons"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAXCAYAAAA7kX6CAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMC1jMDAwIDc5LjE3MWMyN2ZhYiwgMjAyMi8wOC8xNi0yMjozNTo0MSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI0LjAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzdBNDBCMEJFMzAzMTFFRDhDQURFQUVCQzIxRUE0NTMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzdBNDBCMENFMzAzMTFFRDhDQURFQUVCQzIxRUE0NTMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3N0E0MEIwOUUzMDMxMUVEOENBREVBRUJDMjFFQTQ1MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3N0E0MEIwQUUzMDMxMUVEOENBREVBRUJDMjFFQTQ1MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuDYqI8AAACfSURBVHjaYnQtfyDDwMAwD4idgJiZAT/4C8T7gDiJBUgsBmIHBuIAyGBXkB4mEjQhAwcWJE4EEN8koEEdiFeAGMgaQZouEGslEwOZYFTjqEY6a0RO5CZALEBAvQo2jbPRFH2A0gKkOPUgEEtB8UFSNO4G4u9QvBuXxv1YxNOA2A6K07DI7wdpjAPiHUD8B0lCDurEg1A2DPyBqo0DCDAAs0garGm8nKoAAAAASUVORK5CYII=" alt=""></div><input type="text" placeholder="用户名">
+              </div>
+              <div class="loginInput wow fadeInRight" data-wow-delay="1.5s" >
+                <div class="icons"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAVCAYAAACZm7S3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMC1jMDAwIDc5LjE3MWMyN2ZhYiwgMjAyMi8wOC8xNi0yMjozNTo0MSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI0LjAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTIwMjM3MjBFMzA0MTFFRDhDQURFQUVCQzIxRUE0NTMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTIwMjM3MjFFMzA0MTFFRDhDQURFQUVCQzIxRUE0NTMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3N0E0MEIxMUUzMDMxMUVEOENBREVBRUJDMjFFQTQ1MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3N0E0MEIxMkUzMDMxMUVEOENBREVBRUJDMjFFQTQ1MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pk9PUd8AAAETSURBVHjaYnQtf8CABoKAuACITYGYDYhvAfF8IO4H4t/ICpnQNDYA8VogtgViRiD+CsQaQNwJxGuAmBmXZgMgrgPiH0AcA8S8QMwHxCZAfBeI/YA4HpfmVKhtrUC8FMmJZ4E4DsrOx6XZHEqvZMAEx4D4ERDrAbEQNs3yQPwHiG8zYAc3oLQyTIAFSZIVGkC4wHkg5gHi/9g0EwIV6AIwzdbQOAWBBCIMugnEx0Gam4C4FkliPpEuqQcFWAkDeaACpJmTTM2cTHgknwHxTCiNFeDT7APEGVCaZM3foPR3cjR3Qekp5Gjmh9Ii5GhWB2IrIJbEpQBf8pQA4qP44gpk8z0y4/kOE7TUuEWiRpD6WIAAAwCaICwC16UHNAAAAABJRU5ErkJggg==" alt=""></div><input type="password" placeholder="密码">
+              </div>
+              <div class="info">
+                <div class="rememberPwd wow fadeInLeft" data-wow-delay="2s" ><el-checkbox>记住密码</el-checkbox></div>
+                <div class="forget wow fadeInRight" data-wow-delay="2s" >忘记密码？</div>
+              </div>
+              <div class="loginBut wow fadeInUp" data-wow-delay="2.5s" > 登 录 </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // 初始化vue
+    new Vue({
+      el: '#app',
+      data: {},
+      methods: {},
+      mounted() {
+        // 初始化WOW.js
+        new WOW().init();
+      }
+    });
+  </script>
+</body>
+
+</html>

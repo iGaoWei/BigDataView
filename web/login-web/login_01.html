@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" data-dpr="1" style="font-size: 191.2px;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="icon" type="image/svg+xml" href="assets/science.svg">
+  <title>炫酷登录页面1</title>
+
+  <!-- 引入wow.js和animate.css：注意一定要引入3.3.1版本，因为4.1.1版本有问题（引入后没有任何动画效果）-->
+  <link rel="stylesheet" href="resources/animate@3.3.1/animate.min.css" />
+  <script src="resources/wow@1.1.2/wow.min.js"></script>
+
+  <!-- 引入vue和element  -->
+  <link rel="stylesheet" href="resources/element-ui@2.15.14/theme-chalk/index.css">
+  <script src="resources/vue@2.7.16/vue.js"></script>
+  <script src="resources/element-ui@2.15.14/index.js"></script>
+
+
+  <link rel="stylesheet" href="resources/rememberPwd.css" />
+  <style type="text/css">
+    body {
+      background: url(assets/login_01/login_bg_01.jpg) center center no-repeat;
+      background-size: 100% 100%;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .loginBody {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loginBody .loginBodyCenter {
+      width: calc(100% - 1.45833rem);
+      position: relative;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      align-content: flex-start;
+      z-index: 10
+    }
+
+    .loginTitle {
+      margin-bottom: .075rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: flex-start
+    }
+
+    .loginTitle p {
+      font-size: .21875rem;
+      font-family: AlibabaPuHuiTiB;
+      font-weight: 700;
+      color: #c0efff;
+      letter-spacing: .02604rem;
+      background: linear-gradient(0deg, #C2F0FF 0%, #DEF7FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent
+    }
+
+    .loginBody .loginForm {
+      background: url(assets/login_01/login_bg_02.png) no-repeat;
+      width: 2.60417rem;
+      height: 2.42188rem;
+      background-size: 100% 100%
+    }
+
+    .loginFormTitle {
+      font-size: .16667rem;
+      font-family: PingFang;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+      align-content: flex-start;
+      padding-top: .3125rem;
+      padding-bottom: .20833rem
+    }
+
+    .loginFormInput {
+      width: 2.08333rem;
+      height: .28125rem;
+      background: rgba(0, 168, 255, .1);
+      border: 1px solid #00C0FF;
+      margin: 0 auto .10417rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+
+      align-content: flex-start
+    }
+
+    .loginFormInput .el-form-item__content {
+      width: 100% !important;
+    }
+
+    .loginFormInput .el-input__prefix {
+      font-size: 18px;
+      color: #FFF;
+    }
+
+    .loginFormInput .el-input--prefix .el-input__inner {
+      padding-left: 35px !important;
+    }
+
+    .loginFormInput input {
+      width: 100%;
+      position: relative;
+      height: 100%;
+      border: 0;
+      background: none;
+      font-size: .08333rem;
+      font-family: PingFang;
+      font-weight: 500;
+      outline: none;
+      color: #fff
+    }
+
+    .remember-forget {
+      display: flex;
+      justify-content: space-between;
+      width: 2.08333rem;
+      align-items: center;
+
+      margin: 0 auto .10417rem;
+
+      align-content: flex-start
+    }
+
+    .remember-forget .forgetPwd {
+      font-size: .07292rem;
+      font-family: PingFang;
+      font-weight: 500;
+      color: #00b8ff
+    }
+
+    .loginBtn {
+      width: 2.08333rem;
+      height: .28125rem;
+      background: linear-gradient(0deg, #0060FF, #0096FF);
+      font-size: .10417rem;
+      font-family: PingFang;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+      align-content: flex-start;
+      cursor: pointer;
+      margin: .20833rem auto 0;
+    }
+  </style>
+</head>
+
+<body style="font-size: 12px;" inmaintabuse="1">
+  <div id="app">
+    <div class="loginBody">
+      <div class="loginBodyCenter">
+        <div class="loginTitle wow fadeInDown">
+          <p>xx数据大屏登录</p>
+        </div>
+        <el-form :model="loginForm" ref="loginForm" class="loginForm">
+          <div class="loginFormTitle  wow fadeInDown">用户登录</div>
+          <el-form-item prop="username" class="loginFormInput wow fadeInLeft">
+            <el-input prefix-icon="el-icon-s-custom" v-model="loginForm.username" placeholder="用户名"></el-input>
+          </el-form-item>
+          <el-form-item prop="password" class="loginFormInput wow fadeInRight">
+            <el-input prefix-icon="el-icon-lock" type="password" v-model="loginForm.password" placeholder="密码" show-password></el-input>
+          </el-form-item>
+          <div class="remember-forget">
+            <div class="rememberPwd">
+              <el-checkbox>记住密码</el-checkbox>
+            </div>
+            <div class="forgetPwd wow fadeInRight">忘记密码？
+            </div>
+          </div>
+          <el-form-item>
+            <el-button type="primary" class="loginBtn wow fadeInUp" @click="submitForm">登录</el-button>
+          </el-form-item>
+        </el-form>
+      </div>
+    </div>
+  </div>
+  <script>
+    // 初始化vue
+    new Vue({
+      el: '#app',
+      data: {
+        loginForm: {
+          username: '',
+          password: '',
+          rememberMe: false,
+          captcha: ''
+        }
+      },
+      methods: {
+        submitForm() {
+          this.$refs.loginForm.validate((valid) => {
+            if (valid) {
+              alert('提交成功!');
+            } else {
+              console.log('error submit!!');
+              return false;
+            }
+          });
+        },
+        refreshCaptcha() {
+          // 刷新验证码逻辑，例如更换验证码URL
+          // this.captchaSrc = 'new_captcha_url_here';
+          alert('验证码刷新');
+        }
+      },
+      mounted() {
+        // 初始化WOW.js
+        new WOW().init();
+      }
+    });
+  </script>
+</body>
+
+</html>

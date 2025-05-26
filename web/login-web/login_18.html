@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" data-dpr="1" style="font-size: 191.2px;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <link rel="icon" type="image/svg+xml" href="assets/science.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>炫酷登录页面18</title>
+
+  <!-- 引入wow.js和animate.css：注意一定要引入3.3.1版本，因为4.1.1版本有问题（引入后没有任何动画效果）-->
+  <link rel="stylesheet" href="resources/animate@3.3.1/animate.min.css" />
+  <script src="resources/wow@1.1.2/wow.min.js"></script>
+
+  <!-- 引入vue和element  -->
+  <script src="resources/vue@2.7.16/vue.js"></script>
+
+  <style type="text/css">
+    body {
+      background-size: 100% 100%;
+      height: 100vh;
+      margin: 0;
+    }
+    .pedestalBody {
+      width: calc(100% + -0px);
+      margin: 0 auto;
+      height: calc(100% + -0px);
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start;
+      background: url(assets/login_18/xingqiu-c844cea3.png) center center no-repeat;
+      background-size: 3.16667rem 2.92708rem
+    }
+
+    .pedestalBody .qipao1 {
+      background: url(assets/login_18/qipao1-877f2558.png) center center no-repeat;
+      width: .78125rem;
+      height: .79167rem;
+      animation: pieMove-768b6c39 5s ease-in 0s infinite alternate;
+      background-size: 100% 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      position: absolute;
+      top: 48%;
+      left: 38%
+    }
+
+    .pedestalBody .qipao1 span {
+      font-size: .13542rem;
+      font-family: PingFang;
+      font-weight: 800;
+      color: #fff;
+      text-align: center;
+      margin-right: .05208rem;
+      line-height: .15625rem
+    }
+
+    .pedestalBody .qipao2 {
+      background: url(assets/login_18/qipao2-bf020116.png) center center no-repeat;
+      width: .57813rem;
+      height: .57813rem;
+      background-size: 100% 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      position: absolute;
+      top: 10%;
+      left: 25%
+    }
+
+    .pedestalBody .qipao2 span {
+      font-size: .11458rem;
+      font-family: PingFang;
+      font-weight: 800;
+      color: #fff;
+      text-align: center;
+      margin-right: .05208rem;
+      line-height: .15625rem
+    }
+
+    .pedestalBody .qipao3 {
+      background: url(assets/login_18/qipao2-bf020116.png) center center no-repeat;
+      width: .6875rem;
+      height: .6875rem;
+      background-size: 100% 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      position: absolute;
+      top: 30%;
+      left: 13%
+    }
+
+    .pedestalBody .qipao3 span {
+      font-size: .13021rem;
+      font-family: PingFang;
+      font-weight: 800;
+      color: #fff;
+      text-align: center;
+      margin-right: .05208rem;
+      line-height: .15625rem
+    }
+
+    .pedestalBody .qipao4 {
+      background: url(assets/login_18/qipao2-bf020116.png) center center no-repeat;
+      width: .6875rem;
+      height: .6875rem;
+      background-size: 100% 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      position: absolute;
+      top: 48%;
+      left: 13%
+    }
+
+    .pedestalBody .qipao4 span {
+      font-size: .13021rem;
+      font-family: PingFang;
+      font-weight: 800;
+      color: #fff;
+      text-align: center;
+      margin-right: .05208rem;
+      line-height: .15625rem
+    }
+
+    .pedestalBody .qipao5 {
+      background: url(assets/login_18/qipao2-bf020116.png) center center no-repeat;
+      width: .625rem;
+      height: .63542rem;
+      background-size: 100% 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      position: absolute;
+      top: 65%;
+      left: 55%
+    }
+
+    .pedestalBody .qipao5 span {
+      font-size: .10417rem;
+      font-family: PingFang;
+      font-weight: 800;
+      color: #fff;
+      text-align: center;
+      margin-right: .05208rem;
+      line-height: .15625rem
+    }
+
+    .pedestalBody .qipao6 {
+      background: url(assets/login_18/qipao2-bf020116.png) center center no-repeat;
+      width: .72917rem;
+      height: .73958rem;
+      background-size: 100% 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      position: absolute;
+      top: 47%;
+      left: 65%
+    }
+
+    .pedestalBody .qipao6 span {
+      font-size: .10417rem;
+      font-family: PingFang;
+      font-weight: 800;
+      color: #fff;
+      text-align: center;
+      margin-right: .05208rem;
+      line-height: .15625rem
+    }
+
+    .pedestalBody .qipao7 {
+      background: url(assets/login_18/qipao2-bf020116.png) center center no-repeat;
+      width: .67708rem;
+      height: .6875rem;
+      background-size: 100% 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      position: absolute;
+      top: 62%;
+      left: 70%
+    }
+
+    .pedestalBody .qipao7 span {
+      font-size: .10417rem;
+      font-family: PingFang;
+      font-weight: 800;
+      color: #fff;
+      text-align: center;
+      margin-right: .05208rem;
+      line-height: .15625rem
+    }
+
+    @keyframes pieMove-768b6c39 {
+      0% {
+        transform: translate(0)
+      }
+
+      25% {
+        transform: translate(.02604rem, -.02083rem)
+      }
+
+      50% {
+        transform: translate(.01042rem, .02604rem)
+      }
+
+      75% {
+        transform: translate(.02604rem)
+      }
+
+      to {
+        transform: translateY(.02604rem)
+      }
+    }
+
+    .gridView {
+      position: absolute;
+      background: url(assets/login_18/back.png);
+      background-size: 100% 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      min-height: .41667rem;
+      min-width: 1.30208rem;
+      bottom: 0;
+      right: 0;
+      z-index: 0;
+      pointer-events: none
+    }
+
+    .gridView .gLeftTop {
+      background: url(assets/login_18/left-top.png) no-repeat;
+      background-size: 100% 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: .08333rem;
+      height: .07813rem
+    }
+
+    .gridView .gRightTop {
+      background: url(assets/login_18/right-top.png) no-repeat;
+      background-size: 100% 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: .08333rem;
+      height: .07813rem
+    }
+
+    .gridView .gLeftBottom {
+      background: url(assets/login_18/left-bottom.png) no-repeat;
+      background-size: 100% 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: .08333rem;
+      height: .07813rem
+    }
+
+    .gridView .gRightBottom {
+      background: url(assets/login_18/right-bottom.png) no-repeat;
+      background-size: 100% 100%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: .08333rem;
+      height: .07813rem
+    }
+
+    .item1Body {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .item1Body .item1BodyInner {
+      border: 1px solid rgba(26, 71, 166, .66);
+      width: calc(100% + -0px);
+      height: calc(100% + -0px);
+      position: relative;
+      z-index: 1
+    }
+
+    .pageBg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background: url(assets/login_18/bg-4bf14bc8.jpg) no-repeat;
+      background-size: 100% 100%;
+      z-index: 0
+    }
+
+    .loginPage {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start;
+      z-index: 1
+    }
+
+    .loginPageMain {
+      width: 86%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: .15625rem auto;
+      height: 4.16667rem;
+      flex-direction: row;
+      align-content: flex-start;
+      position: relative
+    }
+
+    .loginPageMain .loginBody {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start;
+      width: 2.75rem;
+      height: 2.63021rem;
+      position: relative
+    }
+
+    .loginPageMain .loginPageMainl {
+      width: 4.16667rem;
+      position: relative;
+      height: 100%
+    }
+
+    .loginPageMain .loginPageMainR {
+      display: flex;
+      width: 3.125rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start
+    }
+
+    .loginBody2 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start
+    }
+
+    .loginBody2Title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start;
+      margin-bottom: .10417rem;
+      padding-top: .25rem
+    }
+
+    .loginBody2Title span {
+      font-size: .16146rem;
+      font-family: MicrosoftYaHei;
+      font-weight: 700;
+      color: #fff
+    }
+
+    .loginBut {
+      width: 2.09375rem;
+      height: .29167rem;
+      background: #009CFF;
+      box-shadow: 0 .03646rem .03125rem #0000004d;
+      border-radius: .03125rem;
+      font-size: .11458rem;
+      font-family: PingFang;
+      font-weight: 800;
+      margin-top: .17708rem;
+      color: #fff;
+      letter-spacing: .10417rem;
+      text-indent: .10417rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      cursor: pointer
+    }
+
+    .loginInput {
+      width: 2.09375rem;
+      height: .44792rem;
+      border-bottom: 1px solid rgba(156, 178, 249, .3);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .loginInput .icon {
+      width: .3125rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      flex-shrink: 0
+    }
+
+    .loginInput .icon img {
+      height: .125rem
+    }
+
+    .loginInput input {
+      width: calc(100% + -0px);
+      position: relative;
+      height: 100%;
+      border: 0;
+      background: none;
+      font-size: .09375rem;
+      font-family: PingFang;
+      font-weight: 500;
+      outline: none;
+      color: #fff
+    }
+
+    input::-webkit-input-placeholder {
+      color: #a8b7e7
+    }
+
+    input::-moz-placeholder {
+      color: #a8b7e7
+    }
+
+    input:-moz-placeholder {
+      color: #a8b7e7
+    }
+
+    input:-ms-input-placeholder {
+      color: #a8b7e7
+    }
+
+
+    .pageTitle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      font-size: .34896rem;
+      font-family: YouSheBiaoTiHei;
+      font-weight: 400;
+      color: #fff;
+      position: relative;
+      z-index: 1;
+      padding-top: .625rem
+    }
+
+    .login28 .el-checkbox.is-checked .el-checkbox__input.is-checked .el-checkbox__inner,
+    .login28 .el-checkbox.is-checked .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+      background-color: #55b6f4 !important;
+      border-color: #55b6f4 !important
+    }
+
+    .login28 .el-checkbox__label {
+      font-size: .09375rem;
+      font-family: Source Han Sans CN;
+      font-weight: 400;
+      color: #55b6f4 !important
+    }
+  </style>
+</head>
+
+<body style="font-size: 12px;" inmaintabuse="1">
+  <div id="app">
+    <div class="body">
+      <div class="loginPage login28" id="home">
+        <div class="pageBg"></div>
+        <div class="pageTitle wow fadeInDown" ><span>基层治理综合服务平台</span></div>
+        <div class="loginPageMain">
+          <div class="loginPageMainl">
+            <div class="pedestalBody wow fadeInLeft" >
+              <div class="qipao qipao1"><span>党建<br>领航</span>
+              </div>
+              <div class="qipao qipao2"><span>凝心<br>聚力</span>
+              </div>
+              <div class="qipao qipao3"><span>乡村<br>振兴</span>
+              </div>
+              <div class="qipao qipao4"><span>产业<br>集群</span>
+              </div>
+              <div class="qipao qipao5"><span>幸福<br>生活</span>
+              </div>
+              <div class="qipao qipao6"><span>有效<br>治理</span>
+              </div>
+              <div class="qipao qipao7"><span>便民<br>服务</span>
+              </div>
+            </div>
+          </div>
+          <div class="loginPageMainR">
+            <div class="loginBody wow fadeInUp" >
+              <div class="item1Body">
+                <div class="gridView">
+                  <div class="gLeftTop"></div>
+                  <div class="gRightTop"></div>
+                  <div class="gLeftBottom"></div>
+                  <div class="gRightBottom"></div>
+                </div>
+                <div class="item1BodyInner">
+                  <div class="loginBody2">
+                    <div class="loginBody2Title" data-wow-delay="0.5s"><span>您好，欢迎登录！</span></div>
+                    <div class="loginInput wow fadeInRight" data-wow-delay="0.9s" >
+                      <div class="icon"><img src="assets/login_18/icon-user.png" alt=""></div><input type="text" placeholder="请输入账号">
+                    </div>
+                    <div class="loginInput wow fadeInRight" data-wow-delay="1.2s" >
+                      <div class="icon"><img src="assets/login_18/icon-password.png" alt=""></div><input type="password" placeholder="请输入密码">
+                    </div>
+                    <div class="loginInput wow fadeInRight" data-wow-delay="1.5s" >
+                      <div class="icon"><img src="assets/login_18/icon-capcha.png" alt=""></div><input type="password" placeholder="请输入验证码">
+                    </div>
+                    <div class="loginBut wow fadeInUp" data-wow-delay="1.5s" > 登 录 </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // 初始化vue
+    new Vue({
+      el: '#app',
+      data: {},
+      methods: {},
+      mounted() {
+        // 初始化WOW.js
+        new WOW().init();
+      }
+    });
+  </script>
+</body>
+
+</html>

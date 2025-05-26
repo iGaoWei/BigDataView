@@ -1,0 +1,21 @@
+.rememberPwd {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: flex-start
+}
+
+.rememberPwd .el-checkbox.is-checked {
+    color: #24cdff
+}
+
+.rememberPwd .el-checkbox.is-checked .el-checkbox__input.is-checked .el-checkbox__inner, .rememberPwd .el-checkbox.is-checked .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+    background-color: #24cdff;
+    border-color: #24cdff
+}
+
+.rememberPwd .el-checkbox__label {
+    color: #24cdff
+}

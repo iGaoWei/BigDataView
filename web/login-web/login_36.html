@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" data-dpr="1" style="font-size: 191.2px;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <link rel="icon" type="image/svg+xml" href="assets/science.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>炫酷登录页面36</title>
+
+  <!-- 引入wow.js和animate.css：注意一定要引入3.3.1版本，因为4.1.1版本有问题（引入后没有任何动画效果）-->
+  <link rel="stylesheet" href="resources/animate@3.3.1/animate.min.css" />
+  <script src="resources/wow@1.1.2/wow.min.js"></script>
+
+  <!-- 引入vue和element  -->
+  <link rel="stylesheet" href="resources/element-ui@2.15.14/theme-chalk/index.css">
+  <script src="resources/vue@2.7.16/vue.js"></script>
+  <script src="resources/element-ui@2.15.14/index.js"></script>
+  <style type="text/css">
+    body {
+      background-size: 100% 100%;
+      height: 100vh;
+      margin: 0;
+    }
+    @font-face {
+      font-family: HuXiaoBo;
+      src: url(fonts/HuXiaoBoNanShenTi.otf)
+    }
+
+    .login-container {
+      width: 90%;
+      height: 3.22917rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+
+    .login-container .login-containerR {
+      height: 4.17188rem;
+      width: 3.09896rem;
+      background: url(assets/login_36/loginbg2-1360cc15.png) no-repeat;
+      background-size: 100% 100%;
+      margin-right: 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .login-wrap {
+      overflow: hidden;
+      height: 100vh;
+      width: 100%;
+      background: url(assets/login_36/loginbg-987f33b6.png) no-repeat;
+      background-size: 100% 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .loginBody2 {
+      width: 2.29167rem;
+      height: 2.76042rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start
+    }
+
+
+    .loginBody2Title {
+      font-size: .16667rem;
+      font-family: PingFang;
+      font-weight: 800;
+      color: #3d80f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      padding-bottom: .26042rem
+    }
+
+    .loginBody2Title span {
+      font-size: .20833rem;
+      font-family: HuXiaoBo;
+      font-weight: 400;
+      color: #e8f5ff;
+      line-height: .16667rem
+    }
+
+    .loginBut {
+      width: 1.97917rem;
+      height: .30208rem;
+      background: #176CCB;
+      font-family: PingFang;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      font-size: .125rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      margin: 0 auto;
+      cursor: pointer;
+      margin-top: .20833rem
+    }
+
+
+    .loginInput2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      width: 1.97917rem;
+      height: .30208rem;
+      margin-top: .05208rem
+    }
+
+    .yzm {
+      width: .83333rem;
+      height: .30208rem;
+      flex-shrink: 0;
+      background: rgba(24, 51, 113, .2);
+      border: 1px solid #154a7f;
+      margin-bottom: .13542rem;
+      margin-left: .05208rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .loginInput {
+      width: 1.97917rem;
+      height: .30208rem;
+      background: rgba(24, 51, 113, .2);
+      border: 1px solid #154a7f;
+      margin-bottom: .13542rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .loginInput .icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      width: .30208rem;
+      height: .27083rem;
+      margin-left: .01563rem;
+      background: rgba(0, 108, 198, .5);
+      flex-direction: row;
+      align-content: flex-start;
+      flex-shrink: 0
+    }
+
+    .loginInput .icons img {
+      height: .14583rem
+    }
+
+    .loginInput input {
+      width: calc(100% - .10417rem);
+      margin-left: .05208rem;
+      position: relative;
+      height: 100%;
+      border: 0;
+      background: none;
+      font-size: .08333rem;
+      font-family: PingFang;
+      font-weight: 500;
+      outline: none;
+      color: #cfe9ff
+    }
+
+    input::-webkit-input-placeholder {
+      color: #cfe9ff99
+    }
+
+    input::-moz-placeholder {
+      color: #cfe9ff99
+    }
+
+    input:-moz-placeholder {
+      color: #cfe9ff99
+    }
+
+    input:-ms-input-placeholder {
+      color: #cfe9ff99
+    }
+
+    .el-checkbox__inner {
+      border: 1px solid rgb(12, 160, 237)
+    }
+
+    .el-checkbox__label {
+      font-size: .07292rem;
+      font-family: PingFang;
+      font-weight: 500;
+      color: #3d80f4 !important
+    }
+  </style>
+</head>
+
+<body style="font-size: 12px;" inmaintabuse="1">
+  <div id="app">
+    <div class="body">
+      <div class="login-wrap" id="home">
+        <div class="login-container wow fadeInDown" >
+          <div class="login-containerR">
+            <div class="loginBody2">
+              <div class="loginBody2Title wow fadeInDown" data-wow-delay="0.3s" ><span>Hello,欢迎登录后台</span></div>
+              <div class="loginInput wow fadeInLeft" data-wow-delay="0.6s" >
+                <div class="icons"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMC1jMDAwIDc5LjE3MWMyN2ZhYiwgMjAyMi8wOC8xNi0yMjozNTo0MSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI0LjAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MzgxQ0QwNDVERDg2MTFFREI2M0FGN0MxQTlDNDhGRkUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MzgxQ0QwNDZERDg2MTFFREI2M0FGN0MxQTlDNDhGRkUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDozODFDRDA0M0REODYxMUVEQjYzQUY3QzFBOUM0OEZGRSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDozODFDRDA0NEREODYxMUVEQjYzQUY3QzFBOUM0OEZGRSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Ph7gQcMAAAJmSURBVHjatJbbS1RRFIfPOU7jpEfKSyXZDQy0Iq2IyMroYjfR5+qtIHrx7/C9l/4CH3ztRaQeiii64SWKKLAouyFCJWaijjJ9C34P43jOmXOGccH3smf2/q2111p7HXdkKucUMRdq4TxcgoOwWeszMAJD8Bjmog5KOcWtGg5DF3TCTtio3xagCpbgF7zWWklivkRuwimoK/g9AwdgCzTAADyB+aRidk1H4TZcKeLUVrgKG+AvPIc1+fEiDmiCy7q6OGaOn4ZzsC3oD1Fie5Qr34lvjXBIeY0tVgG7wjwsYk0Sq4grZtVWrwJIar6KJaO8R4q58ioV5F0MsyJJx40sp9L9E9UzETannpsvrMiwa8zCd21KalPwFZaTVOMneJswull4A1+Slv5nuA8vgxo05PpfwEP4Ucpz9UDXkVXDpiPyZI7dhaelvI1p/W6vej+Mwgk1u69bsadpAh7BMHzUulXiypoyDxkxVXqmjqgq7XFdlJCNmO061AphHCahBjo0JcZ1/QtRkbnaZBHcgm74B/dgEMbgnZrWvPypfcfhmiZEpaK06F7lz7hCsUrlpk+CGa1dhzZ5O6k8rujAFo2f5rwXp1sR3oFnyvkqMYvqGNzQZj9vvVrjpll5WlZktn9TwJyzyX5GrTCra10ltgN64GLIS+/pvayP2XP26dALH9RGM15e5XXImxqnfFarmXjSAkjJ491wFlqd8pvNtwsw7anMTWR/wkEZ1+ym2u1bxZNyu74j3HUQc1UPrSl9zLQFVFQ5zc5uMbF9sFfh5tYpMuu/BhN7r7zVqSqzZRYzod/w7b8AAwAydHNap0MUdQAAAABJRU5ErkJggg==" alt=""></div>
+                <input type="text" placeholder="用户名">
+              </div>
+              <div class="loginInput wow fadeInRight" data-wow-delay="0.9s" >
+                <div class="icons"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAcCAYAAACUJBTQAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMC1jMDAwIDc5LjE3MWMyN2ZhYiwgMjAyMi8wOC8xNi0yMjozNTo0MSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI0LjAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTBFNDg1NDRERDg2MTFFREI2M0FGN0MxQTlDNDhGRkUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFNDg1NDVERDg2MTFFREI2M0FGN0MxQTlDNDhGRkUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1MEU0ODU0MkREODYxMUVEQjYzQUY3QzFBOUM0OEZGRSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1MEU0ODU0M0REODYxMUVEQjYzQUY3QzFBOUM0OEZGRSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Puudv4sAAAJoSURBVHjatNVbaxNBGMbx3WwaI9ak2nqi4qkeUVFUVAS1gqAXIgiC2oIHBO+88mP4CbwU0StvRVFBEESEiiCIR0RrtQ2ea6NJ0834H3gWltjd7GIy8KOUzMw7874zs+7QmHFiWgfW4xgOYQVyqOMjbuIqhjAZNUnWiW+LsAv9WNvQfzl24y2+4zWm0gbZiLPaQZ9WaldfRQbz1Oc8VuMyHsIkDbIS53AaM3APDzACHy7mYq92eRKdCvBI6YwMYgd3YxAD8HANV5T3cfUJ6nUfwziBo/iGUbyLC2JXvQVHtNLruIhnoT5BOqpKzxfNcwb7tePh8G4yDUHyWIfF+IS7eNXkcIzhlgrfi+1YGJ67MUi3iljABzxHrUmQMp7gqRZpj/x8pfqfIEE9erVVG+Sz07zZvj9QUip7UIzaiav/7WX7ja8qdJJmdEfqoXnMdEFsh59SlT8Jg0wqrTWNq4SDZJX/KZ3/maEf7UmbhV/q50VM7uuO5LQLT7XJBfW0gy/ox5JOxSrMVgGP64h2hI67CaW3qgXaWm7SwmxNDupC23FllwcyWOmo0tejHYyr8MEzkpkmSFCHvE5UQSku6W+XnccGMU6bW8ZpfzNpg9j78B4TKcb42RSd3+AOXupV2IM1Km5sSxrEvq43cAkvsEwfqlN65/67JkYT39YujFL2WE9Pywpf1NPvhQIXdAlbFmQpDmCDxmzGPixpVRBXK96qgtsx27BTO2zpPamL0YuQb8dlrOkT4Os9KycdmOaeLMBhHdkdmJN0I2nfLl+3vTPi6Y/cSUX5rTTp66l/seFb4saMsfNO/BVgAAC6n64Q3TPBAAAAAElFTkSuQmCC" alt=""></div>
+                <input type="password" placeholder="密码">
+              </div>
+              <div class="loginInput2">
+                <div class="loginInput wow fadeInLeft" data-wow-delay="1.2s" >
+                  <div class="icons"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAcCAYAAABlL09dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMC1jMDAwIDc5LjE3MWMyN2ZhYiwgMjAyMi8wOC8xNi0yMjozNTo0MSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI0LjAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTBFNDg1NDhERDg2MTFFREI2M0FGN0MxQTlDNDhGRkUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFNDg1NDlERDg2MTFFREI2M0FGN0MxQTlDNDhGRkUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1MEU0ODU0NkREODYxMUVEQjYzQUY3QzFBOUM0OEZGRSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1MEU0ODU0N0REODYxMUVEQjYzQUY3QzFBOUM0OEZGRSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqTxR8kAAAGwSURBVHjatNZPKINxHMfxbeZPxEGLgyKScHJZIVKKHBS5OIwbOTo5KRfFdRxxEUkuXLRSO/hX/h0VO4icNnKzsWZ4f+unHk97tt+2Z796taff83s++z3P8/v+NudN+Meh2YrQhTOdwS7N0CoEcIpZO4JrMIdHDKg+P64xArfVhU4eRROfSRSjAnXoUEFy66VpvjiMc3U3D3jBJxISHOegxGFvi7nUS7G7lUlwrADBUZejQM2u4KTdwQkMow/fxhPuPEKlAgfxgaB5krnOeBm9KlTWcr95QC4z9mFHHT+hVvflvWMe46alKMc9hlCpuAarb08141csqeMLHMMDL+5V/zq6My03p6mvESHU4xmtaDaEjmJKZx07U/S34FbNUvaSiOqvxq5ugcQtzlXiCkOGvpUMu92/4FCGMQG1tOTtT+j+2kjwpsbAE/VodFu5BG9rDvZkERyU4ChmbN7cfH8FspbFzDM12ZQixsqbxEaeoVKth6lKelr3593U7tCJvXR7xSrasK8R+IVFtONSZ9uU8h1TxXFgsVH5VakvWP2v0LlVr3oHEnSELbylu+BXgAEAtMpXESB/exYAAAAASUVORK5CYII=" alt=""></div>
+                  <input type="text" placeholder="验证码">
+                </div>
+                <div class="yzm wow fadeInRight" data-wow-delay="1.2s" ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAdCAYAAABcz8ldAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMC1jMDAwIDc5LjE3MWMyN2ZhYiwgMjAyMi8wOC8xNi0yMjozNTo0MSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI0LjAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTBFNDg1NENERDg2MTFFREI2M0FGN0MxQTlDNDhGRkUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjJDRTQ0QzhERDg2MTFFREI2M0FGN0MxQTlDNDhGRkUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1MEU0ODU0QUREODYxMUVEQjYzQUY3QzFBOUM0OEZGRSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1MEU0ODU0QkREODYxMUVEQjYzQUY3QzFBOUM0OEZGRSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PpBfGv8AAAP7SURBVHja7FrdcZtAEAYN75IrEKpAcgEZowqCH/MkuQIpFViuwHIFRk95NKkgaFKAUQVBHUAFya1nz7Pe8HMHB0Ie3QwjOJBm977db789ZFuX0dn48uPvSHzMxOHiVPL7mx3RZ+zLMnUCBICwEcfXnNuZOLYCmM0FkO7AeFV49AFAsT+Jwz6bDoVzcU/s88THL8yEAGzDWzC/FMeYPD6xzxwMcHBRcPtJgLLuCSBbWHweJOIe1JI/ZOp28InAgAg8kuuVeCbCQnrKkUA25GWsmIN7OzI1cpiTPqbSjExHfaIAtHNNwMgwAqEwphiRAVLBjTjWWFBPMnDRlcGziRyDhZ+WPNwLCkB7I1zstzQXdoXsPnDzM14exX23xzIYABvi1NUAi2LCwIDU37Pvr5Am+jBkBmccDIzKgNDXuMfMGxAwQGWlA1QocvJJHNcQUeKA1L+CB8kPLBDAU48h4eeqcehxDZR9yV72IQ7hYZ93jYAY8C+CIL8MAMY1jfCwRlnSgJrjJ9ozhd/kdmMtHJMaqGKbSzpoC89dlpUjdj2U/YPmOixJDTxQ2e7g4noVRXtLAPEaLCQ4dI/nm4apLu3ZgoPSfgR9QwJNlWahPq466pueWSKk74DkcXCLIzWkXELh2Hdx+oi171VcH/H3aS30NNRhnm1HRosJu45rsAUVRkuuwhyNyLY0eFtJYdDIqAEKZEZKom3MCniGlBNrZF0X8t6lgcVvqjaGPosKk0qpLqA+UmlZ4X9RVYYQqR33Wlne5EDBcY91xGGDqI4MZReA+UIlIyhC8fs2HOL8jjgMyvBkjWFB5/4WMHmK1VZwPGJaeaOxaJTqpBi4J+oiJZQouX9eBRxrDO+w76iyfaLZNZf58OEaWwRtpQk0qVxD8IshcWinKe+Cis5/WjM7XALGIQ8MXKQY6WpFaHerEXxtbaVEZVLcKdkreiRTO6YOmqiWETp9RMN0VYurQZ8hAURlk1EFjAPzLTIJmFPQQS4M7GGtZaQW0E3QsDlUXWTVyIWMesiTtk3UYMH+VYhrsOd055SAAUVxXUQJKg520Mv4FZnr6/RABgJEVbFKyr3hOw0DAsaGgeHVBaNN2YtAv28cIr0W1YSVCXVoeHCKi/+TvVgo7xkYbUV4YoBuaCQ/QmajCHkDAoMrYrSb9AENtOMapfqE06FD9qpoO99mg5QYcCpg/dEC+428x/fWCV9QlWR5XNYYyo26TGVvCzKqwavRBBcpaOjUUnzcWh9f23JFBz2KZ7Iotz1s8q8I6USAdDJjUpO/6Jmb6rwNde7SZoi8tE+vnJvI3jGpJWczyOJH1pmPqt3ejHFdSq4T6zJaAQQWeM5a+8s40fgnwAAmlMXj5YRA/AAAAABJRU5ErkJggg==" alt=""></div>
+              </div>
+              <div class="loginBut wow fadeInUp" data-wow-delay="1.8s" > 登录</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // 初始化vue
+    new Vue({
+      el: '#app',
+      data: {},
+      methods: {},
+      mounted() {
+        // 初始化WOW.js
+        new WOW().init();
+      }
+    });
+  </script>
+</body>
+
+</html>

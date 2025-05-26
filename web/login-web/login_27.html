@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" data-dpr="1" style="font-size: 191.2px;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <link rel="icon" type="image/svg+xml" href="assets/science.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>炫酷登录页面27</title>
+
+  <!-- 引入wow.js和animate.css：注意一定要引入3.3.1版本，因为4.1.1版本有问题（引入后没有任何动画效果）-->
+  <link rel="stylesheet" href="resources/animate@3.3.1/animate.min.css" />
+  <script src="resources/wow@1.1.2/wow.min.js"></script>
+
+  <!-- 引入vue和element  -->
+  <link rel="stylesheet" href="resources/element-ui@2.15.14/theme-chalk/index.css">
+  <script src="resources/vue@2.7.16/vue.js"></script>
+  <script src="resources/element-ui@2.15.14/index.js"></script>
+
+
+  <!-- 引入wow.js和animate.css：注意一定要引入3.3.1版本，因为4.1.1版本有问题（引入后没有任何动画效果）-->
+  <link rel="stylesheet" href="resources/rememberPwd-f8b5d577.css" />
+  <style type="text/css">
+    body {
+      background-size: 100% 100%;
+      height: 100vh;
+      margin: 0;
+    }
+    .login {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: absolute;
+      background: url(assets/login_27/bg-50301383.png) no-repeat;
+      background-size: 100% 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row
+    }
+
+    .login .loginmain {
+      width: 6.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row
+    }
+
+    .login .loginmain .loginl {
+      width: calc(100% - 2.34375rem);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row
+    }
+
+    .login .loginmain .loginl img {
+      width: 1.8125rem
+    }
+
+    .login .loginmain .loginform {
+      width: 2.34375rem;
+      flex-shrink: 0;
+      height: 2.84375rem;
+      background: rgba(255, 255, 255, .1);
+      border-radius: .10417rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row
+    }
+
+    .login .loginmain .loginform .loginforminner {
+      position: relative;
+      height: calc(100% - .05208rem);
+      width: calc(100% - .05208rem);
+      background: url(assets/login_27/loginbg-4fed253b.png) rgba(0, 216, 255, .1) no-repeat;
+      background-size: 100% 100%
+    }
+
+    .login .loginmain .loginform .loginforminner h3 {
+      font-size: .125rem;
+      font-family: PingFang;
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+      margin-top: .29167rem
+    }
+
+    .login .loginmain .loginform .loginforminner .forminput {
+      width: 1.86458rem;
+      height: .28125rem;
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(11, 32, 59, .5);
+      border-radius: .05208rem;
+      margin: auto;
+      margin-bottom: .05208rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row
+    }
+
+    .login .loginmain .loginform .loginforminner .forminput2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      width: 1.86458rem;
+      margin: auto
+    }
+
+    .login .loginmain .loginform .loginforminner .forminput2 .forminput2l {
+      width: 1.32813rem;
+      height: .28125rem;
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(11, 32, 59, .5);
+      border-radius: .05208rem;
+      margin: auto;
+      margin-bottom: .05208rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row
+    }
+
+    .login .loginmain .loginform .loginforminner .forminput2 .forminput2r {
+      width: .48438rem;
+      height: .28125rem;
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(11, 32, 59, .5);
+      border-radius: .05208rem;
+      margin: auto;
+      margin-bottom: .05208rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row
+    }
+
+    .login .loginmain .loginform .loginforminner .forminput2 .forminput2r img {
+      width: .29688rem
+    }
+
+    .login .loginmain .loginform .loginforminner .forminput3 {
+      font-size: .07292rem;
+      font-family: PingFang;
+      font-weight: 300;
+      width: 1.86458rem;
+      border-radius: .05208rem;
+      margin: auto;
+      margin-bottom: .125rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row
+    }
+
+    .login .loginmain .loginform .loginforminner .forminput3 a {
+      color: #00e4ff;
+      text-decoration: none
+    }
+
+    .login .loginmain .loginform .loginforminner .lgbut {
+      width: 1.86458rem;
+      height: .28125rem;
+      background: linear-gradient(0deg, #0042C7, #6797F9);
+      border-radius: .05208rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      margin: auto;
+      font-size: .125rem;
+      font-family: PingFang;
+      font-weight: 700;
+      color: #fff
+    }
+
+    input {
+      width: 100%;
+      position: relative;
+      height: 100%;
+      background: none;
+      border: none;
+      outline: none;
+      text-indent: 0px;
+      color: #fff
+    }
+
+    input::-webkit-input-placeholder {
+      color: #ffffff80
+    }
+
+    input::-moz-placeholder {
+      color: #ffffff80
+    }
+
+    input:-moz-placeholder {
+      color: #ffffff80
+    }
+
+    input:-ms-input-placeholder {
+      color: #ffffff80
+    }
+
+    .icon {
+      width: .24479rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      flex-shrink: 0
+    }
+
+    .icon img {
+      width: .10417rem
+    }
+
+    .logo {
+      font-size: .20833rem;
+      color: #fff
+    }
+  </style>
+</head>
+
+<body style="font-size: 12px;" inmaintabuse="1">
+  <div id="app">
+    <div class="body">
+      <div class="login">
+        <div class="loginmain">
+          <div class="loginl"><span class="logo wow fadeInDown" >LOGO</span></div>
+          <div class="loginform wow pulse" >
+            <div class="loginforminner">
+              <h3>智慧用电云平台</h3>
+              <div class="forminput wow fadeInLeft" data-wow-delay="0.3s" >
+                <div class="icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMC1jMDAwIDc5LmRhYmFjYmIsIDIwMjEvMDQvMTQtMDA6Mzk6NDQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMi40IChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY5OTUwRjAxNDY2MzExRUM4NkJGQzY5NjdDNzA5MUJDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY5OTUwRjAyNDY2MzExRUM4NkJGQzY5NjdDNzA5MUJDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Rjk5NTBFRkY0NjYzMTFFQzg2QkZDNjk2N0M3MDkxQkMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Rjk5NTBGMDA0NjYzMTFFQzg2QkZDNjk2N0M3MDkxQkMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6ZhtQ1AAABmUlEQVR42qzUPUjDQBTA8TRWrS5+oAULKmjdXKSD6KCLLi7iKAqCm7ujY11EnMTi4lJEHKqI4OwkIvixCIKjUC3a2k5Fran/K68QY/NRyYMfCVzu5XLv5bRyuay5GEcSaWRwhGm3eW5Jt/CIRfQgjDlcYee/ibdxgZDNeMopuV3SfmShu3zRA8Zqjela7VjBBgzNOdbl2b9hs5JLjHoorPoyAwGvK44grbnHE97RYR2wS1xC0EPiBvHtNbFaSa+HxIN4RsFr4hPMekg8g7N6itciRRlwKFwrcojW+4Os4gWxGmPqhffYtJvvVKCUVHxX9vBUijSFYSRwbDe50n+mCGEeS+jDDTKS8FXtHMJoRBdGZDyJg19FNC1/DUXsYdLDz2E+/RLII27dY3WYnCNSR0KrTjlSKweT2oo4C58QfsSh2h6VOMvNEHI+JVYNUdTlpqT5FwFVuqC0zTX25PqGPL7wIS81pCPMf6ya2yTXNnRLlyyonNV2i2IZMWmjdmmpZpmoy0qqYcgLP+VakHa8xT7urH3sW/wIMAAWobF2MckZ/AAAAABJRU5ErkJggg==" alt=""></div><input type="text" placeholder="请输入账户">
+              </div>
+              <div class="forminput wow fadeInRight" data-wow-delay="0.6s" >
+                <div class="icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAYAAAD6S912AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMC1jMDAwIDc5LmRhYmFjYmIsIDIwMjEvMDQvMTQtMDA6Mzk6NDQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMi40IChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY5OTUwRjA1NDY2MzExRUM4NkJGQzY5NjdDNzA5MUJDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY5OTUwRjA2NDY2MzExRUM4NkJGQzY5NjdDNzA5MUJDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Rjk5NTBGMDM0NjYzMTFFQzg2QkZDNjk2N0M3MDkxQkMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Rjk5NTBGMDQ0NjYzMTFFQzg2QkZDNjk2N0M3MDkxQkMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5KggX0AAAB/ElEQVR42qTVQUgUURzH8dkpdReTAqVFvYSxYKHUIS8JeggVxUIQIqhDCBFqFy26BB3qFFFeFrfoGHRLNoKgwx4EAw+m4EUKiiI6hLDIQrkKOn3/y3/gNbx5A/bgsztv5s1v37w3760XBIHncBmvUEYFC7juusf37GUEbzGu3yfRjpfoxxKuWu+0/MoktjHq6EkvfuJe9Fq0YRPW0R05n0Vr5Fw79nDGFfgUjyI3vcYOdvEeXcb1m3gWF9iAKtJab8SmPlY96jCl4c3GffLobbbAYbwz6nfx2DJ+D1Ew6nlM22ZZZvKLUb+EomUeX+hbEJZvOBFWDhsXdtBsvgCYxZ1I4D7MjhzDFtKopuhmCwcPNPw5PmrDTpzWALP42qtVrZ/CDRxBQQLzHJRx3/u/IqE9ErjHQZ2lJwcpgXRfAg85Gg1jDeu45mhXG0NPF31TzBLr1pVzEef1xR6MaSsZlaRAWTkzRn0MRVegnzAm/7xjlLP47h5Fdw9lGS5rL6/gM44nPXJV13HcVpXToEX0Odpl8MfXFdLgeIhG/MYu6h3tJGtfPkq44Gj4C1l04KujnayYDenqAD4l/LfkLJtuVAkTqdoe5nnzOBr7P5FcniCDqTAwDJXNYA4fdGxdRcbzHG7hB25j2wyUMoRJ9CZMlKeTtCI7DN6EJ/8KMACPSQPirWGI6QAAAABJRU5ErkJggg==" alt=""></div><input type="password" placeholder="请输入密码">
+              </div>
+              <div class="forminput2">
+                <div class="forminput2l wow fadeInLeft" data-wow-delay="0.9s" >
+                  <div class="icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAYAAAD6S912AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMC1jMDAwIDc5LmRhYmFjYmIsIDIwMjEvMDQvMTQtMDA6Mzk6NDQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMi40IChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjlFRjc5ODE2NDY2NTExRUM4NkJGQzY5NjdDNzA5MUJDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjlFRjc5ODE3NDY2NTExRUM4NkJGQzY5NjdDNzA5MUJDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OUVGNzk4MTQ0NjY1MTFFQzg2QkZDNjk2N0M3MDkxQkMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OUVGNzk4MTU0NjY1MTFFQzg2QkZDNjk2N0M3MDkxQkMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5q1IbQAAABfElEQVR42tzVPUvDQBzH8bSIg2JBWppBcXGpKCKITwgVHxDEF5BJV6GDi4s6+fASRBHHgohTXcRBEBwELbioi7iICGoHHeojiPF78QIhJLloM/mHT3Mklx+X3OWqmaapKSyihBvMqfrHNf8aRQEtaEU/hpFHn99NMZFKdaMOOtoxhk8sY8d1zwTm8Y4jnKCEJxRF4BqNTpTxgDPsyWNQdchR9yCNepyKQDHEmBZNmXEt4vq/gQlsIuO+UPWHsCR25fGx0sAUDmQ7K9df6EfekAvbLt0RNoQ774XzU17f5TjesIJGXKGIVMC3bAYFCoN4QRnHSCg2B+vnA9UBnQaQDxFWi2fROEdbiG1MpUu8EjEp2zAiWNOGlUVqUgwVTRWMrhmvqLFPzOJCMYN+0rjEjLVxOS4s4Rq9vwgTE3aLBfucu8MkvuSsZgKCxCRuyb6G85pXZ7HpTsvO+5iCjgbkcChXRk721VSBzuARrONePtoqskGvwf6Tiqy+BRgA6u/jGsjWE+gAAAAASUVORK5CYII=" alt=""></div><input type="text" placeholder="请输入验证码">
+                </div>
+                <div class="forminput2r wow fadeInRight" data-wow-delay="0.9s" ><img class="cur" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAAUCAYAAAA3KpVtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMC1jMDAwIDc5LmRhYmFjYmIsIDIwMjEvMDQvMTQtMDA6Mzk6NDQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMi40IChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjlFRjc5ODFBNDY2NTExRUM4NkJGQzY5NjdDNzA5MUJDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjlFRjc5ODFCNDY2NTExRUM4NkJGQzY5NjdDNzA5MUJDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OUVGNzk4MTg0NjY1MTFFQzg2QkZDNjk2N0M3MDkxQkMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OUVGNzk4MTk0NjY1MTFFQzg2QkZDNjk2N0M3MDkxQkMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6Vv4LoAAACZklEQVR42uRY3ZGCQAxenGuAe+bJFrAEWlhL4ErgSpASoAQtQUvQEvDJZy1hb9lkJSz7J3PjeN7O5EEIIV9+vgQZo+ciUilXKVv2RieZgGTsir8+WZbc3gHkgv2DMwYJmXv97F0El9JJERY5Simo+ofH1FLK6UVhlsS/M/Ezl9ID3EugK5m00xQk9GT6Bypwp4Blybcly73/RymVlLWtDJYk7fkvlVbP2OWTy3mrpsS9J3sHNDDGOqJ6JIA7FYB5p5HCnwiwwvcdKPGkWNe+c1Z6F7F5CDDo8dlkBpVVRejlSq/3jbENlvOX7wGdQW6NkmYw/0t1MLR+FQEmdVy/KnvTe30F7vE+ZdcqZk66s5QlNWY1twZBA4SmPxBbIZbukDHN9/XvqpU9YywgixYWoszNSpuzDLSExm3MVqpAZMnXHWSWHCLsFh4mZZO+zpK12sqAQWsSSI58UvpK5+os16nO0lKm4l5ewHLC28PAvkKVXqiFYnt48K8MZXIZkU0zENyIPh3SrpMHMjnYmZbstLyhpVb4TNM/YwMZw4Q16pWjVUtvIbhpEBrPH2BjF7ubBJh6wQ7sWs4DCTtuq0ANbFYYWWQI9hyYk0VEX/IRq8KY2AZ8PGE2+SIYtXA2NfPpedha9OzzDq7R69MMge2c+LZD5wscITPW0GG2bR7Q1bINzN6KfEXsR7PtIhqyXVXGtTExAVlR/dLjW2dzqIgGOQbg3nfBqaPj02hD9BqHjn3LGjOpwMCZCwJPHE41SCBtJFnsFcnAbHSPCiAq/Zm0U6VtztBxeQ5s7vqXYrDLyXM3Yv/0I8AAu1oUBRyamu8AAAAASUVORK5CYII=" alt=""></div>
+              </div>
+              <div class="forminput3 wow fadeInUp" data-wow-delay="1.2s" >
+                <div class="rememberl">
+                  <div class="rememberPwd"><el-checkbox>记住密码</el-checkbox></div>
+                </div><a href="_">忘记密码？</a>
+              </div>
+              <div class="lgbut cur wow fadeInUp" data-wow-delay="1.5s" > 登录 </div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // 初始化vue
+    new Vue({
+      el: '#app',
+      data: {},
+      methods: {},
+      mounted() {
+        // 初始化WOW.js
+        new WOW().init();
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" data-dpr="1" style="font-size: 191.2px;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <link rel="icon" type="image/svg+xml" href="assets/science.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>炫酷登录页面7</title>
+
+  <!-- 引入wow.js和animate.css：注意一定要引入3.3.1版本，因为4.1.1版本有问题（引入后没有任何动画效果）-->
+  <link rel="stylesheet" href="resources/animate@3.3.1/animate.min.css" />
+  <script src="resources/wow@1.1.2/wow.min.js"></script>
+
+  <!-- 引入vue和element  -->
+  <link rel="stylesheet" href="resources/element-ui@2.15.14/theme-chalk/index.css">
+  <script src="resources/vue@2.7.16/vue.js"></script>
+  <script src="resources/element-ui@2.15.14/index.js"></script>
+
+  <style type="text/css">
+    body {
+      background: url(assets/login_07/loginbg.png) center center no-repeat;
+      background-size: 100% 100%;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      width: 90%;
+      height: 3.22917rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .login-container .login-containerR {
+      height: 4.17188rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .login-wrap {
+      overflow: hidden;
+      height: 100vh;
+      width: 100%;
+      background-size: 100% 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .loginBody2 {
+      width: 2.29167rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start
+    }
+
+
+    .loginTitle p {
+      padding-top: .10417rem;
+      text-align: center;
+      font-size: .25rem;
+      font-weight: 700;
+      color: #fff
+    }
+
+    .loginBody2Title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start
+    }
+
+    .loginBody2Title span {
+      font-size: .22917rem;
+      font-family: Source Han Sans CN;
+      font-weight: 700;
+      color: #53e5ff
+    }
+
+    .loginBody2Title p {
+      font-size: .10938rem;
+      font-family: Source Han Sans CN;
+      font-weight: 400;
+      color: #b4b4b4;
+      margin-top: .10417rem;
+      margin-bottom: .26042rem
+    }
+
+    .loginBut {
+      width: 100%;
+      height: .33333rem;
+      background: linear-gradient(180deg, #17D2DE, #0C60C7);
+      box-shadow: .01042rem .04167rem .04688rem #8a8a8a1f;
+      border-radius: .16667rem;
+      display: flex;
+      font-size: .125rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      cursor: pointer;
+      margin-top: .26042rem
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      width: 2.08333rem;
+      align-items: center;
+      margin: 0 auto;
+      flex-wrap: nowrap;
+      margin-bottom: .10417rem;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .info .forget {
+      font-size: .09375rem;
+      font-family: Source Han Sans CN;
+      font-weight: 400;
+      color: #53e5ff
+    }
+
+
+    .loginInput {
+      width: 100%;
+      height: .33333rem;
+      background: #F2F7F8;
+      border-radius: .16667rem;
+      margin-bottom: .13542rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .loginInput .icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      width: .30208rem;
+      height: .33333rem;
+      flex-direction: row;
+      align-content: flex-start;
+      flex-shrink: 0
+    }
+
+    .loginInput .icons img {
+      height: .10417rem
+    }
+
+    .loginInput input {
+      width: calc(100% - .10417rem);
+      position: relative;
+      height: 100%;
+      border: 0;
+      background: none;
+      font-size: .10938rem;
+      font-family: PingFang;
+      font-weight: 500;
+      outline: none;
+      color: #333
+    }
+
+    input::-webkit-input-placeholder {
+      color: #666
+    }
+
+    input::-moz-placeholder {
+      color: #666
+    }
+
+    input:-moz-placeholder {
+      color: #666
+    }
+
+    input:-ms-input-placeholder {
+      color: #666
+    }
+
+
+    .rememberPwd {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .rememberPwd .el-checkbox__inner {
+      border: 1px solid #4fd3f5
+    }
+
+    .rememberPwd .el-checkbox__label {
+      font-size: .09375rem;
+      font-family: PingFang;
+      font-weight: 500;
+      color: #4fd3f5 !important
+    }
+
+    .rememberPwd .el-checkbox__input.is-checked+.el-checkbox__label {
+      color: #4fd3f5 !important
+    }
+
+    .rememberPwd .el-checkbox.is-checked .el-checkbox__input.is-checked .el-checkbox__inner,
+    .rememberPwd .el-checkbox.is-checked .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+      background-color: #4fd3f5 !important;
+      border-color: #4fd3f5 !important
+    }
+  </style>
+</head>
+
+<body style="font-size: 12px;" inmaintabuse="1">
+  <div id="app">
+    <div class="body">
+      <div class="login-wrap " id="home">
+        <div class="login-container wow fadeInDown" >
+          <div class="login-containerR">
+            <div class="loginBody2">
+              <div class="loginBody2Title wow fadeInDown" data-wow-delay="0.3s"><span>Hello,欢迎登录后台</span>
+                <p>WELCOME TO THE SYSTEM</p>
+              </div>
+              <div class="loginInput wow fadeInLeft" data-wow-delay="0.6s">
+                <div class="icons"><img src="assets/login_07/icon_user.png" alt=""></div>
+                <input type="text" placeholder="用户名">
+              </div>
+              <div class="loginInput wow fadeInRight" data-wow-delay="0.9s">
+                <div class="icons"><img src="assets/login_07/icon_passwd.png" alt=""></div>
+                <input type="password" placeholder="密码">
+              </div>
+              <div class="info">
+                <div class="rememberPwd wow fadeInLeft" data-wow-delay="1.5s">
+                  <el-checkbox>记住密码</el-checkbox>
+                </div>
+                <div class="forget wow fadeInRight" data-wow-delay="1.5s">忘记密码？
+                </div>
+              </div>
+              <div class="loginBut wow fadeInUp" data-wow-delay="1.8s"> 登录
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // 初始化vue
+    new Vue({
+      el: '#app',
+      data: {},
+      methods: {},
+      mounted() {
+        // 初始化WOW.js
+        new WOW().init();
+      }
+    });
+  </script>
+</body>
+
+</html>

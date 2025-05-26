@@ -1,0 +1,21 @@
+.rememberPwd {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.rememberPwd .el-checkbox__inner {
+    background: none !important;
+    border: 1px solid rgb(12, 160, 237);
+}
+
+.rememberPwd .el-checkbox__label {
+    font-size: .07292rem;
+    font-family: PingFang;
+    font-weight: 500;
+    color: #fff !important;
+}
+
+.rememberPwd .el-checkbox.is-checked {
+    color: #24cdff
+}

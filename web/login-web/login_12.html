@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" data-dpr="1" style="font-size: 191.2px;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <link rel="icon" type="image/svg+xml" href="assets/science.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>炫酷登录页面12</title>
+
+  <!-- 引入wow.js和animate.css：注意一定要引入3.3.1版本，因为4.1.1版本有问题（引入后没有任何动画效果）-->
+  <link rel="stylesheet" href="resources/animate@3.3.1/animate.min.css" />
+  <script src="resources/wow@1.1.2/wow.min.js"></script>
+
+  <!-- 引入vue和element  -->
+  <link rel="stylesheet" href="resources/element-ui@2.15.14/theme-chalk/index.css">
+  <script src="resources/vue@2.7.16/vue.js"></script>
+  <script src="resources/element-ui@2.15.14/index.js"></script>
+
+  <style type="text/css">
+    body {
+      background-size: 100% 100%;
+      height: 100vh;
+      margin: 0;
+    }
+    .thirdparty {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start;
+      width: 100%
+    }
+
+    .thirdparty .thirdpartyTitle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .thirdparty .thirdpartyTitle span {
+      background: rgb(0, 58, 181);
+      font-size: .08333rem;
+      font-family: Source Han Sans CN;
+      font-weight: 400;
+      color: #fff;
+      padding: .10417rem;
+      position: relative;
+      z-index: 1
+    }
+
+    .thirdparty .thirdpartyTitle .line {
+      width: 2.05208rem;
+      height: 1px;
+      background: #C4C2C1;
+      opacity: .5;
+      position: absolute
+    }
+
+    .thirdparty .thirdpartyBody {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      width: 100%;
+      flex-direction: row;
+      align-content: flex-start;
+      padding-top: .10417rem
+    }
+
+    .thirdparty .thirdpartyBody .thirdpartyBodyItem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start;
+      cursor: pointer
+    }
+
+    .thirdparty .thirdpartyBody .thirdpartyBodyItem .loginIcon {
+      width: .31771rem;
+      height: .31771rem;
+      background: #1A4FB7;
+      border-radius: 50%
+    }
+
+    .thirdparty .thirdpartyBody .thirdpartyBodyItem .loginIcon img {
+      width: .3125rem
+    }
+
+    .thirdparty .thirdpartyBody .thirdpartyBodyItem p {
+      font-size: .09896rem;
+      font-family: Source Han Sans SC;
+      font-weight: 400;
+      color: #fff;
+      text-align: center;
+      padding-top: .05208rem
+    }
+
+
+    .login-container {
+      width: 86%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      position: relative;
+      height: 4.94792rem
+    }
+
+    .login-container .login-containerR {
+      height: 4.17188rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .login-wrap {
+      overflow: hidden;
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      background: url(assets/login_12/loginbg.jpg) no-repeat;
+      background-size: 100% 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .login-wrap .loginLogo {
+      margin-left: .15625rem;
+      margin-top: .15625rem
+    }
+
+    .loginBody2 {
+      width: 2.29167rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start
+    }
+
+
+    .loginBody2Title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: flex-start
+    }
+
+    .loginBody2Title span {
+      font-size: .22917rem;
+      font-family: Source Han Sans CN;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: .16667rem
+    }
+
+    .loginBut {
+      width: 100%;
+      height: .26563rem;
+      background: #0F98FF;
+      box-shadow: 0 .02604rem .03125rem 1px #004d8726;
+      border-radius: .125rem;
+      display: flex;
+      font-size: .15625rem;
+      font-family: Source Han Sans CN;
+      font-weight: 700;
+      color: #fff;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+      cursor: pointer
+    }
+
+    .info {
+      display: flex;
+      justify-content: center;
+      width: 2.08333rem;
+      align-items: center;
+      margin: 0 auto;
+      flex-wrap: nowrap;
+      margin-bottom: .10417rem;
+      flex-direction: row;
+      align-content: flex-start;
+      margin-top: .1875rem
+    }
+
+    .info .line {
+      width: 1px;
+      height: .08333rem;
+      background: #B4B4B4;
+      margin-left: .10417rem;
+      margin-right: .10417rem
+    }
+
+    .info .forget {
+      font-size: .08854rem;
+      font-family: Source Han Sans CN;
+      font-weight: 400;
+      color: #0f98ff
+    }
+
+    .loginInput {
+      width: 100%;
+      height: .26563rem;
+      background: rgba(255, 255, 255, .1);
+      box-shadow: .01042rem .04167rem .04688rem #8a8a8a1f;
+      border-radius: .125rem;
+      margin-bottom: .17708rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .loginInput input {
+      width: calc(100% - .27084rem);
+      position: relative;
+      height: 100%;
+      border: 0;
+      margin-left: .16667rem;
+      background: none;
+      font-size: .10938rem;
+      font-family: PingFang;
+      font-weight: 500;
+      outline: none;
+      color: #fff
+    }
+
+    input::-webkit-input-placeholder {
+      color: #b4b4b4
+    }
+
+    input::-moz-placeholder {
+      color: #b4b4b4
+    }
+
+    input:-moz-placeholder {
+      color: #b4b4b4
+    }
+
+    input:-ms-input-placeholder {
+      color: #b4b4b4
+    }
+  </style>
+</head>
+
+<body style="font-size: 12px;" inmaintabuse="1">
+  <div id="app">
+    <div class="body">
+      <div class="login-wrap login22" id="home">
+        <div class="login-container"><img class="leftImg wow fadeInLeft" src="./assets/login_12/leftImg.png" alt="" >
+          <div class="login-containerR">
+            <div class="loginBody2">
+              <div class="loginBody2Title wow fadeInDown" data-wow-delay="0.5s" ><span>用户登录</span></div>
+              <div class="loginInput wow fadeInDown" data-wow-delay="1s" ><input type="text" placeholder="请输入账号"></div>
+              <div class="loginInput wow fadeInDown" data-wow-delay="1.5s" ><input type="password" placeholder="请输入密码"></div>
+              <div class="loginBut wow fadeInUp" data-wow-delay="1.5s" > 登 陆 </div>
+              <div class="info">
+                <div class="forget wow fadeInLeft" data-wow-delay="1s" >没有账号去注册!</div>
+                <div class="line wow fadeInDown" data-wow-delay="1s" ></div>
+                <div class="forget wow fadeInRight" data-wow-delay="1s" >忘记密码？</div>
+              </div>
+              <div class="thirdparty">
+                <div class="thirdpartyTitle wow fadeInDown" data-wow-delay="0.5s" ><span>第三方登录</span>
+                  <div class="line"></div>
+                </div>
+                <div class="thirdpartyBody">
+                  <div class="thirdpartyBodyItem wow fadeInDown" data-wow-delay="1s" >
+                    <div class="loginIcon"><img src="./assets/login_12/icon_wx.png" alt=""></div>
+                    <p>微信</p>
+                  </div>
+                  <div class="thirdpartyBodyItem wow fadeInUp" data-wow-delay="1s" >
+                    <div class="loginIcon"><img src="./assets/login_12/icon_qq.png" alt=""></div>
+                    <p>QQ</p>
+                  </div>
+                  <div class="thirdpartyBodyItem wow fadeInDown" data-wow-delay="1s" >
+                    <div class="loginIcon"><img src="./assets/login_12/icon_wb.png" alt=""></div>
+                    <p>微博</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // 初始化vue
+    new Vue({
+      el: '#app',
+      data: {},
+      methods: {},
+      mounted() {
+        // 初始化WOW.js
+        new WOW().init();
+      }
+    });
+  </script>
+</body>
+
+</html>

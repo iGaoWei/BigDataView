@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-dpr="1" style="font-size: 191.2px;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <link rel="icon" type="image/svg+xml" href="assets/science.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>炫酷登录页面2</title>
+
+  <!-- 引入wow.js和animate.css：注意一定要引入3.3.1版本，因为4.1.1版本有问题（引入后没有任何动画效果）-->
+  <link rel="stylesheet" href="resources/animate@3.3.1/animate.min.css" />
+  <script src="resources/wow@1.1.2/wow.min.js"></script>
+
+  <!-- 引入vue -->
+  <script src="resources/vue@2.7.16/vue.js"></script>
+
+  <style type="text/css">
+    body {
+      background: url(assets/login_02/login_02_bg_01.jpg) center center no-repeat;
+      background-size: 100% 100%;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .loginBody {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loginBody .loginBodyCenter {
+      width: 2.00521rem;
+      height: 3.81771rem;
+      display: flex;
+      margin-top: .52083rem;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      background: url(assets/login_02/login_02_bg_02.png) no-repeat;
+      background-size: 100% 100%
+    }
+
+    .loginBody .loginBodyCenter .loginBut {
+      width: 1.5rem;
+      height: .20833rem;
+      background: #089DF3;
+      border-radius: .02083rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      margin-top: .14063rem;
+      font-weight: 400;
+      font-size: .08333rem;
+      color: #fff;
+      cursor: pointer
+    }
+
+    .loginBody .loginBodyCenter .loginBut:hover {
+      background: #0c7cbd
+    }
+
+    .loginBody .loginBodyCenter .loginItem {
+      width: 1.5rem;
+      height: .20833rem;
+      background: rgba(79, 226, 255, .05);
+      border-radius: .02083rem;
+      border: 1px solid #00052f;
+      margin-top: .15625rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start
+    }
+
+    .loginBody .loginBodyCenter .loginItem .icon {
+      width: .26042rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      flex-shrink: 0;
+      align-content: flex-start
+    }
+
+    .loginBody .loginBodyCenter .loginItem .icon img {
+      width: .08333rem
+    }
+
+    .loginBody .loginBodyCenter .loginItem input {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      background: none;
+      border: 0;
+      outline: none;
+      color: #136a92
+    }
+
+    .loginBody .loginBodyCenter .loginItem input::-moz-placeholder {
+      font-weight: 400;
+      font-size: .07292rem;
+      color: #136a92
+    }
+
+    .loginBody .loginBodyCenter .loginItem input::placeholder {
+      font-weight: 400;
+      font-size: .07292rem;
+      color: #136a92
+    }
+
+
+    .loginTitle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      color: #dbfeff;
+      width: .89583rem;
+      height: .89583rem
+    }
+
+    .loginTitle span {
+      font-weight: 400;
+      font-size: .14583rem;
+      color: #00c0ffcc
+    }
+
+    .loginTitle .loginTitleBg {
+      background: url(assets/login_02/login_02_textbg.png) no-repeat;
+      width: .89583rem;
+      height: .89583rem;
+      background-size: 100% 100%;
+      position: absolute;
+      animation: spin-3490f6f1 5s linear infinite
+    }
+
+    @keyframes spin-3490f6f1 {
+      0% {
+        transform: rotate(0)
+      }
+
+      to {
+        transform: rotate(360deg)
+      }
+    }
+  </style>
+</head>
+
+<body style="font-size: 12px;" inmaintabuse="1">
+  <div id="app">
+    <div class="loginBody ">
+      <div class="loginBodyCenter wow fadeInDown" data-wow-delay="0.3s">
+        <div class="loginTitle wow fadeInDown" data-wow-delay="0.6s">
+          <div class="loginTitleBg"></div>
+          <span>欢迎<br>登录</span>
+        </div>
+        <div class="loginItem wow fadeInLeft" data-wow-delay="0.9s">
+          <div class="icon">
+            <img src="assets/login_02/icon_user.png" alt="">
+          </div>
+          <input type="text" placeholder="用户名">
+        </div>
+        <div class="loginItem wow fadeInLeft" data-wow-delay="1.2s">
+          <div class="icon">
+            <img src="assets/login_02/icon_passwd.png" alt="">
+          </div>
+          <input type="password" placeholder="密码">
+        </div>
+        <div class="loginBut wow fadeInUp" data-wow-delay="1.8s">
+          <span>登录</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // 初始化vue
+    new Vue({
+      el: '#app',
+      data: {},
+      methods: {},
+      mounted() {
+        // 初始化WOW.js
+        new WOW().init();
+      }
+    });
+  </script>
+</body>
+
+</html>
