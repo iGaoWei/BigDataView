@@ -3,26 +3,12 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1db8f01d-0439-420c-8e00-93b93c288a8c" name="Default Changelist" comment="">
+    <list default="true" id="fdf00bf2-d3fc-40cf-ad15-27f024653649" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -37,101 +23,50 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="E:\EasySrv\core\software\php\php-7.4\php.exe" />
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
-}</component>
-  <component name="ProjectId" id="1vqdRlVsU5YRAnORWcRixxWrO6u" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="D:\phpEnv\php\php-8.1\php.exe" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2xchR8yl21OQjtYNprvGmXiaih9" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/big-data-view&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/phpEnv/www/big-data-view",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\phpstudy_pro\WWW\big-data-view" />
-    </key>
-  </component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PS-241.14494.237" />
-        <option value="bundled-php-predefined-ba97393d7c68-8f0632a2a215-com.jetbrains.php.sharedIndexes-PS-241.14494.237" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PS-243.25659.45" />
+        <option value="bundled-php-predefined-a98d8de5180a-1ec7b7818973-com.jetbrains.php.sharedIndexes-PS-243.25659.45" />
       </set>
     </attachedChunks>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="项目级" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="1db8f01d-0439-420c-8e00-93b93c288a8c" name="Default Changelist" comment="" />
-      <created>1627293546833</created>
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="fdf00bf2-d3fc-40cf-ad15-27f024653649" name="更改" comment="" />
+      <created>1748243257362</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1627293546833</updated>
-      <workItem from="1627293548070" duration="1561000" />
-      <workItem from="1627344333725" duration="12699000" />
-      <workItem from="1627522509978" duration="39696000" />
-      <workItem from="1630484968812" duration="17136000" />
-      <workItem from="1630889915691" duration="8244000" />
-      <workItem from="1631239405214" duration="10797000" />
-      <workItem from="1631871037109" duration="4647000" />
-      <workItem from="1632269242215" duration="17937000" />
-      <workItem from="1632787642798" duration="2531000" />
-      <workItem from="1634515711877" duration="1810000" />
-      <workItem from="1680245959274" duration="15935000" />
-      <workItem from="1680595499060" duration="452000" />
-      <workItem from="1682835717046" duration="63000" />
-      <workItem from="1682839307537" duration="591000" />
-      <workItem from="1685340743379" duration="1537000" />
-      <workItem from="1685411508472" duration="794000" />
-      <workItem from="1686704698769" duration="594000" />
-      <workItem from="1687241346651" duration="1681000" />
-      <workItem from="1697264950694" duration="2251000" />
-      <workItem from="1703319511249" duration="354000" />
-      <workItem from="1704173662366" duration="582000" />
-      <workItem from="1704180148168" duration="11000" />
-      <workItem from="1704182505288" duration="832000" />
-      <workItem from="1704679526763" duration="258000" />
-      <workItem from="1718937630426" duration="5768000" />
-      <workItem from="1721032893800" duration="115000" />
-      <workItem from="1721782346500" duration="32000" />
+      <updated>1748243257362</updated>
+      <workItem from="1748243258515" duration="745000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="2582" y="200" width="596" height="632" key="find.popup" timestamp="1704679588026">
-      <screen x="1920" y="0" width="1920" height="1032" />
-    </state>
-    <state x="2582" y="200" width="596" height="632" key="find.popup/0.0.1920.1032/1920.0.1920.1032@1920.0.1920.1032" timestamp="1704679588026" />
   </component>
 </project>
