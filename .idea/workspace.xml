@@ -4,7 +4,86 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fdf00bf2-d3fc-40cf-ad15-27f024653649" name="更改" comment="" />
+    <list default="true" id="fdf00bf2-d3fc-40cf-ad15-27f024653649" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/activity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/analysis.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/beijing.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/css/style-100.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/aleftboxtbott.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/aleftboxtmidd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/aleftboxttop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/amiddboxtbott1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/amiddboxtbott1副本.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/amiddboxtbott2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/amiddboxttop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/arightboxbott.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/arightboxtop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/b-rbox2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/bbox2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/blue_rico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/bnt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/bntactive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/camera.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/camera_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/errors.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/hdbj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/hdbjr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/hdmap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/hot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/icondown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/iconup.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/icosjx.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/left1box.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/leftb1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/leftbox2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/mapbg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/mbox1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/mbox2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/midtop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/pleft1bott.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/pleft1middb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/pleft1middt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/pleftbox2bott.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/pleftbox2mid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/pleftbox2top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/pmiddboxmidd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/prightmidd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/prighttop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/puleftbott.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/puleftmidd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/pulefttop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/pumiddbott.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/pumiddtop1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/pumiddtop2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/purightbott.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/purightmidd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/purighttop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/rbox1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/red_rico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/ricon1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/ricon2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/img/time.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/js/china.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/js/echarts.min-82.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/js/echarts.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/js/echarts.min33.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/js/jquery-3.2.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/people.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/traffic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/公安大数据监控平台.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/公安大数据监控平台1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/公安大数据监控平台2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/公安大数据监控平台3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/054 公安大数据监控平台2/公安大数据监控平台4.png" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,28 +96,28 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="D:\phpEnv\php\php-8.1\php.exe" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2xchR8yl21OQjtYNprvGmXiaih9" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/phpEnv/www/big-data-view",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/phpEnv/www/big-data-view&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -56,6 +135,7 @@
       <option name="presentableId" value="Default" />
       <updated>1748243257362</updated>
       <workItem from="1748243258515" duration="6505000" />
+      <workItem from="1749019173205" duration="7830000" />
     </task>
     <servers />
   </component>
